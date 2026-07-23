@@ -1,0 +1,5 @@
+run,sustained_99.9_train_step,sustained_95_test_step,memorization_plateau_steps,first_99_test_step,first_100_test_step,collapse_evaluations,maximum_test_accuracy,final_test_accuracy,stable_by_definition,speedup_vs_adamw
+AdamW,200,36200,36000,36500,37000.0,0,1.0,1.0,True,1.0
+Muon unembedding lr=0.0005,200,6100,5900,6600,,2,0.9998881220817566,0.9997762441635132,False,5.934426229508197
+Muon unembedding lr=0.00025,200,5900,5700,6200,11200.0,0,1.0,0.9762837290763856,False,6.135593220338983
+Muon unembedding lr=0.0001,200,6800,6600,7300,11100.0,1,1.0,0.998769462108612,False,5.323529411764706
