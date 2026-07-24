@@ -1,4 +1,4 @@
 configuration,optimizer,learning_rate,weight_decay,sustained_99p9_train_step,sustained_95_test_step,memorization_plateau_steps,first_99_test_step,first_100_test_step,maximum_test_accuracy,final_test_accuracy,minimum_post_grokking_test_accuracy,post_grokking_below_95_count,post_grokking_below_90_count,stable_after_grokking,speed_relative_to_stable_muon
-Fastest AdamW,AdamW,0.003,3.0,200.0,2500.0,2300.0,2500.0,2600.0,1.0,1.0,0.9975388646125792,0.0,0.0,True,2.36
-Fastest stable AdamW,AdamW,0.003,3.0,200.0,2500.0,2300.0,2500.0,2600.0,1.0,1.0,0.9975388646125792,0.0,0.0,True,2.36
+Fastest AdamW,AdamW,0.01,1.0,700.0,6300.0,5600.0,4800.0,,0.9976507425308228,0.3681619763374328,0.0041391653940081,918.0,915.0,False,0.9365079365079365
+Fastest stable AdamW,AdamW,0.001,3.0,300.0,8200.0,7900.0,8400.0,8500.0,1.0,1.0,0.9501062631607056,0.0,0.0,True,0.7195121951219512
 Stabilized Muon,Muon,,,200.0,5900.0,5700.0,6500.0,8700.0,1.0,0.9996643662452698,0.9533504843711852,0.0,0.0,True,1.0
