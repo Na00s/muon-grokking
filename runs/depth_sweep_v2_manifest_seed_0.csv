@@ -1,0 +1,10 @@
+depth,regime,seed,steps,csv_path,initial_state_path,reused_depth_one,executed_now
+1,adamw,0,100000,runs/adamw_sweep_lr_1em3_wd_3p0_seed_0.csv,checkpoints/initial_states/model_seed_0_sweep_compatible.pt,1,0
+1,muon,0,100000,runs/muon_sweep_lr_3em2_wd_0p1_seed_0.csv,checkpoints/initial_states/model_seed_0_sweep_compatible.pt,1,0
+1,stable_muon,0,100000,runs/stable_muon_tuned_lr_3em2_wd_0p1_seed_0.csv,checkpoints/initial_states/model_seed_0_sweep_compatible.pt,1,0
+2,adamw,0,100000,runs/depth_sweep_v2_depth_2_adamw_seed_0.csv,checkpoints/initial_states/depth_nested_v2_2_seed_0.pt,0,1
+2,muon,0,100000,runs/depth_sweep_v2_depth_2_muon_seed_0.csv,checkpoints/initial_states/depth_nested_v2_2_seed_0.pt,0,1
+2,stable_muon,0,100000,runs/depth_sweep_v2_depth_2_stable_muon_seed_0.csv,checkpoints/initial_states/depth_nested_v2_2_seed_0.pt,0,1
+4,adamw,0,100000,runs/depth_sweep_v2_depth_4_adamw_seed_0.csv,checkpoints/initial_states/depth_nested_v2_4_seed_0.pt,0,1
+4,muon,0,100000,runs/depth_sweep_v2_depth_4_muon_seed_0.csv,checkpoints/initial_states/depth_nested_v2_4_seed_0.pt,0,1
+4,stable_muon,0,100000,runs/depth_sweep_v2_depth_4_stable_muon_seed_0.csv,checkpoints/initial_states/depth_nested_v2_4_seed_0.pt,0,1

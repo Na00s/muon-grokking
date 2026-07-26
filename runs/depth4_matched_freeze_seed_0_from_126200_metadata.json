@@ -1,0 +1,24 @@
+{
+  "branch_parameter_max_abs_difference": 0.0,
+  "branch_step": 126200,
+  "branch_test_accuracy": 0.9344445466995239,
+  "branch_train_accuracy": 0.9553524851799011,
+  "control_csv": "runs/depth4_matched_freeze_seed_0_from_126200_control.csv",
+  "device": "mps",
+  "freeze_csv": "runs/depth4_matched_freeze_seed_0_from_126200_freeze.csv",
+  "freeze_delay": 2000,
+  "independent_parameter_storage": true,
+  "intervention": {
+    "control": "Continue Muon hidden updates and both AdamW-managed optimizer groups.",
+    "freeze": "Continue Muon hidden updates while freezing auxiliary parameters and the unembedding."
+  },
+  "replay_seconds": 2913.5659758329857,
+  "seed": 0,
+  "shared_checkpoint": "checkpoints/depth4_matched_freeze_seed_0_from_126200_shared/step_126200.pt",
+  "source_checkpoint": "checkpoints/depth_sweep_v3_depth_4_stable_muon_seed_0_to_300k/step_100000.pt",
+  "source_csv": "runs/depth_sweep_v3_depth_4_stable_muon_seed_0_to_300k.csv",
+  "source_step": 100000,
+  "total_steps": 300000,
+  "trigger_accuracy": 0.95,
+  "trigger_consecutive": 5
+}

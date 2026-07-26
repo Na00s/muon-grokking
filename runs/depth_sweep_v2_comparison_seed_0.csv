@@ -1,0 +1,16 @@
+depth,comparison,adamw_grokking_step,comparison_grokking_step,speedup_over_adamw,note,depth_scaling_vs_depth_one
+1,muon_vs_adamw,8200.0,5400.0,1.5185185185185186,,
+1,stable_muon_vs_adamw,8200.0,5400.0,1.5185185185185186,,
+2,muon_vs_adamw,5100.0,2300.0,2.217391304347826,,
+2,stable_muon_vs_adamw,5100.0,2300.0,2.217391304347826,,
+4,muon_vs_adamw,,52600.0,,AdamW did not reach sustained 95%; speedup is right-censored.,
+4,stable_muon_vs_adamw,,,,AdamW did not reach sustained 95%; speedup is right-censored.,
+1,adamw_depth_scaling,,8200.0,,,1.0
+1,muon_depth_scaling,,5400.0,,,1.0
+1,stable_muon_depth_scaling,,5400.0,,,1.0
+2,adamw_depth_scaling,,5100.0,,,0.6219512195121951
+2,muon_depth_scaling,,2300.0,,,0.42592592592592593
+2,stable_muon_depth_scaling,,2300.0,,,0.42592592592592593
+4,adamw_depth_scaling,,,,,
+4,muon_depth_scaling,,52600.0,,,9.74074074074074
+4,stable_muon_depth_scaling,,,,,

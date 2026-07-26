@@ -1,0 +1,2 @@
+configuration,run_name,muon_learning_rate,muon_weight_decay,sustained_99p9_train_step,sustained_95_test_step,memorization_plateau_steps,first_99_test_step,first_100_test_step,maximum_test_accuracy,final_test_accuracy,minimum_post_grokking_test_accuracy,post_grokking_below_95_count,post_grokking_below_90_count,stable_after_grokking,actual_freeze_step
+Fastest ordinary Muon,muon_sweep_lr_3em2_wd_0p1_seed_0,0.03,0.1,400,5400,5000,5600,6100.0,1.0,0.9932878613471984,0.6940373778343201,56,38,False,
