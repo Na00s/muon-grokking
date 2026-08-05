@@ -83,11 +83,13 @@ def main() -> None:
     args = parse_arguments()
 
     repository_root = (
-        Path(__file__).resolve().parent
+        Path(__file__).resolve().parents[2]
     )
 
     trainer_path = (
         repository_root
+        / "scripts"
+        / "training"
         / "train_generality_variant.py"
     )
 

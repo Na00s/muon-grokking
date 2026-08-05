@@ -12,7 +12,7 @@ import torch.nn.functional as F
 from torch import Tensor
 
 
-REPOSITORY_ROOT = Path(__file__).resolve().parent
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))

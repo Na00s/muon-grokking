@@ -85,15 +85,18 @@ def decimal_tag(value: float) -> str:
 def main() -> None:
     args = parse_arguments()
 
-    repository_root = Path(__file__).resolve().parent
+    repository_root = Path(__file__).resolve().parents[2]
     trainer_path = (
-        repository_root / "train_generality_variant.py"
+        repository_root
+        / "scripts"
+        / "training"
+        / "train_generality_variant.py"
     )
 
     if not trainer_path.is_file():
         raise FileNotFoundError(
             "Place run_adamw_sweep.py beside "
-            "train_generality_variant.py in the repository root."
+            "train_generality_variant.py in scripts/training."
         )
 
     manifest_rows: list[dict[str, object]] = []

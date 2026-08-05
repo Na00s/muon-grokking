@@ -5,6 +5,7 @@ import csv
 import math
 import random
 import shutil
+import sys
 from pathlib import Path
 from typing import Iterable
 
@@ -13,6 +14,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import Tensor
 from torch.nn import Parameter
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
 from data import generate_modular_addition_data
 from model import ModularAdditionTransformer
@@ -146,18 +152,6 @@ def parse_arguments() -> argparse.Namespace:
         default=1.0,
     )
 
-    parser.add_argument(
-        "--freeze-unembedding-step",
-        type=int,
-        default=8_000,
-        help=(
-            "Freeze the unembedding after this many completed "
-            "training updates. At step 8000, the evaluation uses "
-            "the readout produced by updates 0 through 7999, and "
-            "all subsequent training updates leave it unchanged."
-        ),
-    )
-
     return parser.parse_args()
 
 
@@ -169,20 +163,11 @@ def validate_arguments(args: argparse.Namespace) -> None:
         "--muon-ns-steps": args.muon_ns_steps,
     }
 
-    positive_values[
-        "--freeze-unembedding-step"
-    ] = args.freeze_unembedding_step
-
     for name, value in positive_values.items():
         if value < 1:
             raise ValueError(
                 f"{name} must be at least 1."
             )
-
-    if args.freeze_unembedding_step > args.steps:
-        raise ValueError(
-            "--freeze-unembedding-step cannot exceed --steps."
-        )
 
     nonnegative_values = {
         "--muon-lr": args.muon_lr,
@@ -551,12 +536,8 @@ def load_or_create_initial_state(
                 map_location="cpu",
             )
 
-        if (
-            isinstance(state, dict)
-            and "model_state_dict" in state
-        ):
+        if isinstance(state, dict) and "model_state_dict" in state:
             state = state["model_state_dict"]
-
         model.load_state_dict(state)
         print(f"Loaded initial state: {path}")
         return
@@ -582,6 +563,14 @@ def main() -> None:
 
     device = get_device(
         args.device
+    )
+
+    (
+        csv_path,
+        checkpoint_directory,
+    ) = prepare_outputs(
+        run_name=args.run_name,
+        overwrite=args.overwrite,
     )
 
     (
@@ -627,14 +616,6 @@ def main() -> None:
         model
     )
 
-    (
-        csv_path,
-        checkpoint_directory,
-    ) = prepare_outputs(
-        run_name=args.run_name,
-        overwrite=args.overwrite,
-    )
-
     muon_optimizer = Muon(
         hidden_parameters,
         learning_rate=args.muon_lr,
@@ -669,12 +650,8 @@ def main() -> None:
     print(f"Muon LR: {args.muon_lr}")
     print(f"Auxiliary LR: {args.aux_lr}")
     print(
-        f"Unembedding LR before freeze: "
+        f"Unembedding LR: "
         f"{args.unembedding_lr}"
-    )
-    print(
-        f"Freeze unembedding step: "
-        f"{args.freeze_unembedding_step}"
     )
     print(f"Steps: {args.steps}")
     print(f"Output CSV: {csv_path}")
@@ -694,9 +671,7 @@ def main() -> None:
         "muon_applied_update_norm",
         "muon_max_abs_applied_update",
         "collapse_detected",
-        "generalization_collapse_detected",
         "unembedding_learning_rate",
-        "unembedding_frozen",
     ]
 
     evaluation_records: list[dict] = []
@@ -708,8 +683,6 @@ def main() -> None:
     last_muon_max_abs_applied_update = float("nan")
 
     has_memorized = False
-    has_reached_95_test = False
-    unembedding_is_frozen = False
 
     with csv_path.open(
         "w",
@@ -751,17 +724,9 @@ def main() -> None:
                 if train_accuracy >= 0.999:
                     has_memorized = True
 
-                if test_accuracy >= 0.95:
-                    has_reached_95_test = True
-
                 collapse_detected = (
                     has_memorized
                     and train_accuracy < 0.90
-                )
-
-                generalization_collapse_detected = (
-                    has_reached_95_test
-                    and test_accuracy < 0.90
                 )
 
                 row = {
@@ -803,16 +768,8 @@ def main() -> None:
                     "collapse_detected": int(
                         collapse_detected
                     ),
-                    "generalization_collapse_detected": int(
-                        generalization_collapse_detected
-                    ),
                     "unembedding_learning_rate": (
-                        0.0
-                        if unembedding_is_frozen
-                        else args.unembedding_lr
-                    ),
-                    "unembedding_frozen": int(
-                        unembedding_is_frozen
+                        args.unembedding_lr
                     ),
                 }
 
@@ -824,11 +781,7 @@ def main() -> None:
                     f"step={step:6d} | "
                     f"train_acc={train_accuracy:.4f} | "
                     f"test_acc={test_accuracy:.4f} | "
-                    f"collapse={int(collapse_detected)} | "
-                    f"gen_collapse="
-                    f"{int(generalization_collapse_detected)} | "
-                    f"unembed_frozen="
-                    f"{int(unembedding_is_frozen)}"
+                    f"collapse={int(collapse_detected)}"
                 )
 
             if (
@@ -867,21 +820,6 @@ def main() -> None:
 
             if step == args.steps:
                 break
-
-            if (
-                not unembedding_is_frozen
-                and step
-                >= args.freeze_unembedding_step
-            ):
-                for parameter in unembedding_parameters:
-                    parameter.requires_grad_(False)
-                    parameter.grad = None
-
-                unembedding_is_frozen = True
-
-                print(
-                    f"Froze unembedding at step {step}."
-                )
 
             model.train()
 
@@ -927,9 +865,7 @@ def main() -> None:
 
             muon_optimizer.step()
             auxiliary_optimizer.step()
-
-            if not unembedding_is_frozen:
-                unembedding_optimizer.step()
+            unembedding_optimizer.step()
 
             muon_stats = (
                 muon_optimizer.last_step_stats
@@ -962,35 +898,6 @@ def main() -> None:
         for record in evaluation_records
     )
 
-    generalization_collapse_count = sum(
-        int(
-            record[
-                "generalization_collapse_detected"
-            ]
-        )
-        for record in evaluation_records
-    )
-
-    post_grokking_records = (
-        [
-            record
-            for record in evaluation_records
-            if (
-                grokking_step is not None
-                and record["step"] >= grokking_step
-            )
-        ]
-    )
-
-    minimum_post_grokking_test = (
-        min(
-            record["test_accuracy"]
-            for record in post_grokking_records
-        )
-        if post_grokking_records
-        else None
-    )
-
     print()
     print(
         f"Sustained memorization step: "
@@ -1001,16 +908,8 @@ def main() -> None:
         f"{grokking_step}"
     )
     print(
-        f"Train-collapse evaluations: "
+        f"Collapse evaluations: "
         f"{collapse_count}"
-    )
-    print(
-        f"Generalization-collapse evaluations: "
-        f"{generalization_collapse_count}"
-    )
-    print(
-        f"Minimum post-grokking test accuracy: "
-        f"{minimum_post_grokking_test}"
     )
     print(
         f"Final test accuracy: "

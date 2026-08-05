@@ -5,6 +5,7 @@ import csv
 import math
 import random
 import shutil
+import sys
 from pathlib import Path
 from typing import Iterable
 
@@ -13,6 +14,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import Tensor
 from torch.nn import Parameter
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
 from data import generate_modular_addition_data
 from model import ModularAdditionTransformer
