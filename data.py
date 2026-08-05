@@ -5,6 +5,7 @@ def generate_modular_addition_data(
     modulus: int = 113,
     train_fraction: float = 0.3,
     seed: int = 0,
+    operation: str = "addition",
 ):
     values = torch.arange(modulus, dtype=torch.long)  # (P,), P = number of values modulo 113
 
@@ -17,7 +18,12 @@ def generate_modular_addition_data(
 
     inputs = torch.stack([a, b, equals_token], dim=1)  # (B, T), B = examples, T = 3 input tokens
 
-    targets = (a + b) % modulus  # (B,), one target class per example
+    if operation == "addition":
+        targets = (a + b) % modulus  # (B,), one target class per example
+    elif operation == "subtraction":
+        targets = (a - b) % modulus  # (B,), one target class per example
+    else:
+        raise ValueError(f"unknown operation: {operation}")
 
     generator = torch.Generator()
     generator.manual_seed(seed)

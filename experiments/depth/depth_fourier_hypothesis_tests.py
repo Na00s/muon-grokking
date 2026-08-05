@@ -121,6 +121,16 @@ def parse_arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--operation",
+        choices=["addition", "subtraction"],
+        default="addition",
+        help=(
+            "Modular operation the checkpoints were trained on. "
+            "This selects the labels the interventions are scored "
+            "against; it does not affect the mode-family partition."
+        ),
+    )
+    parser.add_argument(
         "--device",
         choices=["auto", "cuda", "mps"],
         default="auto",
@@ -685,6 +695,7 @@ def full_grid_from_checkpoint(
     step: int,
     checkpoint_path: Path,
     device: torch.device,
+    operation: str = "addition",
 ) -> CheckpointState:
     checkpoint = load_checkpoint(
         checkpoint_path
@@ -700,6 +711,7 @@ def full_grid_from_checkpoint(
     inputs, targets = ordered_full_grid(
         modulus,
         device,
+        operation=operation,
     )
 
     with torch.no_grad():
@@ -2189,6 +2201,7 @@ def main() -> None:
                     reference_item.checkpoint
                 ),
                 device=device,
+                operation=args.operation,
             )
         )
         references[run] = reference_state
@@ -2215,6 +2228,7 @@ def main() -> None:
                             item.checkpoint
                         ),
                         device=device,
+                        operation=args.operation,
                     )
                 )
 
@@ -2316,6 +2330,7 @@ def main() -> None:
                     str(row.control_checkpoint)
                 ),
                 device=device,
+                operation=args.operation,
             )
         )
         freeze_state = (
@@ -2329,6 +2344,7 @@ def main() -> None:
                     str(row.freeze_checkpoint)
                 ),
                 device=device,
+                operation=args.operation,
             )
         )
 

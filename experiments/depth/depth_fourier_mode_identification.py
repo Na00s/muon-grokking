@@ -74,6 +74,16 @@ def parse_arguments() -> argparse.Namespace:
         required=True,
     )
     parser.add_argument(
+        "--operation",
+        choices=["addition", "subtraction"],
+        default="addition",
+        help=(
+            "Modular operation the checkpoints were trained on. "
+            "This selects the labels accuracy is measured against; "
+            "it does not affect the mode-family partition."
+        ),
+    )
+    parser.add_argument(
         "--device",
         choices=["auto", "cuda", "mps"],
         default="auto",
@@ -198,9 +208,9 @@ def load_manifest(path: Path) -> list[RunSpecification]:
             checkpoint_directories=directories,
         )
 
-        if specification.depth not in {2, 4}:
+        if specification.depth not in {1, 2, 4}:
             raise ValueError(
-                "This study is restricted to depths 2 and 4."
+                "This study is restricted to depths 1, 2 and 4."
             )
         if not specification.csv_path.is_file():
             raise FileNotFoundError(
@@ -456,6 +466,7 @@ def build_model(
 def ordered_full_grid(
     modulus: int,
     device: torch.device,
+    operation: str = "addition",
 ) -> tuple[Tensor, Tensor]:
     values = torch.arange(
         modulus,
@@ -472,7 +483,13 @@ def ordered_full_grid(
         ],
         dim=1,
     )
-    targets = (a + b).remainder(modulus).reshape(-1)
+    if operation == "addition":
+        targets = (a + b).remainder(modulus).reshape(-1)
+    elif operation == "subtraction":
+        targets = (a - b).remainder(modulus).reshape(-1)
+    else:
+        raise ValueError(f"unknown operation: {operation}")
+
     return inputs, targets
 
 
@@ -481,6 +498,7 @@ def split_indices(
     train_fraction: float,
     seed: int,
     device: torch.device,
+    operation: str = "addition",
 ) -> tuple[Tensor, Tensor]:
     (
         train_inputs,
@@ -491,6 +509,7 @@ def split_indices(
         modulus=modulus,
         train_fraction=train_fraction,
         seed=seed,
+        operation=operation,
     )
 
     train_indices = (
@@ -988,6 +1007,7 @@ def analyze_checkpoint(
     checkpoint_path: Path,
     device: torch.device,
     top_pair_count: int,
+    operation: str = "addition",
 ) -> tuple[
     dict[str, object],
     list[dict[str, object]],
@@ -1016,12 +1036,14 @@ def analyze_checkpoint(
     full_inputs, full_targets = ordered_full_grid(
         modulus,
         device,
+        operation=operation,
     )
     train_indices, test_indices = split_indices(
         modulus,
         train_fraction,
         seed,
         device,
+        operation=operation,
     )
 
     with torch.no_grad():
@@ -1488,6 +1510,7 @@ def main() -> None:
                 checkpoint_path=checkpoint_path,
                 device=device,
                 top_pair_count=args.top_mode_pairs,
+                operation=args.operation,
             )
             model_rows.append(model_row)
             layer_rows.extend(checkpoint_layer_rows)

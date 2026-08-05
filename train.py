@@ -75,6 +75,14 @@ def parse_arguments() -> argparse.Namespace:
     )
 
     parser.add_argument(
+        "--operation",
+        type=str,
+        choices=["addition", "subtraction"],
+        default="addition",
+        help="Modular operation the targets are drawn from.",
+    )
+
+    parser.add_argument(
         "--seed",
         type=int,
         default=0,
@@ -656,11 +664,30 @@ def float_to_name(
     )
 
 
+def operation_suffix(
+    operation: str,
+) -> str:
+    """
+    Addition keeps the original naming so existing runs are
+    unchanged. Every other operation gets a suffix, which
+    separates both the run log and the checkpoint directory.
+    """
+    if operation == "addition":
+        return ""
+
+    return f"_{operation}"
+
+
 def resolve_run_name(
     args: argparse.Namespace,
     muon_weight_decay: float,
 ) -> str:
+    suffix = operation_suffix(args.operation)
+
     if args.run_name is not None:
+        if suffix and not args.run_name.endswith(suffix):
+            return f"{args.run_name}{suffix}"
+
         return args.run_name
 
     if args.optimizer == "adamw":
@@ -669,6 +696,7 @@ def resolve_run_name(
             f"_lr_{float_to_name(args.adamw_lr)}"
             f"_wd_{float_to_name(args.adamw_weight_decay)}"
             f"_seed_{args.seed}"
+            f"{suffix}"
         )
 
     return (
@@ -676,6 +704,7 @@ def resolve_run_name(
         f"_lr_{float_to_name(args.muon_lr)}"
         f"_wd_{float_to_name(muon_weight_decay)}"
         f"_seed_{args.seed}"
+        f"{suffix}"
     )
 
 
@@ -799,6 +828,7 @@ def main() -> None:
 
     print(f"Device: {device}")
     print(f"Optimizer regime: {args.optimizer}")
+    print(f"Operation: {args.operation}")
     print(f"Run name: {run_name}")
     print(f"Number of steps: {args.steps}")
     print(
@@ -846,6 +876,7 @@ def main() -> None:
         modulus=MODULUS,
         train_fraction=TRAIN_FRACTION,
         seed=args.seed,
+        operation=args.operation,
     )
 
     train_inputs = train_inputs.to(
@@ -1087,6 +1118,7 @@ def main() -> None:
                         ),
                         "seed": args.seed,
                         "modulus": MODULUS,
+                        "operation": args.operation,
                         "train_fraction": (
                             TRAIN_FRACTION
                         ),

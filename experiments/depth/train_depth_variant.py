@@ -106,6 +106,11 @@ def parse_arguments() -> argparse.Namespace:
         required=True,
     )
     parser.add_argument("--num-layers", type=int, required=True)
+    parser.add_argument(
+        "--operation",
+        choices=["addition", "subtraction"],
+        default="addition",
+    )
     parser.add_argument("--modulus", type=int, default=113)
     parser.add_argument("--train-fraction", type=float, default=0.3)
     parser.add_argument("--d-model", type=int, default=128)
@@ -628,6 +633,7 @@ def main() -> None:
         modulus=args.modulus,
         train_fraction=args.train_fraction,
         seed=args.seed,
+        operation=args.operation,
     )
 
     train_inputs = train_inputs.to(device)
@@ -751,6 +757,7 @@ def main() -> None:
     print(f"Device: {device}")
     print(f"Run: {args.run_name}")
     print(f"Regime: {args.regime}")
+    print(f"Operation: {args.operation}")
     print(
         "Configuration: "
         f"depth={args.num_layers}, "
@@ -925,6 +932,7 @@ def main() -> None:
                         "step": step,
                         "run_name": args.run_name,
                         "regime": args.regime,
+                        "operation": args.operation,
                         "arguments": vars(args),
                         "model_config": configuration,
                         "model_state_dict": model.state_dict(),
