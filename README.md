@@ -15,7 +15,9 @@ and 4.
 ```
 data.py                     operand grid, train/test split, operation selection
 model.py                    transformer, no normalization, bias-free projections
+metrics.py                  applied-update decomposition, gradient versus decay
 optimizers/muon.py          Newton–Schulz orthogonalized momentum
+optimizers/muon_no_ns.py    the same optimizer with the orthogonalization removed
 scripts/training/           single-run entry points
 scripts/sweeps/             hyperparameter and generality sweeps
 experiments/depth/          depth variants and layerwise Fourier analysis
@@ -25,7 +27,7 @@ analysis/plots/             figure generation
 runs/                       all run and analysis outputs
 ```
 
-`runs/` holds every artifact the paper reports: 136 CSVs and 16 HTML summaries. Model
+`runs/` holds every artifact the paper reports: 160 CSVs and 18 HTML summaries. Model
 checkpoints are gitignored.
 
 ## Environment
@@ -100,6 +102,9 @@ a 500-step window.
 | Layerwise circuit construction | `depth_fourier_layerwise_causal_v2_*`, `depth_fourier_mode_layer_summary_*` |
 | Depth | `depth_sweep_v2_*`, `depth_sweep_v3_*` |
 | Modular subtraction | `subtraction_*`, `addition_depth1_*` |
+| Applied-update decomposition | `branch_control_from_44000_instrumented.csv` |
+| Newton–Schulz ablation | `no_ns_depth_1_lr_*`, `no_ns_fourier_*` |
+| Rescaling the task-aligned component | `alpha_scaling_curve_*`, `alpha_scaling_margin_*` |
 
 ## Reproducing the family result
 
@@ -117,9 +122,56 @@ Family interventions loop over all non-DC families and are operation-general. Th
 phase, and cross-readout controls are written against `(k,k)` and report on addition models
 only.
 
+## Mechanism experiments
+
+Three experiments testing what the split-optimizer account actually attributes to what.
+
+**Applied updates.** The logged `muon_applied_update_norm` is the orthogonalized step before
+weight decay, not the tensor subtracted from the parameters. `metrics.py` decomposes the
+difference across a step into its gradient-driven and decay components, which for Muon, the
+ablation, and decoupled AdamW alike is exact, since all three apply
+`parameter <- parameter * (1 - lr * wd) - lr * update`.
+
+In the matched branch the hidden gradient and decay components are 0.1499 and 0.1475, so the
+net applied update is 0.0462, smaller by a factor of 3.2 than the quoted figure, and it grows
+64% across the quiet window rather than holding constant. The competing explanation, that the
+per-parameter separation is the learning-rate ratio rather than the update rule, is refuted:
+Muon's elasticity of log update on log gradient is -0.026 against AdamW's 1.51 and 1.47. Adam
+is scale-invariant under a constant rescaling of the gradient, not under gradient magnitude
+drifting over time, because its two moment horizons differ by two orders of magnitude.
+
+**Newton–Schulz ablation.** `optimizers/muon_no_ns.py` is identical to `muon.py` except that
+the update is the momentum buffer rather than its approximate zeroth power. It separates two
+phenomena the account treats as one.
+
+Orthogonalization causes the distributed code. The effective non-DC pair count at solved
+checkpoints is 326.09 with it, 4.11 without, and 4.95 for AdamW. The family itself is
+unaffected: `(k,k)` sufficiency is 100.00% at every solved ablation checkpoint.
+
+Orthogonalization does not cause the instability, it contains a worse one. Across a
+decay-matched learning-rate sweep spanning 0.03 to 10, every run that learned went on to
+diverge to a non-finite loss, six of six, including in double precision on CPU. Muon degrades
+gradually and recovers instead. Death steps span 22,889 to 38,955 and one run died at a flat
+hidden norm, so the timing is chaotic and no norm threshold governs it.
+
+**Rescaling the task-aligned component.** `alpha_scaling.py` splits the final residual into
+the task-aligned family and the remainder and rescales the first. Masked-branch accuracy rises
+monotonically and crosses 95% at a family share of 0.6247, below the frozen branch's native
+0.9069, reaching 0.9991 with no retraining and no change to the readout.
+
+The margin decomposition through the unembedding, exact because that readout is bias-free and
+linear, shows what power share alone cannot. In both branches the task-aligned component
+yields a positive margin on 100% of examples, including every example the masked model gets
+wrong, and the remainder is adversarial rather than neutral in both. The frozen branch wins on
+amplitude, +19.28 against -7.67; the masked branch loses it, +5.72 against -6.43. Masking is a
+competition the task-aligned component loses on amplitude, not a loss of task information.
+
 ## Empty modules
 
-`config.py`, `metrics.py`, `analysis/fourier.py`, `analysis/restricted_loss.py`,
-`analysis/update_spectra.py`, and `optimizers/muon_no_ns.py` are placeholders. The last three
-correspond to planned experiments: Nanda's restricted loss across a collapse, direct
-measurement of Muon's update singular values, and a Newton–Schulz ablation.
+`config.py`, `analysis/fourier.py`, `analysis/restricted_loss.py`, and
+`analysis/update_spectra.py` are placeholders. The last two correspond to planned
+experiments: Nanda's restricted loss across a collapse, and direct measurement of Muon's
+update singular values.
+
+`metrics.py` and `optimizers/muon_no_ns.py` were placeholders and are now implemented. The
+Newton–Schulz ablation they were reserved for is reported above.
