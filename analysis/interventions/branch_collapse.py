@@ -285,6 +285,86 @@ def clone_parameter_values(
     ]
 
 
+@torch.no_grad()
+def applied_update_statistics(
+    parameters: list[Parameter],
+    values_before_step: list[Tensor],
+    learning_rate: float,
+    weight_decay: float,
+) -> dict[str, float]:
+    """
+    Decompose the tensor the optimizer actually subtracted.
+
+    Muon and decoupled AdamW both apply
+
+        parameter <- parameter * (1 - lr * wd) - lr * update
+
+    so the decay contribution is exactly lr * wd * parameter_before
+    and the gradient-driven contribution is the remainder. The decay
+    term is not a response to the gradient, so it is reported
+    separately rather than counted as one.
+    """
+    total_squared = 0.0
+    gradient_squared = 0.0
+    decay_squared = 0.0
+    parameter_squared = 0.0
+    element_count = 0
+
+    for parameter, before in zip(
+        parameters,
+        values_before_step,
+        strict=True,
+    ):
+        after = parameter.detach().float()
+
+        total = before - after
+        decay = before * (learning_rate * weight_decay)
+        gradient = total - decay
+
+        total_squared += float(
+            total.pow(2).sum().item()
+        )
+        gradient_squared += float(
+            gradient.pow(2).sum().item()
+        )
+        decay_squared += float(
+            decay.pow(2).sum().item()
+        )
+        parameter_squared += float(
+            after.pow(2).sum().item()
+        )
+        element_count += parameter.numel()
+
+    applied_norm = math.sqrt(total_squared)
+
+    return {
+        "applied_update_norm": applied_norm,
+        "gradient_component_norm": math.sqrt(
+            gradient_squared
+        ),
+        "decay_component_norm": math.sqrt(
+            decay_squared
+        ),
+        "applied_update_rms": (
+            applied_norm / math.sqrt(element_count)
+            if element_count
+            else float("nan")
+        ),
+        "parameter_norm": math.sqrt(
+            parameter_squared
+        ),
+    }
+
+
+ZERO_UPDATE_STATISTICS = {
+    "applied_update_norm": 0.0,
+    "gradient_component_norm": 0.0,
+    "decay_component_norm": 0.0,
+    "applied_update_rms": 0.0,
+    "parameter_norm": float("nan"),
+}
+
+
 def build_optimizers(
     hidden_parameters: list[Parameter],
     auxiliary_parameters: list[Parameter],
@@ -528,6 +608,51 @@ def main() -> None:
         auxiliary_parameters
     )
 
+    # The readout shares the auxiliary AdamW group, so it is not a
+    # separate optimizer group here. It is reported separately anyway,
+    # because the question is whether the per-parameter separation
+    # tracks the update rule or the learning rate.
+    readout_parameters = [
+        model.unembedding.weight
+    ]
+
+    readout_ids = {
+        id(parameter)
+        for parameter in readout_parameters
+    }
+
+    embedding_parameters = [
+        parameter
+        for parameter in auxiliary_parameters
+        if id(parameter) not in readout_ids
+    ]
+
+    muon_learning_rate = muon_optimizer.param_groups[0][
+        "learning_rate"
+    ]
+    muon_weight_decay = muon_optimizer.param_groups[0][
+        "weight_decay"
+    ]
+    auxiliary_learning_rate = (
+        auxiliary_optimizer.param_groups[0]["lr"]
+    )
+    auxiliary_weight_decay = (
+        auxiliary_optimizer.param_groups[0]["weight_decay"]
+    )
+
+    print(
+        "Instrumented groups: "
+        f"hidden (Muon, lr={muon_learning_rate}, "
+        f"wd={muon_weight_decay}), "
+        f"embeddings and readout "
+        f"(AdamW, lr={auxiliary_learning_rate}, "
+        f"wd={auxiliary_weight_decay})"
+    )
+    print(
+        "Learning-rate ratio hidden:auxiliary = "
+        f"{muon_learning_rate / auxiliary_learning_rate:.1f}"
+    )
+
     update_hidden = (
         args.mode != "freeze_hidden"
     )
@@ -579,10 +704,35 @@ def main() -> None:
         "collapse_detected",
     ]
 
+    instrumented_groups = (
+        "hidden",
+        "embeddings",
+        "readout",
+    )
+
+    instrumented_fields = (
+        "applied_update_norm",
+        "gradient_component_norm",
+        "decay_component_norm",
+        "applied_update_rms",
+        "parameter_norm",
+    )
+
+    fieldnames.extend(
+        f"{group}_{field}"
+        for group in instrumented_groups
+        for field in instrumented_fields
+    )
+
     last_hidden_gradient_norm = float("nan")
     last_auxiliary_gradient_norm = float("nan")
     last_muon_applied_update_norm = float("nan")
     last_muon_max_abs_applied_update = float("nan")
+
+    last_update_statistics = {
+        group: dict(ZERO_UPDATE_STATISTICS)
+        for group in instrumented_groups
+    }
 
     has_memorized = True
 
@@ -672,6 +822,14 @@ def main() -> None:
                     "muon_applied_update_norm": (
                         last_muon_applied_update_norm
                     ),
+                    **{
+                        f"{group}_{field}": (
+                            last_update_statistics
+                            [group][field]
+                        )
+                        for group in instrumented_groups
+                        for field in instrumented_fields
+                    },
                     "muon_max_abs_applied_update": (
                         last_muon_max_abs_applied_update
                     ),
@@ -772,6 +930,18 @@ def main() -> None:
                 )
             )
 
+            hidden_before_step = clone_parameter_values(
+                hidden_parameters
+            )
+            embeddings_before_step = (
+                clone_parameter_values(
+                    embedding_parameters
+                )
+            )
+            readout_before_step = clone_parameter_values(
+                readout_parameters
+            )
+
             if update_hidden:
                 muon_optimizer.step()
 
@@ -794,6 +964,47 @@ def main() -> None:
 
             if update_auxiliary:
                 auxiliary_optimizer.step()
+
+            last_update_statistics["hidden"] = (
+                applied_update_statistics(
+                    hidden_parameters,
+                    hidden_before_step,
+                    learning_rate=muon_learning_rate,
+                    weight_decay=muon_weight_decay,
+                )
+                if update_hidden
+                else dict(ZERO_UPDATE_STATISTICS)
+            )
+
+            last_update_statistics["embeddings"] = (
+                applied_update_statistics(
+                    embedding_parameters,
+                    embeddings_before_step,
+                    learning_rate=(
+                        auxiliary_learning_rate
+                    ),
+                    weight_decay=(
+                        auxiliary_weight_decay
+                    ),
+                )
+                if update_auxiliary
+                else dict(ZERO_UPDATE_STATISTICS)
+            )
+
+            last_update_statistics["readout"] = (
+                applied_update_statistics(
+                    readout_parameters,
+                    readout_before_step,
+                    learning_rate=(
+                        auxiliary_learning_rate
+                    ),
+                    weight_decay=(
+                        auxiliary_weight_decay
+                    ),
+                )
+                if update_auxiliary
+                else dict(ZERO_UPDATE_STATISTICS)
+            )
 
     print()
     print(f"Saved branch metrics to: {csv_path}")

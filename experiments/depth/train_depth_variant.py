@@ -21,8 +21,15 @@ if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
 from data import generate_modular_addition_data
+from metrics import (
+    UPDATE_STATISTIC_FIELDS,
+    ZERO_UPDATE_STATISTICS,
+    applied_update_statistics,
+    clone_parameter_values,
+)
 from model import TransformerBlock
 from optimizers.muon import Muon
+from optimizers.muon_no_ns import MuonWithoutNewtonSchulz
 
 
 SEQUENCE_LENGTH = 3
@@ -102,7 +109,12 @@ def parse_arguments() -> argparse.Namespace:
     )
     parser.add_argument(
         "--regime",
-        choices=["adamw", "muon", "stable_muon"],
+        choices=[
+            "adamw",
+            "muon",
+            "stable_muon",
+            "muon_no_ns",
+        ],
         required=True,
     )
     parser.add_argument("--num-layers", type=int, required=True)
@@ -122,8 +134,18 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument("--checkpoint-interval", type=int, default=1_000)
     parser.add_argument(
         "--device",
-        choices=["auto", "cuda", "mps"],
+        choices=["auto", "cuda", "mps", "cpu"],
         default="auto",
+    )
+    parser.add_argument(
+        "--dtype",
+        choices=["float32", "float64"],
+        default="float32",
+        help=(
+            "Parameter and activation precision. float64 is a "
+            "numerical control and requires --device cpu, since "
+            "the MPS backend does not support it."
+        ),
     )
     parser.add_argument("--run-name", type=str, required=True)
     parser.add_argument(
@@ -227,6 +249,9 @@ def validate_arguments(args: argparse.Namespace) -> None:
 
 
 def get_device(requested: str) -> torch.device:
+    if requested == "cpu":
+        return torch.device("cpu")
+
     if requested == "cuda":
         if not torch.cuda.is_available():
             raise RuntimeError("CUDA was requested but is unavailable.")
@@ -654,7 +679,25 @@ def main() -> None:
         ),
     )
 
-    model = model.to(device)
+    parameter_dtype = (
+        torch.float64
+        if args.dtype == "float64"
+        else torch.float32
+    )
+
+    if (
+        parameter_dtype is torch.float64
+        and device.type != "cpu"
+    ):
+        raise ValueError(
+            "float64 requires --device cpu; the MPS backend "
+            "does not support double precision."
+        )
+
+    model = model.to(
+        device=device,
+        dtype=parameter_dtype,
+    )
 
     (
         hidden_parameters,
@@ -685,6 +728,14 @@ def main() -> None:
             weight_decay=args.adamw_weight_decay,
             betas=(args.adamw_beta1, args.adamw_beta2),
         )
+    elif args.regime == "muon_no_ns":
+        optimizers["muon"] = MuonWithoutNewtonSchulz(
+            hidden_parameters,
+            learning_rate=args.muon_lr,
+            momentum=args.muon_momentum,
+            weight_decay=args.muon_weight_decay,
+            nesterov=True,
+        )
     else:
         optimizers["muon"] = Muon(
             hidden_parameters,
@@ -694,6 +745,8 @@ def main() -> None:
             newton_schulz_steps=args.muon_ns_steps,
             nesterov=True,
         )
+
+    if args.regime != "adamw":
         optimizers["auxiliary_adamw"] = torch.optim.AdamW(
             auxiliary_parameters,
             lr=args.aux_lr,
@@ -738,6 +791,48 @@ def main() -> None:
         "scheduled_freeze_step",
     ]
 
+    instrumented_groups = (
+        "hidden",
+        "auxiliary",
+        "readout",
+    )
+
+    fieldnames.extend(
+        f"{group}_{field}"
+        for group in instrumented_groups
+        for field in UPDATE_STATISTIC_FIELDS
+    )
+
+    instrumented_parameters = {
+        "hidden": hidden_parameters,
+        "auxiliary": auxiliary_parameters,
+        "readout": unembedding_parameters,
+    }
+
+    if args.regime == "adamw":
+        instrumented_settings = {
+            group: (
+                args.adamw_lr,
+                args.adamw_weight_decay,
+            )
+            for group in instrumented_groups
+        }
+    else:
+        instrumented_settings = {
+            "hidden": (
+                args.muon_lr,
+                args.muon_weight_decay,
+            ),
+            "auxiliary": (
+                args.aux_lr,
+                args.aux_weight_decay,
+            ),
+            "readout": (
+                args.unembedding_lr,
+                args.unembedding_weight_decay,
+            ),
+        }
+
     evaluation_records: list[dict[str, object]] = []
 
     last_hidden_gradient_norm = float("nan")
@@ -745,6 +840,11 @@ def main() -> None:
     last_unembedding_gradient_norm = float("nan")
     last_muon_applied_update_norm = float("nan")
     last_muon_max_abs_applied_update = float("nan")
+
+    last_update_statistics = {
+        group: dict(ZERO_UPDATE_STATISTICS)
+        for group in instrumented_groups
+    }
 
     has_memorized = False
     has_reached_95_test = False
@@ -891,6 +991,16 @@ def main() -> None:
                     "muon_max_abs_applied_update": (
                         last_muon_max_abs_applied_update
                     ),
+                    **{
+                        f"{group}_{field}": (
+                            last_update_statistics
+                            [group][field]
+                        )
+                        for group in instrumented_groups
+                        for field in (
+                            UPDATE_STATISTIC_FIELDS
+                        )
+                    },
                     "train_collapse_detected": int(
                         train_collapse
                     ),
@@ -999,6 +1109,13 @@ def main() -> None:
                 unembedding_parameters
             )
 
+            values_before_step = {
+                group: clone_parameter_values(
+                    instrumented_parameters[group]
+                )
+                for group in instrumented_groups
+            }
+
             if args.regime == "adamw":
                 optimizers["adamw"].step()
             else:
@@ -1016,6 +1133,28 @@ def main() -> None:
                 last_muon_max_abs_applied_update = statistics[
                     "max_abs_applied_update"
                 ]
+
+            for group in instrumented_groups:
+                learning_rate, weight_decay = (
+                    instrumented_settings[group]
+                )
+
+                group_updated = (
+                    args.regime == "adamw"
+                    or group == "hidden"
+                    or not auxiliary_frozen
+                )
+
+                last_update_statistics[group] = (
+                    applied_update_statistics(
+                        instrumented_parameters[group],
+                        values_before_step[group],
+                        learning_rate=learning_rate,
+                        weight_decay=weight_decay,
+                    )
+                    if group_updated
+                    else dict(ZERO_UPDATE_STATISTICS)
+                )
 
     memorization_step = first_sustained_step(
         evaluation_records,
