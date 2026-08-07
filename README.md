@@ -5,8 +5,8 @@ under split-optimizer routing that gives Muon the hidden weight matrices and lea
 embeddings and the output head with AdamW.
 
 The task is modular arithmetic on a decoder-only transformer with no normalization layers.
-Runs cover two operations, two moduli, two widths, two training fractions, and depths 1, 2,
-and 4.
+Runs cover two operations, two moduli, two widths, two training fractions, depths 1, 2, and
+4, and five seeds.
 
 ---
 
@@ -27,18 +27,27 @@ analysis/plots/             figure generation
 runs/                       all run and analysis outputs
 ```
 
-`runs/` holds every artifact the paper reports: 160 CSVs and 18 HTML summaries. Model
-checkpoints are gitignored.
+`runs/` holds every artifact the paper reports: 191 CSVs and 20 HTML summaries. Model
+checkpoints are gitignored, so the analysis pipeline must be re-run against locally
+regenerated checkpoints rather than against a fresh clone.
 
 ## Environment
 
 PyTorch with an MPS, CUDA, or CPU backend. Fourier transforms run on CPU regardless, since
 prime-length transforms are not deterministically supported on every accelerator backend.
 
-Trajectories are not bitwise reproducible across processes on MPS. Two runs of the depth-4
-Muon configuration reach sustained generalization at 52,600 and 101,300 steps. Every matched
-comparison in the paper is therefore constructed by branching within a single process, with
-zero parameter difference at the branch point.
+Trajectories are not bitwise reproducible across processes on MPS, and two runs of the same
+configuration can reach sustained generalization at substantially different steps. CPU
+execution is bitwise deterministic.
+
+Anything that compares trajectories should therefore run on CPU with `--device cpu`, where
+two runs sharing a seed are identical until they are deliberately made to differ, so a
+matched pair needs no in-process fork and its pairing can be verified by diffing the logs.
+On MPS, seed variance and backend nondeterminism are confounded. The depth-4 matched
+comparisons predate this and are instead constructed by branching within a single process,
+with zero parameter difference at the branch point.
+
+`--dtype float64` is available on CPU as a numerical control. MPS does not support it.
 
 ## Running
 
@@ -63,6 +72,21 @@ python scripts/sweeps/run_muon_sweep.py
 python scripts/sweeps/run_generality_suite.py
 ```
 
+One arm of a seed replication. Each seed needs its own depth-one initial state, and the seed
+sets both the initialization and the train/test split:
+
+```bash
+python experiments/depth/train_depth_variant.py \
+  --regime stable_muon --num-layers 1 --seed 3 --device cpu \
+  --run-name seedstudy_stable_muon_seed_3 \
+  --initial-state-path checkpoints/initial_states/depth_nested_v2_1_seed_3.pt \
+  --depth-one-initial-state-path checkpoints/initial_states/model_seed_3_sweep_compatible.pt
+```
+
+Muon and stable Muon at the same seed on CPU are the same trajectory until the freeze fires,
+so running both gives a matched pair without an in-process fork. Threading scales poorly
+here; many single-threaded jobs under `OMP_NUM_THREADS=1` outperform a few wide ones.
+
 ## Configurations
 
 The selected configurations, used wherever the paper reports a comparison:
@@ -76,6 +100,11 @@ The selected configurations, used wherever the paper reports a comparison:
 
 Stable Muon is the Muon configuration with the embeddings and unembedding held constant
 once the circuit has formed. It is the same run as Muon before the freeze.
+
+`train_depth_variant.py` selects between these with `--regime`: `adamw`, `muon`,
+`stable_muon`, and `muon_no_ns`. The Muon and auxiliary defaults are the locked depth-one
+selections above, so a depth variant needs no hyperparameter arguments to reproduce them.
+The unstable AdamW comparison is `--regime adamw --adamw-lr 1e-2 --adamw-weight-decay 1.0`.
 
 ## Definitions
 
@@ -105,66 +134,59 @@ a 500-step window.
 | Applied-update decomposition | `branch_control_from_44000_instrumented.csv` |
 | Newton–Schulz ablation | `no_ns_depth_1_lr_*`, `no_ns_fourier_*` |
 | Rescaling the task-aligned component | `alpha_scaling_curve_*`, `alpha_scaling_margin_*` |
+| Seed replication, five seeds, four conditions | `seedstudy_*` |
 
-## Reproducing the family result
+## Fourier circuit analysis
 
-The central mechanistic claim is that the model computes the task through one family of
-two-dimensional Fourier modes over the operand grid, and that the task selects the family.
-Across eleven solved addition checkpoints, projection onto the `(k,k)` family gives 100%
-accuracy and ablating it leaves 1.34%, while every other family in isolation sits at the
-chance rate of 0.88%. On `(a-b) mod 113` the two families exchange roles exactly.
+Two stages. `depth_fourier_mode_identification.py` partitions the two-dimensional Fourier
+modes over the operand grid into families — addition `(k,k)`, subtraction `(k,-k)`, a-only,
+b-only, constant, and generic interaction — and writes a model summary. `depth_fourier_hypothesis_tests.py`
+consumes that summary and runs sufficiency and ablation per family, plus the frequency
+relocation, phase, and cross-readout controls.
 
 ```bash
-python experiments/depth/depth_fourier_hypothesis_tests.py --help
+python experiments/depth/depth_fourier_mode_identification.py \
+  --manifest runs/<manifest>.csv --operation addition
+
+python experiments/depth/depth_fourier_hypothesis_tests.py \
+  --model-summary runs/<summary>.csv --operation addition
 ```
 
-Family interventions loop over all non-DC families and are operation-general. The frequency,
-phase, and cross-readout controls are written against `(k,k)` and report on addition models
-only.
+A manifest is one row per run: `label,depth,regime,csv_path,checkpoint_directories`. Depths 1,
+2, and 4 are accepted, and checkpoints must carry `model_config` with `num_layers`, which the
+depth-variant trainer writes and `scripts/training/train.py` does not.
+
+`--operation` selects the labels accuracy is scored against and does not affect the family
+partition. Family interventions loop over all non-DC families and are operation-general. The
+frequency, phase, and cross-readout controls are written against `(k,k)` specifically and are
+meaningful for addition-trained models only.
 
 ## Mechanism experiments
 
-Three experiments testing what the split-optimizer account actually attributes to what.
+Three instruments isolating what the split-optimizer account attributes to what.
 
-**Applied updates.** The logged `muon_applied_update_norm` is the orthogonalized step before
-weight decay, not the tensor subtracted from the parameters. `metrics.py` decomposes the
-difference across a step into its gradient-driven and decay components, which for Muon, the
-ablation, and decoupled AdamW alike is exact, since all three apply
-`parameter <- parameter * (1 - lr * wd) - lr * update`.
-
-In the matched branch the hidden gradient and decay components are 0.1499 and 0.1475, so the
-net applied update is 0.0462, smaller by a factor of 3.2 than the quoted figure, and it grows
-64% across the quiet window rather than holding constant. The competing explanation, that the
-per-parameter separation is the learning-rate ratio rather than the update rule, is refuted:
-Muon's elasticity of log update on log gradient is -0.026 against AdamW's 1.51 and 1.47. Adam
-is scale-invariant under a constant rescaling of the gradient, not under gradient magnitude
-drifting over time, because its two moment horizons differ by two orders of magnitude.
+**Applied updates.** `muon_applied_update_norm` records the orthogonalized step before weight
+decay, which is not the tensor subtracted from the parameters. `metrics.py` measures the
+difference across an optimizer step and splits it into a gradient-driven and a decay
+component. The split is exact for Muon, the Newton–Schulz ablation, and decoupled AdamW
+alike, since all three apply `parameter <- parameter * (1 - lr * wd) - lr * update`. The
+snapshot is taken in double precision, because the applied update is a difference of two
+nearly equal numbers. `analysis/interventions/branch_collapse.py` and
+`experiments/depth/train_depth_variant.py` log it per parameter group.
 
 **Newton–Schulz ablation.** `optimizers/muon_no_ns.py` is identical to `muon.py` except that
-the update is the momentum buffer rather than its approximate zeroth power. It separates two
-phenomena the account treats as one.
+the update is the momentum buffer rather than its approximate zeroth power, so the step
+carries the gradient's magnitude instead of a magnitude set by the matrix shape. The learning
+rate is therefore not transferable from Muon, and a run is only interpretable against a
+learning-rate sweep or an explicit calibration. Because Muon couples decay to the learning
+rate through `1 - lr * wd`, a sweep should hold `lr * wd` fixed so it varies step size rather
+than decay. Select with `--regime muon_no_ns`.
 
-Orthogonalization causes the distributed code. The effective non-DC pair count at solved
-checkpoints is 326.09 with it, 4.11 without, and 4.95 for AdamW. The family itself is
-unaffected: `(k,k)` sufficiency is 100.00% at every solved ablation checkpoint.
-
-Orthogonalization does not cause the instability, it contains a worse one. Across a
-decay-matched learning-rate sweep spanning 0.03 to 10, every run that learned went on to
-diverge to a non-finite loss, six of six, including in double precision on CPU. Muon degrades
-gradually and recovers instead. Death steps span 22,889 to 38,955 and one run died at a flat
-hidden norm, so the timing is chaotic and no norm threshold governs it.
-
-**Rescaling the task-aligned component.** `alpha_scaling.py` splits the final residual into
-the task-aligned family and the remainder and rescales the first. Masked-branch accuracy rises
-monotonically and crosses 95% at a family share of 0.6247, below the frozen branch's native
-0.9069, reaching 0.9991 with no retraining and no change to the readout.
-
-The margin decomposition through the unembedding, exact because that readout is bias-free and
-linear, shows what power share alone cannot. In both branches the task-aligned component
-yields a positive margin on 100% of examples, including every example the masked model gets
-wrong, and the remainder is adversarial rather than neutral in both. The frozen branch wins on
-amplitude, +19.28 against -7.67; the masked branch loses it, +5.72 against -6.43. Masking is a
-competition the task-aligned component loses on amplitude, not a loss of task information.
+**Rescaling the task-aligned component.** `experiments/depth/alpha_scaling.py` splits the
+final residual into the task-aligned family and the remainder, rescales the first across a
+sweep of factors, and records full-model accuracy and the resulting family power share at
+each. It also decomposes the correct-class margin through the unembedding, which is exact
+because that readout is a bias-free linear map.
 
 ## Empty modules
 
@@ -173,5 +195,5 @@ competition the task-aligned component loses on amplitude, not a loss of task in
 experiments: Nanda's restricted loss across a collapse, and direct measurement of Muon's
 update singular values.
 
-`metrics.py` and `optimizers/muon_no_ns.py` were placeholders and are now implemented. The
-Newton–Schulz ablation they were reserved for is reported above.
+`metrics.py` and `optimizers/muon_no_ns.py` were placeholders and are now implemented; both
+are described under Mechanism experiments.
