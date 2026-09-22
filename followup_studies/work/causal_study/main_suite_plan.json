@@ -1,0 +1,164 @@
+{
+  "created_utc": "2026-09-22T20:01:06.110786+00:00",
+  "workers": 6,
+  "jobs": [
+    {
+      "name": "seed0_accurate6000",
+      "seed": 0,
+      "arm": "stable32",
+      "checkpoint": "work/experiments/seed0_original/step_006000.pt",
+      "end": 30000,
+      "checkpoint_sha256": "c3442965ba80566f5e4fe5c68407a35e22e6df203c65eaa615efc643631cb7d1"
+    },
+    {
+      "name": "seed1_accurate6000",
+      "seed": 1,
+      "arm": "stable32",
+      "checkpoint": "work/basis_study/seed1_baseline/step_006000.pt",
+      "end": 30000,
+      "checkpoint_sha256": "cbd74b61374d086864b137496ad3867a0494502f7988a90a72f6cffa64e3c79a"
+    },
+    {
+      "name": "seed2_accurate6000",
+      "seed": 2,
+      "arm": "stable32",
+      "checkpoint": "work/basis_study/seed2_baseline/step_006000.pt",
+      "end": 30000,
+      "checkpoint_sha256": "3a0e3eaa3b2055ea8fc6809f5f8c2fda395e7d556051a310638bbb934b6e4b6e"
+    },
+    {
+      "name": "seed3_accurate6000",
+      "seed": 3,
+      "arm": "stable32",
+      "checkpoint": "work/basis_study/seed3_baseline/step_006000.pt",
+      "end": 30000,
+      "checkpoint_sha256": "e590c4a01724b93c362d2428f7a876a39d18846711e3aa9e142f550236bcff13"
+    },
+    {
+      "name": "seed4_accurate6000",
+      "seed": 4,
+      "arm": "stable32",
+      "checkpoint": "work/experiments/seed4_original/step_006000.pt",
+      "end": 30000,
+      "checkpoint_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc"
+    },
+    {
+      "name": "seed0_target_repair15000",
+      "seed": 0,
+      "arm": "target_repair",
+      "checkpoint": "work/experiments/seed0_original/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "a3ce6936aee499e9d06c5b37edd149c03093854680d4ef9bdd8b1b5ef8dc1c6d"
+    },
+    {
+      "name": "seed0_stable3215000",
+      "seed": 0,
+      "arm": "stable32",
+      "checkpoint": "work/experiments/seed0_original/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "a3ce6936aee499e9d06c5b37edd149c03093854680d4ef9bdd8b1b5ef8dc1c6d"
+    },
+    {
+      "name": "seed1_target_repair15000",
+      "seed": 1,
+      "arm": "target_repair",
+      "checkpoint": "work/basis_study/seed1_baseline/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "30f726b0c82fd07b666a7a2b349cfd319f92aeeafd02ae45007340761d585517"
+    },
+    {
+      "name": "seed1_stable3215000",
+      "seed": 1,
+      "arm": "stable32",
+      "checkpoint": "work/basis_study/seed1_baseline/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "30f726b0c82fd07b666a7a2b349cfd319f92aeeafd02ae45007340761d585517"
+    },
+    {
+      "name": "seed2_target_repair15000",
+      "seed": 2,
+      "arm": "target_repair",
+      "checkpoint": "work/basis_study/seed2_baseline/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "70ab302a6fcc6d46bd65c18d3876da51586aaa8b5c26e6985d2cc91527e65b9c"
+    },
+    {
+      "name": "seed2_stable3215000",
+      "seed": 2,
+      "arm": "stable32",
+      "checkpoint": "work/basis_study/seed2_baseline/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "70ab302a6fcc6d46bd65c18d3876da51586aaa8b5c26e6985d2cc91527e65b9c"
+    },
+    {
+      "name": "seed3_target_repair15000",
+      "seed": 3,
+      "arm": "target_repair",
+      "checkpoint": "work/basis_study/seed3_baseline/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "68ca9819381262ba3d38afbb5371d88f7c589aac36f8fc7a380176b53ef44090"
+    },
+    {
+      "name": "seed3_stable3215000",
+      "seed": 3,
+      "arm": "stable32",
+      "checkpoint": "work/basis_study/seed3_baseline/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "68ca9819381262ba3d38afbb5371d88f7c589aac36f8fc7a380176b53ef44090"
+    },
+    {
+      "name": "seed4_target_repair15000",
+      "seed": 4,
+      "arm": "target_repair",
+      "checkpoint": "work/experiments/seed4_original/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "5ae288433cfe02133d27d52103a78154399400f693b8be576defe59202897733"
+    },
+    {
+      "name": "seed4_stable3215000",
+      "seed": 4,
+      "arm": "stable32",
+      "checkpoint": "work/experiments/seed4_original/step_015000.pt",
+      "end": 20000,
+      "checkpoint_sha256": "5ae288433cfe02133d27d52103a78154399400f693b8be576defe59202897733"
+    },
+    {
+      "name": "seed0_stock_extension",
+      "seed": 0,
+      "arm": "original32",
+      "checkpoint": "work/experiments/seed0_original/step_018000.pt",
+      "end": 30000,
+      "checkpoint_sha256": "f443809c2863f7090b736b6aea7a643fd6cbbd12c7cc92d1d5429b4148a5bd07"
+    },
+    {
+      "name": "seed1_stock_extension",
+      "seed": 1,
+      "arm": "original32",
+      "checkpoint": "work/basis_study/seed1_baseline/final.pt",
+      "end": 30000,
+      "checkpoint_sha256": "10cc987bb63d7ad5f6e0413a9c925837191320f5e242515f1fe3d14b1d999dac"
+    },
+    {
+      "name": "seed2_stock_extension",
+      "seed": 2,
+      "arm": "original32",
+      "checkpoint": "work/basis_study/seed2_baseline/final.pt",
+      "end": 30000,
+      "checkpoint_sha256": "ae62acd4bc6054652505d98129f0dad42bbe0e9bdb072feb3a070bc2b891cb57"
+    },
+    {
+      "name": "seed3_stock_extension",
+      "seed": 3,
+      "arm": "original32",
+      "checkpoint": "work/basis_study/seed3_baseline/final.pt",
+      "end": 30000,
+      "checkpoint_sha256": "f7a74d1fc3ae5cf56e1c0d74be1220cc748d865db1642f8678ecd5717b9a3b5c"
+    }
+  ],
+  "primary": "Five matched arithmetic contrasts from saved step6000 through30000; cached stock prefixes contain verified positive joint-collapse events.",
+  "specificity": "Five paired accurate-CE and target-derivative-only repair continuations from step15000 through20000.",
+  "stock_extensions": "Four originals resumed through30000. Seed4 already reached30000.",
+  "interpretation": "Fixed finite horizons. Mixed cached-stock monitoring supports binary incidence only. Detailed rules are in claim_adjudication.md.",
+  "runner_sha256": "759a25e2ae9873e7a6dc22f6e3180080d1c138be8ea4852d3315b8427fdf7d35",
+  "target_helper_sha256": "3026ecc476c43a32d5fb4b1aaa0b186b685819bc65d41313981c0ac3b8ddfe4c"
+}

@@ -1,0 +1,18 @@
+{
+  "seed": 0,
+  "operation": "subtraction",
+  "normalization": "none",
+  "arithmetic": "stock",
+  "steps": 30000,
+  "grok_step": 9300,
+  "event_step": 15281,
+  "peak_step": 15281,
+  "first_train_drop_step": 15281,
+  "post_grok_train_min": 0.27023498694516973,
+  "post_grok_test_min": 0.058507663049558116,
+  "post_grok_train_failure_states": 12,
+  "post_grok_test_failure_evaluations": 21,
+  "final_train_accuracy": 1.0,
+  "final_test_accuracy": 1.0,
+  "elapsed_seconds": 3909.4751388749573
+}

@@ -1,0 +1,17 @@
+test_forward_is_bitwise_stock (test_diagnostics_repairs.DerivativeRepairTests.test_forward_is_bitwise_stock) ... ok
+test_projection_preserves_class_centered_direction (test_diagnostics_repairs.DerivativeRepairTests.test_projection_preserves_class_centered_direction) ... ok
+test_reduction_and_example_weights_are_respected (test_diagnostics_repairs.DerivativeRepairTests.test_reduction_and_example_weights_are_respected) ... ok
+test_target_repair_matches_accurate_reference (test_diagnostics_repairs.DerivativeRepairTests.test_target_repair_matches_accurate_reference) ... ok
+test_target_repair_retains_wrong_entries (test_diagnostics_repairs.DerivativeRepairTests.test_target_repair_retains_wrong_entries) ... ok
+test_zero_stock_target_has_corrected_nonzero_derivative (test_diagnostics_repairs.DerivativeRepairTests.test_zero_stock_target_has_corrected_nonzero_derivative) ... ok
+test_accurate_ce_independent_derivative (test_generality_runner.TestGenerality.test_accurate_ce_independent_derivative) ... ok
+test_checkpoint_load_is_independent (test_generality_runner.TestGenerality.test_checkpoint_load_is_independent) ... ok
+test_original_update_exact (test_generality_runner.TestGenerality.test_original_update_exact) ... ok
+test_rms_formula_and_no_parameters (test_generality_runner.TestGenerality.test_rms_formula_and_no_parameters) ... ok
+test_source_model_initialization_and_optimizer_routing (test_generality_runner.TestGenerality.test_source_model_initialization_and_optimizer_routing) ... ok
+test_task_split_and_labels (test_generality_runner.TestGenerality.test_task_split_and_labels) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.345s
+
+OK

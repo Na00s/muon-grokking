@@ -1,0 +1,539 @@
+{
+  "seed": 4,
+  "pre_step": 16055,
+  "post_step": 16056,
+  "feature_arms": {
+    "pre_features": {
+      "feature_frobenius_norm": 1381866.6116223182,
+      "feature_row_norm_mean": 12228.492577463743,
+      "feature_row_norm_max": 13092.78723356116,
+      "update_logit_rms": 49.10136384280755,
+      "training_directional_derivative": -1.6501090810881915,
+      "training_directional_curvature": 32.99031908987121,
+      "quadratic_optimum_scale": 0.05001797880745001,
+      "best_training_loss_grid_point": {
+        "scale": 0.1,
+        "train": {
+          "loss": 0.06264060093788154,
+          "accuracy": 0.9906005221932115,
+          "minimum_margin": -6.711505049855191,
+          "mean_margin": 15.316405511525094
+        },
+        "heldout": {
+          "loss": 0.09970287663829941,
+          "accuracy": 0.9855688555766864,
+          "minimum_margin": -13.479270530869599,
+          "mean_margin": 11.966500366601924
+        }
+      },
+      "curve": [
+        {
+          "scale": -1.0,
+          "train": {
+            "loss": 87.81595912219869,
+            "accuracy": 0.037859007832898174,
+            "minimum_margin": -141.0687591894066,
+            "mean_margin": -87.35714739101343
+          },
+          "heldout": {
+            "loss": 91.28005308852458,
+            "accuracy": 0.03803557444904352,
+            "minimum_margin": -146.0437946700235,
+            "mean_margin": -90.8165190040876
+          }
+        },
+        {
+          "scale": -0.1,
+          "train": {
+            "loss": 2.4610323046401508,
+            "accuracy": 0.37389033942558747,
+            "minimum_margin": -30.43471257754402,
+            "mean_margin": -0.1761111747892393
+          },
+          "heldout": {
+            "loss": 4.969057692581822,
+            "accuracy": 0.24600067121601968,
+            "minimum_margin": -36.432502678734465,
+            "mean_margin": -3.423307030520002
+          }
+        },
+        {
+          "scale": 0.0,
+          "train": {
+            "loss": 0.14503200285560428,
+            "accuracy": 0.9877284595300261,
+            "minimum_margin": -18.563340283428886,
+            "mean_margin": 9.496310435930056
+          },
+          "heldout": {
+            "loss": 0.35633093271748983,
+            "accuracy": 0.9134131334601185,
+            "minimum_margin": -24.253470235257907,
+            "mean_margin": 6.262119330888317
+          }
+        },
+        {
+          "scale": 0.0001,
+          "train": {
+            "loss": 0.14486715658906307,
+            "accuracy": 0.9877284595300261,
+            "minimum_margin": -18.551468911134748,
+            "mean_margin": 9.505885802182709
+          },
+          "heldout": {
+            "loss": 0.3551788063936796,
+            "accuracy": 0.9136368721333482,
+            "minimum_margin": -24.241291202814466,
+            "mean_margin": 6.271640308445926
+          }
+        },
+        {
+          "scale": 0.0003,
+          "train": {
+            "loss": 0.14453844635819155,
+            "accuracy": 0.9877284595300261,
+            "minimum_margin": -18.52772616654653,
+            "mean_margin": 9.525034796035083
+          },
+          "heldout": {
+            "loss": 0.3528876458355606,
+            "accuracy": 0.9141962188164224,
+            "minimum_margin": -24.216933137927526,
+            "mean_margin": 6.290681146525947
+          }
+        },
+        {
+          "scale": 0.001,
+          "train": {
+            "loss": 0.14339808438404444,
+            "accuracy": 0.9879895561357702,
+            "minimum_margin": -18.444626560487734,
+            "mean_margin": 9.592028101079794
+          },
+          "heldout": {
+            "loss": 0.3450048082556415,
+            "accuracy": 0.9166573442219488,
+            "minimum_margin": -24.131679910823152,
+            "mean_margin": 6.357290668146244
+          }
+        },
+        {
+          "scale": 0.003,
+          "train": {
+            "loss": 0.140222220689389,
+            "accuracy": 0.9882506527415144,
+            "minimum_margin": -18.20719911460543,
+            "mean_margin": 9.78305084629608
+          },
+          "heldout": {
+            "loss": 0.32361929359093056,
+            "accuracy": 0.9241525897751426,
+            "minimum_margin": -23.88809926195364,
+            "mean_margin": 6.547136147226821
+          }
+        },
+        {
+          "scale": 0.01,
+          "train": {
+            "loss": 0.12992218773950107,
+            "accuracy": 0.9890339425587468,
+            "minimum_margin": -17.376203054017367,
+            "mean_margin": 10.445536513307824
+          },
+          "heldout": {
+            "loss": 0.26085463054588814,
+            "accuracy": 0.9440653316925831,
+            "minimum_margin": -23.03556699091024,
+            "mean_margin": 7.205186093825172
+          }
+        },
+        {
+          "scale": 0.03,
+          "train": {
+            "loss": 0.10525391386074007,
+            "accuracy": 0.9906005221932115,
+            "minimum_margin": -15.001928595194329,
+            "mean_margin": 12.259713565473932
+          },
+          "heldout": {
+            "loss": 0.15718130300045757,
+            "accuracy": 0.9803109967557893,
+            "minimum_margin": -20.599760502214963,
+            "mean_margin": 9.011581514778868
+          }
+        },
+        {
+          "scale": 0.1,
+          "train": {
+            "loss": 0.06264060093788154,
+            "accuracy": 0.9906005221932115,
+            "minimum_margin": -6.711505049855191,
+            "mean_margin": 15.316405511525094
+          },
+          "heldout": {
+            "loss": 0.09970287663829941,
+            "accuracy": 0.9855688555766864,
+            "minimum_margin": -13.479270530869599,
+            "mean_margin": 11.966500366601924
+          }
+        },
+        {
+          "scale": 0.3,
+          "train": {
+            "loss": 1.362399872818173,
+            "accuracy": 0.8772845953002611,
+            "minimum_margin": -17.25234436072435,
+            "mean_margin": 11.778391531144369
+          },
+          "heldout": {
+            "loss": 1.7505983178476212,
+            "accuracy": 0.8630719319834433,
+            "minimum_margin": -25.701275483723578,
+            "mean_margin": 8.56603634436625
+          }
+        },
+        {
+          "scale": 0.5,
+          "train": {
+            "loss": 3.91466934157423,
+            "accuracy": 0.8347258485639687,
+            "minimum_margin": -41.15598501025062,
+            "mean_margin": 7.8995765885219384
+          },
+          "heldout": {
+            "loss": 4.424729320430451,
+            "accuracy": 0.8107170824477011,
+            "minimum_margin": -47.84432025694815,
+            "mean_margin": 4.791848946395436
+          }
+        },
+        {
+          "scale": 0.75,
+          "train": {
+            "loss": 7.4653493452667865,
+            "accuracy": 0.7736292428198434,
+            "minimum_margin": -71.03553582215852,
+            "mean_margin": 2.9253010214872033
+          },
+          "heldout": {
+            "loss": 8.210641939000798,
+            "accuracy": 0.7309542454413245,
+            "minimum_margin": -75.56345602640818,
+            "mean_margin": -0.075278241532176
+          }
+        },
+        {
+          "scale": 1.0,
+          "train": {
+            "loss": 11.543446065417399,
+            "accuracy": 0.6903394255874674,
+            "minimum_margin": -100.91508663406648,
+            "mean_margin": -2.113805538447504
+          },
+          "heldout": {
+            "loss": 12.375402421355792,
+            "accuracy": 0.6675243315807138,
+            "minimum_margin": -105.08234939784887,
+            "mean_margin": -5.020356419273126
+          }
+        },
+        {
+          "scale": 1.5,
+          "train": {
+            "loss": 20.260138066088153,
+            "accuracy": 0.6328981723237598,
+            "minimum_margin": -160.6741882578823,
+            "mean_margin": -12.303272603582322
+          },
+          "heldout": {
+            "loss": 21.237294732644642,
+            "accuracy": 0.5698624007159637,
+            "minimum_margin": -164.3656413011704,
+            "mean_margin": -15.032927533511213
+          }
+        },
+        {
+          "scale": 2.0,
+          "train": {
+            "loss": 29.51870681769382,
+            "accuracy": 0.5349869451697128,
+            "minimum_margin": -221.10664266599935,
+            "mean_margin": -22.590937585077043
+          },
+          "heldout": {
+            "loss": 30.601860215232474,
+            "accuracy": 0.4789126300481038,
+            "minimum_margin": -225.58532409472696,
+            "mean_margin": -25.143893024809483
+          }
+        }
+      ]
+    },
+    "post_features": {
+      "feature_frobenius_norm": 1333159.8665295185,
+      "feature_row_norm_mean": 11797.421590193913,
+      "feature_row_norm_max": 12649.152609735133,
+      "update_logit_rms": 47.4008451094307,
+      "training_directional_derivative": -0.8656864944213021,
+      "training_directional_curvature": 11.276601100385593,
+      "quadratic_optimum_scale": 0.07676838851661612,
+      "best_training_loss_grid_point": {
+        "scale": 0.1,
+        "train": {
+          "loss": 0.022578250921545712,
+          "accuracy": 0.9932114882506528,
+          "minimum_margin": -4.236866308955541,
+          "mean_margin": 13.99493237689779
+        },
+        "heldout": {
+          "loss": 0.08723701530399659,
+          "accuracy": 0.9828839914979304,
+          "minimum_margin": -12.670099844763342,
+          "mean_margin": 10.88214412349188
+        }
+      },
+      "curve": [
+        {
+          "scale": -1.0,
+          "train": {
+            "loss": 79.69789685656427,
+            "accuracy": 0.06527415143603134,
+            "minimum_margin": -126.82741253414298,
+            "mean_margin": -78.8857842230032
+          },
+          "heldout": {
+            "loss": 82.98275137990878,
+            "accuracy": 0.05917887906924712,
+            "minimum_margin": -132.79868050588254,
+            "mean_margin": -82.1987286194981
+          }
+        },
+        {
+          "scale": -0.1,
+          "train": {
+            "loss": 0.4488357208569736,
+            "accuracy": 0.8801566579634464,
+            "minimum_margin": -21.423130162351754,
+            "mean_margin": 5.2195990373379315
+          },
+          "heldout": {
+            "loss": 1.7136177859440644,
+            "accuracy": 0.6156169593914308,
+            "minimum_margin": -27.850848417302984,
+            "mean_margin": 2.1127227550338463
+          }
+        },
+        {
+          "scale": 0.0,
+          "train": {
+            "loss": 0.054692118277271044,
+            "accuracy": 0.9906005221932115,
+            "minimum_margin": -9.975408868593775,
+            "mean_margin": 13.69728957206786
+          },
+          "heldout": {
+            "loss": 0.10054084830089399,
+            "accuracy": 0.98657567960622,
+            "minimum_margin": -16.40606499133827,
+            "mean_margin": 10.561173847899378
+          }
+        },
+        {
+          "scale": 0.0001,
+          "train": {
+            "loss": 0.05460560605782458,
+            "accuracy": 0.9906005221932115,
+            "minimum_margin": -9.96396114730004,
+            "mean_margin": 13.702900091366898
+          },
+          "heldout": {
+            "loss": 0.10036945377970048,
+            "accuracy": 0.98657567960622,
+            "minimum_margin": -16.394620207912283,
+            "mean_margin": 10.566576245189315
+          }
+        },
+        {
+          "scale": 0.0003,
+          "train": {
+            "loss": 0.05443292104287996,
+            "accuracy": 0.9906005221932115,
+            "minimum_margin": -9.941065704712514,
+            "mean_margin": 13.714056598874421
+          },
+          "heldout": {
+            "loss": 0.1000286153809633,
+            "accuracy": 0.9866875489428347,
+            "minimum_margin": -16.371730641060367,
+            "mean_margin": 10.577346787093246
+          }
+        },
+        {
+          "scale": 0.001,
+          "train": {
+            "loss": 0.05383211675378807,
+            "accuracy": 0.9906005221932115,
+            "minimum_margin": -9.860931655656202,
+            "mean_margin": 13.752641389605206
+          },
+          "heldout": {
+            "loss": 0.0988558772936692,
+            "accuracy": 0.9869112876160644,
+            "minimum_margin": -16.291617157078633,
+            "mean_margin": 10.614595894859566
+          }
+        },
+        {
+          "scale": 0.003,
+          "train": {
+            "loss": 0.05214704160352875,
+            "accuracy": 0.9906005221932115,
+            "minimum_margin": -9.631977229781057,
+            "mean_margin": 13.857818852286105
+          },
+          "heldout": {
+            "loss": 0.09567154071662988,
+            "accuracy": 0.9873587649625237,
+            "minimum_margin": -16.062721488559305,
+            "mean_margin": 10.71652740084837
+          }
+        },
+        {
+          "scale": 0.01,
+          "train": {
+            "loss": 0.04664118038824125,
+            "accuracy": 0.9908616187989556,
+            "minimum_margin": -8.830636739217937,
+            "mean_margin": 14.173158275996347
+          },
+          "heldout": {
+            "loss": 0.08624001833251146,
+            "accuracy": 0.9888130663385166,
+            "minimum_margin": -15.261586648741797,
+            "mean_margin": 11.022689580247915
+          }
+        },
+        {
+          "scale": 0.03,
+          "train": {
+            "loss": 0.034576619334654266,
+            "accuracy": 0.991644908616188,
+            "minimum_margin": -6.541092480466375,
+            "mean_margin": 14.620860866234153
+          },
+          "heldout": {
+            "loss": 0.0700354815051647,
+            "accuracy": 0.9907148450609687,
+            "minimum_margin": -13.275935904763173,
+            "mean_margin": 11.479720412313045
+          }
+        },
+        {
+          "scale": 0.1,
+          "train": {
+            "loss": 0.022578250921545712,
+            "accuracy": 0.9932114882506528,
+            "minimum_margin": -4.236866308955541,
+            "mean_margin": 13.99493237689779
+          },
+          "heldout": {
+            "loss": 0.08723701530399659,
+            "accuracy": 0.9828839914979304,
+            "minimum_margin": -12.670099844763342,
+            "mean_margin": 10.88214412349188
+          }
+        },
+        {
+          "scale": 0.3,
+          "train": {
+            "loss": 1.3250505896527365,
+            "accuracy": 0.8772845953002611,
+            "minimum_margin": -17.754903853319547,
+            "mean_margin": 10.812125530328501
+          },
+          "heldout": {
+            "loss": 1.725585815099061,
+            "accuracy": 0.8603870679046873,
+            "minimum_margin": -25.749507695890998,
+            "mean_margin": 7.767336669551105
+          }
+        },
+        {
+          "scale": 0.5,
+          "train": {
+            "loss": 3.784308892311718,
+            "accuracy": 0.8383812010443864,
+            "minimum_margin": -40.10782151100892,
+            "mean_margin": 7.1990048312400745
+          },
+          "heldout": {
+            "loss": 4.312601930879555,
+            "accuracy": 0.8029980982212775,
+            "minimum_margin": -46.75463139083104,
+            "mean_margin": 4.229809435709516
+          }
+        },
+        {
+          "scale": 0.75,
+          "train": {
+            "loss": 7.23439910084299,
+            "accuracy": 0.7819843342036553,
+            "minimum_margin": -68.04896858312065,
+            "mean_margin": 2.460034794510813
+          },
+          "heldout": {
+            "loss": 7.975201806871655,
+            "accuracy": 0.7298355520751761,
+            "minimum_margin": -74.88966726562415,
+            "mean_margin": -0.4138132645274548
+          }
+        },
+        {
+          "scale": 1.0,
+          "train": {
+            "loss": 11.152026151862353,
+            "accuracy": 0.7007832898172324,
+            "minimum_margin": -97.02143272953526,
+            "mean_margin": -2.3818274227064347
+          },
+          "heldout": {
+            "loss": 11.993163303100514,
+            "accuracy": 0.66327329678935,
+            "minimum_margin": -103.56003006702394,
+            "mean_margin": -5.166966694894214
+          }
+        },
+        {
+          "scale": 1.5,
+          "train": {
+            "loss": 19.59813449027853,
+            "accuracy": 0.6284595300261097,
+            "minimum_margin": -155.01694609647114,
+            "mean_margin": -12.202540252987447
+          },
+          "heldout": {
+            "loss": 20.57904058072101,
+            "accuracy": 0.561584069806466,
+            "minimum_margin": -160.99080860417,
+            "mean_margin": -14.816774062716295
+          }
+        },
+        {
+          "scale": 2.0,
+          "train": {
+            "loss": 28.574155466224862,
+            "accuracy": 0.5328981723237598,
+            "minimum_margin": -213.01245946340703,
+            "mean_margin": -22.114987592078677
+          },
+          "heldout": {
+            "loss": 29.64319839458868,
+            "accuracy": 0.4756684192862736,
+            "minimum_margin": -218.5527563978161,
+            "mean_margin": -24.565759482204108
+          }
+        }
+      ]
+    }
+  }
+}

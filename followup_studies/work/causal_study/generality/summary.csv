@@ -1,0 +1,5 @@
+seed,operation,normalization,arithmetic,steps,grok_step,event_step,peak_step,first_train_drop_step,post_grok_train_min,post_grok_test_min,post_grok_train_failure_states,post_grok_test_failure_evaluations,final_train_accuracy,final_test_accuracy,elapsed_seconds,condition
+0,subtraction,none,stock,30000,9300,15281,15281,15281,0.27023498694516973,0.058507663049558116,12,21,1.0,1.0,3909.4751388749573,subtraction
+0,subtraction,none,accurate,30000,10500,,,,1.0,0.9687884550844613,0,0,1.0,0.9996643919901554,3968.2676271249074,subtraction
+0,addition,rms,stock,30000,15700,18515,28540,18515,0.0060052219321148825,0.004810381474437857,30,30,1.0,1.0,4619.635965750087,rms
+0,addition,rms,accurate,30000,19900,28495,28503,28495,0.009921671018276762,0.005257858820897192,25,25,1.0,1.0,4675.320318375016,rms

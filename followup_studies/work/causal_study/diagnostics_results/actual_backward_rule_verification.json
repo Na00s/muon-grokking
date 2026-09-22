@@ -1,0 +1,22 @@
+[
+  {
+    "checkpoint": "work/experiments/seed0_original/step_015000.pt",
+    "objective": "target_repair",
+    "all_parameter_gradients_bitwise_equal": true
+  },
+  {
+    "checkpoint": "work/experiments/seed0_original/step_015000.pt",
+    "objective": "row_projection",
+    "all_parameter_gradients_bitwise_equal": true
+  },
+  {
+    "checkpoint": "work/causal_study/projection_runs/seed3/final.pt",
+    "objective": "target_repair",
+    "all_parameter_gradients_bitwise_equal": true
+  },
+  {
+    "checkpoint": "work/causal_study/projection_runs/seed3/final.pt",
+    "objective": "row_projection",
+    "all_parameter_gradients_bitwise_equal": true
+  }
+]

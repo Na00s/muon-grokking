@@ -1,5 +1,7 @@
 # Status of the paper's remaining reservations
 
+**Historical assessment, written before the causal study.** See the [completed claim decisions](causal_study/report.md#claim-decisions) and [manuscript revisions](causal_study/paper_revision.md) for the current conclusion. The original assessment is retained below.
+
 Assessment dated September 22, 2026, after the five-seed basis study. Printed line numbers refer to the supplied PDF, *Post-Grokking Collapse at the Representation–Readout Interface in Muon-Trained Transformers*. This assessment uses the completed experiments and the original manuscript. It adds no experiments.
 
 **The new evidence resolves major empirical gaps and supports a more precise contribution. Important causal questions remain open, and several original statements require revision.** The strongest supported account is readout-dominated acute collapse with substantial retained linear task information, useful approximate alignment, and demonstrated numerical sensitivity in one studied trajectory.

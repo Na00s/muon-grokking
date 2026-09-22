@@ -47,7 +47,7 @@ def obtain_archive(manifest):
         with urllib.request.urlopen(request,timeout=120) as response, temporary.open('wb') as out:
             shutil.copyfileobj(response,out,4*1024*1024)
         if temporary.stat().st_size!=manifest['archive_bytes'] or digest(temporary)!=manifest['archive_sha256']:
-            raise RuntimeError('Archive size or SHA-256 differs from ARTIFACTS.json')
+            raise RuntimeError('Archive size or SHA-256 differs from the selected artifact manifest')
         temporary.replace(archive)
     finally:
         if temporary.exists():temporary.unlink()
@@ -56,7 +56,7 @@ def obtain_archive(manifest):
 
 def restore(archive,manifest,verify_archive=False):
     if archive.stat().st_size!=manifest['archive_bytes'] or digest(archive)!=manifest['archive_sha256']:
-        raise RuntimeError('Archive size or SHA-256 differs from ARTIFACTS.json')
+        raise RuntimeError('Archive size or SHA-256 differs from the selected artifact manifest')
     expected={x['path']:x for x in manifest['files']};seen=set()
     with tarfile.open(archive,'r|gz') as tar:
         for member in tar:
@@ -93,11 +93,13 @@ def restore(archive,manifest,verify_archive=False):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--manifest',type=Path,default=Path('ARTIFACTS.json'),help='Artifact manifest relative to the study directory, or an absolute path')
     parser.add_argument('--archive',type=Path,help='Use a previously downloaded archive')
-    parser.add_argument('--verify-only',action='store_true',help='Check every local binary against ARTIFACTS.json')
+    parser.add_argument('--verify-only',action='store_true',help='Check every local binary against the selected artifact manifest')
     parser.add_argument('--verify-archive',action='store_true',help='Verify archive entries without writing files')
     args=parser.parse_args()
-    manifest=json.loads((ROOT/'ARTIFACTS.json').read_text())
+    manifest_path=args.manifest if args.manifest.is_absolute() else ROOT/args.manifest
+    manifest=json.loads(manifest_path.read_text())
     if args.verify_only:
         verify_files(manifest);return
     archive=args.archive if args.archive else obtain_archive(manifest)

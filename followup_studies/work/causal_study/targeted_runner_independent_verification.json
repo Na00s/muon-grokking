@@ -1,0 +1,47 @@
+{
+  "source_checkpoint": "work/experiments/seed4_original/step_015000.pt",
+  "source_sha256": "5ae288433cfe02133d27d52103a78154399400f693b8be576defe59202897733",
+  "runner_sha256": "759a25e2ae9873e7a6dc22f6e3180080d1c138be8ea4852d3315b8427fdf7d35",
+  "helper_sha256": "3026ecc476c43a32d5fb4b1aaa0b186b685819bc65d41313981c0ac3b8ddfe4c",
+  "method": "Three direct training updates without dense monitoring versus the dense runner. Exact tensor dtype, shape, value, scalar state, and RNG comparisons.",
+  "arms": {
+    "target_repair": {
+      "checks": {
+        "model_state_dict": {
+          "bitwise_equal": true,
+          "tensor_count": 8
+        },
+        "optimizer_state_dicts": {
+          "bitwise_equal": true,
+          "tensor_count": 13
+        },
+        "torch_rng_state": {
+          "bitwise_equal": true,
+          "tensor_count": 1
+        }
+      },
+      "updates": 3,
+      "passed": true,
+      "output": "work/causal_study/targeted_runner_independent_verification/target_repair"
+    },
+    "row_projection": {
+      "checks": {
+        "model_state_dict": {
+          "bitwise_equal": true,
+          "tensor_count": 8
+        },
+        "optimizer_state_dicts": {
+          "bitwise_equal": true,
+          "tensor_count": 13
+        },
+        "torch_rng_state": {
+          "bitwise_equal": true,
+          "tensor_count": 1
+        }
+      },
+      "updates": 3,
+      "passed": true,
+      "output": "work/causal_study/targeted_runner_independent_verification/row_projection"
+    }
+  }
+}

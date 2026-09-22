@@ -1,5 +1,7 @@
 # Basis-change study: evidence and reproduction
 
+**Current conclusion:** the [completed causal study](causal_study/report.md) supersedes the earlier open-mechanism assessment below. Its [reproduction guide](causal_study/README.md) covers the additional experiments and release.
+
 Start with [report.md](report.md). [reservations_status.md](reservations_status.md) assesses which manuscript concerns are resolved and which remain open. `paper_revision.md` contains suggested manuscript wording. `mathematical_scope.md` states the exact hypotheses and algebraic identification limits. Figures are available as PNG and PDF under `figures/`.
 
 The study adds three fresh seeds under unchanged settings and analyzes five seeds in total. It includes 52,698 fresh baseline updates, 18 continuations totaling 9,000 updates, 262 instantaneous interventions, 20 geometry comparisons, and 21 bilinear comparisons. Checkpoint pairs within the same seed are dependent observations.

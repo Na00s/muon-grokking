@@ -1,0 +1,397 @@
+{
+  "scales": [
+    0.0,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "events": [
+    {
+      "seed": 0,
+      "pre_step": 17493,
+      "post_step": 17494,
+      "input_checkpoints": [
+        {
+          "path": "work/basis_study/seed0_preceding_step_replay/final.pt",
+          "sha256": "300b5ddde682195bd8ac3508e15922f1ef83b84bca9e0c49a30289f1ef8565b6"
+        },
+        {
+          "path": "work/experiments/seed0_dense_capture/collapse.pt",
+          "sha256": "ca70d7a3e00ae237d8087106e0a330736383a459553ac34f4696377427dc5c4c"
+        }
+      ],
+      "directional_derivatives": {
+        "stock32": {
+          "by_group": {
+            "hidden": -1.3233931713949074e-05,
+            "embeddings": -1.2363827665252822e-05,
+            "readout": -0.00019056698397419057
+          },
+          "total": -0.00021616474335339246
+        },
+        "accurate32": {
+          "by_group": {
+            "hidden": -1.341956642568212e-05,
+            "embeddings": -1.2330277881097278e-05,
+            "readout": -0.00019074779699108831
+          },
+          "total": -0.0002164976412978677
+        },
+        "reference64_cast32": {
+          "by_group": {
+            "hidden": -1.3419566679184475e-05,
+            "embeddings": -1.2330278096274384e-05,
+            "readout": -0.00019074779940161284
+          },
+          "total": -0.0002164976441770717
+        }
+      },
+      "interpolation": [
+        {
+          "scale": 0.0,
+          "training_accurate_loss32": 3.702519734360976e-06,
+          "training_accurate_loss64": 3.702519907170576e-06,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.001,
+          "training_accurate_loss32": 3.493171561785857e-06,
+          "training_accurate_loss64": 3.4931718138331996e-06,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.01,
+          "training_accurate_loss32": 2.108690068780561e-06,
+          "training_accurate_loss64": 2.1086902212347825e-06,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.1,
+          "training_accurate_loss32": 3.0688954666402424e-07,
+          "training_accurate_loss64": 3.0688954685067557e-07,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 1.0,
+          "training_accurate_loss32": 2.8582470417022705,
+          "training_accurate_loss64": 2.858246746696754,
+          "training_accuracy": 0.4825065274151436
+        }
+      ],
+      "endpoint_parameters_exact": {
+        "0.0": true,
+        "1.0": true
+      }
+    },
+    {
+      "seed": 1,
+      "pre_step": 17720,
+      "post_step": 17721,
+      "input_checkpoints": [
+        {
+          "path": "work/basis_study/seed1_baseline/previous.pt",
+          "sha256": "97d10cab6ad721a9bbbdf6b232c24d0c9a1ea44f9b4e29de942a2850bbd7bd93"
+        },
+        {
+          "path": "work/basis_study/seed1_baseline/collapse.pt",
+          "sha256": "86a99c0da8a682b722881b5da22be9af800aff7e1ecccd7e882495ca3de4acb3"
+        }
+      ],
+      "directional_derivatives": {
+        "stock32": {
+          "by_group": {
+            "hidden": -0.00011819492470973953,
+            "embeddings": -0.000294047064544583,
+            "readout": -0.0021417265166462423
+          },
+          "total": -0.0025539685059005647
+        },
+        "accurate32": {
+          "by_group": {
+            "hidden": -0.00011851586754413794,
+            "embeddings": -0.0002940698754804206,
+            "readout": -0.002141303284638958
+          },
+          "total": -0.0025538890276635166
+        },
+        "reference64_cast32": {
+          "by_group": {
+            "hidden": -0.00011851585572679833,
+            "embeddings": -0.0002940698811418677,
+            "readout": -0.002141303305763239
+          },
+          "total": -0.002553889042631905
+        }
+      },
+      "interpolation": [
+        {
+          "scale": 0.0,
+          "training_accurate_loss32": 2.761348514468409e-05,
+          "training_accurate_loss64": 2.7613484405865014e-05,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.001,
+          "training_accurate_loss32": 2.5179713702527806e-05,
+          "training_accurate_loss64": 2.5179712277345108e-05,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.01,
+          "training_accurate_loss32": 1.113052621803945e-05,
+          "training_accurate_loss64": 1.1130525348224875e-05,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.1,
+          "training_accurate_loss32": 3.6032429306942504e-07,
+          "training_accurate_loss64": 3.603242883058888e-07,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 1.0,
+          "training_accurate_loss32": 13.07446575164795,
+          "training_accurate_loss64": 13.074465266564232,
+          "training_accuracy": 0.1566579634464752
+        }
+      ],
+      "endpoint_parameters_exact": {
+        "0.0": true,
+        "1.0": true
+      }
+    },
+    {
+      "seed": 2,
+      "pre_step": 18068,
+      "post_step": 18069,
+      "input_checkpoints": [
+        {
+          "path": "work/basis_study/seed2_baseline/previous.pt",
+          "sha256": "9528ce49476bf503c1b2b3f668596ef821cb95a47e8541727f932c2d4780f982"
+        },
+        {
+          "path": "work/basis_study/seed2_baseline/collapse.pt",
+          "sha256": "43d4bb1e0f08495e64c96eefd67fea567f42c227b3c3d3476fc311e14574468d"
+        }
+      ],
+      "directional_derivatives": {
+        "stock32": {
+          "by_group": {
+            "hidden": -3.0424073478698346e-06,
+            "embeddings": -7.111932067841632e-07,
+            "readout": -9.004261943661892e-05
+          },
+          "total": -9.379621999127291e-05
+        },
+        "accurate32": {
+          "by_group": {
+            "hidden": -3.0390762791067146e-06,
+            "embeddings": -6.457796728250999e-07,
+            "readout": -8.990465268936777e-05
+          },
+          "total": -9.358950864129959e-05
+        },
+        "reference64_cast32": {
+          "by_group": {
+            "hidden": -3.039076386314167e-06,
+            "embeddings": -6.457797065228994e-07,
+            "readout": -8.990465640629005e-05
+          },
+          "total": -9.358951249912712e-05
+        }
+      },
+      "interpolation": [
+        {
+          "scale": 0.0,
+          "training_accurate_loss32": 1.6111007425934076e-06,
+          "training_accurate_loss64": 1.611100785302591e-06,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.001,
+          "training_accurate_loss32": 1.5208609056571731e-06,
+          "training_accurate_loss64": 1.5208610333513098e-06,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.01,
+          "training_accurate_loss32": 9.500215014668356e-07,
+          "training_accurate_loss64": 9.500215205906211e-07,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 0.1,
+          "training_accurate_loss32": 2.843781885530916e-07,
+          "training_accurate_loss64": 2.8437819409091996e-07,
+          "training_accuracy": 1.0
+        },
+        {
+          "scale": 1.0,
+          "training_accurate_loss32": 17.980005264282227,
+          "training_accurate_loss64": 17.980007315928944,
+          "training_accuracy": 0.009921671018276762
+        }
+      ],
+      "endpoint_parameters_exact": {
+        "0.0": true,
+        "1.0": true
+      }
+    },
+    {
+      "seed": 3,
+      "pre_step": 16307,
+      "post_step": 16308,
+      "input_checkpoints": [
+        {
+          "path": "work/basis_study/seed3_baseline/previous.pt",
+          "sha256": "6e2fa19b9387188225cd9f7c70c7a4bcd470d89aec784cce0dee6c1deb1b1923"
+        },
+        {
+          "path": "work/basis_study/seed3_baseline/collapse.pt",
+          "sha256": "2cbbf0671414446ec64c9d66f02ad18a44767a46823d54e9577fd1792b8d161b"
+        }
+      ],
+      "directional_derivatives": {
+        "stock32": {
+          "by_group": {
+            "hidden": -0.02927062278822487,
+            "embeddings": -0.10109294277531398,
+            "readout": -0.05809697194147768
+          },
+          "total": -0.18846053750501654
+        },
+        "accurate32": {
+          "by_group": {
+            "hidden": -0.029270799127305135,
+            "embeddings": -0.10109349186203254,
+            "readout": -0.058097169070944935
+          },
+          "total": -0.1884614600602826
+        },
+        "reference64_cast32": {
+          "by_group": {
+            "hidden": -0.029270795032395186,
+            "embeddings": -0.10109348293487874,
+            "readout": -0.05809717041632588
+          },
+          "total": -0.1884614483835998
+        }
+      },
+      "interpolation": [
+        {
+          "scale": 0.0,
+          "training_accurate_loss32": 0.380246102809906,
+          "training_accurate_loss64": 0.38024608556272177,
+          "training_accuracy": 0.9900783289817232
+        },
+        {
+          "scale": 0.001,
+          "training_accurate_loss32": 0.3800610303878784,
+          "training_accurate_loss64": 0.3800610261434679,
+          "training_accuracy": 0.9900783289817232
+        },
+        {
+          "scale": 0.01,
+          "training_accurate_loss32": 0.3786934018135071,
+          "training_accurate_loss64": 0.3786934188185406,
+          "training_accuracy": 0.9903394255874673
+        },
+        {
+          "scale": 0.1,
+          "training_accurate_loss32": 0.38356253504753113,
+          "training_accurate_loss64": 0.3835625441982948,
+          "training_accuracy": 0.9911227154046998
+        },
+        {
+          "scale": 1.0,
+          "training_accurate_loss32": 7.837681770324707,
+          "training_accurate_loss64": 7.837681333880394,
+          "training_accuracy": 0.643603133159269
+        }
+      ],
+      "endpoint_parameters_exact": {
+        "0.0": true,
+        "1.0": true
+      }
+    },
+    {
+      "seed": 4,
+      "pre_step": 16055,
+      "post_step": 16056,
+      "input_checkpoints": [
+        {
+          "path": "work/experiments/seed4_one_step_attribution/pre_step.pt",
+          "sha256": "c16e6ec372ffb354920e0e390670858ac5f8a74d271e030cc7fda34cda7d4a41"
+        },
+        {
+          "path": "work/experiments/seed4_dense_capture/collapse.pt",
+          "sha256": "4ef70cfb6ddab65a17c5afe39453f64620312528d53e5ad2004446870de1015d"
+        }
+      ],
+      "directional_derivatives": {
+        "stock32": {
+          "by_group": {
+            "hidden": -0.05748215967622671,
+            "embeddings": -0.18562583970688812,
+            "readout": -1.6501100477903297
+          },
+          "total": -1.8932180471734446
+        },
+        "accurate32": {
+          "by_group": {
+            "hidden": -0.05748247614157971,
+            "embeddings": -0.1856260643918537,
+            "readout": -1.6501112103542548
+          },
+          "total": -1.8932197508876882
+        },
+        "reference64_cast32": {
+          "by_group": {
+            "hidden": -0.05748248157771959,
+            "embeddings": -0.1856260667230782,
+            "readout": -1.6501112085162544
+          },
+          "total": -1.8932197568170521
+        }
+      },
+      "interpolation": [
+        {
+          "scale": 0.0,
+          "training_accurate_loss32": 0.14503192901611328,
+          "training_accurate_loss64": 0.14503193731141323,
+          "training_accuracy": 0.9877284595300261
+        },
+        {
+          "scale": 0.001,
+          "training_accurate_loss32": 0.14315883815288544,
+          "training_accurate_loss64": 0.14315883583808825,
+          "training_accuracy": 0.9879895561357702
+        },
+        {
+          "scale": 0.01,
+          "training_accurate_loss32": 0.1278139352798462,
+          "training_accurate_loss64": 0.12781391884943982,
+          "training_accuracy": 0.9890339425587468
+        },
+        {
+          "scale": 0.1,
+          "training_accurate_loss32": 0.05414941906929016,
+          "training_accurate_loss64": 0.054149426482483935,
+          "training_accuracy": 0.9906005221932115
+        },
+        {
+          "scale": 1.0,
+          "training_accurate_loss32": 11.152027130126953,
+          "training_accurate_loss64": 11.152028644952463,
+          "training_accuracy": 0.7007832898172324
+        }
+      ],
+      "endpoint_parameters_exact": {
+        "0.0": true,
+        "1.0": true
+      }
+    }
+  ],
+  "note": "Training-only evaluation of the entire actual parameter displacement. Local analytic derivative and finite interpolation are distinct tests. No optimizer steps or fitting."
+}

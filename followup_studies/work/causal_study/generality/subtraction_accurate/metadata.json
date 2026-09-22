@@ -1,0 +1,44 @@
+{
+  "seed": 0,
+  "operation": "subtraction",
+  "normalization": "none",
+  "arithmetic": "accurate",
+  "steps": 30000,
+  "config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "rms_epsilon": null,
+  "initial_tensor_sha256": "6862f5690ed51f353ddd883fe5564b3f09613811b30ec715e76db1a0691842af",
+  "threads": 1,
+  "torch_version": "2.13.0",
+  "parameter_groups": {
+    "muon": [
+      [
+        "transformer_blocks.0.attention.qkv_projection.weight",
+        "transformer_blocks.0.attention.output_projection.weight",
+        "transformer_blocks.0.mlp.input_projection.weight",
+        "transformer_blocks.0.mlp.output_projection.weight"
+      ]
+    ],
+    "auxiliary_adamw": [
+      [
+        "token_embedding.weight",
+        "position_embedding.weight"
+      ]
+    ],
+    "unembedding_adamw": [
+      [
+        "unembedding.weight"
+      ]
+    ]
+  },
+  "script_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+  "monitoring": "Train every update; test every 100 and each post-grok train<90% state. Six consecutive grid test>=95% confirms grokking. First simultaneous train/test<90% is the joint event. Entire fixed horizon is completed.",
+  "train_examples": 3830,
+  "test_examples": 8939
+}

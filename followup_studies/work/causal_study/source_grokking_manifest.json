@@ -1,0 +1,153 @@
+{
+  "criterion": "Six consecutive 100-step-grid held-out accuracies >=0.95, all completed by step6000.",
+  "source_step": 6000,
+  "all_five_qualified": true,
+  "seeds": [
+    {
+      "seed": 0,
+      "source_checkpoint": "work/experiments/seed0_original/step_006000.pt",
+      "source_sha256": "c3442965ba80566f5e4fe5c68407a35e22e6df203c65eaa615efc643631cb7d1",
+      "trajectory": "work/experiments/seed0_original/trajectory.csv",
+      "trajectory_sha256": "4c72aa61c684cc13a265292620c46d6adc1d9fa96471e601bbbb23aa7e7eb13f",
+      "grokking_window_start": 5500,
+      "grokking_confirmed_step": 6000,
+      "six_evaluation_steps": [
+        5500,
+        5600,
+        5700,
+        5800,
+        5900,
+        6000
+      ],
+      "six_test_accuracies": [
+        0.9526792706119253,
+        0.9725920125293657,
+        0.9825483834880859,
+        0.9904911063877391,
+        0.9949658798523324,
+        0.9975388745944737
+      ],
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9975388745944737,
+      "qualified_before_source": true,
+      "trajectory_normalized_sha256": "be2310f2774bf2d07696897f0ff1dae17a7da90b11fb403a6c2a70d16b3d0165"
+    },
+    {
+      "seed": 1,
+      "source_checkpoint": "work/basis_study/seed1_baseline/step_006000.pt",
+      "source_sha256": "cbd74b61374d086864b137496ad3867a0494502f7988a90a72f6cffa64e3c79a",
+      "trajectory": "work/basis_study/seed1_baseline/trajectory.csv",
+      "trajectory_sha256": "f32c9bd9802aa9ed1c267b2e601fa907e20eb7ca34db6020d6a819131b70ad48",
+      "grokking_window_start": 5500,
+      "grokking_confirmed_step": 6000,
+      "six_evaluation_steps": [
+        5500,
+        5600,
+        5700,
+        5800,
+        5900,
+        6000
+      ],
+      "six_test_accuracies": [
+        0.9654323749860163,
+        0.9791923033896409,
+        0.9866875489428347,
+        0.9920572771003467,
+        0.995972703881866,
+        0.9984338292873923
+      ],
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9984338292873923,
+      "qualified_before_source": true,
+      "trajectory_normalized_sha256": "a7c124c0641866d8f1bdd85c39f6a75eb6ace5e53b8e097fcdc86444595680dc"
+    },
+    {
+      "seed": 2,
+      "source_checkpoint": "work/basis_study/seed2_baseline/step_006000.pt",
+      "source_sha256": "3a0e3eaa3b2055ea8fc6809f5f8c2fda395e7d556051a310638bbb934b6e4b6e",
+      "trajectory": "work/basis_study/seed2_baseline/trajectory.csv",
+      "trajectory_sha256": "0a2dc9272fe86bb5775f41e00a232c7621fcff8447c1f67e674213f9cf081cd7",
+      "grokking_window_start": 5500,
+      "grokking_confirmed_step": 6000,
+      "six_evaluation_steps": [
+        5500,
+        5600,
+        5700,
+        5800,
+        5900,
+        6000
+      ],
+      "six_test_accuracies": [
+        0.9518961852556215,
+        0.9652086363127866,
+        0.9722564045195212,
+        0.9780736100234926,
+        0.9848976395569974,
+        0.988589327665287
+      ],
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.988589327665287,
+      "qualified_before_source": true,
+      "trajectory_normalized_sha256": "6fd1b802e5d736a6c6a900e5859bd96614b809b88d1299b481c64f93b30103e4"
+    },
+    {
+      "seed": 3,
+      "source_checkpoint": "work/basis_study/seed3_baseline/step_006000.pt",
+      "source_sha256": "e590c4a01724b93c362d2428f7a876a39d18846711e3aa9e142f550236bcff13",
+      "trajectory": "work/basis_study/seed3_baseline/trajectory.csv",
+      "trajectory_sha256": "7f6c9f60a81711f988dc2983690813b91ac9163dfcf6cab056e8e14e4fda0c1e",
+      "grokking_window_start": 5300,
+      "grokking_confirmed_step": 5800,
+      "six_evaluation_steps": [
+        5300,
+        5400,
+        5500,
+        5600,
+        5700,
+        5800
+      ],
+      "six_test_accuracies": [
+        0.9526792706119253,
+        0.974381921915203,
+        0.9859044635865309,
+        0.9922810157735764,
+        0.9976507439310884,
+        0.9985456986240071
+      ],
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9998881306633851,
+      "qualified_before_source": true,
+      "trajectory_normalized_sha256": "e16fdfc641a45c7e2e0587522c728da30ab8c4d43c810b14d270f942443b98ca"
+    },
+    {
+      "seed": 4,
+      "source_checkpoint": "work/experiments/seed4_original/step_006000.pt",
+      "source_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc",
+      "trajectory": "work/experiments/seed4_original/trajectory.csv",
+      "trajectory_sha256": "8f14279b20a9945f222c0ebc3f7416a8d805624e9690c925b6773403372e0532",
+      "grokking_window_start": 5400,
+      "grokking_confirmed_step": 5900,
+      "six_evaluation_steps": [
+        5400,
+        5500,
+        5600,
+        5700,
+        5800,
+        5900
+      ],
+      "six_test_accuracies": [
+        0.9644255509564829,
+        0.977738002013648,
+        0.9840026848640787,
+        0.989931759704665,
+        0.9936234478129544,
+        0.9972032665846291
+      ],
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9984338292873923,
+      "qualified_before_source": true,
+      "trajectory_normalized_sha256": "193b7389e866c163c653e5410bee912e071ee539d0b31c3b18c1171b147e3046"
+    }
+  ],
+  "publication_note": "Original checkpoint and trajectory hashes are preserved. trajectory_normalized_sha256 additionally identifies the same CSV after text publication normalizes newlines and workspace paths."
+}

@@ -1,0 +1,127 @@
+{
+  "training_mean_norm": 5.640368817448463,
+  "component_sum_relative_l2": 3.3126301452972287e-16,
+  "arms": {
+    "reference": {
+      "train": {
+        "n": 3830,
+        "accuracy": 0.8762402088772846,
+        "correct_count": 3356,
+        "cross_entropy": 0.9514519066546646,
+        "margin_mean": 1.7936767652163288,
+        "margin_median": 1.8882588227785897,
+        "margin_min": -4.1020807019225,
+        "margin_p05": -0.8789975115714893,
+        "margin_p95": 4.1605297869003515,
+        "positive_margin_fraction": 0.8762402088772846,
+        "maximum_predicted_class_fraction": 0.019843342036553524,
+        "most_predicted_class": 112
+      },
+      "heldout": {
+        "n": 8939,
+        "accuracy": 0.8563597717865533,
+        "correct_count": 7655,
+        "cross_entropy": 1.0348830129717357,
+        "margin_mean": 1.6351390043113256,
+        "margin_median": 1.7145818681003426,
+        "margin_min": -4.624476194517414,
+        "margin_p05": -0.9743151955941655,
+        "margin_p95": 3.997100097531838,
+        "positive_margin_fraction": 0.8563597717865533,
+        "maximum_predicted_class_fraction": 0.022150128649737106,
+        "most_predicted_class": 112
+      }
+    },
+    "mean_only": {
+      "train": {
+        "n": 3830,
+        "accuracy": 0.8762402088772846,
+        "correct_count": 3356,
+        "cross_entropy": 0.9514998580560264,
+        "margin_mean": 1.7935742874701592,
+        "margin_median": 1.8881084716974081,
+        "margin_min": -4.102394299487748,
+        "margin_p05": -0.8792722697387954,
+        "margin_p95": 4.160509720522735,
+        "positive_margin_fraction": 0.8762402088772846,
+        "maximum_predicted_class_fraction": 0.019843342036553524,
+        "most_predicted_class": 112
+      },
+      "heldout": {
+        "n": 8939,
+        "accuracy": 0.8564716411231681,
+        "correct_count": 7656,
+        "cross_entropy": 1.034932495796923,
+        "margin_mean": 1.635038855884745,
+        "margin_median": 1.714608339103739,
+        "margin_min": -4.624815639392638,
+        "margin_p05": -0.9744243528716059,
+        "margin_p95": 3.997108487960311,
+        "positive_margin_fraction": 0.8564716411231681,
+        "maximum_predicted_class_fraction": 0.022150128649737106,
+        "most_predicted_class": 112
+      }
+    },
+    "centered_only": {
+      "train": {
+        "n": 3830,
+        "accuracy": 0.8765013054830287,
+        "correct_count": 3357,
+        "cross_entropy": 0.9511079268768384,
+        "margin_mean": 1.7942200531288888,
+        "margin_median": 1.8890216513178952,
+        "margin_min": -4.102286975506672,
+        "margin_p05": -0.8787508436168244,
+        "margin_p95": 4.161079899899249,
+        "positive_margin_fraction": 0.8765013054830287,
+        "maximum_predicted_class_fraction": 0.019843342036553524,
+        "most_predicted_class": 112
+      },
+      "heldout": {
+        "n": 8939,
+        "accuracy": 0.856583510459783,
+        "correct_count": 7657,
+        "cross_entropy": 1.0345129153903263,
+        "margin_mean": 1.6356940570568375,
+        "margin_median": 1.7152505023005915,
+        "margin_min": -4.62418889151074,
+        "margin_p05": -0.9737515484303033,
+        "margin_p95": 3.9981955852159925,
+        "positive_margin_fraction": 0.856583510459783,
+        "maximum_predicted_class_fraction": 0.022038259313122272,
+        "most_predicted_class": 112
+      }
+    },
+    "full": {
+      "train": {
+        "n": 3830,
+        "accuracy": 0.8765013054830287,
+        "correct_count": 3357,
+        "cross_entropy": 0.9511558678450048,
+        "margin_mean": 1.7941175736464305,
+        "margin_median": 1.8888713002367137,
+        "margin_min": -4.102600573071921,
+        "margin_p05": -0.8790256017841304,
+        "margin_p95": 4.161059833521634,
+        "positive_margin_fraction": 0.8765013054830287,
+        "maximum_predicted_class_fraction": 0.019843342036553524,
+        "most_predicted_class": 112
+      },
+      "heldout": {
+        "n": 8939,
+        "accuracy": 0.856583510459783,
+        "correct_count": 7657,
+        "cross_entropy": 1.034562388106803,
+        "margin_mean": 1.6355939294934363,
+        "margin_median": 1.7152714390041237,
+        "margin_min": -4.624528336385964,
+        "margin_p05": -0.9738607057077439,
+        "margin_p95": 3.9981634288101473,
+        "positive_margin_fraction": 0.856583510459783,
+        "maximum_predicted_class_fraction": 0.022038259313122272,
+        "most_predicted_class": 112
+      }
+    }
+  },
+  "note": "Evaluation-only decomposition using the training mean, updated features, and actual readout displacement. This follow-up applies the mean-mediation diagnostic established in the separate original-five-seed audit."
+}

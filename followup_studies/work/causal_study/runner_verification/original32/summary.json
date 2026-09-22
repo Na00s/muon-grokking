@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "seed": 4,
+  "arm": "original32",
+  "start_step": 6000,
+  "end_step": 6003,
+  "updates": 3,
+  "first_joint_failure_step": null,
+  "minimum_train_accuracy": 1.0,
+  "minimum_measured_test_accuracy": 0.9983219599507774,
+  "train_below90_states": 0,
+  "joint_below90_states": 0,
+  "minimum_test_state": {
+    "step": 6003,
+    "local_step": 3,
+    "train_loss": 7.216894573502941e-06,
+    "train_accuracy": 1.0,
+    "test_accuracy": 0.9983219599507774,
+    "test_loss64": 0.02705581612227962,
+    "joint_failure": false,
+    "elapsed_seconds": 0.3118826251011342
+  },
+  "final_state": {
+    "step": 6003,
+    "local_step": 3,
+    "train_loss": 7.216894573502941e-06,
+    "train_accuracy": 1.0,
+    "test_accuracy": 0.9983219599507774,
+    "test_loss64": 0.02705581612227962,
+    "joint_failure": false,
+    "elapsed_seconds": 0.3118826251011342
+  },
+  "elapsed_seconds": 0.31862004194408655,
+  "event_count_scope": "Counts refer only to this dense branch. Cached original prefixes use mixed monitoring and must not be compared by failure counts.",
+  "source_checkpoint_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc"
+}

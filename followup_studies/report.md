@@ -1,5 +1,7 @@
 # Testing a pure change-of-basis account of post-grokking collapse
 
+**Historical basis-study report.** The [completed causal study](causal_study/report.md) resolves the numerical-control question left open below and supplies the current [manuscript revisions](causal_study/paper_revision.md).
+
 Completed September 22, 2026. Source repository commit `6d64a981af75f1300d9060109e81552d48a81360`.
 
 The experiments support a sharper conclusion: **the acute failure is dominated by the readout update, substantial linear task information survives, and approximate alignment can repair predictions. A literal pure change of basis does not fit the measured representations.** The success of alignment therefore supports a useful interface description, while the optimizer-level cause of the harmful readout update remains a separate question.

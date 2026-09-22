@@ -1,0 +1,336 @@
+{
+  "complete": true,
+  "total_new_training_updates": 364302,
+  "main_and_projection_final_checks": [
+    {
+      "name": "main_runs/seed0_accurate6000",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "c3442965ba80566f5e4fe5c68407a35e22e6df203c65eaa615efc643631cb7d1",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "bea215246f7131b7222238d3f303324669d1a1d5d6f8578178542e2279208364",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed1_accurate6000",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "cbd74b61374d086864b137496ad3867a0494502f7988a90a72f6cffa64e3c79a",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "68accfa722156d716ccded7294e1b5573fcf56c4eb744b285847cc4aefda9e36",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed2_accurate6000",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "3a0e3eaa3b2055ea8fc6809f5f8c2fda395e7d556051a310638bbb934b6e4b6e",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "1c1571c2e1f0b454fb8b1487a5087d6ea4c239dba1d805c84f8d3051a58496ea",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed3_accurate6000",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "e590c4a01724b93c362d2428f7a876a39d18846711e3aa9e142f550236bcff13",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "09fb94f7fdcd22a4cd90e7bb098433cc3ef3e664c740573d2a97a86c204a09bf",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed4_accurate6000",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "411b2c525ae50d78ccf27c23a4fc4862afd9dfb2b46111ff8f06cd6189c4e95e",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed0_target_repair15000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "a3ce6936aee499e9d06c5b37edd149c03093854680d4ef9bdd8b1b5ef8dc1c6d",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "b52a41b632740f7ff17943ffad7e951a2ff4a190976c7f9cb2ebeada62c71af0",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed0_stable3215000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "a3ce6936aee499e9d06c5b37edd149c03093854680d4ef9bdd8b1b5ef8dc1c6d",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "5b49c18cbb24968480a477e9533eb2c739226cf3cf85941437124ec08f75b48b",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed1_target_repair15000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "30f726b0c82fd07b666a7a2b349cfd319f92aeeafd02ae45007340761d585517",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "80e090c58593f5416f587f0d9a588c9ce9a205fed144d87a095a14d2a9da6b63",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed1_stable3215000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "30f726b0c82fd07b666a7a2b349cfd319f92aeeafd02ae45007340761d585517",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "b038680a4e6fc454304fa3f4b8b132baec6f714761d8c01996c0ad36335c4890",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed2_target_repair15000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "70ab302a6fcc6d46bd65c18d3876da51586aaa8b5c26e6985d2cc91527e65b9c",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "99520cd24ffe5fd72de49c6e2cc0404bb82945dedc09d550afe2258e6b7ddb93",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed2_stable3215000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "70ab302a6fcc6d46bd65c18d3876da51586aaa8b5c26e6985d2cc91527e65b9c",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "0d16518a335d6ec3b5a7465846ddbc4d3fd0903a65ff5049f862891975400814",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed3_target_repair15000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "68ca9819381262ba3d38afbb5371d88f7c589aac36f8fc7a380176b53ef44090",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "1351cb20bb5d21dedd725d1ed1493c25b36e262212f46de56400b5e1256fe57c",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed3_stable3215000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "68ca9819381262ba3d38afbb5371d88f7c589aac36f8fc7a380176b53ef44090",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "abbb4ea68025095e119e60834bd1edb72a4cfeeeb46fc8248167458ddac97bd5",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed4_target_repair15000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "5ae288433cfe02133d27d52103a78154399400f693b8be576defe59202897733",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "726ff55d7c8b7205a9f5bc3d8d7dcf35578f4ab6c31cf2acde359dafeba5d114",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed4_stable3215000",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "5ae288433cfe02133d27d52103a78154399400f693b8be576defe59202897733",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "fa5e895273e811218d54a1b36cc6e3d6286ecc5d08fa551e1e2adb31c0e538e9",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed0_stock_extension",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "f443809c2863f7090b736b6aea7a643fd6cbbd12c7cc92d1d5429b4148a5bd07",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "52c72f2f8c771f54a1d577f22a5bc2c7cbcf2f995053a74fbcc96789d0288c78",
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.9998881306633851,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed1_stock_extension",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "10cc987bb63d7ad5f6e0413a9c925837191320f5e242515f1fe3d14b1d999dac",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "b7d22eccbeaf078a4af2c1805c1ba6773159b8109725bef5c5a708f14fa933d9",
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.8070253943394116,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed2_stock_extension",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "ae62acd4bc6054652505d98129f0dad42bbe0e9bdb072feb3a070bc2b891cb57",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "62c8cca38a20f911f16de7ebca7b3138490f886e6eb50b35c551ec9e164966d1",
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.998657567960622,
+      "passed": true
+    },
+    {
+      "name": "main_runs/seed3_stock_extension",
+      "end_step": 30000,
+      "source_checkpoint_sha256": "f7a74d1fc3ae5cf56e1c0d74be1220cc748d865db1642f8678ecd5717b9a3b5c",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "b3b1578de901117c0cda02a4dc5009eb4a552ed68db3dd7f4b9b226d5cbc54d5",
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.9998881306633851,
+      "passed": true
+    },
+    {
+      "name": "projection_runs/seed0",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "a3ce6936aee499e9d06c5b37edd149c03093854680d4ef9bdd8b1b5ef8dc1c6d",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "f9c518b136e2dd997891b245c934dd662252a2e9680b6dac31566e97488d70d1",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "projection_runs/seed1",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "30f726b0c82fd07b666a7a2b349cfd319f92aeeafd02ae45007340761d585517",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "94c366b05e9df443aa397313a9909592fb8a8ae50fbb25235a133b1a4b011f09",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "projection_runs/seed2",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "70ab302a6fcc6d46bd65c18d3876da51586aaa8b5c26e6985d2cc91527e65b9c",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "ca98d5222e5eb67de3106d03689270bc6f44fc4dc59672d3c3a0d6cbc7c91faa",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "projection_runs/seed3",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "68ca9819381262ba3d38afbb5371d88f7c589aac36f8fc7a380176b53ef44090",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "b6bc01849e42820e396cea65a4effc20bfc7ccd25f949db2c76bc1228ad694db",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "projection_runs/seed4",
+      "end_step": 20000,
+      "source_checkpoint_sha256": "5ae288433cfe02133d27d52103a78154399400f693b8be576defe59202897733",
+      "start_model_optimizer_rng_match_source": true,
+      "final_checkpoint_sha256": "8705caa017ab33d2d04eab0ab7cdc2553b666146c1fd062dbd3f42790d0e3bb6",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    }
+  ],
+  "generality_final_checks": [
+    {
+      "name": "subtraction_stock",
+      "normalization": "none",
+      "operation": "subtraction",
+      "grok_step": 9300,
+      "event_step": 15281,
+      "final_checkpoint_sha256": "bdb88baf50e2e9f2e98b21985ccbaf279f10cd1644e691b2a4e23d926b60f6fc",
+      "runner_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "subtraction_accurate",
+      "normalization": "none",
+      "operation": "subtraction",
+      "grok_step": 10500,
+      "event_step": null,
+      "final_checkpoint_sha256": "2e2933d927b674219add9c202cd15d3833212097638d7bc85fe972417841b602",
+      "runner_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.9996643919901554,
+      "passed": true
+    },
+    {
+      "name": "rms_stock",
+      "normalization": "rms",
+      "operation": "addition",
+      "grok_step": 15700,
+      "event_step": 18515,
+      "final_checkpoint_sha256": "9253690fe67fb85d19f3959359499f80ea92d8b7cb98d4e7dbbc80a1b44e445d",
+      "runner_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    },
+    {
+      "name": "rms_accurate",
+      "normalization": "rms",
+      "operation": "addition",
+      "grok_step": 19900,
+      "event_step": 28495,
+      "final_checkpoint_sha256": "890e7f9d9fda0297a472136e4f3e7d2321995f4b3306ce6c5dce683f5fe46d7d",
+      "runner_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "passed": true
+    }
+  ],
+  "reused_original_seed4_final_check": {
+    "seed": 4,
+    "step": 30000,
+    "checkpoint_sha256": "cfd8257229f02e05d609575a58ac70950597581bfb681308a799ed3a59c57a29",
+    "train_accuracy": 1.0,
+    "test_accuracy": 0.998657567960622,
+    "passed": true
+  },
+  "source_qualification": {
+    "seeds": 5,
+    "checkpoint_and_trajectory_hashes_verified": true,
+    "six_evaluation_qualification_verified": true
+  },
+  "generality_pair_initial_model_optimizer_rng_match": true,
+  "diagnostic_counts": {
+    "timecourse_checkpoints": 132,
+    "gradient_swap_arms": 40,
+    "state_arms": 55,
+    "parameter_hybrids": 40,
+    "targeted_gradient_swap_arms": 80,
+    "saved_adam_head_gradient_variants": 40,
+    "fixed_feature_stepsize_evaluations": 160,
+    "training_mean_mediated_logit_arms": 20,
+    "complete_parameter_interpolation_arms": 25
+  },
+  "maximum_mean_component_reconstruction_error": 2.792883487537116e-16,
+  "main_endpoint_monitoring": "Every training state is recorded. Every training state below90% has a held-out measurement. Final states are explicit.",
+  "generality_monitoring": "Training is checked every update by the verified runner; CSV retains every10th state and every joint failure. All100-step qualification evaluations and the final state are present.",
+  "generality_loader": "RMS checkpoints require generality_runner.make_model_optimizers with normalization=rms; subtraction requires subtraction labels.",
+  "numerical_unit_tests": 12,
+  "diagnostic_mathematical_tests": 6,
+  "actual_backward_rule_bitwise_gradient_checks": 4,
+  "exact_original_event_model_optimizer_rng_replays": 5,
+  "exact_runner_three_update_checks": [
+    "original32",
+    "stable32",
+    "target_repair",
+    "row_projection"
+  ],
+  "metadata_erratum": "Runner metadata primary_endpoint says30000 even in20k arms. The prespecified protocols, execution end_step, and this aggregation use their actual end20000."
+}

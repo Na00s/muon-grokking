@@ -1,0 +1,222 @@
+{
+  "scales": [
+    0.0,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "events": [
+    {
+      "arithmetic": "stock",
+      "seed": 0,
+      "operation": "addition",
+      "normalization": "rms",
+      "model_class": "RMSDepthTransformer",
+      "rms_epsilon": 1e-06,
+      "rms_factory_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "diagnostic_script_sha256": "a7fa5943cb38141817219eb0c0e07209ba326c7ea67bffb937e0e90b06598dc5",
+      "pre_step": 18514,
+      "post_step": 18515,
+      "input_checkpoints": [
+        {
+          "path": "work/causal_study/generality/rms_stock/previous.pt",
+          "sha256": "9af5c225ad803ac9e86abdb66ce9a430a6bd481598bf7a43e491af4d28fa8ccf"
+        },
+        {
+          "path": "work/causal_study/generality/rms_stock/collapse.pt",
+          "sha256": "7b9511d5010fa2683a44f0f625d781bdb911c542e875531fa0d9949cc8944aac"
+        }
+      ],
+      "logit_gradient_comparison": {
+        "stock32": {
+          "norm": 1.4651358612551598e-05,
+          "reference_norm": 1.4651356455152947e-05,
+          "relative_l2_error": 0.00015907930622639953,
+          "cosine": 0.9999999873469023
+        },
+        "accurate32": {
+          "norm": 1.465135637571333e-05,
+          "reference_norm": 1.4651356455152947e-05,
+          "relative_l2_error": 9.42170811901232e-08,
+          "cosine": 0.999999999999986
+        },
+        "reference64": {
+          "norm": 1.4651356455152947e-05,
+          "reference_norm": 1.4651356455152947e-05,
+          "relative_l2_error": 0.0,
+          "cosine": 1.0000000000000084
+        }
+      },
+      "directional_derivatives": {
+        "stock32": {
+          "by_group": {
+            "hidden": -0.0014345525147704894,
+            "embeddings": -0.012927742468508314,
+            "readout": -1.558803234704741e-06
+          },
+          "total": -0.014363853786513508
+        },
+        "accurate32": {
+          "by_group": {
+            "hidden": -0.0014345542421744686,
+            "embeddings": -0.012927762070019628,
+            "readout": -1.5588058253781804e-06
+          },
+          "total": -0.014363875118019474
+        },
+        "reference64_cast32": {
+          "by_group": {
+            "hidden": -0.0014345542422259695,
+            "embeddings": -0.012927762182944202,
+            "readout": -1.5588058375079658e-06
+          },
+          "total": -0.01436387523100768
+        }
+      },
+      "interpolation": [
+        {
+          "scale": 0.0,
+          "train_accurate_loss32": 0.0008129897178150713,
+          "train_accurate_loss64": 0.0008129896834276701,
+          "train_accuracy": 1.0
+        },
+        {
+          "scale": 0.001,
+          "train_accurate_loss32": 0.0007987864082679152,
+          "train_accurate_loss64": 0.000798786456214921,
+          "train_accuracy": 1.0
+        },
+        {
+          "scale": 0.01,
+          "train_accurate_loss32": 0.0006843861192464828,
+          "train_accurate_loss64": 0.0006843861322137766,
+          "train_accuracy": 1.0
+        },
+        {
+          "scale": 0.1,
+          "train_accurate_loss32": 0.0002222630282631144,
+          "train_accurate_loss64": 0.00022226301982785198,
+          "train_accuracy": 1.0
+        },
+        {
+          "scale": 1.0,
+          "train_accurate_loss32": 0.9511557817459106,
+          "train_accurate_loss64": 0.9511558744960664,
+          "train_accuracy": 0.8765013054830287
+        }
+      ],
+      "endpoint_parameters_exact": {
+        "0.0": true,
+        "1.0": true
+      },
+      "input_hashes_unchanged": true
+    },
+    {
+      "arithmetic": "accurate",
+      "seed": 0,
+      "operation": "addition",
+      "normalization": "rms",
+      "model_class": "RMSDepthTransformer",
+      "rms_epsilon": 1e-06,
+      "rms_factory_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "diagnostic_script_sha256": "a7fa5943cb38141817219eb0c0e07209ba326c7ea67bffb937e0e90b06598dc5",
+      "pre_step": 28494,
+      "post_step": 28495,
+      "input_checkpoints": [
+        {
+          "path": "work/causal_study/generality/rms_accurate/previous.pt",
+          "sha256": "4864973b5176696d47b11fbeea172075bc878551f9833a19e14648d4d32caa04"
+        },
+        {
+          "path": "work/causal_study/generality/rms_accurate/collapse.pt",
+          "sha256": "6edeb414b7be6e1027d220083d9d7481b562cf08060aaf7f1e5c8fcc835eb660"
+        }
+      ],
+      "logit_gradient_comparison": {
+        "stock32": {
+          "norm": 0.004280628261524221,
+          "reference_norm": 0.0042806282812315796,
+          "relative_l2_error": 5.960749307665664e-07,
+          "cosine": 1.0000000000005436
+        },
+        "accurate32": {
+          "norm": 0.004280628261518858,
+          "reference_norm": 0.0042806282812315796,
+          "relative_l2_error": 9.476445445824621e-08,
+          "cosine": 1.000000000000716
+        },
+        "reference64": {
+          "norm": 0.0042806282812315796,
+          "reference_norm": 0.0042806282812315796,
+          "relative_l2_error": 0.0,
+          "cosine": 1.0000000000007203
+        }
+      },
+      "directional_derivatives": {
+        "stock32": {
+          "by_group": {
+            "hidden": -0.27832708797851224,
+            "embeddings": -11.32015461580015,
+            "readout": -0.003936085699200384
+          },
+          "total": -11.602417789477862
+        },
+        "accurate32": {
+          "by_group": {
+            "hidden": -0.2783270850792906,
+            "embeddings": -11.320154404970086,
+            "readout": -0.003936084026142821
+          },
+          "total": -11.60241757407552
+        },
+        "reference64_cast32": {
+          "by_group": {
+            "hidden": -0.2783270861079834,
+            "embeddings": -11.320154419839003,
+            "readout": -0.003936084048309401
+          },
+          "total": -11.602417589995296
+        }
+      },
+      "interpolation": [
+        {
+          "scale": 0.0,
+          "train_accurate_loss32": 0.3420677185058594,
+          "train_accurate_loss64": 0.34206772902699933,
+          "train_accuracy": 0.9587467362924282
+        },
+        {
+          "scale": 0.001,
+          "train_accurate_loss32": 0.3304997980594635,
+          "train_accurate_loss64": 0.3304998043084183,
+          "train_accuracy": 0.9587467362924282
+        },
+        {
+          "scale": 0.01,
+          "train_accurate_loss32": 0.2357754409313202,
+          "train_accurate_loss64": 0.23577545156666116,
+          "train_accuracy": 0.9592689295039164
+        },
+        {
+          "scale": 0.1,
+          "train_accurate_loss32": 0.8956340551376343,
+          "train_accurate_loss64": 0.8956339520414985,
+          "train_accuracy": 0.7587467362924282
+        },
+        {
+          "scale": 1.0,
+          "train_accurate_loss32": 6.8109917640686035,
+          "train_accurate_loss64": 6.81099142404775,
+          "train_accuracy": 0.01174934725848564
+        }
+      ],
+      "endpoint_parameters_exact": {
+        "0.0": true,
+        "1.0": true
+      },
+      "input_hashes_unchanged": true
+    }
+  ],
+  "note": "RMSDepthTransformer factory used for every forward pass. No optimizer step, held-out evaluation, or parameter fitting. First events from each complete trajectory; this panel is separate from the unnormalized five-seed analysis."
+}

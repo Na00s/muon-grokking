@@ -1,0 +1,172 @@
+{
+  "healthy_step": 28530,
+  "peak_step": 28540,
+  "healthy_checkpoint_sha256": "114798d4b45ebe6bb1ca107e5bbb23f50139239adcf6b7f50ded1000a2c6dcbb",
+  "peak_checkpoint_sha256": "5d34f80bb74bdce8dccab2715d97888c05fb9fe1cb6b73128cb681fb65d7f8ee",
+  "note": "Evaluation-only parameter factorial across the stated multi-update interval; preceding-step interventions are reported separately.",
+  "parameter_hybrids": [
+    {
+      "mask": "000",
+      "updated_groups": [],
+      "metrics": {
+        "train": {
+          "loss": 0.0001759352453518659,
+          "loss64": 0.00017593775688360525,
+          "accuracy": 1.0,
+          "max_abs_logit": 14.049694061279297
+        },
+        "heldout": {
+          "loss": 0.00018208788242191076,
+          "loss64": 0.00018209037334500285,
+          "accuracy": 1.0,
+          "max_abs_logit": 14.03151798248291
+        }
+      }
+    },
+    {
+      "mask": "001",
+      "updated_groups": [
+        "readout"
+      ],
+      "metrics": {
+        "train": {
+          "loss": 0.00019636920478660613,
+          "loss64": 0.00019636986689994452,
+          "accuracy": 1.0,
+          "max_abs_logit": 14.051691055297852
+        },
+        "heldout": {
+          "loss": 0.0002033466735156253,
+          "loss64": 0.00020334692201873125,
+          "accuracy": 1.0,
+          "max_abs_logit": 14.027631759643555
+        }
+      }
+    },
+    {
+      "mask": "010",
+      "updated_groups": [
+        "embeddings"
+      ],
+      "metrics": {
+        "train": {
+          "loss": 4.915660381317139,
+          "loss64": 4.915660841780405,
+          "accuracy": 0.031070496083550912,
+          "max_abs_logit": 5.96189022064209
+        },
+        "heldout": {
+          "loss": 5.74370002746582,
+          "loss64": 5.743699960288652,
+          "accuracy": 0.009397024275646046,
+          "max_abs_logit": 6.377110004425049
+        }
+      }
+    },
+    {
+      "mask": "011",
+      "updated_groups": [
+        "embeddings",
+        "readout"
+      ],
+      "metrics": {
+        "train": {
+          "loss": 4.831390857696533,
+          "loss64": 4.8313910674184095,
+          "accuracy": 0.031331592689295036,
+          "max_abs_logit": 5.790152549743652
+        },
+        "heldout": {
+          "loss": 5.678628444671631,
+          "loss64": 5.678629008933692,
+          "accuracy": 0.008837677592571876,
+          "max_abs_logit": 6.242729663848877
+        }
+      }
+    },
+    {
+      "mask": "100",
+      "updated_groups": [
+        "hidden"
+      ],
+      "metrics": {
+        "train": {
+          "loss": 0.008377968333661556,
+          "loss64": 0.008377969610689937,
+          "accuracy": 0.9992167101827676,
+          "max_abs_logit": 12.672771453857422
+        },
+        "heldout": {
+          "loss": 0.013262618333101273,
+          "loss64": 0.013262620778732907,
+          "accuracy": 0.9983219599507774,
+          "max_abs_logit": 12.465045928955078
+        }
+      }
+    },
+    {
+      "mask": "101",
+      "updated_groups": [
+        "hidden",
+        "readout"
+      ],
+      "metrics": {
+        "train": {
+          "loss": 0.008676803670823574,
+          "loss64": 0.008676799370901399,
+          "accuracy": 0.9992167101827676,
+          "max_abs_logit": 12.58269214630127
+        },
+        "heldout": {
+          "loss": 0.01364183146506548,
+          "loss64": 0.013641830415851833,
+          "accuracy": 0.9984338292873923,
+          "max_abs_logit": 12.486222267150879
+        }
+      }
+    },
+    {
+      "mask": "110",
+      "updated_groups": [
+        "hidden",
+        "embeddings"
+      ],
+      "metrics": {
+        "train": {
+          "loss": 3.9047653675079346,
+          "loss64": 3.904765105101512,
+          "accuracy": 0.12193211488250653,
+          "max_abs_logit": 6.023976802825928
+        },
+        "heldout": {
+          "loss": 5.704040050506592,
+          "loss64": 5.704039811942126,
+          "accuracy": 0.00548159749412686,
+          "max_abs_logit": 6.456536293029785
+        }
+      }
+    },
+    {
+      "mask": "111",
+      "updated_groups": [
+        "hidden",
+        "embeddings",
+        "readout"
+      ],
+      "metrics": {
+        "train": {
+          "loss": 3.8781232833862305,
+          "loss64": 3.8781231873158077,
+          "accuracy": 0.12715404699738903,
+          "max_abs_logit": 5.930504322052002
+        },
+        "heldout": {
+          "loss": 5.684885025024414,
+          "loss64": 5.684884934608119,
+          "accuracy": 0.004810381474437857,
+          "max_abs_logit": 6.348266124725342
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-09-22T20:02:42.290487+00:00",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "start_step": 15000,
+  "end_step": 20000,
+  "workers": 2,
+  "arm": "row_projection",
+  "endpoint": "Any joint train/test accuracy below90% within the resumed15000-to20000 window.",
+  "motivation": "Separate common-class gradient error from remaining class-relative error, motivated by prior fixed-logit diagnostics and Hanqing et al. arXiv2605.06152v2 zero-sum projection experiments.",
+  "limitation": "The projection retains most fixed-logit L2 derivative error. Failure would not refute target-derivative cancellation; rescue would support a consequential class-common component.",
+  "runner_sha256": "759a25e2ae9873e7a6dc22f6e3180080d1c138be8ea4852d3315b8427fdf7d35",
+  "metadata_erratum": "The runner primary_endpoint string says30000 for every arm. This protocol and actual end_step=20000 govern the specificity and projection windows."
+}

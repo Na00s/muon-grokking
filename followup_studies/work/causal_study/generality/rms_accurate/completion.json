@@ -1,0 +1,18 @@
+{
+  "seed": 0,
+  "operation": "addition",
+  "normalization": "rms",
+  "arithmetic": "accurate",
+  "steps": 30000,
+  "grok_step": 19900,
+  "event_step": 28495,
+  "peak_step": 28503,
+  "first_train_drop_step": 28495,
+  "post_grok_train_min": 0.009921671018276762,
+  "post_grok_test_min": 0.005257858820897192,
+  "post_grok_train_failure_states": 25,
+  "post_grok_test_failure_evaluations": 25,
+  "final_train_accuracy": 1.0,
+  "final_test_accuracy": 1.0,
+  "elapsed_seconds": 4675.320318375016
+}

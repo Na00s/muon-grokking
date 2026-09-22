@@ -1,0 +1,7 @@
+# Complete-parameter update direction at the five captured events
+
+Declared before measurement. For each original first joint failure, use the exact preceding and following saved parameter vectors theta0 and theta1. Compute the directional derivative of accurate cross-entropy at theta0 along dtheta = theta1 - theta0, separately for hidden, embedding, and readout parameters and as their sum. The primary derivative backpropagates the accurate float64 derivative of the identical float32 logits, cast to float32 through the original float32 network. Also report the accurate-float32 and stock-float32 derivatives to expose numerical sensitivity.
+
+Evaluate the full network at theta0 + alpha dtheta for alpha = 0, 0.001, 0.01, 0.1, and 1, using float32 parameter storage and network arithmetic. Construct interpolation in float64 then cast each parameter to float32. Require exact tensor equality with the saved endpoints at alpha zero and one. Evaluate accurate CE on training examples only, including an accurate float64 loss calculation from the same float32 logits. No held-out selection, optimizer update, or parameter fitting is performed.
+
+The infinitesimal derivative is a local directional test of the entire captured update. Finite-step loss curves can reveal overshoot even when that derivative is negative. ReLU boundaries and float32 rounding can affect finite interpolations, so a positive finite-step loss change alone does not establish an ascent direction. This panel is distinct from the earlier fixed-feature readout-only interpolation.

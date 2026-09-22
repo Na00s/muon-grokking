@@ -1,0 +1,20 @@
+{
+  "test_command": "OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python work/causal_study/test_generality_runner.py",
+  "tests_passed": 6,
+  "checks": [
+    "Source initialization tensor identity for no norm and gain-free RMS",
+    "Optimizer configuration and parameter routing exact identity",
+    "Three no-norm source updates have exact parameter and optimizer identity",
+    "Subtraction labels and source data permutation identity",
+    "Accurate CE independently derived target and wrong-class derivatives",
+    "RMS formula and absence of extra parameters",
+    "Checkpoint optimizer state independent loading"
+  ],
+  "initial_tensor_sha256": "6862f5690ed51f353ddd883fe5564b3f09613811b30ec715e76db1a0691842af",
+  "single_job_seconds_per_update": {
+    "none": 0.04276465415023267,
+    "rms": 0.052814439544454216
+  },
+  "archived_original_seed0_initial_state_exact": true,
+  "archived_original_seed0_initial_sha256": "fcdf7a79fe7ddf4a36903b053042e56e6c44e332b4a3b49bb607d185d850abb6"
+}

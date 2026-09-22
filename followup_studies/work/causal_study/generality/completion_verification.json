@@ -1,0 +1,51 @@
+{
+  "all_checks_passed": true,
+  "completed_updates": 120000,
+  "peak_replay_updates": 1043,
+  "paired_initial_model_optimizer_rng_exact": true,
+  "cross_architecture_initial_tensor_exact": true,
+  "runner_script_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+  "runs": [
+    {
+      "name": "subtraction_stock",
+      "steps": 30000,
+      "grok_step": 9300,
+      "event_step": 15281,
+      "checkpoint_count": 37,
+      "saved_rows": 3012,
+      "gradient_checkpoints": 8,
+      "peak_replay_updates": 0
+    },
+    {
+      "name": "subtraction_accurate",
+      "steps": 30000,
+      "grok_step": 10500,
+      "event_step": null,
+      "checkpoint_count": 33,
+      "saved_rows": 3001,
+      "gradient_checkpoints": 8,
+      "peak_replay_updates": 0
+    },
+    {
+      "name": "rms_stock",
+      "steps": 30000,
+      "grok_step": 15700,
+      "event_step": 18515,
+      "checkpoint_count": 40,
+      "saved_rows": 3028,
+      "gradient_checkpoints": 8,
+      "peak_replay_updates": 540
+    },
+    {
+      "name": "rms_accurate",
+      "steps": 30000,
+      "grok_step": 19900,
+      "event_step": 28495,
+      "checkpoint_count": 40,
+      "saved_rows": 3024,
+      "gradient_checkpoints": 8,
+      "peak_replay_updates": 503
+    }
+  ],
+  "checkpoint_count": 150
+}

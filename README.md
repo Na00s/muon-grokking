@@ -12,9 +12,9 @@ Runs cover two operations, two moduli, two widths, two training fractions, depth
 
 ## Follow-up experiments, September 22, 2026
 
-The [follow-up study](followup_studies/README.md) adds three fresh seeds, 262 head interventions, and 18 continued-training branches. Across five seeds, adjacent checkpoint swaps localize most acute loss to the readout update, and fresh linear decoders recover 98.20–100% accuracy from the analyzed collapsed representations. Exact global basis equivalence fails the measured geometry tests; approximate alignment remains useful.
+The [completed causal study](followup_studies/causal_study/report.md) adds 364,302 optimizer updates, five-seed arithmetic controls through update 30,000, targeted derivative repairs, and operation/architecture controls. All five original addition trajectories collapse; 0 of five accurate-arithmetic continuations collapse within the matched horizon. The study directly tests how numerical error, feature-mean inflation, and a damaging readout update interact. The normalized controls also expose an embedding-update collapse under accurate loss arithmetic. The [manuscript revisions](followup_studies/causal_study/paper_revision.md) replace the unsupported pure-basis and no-numerical-pathology claims.
 
-The [remaining-reservations assessment](followup_studies/reservations_status.md) separates established results from open causal questions, including numerical sensitivity and the origin of the damaging readout update. The [release](https://github.com/Na00s/muon-grokking/releases/tag/basis-study-2026-09-22) contains every retained checkpoint and binary analysis artifact from both follow-up studies.
+The [earlier basis study](followup_studies/README.md) includes training-only decoder recovery, exact and approximate basis tests, and continuation interventions. Every retained binary is available across the [basis-study release](https://github.com/Na00s/muon-grokking/releases/tag/basis-study-2026-09-22) and [causal-study release](https://github.com/Na00s/muon-grokking/releases/tag/causal-study-2026-09-22).
 
 ## Layout
 

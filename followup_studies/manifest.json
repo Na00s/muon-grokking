@@ -1,6 +1,6 @@
 {
-  "file_count": 726,
-  "total_bytes": 27609317,
+  "file_count": 1139,
+  "total_bytes": 49878338,
   "files": [
     {
       "path": ".gitignore",
@@ -13,9 +13,14 @@
       "sha256": "335d68e128fba57e1a485fef0ab061745eb2e40f7eb4e89f714958e7f7c89c60"
     },
     {
+      "path": "CAUSAL_ARTIFACTS.json",
+      "bytes": 104351,
+      "sha256": "d528cb8c5f81d18fbfc7c34a71214b304fb0a27fdf92cb4b1bacdb5d93066525"
+    },
+    {
       "path": "README.md",
-      "bytes": 6857,
-      "sha256": "96cebb8604c469ec1c5903b9b01efd3222d91f720c94459e0dec085fafc27e8c"
+      "bytes": 7087,
+      "sha256": "279e3ace967a35f7a977b6b5978f5c9618368bb2c8f0b039e717cf5ddb4ddfba"
     },
     {
       "path": "artifact_verification.log",
@@ -28,9 +33,109 @@
       "sha256": "4218500238c9d3e779eaea94decbfcf1a0729f8e817e261d7a2f31af292f795f"
     },
     {
+      "path": "causal_study/README.md",
+      "bytes": 6336,
+      "sha256": "907f2f1c9dbbceea803cb2f9ed434a5d3f54ec3649ba8fb11f74a99aaeb18b48"
+    },
+    {
+      "path": "causal_study/branches.csv",
+      "bytes": 4735,
+      "sha256": "00533beb1790972bdf8ba96261b39f42c2066753cdf12bfeca6b9e6d321c9337"
+    },
+    {
+      "path": "causal_study/figures/generality_controls.pdf",
+      "bytes": 28631,
+      "sha256": "b284ff87220821d747ad83e14d59b3a2a71657bb673875dedbf223b23a06efd1"
+    },
+    {
+      "path": "causal_study/figures/generality_controls.png",
+      "bytes": 198250,
+      "sha256": "01596ad9b630f4fa5994d844b38ad5a2a33343031634ca5335353f4ec1a983a2"
+    },
+    {
+      "path": "causal_study/figures/gradient_error.pdf",
+      "bytes": 24306,
+      "sha256": "f397e7d60481eb638ad1f3f961a25ccd159ff88e169facd219d2a8136a8f3f3d"
+    },
+    {
+      "path": "causal_study/figures/gradient_error.png",
+      "bytes": 175530,
+      "sha256": "ce8c8049829ef40ef95de553bdea1a251c2f94f5baa971bf4890e6df38c69347"
+    },
+    {
+      "path": "causal_study/figures/matched_trajectories.pdf",
+      "bytes": 24806,
+      "sha256": "4499c08c332bdd127be8252de16ad820466e51325d97571a17c410e70434f455"
+    },
+    {
+      "path": "causal_study/figures/matched_trajectories.png",
+      "bytes": 211633,
+      "sha256": "410f692c7f0dae66aa87dcbaa835a9ce0d0bc0ef2f02a51419c0243941770020"
+    },
+    {
+      "path": "causal_study/figures/mean_drift.pdf",
+      "bytes": 29721,
+      "sha256": "d2eeef4b9900de5cde136e3eead0396e9fe7f47d81140fa383fea93b395e616e"
+    },
+    {
+      "path": "causal_study/figures/mean_drift.png",
+      "bytes": 209760,
+      "sha256": "610674a51df66954bdebb08e0cfc6a8482f290e5a3751cfb5705f3e1fd5c8971"
+    },
+    {
+      "path": "causal_study/figures/mean_mediation.pdf",
+      "bytes": 15979,
+      "sha256": "fa0e6aaeb6e3c5026923115644610f414e980bb47a4b57d796109eecf094fb36"
+    },
+    {
+      "path": "causal_study/figures/mean_mediation.png",
+      "bytes": 46143,
+      "sha256": "94df5bbf8b9bd16921a0b3608c8cbf2fa7750368b06ec3e9b6c925d9e57867a3"
+    },
+    {
+      "path": "causal_study/figures/specificity_and_overshoot.pdf",
+      "bytes": 22634,
+      "sha256": "6b8a0c8fe9e173c31e48051cfb3d4a6684cd0a11f94ff3a4eaef2988585f633d"
+    },
+    {
+      "path": "causal_study/figures/specificity_and_overshoot.png",
+      "bytes": 180614,
+      "sha256": "106bae78a0b9351e5b54dcc6a3a495b78791d7c69e0a729388fe4ec56955e7af"
+    },
+    {
+      "path": "causal_study/figures/terminal_interventions.pdf",
+      "bytes": 18314,
+      "sha256": "0c383174a63779fbdd258bb1abcc5ede34c270177be2ab6162d9f8e7cf408097"
+    },
+    {
+      "path": "causal_study/figures/terminal_interventions.png",
+      "bytes": 54565,
+      "sha256": "4056501766a81373f12274299d2c3f2ae26cd034b01003c9101fefa7d3dd7621"
+    },
+    {
+      "path": "causal_study/paper_revision.md",
+      "bytes": 18148,
+      "sha256": "4978d74705d3f49027d39b155fdf9d612c50f0d9e72ae0bbd83878060d8fcc59"
+    },
+    {
+      "path": "causal_study/report.md",
+      "bytes": 17756,
+      "sha256": "03a359d6ae2a940f3d550c3511814232cf1500512b15f79c563af28001a5131b"
+    },
+    {
+      "path": "causal_study/results.json",
+      "bytes": 32409,
+      "sha256": "df3910e103acabd28bb360a759862417f687e1569a4e31cfa35533833415df7a"
+    },
+    {
+      "path": "causal_study/verification.json",
+      "bytes": 13922,
+      "sha256": "17798db2fbc4538ca138f8ea8c55fa3162c332f0a25110afa1c8bdb79bd61d34"
+    },
+    {
       "path": "download_artifacts.py",
-      "bytes": 4928,
-      "sha256": "bb32928c11350505db634e76bb14bd9581c8aed2652e15c90808ce8470690a32"
+      "bytes": 5210,
+      "sha256": "efd7e5e543e41ecbab11007f670fcad737b41d80b596e004022d230c770c33cc"
     },
     {
       "path": "figures/acute_readout_swaps.pdf",
@@ -109,13 +214,13 @@
     },
     {
       "path": "report.md",
-      "bytes": 13278,
-      "sha256": "dc10513e4e0e7bfb4db595dfbfee7c1bf501ff082851f1aaf57c545c85d56ca4"
+      "bytes": 13504,
+      "sha256": "b820b9688e36eff70ee6382b4d78fc6b49df2fd5d69f3d1f2a780b7187c88c86"
     },
     {
       "path": "reservations_status.md",
-      "bytes": 6920,
-      "sha256": "a997f48727127472f81984849ffe51f49ee55bd98c3a2cb794074cab234e7995"
+      "bytes": 7187,
+      "sha256": "88d1f5c7543f6493c5c71f41a2c647a9adb5cd2baf59da6d3b45426455672981"
     },
     {
       "path": "verification.json",
@@ -2513,6 +2618,1966 @@
       "sha256": "37f83b135cfb87a876d499c21eacb9eae950fad527db73c6ef6336d9113ce683"
     },
     {
+      "path": "work/causal_study/aggregate.py",
+      "bytes": 5134,
+      "sha256": "f23442525bc85fd613de819abcfb141cfdd8f7c323c73f8cc633e430837db243"
+    },
+    {
+      "path": "work/causal_study/aggregation_verification.json",
+      "bytes": 2514,
+      "sha256": "fb06e18fc7ca92532e4fe0b8fad69b08807b0ea7ea36b3bd819cfd61e9dd9033"
+    },
+    {
+      "path": "work/causal_study/analysis/branches.csv",
+      "bytes": 4735,
+      "sha256": "00533beb1790972bdf8ba96261b39f42c2066753cdf12bfeca6b9e6d321c9337"
+    },
+    {
+      "path": "work/causal_study/analysis/results.json",
+      "bytes": 32409,
+      "sha256": "df3910e103acabd28bb360a759862417f687e1569a4e31cfa35533833415df7a"
+    },
+    {
+      "path": "work/causal_study/audit_source_grokking.py",
+      "bytes": 3137,
+      "sha256": "c8b8b7d034e43393d3ea3fa3507b9723b239298c370ccd23ee257b4e9a65a7a0"
+    },
+    {
+      "path": "work/causal_study/claim_adjudication.md",
+      "bytes": 11273,
+      "sha256": "cfc84cdc4d6085da56d2d309f2cc6c68eed93f3757b17fa99d1f81655f2b57dd"
+    },
+    {
+      "path": "work/causal_study/derivative_identity_check.json",
+      "bytes": 21932,
+      "sha256": "82ab1766e692b6c26ee279a0cda982e04061fa8f42321c17d6b2c82f000c3fad"
+    },
+    {
+      "path": "work/causal_study/derivative_identity_check.py",
+      "bytes": 5588,
+      "sha256": "57dbd3f83871b24a61244fc6583261f99ee55651a02578a4d3af8c6285edd819"
+    },
+    {
+      "path": "work/causal_study/diagnostic_tests_final.log",
+      "bytes": 104,
+      "sha256": "7f96ca622bf71c92783cb7c66b56564dc63215c03ca888b580fb202e8a926565"
+    },
+    {
+      "path": "work/causal_study/diagnostics.py",
+      "bytes": 13689,
+      "sha256": "41249acebe2113b759a29355dddc571a827ed0e44193192ef7a8786da9ace27e"
+    },
+    {
+      "path": "work/causal_study/diagnostics_adam_common.log",
+      "bytes": 60,
+      "sha256": "1c5ea23e99c91885d43e4f71b562bdc5545fd03db2b71e1b0ded536e180049cd"
+    },
+    {
+      "path": "work/causal_study/diagnostics_adam_common.py",
+      "bytes": 3955,
+      "sha256": "0ca5bd27511adab4fdd2fce1cd7a786f913170950a5a1e5d26ef6ff1158dbbb8"
+    },
+    {
+      "path": "work/causal_study/diagnostics_adam_common_protocol.md",
+      "bytes": 1659,
+      "sha256": "1f970ca01cb451cb349def1ecb9abe0271678cd9bcd42446bea439ac1945a5d4"
+    },
+    {
+      "path": "work/causal_study/diagnostics_branch_compare.py",
+      "bytes": 3816,
+      "sha256": "492de366d9b0bc1389215f0fe5e5829cff895b75c3972452eb2c98fd2146d84c"
+    },
+    {
+      "path": "work/causal_study/diagnostics_branch_smoke.json",
+      "bytes": 7369,
+      "sha256": "92a4b46538a9972d02a3da5f7ddd4021522a3f8133700fdee4f3351715bd0a3a"
+    },
+    {
+      "path": "work/causal_study/diagnostics_final_summary.py",
+      "bytes": 4217,
+      "sha256": "3c8141b1487d540b3a9bb4f8f53abbe9fc54b97a4badec9b0fd21ab847b9b9e2"
+    },
+    {
+      "path": "work/causal_study/diagnostics_joint_direction.log",
+      "bytes": 2834,
+      "sha256": "eac06dc9635788fe502de3c778ec1db0b7e7ec3890cf28718e38178d353f00b2"
+    },
+    {
+      "path": "work/causal_study/diagnostics_joint_direction.py",
+      "bytes": 4969,
+      "sha256": "46ed08b31de8549c930871bef7bd8c4a6751dec8666bf668d2d4ff1d317153fb"
+    },
+    {
+      "path": "work/causal_study/diagnostics_joint_direction_protocol.md",
+      "bytes": 1556,
+      "sha256": "4520f9d37c72d25cfa62be03a284ee889d3fb36c384906978c4bddb58b4fa70e"
+    },
+    {
+      "path": "work/causal_study/diagnostics_matched_compare.py",
+      "bytes": 4403,
+      "sha256": "26527660ebdf2ef1fc0a6e59fcd70b80e5a73d1afa871773d7de8fd91adfae2c"
+    },
+    {
+      "path": "work/causal_study/diagnostics_matched_early.log",
+      "bytes": 435,
+      "sha256": "29aa97bc2304726d14e441c5384322a97d365cb0827e001ef370ece203ea1909"
+    },
+    {
+      "path": "work/causal_study/diagnostics_matched_early.py",
+      "bytes": 6245,
+      "sha256": "e627476a2309ae3b5d80242066bf1c76a8167fca18065724219d8cd1755bec0a"
+    },
+    {
+      "path": "work/causal_study/diagnostics_matched_early_protocol.md",
+      "bytes": 1165,
+      "sha256": "80044b733f3a0e15f8775a53247d550425c00fde8b1343cbecc373894767dc18"
+    },
+    {
+      "path": "work/causal_study/diagnostics_mean_drift.log",
+      "bytes": 60,
+      "sha256": "1c5ea23e99c91885d43e4f71b562bdc5545fd03db2b71e1b0ded536e180049cd"
+    },
+    {
+      "path": "work/causal_study/diagnostics_mean_drift.py",
+      "bytes": 3051,
+      "sha256": "1604f3154c9090935c768e0885e6b0da080f4a9a3482992572b5eea44fdceea7"
+    },
+    {
+      "path": "work/causal_study/diagnostics_mean_drift_protocol.md",
+      "bytes": 1327,
+      "sha256": "24427afcc889d64440110cebd64d9cf9649259c491c572677970c9af6103ff9b"
+    },
+    {
+      "path": "work/causal_study/diagnostics_mean_mediation.log",
+      "bytes": 60,
+      "sha256": "1c5ea23e99c91885d43e4f71b562bdc5545fd03db2b71e1b0ded536e180049cd"
+    },
+    {
+      "path": "work/causal_study/diagnostics_mean_mediation.py",
+      "bytes": 2916,
+      "sha256": "bddd260a4e913339d4b89b3dec6887937c5c84146a84feda4d83aa49835b2b3a"
+    },
+    {
+      "path": "work/causal_study/diagnostics_mean_mediation_protocol.md",
+      "bytes": 1037,
+      "sha256": "acded37ec6ee8eda34d72a0d5169e1db73c5fa32cc0a82329af968a9b9a6361f"
+    },
+    {
+      "path": "work/causal_study/diagnostics_protocol.md",
+      "bytes": 2676,
+      "sha256": "1b554b6968f0eefcdbd7262e9987832ae8b0111b9db4d79e1ea205efef879742"
+    },
+    {
+      "path": "work/causal_study/diagnostics_repairs.py",
+      "bytes": 2389,
+      "sha256": "3026ecc476c43a32d5fb4b1aaa0b186b685819bc65d41313981c0ac3b8ddfe4c"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/actual_backward_rule_verification.json",
+      "bytes": 653,
+      "sha256": "6c6c6daa24a669e7553741f8c492eb3bceb71de60b570927f32356751c6bd723"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/code_manifest.json",
+      "bytes": 3274,
+      "sha256": "118769bb6af7266eb435b919229659b8d39566fe632e76227b7d6f54688acda4"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/events.csv",
+      "bytes": 2740,
+      "sha256": "f205bd32892bd89a821019d1650780924ae858482d981497f757328edb169eb1"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/gradient_error.pdf",
+      "bytes": 24306,
+      "sha256": "f397e7d60481eb638ad1f3f961a25ccd159ff88e169facd219d2a8136a8f3f3d"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/gradient_error.png",
+      "bytes": 175530,
+      "sha256": "ce8c8049829ef40ef95de553bdea1a251c2f94f5baa971bf4890e6df38c69347"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/gradient_timecourse.csv",
+      "bytes": 15363,
+      "sha256": "a487976346441815c57d377edca922d57ffad8080e033695d8d079ecde892495"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/input_checkpoint_manifest.json",
+      "bytes": 28855,
+      "sha256": "4540e8d0d70401d4e2137b82ab9a2af1eb46385a2ac2646dd734ee6d72248ed3"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/joint_direction.csv",
+      "bytes": 1303,
+      "sha256": "f98a89f4576960c8f09f674820652cabd2c804e9b9467ee66727efec806b3ca6"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/joint_direction.json",
+      "bytes": 12455,
+      "sha256": "bdb2465b6b8914bd1191565d9f7c55c23cb3ab76542871debe7da08e94fc0b32"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/joint_direction.md",
+      "bytes": 1743,
+      "sha256": "440348ac7f2a2c42661364f5158b26e46d687713be0bebb0d18ecdfab4edfb1c"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_accurate_final.csv",
+      "bytes": 1872,
+      "sha256": "89c92051990a29a273248a98fcba7aa1968279e0322b238137372afb837f1ec3"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_accurate_final.json",
+      "bytes": 35685,
+      "sha256": "134155f25262e6b29bd67243b32c341fc977a15ac9b8f17565243eab2706b0ae"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_accurate_final.md",
+      "bytes": 1659,
+      "sha256": "9f01fc1912e4f3e51f3e4f205849fcc3e3617931cb6aeeb69fd027c866bd7b14"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_early_arithmetic.csv",
+      "bytes": 5740,
+      "sha256": "d405c366fd85afa496315132a13ce493c5dc531f6c74d7fb414504c18c842a67"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_early_arithmetic.json",
+      "bytes": 108047,
+      "sha256": "15193d61e6b61cd91e6b142fe3a5f86ab37ba33a7a11f8a46c522ad162fdcf7e"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_early_arithmetic.md",
+      "bytes": 3770,
+      "sha256": "1fae094de057cc76015d13b2211ee58fb3164d1e2d70b996dad922a2c7f9f69b"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_specificity_final.csv",
+      "bytes": 6040,
+      "sha256": "32f14969f4fe7407ad50b8f5b4b26cf42f08367efd46a162c92f149a52dcfa29"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_specificity_final.json",
+      "bytes": 126090,
+      "sha256": "ca1a9446729921c941a0f86b6c250c868c24f0f0d6bd7bc8a228b0ecefd1a0ba"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_specificity_final.md",
+      "bytes": 3330,
+      "sha256": "821a564cf8447477d916429fe2a82d41dd82bbfacdde8b11a7465061f299d6f4"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_step20000_comparison.md",
+      "bytes": 2158,
+      "sha256": "9cb806c6f0f553b242eecba98b4329d3d6dd064401b13fabe9e383ea1429a289"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_step20000_ranges.json",
+      "bytes": 3248,
+      "sha256": "53fd5f173a10767246afed00564457f6a96eb2c811daf59e56ac4bc913ade659"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_stock20000.csv",
+      "bytes": 2328,
+      "sha256": "7843ad17ddaf4f4e9697de179c8163e11f18e6192e390d60cb198426cc035c22"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_stock20000.json",
+      "bytes": 42857,
+      "sha256": "90555706d1f7ccebebc52c3e96dddb0256eb3526a7d6ba0a2b9540b1f23356b0"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/matched_stock20000.md",
+      "bytes": 1917,
+      "sha256": "d4e217e36f51224131bc63c7a76ca4b49523bb60c2fc238cb98f0ef19c82ae4a"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/mean_drift.csv",
+      "bytes": 69229,
+      "sha256": "2efcf442b9a8ab667714936d1e495bb979628fcbfa24822ba02bf36ff2ad2de5"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/mean_drift.pdf",
+      "bytes": 29721,
+      "sha256": "d2eeef4b9900de5cde136e3eead0396e9fe7f47d81140fa383fea93b395e616e"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/mean_drift.png",
+      "bytes": 209760,
+      "sha256": "610674a51df66954bdebb08e0cfc6a8482f290e5a3751cfb5705f3e1fd5c8971"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/mean_mediation.pdf",
+      "bytes": 15979,
+      "sha256": "fa0e6aaeb6e3c5026923115644610f414e980bb47a4b57d796109eecf094fb36"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/mean_mediation.png",
+      "bytes": 46143,
+      "sha256": "94df5bbf8b9bd16921a0b3608c8cbf2fa7750368b06ec3e9b6c925d9e57867a3"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/report.md",
+      "bytes": 13655,
+      "sha256": "ffdd128a414f257b6f03143b63217bedacedf5f6811bb1465bbc391120052c75"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/rms_joint_direction.csv",
+      "bytes": 732,
+      "sha256": "0e52a4e3d61d69f284d0811edd8740dfa95346044051f5c9bc3ee1a0d891dd78"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/rms_joint_direction.json",
+      "bytes": 7285,
+      "sha256": "a2e0cce3b3684eb525419792a7eecb31e88eb4f182087693f51c3192d6506fd1"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/rms_joint_direction.md",
+      "bytes": 1667,
+      "sha256": "5edb79185052d47817e17ddb94328c37e506c186e1f294d4de2eed9666766c2d"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/adam_common.json",
+      "bytes": 27336,
+      "sha256": "3471ebf642e0e9ae67e26e75769fc0e8281d507e9167d539448151e23a3fbd32"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/completion.json",
+      "bytes": 155,
+      "sha256": "ac9f02a2f3135ca5c465f15965cb89a6d0bdf91a5a0e914ec3057adde15e9826"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/event.json",
+      "bytes": 19310,
+      "sha256": "afbaa69f67188afea400eb8f76ccf8d9d91caba9651068dfd6ef97e94dc506d2"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/mean_drift.json",
+      "bytes": 38279,
+      "sha256": "663f3bbd17859f28966ab86543ebe99f96421e2dbc19126ea95c41e897e5f291"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/mean_mediation.json",
+      "bytes": 16631,
+      "sha256": "5c99aa2bafc98b3ce2096b56061a838e6f10ade05e976ae65ee4e719b2951664"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/stepsize.json",
+      "bytes": 16878,
+      "sha256": "bf39a1614c782d29c69be4a870dee13db64204349ce24b6d1b9bb62245746b91"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/targeted.json",
+      "bytes": 17038,
+      "sha256": "74f69531435752efd929ae5c3b8b9809ca12f517a5294c7154904d55ccf409f9"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed0/timecourse.json",
+      "bytes": 121744,
+      "sha256": "2c426d113c7080829114357079c725b776683160ba32abbdf61b1fb97236ba82"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/adam_common.json",
+      "bytes": 27332,
+      "sha256": "c26056f5d7487f659b8a202dcc438505e932bf5845e718cdb252c6be658dfd6d"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/completion.json",
+      "bytes": 155,
+      "sha256": "5ffa554a99652485bd9e3c741da7efd90872d9e4972827a07a92d001b3b17a7c"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/event.json",
+      "bytes": 19353,
+      "sha256": "72224055fd302cf2245d396af994c6e81aa7b787b798bd8cb124f23d792a1212"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/mean_drift.json",
+      "bytes": 38140,
+      "sha256": "01f28199cee635c3a17730852006b49a77d815c5ac02dbaa6bbd3faa73db7442"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/mean_mediation.json",
+      "bytes": 16471,
+      "sha256": "946c9a85dd13415bbbaefaa270cfb2c26edbfa709def7fd15b918af41c26d70b"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/stepsize.json",
+      "bytes": 16868,
+      "sha256": "c25b84fc4726d6421132a5bf6c7649c361e8f8e8d2e211b5f7c1579b98683574"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/targeted.json",
+      "bytes": 17041,
+      "sha256": "378862ed34bf8f01dabda14e187274999e6a0085f730b791e1cf38933b5238b0"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed1/timecourse.json",
+      "bytes": 121561,
+      "sha256": "c83ad0b6e00e1e8310bd1ec585f7d19cd7d520b9f0727ec9078eb2462df25a00"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/adam_common.json",
+      "bytes": 27402,
+      "sha256": "a0988f496bdb110da6f00ee7cd22fa5d792183cc805da4f390543c3f94668316"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/completion.json",
+      "bytes": 155,
+      "sha256": "0ea68fc9daf07f766d3928bdbcc237e1a0eabaa5a75e9777e16eb3305a330fda"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/event.json",
+      "bytes": 19309,
+      "sha256": "6c497a9db9543ee1f6ae35090aae12f0a133740bb1defd4399b89c8658da02ec"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/mean_drift.json",
+      "bytes": 39590,
+      "sha256": "62426b1becbacf2b31697ce328200b553b1d0c06d4a2b5cb86e6c3ba00cf104d"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/mean_mediation.json",
+      "bytes": 16341,
+      "sha256": "dcf1c78ab6674b9dd144737b339ca4d443ed3d334695f5fb57271c1f72a8c145"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/stepsize.json",
+      "bytes": 16754,
+      "sha256": "ee8845803e6c8a29fb86fa5ff61af2e80739f8a8464f1ef9765247330d174a63"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/targeted.json",
+      "bytes": 17083,
+      "sha256": "21d40186786ccd44454137a4f6e4ce9cb7a7ff2493a027c660291dcae6bb9c81"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed2/timecourse.json",
+      "bytes": 126530,
+      "sha256": "289110a731beecadc48a86f8c1955618e5d2a339d2c6545d977451061860ab16"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/adam_common.json",
+      "bytes": 27310,
+      "sha256": "7bf1f7499fb1894c72d280446e87ec5ddb27d56cd8c31061e40d51e8705fc1ff"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/completion.json",
+      "bytes": 155,
+      "sha256": "304798a61d5d8305dd4fda5517bab7f02b53cc3be0e8de33edc91aed2f29d9bc"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/event.json",
+      "bytes": 19404,
+      "sha256": "37f18d09bb57d696229fb971c63c4575a9b45789a00f01e5170cd1b35474733f"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/mean_drift.json",
+      "bytes": 39620,
+      "sha256": "c9bd3736d3c8c2afc6a0923ade6e7e0b78332594049cfe2df61668bf3ca84286"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/mean_mediation.json",
+      "bytes": 16777,
+      "sha256": "aee100c40c7116e9382e3b380b05a34e61699919d913148db043c3b94c0dc665"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/stepsize.json",
+      "bytes": 17066,
+      "sha256": "d134540769a773f3c9ffebb2e59245347cbb3a4f26f9e912a81e81105d6261ec"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/targeted.json",
+      "bytes": 16942,
+      "sha256": "13e428528333bd9477958e0deb925c5ff723d162217210ffcb27157e9123eca2"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed3/timecourse.json",
+      "bytes": 126228,
+      "sha256": "99508428b5cdf9dc0314706df16cbccdf616eca2169d57b5db48fe910602c878"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/adam_common.json",
+      "bytes": 27311,
+      "sha256": "8be11d5ba18c038823a71174b10748d62da4b21ad1fd0a269eadca9af9755dc8"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/completion.json",
+      "bytes": 155,
+      "sha256": "e304ed78b5f8fba8c4b1172719e1ffb23f49d9adc738c3eb59c1a1ce7c6a875b"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/event.json",
+      "bytes": 19472,
+      "sha256": "23910cb8e84a92f57a9d1a0b7423b77f494cf7458ca514769d1640ed02747557"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/mean_drift.json",
+      "bytes": 38321,
+      "sha256": "c869e4be291e514b879506c94940e5a404cbc12d871c044587eb5647e04fde19"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/mean_mediation.json",
+      "bytes": 16769,
+      "sha256": "9b3336a49ab9fd21061125bf8be2b2f1e2a2526eacbed7580f237f61ef3abf23"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/stepsize.json",
+      "bytes": 17113,
+      "sha256": "6f85f6e74ff9f2a605d95093f9489f41cd3f1d50a77d37c6ddf3207da9d83e19"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/targeted.json",
+      "bytes": 16967,
+      "sha256": "129a9ee4c54aa78acb2cf48946a25de854ffb304f31b6324cfadf32eb9e03375"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/seed4/timecourse.json",
+      "bytes": 121890,
+      "sha256": "b28c8ed3df02683774fa5f410ffd08ed38d929d09c4fb2c4209e9ae51da585d3"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/stock_recurrences.csv",
+      "bytes": 3092,
+      "sha256": "9748b15fa7b42c5f38e533fabbcae6d3c8bf74db79e3f24a52260e6ac7b3db71"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/stock_recurrences.json",
+      "bytes": 27704,
+      "sha256": "a55caf161de3ef17ea732acba761926c6feadee10925903d60fa3655a55b7d9e"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/stock_recurrences.md",
+      "bytes": 2066,
+      "sha256": "ccb9411e5af5ccbfbf672422289d023c53aa0eba107b0203982a18e94d5ffda5"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/summary.json",
+      "bytes": 62517,
+      "sha256": "d9c95981301dcb5df60f3b8392c09eb77865a7e8e5283fe1278205ffc4c656de"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/terminal_interventions.pdf",
+      "bytes": 18314,
+      "sha256": "0c383174a63779fbdd258bb1abcc5ede34c270177be2ab6162d9f8e7cf408097"
+    },
+    {
+      "path": "work/causal_study/diagnostics_results/terminal_interventions.png",
+      "bytes": 54565,
+      "sha256": "4056501766a81373f12274299d2c3f2ae26cd034b01003c9101fefa7d3dd7621"
+    },
+    {
+      "path": "work/causal_study/diagnostics_rms_joint_direction.log",
+      "bytes": 1264,
+      "sha256": "e850439a5755f2244d532d0c228034217fa833fe4902659c1aacfa9de9c6bd7f"
+    },
+    {
+      "path": "work/causal_study/diagnostics_rms_joint_direction.py",
+      "bytes": 7693,
+      "sha256": "a7fa5943cb38141817219eb0c0e07209ba326c7ea67bffb937e0e90b06598dc5"
+    },
+    {
+      "path": "work/causal_study/diagnostics_rms_joint_protocol.md",
+      "bytes": 1813,
+      "sha256": "d5f4d2c21189390960f84b0f7501f269edfa68f0ef7c9700a6d5f4ca291e51bf"
+    },
+    {
+      "path": "work/causal_study/diagnostics_seed0.log",
+      "bytes": 2021,
+      "sha256": "d5ad52f02a3103c508f43c7c66ff571925c1db51840a2aa7ae63fcda17079fc3"
+    },
+    {
+      "path": "work/causal_study/diagnostics_seed1.log",
+      "bytes": 2021,
+      "sha256": "438311ec206f165ce1239ade0c3bf10bd7b94cd775525970145655554a8beb16"
+    },
+    {
+      "path": "work/causal_study/diagnostics_seed2.log",
+      "bytes": 2098,
+      "sha256": "833bb70a909818e32b0af315ba1fbf017592ace4ab6c6619912f3963af57773d"
+    },
+    {
+      "path": "work/causal_study/diagnostics_seed3.log",
+      "bytes": 2095,
+      "sha256": "c543b1c36c91a07d8834ee69f5ad629d15a2df2726de3989d3bb61b23d53c875"
+    },
+    {
+      "path": "work/causal_study/diagnostics_seed4.log",
+      "bytes": 2020,
+      "sha256": "5d819d4ffd597d832a69f85e8b49fcf467a0337ae23972d86054f94c8c43e3bf"
+    },
+    {
+      "path": "work/causal_study/diagnostics_specificity.log",
+      "bytes": 380,
+      "sha256": "3cfede5424b6e88d956318fa5ccbb4f5b025ff4f511a4ba765d0897b5724299a"
+    },
+    {
+      "path": "work/causal_study/diagnostics_specificity.py",
+      "bytes": 5696,
+      "sha256": "f378ff2496e854a1ffb0fc3729d8698445be7f904d6094a7ba0d083518df3a4f"
+    },
+    {
+      "path": "work/causal_study/diagnostics_specificity_protocol.md",
+      "bytes": 1330,
+      "sha256": "152e2be69c836ecef921d3c433a2e87bc5462251e015a02705f2c1625a8242ae"
+    },
+    {
+      "path": "work/causal_study/diagnostics_stepsize.py",
+      "bytes": 2806,
+      "sha256": "cb8f5b2f2f2c31349f63f9b4805fb5a878474b31ffacb56df7685d77cfaa8d18"
+    },
+    {
+      "path": "work/causal_study/diagnostics_stepsize_protocol.md",
+      "bytes": 1237,
+      "sha256": "8786703ecc456d7f03ea2fab363c31fba44d519bf742e24351b1e12054cd014d"
+    },
+    {
+      "path": "work/causal_study/diagnostics_stock20000.log",
+      "bytes": 100,
+      "sha256": "d210b5f485000d006dec54a88477a59ccfae6f9ba03a49a6f9099b54aec700c9"
+    },
+    {
+      "path": "work/causal_study/diagnostics_stock_recurrences.log",
+      "bytes": 177,
+      "sha256": "d045dd1fbab2b0dbbb48b0f3838dbb7b74da9cccd86442a2027af23c2efb622b"
+    },
+    {
+      "path": "work/causal_study/diagnostics_stock_recurrences.py",
+      "bytes": 7030,
+      "sha256": "b4f9763847350b1fb2b64a6d2a8735595baecd184b06cb120d03c8c1cd3bde62"
+    },
+    {
+      "path": "work/causal_study/diagnostics_stock_recurrences_protocol.md",
+      "bytes": 1612,
+      "sha256": "80cbd026124a89b95e0657679bac8a4c65bb0c3122a6d349909bfb938e739f09"
+    },
+    {
+      "path": "work/causal_study/diagnostics_summary.log",
+      "bytes": 208,
+      "sha256": "c65c13cfbad1a3110b6bec3fa222020ac5dc6bdc8adbdb2cc8a0ed8bcc4ed728"
+    },
+    {
+      "path": "work/causal_study/diagnostics_summary.py",
+      "bytes": 20917,
+      "sha256": "7b3725c7da66a9f27f52553979d2bb5d58a4e6450375fe4e38241724f8691b38"
+    },
+    {
+      "path": "work/causal_study/diagnostics_targeted.log",
+      "bytes": 85,
+      "sha256": "33cc0a52a0ff57d8c629ac365d6b65b6a1b8043141b34f699bfd2a061d0c789d"
+    },
+    {
+      "path": "work/causal_study/diagnostics_targeted.py",
+      "bytes": 3230,
+      "sha256": "d9128578a1b35d76a6a4e55d104c1d459c987f80a17d1dbba2bae195ced9eb5f"
+    },
+    {
+      "path": "work/causal_study/diagnostics_test.py",
+      "bytes": 3118,
+      "sha256": "ff749f0137d7df53ff68806f4831f130a1f62821ede79833caa862ea947e94a0"
+    },
+    {
+      "path": "work/causal_study/figures/matched_trajectories.pdf",
+      "bytes": 24806,
+      "sha256": "4499c08c332bdd127be8252de16ad820466e51325d97571a17c410e70434f455"
+    },
+    {
+      "path": "work/causal_study/figures/matched_trajectories.png",
+      "bytes": 211633,
+      "sha256": "410f692c7f0dae66aa87dcbaa835a9ce0d0bc0ef2f02a51419c0243941770020"
+    },
+    {
+      "path": "work/causal_study/figures/specificity_and_overshoot.pdf",
+      "bytes": 22634,
+      "sha256": "6b8a0c8fe9e173c31e48051cfb3d4a6684cd0a11f94ff3a4eaef2988585f633d"
+    },
+    {
+      "path": "work/causal_study/figures/specificity_and_overshoot.png",
+      "bytes": 180614,
+      "sha256": "106bae78a0b9351e5b54dcc6a3a495b78791d7c69e0a729388fe4ec56955e7af"
+    },
+    {
+      "path": "work/causal_study/generality/checkpoint_manifest.json",
+      "bytes": 27061,
+      "sha256": "78210c79c9e4b4a913c95d1cf253d88a7c238dc477f03168b403f3fa16953c77"
+    },
+    {
+      "path": "work/causal_study/generality/completion_verification.json",
+      "bytes": 1298,
+      "sha256": "49ac903f80cb2634d068de9f9b2083bf5293a84206eef5ac7dab353af36e6af5"
+    },
+    {
+      "path": "work/causal_study/generality/generality_controls.pdf",
+      "bytes": 28631,
+      "sha256": "b284ff87220821d747ad83e14d59b3a2a71657bb673875dedbf223b23a06efd1"
+    },
+    {
+      "path": "work/causal_study/generality/generality_controls.png",
+      "bytes": 198250,
+      "sha256": "01596ad9b630f4fa5994d844b38ad5a2a33343031634ca5335353f4ec1a983a2"
+    },
+    {
+      "path": "work/causal_study/generality/protocol.md",
+      "bytes": 4791,
+      "sha256": "b83e48526a8a0feecd58a305d8c57e6c8ddba183987515bcd96a6f4e340b74e9"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/adjacent_analysis.json",
+      "bytes": 7202,
+      "sha256": "deea6eed925ccce8148d4b14b38225e9e835eedfc06f95915f938ffced560a5a"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/analysis_completion.json",
+      "bytes": 248,
+      "sha256": "285c6435c55cd7a8ef9ade51971220b615ec09e3eb12126e71692b672cd87650"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/completion.json",
+      "bytes": 494,
+      "sha256": "a58bc7c7605428d9895a61285535e6d890dd4e5ca63768ffb3ad7e94f2831cd1"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/event.json",
+      "bytes": 309,
+      "sha256": "9ce48e6ff82952073507ba451d432b51b28124f28d3f60890bb2546bbb0f7e3b"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/event_analysis.json",
+      "bytes": 10638,
+      "sha256": "e7bec541ad829a25162c364a698a65e4019a7faa3bad88bd197cb160ee13c43a"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/gradient_timecourse.json",
+      "bytes": 31998,
+      "sha256": "290f05e7d494875febdff2193c626236b18946f4a81b9f426be78bc6381c0337"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/healthy_analysis.json",
+      "bytes": 7187,
+      "sha256": "806a9111bdf715e4a7abdf7cca106cefba2058f6e51f698fe08cfa1fa912238e"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/interim_gradient_001000.json",
+      "bytes": 3532,
+      "sha256": "7d0a724100410f6187b8421b63addad9903671b32d1c996b0da1a6e4c4451e41"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/mean_mediation.json",
+      "bytes": 4697,
+      "sha256": "d4cc5a5489c4b86f6454ccaa19a2cc90bb19f4c78f2a856573d6c1133de6276a"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/metadata.json",
+      "bytes": 1302,
+      "sha256": "a81a94bd6ad086c9b12a0120b13fc8918daa09a57b3883e0e65f2d17e5ac7148"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak.json",
+      "bytes": 261,
+      "sha256": "de9df8d9543f70fdf427f9b28790350690b5f4b91b6e7f591d4635f7a82b6950"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/adjacent_analysis.json",
+      "bytes": 7214,
+      "sha256": "e651cb94d974f51a2ce60818e0984eef8001f0513caa44c19b6f81c39b2ef2fc"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/completion.json",
+      "bytes": 510,
+      "sha256": "7919a66619822b0b7bcf5a5fa7c2cf5591482db41fb3ddd6212a1cb374a8f2aa"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/event_analysis.json",
+      "bytes": 10615,
+      "sha256": "011f6318a9bb486fbf932f2cfc3b130edd6cc1c3210c73dafb55c83aba1482b4"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/healthy_analysis.json",
+      "bytes": 7202,
+      "sha256": "9a36c6e708ec75d963da2a0cb017b2b3712d1730ad090c0bfb3939b594e33a85"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/healthy_hybrids.json",
+      "bytes": 4512,
+      "sha256": "8b28c3acec2b6872ea30d5165b7675e45c95abbf326a58d7f52d20399e5a7574"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/mean_mediation.json",
+      "bytes": 4715,
+      "sha256": "94091117c4b1924686c912f6c7e754bc22d7eaaa0be226f00bd94d10e50fa77e"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/metadata.json",
+      "bytes": 510,
+      "sha256": "7919a66619822b0b7bcf5a5fa7c2cf5591482db41fb3ddd6212a1cb374a8f2aa"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/peak_event/replay.csv",
+      "bytes": 1159,
+      "sha256": "043603c7745ac175560e5c5b295a7099b1861346b2b4e48c518cc31a875c9ec8"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/progress.json",
+      "bytes": 235,
+      "sha256": "6989cf175a06a72535df2e8326b463d2308cbfd6d31052429cbb0e91aa1ede43"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate/trajectory.csv",
+      "bytes": 204168,
+      "sha256": "5e8a49e242d7248f41f422b46f97e24fd228e86b796aec418e04802f9c878b7a"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate.log",
+      "bytes": 7816,
+      "sha256": "c2b371a7e815c086922ab126bc0837cf54a829ea5e91779499a13feb61fbeb70"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate_analysis.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/causal_study/generality/rms_accurate_peak.log",
+      "bytes": 510,
+      "sha256": "7919a66619822b0b7bcf5a5fa7c2cf5591482db41fb3ddd6212a1cb374a8f2aa"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/adjacent_analysis.json",
+      "bytes": 7173,
+      "sha256": "c4128265dbf6bc0d482805a15abff421a48a1d0cbaf21d64030cf9afe3c70629"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/analysis_completion.json",
+      "bytes": 248,
+      "sha256": "285c6435c55cd7a8ef9ade51971220b615ec09e3eb12126e71692b672cd87650"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/completion.json",
+      "bytes": 492,
+      "sha256": "7a87fdfacdfdbd836900b384d3e5a7231c52c5ffaad67c33464cf7a98a6b5ef0"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/event.json",
+      "bytes": 306,
+      "sha256": "0bd58f8e8a9f4e79cea6cbac0caa3eea99bda5d6dd78066cb33b00e1e657bca2"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/event_analysis.json",
+      "bytes": 10599,
+      "sha256": "9b483d12275d76e77fc908a0e9d1979f0566eecc16e05c63f2fa2eb80f34e176"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/gradient_timecourse.json",
+      "bytes": 31964,
+      "sha256": "fac5e36667e10f7dd02794df8f5fdad8b7ab6f2a1e0cb58e7a9988cbf973f812"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/healthy_analysis.json",
+      "bytes": 7158,
+      "sha256": "2ef2791373e625124cc133f0b52ad396d2de768b5ec77818f8f41906d906394d"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/interim_gradient_001000.json",
+      "bytes": 3537,
+      "sha256": "1cce56def5106703cb9f4ad043fc6597c570297472d4ed2746311b71fd0a4937"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/mean_mediation.json",
+      "bytes": 4706,
+      "sha256": "90b9ef57ae6e795b455e6a7cdd31b2ffa2ed8e4632405988e8d70797f604d85f"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/metadata.json",
+      "bytes": 1299,
+      "sha256": "c066bc84c737d61da0c66b22e8c90f3023b51507f901146c73dbdb6a4640c539"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak.json",
+      "bytes": 261,
+      "sha256": "98fc5a8c6b45355a051bd904721fb89756ab3970c0454e6746c2ce9d9c47468b"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/adjacent_analysis.json",
+      "bytes": 7210,
+      "sha256": "a257fa37169d6ca885947c1345325b5674cb15153d597f0e4f5e124dcb1a47be"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/completion.json",
+      "bytes": 510,
+      "sha256": "879a233d25270ea0f51dd4b2d2da47a8cda8a01cdfbb79b4e6231b2f761e94ee"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/event_analysis.json",
+      "bytes": 10619,
+      "sha256": "d47c045ae52fced908c65e48649d7c838624f8aae68d1412f66e1e68c2b9dcf9"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/healthy_analysis.json",
+      "bytes": 7211,
+      "sha256": "196150c88f8d2c47307f25cdcdaca6c05f435667bd9996c680c56160c9dbe597"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/healthy_hybrids.json",
+      "bytes": 4526,
+      "sha256": "9fec628dfd12dae250cdef14ea5ccccce4d6adf3a39c8920b63cb2c9be1b37f9"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/mean_mediation.json",
+      "bytes": 4726,
+      "sha256": "9f24da390e1a751eb4d693ed86eb2443df921853ee95f679d190775d94e4c004"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/metadata.json",
+      "bytes": 510,
+      "sha256": "879a233d25270ea0f51dd4b2d2da47a8cda8a01cdfbb79b4e6231b2f761e94ee"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/peak_event/replay.csv",
+      "bytes": 1070,
+      "sha256": "ccaba8f63f73c80e72431d4ccc25cead458ae87e014ac07b9d851beedfd471dc"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/progress.json",
+      "bytes": 237,
+      "sha256": "6f54503a45f6cb2bb4a59ee5e4519b8f3721e20902bc60fb13bf5e2b8a9fdfbd"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock/trajectory.csv",
+      "bytes": 203400,
+      "sha256": "32dfa6311b38cffebcfd6ab583cdcddf37c4258bbc10b7c4bf4bff9188a34bd5"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock.log",
+      "bytes": 7753,
+      "sha256": "81c0ac3e09f4ac5369760c9b0be44fa5468e2229d108a64baee90abc01ec34e9"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock_analysis.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/causal_study/generality/rms_stock_peak.log",
+      "bytes": 510,
+      "sha256": "879a233d25270ea0f51dd4b2d2da47a8cda8a01cdfbb79b4e6231b2f761e94ee"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/analysis_completion.json",
+      "bytes": 249,
+      "sha256": "fee9a8b7651be07c111a74d297df1db9caceb1d31a534f129e96fb9ea1d16620"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/completion.json",
+      "bytes": 490,
+      "sha256": "413cbb56581ea2b73a359739b6eece4f0cf6535421c4848f6431e4bed61ba795"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/gradient_timecourse.json",
+      "bytes": 32084,
+      "sha256": "f64ba55241553a904feecdfd4aeb3117304c550194aacf91b6bad50348d225ff"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/interim_gradient_003000.json",
+      "bytes": 3425,
+      "sha256": "6b2583d62ce17669cec5d6426e9e3ba7c390fd6b010d98c885e54ce0b11e42c2"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/interim_gradient_010000.json",
+      "bytes": 3722,
+      "sha256": "a367ebbd77e79f4d622e6101c99587813b6f824d6b03b221f67e9cdc247c4e3a"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/metadata.json",
+      "bytes": 1305,
+      "sha256": "7bcf1b5277d21c8c1f30b6319fb3e232dc60645faa9c4b3fa2b684e4f01b12dc"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/progress.json",
+      "bytes": 252,
+      "sha256": "e0eb3049a86adb3059b2281c14fa84fdccb0a30b0389a5dd4fea250a24e0d4b8"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate/trajectory.csv",
+      "bytes": 203804,
+      "sha256": "c45e72fa82f2bd94c512044cf8ebfbd9f1efe8d938757f91ed5ff994b6fab229"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate.log",
+      "bytes": 7708,
+      "sha256": "a61163f14a0235eda420bee18ad2f18d0100405d2c50396f0ff69bdae449eb17"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_accurate_analysis.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/adjacent_analysis.json",
+      "bytes": 7075,
+      "sha256": "d2f521329f6022e7e400819a0690f48bf0ffd2c5be2fcd0cb607f0a35b585073"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/analysis_completion.json",
+      "bytes": 248,
+      "sha256": "285c6435c55cd7a8ef9ade51971220b615ec09e3eb12126e71692b672cd87650"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/completion.json",
+      "bytes": 494,
+      "sha256": "8727d609eedac4bb0e73705f44502450d9fd10a72d3e97eb4600bf6c700b5282"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/event.json",
+      "bytes": 309,
+      "sha256": "ea0b2f449a88893a05894113baf8147f538111626c60fb2a5b04b0d969c40a9a"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/event_analysis.json",
+      "bytes": 10655,
+      "sha256": "28e3261081479336a6e8960ca09560aed0442347772f88105529d1d7f0d0944a"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/gradient_timecourse.json",
+      "bytes": 32244,
+      "sha256": "52ebb656123be03b133740e75d2d904b2e9cfd50f2cd62ecdd127afdf03753a6"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/healthy_analysis.json",
+      "bytes": 7103,
+      "sha256": "1e1fba3b4a83690744e231fc4fd1a9ac62aa4de2b4160bb75817411ebbffb1f0"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/interim_gradient_003000.json",
+      "bytes": 3479,
+      "sha256": "dbe805dc83c1d0a1e985f48d6799bda5f53489692581b5f4e1700851fe337bb7"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/interim_gradient_010000.json",
+      "bytes": 3716,
+      "sha256": "69f14017f2d5df50479ceaf635c9584a1ce4ce3617a92508752f7cb18d9c0a32"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/mean_mediation.json",
+      "bytes": 4646,
+      "sha256": "37308a16abd7c4f8bf6e5807540fe9a376cc0cc712c045053ee2de872eafe06a"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/metadata.json",
+      "bytes": 1302,
+      "sha256": "c573c01741d32f084380e294da3b77bdba5ce1dc33509b74570b858781bd369f"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/peak.json",
+      "bytes": 263,
+      "sha256": "b0f4e98ab8e27bc1c667525de179c8d18f44556ead9e0f80f9e11c8e022fc54a"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/progress.json",
+      "bytes": 238,
+      "sha256": "3a722e81b35c5ded72fd8d0028568956a478e6ea4926a755f625fcf97c4a3a38"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock/trajectory.csv",
+      "bytes": 204677,
+      "sha256": "81914e5c409fc2564937606f4e540ebe69ce5bccc7fca4a3b015d72cb93ae5a7"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock.log",
+      "bytes": 7964,
+      "sha256": "319b539052f618143fd33c6b442f4121816f0ff4e9ecbb26c1fb1d6a8bb9b066"
+    },
+    {
+      "path": "work/causal_study/generality/subtraction_stock_analysis.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/causal_study/generality/summary.csv",
+      "bytes": 797,
+      "sha256": "5b785a6ab289cd6e19c871043d32de074f0dabc5abf562119db1b6b2a7e4683d"
+    },
+    {
+      "path": "work/causal_study/generality/summary.json",
+      "bytes": 2233,
+      "sha256": "8a1fa0adb4044a330cfdece20f1121ea220bf51e1ee70c7a368b8bf11b1fb5d9"
+    },
+    {
+      "path": "work/causal_study/generality/summary.md",
+      "bytes": 9490,
+      "sha256": "9e01f6ca49cd2cdcf387748426d6a83774dd97b3dd5269fc25a8c5daaf73f0e7"
+    },
+    {
+      "path": "work/causal_study/generality/summary_generation.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/causal_study/generality/unit_tests.log",
+      "bytes": 104,
+      "sha256": "932c1ce347b7606f123e504d2c50d1ca87edc2c0bcc2b36f3c015492dcdf013f"
+    },
+    {
+      "path": "work/causal_study/generality/verification.json",
+      "bytes": 1016,
+      "sha256": "7fb40f9b7638e0a7e5dc40408e5e34e5b6f81ce4068f4280db1bb901103a388b"
+    },
+    {
+      "path": "work/causal_study/generality/verification_completion.log",
+      "bytes": 1298,
+      "sha256": "49ac903f80cb2634d068de9f9b2083bf5293a84206eef5ac7dab353af36e6af5"
+    },
+    {
+      "path": "work/causal_study/generality_analyze.py",
+      "bytes": 10985,
+      "sha256": "3aad13d4d3f2b59dbfb49901de7527f86e87496c8852862395695825ad90a4c9"
+    },
+    {
+      "path": "work/causal_study/generality_peak.py",
+      "bytes": 3036,
+      "sha256": "2ae53823a3a6bded23e43f3fc8ddd122c7d68fd537927076a2b988f37c0cc431"
+    },
+    {
+      "path": "work/causal_study/generality_peak_panel.py",
+      "bytes": 1879,
+      "sha256": "4bf869fa61db2c2a654b6aee4a1fad552442119cd31f6ac1ee103b1003ea1259"
+    },
+    {
+      "path": "work/causal_study/generality_runner.py",
+      "bytes": 9271,
+      "sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9"
+    },
+    {
+      "path": "work/causal_study/generality_summary.py",
+      "bytes": 9726,
+      "sha256": "9e2e11825ca3722fc30d6d5cd3dcb98e447243c032f72cf8b48df70bdacf963c"
+    },
+    {
+      "path": "work/causal_study/generality_verify.py",
+      "bytes": 6746,
+      "sha256": "cdf6c384217d26e0a25e99979b298c572bc3b039eb4a3ace756cf0142f1a9bb1"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_accurate6000/gradient_metrics.json",
+      "bytes": 18727,
+      "sha256": "756a2824bc2e0c3b68c0c41d30b6633d70d10a9f886e6ff19fd3da67f1444ea7"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_accurate6000/metadata.json",
+      "bytes": 2279,
+      "sha256": "f79e3a34c1760ecbff178b22323ec266dadb2a117e9f7b6d12c34ac89bb5a728"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_accurate6000/summary.json",
+      "bytes": 1168,
+      "sha256": "c0dd69decf4e54309cd37df63141058d81375c538224fcdc75aef25f254b59a1"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_accurate6000/trajectory.csv",
+      "bytes": 1547756,
+      "sha256": "efd0d25b31511eb35f0f07b5a3e7c47c0053d4d9168c4480e77dbc675fc58353"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_accurate6000.log",
+      "bytes": 6633,
+      "sha256": "7fd7371d92f748904178e61025b2a5321134b2ace3cfeee3925985731b3cf9ad"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stable3215000/gradient_metrics.json",
+      "bytes": 4576,
+      "sha256": "04f845041132d16a73ec90470537b5689440834f7cb6d0eea4010530d47bf833"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stable3215000/metadata.json",
+      "bytes": 2281,
+      "sha256": "48d2f05caaf057f66b4136458bff3d3a5d748b825993db6f72acf9299e224c8c"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stable3215000/summary.json",
+      "bytes": 1170,
+      "sha256": "f623ca102446178f5c5a6f03de8021af490448ab96756317b6fa02cc0ce4b890"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stable3215000/trajectory.csv",
+      "bytes": 318826,
+      "sha256": "17d21f0472c1215f06cfd380e3f3430c3de7f4ca4aa5dc1f54fcdafad41c156e"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stable3215000.log",
+      "bytes": 2418,
+      "sha256": "5330f4f7bd29078b520de1cac857cbcf5de77d55a9ce5e35aac166243bbfa757"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stock_extension/gradient_metrics.json",
+      "bytes": 9934,
+      "sha256": "ebdb8f50eff95b1054d973afcddf9e8427e00f854cbc5f84c83854e6df583e67"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stock_extension/metadata.json",
+      "bytes": 2283,
+      "sha256": "ee6b3d1a6fac6d1d24be5b28f34a3c56fe56517bd84c9b59fb69f3855c1c8534"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stock_extension/summary.json",
+      "bytes": 1183,
+      "sha256": "cbe4ffa4bcd260bad7f0f0156ac8aad075c0006f219638892c3c0a651c4bbb67"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stock_extension/trajectory.csv",
+      "bytes": 767854,
+      "sha256": "a951850b93138edcf2e29db372397e507cacb34c0b82df7e8c88dff70934086d"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_stock_extension.log",
+      "bytes": 4071,
+      "sha256": "332f5178f04c166281cf47ecdf8ec697378ab920b9eb9a3ea342be7633accba1"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_target_repair15000/gradient_metrics.json",
+      "bytes": 4589,
+      "sha256": "83089aa4f397baa23f09ac442ee29b776d99dc82b537c45fc4de61a9cb8de60b"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_target_repair15000/metadata.json",
+      "bytes": 2286,
+      "sha256": "aa910da359584fe30f26aa3871422b826084982939dd036ada1100fac99487fb"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_target_repair15000/summary.json",
+      "bytes": 1174,
+      "sha256": "3c5a00ee7e4cf3bc83dc4223ecd3b517d7ebe06c85af025cc51afcb227a2f26d"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_target_repair15000/trajectory.csv",
+      "bytes": 318560,
+      "sha256": "4a931df747bac7ccb29e774bc12827a3aad242cc1f35b5048375b0d617387659"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed0_target_repair15000.log",
+      "bytes": 2424,
+      "sha256": "16073c72f92805d1d12371a272869cd8f3831632ec644f280524b853d6189092"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_accurate6000/gradient_metrics.json",
+      "bytes": 18718,
+      "sha256": "f9ba480750448098a3b395c4ea9cf4911c00a9f888ef35d4b2187cf2b4aec332"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_accurate6000/metadata.json",
+      "bytes": 2279,
+      "sha256": "e8425814130b1560ca86f7988413e06ba098db7617182f7fd60e648a35eb8f45"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_accurate6000/summary.json",
+      "bytes": 1166,
+      "sha256": "9bda6047249353d722cd5b6d4f6b1c85ff91900f881a304350eed4f3d337c54b"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_accurate6000/trajectory.csv",
+      "bytes": 1546165,
+      "sha256": "c018681402313abb0a62d46c54d2c017dc15e6914b6a5f56ed5a000d1fc1e391"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_accurate6000.log",
+      "bytes": 6558,
+      "sha256": "b0700531ae59a35e69996619bb22d4a233305d13b90ef57388fdd31b27e77254"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stable3215000/gradient_metrics.json",
+      "bytes": 4593,
+      "sha256": "101e3c99487971b9668b47ba21c7630b40f5c90e0adff9455248820a095e4f7e"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stable3215000/metadata.json",
+      "bytes": 2281,
+      "sha256": "166b9e6d2ed3cf17b49a3d68b6f7280582e67b3e8392a64d8590fb7cb2cfd028"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stable3215000/summary.json",
+      "bytes": 1169,
+      "sha256": "6c635b8d0963b7432eb9b17db5438d9993467867f01b6095f9dc8de9a99c8fb3"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stable3215000/trajectory.csv",
+      "bytes": 318811,
+      "sha256": "768bd974159ef72037079a446dc9cdaa408077ef787f7d0d73840956276ad651"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stable3215000.log",
+      "bytes": 2375,
+      "sha256": "aff3c4bb5d5d91c4aff7847352cf4574e87b3fec590941cc247ba53d53987de8"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stock_extension/event.json",
+      "bytes": 258,
+      "sha256": "a2620137a534fb97892befc184b23f0687e9d55ac9645af848cbf7ae2a5d5236"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stock_extension/gradient_metrics.json",
+      "bytes": 10631,
+      "sha256": "7a23bd8f455c49c158a7fb42bc82838a4dec4bd03475f6d67b7d181c2e1f2724"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stock_extension/metadata.json",
+      "bytes": 2277,
+      "sha256": "6bc9250544227cb5c6a341426bb175a1ef0e4336b3edfd34cb002875aafb4d58"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stock_extension/summary.json",
+      "bytes": 1218,
+      "sha256": "9741b8dbece5fb742560694e814cffb865ee8d9ca1ce22c8111723c749f4c38f"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stock_extension/trajectory.csv",
+      "bytes": 774137,
+      "sha256": "ed5d5a79e20467d3682abe5675db16a72e7f161d61c92dcf6fde0c4b438fd0b8"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_stock_extension.log",
+      "bytes": 4375,
+      "sha256": "ad0b825a4558af8f9e6edbd62203dfa7ec9b8d4dfafd384fd22d5dad6ccb060d"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_target_repair15000/gradient_metrics.json",
+      "bytes": 4597,
+      "sha256": "e13fd2783210ee5eb5d62433ff9d6323dca8a172c8fd8604d70d002c70e9be5e"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_target_repair15000/metadata.json",
+      "bytes": 2286,
+      "sha256": "3b34afef98051e9c1e767ff4f9378cd40e1cb9e37da6cac498eac92e4c05245b"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_target_repair15000/summary.json",
+      "bytes": 1173,
+      "sha256": "a0228cc0179306802aafbce38652e082ca66f238128f01e8535d09c9b54fd963"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_target_repair15000/trajectory.csv",
+      "bytes": 318547,
+      "sha256": "2e59f1120fc31a7065ec57683c679bc0c1b96121efe64ffd5a1e4ba7f4f73887"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed1_target_repair15000.log",
+      "bytes": 2376,
+      "sha256": "8e05a5ad86e933e1345e8fcad28f7e7547686a37b0f453b4aeb2ca85c6c0fac0"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_accurate6000/gradient_metrics.json",
+      "bytes": 18788,
+      "sha256": "03cde36324783c13b5c1a2f17144ca7b3db928e7fc002ce7071c72c3e8da73ff"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_accurate6000/metadata.json",
+      "bytes": 2279,
+      "sha256": "9fa0fee9962463e9ca9e5ad02ba35c8af562190b577bee400c1e93d99c770059"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_accurate6000/summary.json",
+      "bytes": 1164,
+      "sha256": "edf530c94162f3bace46a0be07e02b050b53dab0aaeadcc8e02ed60b232435c0"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_accurate6000/trajectory.csv",
+      "bytes": 1548734,
+      "sha256": "e69977e6c6cf29cae7379332f34f0ca61699ddc7eaf8a4e5b31437ad46141cef"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_accurate6000.log",
+      "bytes": 6598,
+      "sha256": "adefa3cf8ddda873dd194e5940b365f0c875fbe26898dbd2d6449f9afb87fc9e"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stable3215000/gradient_metrics.json",
+      "bytes": 4591,
+      "sha256": "348b2ed3bbcb840bd9dfacc04ad1ed2a9f406d2305c85a54607c9601b3cd11b3"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stable3215000/metadata.json",
+      "bytes": 2281,
+      "sha256": "83b30fa97577ee89449de996ddb20a9d95fab0534f0d362bf8cc0524dc88369d"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stable3215000/summary.json",
+      "bytes": 1135,
+      "sha256": "421ceb1b2c5dc36c1ebb4937fa165300e3fb484f0b25326e5aabd4821dde1767"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stable3215000/trajectory.csv",
+      "bytes": 319134,
+      "sha256": "6fef5301e0664fa57bd8c92d309cd1095f88de8aae636f42dcb51247ff918a66"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stable3215000.log",
+      "bytes": 2333,
+      "sha256": "527cffe2c8afb69bbcea89745fedb2e80552c60d9ac75d87f4eabd1b314792a7"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stock_extension/gradient_metrics.json",
+      "bytes": 9143,
+      "sha256": "0ce39573a4d3756658e844737453b8952a78d53819181dfcef614110d0ed8387"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stock_extension/metadata.json",
+      "bytes": 2277,
+      "sha256": "0c7556dcbec295572a23fbe04b3c93ae004b7b85fba8d14d6be3be1f688d9bc6"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stock_extension/summary.json",
+      "bytes": 1179,
+      "sha256": "d006332b351d58bd70c0350b1055696167e3153059e584832d1cded371bb5aa9"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stock_extension/trajectory.csv",
+      "bytes": 750428,
+      "sha256": "d22bca361909317d684844121df6327fc8b96863c94bda36e1c83f2d00bb9e54"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_stock_extension.log",
+      "bytes": 3841,
+      "sha256": "3b85e84d2ef240551fd3bd6c74e1174e452c6efd8238789dcddee32addf85d7c"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_target_repair15000/gradient_metrics.json",
+      "bytes": 4603,
+      "sha256": "1ae8a37fc949ce5e73e5eef78dd529d30d9c9c1b815dbc028dc0f64ea299c609"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_target_repair15000/metadata.json",
+      "bytes": 2286,
+      "sha256": "073bcbbf77a7a626f6cf471203595088574b7e136498064f5126eb65b96f3576"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_target_repair15000/summary.json",
+      "bytes": 1142,
+      "sha256": "53a658f73d8332cdc08c672b7aa090ab661d7182cf59b1668c384afd76c1e74a"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_target_repair15000/trajectory.csv",
+      "bytes": 318630,
+      "sha256": "fa454c896b0bd4bf889378b1f532f618a7be6645dc75d78b0764afe16bc5d536"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed2_target_repair15000.log",
+      "bytes": 2351,
+      "sha256": "3a5c0e4674845cdc99efdf8568c5e16385bdf8bf9a1e437476c77b38d1eaf589"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_accurate6000/gradient_metrics.json",
+      "bytes": 18673,
+      "sha256": "8076bcefe980aa94ed5c4828718180a2859028867a34de1b5582ecd960ad4a94"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_accurate6000/metadata.json",
+      "bytes": 2279,
+      "sha256": "0b93e83734d8e25ddf2bcece025ed8eeb0bf2b12de71e48a52becbf085a11369"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_accurate6000/summary.json",
+      "bytes": 1173,
+      "sha256": "7b867538acd9ae2e9c79af9fa8f81f2dce489f071a2a5f8c29ad9bf4565298a5"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_accurate6000/trajectory.csv",
+      "bytes": 1549166,
+      "sha256": "8d483c32793030424802eaf04500cb21fcbc07af153d3e92aa02f28811d574ee"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_accurate6000.log",
+      "bytes": 6592,
+      "sha256": "39699f0a2d8f65a160848fcdeb466b46c212627c8191b63d2b20970ff0468dfe"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stable3215000/gradient_metrics.json",
+      "bytes": 4561,
+      "sha256": "fede17060bb93830ed675a40a4ce58d7b412c663b31aad24e43fed0f721efc9b"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stable3215000/metadata.json",
+      "bytes": 2281,
+      "sha256": "da79951e0353cecc37da5b334040f81f30749daf86ef88de1f53ddf5bab874b2"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stable3215000/summary.json",
+      "bytes": 1167,
+      "sha256": "f9a1f3917e8e5bb6fed9d32d749d29f3330529ed5e19360a08a70ecb6abbb0e0"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stable3215000/trajectory.csv",
+      "bytes": 320114,
+      "sha256": "34a0b19604e5b7ef9fdcbde59fd67ffa02ba73eeb7e0e05a511936374e0ee05b"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stable3215000.log",
+      "bytes": 2406,
+      "sha256": "7dc6ccc851b3f0f1b4c93ed76503d4c1b0d348dd4d2326d99cc19f31978d6dc0"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stock_extension/event.json",
+      "bytes": 261,
+      "sha256": "ed7a6128724b0628fc6768f1358392af89254fd23d6b7c3f44b67642fb4f0c57"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stock_extension/gradient_metrics.json",
+      "bytes": 11435,
+      "sha256": "98231cfe38e5bf620772fdfc6c38f160b626d1064c699950281133adecdbb917"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stock_extension/metadata.json",
+      "bytes": 2277,
+      "sha256": "bae0b8ea238ee0584d8ae4cdd8777bcfdf72d6633695202020bd937c03cbe1fb"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stock_extension/summary.json",
+      "bytes": 1219,
+      "sha256": "6c97d13793f8e8199320e23e615f0d1d47f64e8795a86b092df5cc541080e5e8"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stock_extension/trajectory.csv",
+      "bytes": 865025,
+      "sha256": "2fa7e053482d97415ce2fbb140c06b879a269b555ff919b816bffb500751fa0f"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_stock_extension.log",
+      "bytes": 4544,
+      "sha256": "7da9f3992000513a8fc6aad46ae6d31427037cf2d5dc143bbda35097cd2c4915"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_target_repair15000/gradient_metrics.json",
+      "bytes": 4537,
+      "sha256": "28f09816cb09f77946702d9c7d6ed4172f48ca11f570750522827e35f7b3e6ab"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_target_repair15000/metadata.json",
+      "bytes": 2286,
+      "sha256": "986e4265dc8f4e806f8241260e86564e6e6a7c09b3bef5ee56f4d4e263c2463e"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_target_repair15000/summary.json",
+      "bytes": 1157,
+      "sha256": "765b0aaa3da5e16dbfc22012beecaf2a229c4833151f3525379a7e2cf909ece7"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_target_repair15000/trajectory.csv",
+      "bytes": 318261,
+      "sha256": "324a5badbc2ccc1c81a6a475c379ec74ad3fc743fcf20502b2535afa700ba07c"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed3_target_repair15000.log",
+      "bytes": 2374,
+      "sha256": "c0d815036c0bb49ae4e9d30efb92faf001e053f4e30366715665914de3b6388f"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_accurate6000/gradient_metrics.json",
+      "bytes": 18764,
+      "sha256": "35fc5021e0039a03e6ec2fbf8de39795a55f7daba0d8c25706a72a803a0f3f08"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_accurate6000/metadata.json",
+      "bytes": 2279,
+      "sha256": "7049f88bbe3e7582964f36b5977b0fc5dc83949a76837e94ce19d39578cb390b"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_accurate6000/summary.json",
+      "bytes": 1164,
+      "sha256": "eec4935abe757b7b713e3e01f558c2e72117e8168a237a95fbea5d8c22f87e60"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_accurate6000/trajectory.csv",
+      "bytes": 1548766,
+      "sha256": "d0b6379fb64d8c5c81737305705a4a2a07604f3776c6450c327a3c722d3ca60b"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_accurate6000.log",
+      "bytes": 6556,
+      "sha256": "60102d3d112091880c1e717e68b2f05752d01e5ec9bff8b834f4f15655431e29"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_stable3215000/gradient_metrics.json",
+      "bytes": 4596,
+      "sha256": "0dd9cbeeb550ae883f1feae1498797f7b2ca48f44e9345d2ce486c52612a1e48"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_stable3215000/metadata.json",
+      "bytes": 2281,
+      "sha256": "9b632835d41bc193e52b6570e529fdaff03df1e5712e3ad81a6660b7d7a39104"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_stable3215000/summary.json",
+      "bytes": 1138,
+      "sha256": "6961437feff9bb8dd58a861b9012c7a00e0ceaf59611ee4ffd3584ea3283defc"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_stable3215000/trajectory.csv",
+      "bytes": 319641,
+      "sha256": "c6343b2f7deda085c70472de9b60aba03401c7076a3d7e572939f91ad1150822"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_stable3215000.log",
+      "bytes": 2350,
+      "sha256": "24a79883a6f20b7640fe9210b4481c682a1667b8a1c48f2ddbff242153175c03"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_target_repair15000/gradient_metrics.json",
+      "bytes": 4603,
+      "sha256": "44bb0a51a86bf8655a85dc8b14713a2bb8e8ddde1dcdb5128c8d94486504d4a5"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_target_repair15000/metadata.json",
+      "bytes": 2286,
+      "sha256": "41f59facf34ea4c7d693d8f0641a8bc314840f50394bcfc4d138844fb4b7b1e0"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_target_repair15000/summary.json",
+      "bytes": 1145,
+      "sha256": "0df028e5fdf4b9751fd3a4a769c2ce5fe6e51de79bcaba33ca3fd034327f16d0"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_target_repair15000/trajectory.csv",
+      "bytes": 319264,
+      "sha256": "c42a9b732e0459c58a3f7a918dc3b4089af142218a0a449bb2d2e6c78199c972"
+    },
+    {
+      "path": "work/causal_study/main_runs/seed4_target_repair15000.log",
+      "bytes": 2356,
+      "sha256": "c9233b2f87c4d39b54afb8e2080b4ac3d1269c90640bc3a64a155b7b3ad913d1"
+    },
+    {
+      "path": "work/causal_study/main_suite.log",
+      "bytes": 4311,
+      "sha256": "99a292b21b6fdf74c410bb4502c1fd0345d1d9790f0394a20a809190cbf6c9dd"
+    },
+    {
+      "path": "work/causal_study/main_suite_plan.json",
+      "bytes": 6075,
+      "sha256": "3ef52325351f8c7314b4e5ca2d1e047a5bf0ce180116f97206fa27f28d52da39"
+    },
+    {
+      "path": "work/causal_study/main_suite_progress.json",
+      "bytes": 3862,
+      "sha256": "92cee930089d3672cac4d8abd4bcd9c35442fc7930227755a92319a90626fa06"
+    },
+    {
+      "path": "work/causal_study/make_figures.py",
+      "bytes": 4395,
+      "sha256": "620ad548fb0c48b58125fa9102eab025f168419793746c351df60a5a04f535d4"
+    },
+    {
+      "path": "work/causal_study/manuscript_revision_template.md",
+      "bytes": 17218,
+      "sha256": "444ed33172387d29debf62341a928ba9c878f953c589a0365b7d8d66eeab629f"
+    },
+    {
+      "path": "work/causal_study/projection_protocol.json",
+      "bytes": 954,
+      "sha256": "93a0cf6940bcb273dded1eeeeec066d95d1fdc362a4f6d0b3dae653e67814cc0"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed0/gradient_metrics.json",
+      "bytes": 4608,
+      "sha256": "e89cc1f4a2ac71e9a18085891d6f270fa78b90d0d2b231a62e7ac04c30c154bf"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed0/metadata.json",
+      "bytes": 2287,
+      "sha256": "8f927aac0e65bf149d86380c1521f13f7414dd601f1ec469b498cfbde8abdd9e"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed0/summary.json",
+      "bytes": 1144,
+      "sha256": "6aa0b5a199542febcb53ff4815a076f5aa7993089d98117ed484cd9273a7dc95"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed0/trajectory.csv",
+      "bytes": 318480,
+      "sha256": "77e7887f54c52a2dcd757e16b3e664674a2cffda5640d32925bf3ce7a5e1de16"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed0.log",
+      "bytes": 2350,
+      "sha256": "fd1c236d98bc71bddc88d52c67dbef35925b11eb3554ba1049f1b4177ace983a"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed1/gradient_metrics.json",
+      "bytes": 4605,
+      "sha256": "c8aae8014c15a757f5de31ebd2cd2960c0d6b513bf00e981f4518b54bb32a681"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed1/metadata.json",
+      "bytes": 2287,
+      "sha256": "3f5eef30e1c035458d5c9be0267cc23dea23b25b7c16855e9840b8018329e598"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed1/summary.json",
+      "bytes": 1142,
+      "sha256": "536c283c66fc00de3cf980b3ce6b090b1efe3ed961f26be13d4095a5cc329e96"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed1/trajectory.csv",
+      "bytes": 318519,
+      "sha256": "df05ee7d57f4ed16129a4a90a15737b10f98839bcb671222f2c82ad8008b527e"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed1.log",
+      "bytes": 2350,
+      "sha256": "13ca7c76f12ac0a0adb1b1353096e3c472684b0ac7a54c0f531be6ac08521799"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed2/gradient_metrics.json",
+      "bytes": 4599,
+      "sha256": "9c3e968774da9c2d0a9679ef27b0f70e1ba32f08d56bb437d201ec70be205364"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed2/metadata.json",
+      "bytes": 2287,
+      "sha256": "50670af81ef61be48d4deed77828a330a32074ba62ea77413861b9b7b25996fa"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed2/summary.json",
+      "bytes": 1144,
+      "sha256": "294ba32b917a9012b55c4997ed0723b71389a5408eb6c3825536deca8fcc0890"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed2/trajectory.csv",
+      "bytes": 318258,
+      "sha256": "36e4c8b6db6eb3f87557ec24bd47fa67d89012044f31b5807e1338e68c71fac9"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed2.log",
+      "bytes": 2354,
+      "sha256": "9b89957f37014e06ce81c307f955b77566a09892d45aa83d7331ceb4ab26fa0b"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed3/gradient_metrics.json",
+      "bytes": 4591,
+      "sha256": "169aea1fa39c50a36aee855db8de265229fb0f07778ec980307ceb52312cd841"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed3/metadata.json",
+      "bytes": 2287,
+      "sha256": "d86aeb4b4730c421150ff7f5ed3e4831914d8b8c47769c255dae6d79ff8c6243"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed3/summary.json",
+      "bytes": 1144,
+      "sha256": "7d1f10a55144110983b2025bb8e726c8fea927cc48a55e881b285c602c3e2905"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed3/trajectory.csv",
+      "bytes": 318535,
+      "sha256": "fd7a941019ea00f771fa1f6944c9b67b7de06e22755ea0a25f8f926fb4ee06a6"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed3.log",
+      "bytes": 2349,
+      "sha256": "6ab851e99ebfb08ab89467c6220c8a8562dbdd34f642ee12cef1cb70cca0b7f0"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed4/gradient_metrics.json",
+      "bytes": 4602,
+      "sha256": "ec5f23a2d99703dc264b98aa5b8af5479bb10e67285fccfa4fbe78d948f97877"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed4/metadata.json",
+      "bytes": 2287,
+      "sha256": "2477c9f6d7d4dd0fa3fe7feea97984d6fc0ee9e8c45f1ff5d3542bfd723b66f9"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed4/summary.json",
+      "bytes": 1145,
+      "sha256": "ef5f131f9ee5d85151ba22d1e95a339792e85f525e7e585f912355e3fa518d5d"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed4/trajectory.csv",
+      "bytes": 318639,
+      "sha256": "6b1692eb6a6f1e2c14b02b915acc9c00288f641b00d07251a16d4e5b91211709"
+    },
+    {
+      "path": "work/causal_study/projection_runs/seed4.log",
+      "bytes": 2355,
+      "sha256": "fecd504f9fa546b52a75f6668bf8a406b32125296d767f1189196954e0e1e3a6"
+    },
+    {
+      "path": "work/causal_study/projection_suite.log",
+      "bytes": 779,
+      "sha256": "6c875a65880c1e6915d8bbf8a7780e467c433356591e5d28419c53dd8fb67e57"
+    },
+    {
+      "path": "work/causal_study/related_work_scope.md",
+      "bytes": 8641,
+      "sha256": "45d3d97d3324287fcc6972d2839c990152c52bc30e01072cd50d3a64dce27eea"
+    },
+    {
+      "path": "work/causal_study/report_outline.md",
+      "bytes": 4126,
+      "sha256": "f801be29b3c02a1d8695c3e21508779617c26ce3b68edd38d47f6f79d31a77fa"
+    },
+    {
+      "path": "work/causal_study/run_dense_arithmetic.py",
+      "bytes": 8027,
+      "sha256": "759a25e2ae9873e7a6dc22f6e3180080d1c138be8ea4852d3315b8427fdf7d35"
+    },
+    {
+      "path": "work/causal_study/run_main_suite.py",
+      "bytes": 3773,
+      "sha256": "31eaacfb1982526f6f7dbd8e8b1911f15f3c6ffe9f0ef71dd79a53a7e5e98d7d"
+    },
+    {
+      "path": "work/causal_study/run_projection_suite.py",
+      "bytes": 2294,
+      "sha256": "a91cbb530b346df2cffb5f27bcb8f6d677e433ff01cf1eb4861ed5035725f170"
+    },
+    {
+      "path": "work/causal_study/runner_verification/original32/gradient_metrics.json",
+      "bytes": 754,
+      "sha256": "1f9a3e028779f897b88a2824ac3463f8807c05bdb84282b9a68cedabe3afa49c"
+    },
+    {
+      "path": "work/causal_study/runner_verification/original32/metadata.json",
+      "bytes": 2280,
+      "sha256": "e98ddfe321afc674f563b3911cdb2ce51991bb6399ac4bc9cffb05168ef32352"
+    },
+    {
+      "path": "work/causal_study/runner_verification/original32/summary.json",
+      "bytes": 1172,
+      "sha256": "185121832973584d33671f3b7af7263b55080d5b5f3a932396e9e05a2a18c3f7"
+    },
+    {
+      "path": "work/causal_study/runner_verification/original32/trajectory.csv",
+      "bytes": 414,
+      "sha256": "3674d19f065344db238cebbb68c9348dedaca99e71f0c4926d8573da3db55777"
+    },
+    {
+      "path": "work/causal_study/runner_verification/stable32/gradient_metrics.json",
+      "bytes": 754,
+      "sha256": "1f9a3e028779f897b88a2824ac3463f8807c05bdb84282b9a68cedabe3afa49c"
+    },
+    {
+      "path": "work/causal_study/runner_verification/stable32/metadata.json",
+      "bytes": 2278,
+      "sha256": "f1e4989f8904ed698e0f4190f3ce6ecc2a218b6d5b12547be1a6078f38a2d0f7"
+    },
+    {
+      "path": "work/causal_study/runner_verification/stable32/summary.json",
+      "bytes": 1172,
+      "sha256": "5aab6977d57936bd51305b25c6d54497bc77fc6337815eaf1a346dcf67e2658d"
+    },
+    {
+      "path": "work/causal_study/runner_verification/stable32/trajectory.csv",
+      "bytes": 415,
+      "sha256": "ea5acb98b68b4b24585a8df95b7cfe29217891c84177547a6f7f8a6b191da31e"
+    },
+    {
+      "path": "work/causal_study/runner_verification.json",
+      "bytes": 233,
+      "sha256": "e6c215b4ae79b513687766f4079832807a42556ec1c82267b95eb9e622d3a5a6"
+    },
+    {
+      "path": "work/causal_study/runner_verification.log",
+      "bytes": 3188,
+      "sha256": "6e573a9f8d2c59e2fdb4e99ff52ccbfaccff69494468891b4b4f74cf1f8eb087"
+    },
+    {
+      "path": "work/causal_study/runner_versions/README.md",
+      "bytes": 422,
+      "sha256": "c05f1dde327f60b0b1dd7a3da016616ef19c86aba8841c3ac1f94fe98c795980"
+    },
+    {
+      "path": "work/causal_study/runner_versions/a082c2643b8a3e589112570eab4950344d2df1492649e5e9d3c6a33f91c2829c/run_dense_arithmetic.py",
+      "bytes": 7745,
+      "sha256": "a082c2643b8a3e589112570eab4950344d2df1492649e5e9d3c6a33f91c2829c"
+    },
+    {
+      "path": "work/causal_study/source_grokking_manifest.json",
+      "bytes": 5382,
+      "sha256": "6c65ac337c887dc9357ab5c4410da316d1a73ba8ccdd25e845b44758adc7fe28"
+    },
+    {
+      "path": "work/causal_study/source_grokking_manifest.md",
+      "bytes": 877,
+      "sha256": "4106930f0546491090e7b330f15be24751802f1fbcd663373b057285120cc299"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/row_projection/gradient_metrics.json",
+      "bytes": 771,
+      "sha256": "93aa8e2ffa34862c1228fa93a0a55a6e91ea55afba251ae29cb3e86541426f68"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/row_projection/metadata.json",
+      "bytes": 2287,
+      "sha256": "6802d1cf9dfc9cce611fe2f3b4ce289e2309a44dab94986948a3060c94837799"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/row_projection/summary.json",
+      "bytes": 1141,
+      "sha256": "5c1e074dcbceee5c6a22f49167a0b88146205abc1e11a645b075acf3e5707175"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/row_projection/trajectory.csv",
+      "bytes": 394,
+      "sha256": "0b5e04a9ee17de97f518908402d393ea464bb079c4b7b2071edc681b58503a09"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/target_repair/gradient_metrics.json",
+      "bytes": 771,
+      "sha256": "93aa8e2ffa34862c1228fa93a0a55a6e91ea55afba251ae29cb3e86541426f68"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/target_repair/metadata.json",
+      "bytes": 2286,
+      "sha256": "0da699202db1af435a84acd11996b9a53ff6a401f83da6314d4acc168204580f"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/target_repair/summary.json",
+      "bytes": 1138,
+      "sha256": "6e0c692e01b74184e63080d7d58aaa0ea85333cd96bedbc51956e69b81f3392f"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification/target_repair/trajectory.csv",
+      "bytes": 393,
+      "sha256": "1d02531ed5a32f91dcf7cb78c16110995f4851f649487e87f1a2caa2b2ffacf9"
+    },
+    {
+      "path": "work/causal_study/targeted_runner_independent_verification.json",
+      "bytes": 1519,
+      "sha256": "070c260b1dcca6807022462278210346817c421ed93de0ee302eb3e0a035972d"
+    },
+    {
+      "path": "work/causal_study/test_diagnostics_repairs.py",
+      "bytes": 3716,
+      "sha256": "128923a6acbf6279c3a68de80755a8d107026c84b3372ceb06d91622de82a406"
+    },
+    {
+      "path": "work/causal_study/test_generality_runner.py",
+      "bytes": 4477,
+      "sha256": "7304959df9f7614e0bf190758db94801ff38b2e8d8d5d17870b80c0f5e7e297c"
+    },
+    {
+      "path": "work/causal_study/tests.log",
+      "bytes": 1703,
+      "sha256": "2b403e35911f2bda728854679def42b4d0b4d8db64cbe4f820335d132d4d77bc"
+    },
+    {
+      "path": "work/causal_study/verify_completed.py",
+      "bytes": 11809,
+      "sha256": "12da4eb1e3c59395b56aada5f5bd98685e415a16f458b141ec185cfda6dddb95"
+    },
+    {
+      "path": "work/causal_study/verify_dense_arithmetic.py",
+      "bytes": 1568,
+      "sha256": "817b3be355eacedee1cc97e5c92ed921ae7e91cf48407a10de605eb861f31e81"
+    },
+    {
+      "path": "work/causal_study/verify_targeted_runner_independent.py",
+      "bytes": 3160,
+      "sha256": "693f7d0e989c385f2862f0a9a5fba1c5412dcb4d975e81141072fefb59a908d3"
+    },
+    {
+      "path": "work/causal_study/write_report.py",
+      "bytes": 23552,
+      "sha256": "4bfdc7d084f179327e0b3f315497a457307b8d7d6ed8fcf62b3b038ef762843d"
+    },
+    {
       "path": "work/experiments/alignment_core.py",
       "bytes": 17262,
       "sha256": "ae87ac9728f8f83c9936d895c9c5fc91fd77b5fb98384731baa868116d0d4e97"
@@ -3633,5 +5698,8 @@
       "sha256": "3bb8891c3190b2dfdd7fe4d2b5176a79c0223dd6ff1162e017427b2fc6062053"
     }
   ],
-  "binary_manifest": "ARTIFACTS.json"
+  "binary_manifests": [
+    "ARTIFACTS.json",
+    "CAUSAL_ARTIFACTS.json"
+  ]
 }

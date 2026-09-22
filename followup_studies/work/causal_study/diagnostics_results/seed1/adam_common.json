@@ -1,0 +1,713 @@
+{
+  "seed": 1,
+  "checkpoints": [
+    {
+      "step": 15000,
+      "checkpoint": "work/basis_study/seed1_baseline/step_015000.pt",
+      "gradient_error": {
+        "norm": 1.1184747769937989e-05,
+        "common_norm": 8.583499681393275e-06,
+        "centered_norm": 7.1709215514224375e-06,
+        "common_fraction": 0.7674289897232849,
+        "centered_fraction": 0.6411339530334527
+      },
+      "reference_gradient_norm": 4.2672454680278875e-05,
+      "variants": {
+        "reference": {
+          "input_error_exact": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "input_error_realized32": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "formula_update": {
+            "norm": 6.162633166344872e-05,
+            "common_norm": 1.6786419504979848e-05,
+            "centered_norm": 5.9296044341053835e-05,
+            "common_fraction": 0.27239037359311236,
+            "centered_fraction": 0.9621868240491588
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "actual_update": {
+            "norm": 6.16285835424538e-05,
+            "common_norm": 1.678763801245277e-05,
+            "centered_norm": 5.929803976028255e-05,
+            "common_fraction": 0.27240019236996327,
+            "centered_fraction": 0.9621840443474443
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "formula_vs_actual_update": {
+            "norm": 6.162633166344872e-05,
+            "reference_norm": 6.16285835424538e-05,
+            "relative_l2_error": 0.000281953013130079,
+            "cosine": 0.9999999609173897
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 6.489276176268776e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.545992150234422,
+              "mean_margin": 16.308304975409133
+            },
+            "heldout": {
+              "loss": 0.0008304432101807888,
+              "accuracy": 1.0,
+              "minimum_margin": 1.3301826796322147,
+              "mean_margin": 12.691364837050653
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 6.485860631121772e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.543103323842548,
+              "mean_margin": 16.308802496457695
+            },
+            "heldout": {
+              "loss": 0.0008307035333741445,
+              "accuracy": 1.0,
+              "minimum_margin": 1.3330747966970318,
+              "mean_margin": 12.691810930496125
+            }
+          }
+        },
+        "stock": {
+          "input_error_exact": {
+            "norm": 1.1184747769937989e-05,
+            "common_norm": 8.583499681393275e-06,
+            "centered_norm": 7.1709215514224375e-06,
+            "common_fraction": 0.7674289897232849,
+            "centered_fraction": 0.6411339530334527
+          },
+          "input_error_realized32": {
+            "norm": 1.1184747769937989e-05,
+            "common_norm": 8.583499681393275e-06,
+            "centered_norm": 7.1709215514224375e-06,
+            "common_fraction": 0.7674289897232849,
+            "centered_fraction": 0.6411339530334527
+          },
+          "formula_update": {
+            "norm": 6.08276837881231e-05,
+            "common_norm": 1.995316599071212e-05,
+            "centered_norm": 5.746197248594056e-05,
+            "common_fraction": 0.3280277128455789,
+            "centered_fraction": 0.9446681002369565
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 7.332512177171427e-06,
+            "common_norm": 3.808653459502055e-06,
+            "centered_norm": 6.265771592851963e-06,
+            "common_fraction": 0.519419997877354,
+            "centered_fraction": 0.8545190845177748
+          },
+          "actual_update": {
+            "norm": 6.082867279151199e-05,
+            "common_norm": 1.9953942016467168e-05,
+            "centered_norm": 5.746274994794721e-05,
+            "common_fraction": 0.32803513706206544,
+            "centered_fraction": 0.9446655222102025
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 7.332828365784099e-06,
+            "common_norm": 3.8083797985750706e-06,
+            "centered_norm": 6.266307936245499e-06,
+            "common_fraction": 0.5193602807267999,
+            "centered_fraction": 0.8545553807702471
+          },
+          "formula_vs_actual_update": {
+            "norm": 6.08276837881231e-05,
+            "reference_norm": 6.082867279151199e-05,
+            "relative_l2_error": 0.0002804224665513295,
+            "cosine": 0.9999999608131579
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 2.796186942484497e-09,
+            "common_norm": 2.14587492034831e-09,
+            "centered_norm": 1.7927303878556111e-09,
+            "common_fraction": 0.767428989723282,
+            "centered_fraction": 0.6411339530334534
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 6.489890989199409e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.545920620030428,
+              "mean_margin": 16.30804238588215
+            },
+            "heldout": {
+              "loss": 0.0008307859565781018,
+              "accuracy": 1.0,
+              "minimum_margin": 1.3297349910146312,
+              "mean_margin": 12.69116877219918
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 6.486476116591919e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.543031769945415,
+              "mean_margin": 16.308540371315544
+            },
+            "heldout": {
+              "loss": 0.0008310468290154503,
+              "accuracy": 1.0,
+              "minimum_margin": 1.332626939510043,
+              "mean_margin": 12.69161464661442
+            }
+          }
+        },
+        "reference_plus_common": {
+          "input_error_exact": {
+            "norm": 8.583499681393283e-06,
+            "common_norm": 8.583499681393277e-06,
+            "centered_norm": 2.6767479116031983e-21,
+            "common_fraction": 0.9999999999999992,
+            "centered_fraction": 3.118480818966729e-16
+          },
+          "input_error_realized32": {
+            "norm": 8.583499669832329e-06,
+            "common_norm": 8.583499669832224e-06,
+            "centered_norm": 1.0578238641365524e-12,
+            "common_fraction": 0.9999999999999878,
+            "centered_fraction": 1.2323922698504819e-07
+          },
+          "formula_update": {
+            "norm": 6.28604973270973e-05,
+            "common_norm": 2.079064620112588e-05,
+            "centered_norm": 5.932277096317756e-05,
+            "common_fraction": 0.3307426298735891,
+            "centered_fraction": 0.9437209930823324
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 6.631611812305274e-06,
+            "common_norm": 4.506131186427667e-06,
+            "centered_norm": 4.865496578953801e-06,
+            "common_fraction": 0.679492605110921,
+            "centered_fraction": 0.733682356063972
+          },
+          "actual_update": {
+            "norm": 6.286131126420975e-05,
+            "common_norm": 2.0791541579676028e-05,
+            "centered_norm": 5.9323319635674924e-05,
+            "common_fraction": 0.3307525910856038,
+            "centered_fraction": 0.9437175019518056
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 6.631701184266914e-06,
+            "common_norm": 4.505931130946122e-06,
+            "centered_norm": 4.865803658243733e-06,
+            "common_fraction": 0.6794532814047802,
+            "centered_fraction": 0.7337187733650294
+          },
+          "formula_vs_actual_update": {
+            "norm": 6.28604973270973e-05,
+            "reference_norm": 6.286131126420975e-05,
+            "relative_l2_error": 0.000265684885885804,
+            "cosine": 0.9999999647891444
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 2.1458749203483073e-09,
+            "common_norm": 2.1458749203483106e-09,
+            "centered_norm": 7.358930168709548e-25,
+            "common_fraction": 1.0000000000000016,
+            "centered_fraction": 3.429337888675769e-16
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 6.489345835666897e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.54600621474181,
+              "mean_margin": 16.308128242743905
+            },
+            "heldout": {
+              "loss": 0.0008307556195234953,
+              "accuracy": 1.0,
+              "minimum_margin": 1.3299147597844097,
+              "mean_margin": 12.691218692128608
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 6.485930550108138e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.543117393085693,
+              "mean_margin": 16.30862618518027
+            },
+            "heldout": {
+              "loss": 0.0008310163931943781,
+              "accuracy": 1.0,
+              "minimum_margin": 1.3328067664465049,
+              "mean_margin": 12.691664741805326
+            }
+          }
+        },
+        "reference_plus_centered": {
+          "input_error_exact": {
+            "norm": 7.170921551422438e-06,
+            "common_norm": 1.1433450288586903e-21,
+            "centered_norm": 7.1709215514224375e-06,
+            "common_fraction": 1.594418542525952e-16,
+            "centered_fraction": 0.9999999999999999
+          },
+          "input_error_realized32": {
+            "norm": 7.170921556872975e-06,
+            "common_norm": 2.162402404592533e-13,
+            "centered_norm": 7.1709215568729954e-06,
+            "common_fraction": 3.015515352444452e-08,
+            "centered_fraction": 1.0000000000000029
+          },
+          "formula_update": {
+            "norm": 5.969396163083941e-05,
+            "common_norm": 1.5946624234431083e-05,
+            "centered_norm": 5.752455328561858e-05,
+            "common_fraction": 0.26713965363948394,
+            "centered_fraction": 0.9636578259181904
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 5.175620323417015e-06,
+            "common_norm": 9.131110170545317e-07,
+            "centered_norm": 5.094435592163366e-06,
+            "common_fraction": 0.17642542535880673,
+            "centered_fraction": 0.9843140094944117
+          },
+          "actual_update": {
+            "norm": 5.969485000157401e-05,
+            "common_norm": 1.594721423012638e-05,
+            "centered_norm": 5.7525311602883696e-05,
+            "common_fraction": 0.2671455616306246,
+            "centered_fraction": 0.963656188119526
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 5.176278412913682e-06,
+            "common_norm": 9.136313870768118e-07,
+            "centered_norm": 5.095010882868094e-06,
+            "common_fraction": 0.17650352515766954,
+            "centered_fraction": 0.984300007927927
+          },
+          "formula_vs_actual_update": {
+            "norm": 5.969396163083941e-05,
+            "reference_norm": 5.969485000157401e-05,
+            "relative_l2_error": 0.00028604860715333787,
+            "cosine": 0.999999959198223
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 1.7927303878556111e-09,
+            "common_norm": 2.119985871714132e-25,
+            "centered_norm": 1.7927303878556113e-09,
+            "common_fraction": 1.1825458451953673e-16,
+            "centered_fraction": 1.0000000000000002
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 6.489821562218954e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.545906578501485,
+              "mean_margin": 16.30821902652681
+            },
+            "heldout": {
+              "loss": 0.0008304735254294067,
+              "accuracy": 1.0,
+              "minimum_margin": 1.3300025631064247,
+              "mean_margin": 12.691314908709742
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 6.486406431225059e-07,
+              "accuracy": 1.0,
+              "minimum_margin": 13.543017723671596,
+              "mean_margin": 16.30871653072777
+            },
+            "heldout": {
+              "loss": 0.0008307339475356155,
+              "accuracy": 1.0,
+              "minimum_margin": 1.3328946220069444,
+              "mean_margin": 12.691760843298846
+            }
+          }
+        }
+      }
+    },
+    {
+      "step": 17720,
+      "checkpoint": "work/basis_study/seed1_baseline/previous.pt",
+      "gradient_error": {
+        "norm": 4.3726739658629675e-05,
+        "common_norm": 4.09215507233986e-05,
+        "centered_norm": 1.5409557020431347e-05,
+        "common_fraction": 0.9358472880180204,
+        "centered_fraction": 0.3524058079960279
+      },
+      "reference_gradient_norm": 0.38952618685548007,
+      "variants": {
+        "reference": {
+          "input_error_exact": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "input_error_realized32": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "formula_update": {
+            "norm": 0.019136600160196145,
+            "common_norm": 0.009880917689586185,
+            "centered_norm": 0.01638831691488918,
+            "common_fraction": 0.516336110221833,
+            "centered_fraction": 0.8563860235203452
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "actual_update": {
+            "norm": 0.01913660892714435,
+            "common_norm": 0.009880931042305825,
+            "centered_norm": 0.016388319101349847,
+            "common_fraction": 0.516336571433521,
+            "centered_fraction": 0.8563857454443672
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "formula_vs_actual_update": {
+            "norm": 0.019136600160196145,
+            "reference_norm": 0.01913660892714435,
+            "relative_l2_error": 2.058751845612933e-06,
+            "cosine": 0.9999999999979985
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 0.0,
+            "common_norm": 0.0,
+            "centered_norm": 0.0,
+            "common_fraction": null,
+            "centered_fraction": null
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 11.014394688060602,
+              "accuracy": 0.23890339425587467,
+              "minimum_margin": -49.15322871629303,
+              "mean_margin": -9.39995009312983
+            },
+            "heldout": {
+              "loss": 15.846190853547963,
+              "accuracy": 0.1390535854122385,
+              "minimum_margin": -68.1173775789772,
+              "mean_margin": -14.801932923296295
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 12.978752485378394,
+              "accuracy": 0.15900783289817233,
+              "minimum_margin": -56.09884966438176,
+              "mean_margin": -11.843877547846294
+            },
+            "heldout": {
+              "loss": 17.954181129456316,
+              "accuracy": 0.09285154939031212,
+              "minimum_margin": -70.75998325090507,
+              "mean_margin": -17.161347230607248
+            }
+          }
+        },
+        "stock": {
+          "input_error_exact": {
+            "norm": 4.3726739658629675e-05,
+            "common_norm": 4.09215507233986e-05,
+            "centered_norm": 1.5409557020431347e-05,
+            "common_fraction": 0.9358472880180204,
+            "centered_fraction": 0.3524058079960279
+          },
+          "input_error_realized32": {
+            "norm": 4.3726739658629675e-05,
+            "common_norm": 4.09215507233986e-05,
+            "centered_norm": 1.5409557020431347e-05,
+            "common_fraction": 0.9358472880180204,
+            "centered_fraction": 0.3524058079960279
+          },
+          "formula_update": {
+            "norm": 0.019170179804443962,
+            "common_norm": 0.010000531250653338,
+            "centered_norm": 0.01635497381347388,
+            "common_fraction": 0.5216712285784117,
+            "centered_fraction": 0.853146604795148
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 0.0001880194208629661,
+            "common_norm": 0.0001221393214827852,
+            "centered_norm": 0.00014294505507141456,
+            "common_fraction": 0.6496101356029801,
+            "centered_fraction": 0.7602675001089222
+          },
+          "actual_update": {
+            "norm": 0.019170187896971367,
+            "common_norm": 0.010000543923739575,
+            "centered_norm": 0.016354975549799883,
+            "common_fraction": 0.521671669442506,
+            "centered_fraction": 0.8531463352210413
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 0.00018801839116290968,
+            "common_norm": 0.00012213867473949398,
+            "centered_norm": 0.00014294425328906604,
+            "common_fraction": 0.6496102534653974,
+            "centered_fraction": 0.7602673994014294
+          },
+          "formula_vs_actual_update": {
+            "norm": 0.019170179804443962,
+            "reference_norm": 0.019170187896971367,
+            "relative_l2_error": 2.0337312503643544e-06,
+            "cosine": 0.9999999999980347
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 1.0931684914657467e-08,
+            "common_norm": 1.0230387680849709e-08,
+            "centered_norm": 3.8523892551078315e-09,
+            "common_fraction": 0.9358472880180216,
+            "centered_fraction": 0.35240580799602583
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 11.096073036644464,
+              "accuracy": 0.23028720626631854,
+              "minimum_margin": -49.15424019283239,
+              "mean_margin": -9.522018883431361
+            },
+            "heldout": {
+              "loss": 15.940076514550075,
+              "accuracy": 0.13558563597717865,
+              "minimum_margin": -68.12431380230055,
+              "mean_margin": -14.918178691222508
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 13.074468624463995,
+              "accuracy": 0.1566579634464752,
+              "minimum_margin": -56.098850016321876,
+              "mean_margin": -11.96506798915272
+            },
+            "heldout": {
+              "loss": 18.055531585565518,
+              "accuracy": 0.09094977066785993,
+              "minimum_margin": -70.7668455538552,
+              "mean_margin": -17.276833396551723
+            }
+          }
+        },
+        "reference_plus_common": {
+          "input_error_exact": {
+            "norm": 4.092155072339837e-05,
+            "common_norm": 4.0921550723398664e-05,
+            "centered_norm": 1.8466622760578712e-17,
+            "common_fraction": 1.000000000000007,
+            "centered_fraction": 4.51268889720246e-13
+          },
+          "input_error_realized32": {
+            "norm": 4.09218336207209e-05,
+            "common_norm": 4.0921832428488157e-05,
+            "centered_norm": 9.878093486472112e-09,
+            "common_fraction": 0.999999970865608,
+            "centered_fraction": 0.00024138931744911618
+          },
+          "formula_update": {
+            "norm": 0.01917165463704895,
+            "common_norm": 0.01000340844128125,
+            "centered_norm": 0.016354943016690316,
+            "common_fraction": 0.5217811728127943,
+            "centered_fraction": 0.8530793677601838
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 0.0001818280381303213,
+            "common_norm": 0.0001252355070937201,
+            "centered_norm": 0.00013182375815193786,
+            "common_fraction": 0.688757951641981,
+            "centered_fraction": 0.7249913682589263
+          },
+          "actual_update": {
+            "norm": 0.019171662319506504,
+            "common_norm": 0.010003420138893718,
+            "centered_norm": 0.016354944867469575,
+            "common_fraction": 0.5217815738761257,
+            "centered_fraction": 0.8530791224519422
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 0.00018182529191813757,
+            "common_norm": 0.00012523373992915702,
+            "centered_norm": 0.00013182164907356026,
+            "common_fraction": 0.6887586353252796,
+            "centered_fraction": 0.7249907187439565
+          },
+          "formula_vs_actual_update": {
+            "norm": 0.01917165463704895,
+            "reference_norm": 0.019171662319506504,
+            "relative_l2_error": 2.009583103149402e-06,
+            "cosine": 0.9999999999980744
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 1.0230387680849608e-08,
+            "common_norm": 1.0230387680849726e-08,
+            "centered_norm": 4.6166564399218225e-21,
+            "common_fraction": 1.0000000000000115,
+            "centered_fraction": 4.512689630094664e-13
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 11.096142552224501,
+              "accuracy": 0.22924281984334205,
+              "minimum_margin": -49.154024587994286,
+              "mean_margin": -9.521583172284826
+            },
+            "heldout": {
+              "loss": 15.944151985389954,
+              "accuracy": 0.13580937465040832,
+              "minimum_margin": -68.13112920812034,
+              "mean_margin": -14.921778503013337
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 13.074230281770575,
+              "accuracy": 0.15718015665796345,
+              "minimum_margin": -56.09885063273953,
+              "mean_margin": -11.964625331989366
+            },
+            "heldout": {
+              "loss": 18.0596037721176,
+              "accuracy": 0.0911735093410896,
+              "minimum_margin": -70.77358655828766,
+              "mean_margin": -17.280437942555043
+            }
+          }
+        },
+        "reference_plus_centered": {
+          "input_error_exact": {
+            "norm": 1.5409557020431957e-05,
+            "common_norm": 1.9669375235003132e-18,
+            "centered_norm": 1.5409557020431957e-05,
+            "common_fraction": 1.2764400176411928e-13,
+            "centered_fraction": 1.0
+          },
+          "input_error_realized32": {
+            "norm": 1.5410086578919523e-05,
+            "common_norm": 9.947507372198918e-10,
+            "centered_norm": 1.541008654681301e-05,
+            "common_fraction": 6.455192397041281e-05,
+            "centered_fraction": 0.9999999979165262
+          },
+          "formula_update": {
+            "norm": 0.019135157685171995,
+            "common_norm": 0.00987796366607795,
+            "centered_norm": 0.016388413390198673,
+            "common_fraction": 0.5162206566885242,
+            "centered_fraction": 0.8564556226729295
+          },
+          "formula_update_difference_from_reference": {
+            "norm": 6.292204118131715e-05,
+            "common_norm": 3.997142701696597e-06,
+            "centered_norm": 6.279495295519881e-05,
+            "common_fraction": 0.06352531842027133,
+            "centered_fraction": 0.997980227218756
+          },
+          "actual_update": {
+            "norm": 0.019135166415197753,
+            "common_norm": 0.009877977373734225,
+            "centered_norm": 0.016388415321235767,
+            "common_fraction": 0.5162211375328737,
+            "centered_fraction": 0.8564553328482981
+          },
+          "actual_update_difference_from_reference": {
+            "norm": 6.292140306476213e-05,
+            "common_norm": 3.99650943324693e-06,
+            "centered_norm": 6.279435385437307e-05,
+            "common_fraction": 0.06351589822517953,
+            "centered_fraction": 0.9979808268061301
+          },
+          "formula_vs_actual_update": {
+            "norm": 0.019135157685171995,
+            "reference_norm": 0.019135166415197753,
+            "relative_l2_error": 2.0927598115636167e-06,
+            "cosine": 0.9999999999979265
+          },
+          "sgd_update_difference_from_reference": {
+            "norm": 3.852389255107982e-09,
+            "common_norm": 4.917212357852698e-22,
+            "centered_norm": 3.852389255107982e-09,
+            "common_fraction": 1.2764058957263573e-13,
+            "centered_fraction": 1.0
+          },
+          "preceding_feature_metrics": {
+            "train": {
+              "loss": 11.014230027430965,
+              "accuracy": 0.23942558746736292,
+              "minimum_margin": -49.15343904736528,
+              "mean_margin": -9.400301815248426
+            },
+            "heldout": {
+              "loss": 15.842029543832771,
+              "accuracy": 0.13927732408546817,
+              "minimum_margin": -68.1105409955237,
+              "mean_margin": -14.79821963499968
+            }
+          },
+          "following_stock_feature_metrics": {
+            "train": {
+              "loss": 12.97888755518699,
+              "accuracy": 0.15900783289817233,
+              "minimum_margin": -56.09884920207014,
+              "mean_margin": -11.844234656535217
+            },
+            "heldout": {
+              "loss": 17.950007324526297,
+              "accuracy": 0.09296341872692696,
+              "minimum_margin": -70.75322170766367,
+              "mean_margin": -17.15762430644475
+            }
+          }
+        }
+      }
+    }
+  ]
+}

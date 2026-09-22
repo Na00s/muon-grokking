@@ -1,0 +1,75 @@
+{
+  "seed": 4,
+  "arm": "stable32",
+  "start_step": 6000,
+  "end_step": 6003,
+  "source_checkpoint": "work/experiments/seed4_original/step_006000.pt",
+  "source_checkpoint_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc",
+  "paired_intervention_start": 6000,
+  "source_repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "current_repository_source_note": "Model and optimizer code unchanged; publication-only commit is allowed.",
+  "model_config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "optimizer_hyperparameters": {
+    "muon": [
+      {
+        "learning_rate": 0.03,
+        "momentum": 0.95,
+        "weight_decay": 0.1,
+        "newton_schulz_steps": 5,
+        "nesterov": true
+      }
+    ],
+    "auxiliary_adamw": [
+      {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ],
+    "unembedding_adamw": [
+      {
+        "lr": 0.00025,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ]
+  },
+  "train_monitor": "Every state, before each update and at final state.",
+  "test_monitor": "Every 100 global updates, every train accuracy below90%, source and final states.",
+  "primary_endpoint": "At least one joint training/test accuracy below90% by global step30000 after established grokking.",
+  "source_grokking": "All source trajectories have already met six successive 100-grid test evaluations >=95%.",
+  "checkpoint_grid": 1000,
+  "torch_version": "2.13.0",
+  "threads": 1,
+  "runner_sha256": "a082c2643b8a3e589112570eab4950344d2df1492649e5e9d3c6a33f91c2829c",
+  "numeric_helper_sha256": "c34766fea23a2daae7754aff837c41a8b48e0ed3f26702d776d914d9c4c08656"
+}

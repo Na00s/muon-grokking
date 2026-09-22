@@ -1,0 +1,36 @@
+[
+  {
+    "arithmetic": "stock",
+    "seed": 0,
+    "pre_step": 18514,
+    "post_step": 18515,
+    "model_class": "RMSDepthTransformer",
+    "total_directional_derivative": -0.01436387523100768,
+    "hidden_directional_derivative": -0.0014345542422259695,
+    "embeddings_directional_derivative": -0.012927762182944202,
+    "readout_directional_derivative": -1.5588058375079658e-06,
+    "loss_alpha_0.0": 0.0008129896834276701,
+    "loss_alpha_0.001": 0.000798786456214921,
+    "loss_alpha_0.01": 0.0006843861322137766,
+    "loss_alpha_0.1": 0.00022226301982785198,
+    "loss_alpha_1.0": 0.9511558744960664,
+    "endpoints_exact": true
+  },
+  {
+    "arithmetic": "accurate",
+    "seed": 0,
+    "pre_step": 28494,
+    "post_step": 28495,
+    "model_class": "RMSDepthTransformer",
+    "total_directional_derivative": -11.602417589995296,
+    "hidden_directional_derivative": -0.2783270861079834,
+    "embeddings_directional_derivative": -11.320154419839003,
+    "readout_directional_derivative": -0.003936084048309401,
+    "loss_alpha_0.0": 0.34206772902699933,
+    "loss_alpha_0.001": 0.3304998043084183,
+    "loss_alpha_0.01": 0.23577545156666116,
+    "loss_alpha_0.1": 0.8956339520414985,
+    "loss_alpha_1.0": 6.81099142404775,
+    "endpoints_exact": true
+  }
+]
