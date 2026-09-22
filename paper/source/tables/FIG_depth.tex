@@ -1,14 +1,13 @@
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figure6_depth.pdf}
-\caption{A depth-$4$ Muon checkpoint. Left: accuracy after intervening on each stage in
-forward order. Relocating the task-aligned family onto other frequencies and scrambling its
-phase leave the model above $99\%$ at every stage through the block-$3$ attention write and
-destroy it at the block-$3$ MLP activation; the two coincide before the cliff. Zeroing a stage destroys
-accuracy everywhere, so earlier stages are computationally necessary while carrying no
-frequency- and phase-specific code. Right: decoding a post-block residual directly with the
-unembedding, for the state itself and for its task-aligned part alone. Neither is legible
-before the final block, and the task-aligned part is the more legible of the two wherever
-both are partial.}
+\caption{Depth-$4$ Muon at step $53{,}000$. \textbf{Left:} the reported stage-intervention
+realization. Relocation and phase scrambling first cause a large drop at the block-$3$ MLP
+activation. The two stochastic curves use replicate $4$ of five and illustrate sensitivity;
+individual later-stage outcomes vary across perturbations. Zeroing the earlier block-$2$ and
+block-$3$ attention writes also destroys accuracy, despite their low sensitivity to these
+Fourier perturbations. \textbf{Right:} direct decoding through the final unembedding, using
+each post-block residual or its addition-filtered component. Both reach high accuracy only
+at the final block.}
 \label{fig:depth}
 \end{figure}

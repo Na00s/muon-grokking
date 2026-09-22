@@ -1,7 +1,8 @@
 """Plot the recorded follow-up results; this script performs no model fitting.
 
-Run with the research Python environment from any working directory. The default
-workspace is inferred from this file's location; --workspace supports relocation.
+Run with the research Python environment from any working directory. The default data root is the repository's followup_studies directory. A standalone
+source archive requires --workspace /path/to/followup_studies; that directory must
+contain work/. The default output directory is the paper source directory.
 The adjacent swaps, selected decoder snapshots, and matched arithmetic branches
 reuse the same five seeds. No panel reports independent replicate counts for
 multiple interventions on the same seed, and no statistical intervals are fitted.
@@ -25,9 +26,16 @@ import matplotlib.pyplot as plt
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--workspace", type=Path, default=HERE.parents[2])
-    parser.add_argument("--output", type=Path, default=HERE.parent / "revised")
+    candidate = HERE.parents[2] / "followup_studies"
+    parser.add_argument("--workspace", type=Path, default=candidate if (candidate / "work").is_dir() else None,
+                        help="Released followup_studies directory containing work/; required outside the repository.")
+    parser.add_argument("--output", type=Path, default=HERE.parent,
+                        help="Paper source directory containing the six original figures.")
     args = parser.parse_args()
+    if args.workspace is None:
+        parser.error("Supply --workspace /path/to/followup_studies (the directory containing work/).")
+    if not (args.workspace / "work").is_dir():
+        parser.error("--workspace must contain the released work/ results directory.")
     root, output = args.workspace.resolve(), args.output.resolve()
     output.mkdir(parents=True, exist_ok=True)
     sources = {}

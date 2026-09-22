@@ -1,17 +1,18 @@
 \begin{table}[t]
 \centering\small
-\caption{Interventions applied to a cached state. Each is designed to hold one property of
-the representation fixed while destroying another, so that a drop in accuracy attributes
-to the property destroyed.}
+\setlength{\tabcolsep}{5pt}
+\caption{Interventions applied to a cached state. Preserved and altered quantities specify the
+intervention; an accuracy change measures sensitivity to that perturbation. Non-constant-family
+sufficiency and ablation both retain the constant mode.}
 \label{tab:interventions}
 \begin{tabular}{lll}
 \toprule
 Intervention & Preserved & Destroyed \\
 \midrule
-Family sufficiency & Modes in one family & All other families \\
+Family sufficiency & Selected family and constant mode & Other non-constant modes \\
 Family ablation & All other families & Modes in one family \\
 Equal-power relocation & Total power, family membership & Which frequencies carry it \\
-Random native subset & Family membership, power scale & Which of the used frequencies survive \\
+Random native subset & Pair count, native coefficients & Which of the used frequencies survive \\
 Pair-global phase scramble & Support and power exactly & Relative phase across pairs \\
 Channelwise phase scramble & Support and power exactly & Relative phase across channels \\
 Cross-readout substitution & Both representations intact & Pairing of state with its own readout \\

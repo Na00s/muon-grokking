@@ -1,0 +1,116 @@
+[
+  {
+    "citation_key": "power2022grokking",
+    "primary_source": "https://arxiv.org/abs/2201.02177",
+    "checked_claim": "Introduces delayed generalization on small algorithmic datasets.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "nanda2023progress",
+    "primary_source": "https://arxiv.org/pdf/2301.05217",
+    "checked_claim": "Uses functional Fourier ablations and restricted/excluded losses; framing revised to credit these methods. ICLR 2023 header verified.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "thilak2022slingshot",
+    "primary_source": "https://arxiv.org/abs/2206.04817",
+    "checked_claim": "Adaptive-optimizer training cycles and grokking.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "varma2023explaining",
+    "primary_source": "https://arxiv.org/html/2309.02390v1",
+    "checked_claim": "Ungrokking continues training on a reduced dataset; circuit-efficiency account.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "prieto2025grokking",
+    "primary_source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/c9e6ac15e689e06139d7b39e1667b165-Abstract-Conference.html",
+    "checked_claim": "Softmax collapse and logit-scaling loss-minimization direction. ICLR 2025 venue verified.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "prakash2025grokking",
+    "primary_source": "https://openreview.net/pdf?id=upyC7rwR1M",
+    "checked_claim": "HiLD 2025 paper describes late test collapse with perfect training accuracy.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "zhong2023clock",
+    "primary_source": "https://arxiv.org/abs/2306.17844",
+    "checked_claim": "Different learned algorithms under different configurations; NeurIPS 2023 acceptance recorded.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "jordan2024muon",
+    "primary_source": "https://github.com/KellerJordan/Muon",
+    "checked_claim": "Original Muon optimizer and recommended citation authors/year.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "liu2025muon",
+    "primary_source": "https://arxiv.org/html/2502.16982v1",
+    "checked_claim": "Large-scale Muon uses AdamW for embedding/head parameters; weight-spectrum analysis is distinguished from operand Fourier dispersion.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "tveit2025muon",
+    "primary_source": "https://arxiv.org/abs/2504.16041",
+    "checked_claim": "Reports grokking acceleration in the tested configurations.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "wang2026active",
+    "primary_source": "https://arxiv.org/abs/2607.20512",
+    "checked_claim": "Studies orthogonalization, iteration count, and accuracy dips; prior instability is explicitly acknowledged.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "chughtai2023toy",
+    "primary_source": "https://proceedings.mlr.press/v202/chughtai23a.html",
+    "checked_claim": "Shared algorithm families with circuit variation; wording revised away from universal identical circuits.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "elhage2021framework",
+    "primary_source": "https://transformer-circuits.pub/2021/framework/index.html",
+    "checked_claim": "Residual-stream basis freedom motivates the parameterization symmetry; it does not establish the optimizer trajectory.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "ruan2026muon",
+    "primary_source": "https://arxiv.org/abs/2606.09658",
+    "checked_claim": "Robustness and higher effective feature rank; observable distinguished from this paper Fourier count.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "wang2025tailend",
+    "primary_source": "https://arxiv.org/abs/2509.26030",
+    "checked_claim": "Associative-memory performance and isotropic learned weight spectra.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "anthes2023diagnosing",
+    "primary_source": "https://2023.ccneuro.org/proceedings/0000748.pdf",
+    "checked_claim": "Readout misalignment in continual learning; proceedings pages 748-751 verified.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "chou2026twospeeds",
+    "primary_source": "https://arxiv.org/abs/2605.27078",
+    "checked_claim": "Relative representation/readout learning speeds during grokking.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "gomezjurado2026longdelay",
+    "primary_source": "https://arxiv.org/abs/2604.13082",
+    "checked_claim": "Decoder bottleneck in one-step Collatz prediction; distinguished from the two-speeds study.",
+    "status": "reviewed"
+  },
+  {
+    "citation_key": "liu2026glitching",
+    "primary_source": "https://arxiv.org/abs/2605.06152",
+    "checked_claim": "Finite-precision class-sum error, feature inflation, and zero-sum projection; credit retained and author metadata normalized.",
+    "status": "reviewed"
+  }
+]

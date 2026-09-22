@@ -1,0 +1,538 @@
+{
+  "adjacent": [
+    [
+      95.4916657344222,
+      96.38662042734086,
+      31.86038706790469,
+      31.871574001566174
+    ],
+    [
+      94.13804676138271,
+      94.18279449602865,
+      13.558563597717866,
+      9.094977066785994
+    ],
+    [
+      99.98881306633851,
+      100.0,
+      1.006824029533505,
+      0.928515493903121
+    ],
+    [
+      89.54021702651303,
+      91.00570533616735,
+      50.79986575679606,
+      53.59659917216691
+    ],
+    [
+      91.34131334601186,
+      98.65756796062199,
+      66.75243315807138,
+      66.327329678935
+    ]
+  ],
+  "probe": [
+    98.7246895625909,
+    98.19890368050118,
+    100.0,
+    98.76943729723683,
+    100.0
+  ],
+  "native_probe": [
+    31.871574001566174,
+    9.094977066785994,
+    0.928515493903121,
+    32.117686542118804,
+    18.13401946526457
+  ],
+  "branches": [
+    {
+      "name": "seed0_accurate6000",
+      "seed": 0,
+      "arm": "stable32",
+      "start": 6000,
+      "end": 30000,
+      "updates": 24000,
+      "mintrain": 1.0,
+      "mintest": 0.9975388745944737,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed0_accurate6000"
+    },
+    {
+      "name": "seed0_stable3215000",
+      "seed": 0,
+      "arm": "stable32",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 0.9997762613267703,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed0_stable3215000"
+    },
+    {
+      "name": "seed0_stock_extension",
+      "seed": 0,
+      "arm": "original32",
+      "start": 18000,
+      "end": 30000,
+      "updates": 12000,
+      "mintrain": 1.0,
+      "mintest": 0.886228884662714,
+      "finaltrain": 1.0,
+      "finaltest": 0.9998881306633851,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed0_stock_extension"
+    },
+    {
+      "name": "seed0_target_repair15000",
+      "seed": 0,
+      "arm": "target_repair",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 0.9997762613267703,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed0_target_repair15000"
+    },
+    {
+      "name": "seed1_accurate6000",
+      "seed": 1,
+      "arm": "stable32",
+      "start": 6000,
+      "end": 30000,
+      "updates": 24000,
+      "mintrain": 1.0,
+      "mintest": 0.9984338292873923,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed1_accurate6000"
+    },
+    {
+      "name": "seed1_stable3215000",
+      "seed": 1,
+      "arm": "stable32",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 0.9998881306633851,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed1_stable3215000"
+    },
+    {
+      "name": "seed1_stock_extension",
+      "seed": 1,
+      "arm": "original32",
+      "start": 17921,
+      "end": 30000,
+      "updates": 12079,
+      "mintrain": 0.053263707571801565,
+      "mintest": 0.03725248909273968,
+      "finaltrain": 1.0,
+      "finaltest": 0.8070253943394116,
+      "joint": [
+        29549,
+        29550,
+        29551,
+        29552,
+        29553,
+        29554,
+        29555,
+        29556,
+        29557,
+        29558,
+        29559,
+        29560,
+        29561,
+        29562,
+        29563,
+        29564,
+        29565,
+        29566,
+        29567,
+        29568,
+        29569,
+        29570,
+        29571,
+        29572,
+        29573,
+        29574,
+        29575
+      ],
+      "path": "work/causal_study/main_runs/seed1_stock_extension"
+    },
+    {
+      "name": "seed1_target_repair15000",
+      "seed": 1,
+      "arm": "target_repair",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 0.9998881306633851,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed1_target_repair15000"
+    },
+    {
+      "name": "seed2_accurate6000",
+      "seed": 2,
+      "arm": "stable32",
+      "start": 6000,
+      "end": 30000,
+      "updates": 24000,
+      "mintrain": 1.0,
+      "mintest": 0.988589327665287,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed2_accurate6000"
+    },
+    {
+      "name": "seed2_stable3215000",
+      "seed": 2,
+      "arm": "stable32",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed2_stable3215000"
+    },
+    {
+      "name": "seed2_stock_extension",
+      "seed": 2,
+      "arm": "original32",
+      "start": 18269,
+      "end": 30000,
+      "updates": 11731,
+      "mintrain": 1.0,
+      "mintest": 0.9092739680053697,
+      "finaltrain": 1.0,
+      "finaltest": 0.998657567960622,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed2_stock_extension"
+    },
+    {
+      "name": "seed2_target_repair15000",
+      "seed": 2,
+      "arm": "target_repair",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed2_target_repair15000"
+    },
+    {
+      "name": "seed3_accurate6000",
+      "seed": 3,
+      "arm": "stable32",
+      "start": 6000,
+      "end": 30000,
+      "updates": 24000,
+      "mintrain": 1.0,
+      "mintest": 0.9997762613267703,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed3_accurate6000"
+    },
+    {
+      "name": "seed3_stable3215000",
+      "seed": 3,
+      "arm": "stable32",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 0.9997762613267703,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed3_stable3215000"
+    },
+    {
+      "name": "seed3_stock_extension",
+      "seed": 3,
+      "arm": "original32",
+      "start": 16508,
+      "end": 30000,
+      "updates": 13492,
+      "mintrain": 0.016449086161879897,
+      "mintest": 0.01823470186821792,
+      "finaltrain": 1.0,
+      "finaltest": 0.9998881306633851,
+      "joint": [
+        27748,
+        27750,
+        27751,
+        27752,
+        27753,
+        27754,
+        27755,
+        27756,
+        27757,
+        27758,
+        27759,
+        27760,
+        27761,
+        27763,
+        27764
+      ],
+      "path": "work/causal_study/main_runs/seed3_stock_extension"
+    },
+    {
+      "name": "seed3_target_repair15000",
+      "seed": 3,
+      "arm": "target_repair",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 0.9997762613267703,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed3_target_repair15000"
+    },
+    {
+      "name": "seed4_accurate6000",
+      "seed": 4,
+      "arm": "stable32",
+      "start": 6000,
+      "end": 30000,
+      "updates": 24000,
+      "mintrain": 1.0,
+      "mintest": 0.9984338292873923,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed4_accurate6000"
+    },
+    {
+      "name": "seed4_stable3215000",
+      "seed": 4,
+      "arm": "stable32",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed4_stable3215000"
+    },
+    {
+      "name": "seed4_target_repair15000",
+      "seed": 4,
+      "arm": "target_repair",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/main_runs/seed4_target_repair15000"
+    },
+    {
+      "name": "seed0",
+      "seed": 0,
+      "arm": "row_projection",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/projection_runs/seed0"
+    },
+    {
+      "name": "seed1",
+      "seed": 1,
+      "arm": "row_projection",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/projection_runs/seed1"
+    },
+    {
+      "name": "seed2",
+      "seed": 2,
+      "arm": "row_projection",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/projection_runs/seed2"
+    },
+    {
+      "name": "seed3",
+      "seed": 3,
+      "arm": "row_projection",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/projection_runs/seed3"
+    },
+    {
+      "name": "seed4",
+      "seed": 4,
+      "arm": "row_projection",
+      "start": 15000,
+      "end": 20000,
+      "updates": 5000,
+      "mintrain": 1.0,
+      "mintest": 1.0,
+      "finaltrain": 1.0,
+      "finaltest": 1.0,
+      "joint": [],
+      "path": "work/causal_study/projection_runs/seed4"
+    }
+  ],
+  "generality": [
+    {
+      "name": "subtraction_stock",
+      "updates": 30000,
+      "confirm": 9300,
+      "event_step": 15281,
+      "min": 0.058507663049558116,
+      "peak": 15281
+    },
+    {
+      "name": "subtraction_accurate",
+      "updates": 30000,
+      "confirm": 10500,
+      "event_step": null,
+      "min": 0.9687884550844613,
+      "peak": 10500
+    },
+    {
+      "name": "rms_stock",
+      "updates": 30000,
+      "confirm": 15700,
+      "event_step": 18515,
+      "min": 0.004810381474437857,
+      "peak": 28540
+    },
+    {
+      "name": "rms_accurate",
+      "updates": 30000,
+      "confirm": 19900,
+      "event_step": 28495,
+      "min": 0.005257858820897192,
+      "peak": 28503
+    }
+  ],
+  "continuations": [
+    [
+      "work/basis_study/interventions/seed4_first/continuation/old_head/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed4_first/continuation/original/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed4_first/continuation/orthogonal/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed4_first/continuation/random_correction_0/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed4_first/continuation/inverse_gl/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed0_first/continuation/old_head/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed0_first/continuation/original/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed0_first/continuation/orthogonal/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed0_first/continuation/random_correction_0/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/interventions/seed0_first/continuation/inverse_gl/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/intervention_specificity/seed4_first/continuation/random_orthogonal_size_0/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/intervention_specificity/seed0_first/continuation/random_orthogonal_size_0/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/optimizer_memory_results/seed4_first/continuation/orthogonal_clear_state/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/optimizer_memory_results/seed4_first/continuation/native_head_clear_state/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/optimizer_memory_results/seed4_first/continuation/orthogonal_zero_first_moment/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/optimizer_memory_results/seed0_first/continuation/orthogonal_clear_state/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/optimizer_memory_results/seed0_first/continuation/native_head_clear_state/trajectory.csv",
+      500
+    ],
+    [
+      "work/basis_study/optimizer_memory_results/seed0_first/continuation/orthogonal_zero_first_moment/trajectory.csv",
+      500
+    ]
+  ]
+}

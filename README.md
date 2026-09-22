@@ -3,10 +3,12 @@
 
 ## Revised submission
 
-The selectively revised manuscript incorporates the completed decoder, basis, arithmetic, and architecture controls. It preserves all six original figures and all 17 original table files, with one new main-text figure and one new appendix figure. The main text remains 10 pages.
+The selectively revised manuscript incorporates the completed decoder, basis, arithmetic, and architecture controls. It preserves all six original figures and the numerical cells of all 17 original appendix tables, with one new main-text figure and one new appendix figure. The new-experiment audit passes 598 computed checks and six manual checks; original claims and analysis are clarified without removing reported observations. The main text remains 10 pages.
 
 - [Revised paper](paper/Muon_Grokking_Revised.pdf)
 - [Complete LaTeX source ZIP](paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip)
+- [New-experiment audit and claim review](paper/audit_report.md)
+- [Reproducible audit ledger and scripts](paper/audit/)
 - [Section-by-section revision notes](paper/revision_notes.md)
 - [Exact changes to original source files](paper/targeted_revision.patch)
 - [Compilation and preservation checks](paper/verification.json)

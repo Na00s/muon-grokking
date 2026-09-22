@@ -1,0 +1,23 @@
+{
+  "checks": 604,
+  "failed_numeric_checks": 0,
+  "evidence_files_hashed": 167,
+  "matched_states_rechecked": 28,
+  "direction_panels_recomputed": 7,
+  "figure_regeneration_passed": true,
+  "wording_corrections": [
+    "original-five versus followup-six grokking criterion",
+    "regularization coordinate definition",
+    "seed4 interval identification for 4.62% example",
+    "SGD roundoff wording",
+    "float64 backward-repair reductions",
+    "one-seed RMS scope"
+  ],
+  "verified_entry_statuses": {
+    "PASS": 598,
+    "MANUAL_VERIFIED": 6
+  },
+  "portable_published_tree_run": true,
+  "manuscript_resolutions_verified": true,
+  "plot_script_corrected": "paper/source/figures/build_followup_figures.py"
+}
