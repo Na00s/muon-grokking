@@ -1,0 +1,25 @@
+{
+  "figures": [
+    {
+      "figure": "heldout_readout_comparison",
+      "source_files": [
+        "work/experiments/seed0_dense_event/alignment.json",
+        "work/experiments/seed0_dense_event/metadata.json",
+        "work/experiments/seed0_dense_event/decoder.json",
+        "work/experiments/seed0_dense_event/decoder_whitened.json",
+        "work/experiments/seed0_dense_event/decoder_whitened_protocol.json"
+      ],
+      "outputs": [
+        "work/experiments/final_figures/seed0/heldout_readout_comparison.png",
+        "work/experiments/final_figures/seed0/heldout_readout_comparison.pdf"
+      ],
+      "notes": [
+        "Transports and decoder are fit using original training examples only; bars report untouched test examples.",
+        "Native model metrics are used for the first two bars when available.",
+        "The plotted fresh readout uses the converged exploratory whitening control selected by inner-validation CE; the initial decoder remains part of the recorded analysis.",
+        "Whitening preserves all 128 feature dimensions; 0 singular values were floored. Selected regularization: 0.0."
+      ]
+    }
+  ],
+  "matplotlib_version": "3.11.1"
+}

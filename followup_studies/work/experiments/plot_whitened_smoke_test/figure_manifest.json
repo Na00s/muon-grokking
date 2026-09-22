@@ -1,0 +1,26 @@
+{
+  "figures": [
+    {
+      "figure": "heldout_readout_comparison",
+      "source_files": [
+        "work/experiments/seed4_generalization_drop_16000_17000/alignment.json",
+        "work/experiments/seed4_generalization_drop_16000_17000/metadata.json",
+        "work/experiments/seed4_generalization_drop_16000_17000/decoder.json",
+        "work/experiments/seed4_generalization_drop_16000_17000/decoder_whitened.json",
+        "work/experiments/seed4_generalization_drop_16000_17000/decoder_whitened_protocol.json"
+      ],
+      "outputs": [
+        "work/experiments/plot_whitened_smoke_test/heldout_readout_comparison.png",
+        "work/experiments/plot_whitened_smoke_test/heldout_readout_comparison.pdf"
+      ],
+      "notes": [
+        "Transports and decoder are fit using original training examples only; bars report untouched test examples.",
+        "Native model metrics are used for the first two bars when available.",
+        "The plotted fresh readout uses the converged exploratory whitening control selected by inner-validation CE; the initial decoder remains part of the recorded analysis.",
+        "Whitening preserves all 128 feature dimensions; 0 singular values were floored. Selected regularization: 0.0.",
+        "The original RMS-scaled decoder reached 88.0412% held-out accuracy without convergence; that optimization-limited fit is retained in decoder.json and is not an estimate of information capacity."
+      ]
+    }
+  ],
+  "matplotlib_version": "3.11.1"
+}

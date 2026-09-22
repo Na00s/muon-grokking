@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "healthy_checkpoint": "work/experiments/seed0_dense_capture/pre_event_train_healthy.pt",
+    "collapsed_checkpoint": "work/experiments/seed0_dense_capture/collapse.pt",
+    "healthy_step": 17490,
+    "collapsed_step": 17494,
+    "seed": 0,
+    "config": {
+      "modulus": 113,
+      "sequence_length": 3,
+      "d_model": 128,
+      "num_heads": 4,
+      "d_mlp": 512,
+      "num_layers": 1
+    },
+    "torch_version": "2.13.0",
+    "numpy_version": "2.5.2",
+    "native_healthy": {
+      "train": {
+        "loss": 1.7890729964165075e-07,
+        "loss64": 2.1254547891953665e-07,
+        "accuracy": 1.0,
+        "max_abs_logit": 894.506591796875
+      },
+      "heldout": {
+        "loss": 0.1368306577205658,
+        "loss64": 0.1368306881961454,
+        "accuracy": 0.9648730283029422,
+        "max_abs_logit": 916.9371948242188
+      }
+    },
+    "native_collapsed": {
+      "train": {
+        "loss": 2.8582468032836914,
+        "loss64": 2.8582467466967527,
+        "accuracy": 0.4825065274151436,
+        "max_abs_logit": 920.2140502929688
+      },
+      "heldout": {
+        "loss": 6.650341510772705,
+        "loss64": 6.65034168733314,
+        "accuracy": 0.3187157400156617,
+        "max_abs_logit": 939.7985229492188
+      }
+    },
+    "dataset_sha256": "0f7f64831ad70bf20dbcdca21f539d2fa2ca5ca629470d34f1458650bec0c8b5",
+    "protocol": "Raw final residuals. Original training examples only for fits and regularization validation. All test rows remain held out. No Fourier filtering."
+  },
+  "heldout": {
+    "healthy_original": {
+      "n": 8939,
+      "accuracy": 0.9648730283029422,
+      "correct_count": 8625,
+      "cross_entropy": 0.13683052857250633,
+      "margin_mean": 10.606285844621812,
+      "margin_median": 11.279018042441635,
+      "margin_min": -12.691145802058259,
+      "margin_p05": 0.8920820361566602,
+      "margin_p95": 18.985559556455577,
+      "positive_margin_fraction": 0.9648730283029422
+    },
+    "collapsed_original": {
+      "n": 8939,
+      "accuracy": 0.3187157400156617,
+      "correct_count": 2849,
+      "cross_entropy": 6.650342794949496,
+      "margin_mean": -3.9100124231059343,
+      "margin_median": -4.733632884161125,
+      "margin_min": -52.6755938114444,
+      "margin_p05": -19.039689889305453,
+      "margin_p95": 14.616656277561653,
+      "positive_margin_fraction": 0.3187157400156617
+    },
+    "healthy_readout_on_collapsed": {
+      "n": 8939,
+      "accuracy": 0.963642465600179,
+      "correct_count": 8614,
+      "cross_entropy": 0.14049543219797644,
+      "margin_mean": 10.526701039378331,
+      "margin_median": 11.111006467825064,
+      "margin_min": -12.91720839142613,
+      "margin_p05": 0.8087920215246869,
+      "margin_p95": 18.930371373211123,
+      "positive_margin_fraction": 0.963642465600179
+    },
+    "collapsed_readout_on_healthy": {
+      "n": 8939,
+      "accuracy": 0.3203937800648842,
+      "correct_count": 2864,
+      "cross_entropy": 6.660187991867286,
+      "margin_mean": -3.873372773947253,
+      "margin_median": -4.7122031584516435,
+      "margin_min": -50.755480767393465,
+      "margin_p05": -19.217410912656895,
+      "margin_p95": 14.822899222876822,
+      "positive_margin_fraction": 0.3203937800648842
+    },
+    "orthogonal_transport": {
+      "n": 8939,
+      "accuracy": 0.9648730283029422,
+      "correct_count": 8625,
+      "cross_entropy": 0.13771164444873826,
+      "margin_mean": 10.568968888385411,
+      "margin_median": 11.227214009541512,
+      "margin_min": -13.02300718913807,
+      "margin_p05": 0.8815614143808375,
+      "margin_p95": 18.970050108634133,
+      "positive_margin_fraction": 0.9648730283029422
+    },
+    "linear_transport": {
+      "n": 8939,
+      "accuracy": 0.9644255509564829,
+      "correct_count": 8621,
+      "cross_entropy": 0.13702033181591738,
+      "margin_mean": 10.571908331215603,
+      "margin_median": 11.24952924423144,
+      "margin_min": -12.779952302983133,
+      "margin_p05": 0.9081241514317528,
+      "margin_p95": 18.954205818795188,
+      "positive_margin_fraction": 0.9644255509564829
+    },
+    "inverse_forward_transport": {
+      "n": 8939,
+      "accuracy": 0.9645374202930976,
+      "correct_count": 8622,
+      "cross_entropy": 0.1368972710345212,
+      "margin_mean": 10.58142777725397,
+      "margin_median": 11.260891534766074,
+      "margin_min": -12.785571092156374,
+      "margin_p05": 0.9052297793841604,
+      "margin_p95": 18.961477821870737,
+      "positive_margin_fraction": 0.9645374202930976
+    }
+  }
+}

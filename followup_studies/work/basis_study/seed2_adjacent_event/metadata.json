@@ -1,0 +1,50 @@
+{
+  "healthy_checkpoint": "work/basis_study/seed2_baseline/previous.pt",
+  "collapsed_checkpoint": "work/basis_study/seed2_baseline/collapse.pt",
+  "healthy_step": 18068,
+  "collapsed_step": 18069,
+  "seed": 2,
+  "config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "torch_version": "2.13.0",
+  "numpy_version": "2.5.2",
+  "native_healthy": {
+    "train": {
+      "loss": 1.5738753518235171e-06,
+      "loss64": 1.611100785296706e-06,
+      "accuracy": 1.0,
+      "max_abs_logit": 639.4703979492188
+    },
+    "heldout": {
+      "loss": 0.0008253774140030146,
+      "loss64": 0.0008254229553610735,
+      "accuracy": 0.9998881306633851,
+      "max_abs_logit": 639.3181762695312
+    }
+  },
+  "native_collapsed": {
+    "train": {
+      "loss": 17.980005264282227,
+      "loss64": 17.98000731592894,
+      "accuracy": 0.009921671018276762,
+      "max_abs_logit": 674.2955322265625
+    },
+    "heldout": {
+      "loss": 20.748191833496094,
+      "loss64": 20.74819521549187,
+      "accuracy": 0.00928515493903121,
+      "max_abs_logit": 666.6303100585938
+    }
+  },
+  "dataset_sha256": "65b219adf93d5a6fb590fda6c1ba9982161617f47f2dc68a7a7678cc29c2528b",
+  "protocol": "Raw final residuals. Original training examples only for fits and regularization validation. All test rows remain held out. No Fourier filtering.",
+  "reference_role": "Immediately preceding update, irrespective of accuracy",
+  "step_interval": 1,
+  "selection_note": "Fresh seeds 1, 2, 3 declared together before training. Preceding-step references may already have degraded generalization."
+}

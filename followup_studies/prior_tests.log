@@ -1,0 +1,24 @@
+test_centered_metrics_expose_constant_dominance (test_alignment_core.AlignmentSanityTests.test_centered_metrics_expose_constant_dominance) ... ok
+test_destroyed_label_feature_cannot_be_rescued (test_alignment_core.AlignmentSanityTests.test_destroyed_label_feature_cannot_be_rescued) ... ok
+test_heldout_values_cannot_change_fit_or_penalty_selection (test_alignment_core.AlignmentSanityTests.test_heldout_values_cannot_change_fit_or_penalty_selection) ... ok
+test_identity (test_alignment_core.AlignmentSanityTests.test_identity) ... ok
+test_masks_prevent_leakage (test_alignment_core.AlignmentSanityTests.test_masks_prevent_leakage) ... ok
+test_metrics_handle_offsets_ties_and_large_logits (test_alignment_core.AlignmentSanityTests.test_metrics_handle_offsets_ties_and_large_logits) ... ok
+test_planted_general_transforms (test_alignment_core.AlignmentSanityTests.test_planted_general_transforms) ... ok
+test_planted_orthogonal_transform_and_coherent_gauge (test_alignment_core.AlignmentSanityTests.test_planted_orthogonal_transform_and_coherent_gauge) ... ok
+test_rank_deficient_zero_source_stays_finite (test_alignment_core.AlignmentSanityTests.test_rank_deficient_zero_source_stays_finite) ... ok
+test_regularization_changes_ill_conditioned_fit (test_alignment_core.AlignmentSanityTests.test_regularization_changes_ill_conditioned_fit) ... ok
+test_shuffled_fitting_correspondence_fails_on_heldout (test_alignment_core.AlignmentSanityTests.test_shuffled_fitting_correspondence_fails_on_heldout) ... ok
+test_exact_gradient_with_regularization (test_decoder_probe.DecoderProbeTests.test_exact_gradient_with_regularization) ... ok
+test_heldout_data_do_not_change_training_or_selection (test_decoder_probe.DecoderProbeTests.test_heldout_data_do_not_change_training_or_selection) ... ok
+test_invalid_validation_mask_rejected (test_decoder_probe.DecoderProbeTests.test_invalid_validation_mask_rejected) ... ok
+test_iteration_exhaustion_is_reported_honestly (test_decoder_probe.DecoderProbeTests.test_iteration_exhaustion_is_reported_honestly) ... ok
+test_saturated_target_retains_small_gradient (test_decoder_probe.DecoderProbeTests.test_saturated_target_retains_small_gradient) ... ok
+test_separable_recovery_and_destroyed_feature (test_decoder_probe.DecoderProbeTests.test_separable_recovery_and_destroyed_feature) ... ok
+test_whitening_heldout_independence_and_full_dimension (test_decoder_probe.DecoderProbeTests.test_whitening_heldout_independence_and_full_dimension) ... ok
+test_whitening_preserves_logits_and_gradient_mapping (test_decoder_probe.DecoderProbeTests.test_whitening_preserves_logits_and_gradient_mapping) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.078s
+
+OK

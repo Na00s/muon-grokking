@@ -1,0 +1,49 @@
+{
+  "figures": [
+    {
+      "figure": "training_overview",
+      "source_files": [
+        "work/experiments/seed4_original/trajectory.csv",
+        "work/experiments/seed0_original/trajectory.csv"
+      ],
+      "outputs": [
+        "work/experiments/plot_smoke_test/training_overview.png",
+        "work/experiments/plot_smoke_test/training_overview.pdf"
+      ],
+      "notes": [
+        "Accuracy spans 0-100%. Each curve starts at its first saved evaluation."
+      ]
+    },
+    {
+      "figure": "heldout_readout_comparison",
+      "source_files": [
+        "work/experiments/seed4_healthy_temporal_6000_7000/alignment.json",
+        "work/experiments/seed4_healthy_temporal_6000_7000/metadata.json",
+        "work/experiments/seed4_healthy_temporal_6000_7000/decoder.json"
+      ],
+      "outputs": [
+        "work/experiments/plot_smoke_test/heldout_readout_comparison.png",
+        "work/experiments/plot_smoke_test/heldout_readout_comparison.pdf"
+      ],
+      "notes": [
+        "Transports and decoder are fit using original training examples only; bars report untouched test examples.",
+        "Native model metrics are used for the first two bars when available."
+      ]
+    },
+    {
+      "figure": "precision_branch_trajectories",
+      "source_files": [
+        "work/experiments/precision_runner_verified_allarms/trajectory.csv"
+      ],
+      "outputs": [
+        "work/experiments/plot_smoke_test/precision_branch_trajectories.png",
+        "work/experiments/plot_smoke_test/precision_branch_trajectories.pdf"
+      ],
+      "notes": [
+        "Accuracy spans 0-100%. Different sampling intervals are retained.",
+        "NS denotes Newton-Schulz orthogonalization; accurate CE denotes the cancellation-resistant cross-entropy implementation."
+      ]
+    }
+  ],
+  "matplotlib_version": "3.11.1"
+}

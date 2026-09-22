@@ -1,0 +1,271 @@
+{
+  "metadata": {
+    "healthy_checkpoint": "work/basis_study/seed2_baseline/healthy.pt",
+    "collapsed_checkpoint": "work/basis_study/seed2_baseline/collapse.pt",
+    "healthy_step": 18000,
+    "collapsed_step": 18069,
+    "seed": 2,
+    "config": {
+      "modulus": 113,
+      "sequence_length": 3,
+      "d_model": 128,
+      "num_heads": 4,
+      "d_mlp": 512,
+      "num_layers": 1
+    },
+    "torch_version": "2.13.0",
+    "numpy_version": "2.5.2",
+    "native_healthy": {
+      "train": {
+        "loss": 1.5631044902875146e-07,
+        "loss64": 1.990769481059792e-07,
+        "accuracy": 1.0,
+        "max_abs_logit": 479.7552490234375
+      },
+      "heldout": {
+        "loss": 0.00017197351553477347,
+        "loss64": 0.00017202323331007744,
+        "accuracy": 1.0,
+        "max_abs_logit": 478.9590148925781
+      }
+    },
+    "native_collapsed": {
+      "train": {
+        "loss": 17.980005264282227,
+        "loss64": 17.98000731592894,
+        "accuracy": 0.009921671018276762,
+        "max_abs_logit": 674.2955322265625
+      },
+      "heldout": {
+        "loss": 20.748191833496094,
+        "loss64": 20.74819521549187,
+        "accuracy": 0.00928515493903121,
+        "max_abs_logit": 666.6303100585938
+      }
+    },
+    "dataset_sha256": "65b219adf93d5a6fb590fda6c1ba9982161617f47f2dc68a7a7678cc29c2528b",
+    "protocol": "Raw final residuals. Original training examples only for fits and regularization validation. All test rows remain held out. No Fourier filtering."
+  },
+  "heldout": {
+    "healthy_original": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0001720247194042223,
+      "margin_mean": 14.07637946465509,
+      "margin_median": 14.307437512073705,
+      "margin_min": 3.264212022742072,
+      "margin_p05": 8.964539612101884,
+      "margin_p95": 17.93437627275079,
+      "positive_margin_fraction": 1.0
+    },
+    "collapsed_original": {
+      "n": 8939,
+      "accuracy": 0.00928515493903121,
+      "correct_count": 83,
+      "cross_entropy": 20.7481986820696,
+      "margin_mean": -20.30496731770887,
+      "margin_median": -20.268712723105637,
+      "margin_min": -69.03101625934164,
+      "margin_p05": -31.618935380811624,
+      "margin_p95": -10.53144282543776,
+      "positive_margin_fraction": 0.00928515493903121
+    },
+    "healthy_readout_on_collapsed": {
+      "n": 8939,
+      "accuracy": 0.7807361002349256,
+      "correct_count": 6979,
+      "cross_entropy": 1.1626779492832628,
+      "margin_mean": 5.0487385455484795,
+      "margin_median": 5.4081764567945925,
+      "margin_min": -20.537563665378514,
+      "margin_p05": -7.2531440036530395,
+      "margin_p95": 15.565766298931683,
+      "positive_margin_fraction": 0.7807361002349256
+    },
+    "collapsed_readout_on_healthy": {
+      "n": 8939,
+      "accuracy": 0.026736771450945294,
+      "correct_count": 239,
+      "cross_entropy": 18.324466152968974,
+      "margin_mean": -17.896615059757213,
+      "margin_median": -18.10883151020721,
+      "margin_min": -64.38914281476775,
+      "margin_p05": -32.847214977841055,
+      "margin_p95": -3.453743183230459,
+      "positive_margin_fraction": 0.026736771450945294
+    },
+    "orthogonal_transport": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0003735645343918064,
+      "margin_mean": 13.399974712493957,
+      "margin_median": 13.697301005908457,
+      "margin_min": 2.4511601146071484,
+      "margin_p05": 8.207969321419881,
+      "margin_p95": 17.352625070664043,
+      "positive_margin_fraction": 1.0
+    },
+    "linear_transport": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0003375497453402453,
+      "margin_mean": 13.415843371578585,
+      "margin_median": 13.65480710641117,
+      "margin_min": 2.6296443501781255,
+      "margin_p05": 8.258589974760502,
+      "margin_p95": 17.35562458953043,
+      "positive_margin_fraction": 1.0
+    },
+    "inverse_forward_transport": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0003197401301016141,
+      "margin_mean": 13.534790651607297,
+      "margin_median": 13.78440416566741,
+      "margin_min": 2.641638758701788,
+      "margin_p05": 8.340806019099409,
+      "margin_p95": 17.52054861493075,
+      "positive_margin_fraction": 1.0
+    }
+  }
+}
+{
+  "metadata": {
+    "healthy_checkpoint": "work/basis_study/seed2_baseline/previous.pt",
+    "collapsed_checkpoint": "work/basis_study/seed2_baseline/collapse.pt",
+    "healthy_step": 18068,
+    "collapsed_step": 18069,
+    "seed": 2,
+    "config": {
+      "modulus": 113,
+      "sequence_length": 3,
+      "d_model": 128,
+      "num_heads": 4,
+      "d_mlp": 512,
+      "num_layers": 1
+    },
+    "torch_version": "2.13.0",
+    "numpy_version": "2.5.2",
+    "native_healthy": {
+      "train": {
+        "loss": 1.5738753518235171e-06,
+        "loss64": 1.611100785296706e-06,
+        "accuracy": 1.0,
+        "max_abs_logit": 639.4703979492188
+      },
+      "heldout": {
+        "loss": 0.0008253774140030146,
+        "loss64": 0.0008254229553610735,
+        "accuracy": 0.9998881306633851,
+        "max_abs_logit": 639.3181762695312
+      }
+    },
+    "native_collapsed": {
+      "train": {
+        "loss": 17.980005264282227,
+        "loss64": 17.98000731592894,
+        "accuracy": 0.009921671018276762,
+        "max_abs_logit": 674.2955322265625
+      },
+      "heldout": {
+        "loss": 20.748191833496094,
+        "loss64": 20.74819521549187,
+        "accuracy": 0.00928515493903121,
+        "max_abs_logit": 666.6303100585938
+      }
+    },
+    "dataset_sha256": "65b219adf93d5a6fb590fda6c1ba9982161617f47f2dc68a7a7678cc29c2528b",
+    "protocol": "Raw final residuals. Original training examples only for fits and regularization validation. All test rows remain held out. No Fourier filtering."
+  },
+  "heldout": {
+    "healthy_original": {
+      "n": 8939,
+      "accuracy": 0.9998881306633851,
+      "correct_count": 8938,
+      "cross_entropy": 0.0008254265050507073,
+      "margin_mean": 13.42006214429098,
+      "margin_median": 13.663383611131735,
+      "margin_min": -0.6901646753005934,
+      "margin_p05": 7.836285137923915,
+      "margin_p95": 17.69534583174079,
+      "positive_margin_fraction": 0.9998881306633851
+    },
+    "collapsed_original": {
+      "n": 8939,
+      "accuracy": 0.00928515493903121,
+      "correct_count": 83,
+      "cross_entropy": 20.7481986820696,
+      "margin_mean": -20.30496731770887,
+      "margin_median": -20.268712723105637,
+      "margin_min": -69.03101625934164,
+      "margin_p05": -31.618935380811624,
+      "margin_p95": -10.53144282543776,
+      "positive_margin_fraction": 0.00928515493903121
+    },
+    "healthy_readout_on_collapsed": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0004686878769458458,
+      "margin_mean": 13.467157882654998,
+      "margin_median": 13.742291328951296,
+      "margin_min": 1.828794942721288,
+      "margin_p05": 7.939021113239028,
+      "margin_p95": 17.740537263494005,
+      "positive_margin_fraction": 1.0
+    },
+    "collapsed_readout_on_healthy": {
+      "n": 8939,
+      "accuracy": 0.010068240295335049,
+      "correct_count": 90,
+      "cross_entropy": 19.11523471476137,
+      "margin_mean": -18.684647367946763,
+      "margin_median": -18.6235683069267,
+      "margin_min": -65.7140646317464,
+      "margin_p05": -30.05439043533106,
+      "margin_p95": -8.855102472952021,
+      "positive_margin_fraction": 0.010068240295335049
+    },
+    "orthogonal_transport": {
+      "n": 8939,
+      "accuracy": 0.9998881306633851,
+      "correct_count": 8938,
+      "cross_entropy": 0.0008477348149785748,
+      "margin_mean": 13.402943004928714,
+      "margin_median": 13.654798952966871,
+      "margin_min": -0.7704422775790363,
+      "margin_p05": 7.83373594209304,
+      "margin_p95": 17.673266217008916,
+      "positive_margin_fraction": 0.9998881306633851
+    },
+    "linear_transport": {
+      "n": 8939,
+      "accuracy": 0.9998881306633851,
+      "correct_count": 8938,
+      "cross_entropy": 0.0008699450615182111,
+      "margin_mean": 13.420141706158143,
+      "margin_median": 13.667621144561394,
+      "margin_min": -0.8182089551875151,
+      "margin_p05": 7.840769497092731,
+      "margin_p95": 17.696150147039738,
+      "positive_margin_fraction": 0.9998881306633851
+    },
+    "inverse_forward_transport": {
+      "n": 8939,
+      "accuracy": 0.9998881306633851,
+      "correct_count": 8938,
+      "cross_entropy": 0.0008677915584053396,
+      "margin_mean": 13.422439812008454,
+      "margin_median": 13.670575304486533,
+      "margin_min": -0.8119008849037073,
+      "margin_p05": 7.8437179769841014,
+      "margin_p95": 17.699067060381275,
+      "positive_margin_fraction": 0.9998881306633851
+    }
+  }
+}
+{"seed": 2, "phase": "event", "pairs": ["work/basis_study/seed2_first_event", "work/basis_study/seed2_adjacent_event"]}

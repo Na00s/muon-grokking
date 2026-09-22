@@ -1,0 +1,20 @@
+{
+  "purpose": "Optimization conditioning sensitivity control after the original RMS probe failed to converge; exploratory, not a replacement primary analysis.",
+  "feature_source": "work/experiments/seed4_generalization_drop_16000_17000/features.npz",
+  "feature_transform": "uncentered full-dimensional SVD whitening",
+  "relative_singular_floor": 1e-06,
+  "native_feature_dtype": "float32",
+  "initialization": "zero",
+  "regularization_grid": [
+    0.0,
+    1e-08,
+    1e-06,
+    0.0001,
+    0.01
+  ],
+  "selection": "original-training inner-validation cross-entropy; test rows untouched",
+  "validation_seed": 0,
+  "max_iter": 500,
+  "refit_max_iter": 1000,
+  "extra_control": "Unregularized whitened fit to separate preconditioning from changes in the L2 prior; reuse the CV fit if its selected lambda is zero."
+}

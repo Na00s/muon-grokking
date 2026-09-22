@@ -1,0 +1,125 @@
+{
+  "checkpoint": "work/experiments/seed4_original/step_016000.pt",
+  "step": 16000,
+  "seed": 4,
+  "description": "Both loss calculations see exactly the same frozen float32 logits. Float64 reference promotes these logits. Parameter gradients use separate deterministic float32 forward passes with identical weights.",
+  "loss_gradient": {
+    "stock32": {
+      "loss": 1.5313567303110176e-07,
+      "zero_target_gradient_fraction": 0.26527415143603134,
+      "zero_loss_fraction": 0.26527415143603134,
+      "zero_loss_and_zero_target_gradient_fraction": 0.26527415143603134,
+      "zero_target_but_nonzero_gradient_fraction": 0.26527415143603134,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 7.894634524776352e-11,
+      "gradient_vs_stable64": {
+        "norm": 3.3667709659380013e-09,
+        "reference_norm": 3.988754391697956e-09,
+        "relative_l2_error": 0.3202217688086836,
+        "cosine": 0.9536609021117248
+      }
+    },
+    "stable32": {
+      "loss": 1.930225579371836e-07,
+      "zero_target_gradient_fraction": 0.0,
+      "zero_loss_fraction": 0.0,
+      "zero_loss_and_zero_target_gradient_fraction": 0.0,
+      "zero_target_but_nonzero_gradient_fraction": 0.0,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 2.2376572293429284e-17,
+      "gradient_vs_stable64": {
+        "norm": 3.988754466108769e-09,
+        "reference_norm": 3.988754391697956e-09,
+        "relative_l2_error": 6.119246586472098e-08,
+        "cosine": 1.0000000000000409
+      }
+    },
+    "stock64": {
+      "loss": 1.9302256296581687e-07,
+      "zero_target_gradient_fraction": 0.0,
+      "zero_loss_fraction": 0.0,
+      "zero_loss_and_zero_target_gradient_fraction": 0.0,
+      "zero_target_but_nonzero_gradient_fraction": 0.0,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 5.360490782599384e-19,
+      "gradient_vs_stable64": {
+        "norm": 3.988754391663121e-09,
+        "reference_norm": 3.988754391697956e-09,
+        "relative_l2_error": 1.4877176710935912e-09,
+        "cosine": 1.0000000000000502
+      }
+    },
+    "stable64": {
+      "loss": 1.9302256296296772e-07,
+      "zero_target_gradient_fraction": 0.0,
+      "zero_loss_fraction": 0.0,
+      "zero_loss_and_zero_target_gradient_fraction": 0.0,
+      "zero_target_but_nonzero_gradient_fraction": 0.0,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 9.04728794979874e-26,
+      "gradient_vs_stable64": {
+        "norm": 3.988754391697956e-09,
+        "reference_norm": 3.988754391697956e-09,
+        "relative_l2_error": 0.0,
+        "cosine": 1.0000000000000502
+      }
+    }
+  },
+  "stock32_parameter_gradient_vs_stable32": {
+    "token_embedding.weight": {
+      "norm": 9.135563981048633e-06,
+      "reference_norm": 2.413707621081426e-06,
+      "relative_l2_error": 3.7032919258766794,
+      "cosine": 0.21280166884245022
+    },
+    "position_embedding.weight": {
+      "norm": 1.4966323278013354e-05,
+      "reference_norm": 2.2356279009506533e-06,
+      "relative_l2_error": 6.865051508952438,
+      "cosine": -0.09807565329148216
+    },
+    "transformer_blocks.0.attention.qkv_projection.weight": {
+      "norm": 1.2551685270916152e-06,
+      "reference_norm": 1.454859918167507e-07,
+      "relative_l2_error": 8.767135909862903,
+      "cosine": -0.08289404930983972
+    },
+    "transformer_blocks.0.attention.output_projection.weight": {
+      "norm": 1.8518245042751978e-06,
+      "reference_norm": 1.9753055309339088e-07,
+      "relative_l2_error": 9.641311175415243,
+      "cosine": -0.2168868721886486
+    },
+    "transformer_blocks.0.mlp.input_projection.weight": {
+      "norm": 9.036828914760425e-07,
+      "reference_norm": 2.705315411279291e-07,
+      "relative_l2_error": 3.589062794902109,
+      "cosine": -0.10823802980660241
+    },
+    "transformer_blocks.0.mlp.output_projection.weight": {
+      "norm": 2.3654528248835113e-06,
+      "reference_norm": 3.5369148421559484e-07,
+      "relative_l2_error": 6.583844887639271,
+      "cosine": 0.17800626893903795
+    },
+    "unembedding.weight": {
+      "norm": 6.955330880443664e-05,
+      "reference_norm": 4.3306059294461825e-05,
+      "relative_l2_error": 1.2668025084494674,
+      "cosine": 0.6147634940402324
+    }
+  },
+  "readout_class_common_gradient": {
+    "stock32": {
+      "class_common_gradient_norm": 4.912636242612695e-05,
+      "total_gradient_norm": 6.955330880443664e-05,
+      "class_common_gradient_fraction": 0.7063123706200055
+    },
+    "stable32": {
+      "class_common_gradient_norm": 2.14274507868462e-11,
+      "total_gradient_norm": 4.3306059294461825e-05,
+      "class_common_gradient_fraction": 4.947910554767664e-07
+    }
+  },
+  "common_mode_note": "Exact softmax cross-entropy is invariant to a shared shift of all class logits, so its readout gradient has zero class-common component up to arithmetic error."
+}

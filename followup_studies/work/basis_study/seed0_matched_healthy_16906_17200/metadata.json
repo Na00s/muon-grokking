@@ -1,0 +1,40 @@
+{
+  "seed": 0,
+  "first_checkpoint": "work/basis_study/seed0_matched_healthy_start_replay/final.pt",
+  "second_checkpoint": "work/experiments/seed0_dense_capture/pre_event_joint_healthy.pt",
+  "first_step": 16906,
+  "second_step": 17200,
+  "step_interval": 294,
+  "reference_role": "matched_294_update_healthy_endpoints",
+  "first_metrics": {
+    "train": {
+      "loss": 2.0657753907471488e-07,
+      "loss64": 2.6329253951215235e-07,
+      "accuracy": 1.0,
+      "max_abs_logit": 85.31998443603516
+    },
+    "heldout": {
+      "loss": 0.006109165493398905,
+      "loss64": 0.006109212323740835,
+      "accuracy": 0.9991050453070813,
+      "max_abs_logit": 85.38719940185547
+    }
+  },
+  "second_metrics": {
+    "train": {
+      "loss": 1.6353148168946063e-07,
+      "loss64": 2.1879336738266347e-07,
+      "accuracy": 1.0,
+      "max_abs_logit": 339.0486755371094
+    },
+    "heldout": {
+      "loss": 0.043356072157621384,
+      "loss64": 0.043356111653456965,
+      "accuracy": 0.9911623224074281,
+      "max_abs_logit": 339.38323974609375
+    }
+  },
+  "healthy_endpoint_criterion": "Both test accuracies >=99%",
+  "dataset_sha256": "0f7f64831ad70bf20dbcdca21f539d2fa2ca5ca629470d34f1458650bec0c8b5",
+  "note": "H0 denotes the first checkpoint. A preceding-step checkpoint may already have poor generalization. Geometry field names containing healthy retain the mathematical reference-role convention only."
+}

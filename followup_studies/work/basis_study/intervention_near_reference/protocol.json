@@ -1,0 +1,16 @@
+{
+  "status": "Supplementary reference-time sensitivity, specified after examining primary head interventions",
+  "reason": "Primary seed0 analysis used the last measured joint accuracy >=99% checkpoint at 17200. A later saved checkpoint had 100% training accuracy at 17490, four updates before the captured failure. Measure this reference to assess temporal-gap sensitivity.",
+  "selection": "Use the already saved pre_event_train_healthy.pt, with heldout accuracy reported regardless of value",
+  "changes": "Checkpoint reference only; same train-only fits, intervention definitions, and heldout data",
+  "feature_command": [
+    "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+    "work/experiments/run_alignment.py",
+    "--healthy",
+    "work/experiments/seed0_dense_capture/pre_event_train_healthy.pt",
+    "--collapsed",
+    "work/experiments/seed0_dense_capture/collapse.pt",
+    "--out",
+    "work/basis_study/intervention_near_reference/seed0_near_features"
+  ]
+}

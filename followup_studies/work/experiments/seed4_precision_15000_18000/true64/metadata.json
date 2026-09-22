@@ -1,0 +1,93 @@
+{
+  "arm": "true64",
+  "source_checkpoint": "work/experiments/seed4_original/step_015000.pt",
+  "source_checkpoint_sha256": "5ae288433cfe02133d27d52103a78154399400f693b8be576defe59202897733",
+  "source_checkpoint_step": 15000,
+  "source_repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "source_torch_version": "2.13.0",
+  "start_step": 15000,
+  "requested_steps": 3000,
+  "requested_end_step": 18000,
+  "eval_every": 10,
+  "save_every": 100,
+  "checkpoint_grid": "Global step multiples, plus start.pt and final.pt",
+  "seed": 4,
+  "model_config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "data_config": {
+    "modulus": 113,
+    "train_fraction": 0.3,
+    "operation": "addition",
+    "seed": 4
+  },
+  "train_examples": 3830,
+  "test_examples": 8939,
+  "parameter_dtype": "torch.float64",
+  "training_loss": "accurate_cross_entropy",
+  "ns_compute_dtype": "torch.float64",
+  "muon_class": "PrecisionMuon",
+  "optimizer_hyperparameters": {
+    "muon": [
+      {
+        "learning_rate": 0.03,
+        "momentum": 0.95,
+        "weight_decay": 0.1,
+        "newton_schulz_steps": 5,
+        "nesterov": true
+      }
+    ],
+    "auxiliary_adamw": [
+      {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ],
+    "unembedding_adamw": [
+      {
+        "lr": 0.00025,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ]
+  },
+  "device": "cpu",
+  "threads": 1,
+  "interop_threads": 1,
+  "deterministic_algorithms": true,
+  "torch_version": "2.13.0",
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:24:52) [Clang 20.1.8 ]",
+  "created_utc": "2026-09-22T18:33:39.664547+00:00",
+  "runner_sha256": "871e24dd7471fcdff5c4e60880481def4a2459833518af7e570a2b88ba825021",
+  "original_runner_sha256": "0a175d36782f58cbc18f44c50e63a6a2dfa75df96dceff0f8e9cb7aa53291ab9",
+  "numeric_helper_sha256": "c34766fea23a2daae7754aff837c41a8b48e0ed3f26702d776d914d9c4c08656",
+  "note": "One arm resumed from the identical saved model, optimizer, and RNG state; all three saved optimizer groups retained."
+}

@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-09-22T19:20:29.751745+00:00",
+  "status": "Fixed intervention recipe applied to a newly supplied feature pair",
+  "name": "seed3_adjacent",
+  "source_pair": "work/basis_study/seed3_adjacent_event",
+  "reference_role": "Immediately preceding update, irrespective of accuracy",
+  "fitting": "Original training rows only; labels unused",
+  "heads": "Original, old reference head, orthogonal transport, inverse unregularized forward map, backward OLS transport, norm-matched old head, healthy-logit distillation, three GL-size random directions",
+  "specificity": "Ten orthogonal-size Gaussian directions plus opposite orthogonal correction",
+  "training": "No continuation training"
+}

@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "accuracy_units": "fractions",
+  "event_probes": {
+    "seed4_dense_event": {
+      "seed": 4,
+      "healthy_step": 16050,
+      "evaluated_step": 16056,
+      "native_train": 0.7007832898172324,
+      "native_test": 0.66327329678935,
+      "readout_test_accuracies": {
+        "healthy_original": 1.0,
+        "collapsed_original": 0.66327329678935,
+        "healthy_readout_on_collapsed": 0.9980982212775478,
+        "collapsed_readout_on_healthy": 0.6825148226871015,
+        "orthogonal_transport": 0.9998881306633851,
+        "linear_transport": 0.9998881306633851,
+        "inverse_forward_transport": 0.9998881306633851
+      },
+      "whitened_probes": {
+        "healthy": {
+          "accuracy": 1.0,
+          "converged": true,
+          "selected_regularization": 0.0
+        },
+        "collapsed": {
+          "accuracy": 1.0,
+          "converged": true,
+          "selected_regularization": 0.0
+        }
+      }
+    },
+    "seed4_peak_event": {
+      "seed": 4,
+      "healthy_step": 16050,
+      "evaluated_step": 16060,
+      "native_train": 0.21775456919060052,
+      "native_test": 0.1813401946526457,
+      "readout_test_accuracies": {
+        "healthy_original": 1.0,
+        "collapsed_original": 0.1813401946526457,
+        "healthy_readout_on_collapsed": 0.9961964425550957,
+        "collapsed_readout_on_healthy": 0.12540552634522878,
+        "orthogonal_transport": 0.9994406533169258,
+        "linear_transport": 0.9997762613267703,
+        "inverse_forward_transport": 0.9997762613267703
+      },
+      "whitened_probes": {
+        "healthy": {
+          "accuracy": 1.0,
+          "converged": true,
+          "selected_regularization": 0.0
+        },
+        "collapsed": {
+          "accuracy": 1.0,
+          "converged": true,
+          "selected_regularization": 0.0
+        }
+      }
+    },
+    "seed0_dense_event": {
+      "seed": 0,
+      "healthy_step": 17200,
+      "evaluated_step": 17494,
+      "native_train": 0.4825065274151436,
+      "native_test": 0.3187157400156617,
+      "readout_test_accuracies": {
+        "healthy_original": 0.9911623224074281,
+        "collapsed_original": 0.3187157400156617,
+        "healthy_readout_on_collapsed": 0.14050788678823134,
+        "collapsed_readout_on_healthy": 0.08681060521311108,
+        "orthogonal_transport": 0.9551403960174516,
+        "linear_transport": 0.9540217026513033,
+        "inverse_forward_transport": 0.9624119028974158
+      },
+      "whitened_probes": {
+        "healthy": {
+          "accuracy": 0.9950777491889473,
+          "converged": true,
+          "selected_regularization": 0.0
+        },
+        "collapsed": {
+          "accuracy": 0.987246895625909,
+          "converged": true,
+          "selected_regularization": 0.0
+        }
+      }
+    },
+    "seed4_generalization_drop_16000_17000": {
+      "seed": 4,
+      "healthy_step": 16000,
+      "evaluated_step": 17000,
+      "native_train": 1.0,
+      "native_test": 0.843718536749077,
+      "readout_test_accuracies": {
+        "healthy_original": 1.0,
+        "collapsed_original": 0.843718536749077,
+        "healthy_readout_on_collapsed": 0.008166461572882873,
+        "collapsed_readout_on_healthy": 0.06342991386061081,
+        "orthogonal_transport": 0.5149345564380803,
+        "linear_transport": 0.966327329678935,
+        "inverse_forward_transport": 0.07159637543349368
+      },
+      "whitened_probes": {
+        "healthy": {
+          "accuracy": 1.0,
+          "converged": true,
+          "selected_regularization": 0.0
+        },
+        "collapsed": {
+          "accuracy": 0.9995525226535407,
+          "converged": true,
+          "selected_regularization": 0.0
+        }
+      }
+    }
+  },
+  "precision_controls": {
+    "original32": {
+      "start_step": 15000,
+      "end_step": 18000,
+      "eval_every": 10,
+      "minimum_train_accuracy": 0.21775456919060052,
+      "minimum_test_accuracy": 0.1813401946526457,
+      "evaluation_count": 301
+    },
+    "stable32": {
+      "start_step": 15000,
+      "end_step": 18000,
+      "eval_every": 10,
+      "minimum_train_accuracy": 1.0,
+      "minimum_test_accuracy": 1.0,
+      "evaluation_count": 301
+    },
+    "model64": {
+      "start_step": 15000,
+      "end_step": 18000,
+      "eval_every": 10,
+      "minimum_train_accuracy": 1.0,
+      "minimum_test_accuracy": 1.0,
+      "evaluation_count": 301
+    },
+    "true64": {
+      "start_step": 15000,
+      "end_step": 18000,
+      "eval_every": 10,
+      "minimum_train_accuracy": 1.0,
+      "minimum_test_accuracy": 1.0,
+      "evaluation_count": 301
+    }
+  },
+  "baseline_completions": {
+    "0": {
+      "last_step": 18000,
+      "collapse_step": 17500,
+      "elapsed_seconds": 1296.7608857499436
+    },
+    "4": {
+      "last_step": 30000,
+      "collapse_step": null,
+      "elapsed_seconds": 1996.6927193750162
+    }
+  },
+  "prospective_accurate_ce": {
+    "start_step": 6000,
+    "end_step": 20000,
+    "eval_every": 100,
+    "minimum_train_accuracy": 1.0,
+    "minimum_test_accuracy": 0.9984338292873923
+  },
+  "precision_evidence": {
+    "checkpoint": "work/experiments/seed4_original/step_016000.pt",
+    "step": 16000,
+    "seed": 4,
+    "description": "Both loss calculations see exactly the same frozen float32 logits. Float64 reference promotes these logits. Parameter gradients use separate deterministic float32 forward passes with identical weights.",
+    "loss_gradient": {
+      "stock32": {
+        "loss": 1.5313567303110176e-07,
+        "zero_target_gradient_fraction": 0.26527415143603134,
+        "zero_loss_fraction": 0.26527415143603134,
+        "zero_loss_and_zero_target_gradient_fraction": 0.26527415143603134,
+        "zero_target_but_nonzero_gradient_fraction": 0.26527415143603134,
+        "correct_examples": 3830,
+        "max_absolute_row_gradient_sum": 7.894634524776352e-11,
+        "gradient_vs_stable64": {
+          "norm": 3.3667709659380013e-09,
+          "reference_norm": 3.988754391697956e-09,
+          "relative_l2_error": 0.3202217688086836,
+          "cosine": 0.9536609021117248
+        }
+      },
+      "stable32": {
+        "loss": 1.930225579371836e-07,
+        "zero_target_gradient_fraction": 0.0,
+        "zero_loss_fraction": 0.0,
+        "zero_loss_and_zero_target_gradient_fraction": 0.0,
+        "zero_target_but_nonzero_gradient_fraction": 0.0,
+        "correct_examples": 3830,
+        "max_absolute_row_gradient_sum": 2.2376572293429284e-17,
+        "gradient_vs_stable64": {
+          "norm": 3.988754466108769e-09,
+          "reference_norm": 3.988754391697956e-09,
+          "relative_l2_error": 6.119246586472098e-08,
+          "cosine": 1.0000000000000409
+        }
+      },
+      "stock64": {
+        "loss": 1.9302256296581687e-07,
+        "zero_target_gradient_fraction": 0.0,
+        "zero_loss_fraction": 0.0,
+        "zero_loss_and_zero_target_gradient_fraction": 0.0,
+        "zero_target_but_nonzero_gradient_fraction": 0.0,
+        "correct_examples": 3830,
+        "max_absolute_row_gradient_sum": 5.360490782599384e-19,
+        "gradient_vs_stable64": {
+          "norm": 3.988754391663121e-09,
+          "reference_norm": 3.988754391697956e-09,
+          "relative_l2_error": 1.4877176710935912e-09,
+          "cosine": 1.0000000000000502
+        }
+      },
+      "stable64": {
+        "loss": 1.9302256296296772e-07,
+        "zero_target_gradient_fraction": 0.0,
+        "zero_loss_fraction": 0.0,
+        "zero_loss_and_zero_target_gradient_fraction": 0.0,
+        "zero_target_but_nonzero_gradient_fraction": 0.0,
+        "correct_examples": 3830,
+        "max_absolute_row_gradient_sum": 9.04728794979874e-26,
+        "gradient_vs_stable64": {
+          "norm": 3.988754391697956e-09,
+          "reference_norm": 3.988754391697956e-09,
+          "relative_l2_error": 0.0,
+          "cosine": 1.0000000000000502
+        }
+      }
+    },
+    "stock32_parameter_gradient_vs_stable32": {
+      "token_embedding.weight": {
+        "norm": 9.135563981048633e-06,
+        "reference_norm": 2.413707621081426e-06,
+        "relative_l2_error": 3.7032919258766794,
+        "cosine": 0.21280166884245022
+      },
+      "position_embedding.weight": {
+        "norm": 1.4966323278013354e-05,
+        "reference_norm": 2.2356279009506533e-06,
+        "relative_l2_error": 6.865051508952438,
+        "cosine": -0.09807565329148216
+      },
+      "transformer_blocks.0.attention.qkv_projection.weight": {
+        "norm": 1.2551685270916152e-06,
+        "reference_norm": 1.454859918167507e-07,
+        "relative_l2_error": 8.767135909862903,
+        "cosine": -0.08289404930983972
+      },
+      "transformer_blocks.0.attention.output_projection.weight": {
+        "norm": 1.8518245042751978e-06,
+        "reference_norm": 1.9753055309339088e-07,
+        "relative_l2_error": 9.641311175415243,
+        "cosine": -0.2168868721886486
+      },
+      "transformer_blocks.0.mlp.input_projection.weight": {
+        "norm": 9.036828914760425e-07,
+        "reference_norm": 2.705315411279291e-07,
+        "relative_l2_error": 3.589062794902109,
+        "cosine": -0.10823802980660241
+      },
+      "transformer_blocks.0.mlp.output_projection.weight": {
+        "norm": 2.3654528248835113e-06,
+        "reference_norm": 3.5369148421559484e-07,
+        "relative_l2_error": 6.583844887639271,
+        "cosine": 0.17800626893903795
+      },
+      "unembedding.weight": {
+        "norm": 6.955330880443664e-05,
+        "reference_norm": 4.3306059294461825e-05,
+        "relative_l2_error": 1.2668025084494674,
+        "cosine": 0.6147634940402324
+      }
+    },
+    "readout_class_common_gradient": {
+      "stock32": {
+        "class_common_gradient_norm": 4.912636242612695e-05,
+        "total_gradient_norm": 6.955330880443664e-05,
+        "class_common_gradient_fraction": 0.7063123706200055
+      },
+      "stable32": {
+        "class_common_gradient_norm": 2.14274507868462e-11,
+        "total_gradient_norm": 4.3306059294461825e-05,
+        "class_common_gradient_fraction": 4.947910554767664e-07
+      }
+    },
+    "common_mode_note": "Exact softmax cross-entropy is invariant to a shared shift of all class logits, so its readout gradient has zero class-common component up to arithmetic error."
+  },
+  "limitations": [
+    "Two selected initialization seeds in a no-normalization modular-addition transformer.",
+    "Numerical matched continuations cover one seed and a finite window.",
+    "Seed4 first failure and peak are within the same episode.",
+    "Sparse baseline and control evaluations can miss briefer events; dense baseline replays inspect every training step.",
+    "Effective reconstruction and readout repair do not establish an exact global invertible basis change."
+  ]
+}

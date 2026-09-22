@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-09-22T19:00:31.405226+00:00",
+  "status": "Supplementary control specified after inspecting primary intervention norms",
+  "reason": "Inverse-GL compensation changed head norm by over 6x in the first two events. Match control corrections to the smaller orthogonal intervention as a separate specificity test.",
+  "gaussian_direction_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "deterministic_control": "Opposite of the orthogonal correction from the same collapsed head",
+  "continuation": "Random orthogonal-size correction seed 0, 500 steps, both first failures. Choice fixed before control results are inspected.",
+  "source": "work/basis_study/interventions"
+}

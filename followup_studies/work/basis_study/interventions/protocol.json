@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-22T18:58:32.332739+00:00",
+  "events": [
+    "seed4_first",
+    "seed0_first",
+    "seed4_peak"
+  ],
+  "continuation_events": [
+    "seed4_first",
+    "seed0_first"
+  ],
+  "continuation_arms": [
+    "original",
+    "old_head",
+    "orthogonal",
+    "inverse_gl",
+    "random_correction_0"
+  ],
+  "continuation_steps": 500,
+  "random_direction_seeds": [
+    0,
+    1,
+    2
+  ],
+  "maximum_continuation_processes": 2,
+  "fitting": "Original training rows only, labels unused",
+  "event_selection": "Previously captured exploratory first joint failure, plus the previously identified seed4 peak failure as a descriptive sensitivity check.",
+  "interpretations": "Inverse GL compensation tests the pure invertible-linear drift hypothesis. Head repair is an intervention on the representation-readout interface; specificity must be assessed against old-head and random norm-matched corrections."
+}

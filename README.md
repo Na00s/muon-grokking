@@ -10,6 +10,12 @@ Runs cover two operations, two moduli, two widths, two training fractions, depth
 
 ---
 
+## Follow-up experiments, September 22, 2026
+
+The [follow-up study](followup_studies/README.md) adds three fresh seeds, 262 head interventions, and 18 continued-training branches. Across five seeds, adjacent checkpoint swaps localize most acute loss to the readout update, and fresh linear decoders recover 98.20–100% accuracy from the analyzed collapsed representations. Exact global basis equivalence fails the measured geometry tests; approximate alignment remains useful.
+
+The [remaining-reservations assessment](followup_studies/reservations_status.md) separates established results from open causal questions, including numerical sensitivity and the origin of the damaging readout update. The [release](https://github.com/Na00s/muon-grokking/releases/tag/basis-study-2026-09-22) contains every retained checkpoint and binary analysis artifact from both follow-up studies.
+
 ## Layout
 
 ```

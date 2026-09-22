@@ -1,0 +1,57 @@
+{
+  "figures": [
+    {
+      "figure": "training_overview",
+      "source_files": [
+        "work/experiments/seed4_original/trajectory.csv",
+        "work/experiments/seed0_original/trajectory.csv",
+        "work/experiments/seed4_stable32_prospective/trajectory.csv"
+      ],
+      "outputs": [
+        "work/experiments/final_figures/main/training_overview.png",
+        "work/experiments/final_figures/main/training_overview.pdf"
+      ],
+      "notes": [
+        "Accuracy spans 0-100%. Each curve starts at its first saved evaluation."
+      ]
+    },
+    {
+      "figure": "heldout_readout_comparison",
+      "source_files": [
+        "work/experiments/seed4_dense_event/alignment.json",
+        "work/experiments/seed4_dense_event/metadata.json",
+        "work/experiments/seed4_dense_event/decoder.json",
+        "work/experiments/seed4_dense_event/decoder_whitened.json",
+        "work/experiments/seed4_dense_event/decoder_whitened_protocol.json"
+      ],
+      "outputs": [
+        "work/experiments/final_figures/main/heldout_readout_comparison.png",
+        "work/experiments/final_figures/main/heldout_readout_comparison.pdf"
+      ],
+      "notes": [
+        "Transports and decoder are fit using original training examples only; bars report untouched test examples.",
+        "Native model metrics are used for the first two bars when available.",
+        "The plotted fresh readout uses the converged exploratory whitening control selected by inner-validation CE; the initial decoder remains part of the recorded analysis.",
+        "Whitening preserves all 128 feature dimensions; 0 singular values were floored. Selected regularization: 0.0."
+      ]
+    },
+    {
+      "figure": "precision_branch_trajectories",
+      "source_files": [
+        "work/experiments/seed4_precision_15000_18000/original32/trajectory.csv",
+        "work/experiments/seed4_precision_15000_18000/stable32/trajectory.csv",
+        "work/experiments/seed4_precision_15000_18000/model64/trajectory.csv",
+        "work/experiments/seed4_precision_15000_18000/true64/trajectory.csv"
+      ],
+      "outputs": [
+        "work/experiments/final_figures/main/precision_branch_trajectories.png",
+        "work/experiments/final_figures/main/precision_branch_trajectories.pdf"
+      ],
+      "notes": [
+        "Accuracy spans 0-100%. Different sampling intervals are retained.",
+        "NS denotes Newton-Schulz orthogonalization; accurate CE denotes the cancellation-resistant cross-entropy implementation."
+      ]
+    }
+  ],
+  "matplotlib_version": "3.11.1"
+}

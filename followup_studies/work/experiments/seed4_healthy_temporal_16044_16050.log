@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "healthy_checkpoint": "work/experiments/seed4_matched_healthy_replay/final.pt",
+    "collapsed_checkpoint": "work/experiments/seed4_dense_capture/pre_event_train_healthy.pt",
+    "healthy_step": 16044,
+    "collapsed_step": 16050,
+    "seed": 4,
+    "config": {
+      "modulus": 113,
+      "sequence_length": 3,
+      "d_model": 128,
+      "num_heads": 4,
+      "d_mlp": 512,
+      "num_layers": 1
+    },
+    "torch_version": "2.13.0",
+    "numpy_version": "2.5.2",
+    "native_healthy": {
+      "train": {
+        "loss": 1.9689763064434374e-07,
+        "loss64": 2.2433648082840595e-07,
+        "accuracy": 1.0,
+        "max_abs_logit": 449.7362060546875
+      },
+      "heldout": {
+        "loss": 0.00037808442721143365,
+        "loss64": 0.00037813104403063605,
+        "accuracy": 1.0,
+        "max_abs_logit": 460.8145751953125
+      }
+    },
+    "native_collapsed": {
+      "train": {
+        "loss": 2.1155756257940084e-07,
+        "loss64": 2.399834865324994e-07,
+        "accuracy": 1.0,
+        "max_abs_logit": 472.6280517578125
+      },
+      "heldout": {
+        "loss": 0.00037769455229863524,
+        "loss64": 0.00037773875854199156,
+        "accuracy": 1.0,
+        "max_abs_logit": 483.9960021972656
+      }
+    },
+    "dataset_sha256": "f8000d33411c55fc7a98ad0dab39bbd98581be752a2609c2c66aa8f6683279e1",
+    "protocol": "Raw final residuals. Original training examples only for fits and regularization validation. All test rows remain held out. No Fourier filtering."
+  },
+  "heldout": {
+    "healthy_original": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.00037814050828162486,
+      "margin_mean": 13.525616168291062,
+      "margin_median": 13.629171700704319,
+      "margin_min": 1.399078800352072,
+      "margin_p05": 8.343258183800277,
+      "margin_p95": 17.685271664729733,
+      "positive_margin_fraction": 1.0
+    },
+    "collapsed_original": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0003777293375630777,
+      "margin_mean": 13.464626222957534,
+      "margin_median": 13.534966144977545,
+      "margin_min": 1.655899795024368,
+      "margin_p05": 8.251206779146184,
+      "margin_p95": 17.626297611983297,
+      "positive_margin_fraction": 1.0
+    },
+    "healthy_readout_on_collapsed": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.00042474580163523896,
+      "margin_mean": 13.447654445704465,
+      "margin_median": 13.578552550832228,
+      "margin_min": 1.8467914476503324,
+      "margin_p05": 8.16026258524028,
+      "margin_p95": 17.76903987402849,
+      "positive_margin_fraction": 1.0
+    },
+    "collapsed_readout_on_healthy": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0004204212908416125,
+      "margin_mean": 13.366578030020198,
+      "margin_median": 13.447049719915299,
+      "margin_min": 1.135098590221503,
+      "margin_p05": 8.25911966539618,
+      "margin_p95": 17.54605159735388,
+      "positive_margin_fraction": 1.0
+    },
+    "orthogonal_transport": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.00041058423661684604,
+      "margin_mean": 13.435656667506496,
+      "margin_median": 13.538425433987982,
+      "margin_min": 1.2932727568220344,
+      "margin_p05": 8.271215095845703,
+      "margin_p95": 17.570490395873396,
+      "positive_margin_fraction": 1.0
+    },
+    "linear_transport": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0003993953811533582,
+      "margin_mean": 13.473859880822202,
+      "margin_median": 13.57542927554232,
+      "margin_min": 1.3664694241497273,
+      "margin_p05": 8.292156458125516,
+      "margin_p95": 17.644725392923156,
+      "positive_margin_fraction": 1.0
+    },
+    "inverse_forward_transport": {
+      "n": 8939,
+      "accuracy": 1.0,
+      "correct_count": 8939,
+      "cross_entropy": 0.0003990989056279814,
+      "margin_mean": 13.475657345354005,
+      "margin_median": 13.576614417314374,
+      "margin_min": 1.3667656618751494,
+      "margin_p05": 8.293755227269907,
+      "margin_p95": 17.647061731174894,
+      "positive_margin_fraction": 1.0
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "source": "work/basis_study/seed2_matched_healthy/features.npz",
+  "elapsed_seconds": 3.132666042074561,
+  "backward_linear_heldout": {
+    "frobenius_error": 2319.864705583543,
+    "rmse": 2.168768536785157,
+    "relative_error": 0.013998816368684809,
+    "centered_relative_error": 0.02760618640600218,
+    "error_over_centered_target_norm": 0.027611193372037553,
+    "target_frobenius_norm": 165718.63252475072,
+    "prediction_frobenius_norm": 165688.32160753405,
+    "target_centered_frobenius_norm": 84018.99455504592,
+    "training_mean_error_norm": 0.40085535702281655,
+    "frobenius_cosine": 0.9999020153754538,
+    "centered_frobenius_cosine": 0.9996190690874802
+  },
+  "oracle_fullrank": {
+    "relative_tolerance": 2.8352875602877248e-12,
+    "rank_x": 128,
+    "rank_y": 128,
+    "rank_difference": 0,
+    "angle_min_degrees": 0.12474674162932262,
+    "angle_median_degrees": 1.2531378424354078,
+    "angle_max_degrees": 8.477324825806024,
+    "angles_above_1_degree": 86,
+    "angles_above_10_degrees": 0,
+    "projector_frobenius_distance": 0.5443742648888946,
+    "y_outside_x_column_space_relative": 0.013215438584760993,
+    "x_outside_y_column_space_relative": 0.013637582814465565
+  }
+}

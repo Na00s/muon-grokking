@@ -1,0 +1,18 @@
+{
+  "seed": 0,
+  "config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "steps": 30000,
+  "threads": 1,
+  "torch_version": "2.13.0",
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:24:52) [Clang 20.1.8 ]",
+  "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "selection": "First evaluation with train and test accuracy below 90% after six evaluations at or above 95% test; 100-step detection grid.",
+  "note": "Fresh deterministic CPU replication; original saved initialization/checkpoints are absent from git."
+}

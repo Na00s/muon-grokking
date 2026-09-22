@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-09-22T19:06:14.865542+00:00",
+  "status": "Adaptive control, specified after observing immediate recollapse in every successful state-preserved repair",
+  "question": "Does head optimizer memory explain immediate recollapse after one-time head compensation?",
+  "arms": {
+    "native_head_clear_state": {
+      "head": "original",
+      "optimizer_control": "clear_head_state"
+    },
+    "orthogonal_clear_state": {
+      "head": "orthogonal",
+      "optimizer_control": "clear_head_state"
+    },
+    "orthogonal_zero_first_moment": {
+      "head": "orthogonal",
+      "optimizer_control": "zero_head_first_moment"
+    }
+  },
+  "steps_per_arm": 500,
+  "events": [
+    "seed4_first",
+    "seed0_first"
+  ],
+  "total_updates": 3000,
+  "unchanged": "All hidden and embedding parameters and optimizer states at intervention time; original float32 objective and update implementations",
+  "clear_state_semantics": "Clear only the head AdamW state dictionary. This resets first and second moments and the head step counter. Learning rate, weight decay, betas, and other hyperparameters remain unchanged.",
+  "zero_first_moment_semantics": "Set only head AdamW exp_avg tensors to zero; preserve exp_avg_sq, step counter, and every other state entry.",
+  "comparison": "Primary native-head and orthogonal-head continuations with preserved moments already completed.",
+  "interpretation": "This controls optimizer-memory sensitivity and does not implement a covariant Adam transformation.",
+  "source": "work/basis_study/interventions"
+}

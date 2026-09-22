@@ -1,0 +1,31 @@
+{
+  "source": "work/experiments/pipeline_identity_smoke/features.npz",
+  "elapsed_seconds": 2.9958474580198526,
+  "backward_linear_heldout": {
+    "frobenius_error": 1.9274992846326634e-10,
+    "rmse": 1.8019584474585544e-13,
+    "relative_error": 3.211952818185216e-15,
+    "centered_relative_error": 3.367012750876806e-15,
+    "error_over_centered_target_norm": 3.398935140521745e-15,
+    "target_frobenius_norm": 60010.19920715146,
+    "prediction_frobenius_norm": 60010.19920715143,
+    "target_centered_frobenius_norm": 56708.91632067999,
+    "training_mean_error_norm": 1.230713466202109e-13,
+    "frobenius_cosine": 0.9999999999999971,
+    "centered_frobenius_cosine": 1.0
+  },
+  "oracle_fullrank": {
+    "relative_tolerance": 2.8352875602877248e-12,
+    "rank_x": 128,
+    "rank_y": 128,
+    "rank_difference": 0,
+    "angle_min_degrees": 0.0,
+    "angle_median_degrees": 1.4787793334710982e-06,
+    "angle_max_degrees": 5.3318147119265075e-06,
+    "angles_above_1_degree": 0,
+    "angles_above_10_degrees": 0,
+    "projector_frobenius_distance": 4.460403188197543e-07,
+    "y_outside_x_column_space_relative": 3.875390119138887e-15,
+    "x_outside_y_column_space_relative": 3.875390119138887e-15
+  }
+}

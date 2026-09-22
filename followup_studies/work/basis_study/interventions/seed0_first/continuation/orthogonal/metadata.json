@@ -1,0 +1,22 @@
+{
+  "event": "seed0_first",
+  "arm": "orthogonal",
+  "seed": 0,
+  "start_step": 17494,
+  "steps": 500,
+  "source_checkpoint": "work/experiments/seed0_dense_capture/collapse.pt",
+  "source_checkpoint_sha256": "ca70d7a3e00ae237d8087106e0a330736383a459553ac34f4696377427dc5c4c",
+  "only_head_parameters_changed": true,
+  "every_optimizer_state_preserved": true,
+  "rng_preserved": true,
+  "train_monitor": "Pre-update logits every training step",
+  "heldout_monitor": "Every 10 local steps and at every train accuracy below 90%, including initial and final states",
+  "semantics": "Readout-only robustness intervention with all saved optimizer moments preserved. Adam states are not transformed covariantly, so the continuation is not a gauge-equivalence proof.",
+  "parameter_dtype": "torch.float32",
+  "training_loss": "torch.nn.functional.cross_entropy",
+  "ns_dtype": "torch.float32",
+  "head_fitting": "Original training rows only, no labels",
+  "device": "cpu",
+  "threads": 1,
+  "script_sha256": "c81c2e93a2915ab855675d715befe990383e6476ebfe281b9346797213820cd5"
+}

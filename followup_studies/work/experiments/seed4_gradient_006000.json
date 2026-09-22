@@ -1,0 +1,100 @@
+{
+  "checkpoint": "work/experiments/seed4_original/step_006000.pt",
+  "step": 6000,
+  "seed": 4,
+  "description": "Both loss calculations see exactly the same frozen float32 logits. Float64 reference promotes these logits. Parameter gradients use separate deterministic float32 forward passes with identical weights.",
+  "loss_gradient": {
+    "stock32": {
+      "loss": 7.220131465146551e-06,
+      "zero_target_gradient_fraction": 0.0,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 1.5986812154998932e-10,
+      "gradient_vs_stable64": {
+        "norm": 1.3034468135533726e-07,
+        "reference_norm": 1.31599855798242e-07,
+        "relative_l2_error": 0.017484591983868713,
+        "cosine": 0.9998915954913532
+      }
+    },
+    "stable32": {
+      "loss": 7.303555321414024e-06,
+      "zero_target_gradient_fraction": 0.0,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 4.285478493338407e-16,
+      "gradient_vs_stable64": {
+        "norm": 1.3159985530928764e-07,
+        "reference_norm": 1.31599855798242e-07,
+        "relative_l2_error": 1.3977864347914147e-07,
+        "cosine": 0.999999999999976
+      }
+    },
+    "stock64": {
+      "loss": 7.3035551428490615e-06,
+      "zero_target_gradient_fraction": 0.0,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 4.626458389136649e-19,
+      "gradient_vs_stable64": {
+        "norm": 1.3159985579825395e-07,
+        "reference_norm": 1.31599855798242e-07,
+        "relative_l2_error": 4.3523139297263055e-11,
+        "cosine": 0.9999999999999972
+      }
+    },
+    "stable64": {
+      "loss": 7.3035551428474285e-06,
+      "zero_target_gradient_fraction": 0.0,
+      "correct_examples": 3830,
+      "max_absolute_row_gradient_sum": 2.0679515313825692e-24,
+      "gradient_vs_stable64": {
+        "norm": 1.31599855798242e-07,
+        "reference_norm": 1.31599855798242e-07,
+        "relative_l2_error": 0.0,
+        "cosine": 0.9999999999999976
+      }
+    }
+  },
+  "stock32_parameter_gradient_vs_stable32": {
+    "token_embedding.weight": {
+      "norm": 0.00018423258897332315,
+      "reference_norm": 0.0001867236152161763,
+      "relative_l2_error": 0.017377453318641503,
+      "cosine": 0.9999371610593003
+    },
+    "position_embedding.weight": {
+      "norm": 0.00010365335826681848,
+      "reference_norm": 0.00010479601676711918,
+      "relative_l2_error": 0.030697431406016978,
+      "cosine": 0.9995837398301614
+    },
+    "transformer_blocks.0.attention.qkv_projection.weight": {
+      "norm": 1.099029535296669e-06,
+      "reference_norm": 1.1136570967245082e-06,
+      "relative_l2_error": 0.017510130752707586,
+      "cosine": 0.9999320656473626
+    },
+    "transformer_blocks.0.attention.output_projection.weight": {
+      "norm": 1.3967389496572142e-06,
+      "reference_norm": 1.4153842854369403e-06,
+      "relative_l2_error": 0.014623599591529535,
+      "cosine": 0.9999795745144361
+    },
+    "transformer_blocks.0.mlp.input_projection.weight": {
+      "norm": 7.588837604757335e-07,
+      "reference_norm": 7.689934616899989e-07,
+      "relative_l2_error": 0.0190365900206763,
+      "cosine": 0.9999039589310297
+    },
+    "transformer_blocks.0.mlp.output_projection.weight": {
+      "norm": 1.4719704662554576e-06,
+      "reference_norm": 1.493782605476954e-06,
+      "relative_l2_error": 0.037089253363554904,
+      "cosine": 0.9994101897372404
+    },
+    "unembedding.weight": {
+      "norm": 9.069046295991175e-05,
+      "reference_norm": 9.185380692618602e-05,
+      "relative_l2_error": 0.04825876757169525,
+      "cosine": 0.9989018405513765
+    }
+  }
+}

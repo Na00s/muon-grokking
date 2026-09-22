@@ -1,0 +1,47 @@
+{
+  "healthy_checkpoint": "work/experiments/seed0_dense_capture/pre_event_train_healthy.pt",
+  "collapsed_checkpoint": "work/experiments/seed0_dense_capture/collapse.pt",
+  "healthy_step": 17490,
+  "collapsed_step": 17494,
+  "seed": 0,
+  "config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "torch_version": "2.13.0",
+  "numpy_version": "2.5.2",
+  "native_healthy": {
+    "train": {
+      "loss": 1.7890729964165075e-07,
+      "loss64": 2.1254547891953665e-07,
+      "accuracy": 1.0,
+      "max_abs_logit": 894.506591796875
+    },
+    "heldout": {
+      "loss": 0.1368306577205658,
+      "loss64": 0.1368306881961454,
+      "accuracy": 0.9648730283029422,
+      "max_abs_logit": 916.9371948242188
+    }
+  },
+  "native_collapsed": {
+    "train": {
+      "loss": 2.8582468032836914,
+      "loss64": 2.8582467466967527,
+      "accuracy": 0.4825065274151436,
+      "max_abs_logit": 920.2140502929688
+    },
+    "heldout": {
+      "loss": 6.650341510772705,
+      "loss64": 6.65034168733314,
+      "accuracy": 0.3187157400156617,
+      "max_abs_logit": 939.7985229492188
+    }
+  },
+  "dataset_sha256": "0f7f64831ad70bf20dbcdca21f539d2fa2ca5ca629470d34f1458650bec0c8b5",
+  "protocol": "Raw final residuals. Original training examples only for fits and regularization validation. All test rows remain held out. No Fourier filtering."
+}

@@ -1,0 +1,40 @@
+{
+  "seed": 4,
+  "first_checkpoint": "work/experiments/seed4_one_step_attribution/pre_step.pt",
+  "second_checkpoint": "work/experiments/seed4_dense_capture/collapse.pt",
+  "first_step": 16055,
+  "second_step": 16056,
+  "step_interval": 1,
+  "reference_role": "preceding_step",
+  "first_metrics": {
+    "train": {
+      "loss": 0.1450318992137909,
+      "loss64": 0.14503193731141323,
+      "accuracy": 0.9877284595300261,
+      "max_abs_logit": 511.8714294433594
+    },
+    "heldout": {
+      "loss": 0.35633113980293274,
+      "loss64": 0.35633117952208876,
+      "accuracy": 0.9134131334601185,
+      "max_abs_logit": 525.2711181640625
+    }
+  },
+  "second_metrics": {
+    "train": {
+      "loss": 11.152029991149902,
+      "loss64": 11.152028644952463,
+      "accuracy": 0.7007832898172324,
+      "max_abs_logit": 532.9871215820312
+    },
+    "heldout": {
+      "loss": 11.9931640625,
+      "loss64": 11.993163407272103,
+      "accuracy": 0.66327329678935,
+      "max_abs_logit": 539.8294677734375
+    }
+  },
+  "healthy_endpoint_criterion": null,
+  "dataset_sha256": "f8000d33411c55fc7a98ad0dab39bbd98581be752a2609c2c66aa8f6683279e1",
+  "note": "H0 denotes the first checkpoint. A preceding-step checkpoint may already have poor generalization. Geometry field names containing healthy retain the mathematical reference-role convention only."
+}

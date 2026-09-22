@@ -1,0 +1,14 @@
+{
+  "expected_step": 17494,
+  "all_model_tensors_bitwise_equal": true,
+  "tensor_matches": {
+    "token_embedding.weight": true,
+    "position_embedding.weight": true,
+    "transformer_blocks.0.attention.causal_mask": true,
+    "transformer_blocks.0.attention.qkv_projection.weight": true,
+    "transformer_blocks.0.attention.output_projection.weight": true,
+    "transformer_blocks.0.mlp.input_projection.weight": true,
+    "transformer_blocks.0.mlp.output_projection.weight": true,
+    "unembedding.weight": true
+  }
+}

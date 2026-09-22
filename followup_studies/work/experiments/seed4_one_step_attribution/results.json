@@ -1,0 +1,388 @@
+{
+  "status": "completed",
+  "provenance": {
+    "source_checkpoint": "work/experiments/seed4_dense_capture/pre_event_train_healthy.pt",
+    "source_checkpoint_sha256": "b00786b06126611da5d2cfff3b8871864c3b2f1254ef15c4fd686a18a0fe2764",
+    "collapse_checkpoint": "work/experiments/seed4_dense_capture/collapse.pt",
+    "collapse_checkpoint_sha256": "4ef70cfb6ddab65a17c5afe39453f64620312528d53e5ad2004446870de1015d",
+    "source_step": 16050,
+    "pre_step": 16055,
+    "post_step": 16056,
+    "seed": 4,
+    "source_repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+    "source_config": {
+      "modulus": 113,
+      "sequence_length": 3,
+      "d_model": 128,
+      "num_heads": 4,
+      "d_mlp": 512,
+      "num_layers": 1
+    },
+    "threads": 1,
+    "torch_version": "2.13.0",
+    "created_utc": "2026-09-22T18:42:59.154919+00:00",
+    "exact_replay": {
+      "model_state": true,
+      "all_optimizer_states": true,
+      "rng_state": true
+    },
+    "parameter_groups": {
+      "hidden": [
+        "transformer_blocks.0.attention.qkv_projection.weight",
+        "transformer_blocks.0.attention.output_projection.weight",
+        "transformer_blocks.0.mlp.input_projection.weight",
+        "transformer_blocks.0.mlp.output_projection.weight"
+      ],
+      "embeddings": [
+        "token_embedding.weight",
+        "position_embedding.weight"
+      ],
+      "readout": [
+        "unembedding.weight"
+      ]
+    },
+    "selection": "Post hoc attribution of one exploratory-captured joint failure in seed 4.",
+    "intervention": "For every subset of the three optimizer parameter groups, replace its pre-step parameters with the exact post-step parameters and evaluate without further optimization.",
+    "relative_update_norm_definition": "Euclidean/Frobenius norm of post minus pre, divided by pre norm; calculated in float64 from the stored float32 parameters.",
+    "script_sha256": "43cd257d286614545133375377484e1996fdd084e450b3d132450dcd96d200ff"
+  },
+  "pre_step_metrics": {
+    "train_loss": 0.1450318992137909,
+    "train_loss64": 0.14503193731141323,
+    "train_accuracy": 0.9877284595300261,
+    "test_loss": 0.35633113980293274,
+    "test_loss64": 0.35633117952208876,
+    "test_accuracy": 0.9134131334601185,
+    "native_fullbatch_train_loss": 0.1450318992137909,
+    "native_fullbatch_train_accuracy": 0.9877284595300261,
+    "maximum_absolute_logit": 525.2711181640625
+  },
+  "post_step_metrics": {
+    "train_loss": 11.152029991149902,
+    "train_loss64": 11.152028644952463,
+    "train_accuracy": 0.7007832898172324,
+    "test_loss": 11.9931640625,
+    "test_loss64": 11.993163407272103,
+    "test_accuracy": 0.66327329678935,
+    "native_fullbatch_train_loss": 11.152029991149902,
+    "native_fullbatch_train_accuracy": 0.7007832898172324,
+    "maximum_absolute_logit": 539.8294677734375
+  },
+  "group_update_norms": {
+    "hidden": {
+      "parameter_names": [
+        "transformer_blocks.0.attention.qkv_projection.weight",
+        "transformer_blocks.0.attention.output_projection.weight",
+        "transformer_blocks.0.mlp.input_projection.weight",
+        "transformer_blocks.0.mlp.output_projection.weight"
+      ],
+      "parameter_count": 196608,
+      "pre_parameter_norm": 251.06744632365718,
+      "post_parameter_norm": 250.45037307809554,
+      "update_norm": 0.8313063168903373,
+      "relative_update_norm": 0.0033110876342713107,
+      "maximum_absolute_update": 0.023049354553222656
+    },
+    "embeddings": {
+      "parameter_names": [
+        "token_embedding.weight",
+        "position_embedding.weight"
+      ],
+      "parameter_count": 14976,
+      "pre_parameter_norm": 2.5191944605102954,
+      "post_parameter_norm": 2.610273382210192,
+      "update_norm": 0.3652777238017923,
+      "relative_update_norm": 0.14499782749117374,
+      "maximum_absolute_update": 0.0037821531295776367
+    },
+    "readout": {
+      "parameter_names": [
+        "unembedding.weight"
+      ],
+      "parameter_count": 14464,
+      "pre_parameter_norm": 0.6529843986472055,
+      "post_parameter_norm": 0.6406164546000256,
+      "update_norm": 0.0628894621705217,
+      "relative_update_norm": 0.09631081891207577,
+      "maximum_absolute_update": 0.0008018612861633301,
+      "definition": "Class centering subtracts the mean across output-class rows, independently for each hidden coordinate.",
+      "pre_centered_parameter_norm": 0.5046781223714162,
+      "post_centered_parameter_norm": 0.510515773401092,
+      "class_centered_update_norm": 0.045641286128389295,
+      "class_centered_relative_update_norm": 0.09043642691291409,
+      "common_class_update_norm": 0.04326612361471843,
+      "common_class_fraction_of_update_norm": 0.6879709592269123,
+      "centered_fraction_of_update_norm": 0.7257382167561742,
+      "pythagorean_relative_residual": 2.95510742209195e-14
+    }
+  },
+  "per_parameter_update_norms": {
+    "transformer_blocks.0.attention.qkv_projection.weight": {
+      "parameter_names": [
+        "transformer_blocks.0.attention.qkv_projection.weight"
+      ],
+      "parameter_count": 49152,
+      "pre_parameter_norm": 141.257943401609,
+      "post_parameter_norm": 140.9524213375993,
+      "update_norm": 0.4691817722800501,
+      "relative_update_norm": 0.0033214540788416,
+      "maximum_absolute_update": 0.023049354553222656
+    },
+    "transformer_blocks.0.attention.output_projection.weight": {
+      "parameter_names": [
+        "transformer_blocks.0.attention.output_projection.weight"
+      ],
+      "parameter_count": 16384,
+      "pre_parameter_norm": 86.77521410105874,
+      "post_parameter_norm": 86.56969350007002,
+      "update_norm": 0.2777767250572522,
+      "relative_update_norm": 0.0032011067668902826,
+      "maximum_absolute_update": 0.009334802627563477
+    },
+    "transformer_blocks.0.mlp.input_projection.weight": {
+      "parameter_names": [
+        "transformer_blocks.0.mlp.input_projection.weight"
+      ],
+      "parameter_count": 65536,
+      "pre_parameter_norm": 172.76881618130798,
+      "post_parameter_norm": 172.32085373158324,
+      "update_norm": 0.5860599112067952,
+      "relative_update_norm": 0.003392162568225096,
+      "maximum_absolute_update": 0.019060134887695312
+    },
+    "transformer_blocks.0.mlp.output_projection.weight": {
+      "parameter_names": [
+        "transformer_blocks.0.mlp.output_projection.weight"
+      ],
+      "parameter_count": 65536,
+      "pre_parameter_norm": 75.51194873960931,
+      "post_parameter_norm": 75.29286706285843,
+      "update_norm": 0.22430454421322557,
+      "relative_update_norm": 0.0029704510075180732,
+      "maximum_absolute_update": 0.010335206985473633
+    },
+    "token_embedding.weight": {
+      "parameter_names": [
+        "token_embedding.weight"
+      ],
+      "parameter_count": 14592,
+      "pre_parameter_norm": 2.3108138380727996,
+      "post_parameter_norm": 2.413338340687379,
+      "update_norm": 0.3602668971478579,
+      "relative_update_norm": 0.15590476879276335,
+      "maximum_absolute_update": 0.0037821531295776367
+    },
+    "position_embedding.weight": {
+      "parameter_names": [
+        "position_embedding.weight"
+      ],
+      "parameter_count": 384,
+      "pre_parameter_norm": 1.0032348357373833,
+      "post_parameter_norm": 0.9946482711206606,
+      "update_norm": 0.060295757108383356,
+      "relative_update_norm": 0.06010133914864074,
+      "maximum_absolute_update": 0.0037821531295776367
+    },
+    "unembedding.weight": {
+      "parameter_names": [
+        "unembedding.weight"
+      ],
+      "parameter_count": 14464,
+      "pre_parameter_norm": 0.6529843986472055,
+      "post_parameter_norm": 0.6406164546000256,
+      "update_norm": 0.0628894621705217,
+      "relative_update_norm": 0.09631081891207577,
+      "maximum_absolute_update": 0.0008018612861633301
+    }
+  },
+  "factorial_results": [
+    {
+      "mask": "000",
+      "hidden_post": 0,
+      "embeddings_post": 0,
+      "readout_post": 0,
+      "train_loss": 0.1450318992137909,
+      "train_loss64": 0.14503193731141323,
+      "train_accuracy": 0.9877284595300261,
+      "test_loss": 0.35633113980293274,
+      "test_loss64": 0.35633117952208876,
+      "test_accuracy": 0.9134131334601185,
+      "native_fullbatch_train_loss": 0.1450318992137909,
+      "native_fullbatch_train_accuracy": 0.9877284595300261,
+      "maximum_absolute_logit": 525.2711181640625
+    },
+    {
+      "mask": "001",
+      "hidden_post": 0,
+      "embeddings_post": 0,
+      "readout_post": 1,
+      "train_loss": 11.543447494506836,
+      "train_loss64": 11.54344739283977,
+      "train_accuracy": 0.6903394255874674,
+      "test_loss": 12.375402450561523,
+      "test_loss64": 12.375401816133694,
+      "test_accuracy": 0.6675243315807138,
+      "native_fullbatch_train_loss": 11.543447494506836,
+      "native_fullbatch_train_accuracy": 0.6903394255874674,
+      "maximum_absolute_logit": 560.03515625
+    },
+    {
+      "mask": "010",
+      "hidden_post": 0,
+      "embeddings_post": 1,
+      "readout_post": 0,
+      "train_loss": 0.07181580364704132,
+      "train_loss64": 0.07181584475184562,
+      "train_accuracy": 0.9906005221932115,
+      "test_loss": 0.1377435326576233,
+      "test_loss64": 0.13774357505863744,
+      "test_accuracy": 0.9821009061416266,
+      "native_fullbatch_train_loss": 0.07181580364704132,
+      "native_fullbatch_train_accuracy": 0.9906005221932115,
+      "maximum_absolute_logit": 514.5086669921875
+    },
+    {
+      "mask": "011",
+      "hidden_post": 0,
+      "embeddings_post": 1,
+      "readout_post": 1,
+      "train_loss": 11.50869369506836,
+      "train_loss64": 11.508694717755539,
+      "train_accuracy": 0.6966057441253264,
+      "test_loss": 12.3646879196167,
+      "test_loss64": 12.364687870756736,
+      "test_accuracy": 0.6598053473542902,
+      "native_fullbatch_train_loss": 11.50869369506836,
+      "native_fullbatch_train_accuracy": 0.6966057441253264,
+      "maximum_absolute_logit": 552.9334106445312
+    },
+    {
+      "mask": "100",
+      "hidden_post": 1,
+      "embeddings_post": 0,
+      "readout_post": 0,
+      "train_loss": 0.09857141226530075,
+      "train_loss64": 0.09857144317132137,
+      "train_accuracy": 0.9906005221932115,
+      "test_loss": 0.1760077327489853,
+      "test_loss64": 0.17600779798167188,
+      "test_accuracy": 0.9682291084013872,
+      "native_fullbatch_train_loss": 0.09857141226530075,
+      "native_fullbatch_train_accuracy": 0.9906005221932115,
+      "maximum_absolute_logit": 511.4171142578125
+    },
+    {
+      "mask": "101",
+      "hidden_post": 1,
+      "embeddings_post": 0,
+      "readout_post": 1,
+      "train_loss": 11.123388290405273,
+      "train_loss64": 11.123390450505285,
+      "train_accuracy": 0.6942558746736293,
+      "test_loss": 11.943047523498535,
+      "test_loss64": 11.94304750769208,
+      "test_accuracy": 0.6735652757579148,
+      "native_fullbatch_train_loss": 11.123388290405273,
+      "native_fullbatch_train_accuracy": 0.6942558746736293,
+      "maximum_absolute_logit": 546.46044921875
+    },
+    {
+      "mask": "110",
+      "hidden_post": 1,
+      "embeddings_post": 1,
+      "readout_post": 0,
+      "train_loss": 0.054692283272743225,
+      "train_loss64": 0.054692326358720754,
+      "train_accuracy": 0.9906005221932115,
+      "test_loss": 0.10054070502519608,
+      "test_loss64": 0.10054075044739039,
+      "test_accuracy": 0.98657567960622,
+      "native_fullbatch_train_loss": 0.054692283272743225,
+      "native_fullbatch_train_accuracy": 0.9906005221932115,
+      "maximum_absolute_logit": 500.8534240722656
+    },
+    {
+      "mask": "111",
+      "hidden_post": 1,
+      "embeddings_post": 1,
+      "readout_post": 1,
+      "train_loss": 11.152029991149902,
+      "train_loss64": 11.152028644952463,
+      "train_accuracy": 0.7007832898172324,
+      "test_loss": 11.9931640625,
+      "test_loss64": 11.993163407272103,
+      "test_accuracy": 0.66327329678935,
+      "native_fullbatch_train_loss": 11.152029991149902,
+      "native_fullbatch_train_accuracy": 0.7007832898172324,
+      "maximum_absolute_logit": 539.8294677734375
+    }
+  ],
+  "mask_order": [
+    "hidden",
+    "embeddings",
+    "readout"
+  ],
+  "optional_stable_ce_control": {
+    "description": "One accurate-cross-entropy float32 step from the identical step-16055 model and all three optimizer states; existing optimizer history is retained.",
+    "training_loss": 0.14503192901611328,
+    "metrics": {
+      "train_loss": 11.146939277648926,
+      "train_loss64": 11.146938530865478,
+      "train_accuracy": 0.7007832898172324,
+      "test_loss": 11.9888277053833,
+      "test_loss64": 11.988827404997682,
+      "test_accuracy": 0.66327329678935,
+      "native_fullbatch_train_loss": 11.146939277648926,
+      "native_fullbatch_train_accuracy": 0.7007832898172324,
+      "maximum_absolute_logit": 539.8267822265625
+    },
+    "group_update_norms": {
+      "hidden": {
+        "parameter_names": [
+          "transformer_blocks.0.attention.qkv_projection.weight",
+          "transformer_blocks.0.attention.output_projection.weight",
+          "transformer_blocks.0.mlp.input_projection.weight",
+          "transformer_blocks.0.mlp.output_projection.weight"
+        ],
+        "parameter_count": 196608,
+        "pre_parameter_norm": 251.06744632365718,
+        "post_parameter_norm": 250.45037325309184,
+        "update_norm": 0.8313056597953707,
+        "relative_update_norm": 0.0033110850170663475,
+        "maximum_absolute_update": 0.023049354553222656
+      },
+      "embeddings": {
+        "parameter_names": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "parameter_count": 14976,
+        "pre_parameter_norm": 2.5191944605102954,
+        "post_parameter_norm": 2.6102726748314224,
+        "update_norm": 0.36527781976489626,
+        "relative_update_norm": 0.14499786558394723,
+        "maximum_absolute_update": 0.0037821531295776367
+      },
+      "readout": {
+        "parameter_names": [
+          "unembedding.weight"
+        ],
+        "parameter_count": 14464,
+        "pre_parameter_norm": 0.6529843986472055,
+        "post_parameter_norm": 0.6406135555653315,
+        "update_norm": 0.06288990533336988,
+        "relative_update_norm": 0.09631149758502584,
+        "maximum_absolute_update": 0.0008018612861633301,
+        "definition": "Class centering subtracts the mean across output-class rows, independently for each hidden coordinate.",
+        "pre_centered_parameter_norm": 0.5046781223714162,
+        "post_centered_parameter_norm": 0.510515053611895,
+        "class_centered_update_norm": 0.045638004505133084,
+        "class_centered_relative_update_norm": 0.09042992450452597,
+        "common_class_update_norm": 0.04327022923014953,
+        "common_class_fraction_of_update_norm": 0.688031393922134,
+        "centered_fraction_of_update_norm": 0.7256809222913109,
+        "pythagorean_relative_residual": 2.302648655884482e-15
+      }
+    }
+  }
+}

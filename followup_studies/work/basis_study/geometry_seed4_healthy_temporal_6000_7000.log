@@ -1,0 +1,31 @@
+{
+  "source": "work/experiments/seed4_healthy_temporal_6000_7000/features.npz",
+  "elapsed_seconds": 3.6793468329124153,
+  "backward_linear_heldout": {
+    "frobenius_error": 8881.332331455505,
+    "rmse": 8.302878214765707,
+    "relative_error": 0.19169931030339551,
+    "centered_relative_error": 0.4142902910842883,
+    "error_over_centered_target_norm": 0.414292520812505,
+    "target_frobenius_norm": 46329.49548644356,
+    "prediction_frobenius_norm": 45608.02932013866,
+    "target_centered_frobenius_norm": 21437.346525198074,
+    "training_mean_error_norm": 0.3508339834556132,
+    "frobenius_cosine": 0.9814581963490985,
+    "centered_frobenius_cosine": 0.9102895894676577
+  },
+  "oracle_fullrank": {
+    "relative_tolerance": 2.8352875602877248e-12,
+    "rank_x": 128,
+    "rank_y": 128,
+    "rank_difference": 0,
+    "angle_min_degrees": 1.540758655809006,
+    "angle_median_degrees": 20.94417648500894,
+    "angle_max_degrees": 59.36791832172066,
+    "angles_above_1_degree": 128,
+    "angles_above_10_degrees": 115,
+    "projector_frobenius_distance": 7.051904872519652,
+    "y_outside_x_column_space_relative": 0.19276929933808876,
+    "x_outside_y_column_space_relative": 0.1856387974663051
+  }
+}

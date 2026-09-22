@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "torch_version": "2.13.0",
+  "threads": 1,
+  "checks": {
+    "moderate_logits_equivalence": {
+      "torch.float32_sum": {
+        "loss_abs_error": 7.62939453125e-06,
+        "gradient_max_abs_error": 5.960464477539063e-08
+      },
+      "torch.float32_mean": {
+        "loss_abs_error": 2.384185791015625e-07,
+        "gradient_max_abs_error": 1.862645149230957e-09
+      },
+      "torch.float64_sum": {
+        "loss_abs_error": 0.0,
+        "gradient_max_abs_error": 2.220446049250313e-16
+      },
+      "torch.float64_mean": {
+        "loss_abs_error": 0.0,
+        "gradient_max_abs_error": 6.938893903907228e-18
+      }
+    },
+    "tiny_loss_gradient_reference": [
+      {
+        "margin": 20.0,
+        "stable_f32_loss": 2.8194095946787456e-09,
+        "analytic_loss": 2.819409661255213e-09,
+        "ordinary_f32_loss": 0.0,
+        "stable_f32_correct_gradient": -2.8194095946787456e-09,
+        "ordinary_f32_correct_gradient": 0.0,
+        "analytic_correct_gradient": -2.819409657280678e-09
+      },
+      {
+        "margin": 50.0,
+        "stable_f32_loss": 2.6382972085508917e-22,
+        "analytic_loss": 2.6382972641923883e-22,
+        "ordinary_f32_loss": 0.0,
+        "stable_f32_correct_gradient": -2.6382972085508917e-22,
+        "ordinary_f32_correct_gradient": 0.0,
+        "analytic_correct_gradient": -2.6382972641923883e-22
+      },
+      {
+        "margin": 80.0,
+        "stable_f32_loss": 2.468819095947862e-35,
+        "analytic_loss": 2.468819107803489e-35,
+        "ordinary_f32_loss": 0.0,
+        "stable_f32_correct_gradient": -2.468819095947862e-35,
+        "ordinary_f32_correct_gradient": 0.0,
+        "analytic_correct_gradient": -2.468819107803489e-35
+      }
+    ],
+    "ce_edge_cases_and_first_second_derivatives": "passed",
+    "ns_precision": {
+      "float32_bitwise_source_equivalence": true,
+      "float64_sub_float32_range_output": 4.848762871001831e-41,
+      "float64_sensitivity_to_1e_10_input_change": 3.554911920389259e-11
+    },
+    "optimizer_compatibility": {
+      "step_ast_exact_except_ns_function": true,
+      "float32_updates_and_momentum_bitwise_equal": true,
+      "muon_restored_momentum_dtype": "torch.float64",
+      "adamw_restored_exp_avg_dtype": "torch.float64",
+      "adamw_restored_step_dtype": "torch.float32"
+    }
+  }
+}

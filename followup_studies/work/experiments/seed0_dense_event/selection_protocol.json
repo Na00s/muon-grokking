@@ -1,0 +1,91 @@
+{
+  "selection_status": "exploratory_second_seed_replication",
+  "event": {
+    "step": 17494,
+    "local_step": 1494,
+    "train_loss": 2.8582468032836914,
+    "train_accuracy": 0.4825065274151436,
+    "heldout_measured": true,
+    "test_loss": 6.650341510772705,
+    "test_loss64": 6.65034168733314,
+    "test_accuracy": 0.3187157400156617,
+    "train_below_0_90": true,
+    "joint_failure": true,
+    "elapsed_seconds": 124.58051958400756,
+    "selection_status": "exploratory_followup",
+    "last_joint_healthy_step": 17200,
+    "last_train_healthy_step": 17490,
+    "pre_event_latest_step": 17490
+  },
+  "healthy_rule": "Latest available designated pre-event healthy checkpoint independently verified at >=99% on both original train and held-out examples.",
+  "candidates": [
+    {
+      "path": "work/experiments/seed0_dense_capture/pre_event_train_healthy.pt",
+      "step": 17490,
+      "train": {
+        "loss": 1.7890729964165075e-07,
+        "loss64": 2.1254547891953665e-07,
+        "accuracy": 1.0,
+        "max_abs_logit": 894.506591796875
+      },
+      "heldout": {
+        "loss": 0.1368306577205658,
+        "loss64": 0.1368306881961454,
+        "accuracy": 0.9648730283029422,
+        "max_abs_logit": 916.9371948242188
+      },
+      "qualifies": false
+    },
+    {
+      "path": "work/experiments/seed0_dense_capture/pre_event_joint_healthy.pt",
+      "step": 17200,
+      "train": {
+        "loss": 1.6353148168946063e-07,
+        "loss64": 2.1879336738266347e-07,
+        "accuracy": 1.0,
+        "max_abs_logit": 339.0486755371094
+      },
+      "heldout": {
+        "loss": 0.043356072157621384,
+        "loss64": 0.043356111653456965,
+        "accuracy": 0.9911623224074281,
+        "max_abs_logit": 339.38323974609375
+      },
+      "qualifies": true
+    },
+    {
+      "path": "work/experiments/seed0_dense_capture/last_joint_healthy.pt",
+      "step": 17200,
+      "train": {
+        "loss": 1.6353148168946063e-07,
+        "loss64": 2.1879336738266347e-07,
+        "accuracy": 1.0,
+        "max_abs_logit": 339.0486755371094
+      },
+      "heldout": {
+        "loss": 0.043356072157621384,
+        "loss64": 0.043356111653456965,
+        "accuracy": 0.9911623224074281,
+        "max_abs_logit": 339.38323974609375
+      },
+      "qualifies": true
+    }
+  ],
+  "selected_healthy": {
+    "path": "work/experiments/seed0_dense_capture/pre_event_joint_healthy.pt",
+    "step": 17200,
+    "train": {
+      "loss": 1.6353148168946063e-07,
+      "loss64": 2.1879336738266347e-07,
+      "accuracy": 1.0,
+      "max_abs_logit": 339.0486755371094
+    },
+    "heldout": {
+      "loss": 0.043356072157621384,
+      "loss64": 0.043356111653456965,
+      "accuracy": 0.9911623224074281,
+      "max_abs_logit": 339.38323974609375
+    },
+    "qualifies": true
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "source_checkpoint": "work/experiments/seed4_original/step_001000.pt",
+  "replay_steps": 2,
+  "replay_start_step": 1000,
+  "original32_model_states_bitwise_identical": true,
+  "original32_all_three_optimizer_states_bitwise_identical": true,
+  "original32_rng_states_bitwise_identical": true,
+  "original32_training_losses_and_initial_final_metrics_exact": true,
+  "periodic_saved_states_exact": true,
+  "source_hyperparameters_preserved_in_all_arms": true,
+  "arm_restorations": {
+    "original32": {
+      "parameter_dtype": "torch.float32",
+      "optimizer_state_dtypes": {
+        "muon": [
+          "torch.float32"
+        ],
+        "auxiliary_adamw": [
+          "torch.float32"
+        ],
+        "unembedding_adamw": [
+          "torch.float32"
+        ]
+      },
+      "optimizer_memberships": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "finite_16_example_smoke_step_loss": 0.0018742770189419389
+    },
+    "stable32": {
+      "parameter_dtype": "torch.float32",
+      "optimizer_state_dtypes": {
+        "muon": [
+          "torch.float32"
+        ],
+        "auxiliary_adamw": [
+          "torch.float32"
+        ],
+        "unembedding_adamw": [
+          "torch.float32"
+        ]
+      },
+      "optimizer_memberships": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "finite_16_example_smoke_step_loss": 0.0018742838874459267
+    },
+    "model64": {
+      "parameter_dtype": "torch.float64",
+      "optimizer_state_dtypes": {
+        "muon": [
+          "torch.float64"
+        ],
+        "auxiliary_adamw": [
+          "torch.float64"
+        ],
+        "unembedding_adamw": [
+          "torch.float64"
+        ]
+      },
+      "optimizer_memberships": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "finite_16_example_smoke_step_loss": 0.001874199911490318
+    },
+    "true64": {
+      "parameter_dtype": "torch.float64",
+      "optimizer_state_dtypes": {
+        "muon": [
+          "torch.float64"
+        ],
+        "auxiliary_adamw": [
+          "torch.float64"
+        ],
+        "unembedding_adamw": [
+          "torch.float64"
+        ]
+      },
+      "optimizer_memberships": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "finite_16_example_smoke_step_loss": 0.0018741999114902698
+    }
+  },
+  "branch_summary_path": "work/experiments/precision_runner_verified_allarms/summary.json"
+}

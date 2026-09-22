@@ -1,0 +1,19 @@
+{
+  "seed": 1,
+  "config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "max_steps": 30000,
+  "follow_steps": 200,
+  "protocol": "Six successive 100-step held-out evaluations >=95% establish grokking. Subsequently inspect train accuracy every step and held-out accuracy at every train<90% trigger. Capture first simultaneous <90% event and continue 200 steps.",
+  "selection": "Additional seeds 1,2,3 chosen together before running; no condition changes.",
+  "torch_version": "2.13.0",
+  "threads": 1,
+  "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "script_sha256": "37f83b135cfb87a876d499c21eacb9eae950fad527db73c6ef6336d9113ce683"
+}

@@ -1,0 +1,8 @@
+{
+  "scope": "Exact network residual gauge positive controls, then stronger model-wide gauge consistency diagnostics for actual checkpoints.",
+  "algebra": "Hprime=H A; embedding Eprime=E A; qkv/MLP-input/readout torch weights Wprime=W A^{-T}; attention-output/MLP-output Wprime=A^T W.",
+  "planting": "One fixed random pair of orthogonal factors, singular values geometrically spaced from condition^-0.5 to condition^0.5; conditions 1,3,10,100. Float32 and float64 execution. Float64 model is a cast of saved float32 weights.",
+  "fitting": "OLS in float64, original training examples only, no labels used. Final-token map versus shared map across all residual sites and all token positions; joint sites normalized by original training RMS.",
+  "matched_controls": "For each actual fitted A, plant that exact matrix into its healthy model in float32 and measure the numerical floor with compensation; matches condition number and orientation.",
+  "interpretation": "A single global model-wide gauge is stronger than a final representation-readout basis hypothesis. Internal mismatch rejects only the stronger restriction. Readout is excluded from parameter comparisons because its failure to compensate is allowed by the collapse mechanism."
+}

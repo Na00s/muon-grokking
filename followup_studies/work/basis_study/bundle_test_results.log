@@ -1,0 +1,33 @@
+test_exact_identity_and_all_three_cross_terms (test_bilinear_diagnostic.BilinearTests.test_exact_identity_and_all_three_cross_terms) ... ok
+test_exact_joint_basis_change_cancels_components (test_bilinear_diagnostic.BilinearTests.test_exact_joint_basis_change_cancels_components) ... ok
+test_feature_only_change (test_bilinear_diagnostic.BilinearTests.test_feature_only_change) ... ok
+test_no_heldout_leakage_in_linear_fit (test_bilinear_diagnostic.BilinearTests.test_no_heldout_leakage_in_linear_fit) ... ok
+test_readout_only_change (test_bilinear_diagnostic.BilinearTests.test_readout_only_change) ... ok
+test_affine_translation_is_distinct_from_linear_basis (test_geometry.GeometryTests.test_affine_translation_is_distinct_from_linear_basis) ... ok
+test_functional_decomposition_identity_and_cross_term (test_geometry.GeometryTests.test_functional_decomposition_identity_and_cross_term) ... ok
+test_heldout_values_cannot_change_fitted_maps (test_geometry.GeometryTests.test_heldout_values_cannot_change_fitted_maps) ... ok
+test_invertible_planted_map_exactly_recovered (test_geometry.GeometryTests.test_invertible_planted_map_exactly_recovered) ... ok
+test_large_constant_component_does_not_hide_centered_error (test_geometry.GeometryTests.test_large_constant_component_does_not_hide_centered_error) ... ok
+test_native_rounding_positive_and_permutation_negative_controls (test_geometry.GeometryTests.test_native_rounding_positive_and_permutation_negative_controls) ... ok
+test_oracle_equals_explicit_least_squares_optimum (test_geometry.GeometryTests.test_oracle_equals_explicit_least_squares_optimum) ... ok
+test_pure_planted_basis_functional_effect_recovered (test_geometry.GeometryTests.test_pure_planted_basis_functional_effect_recovered) ... ok
+test_rank_deficient_representation_reported (test_geometry.GeometryTests.test_rank_deficient_representation_reported) ... ok
+test_row_specific_changes_violate_shared_linear_map (test_geometry.GeometryTests.test_row_specific_changes_violate_shared_linear_map) ... ok
+test_capture_matches_original_forward_exactly (test_model_gauge.ModelGaugeTests.test_capture_matches_original_forward_exactly) ... ok
+test_full_network_gauge_float32_at_native_precision (test_model_gauge.ModelGaugeTests.test_full_network_gauge_float32_at_native_precision) ... ok
+test_full_network_gauge_preserves_all_sites_and_logits_float64 (test_model_gauge.ModelGaugeTests.test_full_network_gauge_preserves_all_sites_and_logits_float64) ... ok
+test_leaving_old_readout_is_exact_mismatch_control (test_model_gauge.ModelGaugeTests.test_leaving_old_readout_is_exact_mismatch_control) ... ok
+test_original_model_is_unchanged (test_model_gauge.ModelGaugeTests.test_original_model_is_unchanged) ... ok
+test_arbitrary_independent_task_encodings_admit_invertible_map (test_task_subspace.TaskSubspaceTests.test_arbitrary_independent_task_encodings_admit_invertible_map) ... ok
+test_coefficients_equal_class_means_even_with_unequal_counts (test_task_subspace.TaskSubspaceTests.test_coefficients_equal_class_means_even_with_unequal_counts) ... ok
+test_fourier_basis_complete_orthonormal (test_task_subspace.TaskSubspaceTests.test_fourier_basis_complete_orthonormal) ... ok
+test_planted_global_map_generalizes_to_excluded_classes (test_task_subspace.TaskSubspaceTests.test_planted_global_map_generalizes_to_excluded_classes) ... ok
+test_rank_deficient_coefficients_rejected (test_task_subspace.TaskSubspaceTests.test_rank_deficient_coefficients_rejected) ... ok
+test_task_only_fit_fails_on_independent_nuisance (test_task_subspace.TaskSubspaceTests.test_task_only_fit_fails_on_independent_nuisance) ... ok
+test_training_fit_is_independent_of_heldout_features (test_task_subspace.TaskSubspaceTests.test_training_fit_is_independent_of_heldout_features) ... ok
+test_training_fit_is_independent_of_heldout_labels (test_task_subspace.TaskSubspaceTests.test_training_fit_is_independent_of_heldout_labels) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.067s
+
+OK

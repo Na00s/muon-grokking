@@ -1,0 +1,16 @@
+{
+  "seed": 4,
+  "start_step": 15000,
+  "end_step": 18000,
+  "source_checkpoint": "seed4_original/step_015000.pt",
+  "selection": "Matched numerical continuations covering the observed first test-only decline: both accuracies 100% at 16000, test accuracy 85.46% at 16200, training accuracy 100% at the 100-step observations. Selected after observing this episode; dense replay separately checks brief training failures.",
+  "arms": [
+    "original32",
+    "stable32",
+    "model64",
+    "true64"
+  ],
+  "evaluation_interval": 10,
+  "checkpoint_interval": 100,
+  "interpretation": "Local sensitivity of one observed trajectory to numerical arithmetic. Finite horizon; no claim of permanent prevention or seed-level incidence."
+}

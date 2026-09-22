@@ -1,0 +1,31 @@
+{
+  "status": "horizon_completed_without_joint_failure",
+  "selection_status": "exploratory_followup",
+  "source_checkpoint": "work/experiments/seed4_original/step_006000.pt",
+  "source_checkpoint_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc",
+  "start_step": 6000,
+  "final_step": 6002,
+  "requested_steps": 2,
+  "updates_completed": 2,
+  "train_accuracy_inspections": 3,
+  "training_trigger_count": 0,
+  "heldout_evaluation_count": 1,
+  "event_step": null,
+  "final_metrics": {
+    "step": 6002,
+    "local_step": 2,
+    "train_loss": 7.216894573502941e-06,
+    "train_accuracy": 1.0,
+    "heldout_measured": false,
+    "test_loss": null,
+    "test_loss64": null,
+    "test_accuracy": null,
+    "train_below_0_90": false,
+    "joint_failure": false,
+    "elapsed_seconds": 0.23779733409173787
+  },
+  "last_joint_healthy_step": 6000,
+  "last_train_healthy_step": 6000,
+  "elapsed_seconds": 0.24588862503878772,
+  "interpretation": "A captured event is selected by exploratory per-step train-trigger monitoring; held-out accuracy is otherwise measured only on a 100-step grid."
+}

@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "portable_synthetic_checks": [
+    {
+      "command": "python -m unittest discover -s experiments -p test_*.py",
+      "returncode": 0,
+      "elapsed_seconds": 1.6271850829944015,
+      "output": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.079s\n\nOK\n"
+    },
+    {
+      "command": "python experiments/test_numerical_controls.py",
+      "returncode": 0,
+      "elapsed_seconds": 1.4148466251790524,
+      "status": "passed",
+      "check_groups": [
+        "moderate_logits_equivalence",
+        "tiny_loss_gradient_reference",
+        "ce_edge_cases_and_first_second_derivatives",
+        "ns_precision",
+        "optimizer_compatibility"
+      ]
+    }
+  ],
+  "package_plan": {
+    "copied_file_count": 258,
+    "copied_bytes": 187485711,
+    "checkpoint_count": 41,
+    "missing_required_checkpoints": [],
+    "missing_reported_result_files": [],
+    "note": "Counts precede README/manifest and this final verification JSON; live result files may add a completion record before packaging."
+  },
+  "repairs": [
+    "Retain checkpoint references nested in result or gradient diagnostic JSON, including step012000.",
+    "Retain one-step attribution pre_step.pt, post_step.pt and stable_ce_one_step.pt.",
+    "README now explicitly runs numerical-control checks; unittest discovery only runs unittest classes."
+  ],
+  "elapsed_seconds": 3.1102593331597745
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-09-22T19:06:58.662099+00:00",
+  "status": "Supplementary adjacent-step reference sensitivity",
+  "reference": "The immediately preceding saved or exactly replayed checkpoint. Its accuracy is explicitly reported, regardless of whether it meets a health threshold.",
+  "pairs": {
+    "seed4_adjacent": [
+      16055,
+      16056
+    ],
+    "seed0_adjacent": [
+      17493,
+      17494
+    ]
+  },
+  "continuation": "No additional training",
+  "specificity": "Ten orthogonal-size random corrections and the opposite orthogonal correction at each event",
+  "fitting": "Original training pairs only; labels unused"
+}

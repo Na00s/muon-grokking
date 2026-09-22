@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checkpoint": "work/experiments/seed4_original/step_006000.pt",
+  "replay_steps": 2,
+  "original_model_state_exact": true,
+  "all_three_optimizer_states_exact": true,
+  "rng_state_exact": true,
+  "initial_state_exact": true,
+  "heldout_evaluation_cadence_correct": true,
+  "explicit_unknown_final_test_metric": true,
+  "original_step_losses": [
+    7.220131465146551e-06,
+    7.218980044854106e-06
+  ],
+  "output_directory": "work/experiments/dense_capture_verified"
+}

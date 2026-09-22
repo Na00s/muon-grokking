@@ -1,0 +1,67 @@
+{
+  "healthy_checkpoint": "work/basis_study/seed3_matched_control_replay/final.pt",
+  "collapsed_checkpoint": "work/basis_study/seed3_baseline/step_014000.pt",
+  "healthy_step": 13492,
+  "collapsed_step": 14000,
+  "seed": 3,
+  "config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "torch_version": "2.13.0",
+  "numpy_version": "2.5.2",
+  "native_healthy": {
+    "train": {
+      "loss": 5.981004278510227e-07,
+      "loss64": 6.674370219916917e-07,
+      "accuracy": 1.0,
+      "max_abs_logit": 20.403095245361328
+    },
+    "heldout": {
+      "loss": 0.0010253728833049536,
+      "loss64": 0.0010254277051836174,
+      "accuracy": 1.0,
+      "max_abs_logit": 20.804471969604492
+    }
+  },
+  "native_collapsed": {
+    "train": {
+      "loss": 4.7559203153468843e-07,
+      "loss64": 5.423212306782118e-07,
+      "accuracy": 1.0,
+      "max_abs_logit": 21.684228897094727
+    },
+    "heldout": {
+      "loss": 0.0011487448355183005,
+      "loss64": 0.0011488002639216395,
+      "accuracy": 1.0,
+      "max_abs_logit": 21.70136833190918
+    }
+  },
+  "dataset_sha256": "a7df007113d76c7a17fda3f76efb8bbd018ca86ab3d9640ed7eabf660a273c06",
+  "protocol": "Raw final residuals. Original training examples only for fits and regularization validation. All test rows remain held out. No Fourier filtering.",
+  "reference_role": "Adaptive matched-duration healthy control; latest eligible 1000-grid end at least 1000 updates before event reference",
+  "step_interval": 508,
+  "selection_note": "Fresh seeds 1, 2, 3 declared together before training. Preceding-step references may already have degraded generalization.",
+  "control_selection": {
+    "interval": 508,
+    "start": 13492,
+    "end": 14000,
+    "eligible_end_steps": [
+      6000,
+      7000,
+      8000,
+      9000,
+      10000,
+      11000,
+      12000,
+      13000,
+      14000
+    ],
+    "passes_endpoint_99_percent": true
+  }
+}

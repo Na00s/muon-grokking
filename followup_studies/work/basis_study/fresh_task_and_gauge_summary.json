@@ -1,0 +1,255 @@
+{
+  "tasks": [
+    {
+      "name": "seed1_adjacent_event",
+      "healthy_step": 17720,
+      "current_step": 17721,
+      "reference_accuracy": 0.9413804676138271,
+      "current_accuracy": 0.09094977066785993,
+      "backward_transport_accuracy": 0.9432822463362792,
+      "task_invertible_transport_accuracy": 0.9400380355744491,
+      "class_exclusion_gaps_pp": [
+        -0.05485463521667233,
+        0.0,
+        -0.16492578339747377
+      ],
+      "source": "work/basis_study/task_subspace_results/seed1_adjacent_event/report.json"
+    },
+    {
+      "name": "seed1_first_event",
+      "healthy_step": 17300,
+      "current_step": 17721,
+      "reference_accuracy": 0.991945407763732,
+      "current_accuracy": 0.09094977066785993,
+      "backward_transport_accuracy": 0.9304172726255733,
+      "task_invertible_transport_accuracy": 0.8420404966998546,
+      "class_exclusion_gaps_pp": [
+        -11.519473395501922,
+        -11.232876712328776,
+        -10.335349092908197
+      ],
+      "source": "work/basis_study/task_subspace_results/seed1_first_event/report.json"
+    },
+    {
+      "name": "seed2_adjacent_event",
+      "healthy_step": 18068,
+      "current_step": 18069,
+      "reference_accuracy": 0.9998881306633851,
+      "current_accuracy": 0.00928515493903121,
+      "backward_transport_accuracy": 0.9998881306633851,
+      "task_invertible_transport_accuracy": 0.9998881306633851,
+      "class_exclusion_gaps_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source": "work/basis_study/task_subspace_results/seed2_adjacent_event/report.json"
+    },
+    {
+      "name": "seed2_first_event",
+      "healthy_step": 18000,
+      "current_step": 18069,
+      "reference_accuracy": 1.0,
+      "current_accuracy": 0.00928515493903121,
+      "backward_transport_accuracy": 1.0,
+      "task_invertible_transport_accuracy": 1.0,
+      "class_exclusion_gaps_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source": "work/basis_study/task_subspace_results/seed2_first_event/report.json"
+    },
+    {
+      "name": "seed3_adjacent_event",
+      "healthy_step": 16307,
+      "current_step": 16308,
+      "reference_accuracy": 0.8954021702651304,
+      "current_accuracy": 0.5359659917216691,
+      "backward_transport_accuracy": 0.9049110638773912,
+      "task_invertible_transport_accuracy": 0.8980870343438864,
+      "class_exclusion_gaps_pp": [
+        -0.11261261261261701,
+        0.0,
+        -0.22002200220021528
+      ],
+      "source": "work/basis_study/task_subspace_results/seed3_adjacent_event/report.json"
+    },
+    {
+      "name": "seed3_first_event",
+      "healthy_step": 15800,
+      "current_step": 16308,
+      "reference_accuracy": 0.9907148450609687,
+      "current_accuracy": 0.5359659917216691,
+      "backward_transport_accuracy": 0.9258306298243651,
+      "task_invertible_transport_accuracy": 0.7929298579259425,
+      "class_exclusion_gaps_pp": [
+        -14.639639639639645,
+        -17.711171662125345,
+        -16.281628162816276
+      ],
+      "source": "work/basis_study/task_subspace_results/seed3_first_event/report.json"
+    },
+    {
+      "name": "seed3_peak_event",
+      "healthy_step": 15800,
+      "current_step": 16309,
+      "reference_accuracy": 0.9907148450609687,
+      "current_accuracy": 0.32117686542118806,
+      "backward_transport_accuracy": 0.9467501957713391,
+      "task_invertible_transport_accuracy": 0.8429354513927733,
+      "class_exclusion_gaps_pp": [
+        -11.317567567567565,
+        -11.662125340599461,
+        -11.111111111111116
+      ],
+      "source": "work/basis_study/task_subspace_results/seed3_peak_event/report.json"
+    }
+  ],
+  "gauges": [
+    {
+      "name": "seed1_adjacent_event",
+      "maps": [
+        {
+          "map": "final_token_ols",
+          "centered_final_error": 0.04650969725005071,
+          "same_A_positive_floor": 3.642590583585019e-06,
+          "error_over_floor": 12768.302169242448,
+          "inverse_forward_rescue_accuracy": 0.9433941156728941,
+          "centered_input_error": 0.7920194995308111,
+          "centered_attention_error": 0.815432663306674
+        },
+        {
+          "map": "joint_sites_normalized_ols",
+          "centered_final_error": 0.0647304123730245,
+          "same_A_positive_floor": 3.371533099766384e-06,
+          "error_over_floor": 19199.103332994036,
+          "inverse_forward_rescue_accuracy": 0.9437297236827386,
+          "centered_input_error": 0.009886530872238779,
+          "centered_attention_error": 0.01743310703576012
+        }
+      ],
+      "source": "work/basis_study/model_gauge_fresh/actual/seed1_adjacent_event.json"
+    },
+    {
+      "name": "seed1_first_event",
+      "maps": [
+        {
+          "map": "final_token_ols",
+          "centered_final_error": 0.44700996322941,
+          "same_A_positive_floor": 7.194774646835086e-05,
+          "error_over_floor": 6212.980741878351,
+          "inverse_forward_rescue_accuracy": 0.9513368385725472,
+          "centered_input_error": 11.434861808275269,
+          "centered_attention_error": 7.29302089670481
+        },
+        {
+          "map": "joint_sites_normalized_ols",
+          "centered_final_error": 0.7436524598766957,
+          "same_A_positive_floor": 2.5169670739742155e-06,
+          "error_over_floor": 295455.7759480305,
+          "inverse_forward_rescue_accuracy": 0.9371294328224634,
+          "centered_input_error": 0.16635033563224944,
+          "centered_attention_error": 0.21260577786685464
+        }
+      ],
+      "source": "work/basis_study/model_gauge_fresh/actual/seed1_first_event.json"
+    },
+    {
+      "name": "seed2_adjacent_event",
+      "maps": [
+        {
+          "map": "final_token_ols",
+          "centered_final_error": 0.011035344960419543,
+          "same_A_positive_floor": 5.68667619587576e-06,
+          "error_over_floor": 1940.561512614853,
+          "inverse_forward_rescue_accuracy": 0.9998881306633851,
+          "centered_input_error": 0.24306710358602532,
+          "centered_attention_error": 0.31098186410620776
+        },
+        {
+          "map": "joint_sites_normalized_ols",
+          "centered_final_error": 0.01643099503074045,
+          "same_A_positive_floor": 5.619851770231825e-06,
+          "error_over_floor": 2923.741711084784,
+          "inverse_forward_rescue_accuracy": 0.9998881306633851,
+          "centered_input_error": 0.0014690873255392806,
+          "centered_attention_error": 0.0021590174324259415
+        }
+      ],
+      "source": "work/basis_study/model_gauge_fresh/actual/seed2_adjacent_event.json"
+    },
+    {
+      "name": "seed2_first_event",
+      "maps": [
+        {
+          "map": "final_token_ols",
+          "centered_final_error": 0.0884358345957198,
+          "same_A_positive_floor": 1.2294083778983589e-05,
+          "error_over_floor": 7193.365214160856,
+          "inverse_forward_rescue_accuracy": 1.0,
+          "centered_input_error": 2.0362314045338294,
+          "centered_attention_error": 2.1042135428106734
+        },
+        {
+          "map": "joint_sites_normalized_ols",
+          "centered_final_error": 0.15154469940966842,
+          "same_A_positive_floor": 5.497808138782283e-06,
+          "error_over_floor": 27564.566748092133,
+          "inverse_forward_rescue_accuracy": 1.0,
+          "centered_input_error": 0.021450030387755024,
+          "centered_attention_error": 0.024130651571695538
+        }
+      ],
+      "source": "work/basis_study/model_gauge_fresh/actual/seed2_first_event.json"
+    },
+    {
+      "name": "seed3_adjacent_event",
+      "maps": [
+        {
+          "map": "final_token_ols",
+          "centered_final_error": 0.10765573273805032,
+          "same_A_positive_floor": 4.528066226372425e-06,
+          "error_over_floor": 23775.21161484793,
+          "inverse_forward_rescue_accuracy": 0.9065891039266137,
+          "centered_input_error": 1.1980361474569137,
+          "centered_attention_error": 1.4192792461200943
+        },
+        {
+          "map": "joint_sites_normalized_ols",
+          "centered_final_error": 0.14130425061264404,
+          "same_A_positive_floor": 3.150254602429766e-06,
+          "error_over_floor": 44854.8668109737,
+          "inverse_forward_rescue_accuracy": 0.9058060185703098,
+          "centered_input_error": 0.030842169766613546,
+          "centered_attention_error": 0.05468983780111071
+        }
+      ],
+      "source": "work/basis_study/model_gauge_fresh/actual/seed3_adjacent_event.json"
+    },
+    {
+      "name": "seed3_first_event",
+      "maps": [
+        {
+          "map": "final_token_ols",
+          "centered_final_error": 0.5142748637073715,
+          "same_A_positive_floor": 7.285155291957391e-05,
+          "error_over_floor": 7059.216215680628,
+          "inverse_forward_rescue_accuracy": 0.9437297236827386,
+          "centered_input_error": 8.60469333667573,
+          "centered_attention_error": 7.309816917948248
+        },
+        {
+          "map": "joint_sites_normalized_ols",
+          "centered_final_error": 0.8482352284154365,
+          "same_A_positive_floor": 2.155090813108379e-06,
+          "error_over_floor": 393596.04860084335,
+          "inverse_forward_rescue_accuracy": 0.9250475444680613,
+          "centered_input_error": 0.20498834539949884,
+          "centered_attention_error": 0.22463064748993525
+        }
+      ],
+      "source": "work/basis_study/model_gauge_fresh/actual/seed3_first_event.json"
+    }
+  ]
+}
