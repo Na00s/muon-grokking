@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering\small
+\caption{Operational definitions. Evaluations occur every $100$ steps, so a sustained
+criterion requires the threshold to hold across a $500$-step window.}
+\label{tab:definitions}
+\begin{tabular}{ll}
+\toprule
+Term & Definition \\
+\midrule
+Sustained $99.9\%$ train & First evaluation followed by five evaluations at or above $99.9\%$ train accuracy \\
+Sustained $95\%$ test & First evaluation followed by five evaluations at or above $95\%$ test accuracy \\
+Memorization plateau & Sustained-$95$ test step minus sustained-$99.9$ train step \\
+Strictly stable & No post-grokking evaluation below $95\%$ test accuracy \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering\small
+\caption{Muon sweep over the hidden group. All nine configurations reach sustained $95\%$
+test accuracy and none is strictly stable. The count of sub-threshold evaluations has no
+monotone relationship to either hyperparameter.}
+\label{tab:muon-sweep}
+\begin{tabular}{llrrrl}
+\toprule
+LR & WD & Sustained $95\%$ & Min after grokking & Evals $<95\%$ & Strictly stable \\
+\midrule
+$0.03$ & $0.1$ & $5{,}400$ & $69.40\%$ & $56$ & no \\
+$0.01$ & $0.1$ & $6{,}000$ & $53.24\%$ & $107$ & no \\
+$0.03$ & $0.3$ & $7{,}200$ & $75.63\%$ & $2$ & no \\
+$0.01$ & $0.3$ & $8{,}500$ & $76.60\%$ & $145$ & no \\
+$0.03$ & $0.03$ & $9{,}000$ & $0.78\%$ & $592$ & no \\
+$0.003$ & $0.1$ & $14{,}400$ & $90.07\%$ & $5$ & no \\
+$0.003$ & $0.03$ & $19{,}000$ & $21.24\%$ & $130$ & no \\
+$0.01$ & $0.03$ & $19{,}500$ & $0.83\%$ & $473$ & no \\
+$0.003$ & $0.3$ & $28{,}100$ & $78.59\%$ & $265$ & no \\
+\bottomrule
+\end{tabular}
+\end{table}

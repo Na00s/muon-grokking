@@ -1,5 +1,17 @@
 # Post-grokking collapse at the representation–readout interface
 
+
+## Revised submission
+
+The selectively revised manuscript incorporates the completed decoder, basis, arithmetic, and architecture controls. It preserves all six original figures and all 17 original table files, with one new main-text figure and one new appendix figure. The main text remains 10 pages.
+
+- [Revised paper](paper/Muon_Grokking_Revised.pdf)
+- [Complete LaTeX source ZIP](paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip)
+- [Section-by-section revision notes](paper/revision_notes.md)
+- [Exact changes to original source files](paper/targeted_revision.patch)
+- [Compilation and preservation checks](paper/verification.json)
+- [Figure values and input hashes](paper/source/figures/followup_figure_provenance.json)
+
 Code and run artifacts for a study of what happens to a grokked circuit after it forms,
 under split-optimizer routing that gives Muon the hidden weight matrices and leaves
 embeddings and the output head with AdamW.

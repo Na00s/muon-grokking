@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering\small
+\caption{Controlled variation of modulus, training fraction, and width. Stable Muon and
+Muon share a configuration up to the freeze, so differences in their grokking step measure
+run-to-run variation on this backend rather than an effect of the intervention.}
+\label{tab:generality}
+\begin{tabular}{llrrl}
+\toprule
+Variant & Regime & Sustained $95\%$ & Min post-grokking & Outcome \\
+\midrule
+\multirow{3}{*}{$p=97$, train $30\%$, width $128$}
+ & AdamW & $31{,}000$ & $95.52\%$ & stable \\
+ & Muon & $6{,}300$ & $15.49\%$ & unstable \\
+ & Stable Muon & $6{,}300$ & $95.05\%$ & stable \\
+\midrule
+\multirow{3}{*}{$p=113$, train $20\%$, width $128$}
+ & AdamW & no grok & & \\
+ & Muon & $15{,}100$ & $49.25\%$ & unstable \\
+ & Stable Muon & $14{,}500$ & $95.16\%$ & stable \\
+\midrule
+\multirow{3}{*}{$p=113$, train $30\%$, width $64$}
+ & AdamW & $84{,}800$ & $96.38\%$ & stable \\
+ & Muon & $17{,}700$ & $53.23\%$ & unstable \\
+ & Stable Muon & $16{,}500$ & $95.67\%$ & stable \\
+\bottomrule
+\end{tabular}
+\end{table}

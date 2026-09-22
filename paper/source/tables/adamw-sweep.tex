@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering\small
+\caption{AdamW sweep. Seven of eleven retained configurations reach sustained $95\%$ test
+accuracy. Post-grokking evaluations below $95\%$ increase monotonically with the learning
+rate.}
+\label{tab:adamw-sweep}
+\begin{tabular}{llrrrl}
+\toprule
+LR & WD & Sustained $95\%$ & Min after grokking & Evals $<95\%$ & Strictly stable \\
+\midrule
+$3\times10^{-4}$ & $0.1$ & no grok & & & \\
+$3\times10^{-4}$ & $1.0$ & no grok & & & \\
+$3\times10^{-4}$ & $3.0$ & $25{,}500$ & $95.67\%$ & $0$ & yes \\
+$10^{-3}$ & $0.1$ & no grok & & & \\
+$10^{-3}$ & $1.0$ & $52{,}500$ & $96.49\%$ & $0$ & yes \\
+$10^{-3}$ & $3.0$ & $8{,}200$ & $95.01\%$ & $0$ & yes \\
+$3\times10^{-3}$ & $0.1$ & $49{,}500$ & $13.26\%$ & $2$ & no \\
+$3\times10^{-3}$ & $1.0$ & $8{,}500$ & $53.72\%$ & $4$ & no \\
+$10^{-2}$ & $0.1$ & $62{,}900$ & $0.54\%$ & $258$ & no \\
+$10^{-2}$ & $1.0$ & $6{,}300$ & $0.41\%$ & $918$ & no \\
+$10^{-2}$ & $3.0$ & no grok & & & \\
+\bottomrule
+\end{tabular}
+\end{table}

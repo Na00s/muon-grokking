@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\small
+\caption{Time to sustained generalization, in optimizer steps and in elapsed seconds on a
+single device. Per-step cost is the median over evaluation intervals. The AdamW baseline at
+depth $4$ is right-censored at the step budget.}
+\label{tab:wallclock}
+\begin{tabular}{llrrrr}
+\toprule
+Depth & Optimizer & ms/step & Steps to grok & Seconds to grok & Advantage \\
+\midrule
+\multirow{2}{*}{$2$} & AdamW & $33.06$ & $5{,}100$ & $170$ & \\
+ & Muon & $57.81$ & $2{,}300$ & $133$ & $2.22\times$ steps, $1.28\times$ time \\
+\midrule
+\multirow{2}{*}{$4$} & AdamW & $61.68$ & $>300{,}000$ & $>19{,}768$ & \\
+ & Muon & $110.87$ & $52{,}600$ & $5{,}856$ & $>5.70\times$ steps, $>3.37\times$ time \\
+\bottomrule
+\end{tabular}
+\end{table}

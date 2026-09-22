@@ -1,0 +1,136 @@
+\section{Decoder, basis, and arithmetic follow-ups}
+\label{app:followup}
+
+The decoder and matched-branch tests use the original architecture, data splits, and optimizer settings; operation and normalization controls are specified separately below. The basis study adds $52{,}698$ baseline updates and $9{,}000$ continuation updates. The subsequent causal study adds $364{,}302$ updates: five $24{,}000$-step arithmetic branches, fifteen $5{,}000$-step specificity branches, four original-trajectory extensions totaling $49{,}302$ steps, and four $30{,}000$-step operation or architecture controls. Verification replays are excluded from these totals. Multiple checkpoints and interventions from one trajectory are dependent observations.
+
+\subsection{Monitoring and matched states}
+\label{app:followup-protocol}
+
+The causal branches and fresh baseline replications use a joint event: training and test accuracy must both fall below $90\%$ after sustained grokking. Training accuracy is checked at every update; test accuracy is checked every $100$ updates and at every post-grokking state with training accuracy below $90\%$. Thus every joint event is detected, while brief test-only excursions can fall between evaluations. Six consecutive grid evaluations at or above $95\%$ confirm grokking. The confirmation step is the \emph{last} evaluation of that streak, $500$ updates after the streak-start definition used for grokking speed in \S\ref{sec:setup}.
+
+Within each seed, matched arithmetic branches restore identical parameters, optimizer buffers, and random-number-generator state. Exact next-update replays reproduce all three. The original prefixes combine historical evaluation grids with densely captured failures; their positive events establish binary incidence. We therefore compare event presence, without comparing their counts, durations, or historical minima against the uniformly monitored branches. The five trajectories were selected for mechanistic study and give no estimate of collapse prevalence over an unrestricted seed population.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Test accuracy (\%) at adjacent captured failures. $h_0,W_0$ precede the update; $h_1,W_1$ follow it. Each head is evaluated with each feature state, without retraining. Original events are captured under mixed historical monitoring grids (Appendix~\ref{app:followup-protocol}).}
+\label{tab:adjacent}
+\begin{tabular}{lrrrr}
+\toprule
+Seed & Before: $W_0h_0$ & Old head: $W_0h_1$ & New head: $W_1h_0$ & After: $W_1h_1$ \\
+\midrule
+$0$ & $95.49$ & $96.39$ & $31.86$ & $31.87$ \\
+$1$ & $94.14$ & $94.18$ & $13.56$ & $9.09$ \\
+$2$ & $99.99$ & $100.00$ & $1.01$ & $0.93$ \\
+$3$ & $89.54$ & $91.01$ & $50.80$ & $53.60$ \\
+$4$ & $91.34$ & $98.66$ & $66.75$ & $66.33$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Fresh decoders and the basis hypothesis}
+\label{app:basis}
+
+Fresh bias-free linear decoders are fitted to the raw final residual using only the original $3{,}830$ training examples. An uncentered SVD preconditioner retains all $128$ dimensions, with singular values floored at $10^{-6}$ of the largest. Each inner fit estimates its own preconditioner. A $20\%$ split of the training set selects the $L_2$ penalty from $\{0,10^{-8},10^{-6},10^{-4},10^{-2}\}$ by validation cross-entropy; the selected decoder is then refitted on all training examples. The $8{,}939$ test examples enter only the final evaluation. Fits use float64 logistic regression and L-BFGS-B; convergence and unregularized controls are recorded.
+
+At the selected collapsed checkpoints, decoder accuracies for seeds $0$--$4$ are $98.72\%$, $98.20\%$, $100.00\%$, $98.77\%$, and $100.00\%$, against $99.51\%$, $99.56\%$, $100.00\%$, $99.40\%$, and $100.00\%$ at their references. Probe checkpoints are steps $17{,}494$, $17{,}721$, $18{,}069$, $16{,}309$, and $16{,}060$: the last two occur after the adjacent transitions in Table~\ref{tab:adjacent}. These results establish substantial surviving linear task information; the small gaps in three seeds leave room for reduced decodability or probe limitations.
+
+For column residuals, an exact global basis account requires one invertible $R$ satisfying $h_1(x)=Rh_0(x)$ across the operand grid. With examples stacked as rows, full column rank makes this equivalent to equality of the two feature column spaces. We test train-fitted linear and affine maps, centered reconstruction, rank sensitivity, principal angles, and a separately identified full-domain oracle. Centering by training means prevents a large constant feature component from dominating reconstruction error.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Centered held-out reconstruction error (\%) for a train-fitted map from later to earlier residuals. Healthy controls match interval length. Reference intervals span $6$--$508$ updates and occur at different optimization stages, so comparisons are within each seed.}
+\label{tab:followup-geometry}
+\begin{tabular}{lrrr}
+\toprule
+Seed & \shortstack{Reference to\\captured failure} & Healthy interval & \shortstack{Adjacent\\failure update} \\
+\midrule
+$0$ & $43.63$ & $32.66$ & $1.88$ \\
+$1$ & $43.05$ & $10.82$ & $4.63$ \\
+$2$ & $9.05$ & $2.76$ & $1.10$ \\
+$3$ & $45.73$ & $14.30$ & $10.66$ \\
+$4$ & $25.60$ & $1.18$ & $25.63$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Positive controls plant exact residual gauges into the trained network. Eight controls cover condition numbers $1$, $3$, $10$, and $100$ in float32 and float64; twenty-four further controls plant observed fitted matrices with their measured orientation and conditioning. Exact compensation and train-fitted compensation recover $100\%$ in every fixed-condition control. For the three fresh adjacent transitions, observed forward-map errors are $4.65\%$, $1.10\%$, and $10.77\%$, against $0.0004$--$0.0006\%$ for their planted controls. These errors reject exact global equivalence for the measured pairs. Healthy evolution also departs from exact equivalence (Table~\ref{tab:followup-geometry}).
+
+Approximate transport remains useful: inverse-linear compensation reaches $95.13\%$, $100\%$, and $94.37\%$ at the three fresh first events. Reference timing matters. Seed $0$'s head from step $17{,}200$ scores $14.05\%$ on the collapsed residual, while the head from $17{,}493$ scores $96.39\%$. Its geometric discrepancy from the distant reference is already present before the final failing update. Moreover, the complete real task-only Fourier coefficient matrices have shape $113\times128$; when both have full row rank, an invertible map between them always exists. A fitted task-only map can therefore align that projection exactly while scoring only $4.62\%$ on raw held-out features.
+
+One-time repairs also have limited persistence. Eighteen continuations resume two captured failures for $500$ updates under nine head/state interventions each. Every successful repair retaining optimizer state falls below $90\%$ training accuracy on the next update. Clearing the head's Adam state improves eventual recovery but permits the immediate relapse. These tests separate instantaneous decodability from stability under continued optimization.
+
+\subsection{Arithmetic interventions}
+\label{app:arithmetic}
+
+The accurate loss evaluates $\log(1+\sum_{j\ne y}\exp(z_j-z_y))$ with \texttt{log1p} whenever the correct-class logit is maximal; other examples use ordinary cross-entropy. Model storage, backward matrix arithmetic, and Muon's update remain float32. This avoids cancellation in the small loss and correct-class derivative, following the numerical concerns of \citet{prieto2025grokking}. All five step-$6{,}000$ sources already satisfy the six-check grokking criterion and already contain measurable gradient error. The intervention acts on an existing post-grokking trajectory.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Matched arithmetic branches from step $6{,}000$ through $30{,}000$. Original columns show a captured joint failure. Accurate-CE branches have no joint failure; all finish at $100\%$ train and test accuracy. Minima include the starting state.}
+\label{tab:followup-arithmetic}
+\begin{tabular}{lrrr}
+\toprule
+Seed & Original event step & \shortstack{Original event\\test (\%)} & \shortstack{Accurate minimum\\test (\%)} \\
+\midrule
+$0$ & $17{,}494$ & $31.872$ & $99.754$ \\
+$1$ & $17{,}721$ & $9.095$ & $99.843$ \\
+$2$ & $18{,}069$ & $0.929$ & $98.859$ \\
+$3$ & $16{,}308$ & $53.597$ & $99.978$ \\
+$4$ & $16{,}056$ & $66.327$ & $99.843$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The specificity study branches each seed at step $15{,}000$ and runs to $20{,}000$ with three corrections. Accurate CE gives $0/5$ joint failures; target-derivative repair gives $0/5$; per-example zero-sum projection gives $0/5$. Every original trajectory has a captured failure in this window. All fifteen corrected branches finish at $100\%$ test accuracy; the minimum measured test accuracy across these branches is $99.978\%$.
+
+For stock logit gradient $g$, target repair retains each wrong-class entry and sets $g_y=-\sum_{j\ne y}g_j$, leaving the reported forward loss unchanged. Projection replaces $g$ by $g-\mathbf{1}(\mathbf{1}^{\top}g)/p$. Derivative errors are relative $L_2$ errors against the accurate float64 derivative evaluated on the identical float32 logits. The readout-gradient reference casts this logit derivative to float32 before backpropagating through the shared float32 network. At the fixed seed-$4$, step-$16{,}000$ audit, target repair reduces relative derivative error from $32.02\%$ to $4.19\times10^{-7}$, whereas projection leaves $31.88\%$. At step $20{,}000$, projected derivatives retain $52.94$--$86.07\%$ relative error despite a class-sum residual below $2.1\times10^{-8}$ relative to the reference norm. Thus restoring the class-sum identity can prevent the observed failures over this window even with substantial remaining derivative error. Numerical feature inflation and this projection control build on \citet{liu2026glitching}.
+
+At step $15{,}000$, stock logit-gradient errors are $10.56$--$21.86\%$ and readout-gradient errors $18.95$--$43.42\%$. Passing a class-common gradient error through the same saved Adam state produces a class-centered update difference: its centered norm fraction is $45.85$--$73.37\%$, versus approximately $3\times10^{-16}$ for scalar SGD. These descriptive norm ratios are nonadditive. Accurate-CE branches also have smaller feature means: original mean norms at step $15{,}000$ are $2.22$--$3.83$ times their matched corrected values.
+
+\subsection{Mean amplification and finite-step overshoot}
+\label{app:mean-update}
+
+At the checkpoints immediately before the five original failures, feature means over the full operand grid have norms $10{,}374$--$12{,}203$. The intervention below uses the following checkpoint's mean over training examples. Let $h_1$ be the updated residual, $W_{U,0}$ the preceding readout, $\Delta W_U$ its actual displacement, and $\mu$ this training mean of $h_1$. Starting from the rescued logits $W_{U,0}h_1$, the readout-induced change decomposes exactly as
+\begin{equation}
+\Delta z=\Delta W_U(h_1-\mu)+\Delta W_U\mu.
+\label{eq:followup-mean}
+\end{equation}
+Applying the training-estimated mean unchanged to test examples, the mean term alone gives $32.11\%$, $9.42\%$, $0.93\%$, $53.34\%$, and $66.07\%$ accuracy, close to the full failing updates in Table~\ref{tab:followup-arithmetic}. The centered term alone retains $95.26\%$, $92.48\%$, $100\%$, $87.20\%$, and $98.46\%$. Relative reconstruction error is below $3\times10^{-16}$. This evaluation-only intervention establishes local sufficiency of the product of feature mean and readout displacement. Feature growth and optimizer history remain coupled before that step.
+
+Replacing gradients only at the failing update with accurate gradients preserves all five failures. The state accumulated beforehand matters. For each actual complete parameter displacement $\Delta\theta$, the accurate training gradient satisfies $\nabla L^{\top}\Delta\theta<0$, including each group's contribution. Scaling the displacement by $0.001$ or $0.01$ lowers training loss in every seed; taking the full step raises it sharply. Both interpolation endpoints reproduce saved parameters exactly. The captured updates locally descend and overshoot at finite scale.
+
+\subsection{Subtraction and normalized architecture}
+\label{app:normalized}
+
+Four additional runs use seed $0$ and a fixed $30{,}000$-step horizon: a stock/accurate-CE pair on subtraction and a pair on addition with gain-free RMS normalization before attention, before the MLP, and before the readout ($\epsilon=10^{-6}$). Parameter initialization and optimizer settings are matched, with no added parameters or hyperparameter search.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Operation and architecture controls. Confirmation is the end of the six-check grokking streak. First-event test accuracies and post-grokking minima are separate measurements; both RMS runs subsequently recover to $100\%$. Each row is one seed.}
+\label{tab:followup-generality}
+\begin{tabular}{llrrrr}
+\toprule
+Condition & CE & Confirmation & First event & Event test (\%) & Min.\ test (\%) \\
+\midrule
+Subtraction & Stock & $9{,}300$ & $15{,}281$ & $5.851$ & $5.851$ \\
+Subtraction & Accurate & $10{,}500$ & none & n/a & $96.879$ \\
+RMS addition & Stock & $15{,}700$ & $18{,}515$ & $85.658$ & $0.481$ \\
+RMS addition & Accurate & $19{,}900$ & $28{,}495$ & $0.884$ & $0.526$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Subtraction reproduces acute readout sensitivity: updated features with the preceding head score $98.81\%$, the mean term alone $5.84\%$, and the centered term $98.76\%$. Accurate CE prevents the joint event through the horizon and finishes at $99.966\%$ test accuracy.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{followup_rms_boundary.pdf}
+\caption{One-step parameter interventions at the first detected joint failure in each operation or architecture control, all at seed $0$. Each bar uses the preceding checkpoint with only the indicated parameter group replaced by its following value; ``Full'' applies all three groups. In subtraction, the head update reproduces most of the damage. In both RMS cases, the embedding update is destructive while the head update preserves accuracy. The accurate-CE RMS failure occurs with an accurate loss derivative. These are first-event measurements at the displayed steps; the later post-grokking minima are reported separately in Table~\ref{tab:followup-generality}.}
+\label{fig:followup-rms}
+\end{figure}
+
+RMS normalization changes the acute locus. In the accurate-CE event, test accuracy falls from $96.208\%$ to $0.884\%$; its logit derivative has relative error $9.48\times10^{-8}$ and no vanished correct-class entries. Updating only the head retains $96.208\%$, updating only embeddings gives $0.940\%$, and freezing the head still gives $0.895\%$. The minimum reaches $0.526\%$ at step $28{,}503$; the stock-RMS minimum is $0.481\%$ at $28{,}540$. Exact update replay passes. Both RMS event directions locally descend and lower loss at scales $0.001$ and $0.01$, then overshoot at full scale. This counterexample bounds the readout/feature-mean account to the measured unnormalized cases and rules out universal prevention by accurate loss arithmetic. The completed horizons support those finite claims; longer runs and population frequencies remain outside their scope.

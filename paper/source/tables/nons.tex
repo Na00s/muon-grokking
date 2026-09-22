@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\small
+\caption{Ablated runs that reach sustained generalization. Minimum is the lowest test
+accuracy from the sustained-$95$ step to the last recorded evaluation. Terminal is the step
+at which the loss becomes non-finite.}
+\label{tab:nons}
+\begin{tabular}{llrrrr}
+\toprule
+Learning rate & Backend & Precision & Grokked & Minimum & Terminal \\
+\midrule
+$0.3$ & MPS & \texttt{float32} & $3{,}100$ & $97.28\%$ & $23{,}514$ \\
+$0.3$ & CPU & \texttt{float32} & $3{,}100$ & $97.52\%$ & $24{,}485$ \\
+$0.3$ & CPU & \texttt{float64} & $3{,}100$ & $97.06\%$ & $22{,}889$ \\
+$1.0$ & MPS & \texttt{float32} & $6{,}800$ & $97.11\%$ & $23{,}800$ \\
+$1.0$ & CPU & \texttt{float64} & $7{,}700$ & $95.96\%$ & $29{,}831$ \\
+$1.0$ & CPU & \texttt{float32} & $6{,}500$ & $95.60\%$ & $38{,}955$ \\
+\bottomrule
+\end{tabular}
+\end{table}

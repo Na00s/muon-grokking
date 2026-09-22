@@ -1,0 +1,80 @@
+\section{Setup details and operational definitions}
+\label{app:setup}
+
+\input{tables/definitions}
+\input{tables/configs}
+
+Each example is the token sequence $[a,b,=]$; the vocabulary contains $p+1=114$ tokens and the output layer $p=113$ classes. The ordered operand grid contains $p^2=12{,}769$ examples; a fixed random $30\%$ (unless stated) forms the training set, generated once from the run seed and shared by all matched comparisons. The original runs load a saved initial state from disk, evaluate every $100$ steps, and checkpoint every $1{,}000$. Depth-1 and depth-2 runs last $100{,}000$ steps and depth-4 runs $300{,}000$.
+
+Each block holds four two-dimensional matrices (fused QKV $384\times128$, attention output $128\times128$, MLP input $512\times128$, MLP output $128\times512$), $196{,}608$ parameters; with embeddings and unembedding the depth-1 model has $226{,}048$ parameters. Depth is varied by appending blocks under nested initialization, so deeper models begin from a strict superset of the shallower model's initial state. Muon maintains an exponential moving average of the gradient with $\beta=0.95$, forms a Nesterov-style update, normalizes it by its Frobenius norm, applies five quintic Newton--Schulz iterations with coefficients $(3.4445,-4.7750,2.0315)$, scales by $\sqrt{\max(1,\text{rows}/\text{cols})}$, and applies decoupled weight decay; the implementation refuses any parameter that is not a matrix. All AdamW groups use $\beta_1=0.9$, $\beta_2=0.999$.
+
+Table~\ref{tab:definitions} gives the operational definitions for the original experiments; evaluations occur every $100$ steps, so a sustained criterion holds across a $500$-step window. Training sweeps and matched-branch experiments run at a single seed on an accelerator backend that is not bitwise deterministic across processes; the five-seed replications run on CPU, where execution is bitwise deterministic, so the Muon and Stable Muon arms are the same trajectory until the freeze fires and agree to a maximum absolute difference of zero over the seventy-four to seventy-five evaluations preceding it. The seed sets the initialization and the train/test split together, so the five seeds are five draws of the problem instance.
+
+\section{Sweeps, baseline selection, and generality}
+\label{app:sweeps}
+
+\input{tables/adamw-sweep}
+\input{tables/muon-sweep}
+\input{tables/generality}
+
+Tables~\ref{tab:adamw-sweep} and~\ref{tab:muon-sweep} give both sweeps under identical architecture, split, and budget. The fastest AdamW configuration ($\mathrm{lr}=10^{-2}$, $\mathrm{wd}=1.0$) is unusable: $918$ sub-threshold evaluations at this seed, and across seeds three of five never reach sustained $95\%$, the two that do record $805$ and $956$, and all five end within a tenth of a point of chance. The baseline is therefore the fastest configuration that is strictly stable in this sweep, $\mathrm{lr}=10^{-3}$, $\mathrm{wd}=3.0$; the seed replication shows strict stability at that setting is a property of one seed rather than of the configuration. For Muon no configuration is strictly stable, so the selected configuration is the fastest.
+
+Both optimizers fit the training set between steps $200$ and $1{,}400$ in every grokking configuration, so the difference lies entirely in the delay from memorization to generalization: $30{,}100$ steps for AdamW against $12{,}544$ for Muon averaged over successes. Across five seeds Muon reaches sustained generalization between $5{,}300$ and $5{,}400$ steps and the AdamW reference between $4{,}000$ and $11{,}700$, medians $5{,}400$ and $8{,}300$.
+
+Varying the readout learning rate over $10^{-4}$, $2.5\times10^{-4}$, and $5\times10^{-4}$ gives post-grokking minima of $37.13\%$, $79.40\%$, and $3.81\%$; varying its weight decay over $0$, $0.1$, and $0.5$ gives $33.34\%$, $0.79\%$, and $1.12\%$; every setting is unstable. On $(a-b)\bmod 113$ the Muon run records $18$ post-grokking evaluations below $95\%$ with a minimum of $1.52\%$ and the AdamW run records none, reproducing the depth-1 addition asymmetry at $194$ and none. Table~\ref{tab:generality} varies modulus, training fraction, and width; Stable Muon and Muon share a configuration up to the freeze, so differences in their grokking steps bound run-to-run variation on this backend.
+
+\section{The quiet window}
+\label{app:quiet}
+
+\input{tables/quiet}
+
+Table~\ref{tab:quiet} follows the $691$ steps preceding the collapse of \S\ref{sec:quiet} and the failure interval itself. On the hidden group the gradient-driven component is $0.1499$ at step $44{,}100$ against a decay component of $0.1475$, a ratio of $0.984$, leaving a net displacement of $0.0462$ that grows to $0.0759$ across the window while the orthogonalized step stays flat; over the window the hidden gradient norm grows by $3.92$ while its gradient-driven step changes by $0.97$, and the non-hidden gradient grows by $2.60$ while the embedding and readout steps grow by $2.65$ and $2.84$. The readout is pulled by decay rather than by the loss on $14.9\%$ of quiet-window steps. The instantaneous per-parameter displacement ratio between the groups falls from $16.2$ to $3.3$ across the window. At the failure the readout gradient norm rises from $3.52\times10^{-5}$ to $836.10$; the orthogonalized Muon step over that interval is $0.1429$, lower than the $0.1455$ preceding it, and its maximum over the branch occurs after the event.
+
+\section{Ablating the normalized-orthogonalization path}
+\label{app:ablation}
+
+\input{tables/nons}
+
+The ablation removes the Frobenius normalization and the Newton--Schulz iteration together, leaving momentum, shape scaling, and weight decay; the update carries the magnitude and direction of the buffer, and the learning rate must rise to $0.3$ or $1.0$ for the model to learn at all. Table~\ref{tab:nons}: six ablated runs generalize, none records a post-grokking evaluation below $95\%$, and all six end in a non-finite loss, in float64 as well as float32, at terminal steps spanning $22{,}889$ to $38{,}955$ and at hidden norms that set no failure threshold. Muon on the matched run reaches a minimum of $29.49\%$ and recovers to $96.48\%$, with thirteen sub-threshold evaluations before the earliest ablated failure: the ablated runs span the window in which Muon oscillates and none of them does. The two failures differ in kind, and the ablation collapses spectral dispersion from $326.09$ effective conjugate pairs to $4.11$ while leaving the task-aligned family at $100\%$ sufficiency (Appendix~\ref{app:dispersion}).
+
+\section{Prevention details}
+\label{app:prevention}
+
+\input{tables/stable}
+
+In four of the five runs the freeze is triggered automatically, $2{,}000$ steps after the first evaluation of a five-evaluation streak at or above $95\%$; the main-condition run uses a fixed step. Across all five the freeze lands $2{,}100$ to $2{,}200$ steps after sustained generalization. Within a depth-2 run the median step costs $57.87$\,ms before the freeze and $54.72$ after; at depth 4, $111.39$ and $107.75$; pre-freeze rates match ordinary Muon's. Holding only the unembedding constant from the same step leaves the run unstable, minimum $83.13\%$ and eighteen of $936$ evaluations below $95\%$; freezing the embeddings and unembedding together at the same step produces none.
+
+\section{Fourier decomposition and intervention suite}
+\label{app:fourier}
+
+\input{tables/families}
+\input{tables/interventions}
+\input{tables/families-result}
+
+For a chosen point in the forward pass the model runs on all $p^2$ operand pairs, the states form a tensor $X\in\mathbb{R}^{p\times p\times d}$, and an orthonormal two-dimensional DFT over the operand axes gives $\widehat{X}[k,l,:]$ with power $\lVert\widehat{X}[k,l,:]\rVert^2$. Because $X$ is real, modes occur in conjugate pairs and every filter retains or removes both members together; transforms run in single precision on CPU. The families of Table~\ref{tab:families} are pairwise disjoint and exhaust the grid, and addition and subtraction are disjoint because $p$ is odd. Power fractions are normalized against non-constant power; filters that retain the addition family retain the full diagonal including the constant mode, since the bias-free unembedding turns a constant component into a fixed logit offset. Removing a family and retaining its complement are the same measurement, and they agree exactly everywhere, checking the filters.
+
+Table~\ref{tab:families-result} applies sufficiency and ablation to each family at forty-three solved checkpoints spanning five seeds and the Muon, Stable Muon, and AdamW regimes. Equal-power relocation ranges $0.88\%$ to $15.04\%$ over $430$ replicates. Taken in descending order of power, reaching $95\%$ requires two to four conjugate pairs at AdamW checkpoints (median $3$), against three to seventeen at Muon (median $12.5$) and eight to nineteen at Stable Muon (median $11$). Along the AdamW trajectory of \S\ref{sec:outvoted}, the five strongest pairs give $4.91\%$ at step $3{,}000$, $19.48\%$ at $20{,}000$, $70.73\%$ at $30{,}000$, and $100\%$ at $37{,}000$, while the family's share rises from $1.05\%$ through $11.08\%$ and $33.20\%$ to $70.62\%$, reaching $90.51\%$ by step $100{,}000$; test accuracy over those steps is $0.30\%$, $2.08\%$, $15.97\%$, and $100\%$.
+
+\section{Spectral dispersion}
+\label{app:dispersion}
+
+\input{tables/sparsity}
+
+Table~\ref{tab:sparsity} reports the inverse participation ratio over all $6{,}384$ non-constant conjugate pairs and the task-aligned family's power share on matched depth-1 runs. Across the five-seed study AdamW occupies $4.40$ effective pairs on average over thirty solved checkpoints, Muon $385.85$ over twenty-five, and Stable Muon $343.96$ over thirty-six: freezing the interface leaves the dispersion where Muon put it and removes the instability anyway. Within the family's $56$ pairs, AdamW occupies $1.99$ to $2.59$ effective pairs across the generality variants and Muon $21.33$ to $55.34$. Each operation supplies a family that provably computes nothing on the other's task: AdamW places $0.0$--$0.3\%$ of non-constant power there and Muon $2.5$--$17.7\%$.
+
+\section{The matched branch through failure, recovery, and masking}
+\label{app:branchtraj}
+
+\input{tables/coordinates}
+
+Table~\ref{tab:coordinates} follows the family's top-twenty membership, power share, isolated accuracy, and full-model accuracy along the depth-4 matched pair of \S\ref{sec:outvoted} from a bit-identical state. The frozen branch holds all three quantities for $174{,}000$ steps; the control loses all three at filtered-pathway failure through its current readout, recovers all three, and loses the share again at circuit masking while the isolated family still gives $100\%$. The $\alpha$-sweep crossing at $\alpha=2.55$ occurs at a share of $0.6247$, below the frozen branch's native $0.9069$. Replaying a depth-1 collapse and recovery at ten-step resolution: full accuracy returns to $99.90\%$ within $300$ steps while the addition-family power cosine to the pre-collapse state reaches only $0.55$; the pre-collapse representation holds between $4.2\%$ and $5.7\%$ under the recovered readout throughout, while the recovered representation reads at $90.73\%$ under the pre-collapse readout. The matched branches' five strongest modes are identical at the branch point and share none by steps $160{,}000$ through $230{,}000$. Substituting the frozen branch's addition component into the control under the frozen readout gives $99.99\%$; under the control's own readout, $5.05\%$; the frozen branch's full final representation gives $97.61\%$ and $4.46\%$ under the two readouts; substituting only the frozen branch's non-addition component into the control gives $36.79\%$, below the control's unmodified $45.85\%$.
+
+\section{Depth}
+\label{app:depth}
+
+\input{tables/wallclock}
+\input{tables/stagewise}
+\input{tables/depthreadout}
+\input{tables/FIG_depth}
+
+Muon reaches sustained generalization in $2{,}300$ steps at depth 2 against $5{,}100$, and in $52{,}600$ at depth 4 where the baseline peaks at $96.69\%$ and never sustains the threshold within $300{,}000$ steps; Table~\ref{tab:wallclock} gives the comparison in steps and elapsed time, with a Muon step costing $1.75$--$1.80\times$ an AdamW step. Table~\ref{tab:stagewise}: zeroing the block-2 or block-3 attention write leaves $0.94\%$ and $0.44\%$, while relocating the family or scrambling its phase at those stages costs nothing; sensitivity appears abruptly at the block-3 MLP activation and every later stage is at or below chance. The depth-2 checkpoint behaves identically with the transition at the block-1 MLP activation. Across the eleven solved checkpoints of the depth sweep the first stage where pair-global phase scrambling costs more than half the accuracy is an MLP activation or write in ten, and an attention write in none. Table~\ref{tab:depthreadout}: direct decoding reaches $95\%$ only at the final block across all $41$ generalizing checkpoints, never exceeding $17.97\%$ earlier; filtering to the family raises accuracy at sixteen of seventeen partially aligned residual states, by $4.88$ points on average, so the competition of \S\ref{sec:outvoted} is visible along the forward pass and not only across training. Comparing the depth-4 matched arms at every checkpoint after their shared state, the power spectral cosine between them stays above $0.98$ in the first block and falls to $0.03$--$0.44$ in the fourth at fourteen of nineteen: the branches part company in the block that feeds the readout. The exact-state matched branch at step $126{,}200$ raises mean post-branch accuracy from $48.07\%$ to $97.50\%$, final accuracy from $36.88\%$ to $98.87\%$, and cuts evaluations below $90\%$ from $1{,}353$ to $66$.

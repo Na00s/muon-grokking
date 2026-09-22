@@ -1,0 +1,189 @@
+{
+  "scope": "Recorded values only; no new training, fitting, or uncertainty estimation.",
+  "figure_width_inches": 5.5,
+  "minimum_font_points": 8,
+  "source_sha256": {
+    "work/basis_study/bilinear/summary.json": "e6ae955e9e2e12949e686b476912a277a8a049c7ec31cb399c98f478a9c4ad35",
+    "work/experiments/seed0_dense_event/metadata.json": "1b33e94c6c840b59cbfe9bef657a38a002884059ad9b7dc7d3108674871bb30c",
+    "work/experiments/seed0_dense_event/decoder_whitened.json": "ee5b5e359330cecb72392e687cd131a9fb99fedcd61572edd9b27347f1eef40a",
+    "work/basis_study/seed1_first_event/metadata.json": "84d784b7d099c3bb48ff43e588c0514cc8cd0b5a54b572af984f9c8c735ca657",
+    "work/basis_study/seed1_first_event/decoder_whitened.json": "ab779d32dd7bf6f4fa18e550424f095837ec2d3e1d6ac935ecea007e345539c8",
+    "work/basis_study/seed2_first_event/metadata.json": "4685bdb796a05de8ad8b9ef72ba4201d1d5fb634fc7e69e7bd1a1105534cfeb7",
+    "work/basis_study/seed2_first_event/decoder_whitened.json": "4eb15ae2a502bf69e6653a4ba07cee9689450da8839adc169bf6fe4a520bff4e",
+    "work/basis_study/seed3_peak_event/metadata.json": "93e5687d6f38fcff8c794b5273c944341a052cd22bcc18d8483a34988c955891",
+    "work/basis_study/seed3_peak_event/decoder_whitened.json": "980e999cc872c2f5bc6da7762055d47815837c71bd427bd4447bc70aee073375",
+    "work/experiments/seed4_peak_event/metadata.json": "caa90067e2dd7b54a80ff8c4492459280773daeee4c746b7d49972975bded180",
+    "work/experiments/seed4_peak_event/decoder_whitened.json": "2bb1ab04d598b90d0c0528e4b077b279cd955da73c0d2c047218518b577d44a4",
+    "work/causal_study/analysis/results.json": "df3910e103acabd28bb360a759862417f687e1569a4e31cfa35533833415df7a",
+    "work/causal_study/generality/subtraction_stock/event_analysis.json": "28e3261081479336a6e8960ca09560aed0442347772f88105529d1d7f0d0944a",
+    "work/causal_study/generality/rms_stock/event_analysis.json": "9b483d12275d76e77fc908a0e9d1979f0566eecc16e05c63f2fa2eb80f34e176",
+    "work/causal_study/generality/rms_accurate/event_analysis.json": "e7bec541ad829a25162c364a698a65e4019a7faa3bad88bd197cb160ee13c43a"
+  },
+  "original_figure_sha256_unchanged": {
+    "figure1_collapse.pdf": "398743ba721d73298b44c4b59cf0b5b6c4a8d04c9e31b62e010a2d9f1c49bf10",
+    "figure2_quiet.pdf": "b6dd4b81cd76dc0c37882ab93c51bacd153d6f2821208d5620893ca2a10abce6",
+    "figure3_seeds.pdf": "f59a260e4ca43ee3f2a1e90311f1d851991769d74d79cb69b3aa6b55dfdfa4b4",
+    "figure4_grid.pdf": "d355e1753f4f654bcfe70c53a78dc1d8f124e4ad99f1a2bd9ffe90da52a4d2e5",
+    "figure5_modes.pdf": "b6965a77c2e64adbdc57f75cec05b07bed4e6c04a3c6d92ece3e95ddde20bede",
+    "figure6_depth.pdf": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82"
+  },
+  "main_panel_a": {
+    "pairs": [
+      "adjacent_seed0",
+      "seed1_adjacent_event",
+      "seed2_adjacent_event",
+      "seed3_adjacent_event",
+      "adjacent_seed4"
+    ],
+    "conditions": [
+      "$W_0h_0$",
+      "$W_0h_1$",
+      "$W_1h_0$",
+      "$W_1h_1$"
+    ],
+    "test_accuracy_percent": [
+      [
+        95.4916657344222,
+        96.38662042734086,
+        31.86038706790469,
+        31.871574001566174
+      ],
+      [
+        94.13804676138271,
+        94.18279449602865,
+        13.558563597717866,
+        9.094977066785994
+      ],
+      [
+        99.98881306633851,
+        100.0,
+        1.006824029533505,
+        0.928515493903121
+      ],
+      [
+        89.54021702651303,
+        91.00570533616735,
+        50.79986575679606,
+        53.59659917216691
+      ],
+      [
+        91.34131334601186,
+        98.65756796062199,
+        66.75243315807138,
+        66.327329678935
+      ]
+    ]
+  },
+  "main_panel_b": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "checkpoint_steps": [
+      17494,
+      17721,
+      18069,
+      16309,
+      16060
+    ],
+    "native_test_accuracy_percent": [
+      31.871574001566174,
+      9.094977066785994,
+      0.928515493903121,
+      32.117686542118804,
+      18.13401946526457
+    ],
+    "fresh_decoder_test_accuracy_percent": [
+      98.7246895625909,
+      98.19890368050118,
+      100.0,
+      98.76943729723683,
+      100.0
+    ]
+  },
+  "main_panel_c": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "original_failure_count": 5,
+    "accurate_failure_count": 0,
+    "source_step": 6000,
+    "end_step": 30000,
+    "event": "Both train and test accuracy below 90% after grokking.",
+    "caveat": "Paired seeds; original monitoring grids are mixed. Binary incidence only."
+  },
+  "specificity_confirmed_but_not_plotted": "All three arms have 0/5 events between 15,000 and 20,000.",
+  "appendix_parameter_masks": [
+    "000",
+    "001",
+    "010",
+    "111"
+  ],
+  "appendix_first_events": [
+    {
+      "condition": "subtraction_stock",
+      "pre_step": 15280,
+      "post_step": 15281,
+      "test_accuracy": [
+        98.64638102696051,
+        6.275869784092181,
+        98.62400715963754,
+        5.850766304955812
+      ]
+    },
+    {
+      "condition": "rms_stock",
+      "pre_step": 18514,
+      "post_step": 18515,
+      "test_accuracy": [
+        100.0,
+        100.0,
+        74.31480031323414,
+        85.65835104597829
+      ]
+    },
+    {
+      "condition": "rms_accurate",
+      "pre_step": 28494,
+      "post_step": 28495,
+      "test_accuracy": [
+        96.20762948875714,
+        96.20762948875714,
+        0.9397024275646046,
+        0.8837677592571875
+      ]
+    }
+  ],
+  "dependency_note": "Main panels reuse five seeds; appendix conditions each have one seed.",
+  "outputs": {
+    "followup_mechanism.pdf": "d81eb02e5cc769d5c138223e8c18ab4e271a4c257be5220253073f81ae2c53b3",
+    "followup_mechanism.png": "885cb137729e448d52653063a1e1422c26f63f2033915cf267c4827314b6a3fe",
+    "followup_rms_boundary.pdf": "35e0496df5f5e2d4b100d3f114b8a109b5059fd478eaf71a89c8ee4bbd780203",
+    "followup_rms_boundary.png": "b4cd5ff5b6336ea91059631d119b314bbe5853cc12201423070879920e9362d3"
+  },
+  "original_local_source_sha256": {
+    "work/basis_study/bilinear/summary.json": "4c0cd9dbcf53a263ddc90a54af18b0c6dd1363c6b393f47f9f9d1780a4d8a266",
+    "work/experiments/seed0_dense_event/metadata.json": "fe27e47d519fc4c0b6e61bcf53fdaff83d62bd060d83bac15163557bf2bc1a20",
+    "work/experiments/seed0_dense_event/decoder_whitened.json": "d47d9334c8bf0e036763e1833c123f5662a4e20b6d7bf7d16296a2de236aa6d3",
+    "work/basis_study/seed1_first_event/metadata.json": "6f09d072dbf084e6cbddf3425a951855688a558eed2bd004b47a447f8d44b697",
+    "work/basis_study/seed1_first_event/decoder_whitened.json": "8ef4b6618ddeddb2bfc85a11727ad0fa4a11f7b30b7a543b48cadef50381298c",
+    "work/basis_study/seed2_first_event/metadata.json": "0f0c342d75b979e91a487db88de6ad77105af321126dbf9e6535d07aba547a28",
+    "work/basis_study/seed2_first_event/decoder_whitened.json": "58c276bb50f06880a1b49ec0baf55a08e33a9c5e67f7df43d14ef1d8f7b12b27",
+    "work/basis_study/seed3_peak_event/metadata.json": "26ba5d77d42361772f429622492ab45ba51792aba9434243f63ffea83e4c4a1d",
+    "work/basis_study/seed3_peak_event/decoder_whitened.json": "9058bc90e1cc138e08b3094738af4d5f2c7769f544ab03acdcff79036edb013b",
+    "work/experiments/seed4_peak_event/metadata.json": "17f568e8bbde51f4f8c8c621fd92c704f0a78cef1f742dceb90fd74c3964ebb9",
+    "work/experiments/seed4_peak_event/decoder_whitened.json": "127a8fa06c61dd7f68e6784b4fde8d430398c26b611c22a87cb92ede6fa7d329",
+    "work/causal_study/analysis/results.json": "df3910e103acabd28bb360a759862417f687e1569a4e31cfa35533833415df7a",
+    "work/causal_study/generality/subtraction_stock/event_analysis.json": "ad8804b96d675b3007cababa3e2d10edb9767865eb4695e351b5ec4c8c3b8f07",
+    "work/causal_study/generality/rms_stock/event_analysis.json": "48ce21ef65fa0483272d71676a5a6bda1eb1cee89a5bdcca7c0dba980acb2500",
+    "work/causal_study/generality/rms_accurate/event_analysis.json": "45aa0c3d38becbb934d5b1154541702b73e071a932aa0ec4d7aaf780006cfdde"
+  },
+  "reproduction_note": "Reproduced from published JSON inputs. Published copies replace local artifact path strings; all numerical content is unchanged. Both regenerated PNGs are byte-identical to the delivered figures. PDF metadata timestamps can differ."
+}

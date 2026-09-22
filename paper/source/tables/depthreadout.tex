@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\small
+\caption{Direct-readout accuracy by post-block residual, decoding with the unembedding and
+skipping the remaining blocks. Values are ranges over checkpoints at which the model
+generalizes.}
+\label{tab:depthreadout}
+\begin{tabular}{llrr}
+\toprule
+Depth & Regime & Earlier blocks & Final block \\
+\midrule
+$2$ & AdamW & $0.7$--$1.1\%$ & $100.00\%$ \\
+$2$ & Muon & $0.8$--$5.1\%$ & $95.8$--$100.00\%$ \\
+$2$ & Stable Muon & $1.3$--$5.2\%$ & $96.4$--$99.4\%$ \\
+$4$ & Muon & $0.8$--$18.0\%$ & $95.1$--$99.3\%$ \\
+$4$ & Stable Muon & $0.7$--$18.1\%$ & $95.2$--$98.7\%$ \\
+\bottomrule
+\end{tabular}
+\end{table}
