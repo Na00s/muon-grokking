@@ -31,6 +31,8 @@ def main():
                         help="Released followup_studies directory containing work/; required outside the repository.")
     parser.add_argument("--output", type=Path, default=HERE.parent,
                         help="Paper source directory containing the six original figures.")
+    parser.add_argument("--only-mechanism", action="store_true",
+                        help="Regenerate the main mechanism figure while preserving the RMS figure files.")
     args = parser.parse_args()
     if args.workspace is None:
         parser.error("Supply --workspace /path/to/followup_studies (the directory containing work/).")
@@ -49,6 +51,10 @@ def main():
     existing_figures = sorted(output.glob("figure[1-6]_*.pdf"))
     assert len(existing_figures) == 6
     before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in existing_figures}
+    preserved_figures = sorted(p for p in output.iterdir()
+                              if p.suffix in {".pdf", ".png"}
+                              and p.stem != "followup_mechanism") if args.only_mechanism else []
+    preserved_before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in preserved_figures}
 
     plt.rcParams.update({
         "font.family": "DejaVu Sans", "font.size": 8,
@@ -71,10 +77,14 @@ def main():
             ax.set_yticks([0, 25, 50, 75, 100])
 
     def save(fig, stem):
+        if args.only_mechanism and stem != "followup_mechanism":
+            plt.close(fig)
+            return
         # Fixed 5.5-inch width matches this ICLR template's \textwidth.
         fig.savefig(output / (stem + ".pdf"), metadata={
             "Title": stem.replace("_", " "), "Author": "",
             "Subject": "Recorded experimental results; reproducibility manifest accompanies plotting script",
+            "CreationDate": None, "ModDate": None,
         })
         fig.savefig(output / (stem + ".png"), dpi=300)
         plt.close(fig)
@@ -127,8 +137,29 @@ def main():
     assert extended["status"] == "completed" and [r["seed"] for r in extended_addition] == list(range(5))
     assert all(r["arithmetic_start_step"] == 6000 and r["end_step"] == 100000 for r in extended_addition)
     accurate_events = [r["first_joint_failure_step"] is not None for r in extended_addition]
-    incidence = [sum(original_events), sum(accurate_events)]
-    assert incidence[0] == 5
+    reduced_lr = read("work/lr_reduction/summary.json")
+    reduced_lr_protocol = read("work/lr_reduction/protocol.json")
+    reduced_lr_intervention = reduced_lr_protocol["intervention"]
+    assert reduced_lr_intervention["hidden_muon_learning_rate"] == 0.003
+    assert reduced_lr_intervention["original_hidden_muon_learning_rate"] == 0.03
+    assert reduced_lr_intervention["cross_entropy"] == "stock"
+    assert reduced_lr_intervention["freeze_parameters"] is False
+    assert reduced_lr_intervention["reset_optimizer_buffers"] is False
+    assert reduced_lr_intervention["embedding_learning_rate"] == 0.001
+    assert reduced_lr_intervention["readout_learning_rate"] == 0.00025
+    reduced_lr_records = sorted(reduced_lr["records"], key=lambda r: r["seed"])
+    assert reduced_lr["status"] == "completed_and_verified"
+    assert reduced_lr["seeds"] == 5 and reduced_lr["total_updates"] == 470000
+    assert [r["seed"] for r in reduced_lr_records] == list(range(5))
+    assert all(r["start_step"] == 6000 and r["end_step"] == 100000
+               and r["updates"] == 94000 and r["train_states"] == 94001
+               for r in reduced_lr_records)
+    reduced_lr_events = [r["first_joint_failure_step"] is not None for r in reduced_lr_records]
+    assert all(event == r["joint_failure"] == (r["joint_below90_states"] > 0)
+               for event, r in zip(reduced_lr_events, reduced_lr_records))
+    incidence = [sum(original_events), sum(reduced_lr_events), sum(accurate_events)]
+    assert incidence == [5, 5, 0]
+    assert reduced_lr["seeds_with_joint_failure"] == incidence[1]
     specificity = results["specificity"]
     assert len(specificity) == 5
     for row in specificity:
@@ -136,9 +167,11 @@ def main():
             assert row[key]["start"] == 15000 and row[key]["end"] == 20000
             assert row[key]["event"] is False
 
-    fig = plt.figure(figsize=(5.5, 2.9))
-    grid = fig.add_gridspec(1, 3, width_ratios=[1.55, 1.35, 1.0],
-                           left=.085, right=.985, bottom=.31, top=.82, wspace=.43)
+    # Preserve the 1.479-inch plot height while removing unused vertical space.
+    fig = plt.figure(figsize=(5.5, 2.55))
+    grid = fig.add_gridspec(1, 3, width_ratios=[1.30, 1.15, 1.45],
+                           left=.085, right=.985, bottom=.80 / 2.55,
+                           top=(.80 + 1.479) / 2.55, wspace=.30)
     axes = [fig.add_subplot(grid[0, j]) for j in range(3)]
     a, b, c = axes
     for ax in [a, b]:
@@ -148,7 +181,7 @@ def main():
         ax.set_xlabel("Seed", labelpad=3)
     b.set_yticklabels([])
     a.set_ylabel("Test accuracy (%)", labelpad=3)
-    a.set_title("(a) Adjacent readout swaps", loc="left", pad=12)
+    a.set_title("(a) Adjacent swaps", loc="left", pad=10)
     colors = [gray, blue, orange, red]
     markers = ["o", "^", "D", "x"]
     labels = [r"$W_0h_0$", r"$W_0h_1$", r"$W_1h_0$", r"$W_1h_1$"]
@@ -157,32 +190,32 @@ def main():
                linestyle="none", marker=marker, markersize=4,
                markerfacecolor="white" if j == 0 else color,
                markeredgewidth=.85, color=color, label=label)
-    a.legend(loc="upper center", bbox_to_anchor=(.5, -.36), ncol=2,
+    a.legend(loc="upper center", bbox_to_anchor=(.5, -.29), ncol=2,
              frameon=False, columnspacing=.45, handletextpad=.25, handlelength=1.0,
              borderaxespad=0, labelspacing=.5)
 
-    b.set_title("(b) Fresh linear decoders", loc="left", pad=12)
+    b.set_title("(b) Fresh decoders", loc="left", pad=10)
     b.vlines(range(5), native_probe, fresh_probe, color="#B9B9B9", linewidth=.8)
     b.plot(range(5), native_probe, linestyle="none", marker="x", markersize=4.5,
            color=red, label="Native head")
     b.plot(range(5), fresh_probe, linestyle="none", marker="^", markersize=4,
            color=blue, label="Fresh decoder")
-    b.legend(loc="upper center", bbox_to_anchor=(.5, -.36), frameon=False,
+    b.legend(loc="upper center", bbox_to_anchor=(.5, -.29), frameon=False,
              handletextpad=.35, handlelength=1.0, borderaxespad=0, labelspacing=.5)
 
     clean(c, accuracy=False)
-    c.set_title("(c) Joint failures", loc="left", pad=12)
-    c.bar([0, 1], incidence, width=.58, color=[red, blue], linewidth=.7,
-          edgecolor=[red, blue], alpha=.9)
-    c.plot([1], [0], marker="o", markersize=4, color=blue, clip_on=False)
+    c.set_title("(c) Joint failures", loc="left", pad=10)
+    c.bar([0, 1, 2], incidence, width=.58, color=[red, orange, blue], linewidth=.7,
+          edgecolor=[red, orange, blue], alpha=.9)
+    c.plot([2], [0], marker="o", markersize=4, color=blue, clip_on=False)
     c.set_ylim(0, 5.65)
     c.set_yticks([0, 1, 2, 3, 4, 5])
     c.set_ylabel("Seeds with failure", labelpad=2)
-    c.set_xticks([0, 1], ["Original\nCE", "Accurate\nCE"])
+    c.set_xticks([0, 1, 2], ["Original\nCE", "Hidden\nLR / 10", "Accurate\nCE"])
     c.tick_params(axis="x", length=0, pad=5)
     for xpos, value in enumerate(incidence):
         c.text(xpos, value + .20, f"{value}/5", ha="center", va="bottom", fontsize=8)
-    c.text(.5, -.39, "6,000 to 100,000\nupdates", transform=c.transAxes,
+    c.text(.5, -.30, "Steps 6,000\nto 100,000", transform=c.transAxes,
            ha="center", va="top", fontsize=8, linespacing=1.3)
     save(fig, "followup_mechanism")
 
@@ -225,19 +258,27 @@ def main():
 
     after = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in existing_figures}
     assert before == after
+    assert preserved_before == {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                for p in preserved_figures}
     manifest = {
         "scope": "Recorded values only; no new training, fitting, or uncertainty estimation.",
         "figure_width_inches": 5.5, "minimum_font_points": 8,
+        "main_figure_height_inches": 2.55, "main_plot_height_inches": 1.479,
         "source_sha256": sources, "original_figure_sha256_unchanged": after,
         "main_panel_a": {"pairs": pairs, "conditions": labels, "test_accuracy_percent": swap_values.tolist()},
         "main_panel_b": {"seeds": list(range(5)), "checkpoint_steps": probe_steps,
                          "native_test_accuracy_percent": native_probe,
                          "fresh_decoder_test_accuracy_percent": fresh_probe},
         "main_panel_c": {"seeds": list(range(5)), "original_failure_count": incidence[0],
-                         "accurate_failure_count": incidence[1], "source_step": 6000, "end_step": 100000,
+                         "reduced_hidden_lr_failure_count": incidence[1],
+                         "accurate_failure_count": incidence[2], "source_step": 6000, "end_step": 100000,
+                         "reduced_hidden_lr": 0.003, "original_hidden_lr": 0.03,
+                         "reduced_lr_updates_per_seed": 94000,
+                         "reduced_lr_total_updates": 470000,
+                         "reduced_lr_first_failure_steps": [r["first_joint_failure_step"] for r in reduced_lr_records],
                          "original_events_observed_by_step": 30000,
                          "event": "Both train and test accuracy below 90% after grokking.",
-                         "caveat": "Paired seeds; original failures were observed by 30,000 under mixed monitoring. Accurate branches continue through 100,000. Binary incidence only."},
+                         "caveat": "Paired seeds; original failures were observed by 30,000 under mixed monitoring. Reduced-LR and accurate branches continue through 100,000 with test evaluation every 100 updates and whenever training accuracy falls below 90%. Binary incidence only. Ordinary LR reduction also scales hidden decoupled weight decay."},
         "specificity_confirmed_but_not_plotted": "All three arms have 0/5 events between 15,000 and 20,000.",
         "appendix_parameter_masks": parameter_masks,
         "appendix_first_events": raw_generality,

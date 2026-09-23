@@ -1,0 +1,188 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-09-23T06:15:06.053274+00:00",
+  "runner_sha256": "e410c2ab69f6ba61744f5aba82042c39c7428b7b2cca8d08ee7dfc783c5c1741",
+  "verifier_sha256": "eec41560645ae040fdfa9999f1c2daf8792c3e2fdef718f8caa051aac89b815e",
+  "seeds": [
+    {
+      "seed": 0,
+      "source_sha256": "c3442965ba80566f5e4fe5c68407a35e22e6df203c65eaa615efc643631cb7d1",
+      "restored_states_equal_except_hidden_learning_rate": true,
+      "all_parameters_trainable": true,
+      "twelve_updates_model_optimizer_rng_bitwise_equal": true,
+      "six_plus_six_serialized_resume_bitwise_equal": true,
+      "diagnostic_feature_norms_exact": true,
+      "diagnostic_derivative_reference_maximum_absolute_difference": 1.9081958235744878e-17,
+      "training_update_counters_correct": true,
+      "monitoring": {
+        "updates": 12,
+        "train_states": 13,
+        "test_evaluations": 4,
+        "train_below90_states": 0,
+        "test_below90_evaluations": 0,
+        "joint_below90_states": 0,
+        "test_below95_evaluations": 0,
+        "scheduled_test_below95_evaluations": 0,
+        "off_grid_triggered_test_evaluations": 0,
+        "first_joint_failure_step": null,
+        "minimum_train_accuracy": 1.0,
+        "minimum_measured_test_accuracy": 0.9975388745944737
+      },
+      "diagnostic_steps": [
+        6000,
+        6003,
+        6006,
+        6009,
+        6012
+      ]
+    },
+    {
+      "seed": 1,
+      "source_sha256": "cbd74b61374d086864b137496ad3867a0494502f7988a90a72f6cffa64e3c79a",
+      "restored_states_equal_except_hidden_learning_rate": true,
+      "all_parameters_trainable": true,
+      "twelve_updates_model_optimizer_rng_bitwise_equal": true,
+      "six_plus_six_serialized_resume_bitwise_equal": true,
+      "diagnostic_feature_norms_exact": true,
+      "diagnostic_derivative_reference_maximum_absolute_difference": 2.7755575615628914e-17,
+      "training_update_counters_correct": true,
+      "monitoring": {
+        "updates": 12,
+        "train_states": 13,
+        "test_evaluations": 4,
+        "train_below90_states": 0,
+        "test_below90_evaluations": 0,
+        "joint_below90_states": 0,
+        "test_below95_evaluations": 0,
+        "scheduled_test_below95_evaluations": 0,
+        "off_grid_triggered_test_evaluations": 0,
+        "first_joint_failure_step": null,
+        "minimum_train_accuracy": 1.0,
+        "minimum_measured_test_accuracy": 0.9984338292873923
+      },
+      "diagnostic_steps": [
+        6000,
+        6003,
+        6006,
+        6009,
+        6012
+      ]
+    },
+    {
+      "seed": 2,
+      "source_sha256": "3a0e3eaa3b2055ea8fc6809f5f8c2fda395e7d556051a310638bbb934b6e4b6e",
+      "restored_states_equal_except_hidden_learning_rate": true,
+      "all_parameters_trainable": true,
+      "twelve_updates_model_optimizer_rng_bitwise_equal": true,
+      "six_plus_six_serialized_resume_bitwise_equal": true,
+      "diagnostic_feature_norms_exact": true,
+      "diagnostic_derivative_reference_maximum_absolute_difference": 2.7755575615628914e-17,
+      "training_update_counters_correct": true,
+      "monitoring": {
+        "updates": 12,
+        "train_states": 13,
+        "test_evaluations": 4,
+        "train_below90_states": 0,
+        "test_below90_evaluations": 0,
+        "joint_below90_states": 0,
+        "test_below95_evaluations": 0,
+        "scheduled_test_below95_evaluations": 0,
+        "off_grid_triggered_test_evaluations": 0,
+        "first_joint_failure_step": null,
+        "minimum_train_accuracy": 1.0,
+        "minimum_measured_test_accuracy": 0.988589327665287
+      },
+      "diagnostic_steps": [
+        6000,
+        6003,
+        6006,
+        6009,
+        6012
+      ]
+    },
+    {
+      "seed": 3,
+      "source_sha256": "e590c4a01724b93c362d2428f7a876a39d18846711e3aa9e142f550236bcff13",
+      "restored_states_equal_except_hidden_learning_rate": true,
+      "all_parameters_trainable": true,
+      "twelve_updates_model_optimizer_rng_bitwise_equal": true,
+      "six_plus_six_serialized_resume_bitwise_equal": true,
+      "diagnostic_feature_norms_exact": true,
+      "diagnostic_derivative_reference_maximum_absolute_difference": 4.163336342344337e-17,
+      "training_update_counters_correct": true,
+      "monitoring": {
+        "updates": 12,
+        "train_states": 13,
+        "test_evaluations": 4,
+        "train_below90_states": 0,
+        "test_below90_evaluations": 0,
+        "joint_below90_states": 0,
+        "test_below95_evaluations": 0,
+        "scheduled_test_below95_evaluations": 0,
+        "off_grid_triggered_test_evaluations": 0,
+        "first_joint_failure_step": null,
+        "minimum_train_accuracy": 1.0,
+        "minimum_measured_test_accuracy": 0.9998881306633851
+      },
+      "diagnostic_steps": [
+        6000,
+        6003,
+        6006,
+        6009,
+        6012
+      ]
+    },
+    {
+      "seed": 4,
+      "source_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc",
+      "restored_states_equal_except_hidden_learning_rate": true,
+      "all_parameters_trainable": true,
+      "twelve_updates_model_optimizer_rng_bitwise_equal": true,
+      "six_plus_six_serialized_resume_bitwise_equal": true,
+      "diagnostic_feature_norms_exact": true,
+      "diagnostic_derivative_reference_maximum_absolute_difference": 2.0816681711721685e-17,
+      "training_update_counters_correct": true,
+      "monitoring": {
+        "updates": 12,
+        "train_states": 13,
+        "test_evaluations": 4,
+        "train_below90_states": 0,
+        "test_below90_evaluations": 0,
+        "joint_below90_states": 0,
+        "test_below95_evaluations": 0,
+        "scheduled_test_below95_evaluations": 0,
+        "off_grid_triggered_test_evaluations": 0,
+        "first_joint_failure_step": null,
+        "minimum_train_accuracy": 1.0,
+        "minimum_measured_test_accuracy": 0.9983219599507774
+      },
+      "diagnostic_steps": [
+        6000,
+        6003,
+        6006,
+        6009,
+        6012
+      ]
+    }
+  ],
+  "synthetic_trigger": {
+    "verification_only": true,
+    "construction": "Copied seed0 step6000 state with readout weights set to zero. Original checkpoint unchanged.",
+    "monitoring": {
+      "updates": 3,
+      "train_states": 4,
+      "test_evaluations": 4,
+      "train_below90_states": 4,
+      "test_below90_evaluations": 4,
+      "joint_below90_states": 4,
+      "test_below95_evaluations": 4,
+      "scheduled_test_below95_evaluations": 2,
+      "off_grid_triggered_test_evaluations": 2,
+      "first_joint_failure_step": 6000,
+      "minimum_train_accuracy": 0.008877284595300261,
+      "minimum_measured_test_accuracy": 0.008837677592571876
+    }
+  },
+  "all_original_source_checkpoint_hashes_unchanged": true,
+  "scope": "Only the new experiment directory was written. Paper frozen. These short verification trajectories are excluded from scientific results."
+}

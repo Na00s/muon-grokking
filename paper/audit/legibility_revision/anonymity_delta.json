@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "scope": "New figure-legibility scripts and provenance, six retained originals, and six revised figure PDFs.",
+  "files_audited": 18,
+  "known_identifying_pattern_count": 14,
+  "content_checks": {
+    "file_names": 18,
+    "raw_files": 18,
+    "pdf_metadata": 12,
+    "pdf_page_text": 12,
+    "pdf_string_objects": 4554,
+    "pdf_decoded_streams": 461,
+    "pdf_files": 12,
+    "decoded_json": 3,
+    "json_files": 3,
+    "python_files": 3
+  },
+  "identifying_findings": 0,
+  "pdf_checks": [
+    "extracted text",
+    "metadata",
+    "decoded streams",
+    "string objects",
+    "reachable and cross-reference objects"
+  ],
+  "files": [
+    {
+      "path": "figure1_collapse.pdf",
+      "bytes": 114581,
+      "sha256": "4e61ced698b595b3e6ee0922f3e4e5edf1346a56fc06948bda0e40fa2cbb0574",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figure2_quiet.pdf",
+      "bytes": 69935,
+      "sha256": "a1038eb03daf6ec928579376d0a3ea6a4c05f415df26518212e6cba868beb374",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figure3_seeds.pdf",
+      "bytes": 138721,
+      "sha256": "980945e990cdc39bb3fd749eb77c6d71a96b7baba196bee780f1132f7844c7ab",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figure4_grid.pdf",
+      "bytes": 115916,
+      "sha256": "034832aa297d0651744abf72c6cba01943357b1720ac0b7dc99e133d39b14b00",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figure5_modes.pdf",
+      "bytes": 226288,
+      "sha256": "30e5101f5306b2c9747b7c4f2fcfe73e833e41e0a034a67fa68f9a4c81fc6845",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figure6_depth.pdf",
+      "bytes": 110168,
+      "sha256": "dcb497debd06ec2cf8428d805204b9a70a80d591321919af0f8c8d3b1ea1c9c5",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/appendix_legibility_provenance.json",
+      "bytes": 12647,
+      "sha256": "24ff8ac0ade0fd695a5f8c8b123297dcda45541502ac5209c1e828520f12feb5",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/collapse_seed_legibility_provenance.json",
+      "bytes": 27858,
+      "sha256": "c31db04e936ef6a2e46281d6ddea74a67dfdd63add1cb14d888a8052156392ff",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/enlarge_appendix_labels.py",
+      "bytes": 8586,
+      "sha256": "157ca2bb2e760ef636927bd3d62f46f648be0974e43b4797ca0b68098e79296a",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/enlarge_collapse_seed_labels.py",
+      "bytes": 8973,
+      "sha256": "14d4e50ccecdeea8dcebfcc93afb990605771940d3983e03efab9fe1ab87ed42",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/enlarge_projection_depth_labels.py",
+      "bytes": 9058,
+      "sha256": "1e9c388cba8d2994533bdf539fb6d9b8fce5a30fd7e938c4d568172927b6e70d",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/legibility_originals/figure1_collapse.pdf",
+      "bytes": 28914,
+      "sha256": "398743ba721d73298b44c4b59cf0b5b6c4a8d04c9e31b62e010a2d9f1c49bf10",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/legibility_originals/figure2_quiet.pdf",
+      "bytes": 19854,
+      "sha256": "b6dd4b81cd76dc0c37882ab93c51bacd153d6f2821208d5620893ca2a10abce6",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/legibility_originals/figure3_seeds.pdf",
+      "bytes": 32145,
+      "sha256": "f59a260e4ca43ee3f2a1e90311f1d851991769d74d79cb69b3aa6b55dfdfa4b4",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/legibility_originals/figure4_grid.pdf",
+      "bytes": 78084,
+      "sha256": "d355e1753f4f654bcfe70c53a78dc1d8f124e4ad99f1a2bd9ffe90da52a4d2e5",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/legibility_originals/figure5_modes.pdf",
+      "bytes": 145736,
+      "sha256": "1612a0bb05d36d4139b9a3f4471a541ad4cecd1800e61b028f3a8c69935abb95",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/legibility_originals/figure6_depth.pdf",
+      "bytes": 19632,
+      "sha256": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82",
+      "identifying_findings": 0
+    },
+    {
+      "path": "figures/projection_depth_legibility.json",
+      "bytes": 1354,
+      "sha256": "8c19f4463d9822b140c2fbea1fe07c5664f15978e87a862f41a069cf84dda26b",
+      "identifying_findings": 0
+    }
+  ]
+}

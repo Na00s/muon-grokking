@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-23T06:37:00.484749+00:00",
+  "scope": "Completion-auditor handling of the user-authorized AI use statement amendment. The training implementation and protocol remain unchanged.",
+  "author_request": "Generative AI tools were used for code completion suggestions and manuscript proofreading. Any generated content was verified, and the authors take full responsibility for the work and the final manuscript.",
+  "auditor": {
+    "path": "summarize_and_verify.py",
+    "prelaunch_sha256": "1694a0e57ba8272aad0a5f64ed1ca3e5864a7bb7d461c31051de9bd4449f967e",
+    "authorized_sha256": "3c8967684462b297c24d89213b04e26c0bc98560b8913ba02524c7ccb3689390"
+  },
+  "paper_amendment_ledger": {
+    "path": "authorized_paper_updates.json",
+    "sha256": "8eadb65f8938b1227c4c5ca25275136f45cc3502687bcc86cad06ac5c6c72a7e"
+  },
+  "prelaunch_code_manifest": {
+    "path": "code_manifest.json",
+    "sha256": "5c9ea588aa61c1c8d84633bcc8046f62360dd9e8b579d1b82c3df2cfa9d09803",
+    "retained_unchanged": true
+  },
+  "prelaunch_smoke_audit": {
+    "path": "smoke_audit/verification.json",
+    "sha256": "8bc49ffff1f5e24637cdeacef425bb86ab40c48b2624a184905d12735a109fa7",
+    "retained_unchanged": true
+  },
+  "preserved_training_and_protocol_files": [
+    {
+      "path": "run_lr_reduction.py",
+      "sha256": "e410c2ab69f6ba61744f5aba82042c39c7428b7b2cca8d08ee7dfc783c5c1741",
+      "prelaunch_hash_preserved": true
+    },
+    {
+      "path": "run_suite.py",
+      "sha256": "207e283b72571879f5418120998e317684cc13c98979fc56d9eee50469559c4b",
+      "prelaunch_hash_preserved": true
+    },
+    {
+      "path": "verify_runner.py",
+      "sha256": "eec41560645ae040fdfa9999f1c2daf8792c3e2fdef718f8caa051aac89b815e",
+      "prelaunch_hash_preserved": true
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "e11b20e18be2779c9c19ac746822079664eb78b5c38df8a0e47bcb2703d0990e",
+      "prelaunch_hash_preserved": true
+    },
+    {
+      "path": "runner_verification.json",
+      "sha256": "cc0f616f462732b809edbb34e7031750d84ac5449db08633608f17f273100778",
+      "prelaunch_hash_preserved": true
+    },
+    {
+      "path": "source_audit.json",
+      "sha256": "99fed516647e107d5b197e8c206e4509cbb2c94b21bffb074398300dce950a2d",
+      "prelaunch_hash_preserved": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "7e20bae041480edb764faec9075ea50472c4198594a210cdd1d248ebdaf91c26",
+      "prelaunch_hash_preserved": true
+    }
+  ],
+  "verification": {
+    "path": "smoke_audit_disclosure_update/verification.json",
+    "sha256": "91c778c440e726bc2fbbbbbc33e697d46be6a4f918c4af69383aa6f242c81b29",
+    "status": "passed",
+    "checked_items": 460,
+    "checkpoint_replays": 30,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "frozen_paper_files_checked": 152,
+    "original_frozen_hashes_enforced": 148,
+    "authorized_paper_artifacts": 4,
+    "disclosure_only_source_edit_verified": true,
+    "scientific_manuscript_unchanged": true,
+    "scientific_endpoint_conclusion": false
+  },
+  "boundary_checks": {
+    "valid_modes_passed": 2,
+    "invalid_cases_rejected": 10,
+    "invalid_cases": [
+      "wrong previous hash",
+      "missing previous hash",
+      "duplicate entry",
+      "unapproved path",
+      "wrong scope",
+      "wrong author request",
+      "malformed hash",
+      "missing main source",
+      "additional source edit",
+      "unamended frozen file changed"
+    ]
+  }
+}

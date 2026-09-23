@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "scope": "Independent audit of the anonymous reviewer snapshot and original scientific artifacts. Local Git transport metadata is outside the served-file scope.",
+  "files_scanned": 2966,
+  "bytes_scanned": 3114652166,
+  "preservation_checks_passed": 47846,
+  "preservation_checks_total": 47846,
+  "direct_identity_findings": 0,
+  "csv_files_compared": 316,
+  "csv_byte_identical": 314,
+  "csv_numeric_cells_unchanged": true,
+  "json_files_compared": 693,
+  "json_numeric_boolean_fields_compared": 566779,
+  "retained_binary_files_compared": 1305,
+  "numpy_array_files_byte_identical": 181,
+  "checkpoint_pickles_compared": 1124,
+  "checkpoint_nonpickle_members_byte_identical": 30063,
+  "pickle_metadata_string_redactions": 2567,
+  "hash_correspondence_files_independently_checked": 1393,
+  "scientific_computation_changes": false,
+  "reviewed_infrastructure_changes": [
+    "Direct anonymous artifact downloads with exact file verification.",
+    "Exact original/current hash correspondence for anonymized scientific records.",
+    "Two exact anonymous aliases for the same source revision.",
+    "Selectable directories for regenerated verification outputs.",
+    "Archived publication script temporary rebuild-directory name."
+  ],
+  "neutral_directory_aliases": [
+    "anonymous",
+    "author",
+    "runner",
+    "user",
+    "local"
+  ],
+  "snapshot_content_stable_during_audit": true,
+  "omitted_source_files": [
+    "paper/audit/fourier_revision/package_revision.py",
+    "paper/audit_revision.patch",
+    "paper/fourier_revision.patch",
+    "paper/targeted_revision.patch"
+  ],
+  "manuscript_pdf_sha256": "cf12d8754eba54463ee083017424aed6c4c8ea670f1d212a54e87eb19eaa7d6c",
+  "anonymous_source_archive_sha256": "2cf144ae1a4cdd55aefd5f5782bb3161407e8709a6d9a058d7a4697ec6f8b6bc"
+}

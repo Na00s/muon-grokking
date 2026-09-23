@@ -1,0 +1,135 @@
+{
+  "audit": "Independent verification of four requested wording corrections and actual anonymous reviewer URL",
+  "pdf_sha256": "cf12d8754eba54463ee083017424aed6c4c8ea670f1d212a54e87eb19eaa7d6c",
+  "figure_sha256": "1612a0bb05d36d4139b9a3f4471a541ad4cecd1800e61b028f3a8c69935abb95",
+  "pages": 28,
+  "checks": [
+    {
+      "name": "main_numeric_tokens_preserved",
+      "passed": true,
+      "detail": {
+        "before": 417,
+        "after": 417,
+        "method": "Exclude URL strings from scientific numeric tokens."
+      }
+    },
+    {
+      "name": "ratio_direct_no_conservative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unsuccessful_adamw_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_grid_filtered_label",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "heldout_test_label",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "caption_explanation_removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual_figure_labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_other_figure_text_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "figure_numeric_tokens_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "retained_original_figure_matches_head",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "anonymous_repository_url_present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accurate_anonymized_repository_description",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual_pdf_anonymous_repository_link_annotation",
+      "passed": true,
+      "detail": [
+        {
+          "page": 10,
+          "uri": "https://github.com/Na00s/muon-grokking"
+        }
+      ]
+    },
+    {
+      "name": "scientific_main_ends_page9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "figure4_page7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_page3_ratio_and_exclusion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_page8_eval_labels",
+      "passed": true,
+      "detail": "PDF extraction normalized for standard font ligatures and line breaks."
+    },
+    {
+      "name": "pdf_page7_new_figure_labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_page10_repo_url",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_emdash_main",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "relabel_script_preserves_geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_has_no_author_identity",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": 22,
+  "total": 22,
+  "all_passed": true,
+  "notes": [
+    "Scientific numeric tokens exclude the new anonymous URL.",
+    "Original figure byte identity verified against original published version; other figure text and numeric tokens preserved.",
+    "Root agent performs visual review and anonymous endpoint availability verification."
+  ]
+}

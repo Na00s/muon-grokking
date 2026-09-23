@@ -3,7 +3,7 @@
 
 ## Revised submission
 
-The revised manuscript centers on acute readout failures and surviving information. It adds Fourier memorizer controls and continues all five corrected addition branches and the subtraction control through the original 100,000-step horizon, with no joint train/test failure. The scientific main text is nine pages, with the exempt reproducibility and required AI use statements separate. All six original figure PDFs and numerical cells in the 17 original appendix tables are preserved; the quiet-window and Fourier-grid figures appear in Appendices C and G. The mean-dependent update is now in main-text Table 3; Appendix K and Figure 9 establish the task structure supplied by Fourier filtering.
+The revised manuscript centers on acute readout failures and surviving information. It adds Fourier memorizer controls and continues all five corrected addition branches and the subtraction control through the original 100,000-step horizon, with no joint train/test failure. The scientific main text is nine pages, with the exempt reproducibility and required AI use statements separate. Original figure data and numerical cells in the 17 original appendix tables are preserved; Figure 4 now labels the outcomes as projection failure and projection masking; all six original figures have larger labels, with their data and numeric labels preserved. The quiet-window and Fourier-grid figures appear in Appendices C and G. The mean-dependent update is now in main-text Table 3; Appendix K and Figure 9 establish the task structure supplied by Fourier filtering.
 
 - [Revised paper](paper/Muon_Grokking_Revised.pdf)
 - [Complete LaTeX source ZIP](paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip)
@@ -24,6 +24,10 @@ Runs cover two operations, two moduli, two widths, two training fractions, depth
 4, and five seeds.
 
 ---
+
+## Matched learning-rate control, September 23, 2026
+
+The [five-seed learning-rate control](followup_studies/work/lr_reduction/report.md) restores each step-6,000 model and optimizer state, reduces the hidden Muon learning rate from 0.03 to 0.003, and continues stock cross-entropy training through step 100,000 with trainable embeddings and readout. All five branches have a joint train/test failure below 90%, compared with 5/5 original failures and 0/5 corrected-loss failures. Ordinary learning-rate reduction also scales the hidden decoupled weight-decay step. The 470,000 updates, full monitoring logs, diagnostics, and 116 production and verification checkpoints are included in the repository. Figure 3c, Section 4.4, and Appendix J.6 report this control. Section 9 closes with the central readout and arithmetic finding.
 
 ## Follow-up experiments, September 22, 2026
 

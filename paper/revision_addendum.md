@@ -2,6 +2,10 @@
 
 The revision addresses the task structure supplied by the Fourier filter, promotes the acute mean-dependent update result, extends corrected-loss branches to the original horizon, and centers the abstract and introduction on the failure mechanism and surviving information. The original experiments and reported results are retained.
 
+## Final wording and artwork corrections
+
+Figure 4 now labels the two outcomes "projection failure" and "projection masking" in the artwork, and its caption omits the sentence about the old labels. The original figure is retained beside the relabeling script; all plotted data and vector geometry are preserved. Section 3 reports the 2.34 ratio directly and excludes the four unsuccessful AdamW runs from its mean. Section 6 labels 95.14% as full-grid filtered accuracy and 0.30% as held-out test accuracy. The reproducibility statement in this public copy links to the public code repository and supporting artifacts. These corrections preserve every reported number and the nine-page scientific main text. `audit/wording_revision` records the checks for this update; the earlier audit records below refer to their respective preserved revisions.
+
 ## Fourier controls and interpretation
 
 The complete addition family with DC equals averaging over pairs `(a+t, b-t)` with the same answer. A linear readout commutes with the average. The subtraction identity uses `(a+t, b+t)`.

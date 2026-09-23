@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "mapped_files_unchanged": 1393,
+  "followup_manifest_files": 1270,
+  "followup_manifest_bytes": 80092040,
+  "root_manifest_files": 2967,
+  "root_manifest_bytes": 3114657300,
+  "served_files_including_root_manifest": 2968,
+  "added_or_modified_administrative_files": [
+    {
+      "path": "paper/verification.json",
+      "bytes": 9243,
+      "sha256": "6e000123e398a5de3540f4f3ca808db95f3922793ae88819dc8525bfe757c3c0"
+    },
+    {
+      "path": "ANONYMIZATION_VERIFICATION.json",
+      "bytes": 4508,
+      "sha256": "a60209aba1cfc8a0eac162b2ed62159eb89c249eed4472253de03a00edd91af3"
+    },
+    {
+      "path": "followup_studies/manifest.json",
+      "bytes": 243451,
+      "sha256": "13e0629802539fee47a099dbe5a3a04023b6eb6b889bfa36f5e2f8c158f2bb86"
+    },
+    {
+      "path": "SNAPSHOT_MANIFEST.json",
+      "bytes": 616041,
+      "sha256": "da906736ae452464deeced97b9eda53504110c10bb082a21a8d2236465abd2cb"
+    }
+  ],
+  "manuscript_pdf_sha256": "cf12d8754eba54463ee083017424aed6c4c8ea670f1d212a54e87eb19eaa7d6c",
+  "source_archive_sha256": "2cf144ae1a4cdd55aefd5f5782bb3161407e8709a6d9a058d7a4697ec6f8b6bc",
+  "manuscript_source_members_verified": 46,
+  "direct_identity_findings": 0
+}

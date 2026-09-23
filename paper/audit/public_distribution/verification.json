@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "tracked_files_scanned": 1901,
+  "scan_counts": {
+    "file_payloads": 5207,
+    "pdfs": 73,
+    "zip_members": 3306,
+    "checkpoint_archives": 116
+  },
+  "restricted_link_findings": 0,
+  "scientific_followup_files_byte_preserved": 1488,
+  "manuscript_source_files_byte_preserved": 56,
+  "manuscript_content_changes": "Only the reproducibility repository designation and URL; the source README describes the public package.",
+  "scientific_main_pages": 9,
+  "total_pages": 30,
+  "changed_pdf_text_pages": [
+    10
+  ],
+  "source_archive_rebuild_text_and_decoded_content_streams_identical": true,
+  "visual_inspection": "Page 10 reviewed; no clipping or overlapping text.",
+  "scan_scope": "Canonical payload files before adding this audit record.",
+  "canonical_tracked_files": 1901,
+  "byte_identical_files": 1891,
+  "public_copy_changes": [
+    "README.md",
+    "paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip",
+    "paper/Muon_Grokking_Revised.pdf",
+    "paper/audit/wording_revision/independent_audit.json",
+    "paper/audit/wording_revision/verification.json",
+    "paper/revision_addendum.md",
+    "paper/source/README.md",
+    "paper/source/main.tex",
+    "paper/verification.json",
+    "paper/wording_revision.patch"
+  ],
+  "all_followup_studies_files_byte_identical": true,
+  "lr_checkpoints_byte_identical": 116,
+  "historical_protocol_note": "Experiment protocols, archived checks, and raw scientific records retain their original bytes. Historical paper hashes refer to the manuscript at those checks; current manuscript checks are in paper/verification.json.",
+  "whitespace_check": "Passed with CSV CRLF recognized; retained patch context lines contain the single space required by unified diff format."
+}

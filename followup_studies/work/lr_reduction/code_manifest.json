@@ -1,0 +1,37 @@
+{
+  "scope": "Experiment code, declared protocol and prelaunch verification; the paper remains frozen.",
+  "files": [
+    {
+      "path": "run_lr_reduction.py",
+      "sha256": "e410c2ab69f6ba61744f5aba82042c39c7428b7b2cca8d08ee7dfc783c5c1741"
+    },
+    {
+      "path": "run_suite.py",
+      "sha256": "207e283b72571879f5418120998e317684cc13c98979fc56d9eee50469559c4b"
+    },
+    {
+      "path": "verify_runner.py",
+      "sha256": "eec41560645ae040fdfa9999f1c2daf8792c3e2fdef718f8caa051aac89b815e"
+    },
+    {
+      "path": "summarize_and_verify.py",
+      "sha256": "1694a0e57ba8272aad0a5f64ed1ca3e5864a7bb7d461c31051de9bd4449f967e"
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "e11b20e18be2779c9c19ac746822079664eb78b5c38df8a0e47bcb2703d0990e"
+    },
+    {
+      "path": "runner_verification.json",
+      "sha256": "cc0f616f462732b809edbb34e7031750d84ac5449db08633608f17f273100778"
+    },
+    {
+      "path": "source_audit.json",
+      "sha256": "99fed516647e107d5b197e8c206e4509cbb2c94b21bffb074398300dce950a2d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7e20bae041480edb764faec9075ea50472c4198594a210cdd1d248ebdaf91c26"
+    }
+  ]
+}

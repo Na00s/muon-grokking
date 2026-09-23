@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "long_horizon_checks": 150,
+  "long_horizon_total_checks": 150,
+  "long_horizon_numeric_fields_match_published": 114,
+  "causal_main_checks": 24,
+  "causal_generality_checks": 4,
+  "causal_qualification_seeds": 5,
+  "causal_original_seed4_replay": true,
+  "integrity_helper_tests": 8,
+  "hash_correspondence_rows": 1393,
+  "all_mapping_current_and_original_digests_verified": true,
+  "published_scientific_records_unchanged": true,
+  "cache_directories_remaining": 0,
+  "files": [
+    {
+      "path": "followup_studies/reviewer_integrity.py",
+      "sha256": "9822e6566809cbd62aa6f83b735c9cf010c8336dff1b1e729706383301eb0f9a"
+    },
+    {
+      "path": "followup_studies/REVIEWER_HASH_CORRESPONDENCE.json",
+      "sha256": "707c1eff281acf90b69c14a3a18c179c2ecb83c0c4e6b3f2e9fe55bdd97a8924"
+    },
+    {
+      "path": "followup_studies/test_reviewer_integrity.py",
+      "sha256": "286fe456208a106dd985c70cbd9122c2408498f56417dc70ee78c2990787e2b0"
+    },
+    {
+      "path": "followup_studies/work/long_horizon/summarize_and_verify.py",
+      "sha256": "291b25373b36033e433cbd8afce8f1cb9a72d194c6cc0f5fce84f1d2d1526a07"
+    },
+    {
+      "path": "followup_studies/work/causal_study/verify_completed.py",
+      "sha256": "96daf68b13550fafbcf6e3cbbc23463c598d8db29c04b46bccd18de62af34dac"
+    },
+    {
+      "path": "followup_studies/work/experiments/run_precision_branches.py",
+      "sha256": "e056887eb5d64a0b341a731edf6b258f95a05ebd25cb49180f8d7fc309c74f65"
+    }
+  ]
+}

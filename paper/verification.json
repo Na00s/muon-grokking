@@ -1,486 +1,921 @@
 {
-  "all_passed": true,
-  "checks": [
-    {
-      "name": "fourier_primary",
-      "passed": true,
-      "checks": 100
-    },
-    {
-      "name": "fourier_secondary",
-      "passed": true,
-      "checks": 1452
-    },
-    {
-      "name": "independent_primary",
-      "passed": true,
-      "checks": 1877
-    },
-    {
-      "name": "independent_secondary",
-      "passed": true,
-      "checks": 4020
-    },
-    {
-      "name": "exact answer-orbit coverage identity",
-      "passed": true
-    },
-    {
-      "name": "answer-orbit coverage numerical bound",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/run_control.py",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/run_frequency_controls.py",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/results/memorizer_results.json",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/results/checkpoint_donor_results.json",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/results/frequency_prefix_metrics.csv",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/results/phase_metrics.csv",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/results/ablation_metrics.csv",
-      "passed": true
-    },
-    {
-      "name": "independently audited control input work/fourier_control/results/single_pair_normalized_metrics.csv",
-      "passed": true
-    },
-    {
-      "name": "long-horizon completed audit",
-      "passed": true,
-      "checks": 150
-    },
-    {
-      "name": "long-horizon audit matches runner and protocol",
-      "passed": true
-    },
-    {
-      "name": "six completed long horizons",
-      "passed": true
-    },
-    {
-      "name": "six specified corrected branches",
-      "passed": true
-    },
-    {
-      "name": "zero-event interpretation matches records",
-      "passed": true
-    },
-    {
-      "name": "reported perfect addition endpoints",
-      "passed": true
-    },
-    {
-      "name": "420000 added training updates",
-      "passed": true
-    },
-    {
-      "name": "five matched addition arms",
-      "passed": true
-    },
-    {
-      "name": "inherited arithmetic starts",
-      "passed": true
-    },
-    {
-      "name": "six original figures preserved",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells FIG_depth.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells adamw-sweep.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells configs.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells coordinates.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells definitions.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells depthreadout.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells families-result.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells families.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells generality.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells interventions.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells muon-sweep.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells nons.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells quiet.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells sparsity.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells stable.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells stagewise.tex",
-      "passed": true
-    },
-    {
-      "name": "original table numerical cells wallclock.tex",
-      "passed": true
-    },
-    {
-      "name": "17 original table files",
-      "passed": true
-    },
-    {
-      "name": "original submission archive unchanged",
-      "passed": true
-    },
-    {
-      "name": "scientific main-end marker recorded",
-      "passed": true
-    },
-    {
-      "name": "ICLR 2027 initial scientific main limit",
-      "passed": true,
-      "scientific_main_last_page": 9,
-      "limit": 9
-    },
-    {
-      "name": "references follow scientific main text",
-      "passed": true,
-      "references_start": 11
-    },
-    {
-      "name": "main-end marker precedes exempt statements",
-      "passed": true
-    },
-    {
-      "name": "required AI use statement present",
-      "passed": true
-    },
-    {
-      "name": "official ICLR 2027 template bytes",
-      "passed": true
-    },
-    {
-      "name": "original nonfinite observations retained",
-      "passed": true
-    },
-    {
-      "name": "early filtered observation retained",
-      "passed": true
-    },
-    {
-      "name": "new control figure rendered",
-      "passed": true
-    },
-    {
-      "name": "new orbit identity rendered",
-      "passed": true
-    },
-    {
-      "name": "no undefined references",
-      "passed": true
-    },
-    {
-      "name": "no overfull boxes",
-      "passed": true
-    },
-    {
-      "name": "no em dashes",
-      "passed": true
-    },
-    {
-      "name": "requested wording updates applied",
-      "passed": true
-    },
-    {
-      "name": "Section 6 filtered-accuracy wording applied",
-      "passed": true
-    },
-    {
-      "name": "coverage bound stated in appendix",
-      "passed": true
-    },
-    {
-      "name": "mean result promoted",
-      "passed": true
-    },
-    {
-      "name": "single-pair scope explicit",
-      "passed": true
-    },
-    {
-      "name": "updated horizon figure",
-      "passed": true
-    },
-    {
-      "name": "updated horizon figure label",
-      "passed": true
-    },
-    {
-      "name": "figure accurate event count",
-      "passed": true
-    },
-    {
-      "name": "plotted asset followup_mechanism.pdf",
-      "passed": true
-    },
-    {
-      "name": "plotted asset followup_mechanism.png",
-      "passed": true
-    },
-    {
-      "name": "plotted asset followup_rms_boundary.pdf",
-      "passed": true
-    },
-    {
-      "name": "plotted asset followup_rms_boundary.png",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/basis_study/bilinear/summary.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/experiments/seed0_dense_event/metadata.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/experiments/seed0_dense_event/decoder_whitened.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/basis_study/seed1_first_event/metadata.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/basis_study/seed1_first_event/decoder_whitened.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/basis_study/seed2_first_event/metadata.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/basis_study/seed2_first_event/decoder_whitened.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/basis_study/seed3_peak_event/metadata.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/basis_study/seed3_peak_event/decoder_whitened.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/experiments/seed4_peak_event/metadata.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/experiments/seed4_peak_event/decoder_whitened.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/causal_study/analysis/results.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/long_horizon/summary.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/causal_study/generality/subtraction_stock/event_analysis.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/causal_study/generality/rms_stock/event_analysis.json",
-      "passed": true
-    },
-    {
-      "name": "plotted input work/causal_study/generality/rms_accurate/event_analysis.json",
-      "passed": true
-    },
-    {
-      "name": "Fourier control figure current",
-      "passed": true
-    },
-    {
-      "name": "rendered PDF reviewed",
-      "passed": true
+  "current_public_distribution": {
+    "status": "passed",
+    "scope": "Public distribution copy. The reproducibility statement links to the public repository. Scientific manuscript text, figures, tables, and raw experiment records are unchanged.",
+    "changed_pdf_text_pages": [
+      10
+    ],
+    "scientific_main_pages": 9,
+    "total_pages": 30,
+    "pdf_sha256": "280519aacaf2323670fe35d66c38385e684051d842a5fb42953f608480e1db38",
+    "source_archive_sha256": "0dcc4d62b9d38cb97813db515bcc48646e673a1af6338667bd29ad9c7e7a88ca",
+    "source_archive_files": 58,
+    "manuscript_scientific_text_unchanged": true,
+    "all_figures_byte_preserved": true,
+    "original_experiment_protocol_unchanged": true,
+    "historical_audit_note": "The retained audits document their original manuscript stages. Public repository links replace reviewer links in public audit copies; earlier manuscript hashes retain their historical meaning.",
+    "source_archive_rebuild_text_and_decoded_content_streams_identical": true,
+    "visual_inspection_pages": [
+      10
+    ],
+    "all_1488_followup_files_byte_preserved": true,
+    "link_scan_findings": 0
+  },
+  "historical_manuscript_verification": {
+    "current_discussion_revision": {
+      "status": "passed",
+      "scope": "Discussion closing takeaway, with local wording compression to retain nine scientific main-text pages.",
+      "closing_sentence": "Accuracy can collapse through a damaging readout update while useful task information survives, and corrected arithmetic stabilizes the tested unnormalized runs through step $100{,}000$.",
+      "pdf_sha256": "3b2338b254ddf5812a6730f9211cec2082f5cab2a7153ab5ed1ab19fa4731e29",
+      "baseline_pdf_sha256": "9111298104ef0b7f71bb3f62ace49eff9b74662e206517dfe04307c6f5f3b4e7",
+      "total_pages": 30,
+      "scientific_main_pages": 9,
+      "changed_pdf_text_pages": [
+        9
+      ],
+      "discussion_heading_preserved": true,
+      "discussion_claims_and_limitations_preserved": true,
+      "outside_discussion_source_text_unchanged": true,
+      "abstract_and_introduction_unchanged": true,
+      "all_57_other_source_files_byte_identical": true,
+      "all_figures_unchanged": true,
+      "visual_inspection_pages": [
+        9,
+        10
+      ],
+      "overfull_boxes": 0,
+      "identifying_strings_in_pdf": 0,
+      "source_archive_sha256": "3d5425e4baf77700623053f0427f976a5ecd2b0aa6cb69cb6a0c1ed2ebd64feb",
+      "source_archive_files": 58,
+      "source_archive_rebuild_content_streams_identical": true
+    },
+    "historical_lr_revision": {
+      "status": "passed",
+      "scope": "Figure 3c, one paragraph in section 4.4, and Appendix J.6 learning-rate control.",
+      "pdf_sha256": "9111298104ef0b7f71bb3f62ace49eff9b74662e206517dfe04307c6f5f3b4e7",
+      "baseline_pdf_sha256": "355e6c33ee01fb7d51323f9fb3698fa95be9da62dde1dfd593a44205bf1a545e",
+      "total_pages": 30,
+      "scientific_main_pages": 9,
+      "statements_page": 10,
+      "references_start_page": 11,
+      "appendix_lr_pages": [
+        26,
+        27
+      ],
+      "new_numeric_table_values_checked": 55,
+      "abstract_and_introduction_unchanged": true,
+      "prior_main_text_preserved_except_figure3_caption": true,
+      "previous_appendix_J_preserved_except_update_accounting": true,
+      "unchanged_source_files": [
+        "README.md",
+        "appendix.tex",
+        "fancyhdr.sty",
+        "figure1_collapse.pdf",
+        "figure2_quiet.pdf",
+        "figure3_seeds.pdf",
+        "figure4_grid.pdf",
+        "figure5_modes.pdf",
+        "figure6_depth.pdf",
+        "figures/appendix_legibility_provenance.json",
+        "figures/build_fourier_control_figure.py",
+        "figures/collapse_seed_legibility_provenance.json",
+        "figures/enlarge_appendix_labels.py",
+        "figures/enlarge_collapse_seed_labels.py",
+        "figures/enlarge_projection_depth_labels.py",
+        "figures/figure5_modes_original.pdf",
+        "figures/fourier_control_provenance.json",
+        "figures/legibility_originals/figure1_collapse.pdf",
+        "figures/legibility_originals/figure2_quiet.pdf",
+        "figures/legibility_originals/figure3_seeds.pdf",
+        "figures/legibility_originals/figure4_grid.pdf",
+        "figures/legibility_originals/figure5_modes.pdf",
+        "figures/legibility_originals/figure6_depth.pdf",
+        "figures/projection_depth_legibility.json",
+        "figures/projection_label_provenance.json",
+        "figures/relabel_projection_figure.py",
+        "followup_rms_boundary.pdf",
+        "followup_rms_boundary.png",
+        "fourier_control_appendix.tex",
+        "fourier_memorizer_control.pdf",
+        "fourier_memorizer_control.png",
+        "iclr2026_conference.bst",
+        "iclr2026_conference.sty",
+        "natbib.sty",
+        "references.bib",
+        "tables/FIG_depth.tex",
+        "tables/adamw-sweep.tex",
+        "tables/configs.tex",
+        "tables/coordinates.tex",
+        "tables/definitions.tex",
+        "tables/depthreadout.tex",
+        "tables/families-result.tex",
+        "tables/families.tex",
+        "tables/generality.tex",
+        "tables/interventions.tex",
+        "tables/muon-sweep.tex",
+        "tables/nons.tex",
+        "tables/quiet.tex",
+        "tables/sparsity.tex",
+        "tables/stable.tex",
+        "tables/stagewise.tex",
+        "tables/wallclock.tex"
+      ],
+      "figure3_panels_a_b_values_preserved": true,
+      "figure3_incidence": [
+        5,
+        5,
+        0
+      ],
+      "original_figures_preserved": true,
+      "margins_and_body_font_unchanged": true,
+      "visual_inspection_pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        26,
+        27
+      ],
+      "overfull_boxes": 0,
+      "outside_page_characters": [],
+      "identifying_strings_in_pdf": 0,
+      "experiment_summary_sha256": "d87841c59550ae958d75efa207b69ec996baffb7967d28692855cb510114c08f",
+      "source_archive_rebuild_content_streams_identical": true,
+      "source_archive_sha256": "9f07c1b380cc76798cf99f75db10c0f99033c20f426a2683f93b5b0717b2aeab",
+      "source_archive_files": 58
+    },
+    "historical_verification": {
+      "all_passed": true,
+      "scope": "Current manuscript with the exact author-approved AI use statement; scientific content and figure layout preserved.",
+      "pdf_sha256": "355e6c33ee01fb7d51323f9fb3698fa95be9da62dde1dfd593a44205bf1a545e",
+      "pages": 28,
+      "scientific_main_pages": 9,
+      "source_archive_sha256": "898ab156a5de5557f475a86836fa7be6e999d011ee150ce0fbdd26535ccfd52e",
+      "source_archive_files": 58,
+      "source_archive_rebuild_text_identical": true,
+      "source_archive_members_match_current_source": true,
+      "reviewer_url": "https://github.com/Na00s/muon-grokking",
+      "statement_update_verification": {
+        "passed": true,
+        "scope": "Exact author-requested AI use statement replacement and no scientific changes.",
+        "pdf_sha256": "355e6c33ee01fb7d51323f9fb3698fa95be9da62dde1dfd593a44205bf1a545e",
+        "baseline_pdf_sha256": "a0bc0afb62c3fb0d72c17b0d87e812e269212d5cf68f9bf55ba95b6299394870",
+        "pages": 28,
+        "scientific_main_pages": 9,
+        "statement": "Generative AI tools were used for code completion suggestions and manuscript proofreading. Any generated content was verified, and the authors take full responsibility for the work and the final manuscript.",
+        "exact_source_replacement": true,
+        "rendered_statement_exact": true,
+        "other_pages_text_and_pixels_identical_excluding_line_number_gutter": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "visual_inspection_page": 10,
+        "overfull_boxes": 0
+      },
+      "historical_legibility_verification": {
+        "all_passed": true,
+        "scope": "Current manuscript typography, larger plots, author-supplied AI statement, bibliography, source rebuild, and preserved scientific content.",
+        "pdf_sha256": "a0bc0afb62c3fb0d72c17b0d87e812e269212d5cf68f9bf55ba95b6299394870",
+        "pages": 28,
+        "scientific_main_pages": 9,
+        "source_archive_sha256": "3b14f3f3d48f0c779a9839ac4d4020caa85245c090993fdd23bdee09f98f0af7",
+        "source_archive_files": 58,
+        "source_archive_rebuild_text_identical": true,
+        "source_archive_members_match_current_source": true,
+        "reviewer_url": "https://github.com/Na00s/muon-grokking",
+        "current_layout_audit": {
+          "passed": true,
+          "pdf_sha256": "a0bc0afb62c3fb0d72c17b0d87e812e269212d5cf68f9bf55ba95b6299394870",
+          "total_pages": 28,
+          "scientific_main_end_page": 9,
+          "figures": [
+            {
+              "file": "figure1_collapse.pdf",
+              "figure": 1,
+              "page": 1,
+              "included_width_fraction": 0.98,
+              "minimum_nominal_printed_point_size": 7.24416,
+              "font_point_sizes": [
+                7.244
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 30
+            },
+            {
+              "file": "figure3_seeds.pdf",
+              "figure": 2,
+              "page": 4,
+              "included_width_fraction": 0.9,
+              "minimum_nominal_printed_point_size": 7.581688223281144,
+              "font_point_sizes": [
+                7.582
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 55
+            },
+            {
+              "file": "followup_mechanism.pdf",
+              "figure": 3,
+              "page": 5,
+              "included_width_fraction": 1,
+              "minimum_nominal_printed_point_size": 5.6,
+              "font_point_sizes": [
+                5.6,
+                8.0,
+                8.5
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 35
+            },
+            {
+              "file": "figure5_modes.pdf",
+              "figure": 4,
+              "page": 7,
+              "included_width_fraction": 0.95,
+              "minimum_nominal_printed_point_size": 7.823530704570026,
+              "font_point_sizes": [
+                7.824
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 28
+            },
+            {
+              "file": "figure2_quiet.pdf",
+              "figure": 5,
+              "page": 15,
+              "included_width_fraction": 1,
+              "minimum_nominal_printed_point_size": 6.999998638529612,
+              "font_point_sizes": [
+                7.0,
+                8.0
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 31
+            },
+            {
+              "file": "figure4_grid.pdf",
+              "figure": 6,
+              "page": 19,
+              "included_width_fraction": 1,
+              "minimum_nominal_printed_point_size": 6.999997911227155,
+              "font_point_sizes": [
+                7.0,
+                8.0
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 6
+            },
+            {
+              "file": "figure6_depth.pdf",
+              "figure": 7,
+              "page": 19,
+              "included_width_fraction": 1,
+              "minimum_nominal_printed_point_size": 7.000002240000001,
+              "font_point_sizes": [
+                7.0
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 19
+            },
+            {
+              "file": "followup_rms_boundary.pdf",
+              "figure": 8,
+              "page": 25,
+              "included_width_fraction": 1,
+              "minimum_nominal_printed_point_size": 8.0,
+              "font_point_sizes": [
+                8.0,
+                8.5
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 23
+            },
+            {
+              "file": "fourier_memorizer_control.pdf",
+              "figure": 9,
+              "page": 27,
+              "included_width_fraction": 1,
+              "minimum_nominal_printed_point_size": 8.0,
+              "font_point_sizes": [
+                8.0,
+                9.0
+              ],
+              "numeric_tokens_preserved": true,
+              "numeric_token_count": 17
+            }
+          ],
+          "source_scientific_preservation": [
+            {
+              "file": "appendix.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 283
+            },
+            {
+              "file": "followup_appendix.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 372
+            },
+            {
+              "file": "fourier_control_appendix.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 133
+            },
+            {
+              "file": "main.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 415
+            },
+            {
+              "file": "references.bib",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 67
+            },
+            {
+              "file": "tables/FIG_depth.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 8
+            },
+            {
+              "file": "tables/adamw-sweep.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 70
+            },
+            {
+              "file": "tables/configs.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 16
+            },
+            {
+              "file": "tables/coordinates.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 60
+            },
+            {
+              "file": "tables/definitions.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 9
+            },
+            {
+              "file": "tables/depthreadout.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 25
+            },
+            {
+              "file": "tables/families-result.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 34
+            },
+            {
+              "file": "tables/families.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 17
+            },
+            {
+              "file": "tables/generality.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 37
+            },
+            {
+              "file": "tables/interventions.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 1
+            },
+            {
+              "file": "tables/muon-sweep.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 57
+            },
+            {
+              "file": "tables/nons.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 43
+            },
+            {
+              "file": "tables/quiet.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 60
+            },
+            {
+              "file": "tables/sparsity.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 28
+            },
+            {
+              "file": "tables/stable.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 48
+            },
+            {
+              "file": "tables/stagewise.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 29
+            },
+            {
+              "file": "tables/wallclock.tex",
+              "scientific_content_unchanged": true,
+              "numeric_tokens": 27
+            }
+          ],
+          "source_scientific_numeric_token_count": 1839,
+          "characters_outside_page": [],
+          "visual_inspection_pages": [
+            1,
+            4,
+            7,
+            9,
+            19
+          ],
+          "visual_findings": {
+            "clipping_or_label_overlap": false,
+            "projection_chance_clear_of_xtick_labels": true,
+            "depth_axis_label_clear_of_100_tick": true,
+            "bibliography_urls_within_margins": true,
+            "appendix_depth_float_alone": false
+          },
+          "bibliography_margins": [
+            {
+              "page": 11,
+              "url_characters": 446,
+              "minimum_x": 117.96262999999999,
+              "maximum_x": 504.00037399999997
+            },
+            {
+              "page": 12,
+              "url_characters": 128,
+              "minimum_x": 117.96262999999999,
+              "maximum_x": 504.000254
+            }
+          ],
+          "notes": [
+            "Mathematical subscripts in Figure 3 remain 5.6 points; ordinary labels there are 8 points.",
+            "The six revised original figures have minimum nominal text size at least 7 points.",
+            "Main figures occupy 98%, 90%, and 95% of text width, respectively, with standard permissive float placement.",
+            "Source scientific content is unchanged apart from permitted layout directives and the user-requested AI statement."
+          ],
+          "main_page_render_equivalence": [
+            {
+              "page": 1,
+              "identical_to_visually_inspected_layout": true
+            },
+            {
+              "page": 4,
+              "identical_to_visually_inspected_layout": true
+            },
+            {
+              "page": 7,
+              "identical_to_visually_inspected_layout": true
+            },
+            {
+              "page": 9,
+              "identical_to_visually_inspected_layout": true
+            }
+          ]
+        },
+        "bibliography_verification": {
+          "pdf_sha256": "a0bc0afb62c3fb0d72c17b0d87e812e269212d5cf68f9bf55ba95b6299394870",
+          "baseline_pdf_sha256": "cf12d8754eba54463ee083017424aed6c4c8ea670f1d212a54e87eb19eaa7d6c",
+          "pages": 28,
+          "baseline_pages": 28,
+          "scientific_main_end_page": 9,
+          "bibliography_pages": [
+            11,
+            12
+          ],
+          "bibliography_content_identical_ignoring_whitespace": true,
+          "bibliography_numeric_tokens_identical": true,
+          "all_pdf_hyperlink_targets_identical": true,
+          "hyperlink_annotation_count": 24,
+          "url_lines_checked": 17,
+          "url_lines_beyond_right_margin": 0,
+          "maximum_url_excess_pt": 0.0003739999999652355,
+          "expected_author_supplied_ai_statement": "Generative AI tools were used for occasional code generation. All generated code was verified, and the authors take full responsibility for the work and the final manuscript.",
+          "ai_statement_source_exact": true,
+          "ai_statement_rendered_exact_ignoring_linebreaks": true,
+          "ai_extraction_normalization": "Whitespace and Unicode typographic ligatures only",
+          "overfull_box_count": 0,
+          "undefined_references": false,
+          "url_line_bounds": [
+            {
+              "page": 11,
+              "right_pt": 504.000162,
+              "excess_pt": 0.00016199999998889325,
+              "text": "Conference on Cognitive Computational Neuroscience, pp. 748\u2013751, 2023. URL https://"
+            },
+            {
+              "page": 11,
+              "right_pt": 360.1543,
+              "excess_pt": 0,
+              "text": "2023. URLhttps://arxiv.org/abs/2302.03025."
+            },
+            {
+              "page": 11,
+              "right_pt": 490.06712,
+              "excess_pt": 0,
+              "text": "558 URLhttps://transformer-circuits.pub/2021/framework/index.html."
+            },
+            {
+              "page": 11,
+              "right_pt": 504.00037399999997,
+              "excess_pt": 0.0003739999999652355,
+              "text": "563 Jeremy Bernstein. Muon: An optimizer for hidden layers in neural networks, 2024. https:"
+            },
+            {
+              "page": 11,
+              "right_pt": 504.000326,
+              "excess_pt": 0.000325999999972737,
+              "text": "drivesslingshotlossspikes. arXivpreprintarXiv:2605.06152,2026. URLhttps://arxiv."
+            },
+            {
+              "page": 11,
+              "right_pt": 334.1518,
+              "excess_pt": 0,
+              "text": "570 URLhttps://arxiv.org/abs/2502.16982."
+            },
+            {
+              "page": 11,
+              "right_pt": 422.9781,
+              "excess_pt": 0,
+              "text": "tations(ICLR),2023. URLhttps://arxiv.org/abs/2301.05217."
+            },
+            {
+              "page": 11,
+              "right_pt": 334.1518,
+              "excess_pt": 0,
+              "text": "577 URLhttps://arxiv.org/abs/2201.02177."
+            },
+            {
+              "page": 11,
+              "right_pt": 334.1518,
+              "excess_pt": 0,
+              "text": "URLhttps://arxiv.org/abs/2506.04434."
+            },
+            {
+              "page": 11,
+              "right_pt": 311.73598,
+              "excess_pt": 0,
+              "text": "584 https://arxiv.org/abs/2501.04697."
+            },
+            {
+              "page": 11,
+              "right_pt": 504.000294,
+              "excess_pt": 0.0002939999999966858,
+              "text": "and transferable features than adam. arXiv preprint arXiv:2606.09658, 2026. URL https:"
+            },
+            {
+              "page": 11,
+              "right_pt": 497.31895,
+              "excess_pt": 0,
+              "text": "591 arXivpreprintarXiv:2206.04817,2022. URLhttps://arxiv.org/abs/2206.04817."
+            },
+            {
+              "page": 11,
+              "right_pt": 472.69156,
+              "excess_pt": 0,
+              "text": "preprintarXiv:2504.16041,2025. URLhttps://arxiv.org/abs/2504.16041."
+            },
+            {
+              "page": 12,
+              "right_pt": 504.000254,
+              "excess_pt": 0.00025399999998398926,
+              "text": "595 grokking through circuit efficiency. arXiv preprint arXiv:2309.02390, 2023. URL https:"
+            },
+            {
+              "page": 12,
+              "right_pt": 504.00015800000006,
+              "excess_pt": 0.0001580000000558357,
+              "text": "learning. arXivpreprintarXiv:2509.26030,2025. URLhttps://arxiv.org/abs/2509."
+            },
+            {
+              "page": 12,
+              "right_pt": 334.1518,
+              "excess_pt": 0,
+              "text": "603 URLhttps://arxiv.org/abs/2607.20512."
+            },
+            {
+              "page": 12,
+              "right_pt": 439.86463,
+              "excess_pt": 0,
+              "text": "Systems(NeurIPS),2023. URLhttps://arxiv.org/abs/2306.17844."
+            }
+          ],
+          "visual_review": {
+            "pages": [
+              10,
+              11,
+              12
+            ],
+            "status": "Passed",
+            "result": "Current final renders inspected at 120 dpi. The exact author-supplied statement is legible. All references and URL text fit the margins without clipping."
+          },
+          "passed": true,
+          "numeric_comparison_normalization": "Digit groups compared separately from PDF word spacing and URL wrapping; all bibliography text also matches with whitespace removed."
+        },
+        "anonymous_source_verification": {
+          "all_passed": true,
+          "anonymous_source_archive_sha256": "3b14f3f3d48f0c779a9839ac4d4020caa85245c090993fdd23bdee09f98f0af7",
+          "anonymous_source_archive_files": 58,
+          "manuscript_pdf_sha256": "a0bc0afb62c3fb0d72c17b0d87e812e269212d5cf68f9bf55ba95b6299394870",
+          "anonymous_source_compile_text_identical": true
+        },
+        "historical_wording_audit": {
+          "audit": "Independent verification of four requested wording corrections and actual anonymous reviewer URL",
+          "pdf_sha256": "cf12d8754eba54463ee083017424aed6c4c8ea670f1d212a54e87eb19eaa7d6c",
+          "figure_sha256": "1612a0bb05d36d4139b9a3f4471a541ad4cecd1800e61b028f3a8c69935abb95",
+          "pages": 28,
+          "checks": [
+            {
+              "name": "main_numeric_tokens_preserved",
+              "passed": true,
+              "detail": {
+                "before": 417,
+                "after": 417,
+                "method": "Exclude URL strings from scientific numeric tokens."
+              }
+            },
+            {
+              "name": "ratio_direct_no_conservative",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "unsuccessful_adamw_explicit",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "full_grid_filtered_label",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "heldout_test_label",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "caption_explanation_removed",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "actual_figure_labels",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "all_other_figure_text_preserved",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "figure_numeric_tokens_preserved",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "retained_original_figure_matches_head",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "anonymous_repository_url_present",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "accurate_anonymized_repository_description",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "actual_pdf_anonymous_repository_link_annotation",
+              "passed": true,
+              "detail": [
+                {
+                  "page": 10,
+                  "uri": "https://github.com/Na00s/muon-grokking"
+                }
+              ]
+            },
+            {
+              "name": "scientific_main_ends_page9",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "figure4_page7",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "pdf_page3_ratio_and_exclusion",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "pdf_page8_eval_labels",
+              "passed": true,
+              "detail": "PDF extraction normalized for standard font ligatures and line breaks."
+            },
+            {
+              "name": "pdf_page7_new_figure_labels",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "pdf_page10_repo_url",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "no_emdash_main",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "relabel_script_preserves_geometry",
+              "passed": true,
+              "detail": null
+            },
+            {
+              "name": "pdf_has_no_author_identity",
+              "passed": true,
+              "detail": null
+            }
+          ],
+          "passed": 22,
+          "total": 22,
+          "all_passed": true,
+          "notes": [
+            "Scientific numeric tokens exclude the new anonymous URL.",
+            "Original figure byte identity verified against original published version; other figure text and numeric tokens preserved.",
+            "Root agent performs visual review and anonymous endpoint availability verification."
+          ]
+        },
+        "scientific_artifact_preservation": {
+          "status": "passed",
+          "csv_files": 316,
+          "json_files": 693,
+          "retained_binary_files": 1305,
+          "numerical_values_unchanged": true,
+          "reference": "../ANONYMIZATION_VERIFICATION.json"
+        },
+        "source_sha256": {
+          "README.md": "579b50263bc18b0d89e4f97187f4cff268ae44575e155010d492bcbbdd8d7291",
+          "appendix.tex": "56b3168bd6a5461acebcc97daaa8d81f48f4ed5cbb2d85e0f2244e64ee4ddf7f",
+          "fancyhdr.sty": "b56ec4434b9f4607529a4b23dc68ad8d4b94f1f631c8cddaf7da78140d53a5ea",
+          "figure1_collapse.pdf": "4e61ced698b595b3e6ee0922f3e4e5edf1346a56fc06948bda0e40fa2cbb0574",
+          "figure2_quiet.pdf": "a1038eb03daf6ec928579376d0a3ea6a4c05f415df26518212e6cba868beb374",
+          "figure3_seeds.pdf": "980945e990cdc39bb3fd749eb77c6d71a96b7baba196bee780f1132f7844c7ab",
+          "figure4_grid.pdf": "034832aa297d0651744abf72c6cba01943357b1720ac0b7dc99e133d39b14b00",
+          "figure5_modes.pdf": "30e5101f5306b2c9747b7c4f2fcfe73e833e41e0a034a67fa68f9a4c81fc6845",
+          "figure6_depth.pdf": "dcb497debd06ec2cf8428d805204b9a70a80d591321919af0f8c8d3b1ea1c9c5",
+          "figures/appendix_legibility_provenance.json": "24ff8ac0ade0fd695a5f8c8b123297dcda45541502ac5209c1e828520f12feb5",
+          "figures/build_followup_figures.py": "5723d1b7601d8384fc2153adcb9397a980f1d7f70d8df9bfbbdab00610a807da",
+          "figures/build_fourier_control_figure.py": "b2e7ea3072e970efb5eecdc52f372f3e9f2386f364769e235c7261174091eeb5",
+          "figures/collapse_seed_legibility_provenance.json": "c31db04e936ef6a2e46281d6ddea74a67dfdd63add1cb14d888a8052156392ff",
+          "figures/enlarge_appendix_labels.py": "157ca2bb2e760ef636927bd3d62f46f648be0974e43b4797ca0b68098e79296a",
+          "figures/enlarge_collapse_seed_labels.py": "14d4e50ccecdeea8dcebfcc93afb990605771940d3983e03efab9fe1ab87ed42",
+          "figures/enlarge_projection_depth_labels.py": "1e9c388cba8d2994533bdf539fb6d9b8fce5a30fd7e938c4d568172927b6e70d",
+          "figures/figure5_modes_original.pdf": "b6965a77c2e64adbdc57f75cec05b07bed4e6c04a3c6d92ece3e95ddde20bede",
+          "figures/followup_figure_provenance.json": "38a7a0d6dfa992a06bc7b9025a8af8dcfa9d665bc1de4f2283a46dc64d4ea801",
+          "figures/fourier_control_provenance.json": "d524de6d931eeb346823411c2269f4aedffbff43172d7bb55885dfb259ccd547",
+          "figures/legibility_originals/figure1_collapse.pdf": "398743ba721d73298b44c4b59cf0b5b6c4a8d04c9e31b62e010a2d9f1c49bf10",
+          "figures/legibility_originals/figure2_quiet.pdf": "b6dd4b81cd76dc0c37882ab93c51bacd153d6f2821208d5620893ca2a10abce6",
+          "figures/legibility_originals/figure3_seeds.pdf": "f59a260e4ca43ee3f2a1e90311f1d851991769d74d79cb69b3aa6b55dfdfa4b4",
+          "figures/legibility_originals/figure4_grid.pdf": "d355e1753f4f654bcfe70c53a78dc1d8f124e4ad99f1a2bd9ffe90da52a4d2e5",
+          "figures/legibility_originals/figure5_modes.pdf": "1612a0bb05d36d4139b9a3f4471a541ad4cecd1800e61b028f3a8c69935abb95",
+          "figures/legibility_originals/figure6_depth.pdf": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82",
+          "figures/projection_depth_legibility.json": "8c19f4463d9822b140c2fbea1fe07c5664f15978e87a862f41a069cf84dda26b",
+          "figures/projection_label_provenance.json": "51d5b29c6c6e0c251832871da0f0f6729486daa5b84ad093ff190865760f19da",
+          "figures/relabel_projection_figure.py": "a1de4104cfb4be76e2a787fcfec6a67695133faee908f3b2b3930fe7cfde1280",
+          "followup_appendix.tex": "9b6b3fa0c45d38ebb154763b70d70505e67e4433de42ab9522a29f4a659f61fe",
+          "followup_mechanism.pdf": "2c350d1fc4d3d0ea4fcac6edee2da561ca07cf508230708b57ae5bfe0b56b717",
+          "followup_mechanism.png": "ef76c3bc89f85d5c926c6a1782f4740438cef20f25f19fb2be0a528fb39d01fc",
+          "followup_rms_boundary.pdf": "cc335ff12a7b076add00334ce648c87e203c9b860fb29615c1a43161622d7af6",
+          "followup_rms_boundary.png": "b4cd5ff5b6336ea91059631d119b314bbe5853cc12201423070879920e9362d3",
+          "fourier_control_appendix.tex": "c1c62d74f3c603c69e3fbcf40ee9ab5f408760fac4fb1b9875cb056ac935ad3e",
+          "fourier_memorizer_control.pdf": "18f435b2832d7276495e22df68e7e83e115613664ab6f5d013bb2da9e4669df7",
+          "fourier_memorizer_control.png": "912adeb593ca24122b102109d7c2fd53077e1a886dc50dd2ee8b087492ba5647",
+          "iclr2026_conference.bst": "2d67552db7ed38ccfccb5957b52f95656e25c249724761d3cf5f7922ad1844c5",
+          "iclr2026_conference.sty": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6",
+          "main.tex": "fb7d7f4d0252511a6daf0822229b99722c331d1b03552e312be98e709944d43e",
+          "natbib.sty": "88bc70c0e48461934cab5b2accef06b74a8b3ac45ad03ccd3f2a6b7e0d6d530d",
+          "references.bib": "fb0a86383f2063da6839f78373fbf4e911b3d355d96b6ca81601414c9debc3ea",
+          "tables/FIG_depth.tex": "b2b742b28d5bf3e3f8d005220e87626bb313ecbd2a2c8638f2a58642c32b9f0d",
+          "tables/adamw-sweep.tex": "70708f96a52c204819c1a5a0f820b8f30ccf31c227823b9b078b570c177c8910",
+          "tables/configs.tex": "6707aadec81a7b843b24897f5f1eea71698f1aa9f3c82fbfe150829195209380",
+          "tables/coordinates.tex": "98407c52d78435c65552ba28cd68cafce090a223c49755d265fad84c4f3e67a1",
+          "tables/definitions.tex": "220e0b5bc45576e1918c9083aeb5688783e3bcb6a92e76bedd1c9a92ef083b2e",
+          "tables/depthreadout.tex": "16a36ef06809baaf2765960a6d81b3e1d8c203710baffffd8e340e6b4cb11462",
+          "tables/families-result.tex": "1e5ca82c139ed8b1a3f64c38ffec9748bc8a41556b5c8c47c29e4b19dd4d6802",
+          "tables/families.tex": "655522647f22ce0ca3fd51517522df2ad5dea77622de9eb8e97e0ebee5c8c3ef",
+          "tables/generality.tex": "848d1d4b376ce446e19f736c342c7418b2babd095a78406fd1c7b8a713e3e222",
+          "tables/interventions.tex": "a4368368d21927a5c37b0f0427d9a0ee582b191aa82bdec5eec4f5261953965c",
+          "tables/muon-sweep.tex": "72b2a2507d69189b085eb873339315154d472843cb01dc1591258bc5ad177a07",
+          "tables/nons.tex": "c9327448e2fc143d2054927e12f92dbb74c1a44ec3349235700dafdc6dab3825",
+          "tables/quiet.tex": "e254a2850c0f0c8e47e37f9e28b179af4909dcfbc6bd43b679187ff79e5025fc",
+          "tables/sparsity.tex": "7cddd478999ed10832a9aa69e0ce00ae8d5faa9fd955189db77e9fdc7f0d3d75",
+          "tables/stable.tex": "43cc87ccb89260dd03f0905ce2302ef3dd1cfb6b69c0f465a63a4fb9dcd0fc1c",
+          "tables/stagewise.tex": "84af09be678e06d8904e691c789ff144c459a2b5f15e58c141c5d33db890e418",
+          "tables/wallclock.tex": "faaf2ccf784176a8b3df51a6b4e68a1d33fd17fd3eb0a23975127d3654ae9e2c"
+        }
+      },
+      "scientific_artifact_preservation": {
+        "status": "passed",
+        "csv_files": 316,
+        "json_files": 693,
+        "retained_binary_files": 1305,
+        "numerical_values_unchanged": true,
+        "reference": "../ANONYMIZATION_VERIFICATION.json"
+      },
+      "source_sha256": {
+        "README.md": "579b50263bc18b0d89e4f97187f4cff268ae44575e155010d492bcbbdd8d7291",
+        "appendix.tex": "56b3168bd6a5461acebcc97daaa8d81f48f4ed5cbb2d85e0f2244e64ee4ddf7f",
+        "fancyhdr.sty": "b56ec4434b9f4607529a4b23dc68ad8d4b94f1f631c8cddaf7da78140d53a5ea",
+        "figure1_collapse.pdf": "4e61ced698b595b3e6ee0922f3e4e5edf1346a56fc06948bda0e40fa2cbb0574",
+        "figure2_quiet.pdf": "a1038eb03daf6ec928579376d0a3ea6a4c05f415df26518212e6cba868beb374",
+        "figure3_seeds.pdf": "980945e990cdc39bb3fd749eb77c6d71a96b7baba196bee780f1132f7844c7ab",
+        "figure4_grid.pdf": "034832aa297d0651744abf72c6cba01943357b1720ac0b7dc99e133d39b14b00",
+        "figure5_modes.pdf": "30e5101f5306b2c9747b7c4f2fcfe73e833e41e0a034a67fa68f9a4c81fc6845",
+        "figure6_depth.pdf": "dcb497debd06ec2cf8428d805204b9a70a80d591321919af0f8c8d3b1ea1c9c5",
+        "figures/appendix_legibility_provenance.json": "24ff8ac0ade0fd695a5f8c8b123297dcda45541502ac5209c1e828520f12feb5",
+        "figures/build_followup_figures.py": "5723d1b7601d8384fc2153adcb9397a980f1d7f70d8df9bfbbdab00610a807da",
+        "figures/build_fourier_control_figure.py": "b2e7ea3072e970efb5eecdc52f372f3e9f2386f364769e235c7261174091eeb5",
+        "figures/collapse_seed_legibility_provenance.json": "c31db04e936ef6a2e46281d6ddea74a67dfdd63add1cb14d888a8052156392ff",
+        "figures/enlarge_appendix_labels.py": "157ca2bb2e760ef636927bd3d62f46f648be0974e43b4797ca0b68098e79296a",
+        "figures/enlarge_collapse_seed_labels.py": "14d4e50ccecdeea8dcebfcc93afb990605771940d3983e03efab9fe1ab87ed42",
+        "figures/enlarge_projection_depth_labels.py": "1e9c388cba8d2994533bdf539fb6d9b8fce5a30fd7e938c4d568172927b6e70d",
+        "figures/figure5_modes_original.pdf": "b6965a77c2e64adbdc57f75cec05b07bed4e6c04a3c6d92ece3e95ddde20bede",
+        "figures/followup_figure_provenance.json": "38a7a0d6dfa992a06bc7b9025a8af8dcfa9d665bc1de4f2283a46dc64d4ea801",
+        "figures/fourier_control_provenance.json": "d524de6d931eeb346823411c2269f4aedffbff43172d7bb55885dfb259ccd547",
+        "figures/legibility_originals/figure1_collapse.pdf": "398743ba721d73298b44c4b59cf0b5b6c4a8d04c9e31b62e010a2d9f1c49bf10",
+        "figures/legibility_originals/figure2_quiet.pdf": "b6dd4b81cd76dc0c37882ab93c51bacd153d6f2821208d5620893ca2a10abce6",
+        "figures/legibility_originals/figure3_seeds.pdf": "f59a260e4ca43ee3f2a1e90311f1d851991769d74d79cb69b3aa6b55dfdfa4b4",
+        "figures/legibility_originals/figure4_grid.pdf": "d355e1753f4f654bcfe70c53a78dc1d8f124e4ad99f1a2bd9ffe90da52a4d2e5",
+        "figures/legibility_originals/figure5_modes.pdf": "1612a0bb05d36d4139b9a3f4471a541ad4cecd1800e61b028f3a8c69935abb95",
+        "figures/legibility_originals/figure6_depth.pdf": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82",
+        "figures/projection_depth_legibility.json": "8c19f4463d9822b140c2fbea1fe07c5664f15978e87a862f41a069cf84dda26b",
+        "figures/projection_label_provenance.json": "51d5b29c6c6e0c251832871da0f0f6729486daa5b84ad093ff190865760f19da",
+        "figures/relabel_projection_figure.py": "a1de4104cfb4be76e2a787fcfec6a67695133faee908f3b2b3930fe7cfde1280",
+        "followup_appendix.tex": "9b6b3fa0c45d38ebb154763b70d70505e67e4433de42ab9522a29f4a659f61fe",
+        "followup_mechanism.pdf": "2c350d1fc4d3d0ea4fcac6edee2da561ca07cf508230708b57ae5bfe0b56b717",
+        "followup_mechanism.png": "ef76c3bc89f85d5c926c6a1782f4740438cef20f25f19fb2be0a528fb39d01fc",
+        "followup_rms_boundary.pdf": "cc335ff12a7b076add00334ce648c87e203c9b860fb29615c1a43161622d7af6",
+        "followup_rms_boundary.png": "b4cd5ff5b6336ea91059631d119b314bbe5853cc12201423070879920e9362d3",
+        "fourier_control_appendix.tex": "c1c62d74f3c603c69e3fbcf40ee9ab5f408760fac4fb1b9875cb056ac935ad3e",
+        "fourier_memorizer_control.pdf": "18f435b2832d7276495e22df68e7e83e115613664ab6f5d013bb2da9e4669df7",
+        "fourier_memorizer_control.png": "912adeb593ca24122b102109d7c2fd53077e1a886dc50dd2ee8b087492ba5647",
+        "iclr2026_conference.bst": "2d67552db7ed38ccfccb5957b52f95656e25c249724761d3cf5f7922ad1844c5",
+        "iclr2026_conference.sty": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6",
+        "main.tex": "7aed8e6839640adffa28a7e3fd2ff21ebceb103aed0635a5541cc28c78ec691c",
+        "natbib.sty": "88bc70c0e48461934cab5b2accef06b74a8b3ac45ad03ccd3f2a6b7e0d6d530d",
+        "references.bib": "fb0a86383f2063da6839f78373fbf4e911b3d355d96b6ca81601414c9debc3ea",
+        "tables/FIG_depth.tex": "b2b742b28d5bf3e3f8d005220e87626bb313ecbd2a2c8638f2a58642c32b9f0d",
+        "tables/adamw-sweep.tex": "70708f96a52c204819c1a5a0f820b8f30ccf31c227823b9b078b570c177c8910",
+        "tables/configs.tex": "6707aadec81a7b843b24897f5f1eea71698f1aa9f3c82fbfe150829195209380",
+        "tables/coordinates.tex": "98407c52d78435c65552ba28cd68cafce090a223c49755d265fad84c4f3e67a1",
+        "tables/definitions.tex": "220e0b5bc45576e1918c9083aeb5688783e3bcb6a92e76bedd1c9a92ef083b2e",
+        "tables/depthreadout.tex": "16a36ef06809baaf2765960a6d81b3e1d8c203710baffffd8e340e6b4cb11462",
+        "tables/families-result.tex": "1e5ca82c139ed8b1a3f64c38ffec9748bc8a41556b5c8c47c29e4b19dd4d6802",
+        "tables/families.tex": "655522647f22ce0ca3fd51517522df2ad5dea77622de9eb8e97e0ebee5c8c3ef",
+        "tables/generality.tex": "848d1d4b376ce446e19f736c342c7418b2babd095a78406fd1c7b8a713e3e222",
+        "tables/interventions.tex": "a4368368d21927a5c37b0f0427d9a0ee582b191aa82bdec5eec4f5261953965c",
+        "tables/muon-sweep.tex": "72b2a2507d69189b085eb873339315154d472843cb01dc1591258bc5ad177a07",
+        "tables/nons.tex": "c9327448e2fc143d2054927e12f92dbb74c1a44ec3349235700dafdc6dab3825",
+        "tables/quiet.tex": "e254a2850c0f0c8e47e37f9e28b179af4909dcfbc6bd43b679187ff79e5025fc",
+        "tables/sparsity.tex": "7cddd478999ed10832a9aa69e0ce00ae8d5faa9fd955189db77e9fdc7f0d3d75",
+        "tables/stable.tex": "43cc87ccb89260dd03f0905ce2302ef3dd1cfb6b69c0f465a63a4fb9dcd0fc1c",
+        "tables/stagewise.tex": "84af09be678e06d8904e691c789ff144c459a2b5f15e58c141c5d33db890e418",
+        "tables/wallclock.tex": "faaf2ccf784176a8b3df51a6b4e68a1d33fd17fd3eb0a23975127d3654ae9e2c"
+      }
     }
-  ],
-  "total_checks": 86,
-  "scope": "New Fourier controls and long-horizon extensions verified; original results retained and their Fourier interpretation revised.",
-  "prior_new_experiment_audit": {
-    "checks": 604,
-    "computed": 598,
-    "manual": 6,
-    "status": "Previously passed; evidence and immutable input snapshot retained."
-  },
-  "new_control_audits": {
-    "fourier_primary": {
-      "checks": 100,
-      "sha256": "dc93ebe0e4f204646794c04b3cb8ead2f6a7ff82cebc3eac19ca7b893bdaef77"
-    },
-    "fourier_secondary": {
-      "checks": 1452,
-      "sha256": "3818cbf39f8d1c35dac635b23259462273af8f54b7f9c2571979ac9b46357f07"
-    },
-    "independent_primary": {
-      "checks": 1877,
-      "sha256": "973c9d1587b41347578ce09c02086f95d4f9a508eefdd602dfc5394b32f71fe3"
-    },
-    "independent_secondary": {
-      "checks": 4020,
-      "sha256": "7240325077141078be184c7bd96c9e554e8e2b1ae87f46ea1b04f56eae914104"
-    }
-  },
-  "long_horizon_audit": {
-    "checks": 150,
-    "sha256": "ef015da79ca3dce123031399d8f22ea7cdec19aeb05265d85535098413a16511",
-    "summary_sha256": "98feb278f34d91c875d50aa594a703231fdd1d6b4132c562e0a4996e27229c06",
-    "runner_sha256": "50ccf3587d6ef62d9406b88d27d8de33ad23ccd51b51f5f8db4a5a2b39692399",
-    "protocol_sha256": "ce6a545a51be8618bf5122b4b89ac97a39454384765a35e3a5b5b8809174a9b1",
-    "checkpoint_manifest_sha256": "99f6353cf1dec6882ff1657d63017ace3bd028a277170a073691c6c1cfdb910b"
-  },
-  "additional_training_updates": 420000,
-  "completed_horizon": 100000,
-  "original_figure_pdfs_byte_identical": 6,
-  "original_appendix_tables_numerical_cells_preserved": 17,
-  "original_observed_nonfinite_terminations_retained": true,
-  "source_archive_unchanged": true,
-  "total_pdf_pages": 28,
-  "main_text_last_page": 9,
-  "scientific_main_page_limit": 9,
-  "references_start_page": 11,
-  "page_count_basis": "Compiled sec:main-end label; reproducibility and AI use statements are excluded by the ICLR 2027 author guidelines.",
-  "author_guidelines": "https://iclr.cc/Conferences/2027/AuthorGuidelines",
-  "required_ai_use_statement_present": true,
-  "official_template_verification": {
-    "source": "https://media.iclr.cc/Conferences/ICLR2027/iclr-2027-style-files.zip",
-    "sha256": "f7e413fc20f0d0742bafc3a1eb582c49731f72c04264d3d1e3bd76ece8cd805a",
-    "all_passed": true
-  },
-  "undefined_references": false,
-  "overfull_boxes": false,
-  "em_dashes": false,
-  "visual_review_complete": true,
-  "pdf_sha256": "b5358a3540f408819598ac2af48fa1a9b316e38730a93665b845d2b732686052",
-  "source_sha256": {
-    "README.md": "d1e5fa33a57f3af78e029385c8b273dcc19f5d24cc3bad2fd686087f65564c14",
-    "appendix.tex": "e71db19235a56116283a6c5254bea28de2f88bc3bfba4e7e0a6ab0630d8f24db",
-    "fancyhdr.sty": "b56ec4434b9f4607529a4b23dc68ad8d4b94f1f631c8cddaf7da78140d53a5ea",
-    "figure1_collapse.pdf": "398743ba721d73298b44c4b59cf0b5b6c4a8d04c9e31b62e010a2d9f1c49bf10",
-    "figure2_quiet.pdf": "b6dd4b81cd76dc0c37882ab93c51bacd153d6f2821208d5620893ca2a10abce6",
-    "figure3_seeds.pdf": "f59a260e4ca43ee3f2a1e90311f1d851991769d74d79cb69b3aa6b55dfdfa4b4",
-    "figure4_grid.pdf": "d355e1753f4f654bcfe70c53a78dc1d8f124e4ad99f1a2bd9ffe90da52a4d2e5",
-    "figure5_modes.pdf": "b6965a77c2e64adbdc57f75cec05b07bed4e6c04a3c6d92ece3e95ddde20bede",
-    "figure6_depth.pdf": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82",
-    "figures/build_followup_figures.py": "5723d1b7601d8384fc2153adcb9397a980f1d7f70d8df9bfbbdab00610a807da",
-    "figures/build_fourier_control_figure.py": "b2e7ea3072e970efb5eecdc52f372f3e9f2386f364769e235c7261174091eeb5",
-    "figures/followup_figure_provenance.json": "38a7a0d6dfa992a06bc7b9025a8af8dcfa9d665bc1de4f2283a46dc64d4ea801",
-    "figures/fourier_control_provenance.json": "d524de6d931eeb346823411c2269f4aedffbff43172d7bb55885dfb259ccd547",
-    "followup_appendix.tex": "9b6b3fa0c45d38ebb154763b70d70505e67e4433de42ab9522a29f4a659f61fe",
-    "followup_mechanism.pdf": "2c350d1fc4d3d0ea4fcac6edee2da561ca07cf508230708b57ae5bfe0b56b717",
-    "followup_mechanism.png": "ef76c3bc89f85d5c926c6a1782f4740438cef20f25f19fb2be0a528fb39d01fc",
-    "followup_rms_boundary.pdf": "cc335ff12a7b076add00334ce648c87e203c9b860fb29615c1a43161622d7af6",
-    "followup_rms_boundary.png": "b4cd5ff5b6336ea91059631d119b314bbe5853cc12201423070879920e9362d3",
-    "fourier_control_appendix.tex": "c1c62d74f3c603c69e3fbcf40ee9ab5f408760fac4fb1b9875cb056ac935ad3e",
-    "fourier_memorizer_control.pdf": "18f435b2832d7276495e22df68e7e83e115613664ab6f5d013bb2da9e4669df7",
-    "fourier_memorizer_control.png": "912adeb593ca24122b102109d7c2fd53077e1a886dc50dd2ee8b087492ba5647",
-    "iclr2026_conference.bst": "2d67552db7ed38ccfccb5957b52f95656e25c249724761d3cf5f7922ad1844c5",
-    "iclr2026_conference.sty": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6",
-    "main.tex": "7046cadf83f3e73e7881268eef0ac2461dd057730d2d05b99652a9f97dce917b",
-    "natbib.sty": "88bc70c0e48461934cab5b2accef06b74a8b3ac45ad03ccd3f2a6b7e0d6d530d",
-    "references.bib": "fb0a86383f2063da6839f78373fbf4e911b3d355d96b6ca81601414c9debc3ea",
-    "tables/FIG_depth.tex": "a00eebbe3f8c2c39336d63f454979016d5347b52819613b2cb07538c8429d623",
-    "tables/adamw-sweep.tex": "70708f96a52c204819c1a5a0f820b8f30ccf31c227823b9b078b570c177c8910",
-    "tables/configs.tex": "6707aadec81a7b843b24897f5f1eea71698f1aa9f3c82fbfe150829195209380",
-    "tables/coordinates.tex": "98407c52d78435c65552ba28cd68cafce090a223c49755d265fad84c4f3e67a1",
-    "tables/definitions.tex": "220e0b5bc45576e1918c9083aeb5688783e3bcb6a92e76bedd1c9a92ef083b2e",
-    "tables/depthreadout.tex": "16a36ef06809baaf2765960a6d81b3e1d8c203710baffffd8e340e6b4cb11462",
-    "tables/families-result.tex": "1e5ca82c139ed8b1a3f64c38ffec9748bc8a41556b5c8c47c29e4b19dd4d6802",
-    "tables/families.tex": "655522647f22ce0ca3fd51517522df2ad5dea77622de9eb8e97e0ebee5c8c3ef",
-    "tables/generality.tex": "848d1d4b376ce446e19f736c342c7418b2babd095a78406fd1c7b8a713e3e222",
-    "tables/interventions.tex": "a4368368d21927a5c37b0f0427d9a0ee582b191aa82bdec5eec4f5261953965c",
-    "tables/muon-sweep.tex": "72b2a2507d69189b085eb873339315154d472843cb01dc1591258bc5ad177a07",
-    "tables/nons.tex": "c9327448e2fc143d2054927e12f92dbb74c1a44ec3349235700dafdc6dab3825",
-    "tables/quiet.tex": "e254a2850c0f0c8e47e37f9e28b179af4909dcfbc6bd43b679187ff79e5025fc",
-    "tables/sparsity.tex": "7cddd478999ed10832a9aa69e0ce00ae8d5faa9fd955189db77e9fdc7f0d3d75",
-    "tables/stable.tex": "43cc87ccb89260dd03f0905ce2302ef3dd1cfb6b69c0f465a63a4fb9dcd0fc1c",
-    "tables/stagewise.tex": "84af09be678e06d8904e691c789ff144c459a2b5f15e58c141c5d33db890e418",
-    "tables/wallclock.tex": "faaf2ccf784176a8b3df51a6b4e68a1d33fd17fd3eb0a23975127d3654ae9e2c"
-  },
-  "original_figure_sha256": {
-    "figure1_collapse.pdf": "398743ba721d73298b44c4b59cf0b5b6c4a8d04c9e31b62e010a2d9f1c49bf10",
-    "figure2_quiet.pdf": "b6dd4b81cd76dc0c37882ab93c51bacd153d6f2821208d5620893ca2a10abce6",
-    "figure3_seeds.pdf": "f59a260e4ca43ee3f2a1e90311f1d851991769d74d79cb69b3aa6b55dfdfa4b4",
-    "figure4_grid.pdf": "d355e1753f4f654bcfe70c53a78dc1d8f124e4ad99f1a2bd9ffe90da52a4d2e5",
-    "figure5_modes.pdf": "b6965a77c2e64adbdc57f75cec05b07bed4e6c04a3c6d92ece3e95ddde20bede",
-    "figure6_depth.pdf": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82"
-  },
-  "retained_result_table_files": [
-    "FIG_depth.tex",
-    "adamw-sweep.tex",
-    "configs.tex",
-    "coordinates.tex",
-    "definitions.tex",
-    "depthreadout.tex",
-    "families-result.tex",
-    "families.tex",
-    "generality.tex",
-    "interventions.tex",
-    "muon-sweep.tex",
-    "nons.tex",
-    "quiet.tex",
-    "sparsity.tex",
-    "stable.tex",
-    "stagewise.tex",
-    "wallclock.tex"
-  ]
+  }
 }

@@ -1,0 +1,136 @@
+{
+  "created_utc": "2026-09-23T06:14:59.545831+00:00",
+  "seed": 2,
+  "operation": "addition",
+  "arm": "hidden_lr_0.003",
+  "normalization": "none",
+  "training_loss": "torch.nn.functional.cross_entropy",
+  "restored_optimizer_hyperparameters": {
+    "muon": [
+      {
+        "learning_rate": 0.03,
+        "momentum": 0.95,
+        "weight_decay": 0.1,
+        "newton_schulz_steps": 5,
+        "nesterov": true
+      }
+    ],
+    "auxiliary_adamw": [
+      {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ],
+    "unembedding_adamw": [
+      {
+        "lr": 0.00025,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ]
+  },
+  "hidden_learning_rate_before": 0.03,
+  "hidden_learning_rate_after": 0.003,
+  "start_step": 6000,
+  "end_step": 6012,
+  "planned_updates": 12,
+  "source_checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/muon-grokking/followup_studies/work/basis_study/seed2_baseline/step_006000.pt",
+  "source_checkpoint_sha256": "3a0e3eaa3b2055ea8fc6809f5f8c2fda395e7d556051a310638bbb934b6e4b6e",
+  "source_repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "model_config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "optimizer_hyperparameters": {
+    "muon": [
+      {
+        "learning_rate": 0.003,
+        "momentum": 0.95,
+        "weight_decay": 0.1,
+        "newton_schulz_steps": 5,
+        "nesterov": true
+      }
+    ],
+    "auxiliary_adamw": [
+      {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ],
+    "unembedding_adamw": [
+      {
+        "lr": 0.00025,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ]
+  },
+  "intervention_step": 6000,
+  "all_parameters_trainable": true,
+  "diagnostic_every": 3,
+  "interpretation": "Stabilization experiment; the hidden LR reduction also scales decoupled weight decay.",
+  "train_monitor": "Every pre-update state and the final state; all rows retained.",
+  "test_monitor": "Every 4 global steps, every training accuracy below 90%, start and final.",
+  "primary_endpoint": "Any joint training/test accuracy below 90% between source and prespecified final step.",
+  "checkpoint_grid": 6,
+  "extra_checkpoints": "Start, final, first joint event and its immediately preceding state, most recent jointly >=99% state before the first event, and minimum measured test accuracy.",
+  "dtype": "torch.float32",
+  "device": "cpu",
+  "threads": 1,
+  "deterministic_algorithms": true,
+  "torch_version": "2.13.0",
+  "runner_sha256": "e410c2ab69f6ba61744f5aba82042c39c7428b7b2cca8d08ee7dfc783c5c1741",
+  "numeric_helper_sha256": "c34766fea23a2daae7754aff837c41a8b48e0ed3f26702d776d914d9c4c08656",
+  "source_runner_sha256": "0a175d36782f58cbc18f44c50e63a6a2dfa75df96dceff0f8e9cb7aa53291ab9",
+  "protocol_sha256": null
+}

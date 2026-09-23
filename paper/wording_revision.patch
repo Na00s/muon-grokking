@@ -1,0 +1,74 @@
+diff --git a/paper/revision_addendum.md b/paper/revision_addendum.md
+index c03c85e..aaeb53f 100644
+--- a/paper/revision_addendum.md
++++ b/paper/revision_addendum.md
+@@ -2,6 +2,10 @@
+ 
+ The revision addresses the task structure supplied by the Fourier filter, promotes the acute mean-dependent update result, extends corrected-loss branches to the original horizon, and centers the abstract and introduction on the failure mechanism and surviving information. The original experiments and reported results are retained.
+ 
++## Final wording and artwork corrections
++
++Figure 4 now labels the two outcomes "projection failure" and "projection masking" in the artwork, and its caption omits the sentence about the old labels. The original figure is retained beside the relabeling script; all plotted data and vector geometry are preserved. Section 3 reports the 2.34 ratio directly and excludes the four unsuccessful AdamW runs from its mean. Section 6 labels 95.14% as full-grid filtered accuracy and 0.30% as held-out test accuracy. The reproducibility statement links to a verified anonymous reviewer repository with a separately sanitized copy of the supporting artifacts. These corrections preserve every reported number and the nine-page scientific main text. `audit/wording_revision` records the checks for this update; the earlier audit records below refer to their respective preserved revisions.
++
+ ## Fourier controls and interpretation
+ 
+ The complete addition family with DC equals averaging over pairs `(a+t, b-t)` with the same answer. A linear readout commutes with the average. The subtraction identity uses `(a+t, b+t)`.
+diff --git a/paper/source/README.md b/paper/source/README.md
+index d98f326..3c48d38 100644
+--- a/paper/source/README.md
++++ b/paper/source/README.md
+@@ -6,7 +6,7 @@ Compile `main.tex` with Tectonic or a standard LaTeX/BibTeX installation. Figure
+ tectonic main.tex
+ ```
+ 
+-The revision preserves the title, anonymous authors, section order, all six original figure PDFs, and the numerical cells of the 17 original appendix table files. Section 4.4 contains the mean-dependent update equation and Table 3. The causal follow-up figure reports the swaps, decoders, and corrected-loss outcomes through step 100,000. Appendix J documents these experiments; Appendix K gives the Fourier averaging proof and memorizer controls, including Figure 9.
++The revision preserves the title, anonymous authors, section order, original figure data, and the numerical cells of the 17 original appendix table files. Figure 4 uses the labels "projection failure" and "projection masking"; its original PDF is retained as `figures/figure5_modes_original.pdf`. The other five original figure PDFs are unchanged. Section 4.4 contains the mean-dependent update equation and Table 3. The causal follow-up figure reports the swaps, decoders, and corrected-loss outcomes through step 100,000. Appendix J documents these experiments; Appendix K gives the Fourier averaging proof and memorizer controls, including Figure 9.
+ 
+ The scientific main text occupies nine pages. The reproducibility and required AI use statements are separate and excluded from the [ICLR 2027 initial-submission limit](https://iclr.cc/Conferences/2027/AuthorGuidelines). The quiet-window and Fourier-grid figures appear in Appendices C and G. Included template files are byte-identical to the official ICLR 2027 counterparts despite their retained legacy filenames.
+ 
+@@ -18,3 +18,5 @@ python figures/build_fourier_control_figure.py --workspace /path/to/followup_stu
+ ```
+ 
+ The scripts resolve the data root automatically in the repository layout. In a standalone source archive, pass it explicitly. This source archive compiles without downloading experimental binaries.
++
++To reproduce the two Figure 4 annotation changes, run `python figures/relabel_projection_figure.py --font /path/to/LiberationSerif-Regular.ttf`. This requires pypdf and reportlab; the script preserves the original vector geometry and records the source, font, and output hashes.
+diff --git a/paper/source/main.tex b/paper/source/main.tex
+index c9dcbe2..98c781c 100644
+--- a/paper/source/main.tex
++++ b/paper/source/main.tex
+@@ -78,7 +78,7 @@ Readout & Unembedding & AdamW \\
+ \section{Muon groks faster, and the solutions do not hold}
+ \label{sec:speed}
+ 
+-All nine Muon configurations in a $3\times3$ sweep of the hidden group reach sustained generalization, against seven of eleven AdamW configurations, with mean times of $13{,}011$ and $30{,}486$ steps; the mean is computed over AdamW's successes alone, so the factor of $2.34$ is conservative. On the selected settings the advantage is $1.54$ at the median over five seeds, and Muon's grokking step spans one hundred steps where AdamW's spans seven thousand seven hundred. The ratios reach $4.8$--$4.9$ under half width and a smaller modulus. AdamW never groks in the $20\%$ training variant, giving a lower bound of $6.6$; depth also increases the advantage (\S\ref{sec:depth}).
++All nine Muon configurations in a $3\times3$ hidden-group sweep reach sustained generalization, against seven of eleven AdamW configurations. Mean times are $13{,}011$ and $30{,}486$ steps, a $2.34\times$ ratio, with AdamW's four unsuccessful runs excluded. On the selected settings the advantage is $1.54$ at the median over five seeds, and Muon's grokking step spans one hundred steps where AdamW's spans seven thousand seven hundred. The ratios reach $4.8$--$4.9$ under half width and a smaller modulus. AdamW never groks in the $20\%$ training variant, giving a lower bound of $6.6$; depth also increases the advantage (\S\ref{sec:depth}).
+ 
+ All nine Muon configurations lose test accuracy after grokking; six have a logged evaluation with both train and test accuracy below $95\%$. None is strictly stable: sub-threshold counts range from $2$ to $592$, post-grokking minima reach $0.78\%$, and the counts have no monotone relationship to either hidden hyperparameter. Four of the seven grokking AdamW configurations also collapse, with severity rising monotonically in the learning rate, from none at $10^{-3}$ to $918$ sub-threshold evaluations at $10^{-2}$. Sweeping the readout learning rate over a factor of five and its weight decay from zero to $0.5$ changes the timing and depth of collapse and eliminates none of it; the zero-decay case removes the weight-decay pull on the readout and leaves the failure in place. Across five seeds neither selected setting is strictly stable: Muon records $137$ to $321$ sub-threshold evaluations on every seed with minima to $16.27\%$, and the AdamW reference records one or two on four of five, with a minimum of $27.59\%$. The tested Muon subtraction run also loses test accuracy; its matched AdamW run stays above threshold. Full sweeps, the baseline-selection protocol, and generality variants are in Appendix~\ref{app:sweeps}.
+ 
+@@ -224,7 +224,7 @@ Solved checkpoints & $11$ & $6$ & $4$ \\
+ \begin{figure}[t]
+ \centering
+ \includegraphics[width=0.85\textwidth]{figure5_modes.pdf}
+-\caption{\textbf{Left:} task-aligned family accuracy (including the retained constant mode) against full-model accuracy over $98$ checkpoints from the original studies, both evaluated through the current readout. \emph{Projection failure} denotes low filtered accuracy; \emph{projection masking} sits at the lower right, where the task-informed projection is accurate and the full model fails. The panel's circuit labels refer to these operational outcomes. At $95$ of $98$ checkpoints the family alone is at least as accurate as the full model, and the three exceptions exceed it by under a point. \textbf{Right:} rescaling the non-constant task-aligned component of the masked checkpoint by $\alpha$, with the rest of the representation and the readout untouched.}
++\caption{\textbf{Left:} task-aligned family accuracy (including the retained constant mode) against full-model accuracy over $98$ checkpoints from the original studies, both evaluated through the current readout. \emph{Projection failure} denotes low filtered accuracy; \emph{projection masking} sits at the lower right, where the task-informed projection is accurate and the full model fails. At $95$ of $98$ checkpoints the family alone is at least as accurate as the full model, and the three exceptions exceed it by under a point. \textbf{Right:} rescaling the non-constant task-aligned component of the masked checkpoint by $\alpha$, with the rest of the representation and the readout untouched.}
+ \label{fig:modes}
+ \end{figure}
+ 
+@@ -251,7 +251,7 @@ Freeze & remainder & $-7.67$ & $-7.54$ & $-18.86$ & $0.0622$ \\
+ 
+ \textbf{Masking is a competition on amplitude.} Because the unembedding is linear and bias-free, the correct-class margin decomposes exactly into the task-aligned contribution and the remainder (Table~\ref{tab:margins}). Against the full model's highest-scoring incorrect class, the non-constant family contributes a positive margin on every example in both branches, including every example the masked model answers wrongly, and on those examples its margin is higher, $+6.08$ against $+5.30$. The failures coincide with stronger opposition from the remainder: the remainder contributes negatively on more than nine tenths of examples in both branches, and in the control an opposition of $-6.43$ outvotes a task-aligned term of $+5.72$. Rescaling the task-aligned component by $\alpha$, with nothing retrained, raises the masked model monotonically on the sampled grid from $45.85\%$ to at least $95\%$ at $\alpha=2.55$ and $99.91\%$ at $\alpha=6$: the intervention changes the balance of the two logit contributions without retraining. The rescaled component is $P_{\mathrm{add}}h-\bar h$, with $\bar h$ the global mean. Recovery therefore depends on the task structure supplied by the projection. Family power share is a descriptive measure of this change.
+ 
+-\textbf{Family power during grokking.} Along an AdamW trajectory sampled every thousand steps, the addition family reaches $95.14\%$ at step $3{,}000$, when the model scores $0.30\%$ and the family holds $1.05\%$ of non-constant power. Ablating the family leaves near-chance accuracy at every sampled checkpoint. Its share rises to $70.62\%$ at the test-accuracy jump, alongside greater concentration within the family. The memorizer control shows why this filtered accuracy alone cannot establish algorithm learning at step $3{,}000$. Increasing power share describes the trajectory and is compatible with the cleanup account of \citet{nanda2023progress}. The margin decomposition and rescaling intervention establish amplitude competition between projected logit components at the masked checkpoint.
++\textbf{Family power during grokking.} Along an AdamW trajectory sampled every thousand steps, the addition family reaches $95.14\%$ full-grid filtered accuracy at step $3{,}000$, when the model's held-out test accuracy is $0.30\%$ and the family holds $1.05\%$ of non-constant power. Ablating the family leaves near-chance accuracy at every sampled checkpoint. Its share rises to $70.62\%$ at the test-accuracy jump, alongside greater concentration within the family. The memorizer control shows why this filtered accuracy alone cannot establish algorithm learning at step $3{,}000$. Increasing power share describes the trajectory and is compatible with the cleanup account of \citet{nanda2023progress}. The margin decomposition and rescaling intervention establish amplitude competition between projected logit components at the masked checkpoint.
+ 
+ \textbf{Spectral stability and functional change.} Exact nonzero Fourier support is invariant under an invertible residual-basis map; power and its rankings are invariant under orthogonal maps. General invertible maps can change dominant-frequency membership. A jointly compensated basis change preserves predictions. At the collapse in Figure~\ref{fig:collapse}, dominant-frequency Jaccard is $1.0000$ and power cosine is $0.9899$, while the filtered pathway's mean margin changes from $+18.14$ to $-46.85$. Over this interval the unembedding moves by $1.285$ of its norm and the addition-filtered residual by $0.392$; the old head on new features scores $26.31\%$, against $5.74\%$ for the reverse. Adjacent swaps provide finer localization (Figure~\ref{fig:followup}a). Accuracy returns to $99.90\%$ within $300$ steps with a changed power allocation. In the depth-4 pair, patching the frozen branch's addition component of the final MLP write into the control gives $99.99\%$ with the frozen head and $5.05\%$ with the control head. These results show readout sensitivity; exact basis equivalence requires the separate tests in Appendix~\ref{app:basis}.
+ 
+@@ -281,7 +281,7 @@ The accurate-loss RMS embedding failure limits this account. The main controls c
+ \label{sec:main-end}
+ 
+ \subsubsection*{Reproducibility statement}
+-The original experiments run on a single device from released code; their repository (anonymized for review) contains the training and analysis scripts, $191$ CSV run logs, and $20$ HTML summaries. Follow-up artifacts add raw diagnostics, model/optimizer/random-state checkpoints, replay checks, and the scripts for every new table and figure. Matched freezes and arithmetic branches verify shared states before intervention. Appendix~\ref{app:setup} specifies the original setup; Appendix~\ref{app:followup} gives the decoder, basis, arithmetic, and architecture-control protocols and their fixed horizons.
++The original experiments run on a single device from released code. The public repository at \url{https://github.com/Na00s/muon-grokking} contains the training and analysis scripts, $191$ CSV run logs, and $20$ HTML summaries. Follow-up artifacts add raw diagnostics, model/optimizer/random-state checkpoints, replay checks, and the scripts for every new table and figure. Matched freezes and arithmetic branches verify shared states before intervention. Appendix~\ref{app:setup} specifies the original setup; Appendix~\ref{app:followup} gives the decoder, basis, arithmetic, and architecture-control protocols and their fixed horizons.
+ 
+ \subsubsection*{AI use statement}
+ Generative AI tools assisted with the design and implementation of follow-up experiments, numerical verification, mathematical derivations, literature comparison, figure generation, and manuscript revision. The released protocols, code, checkpoints, and verification records document these analyses.

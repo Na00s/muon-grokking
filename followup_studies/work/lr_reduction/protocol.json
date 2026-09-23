@@ -1,0 +1,703 @@
+{
+  "created_utc": "2026-09-23T06:15:11.642880+00:00",
+  "status": "declared_before_production_launch",
+  "purpose": "Five-seed matched post-grokking hidden learning-rate reduction with trainable embeddings and readout.",
+  "jobs": [
+    {
+      "seed": 0,
+      "name": "seed0",
+      "checkpoint": "experiments/seed0_original/step_006000.pt",
+      "source_checkpoint_sha256": "c3442965ba80566f5e4fe5c68407a35e22e6df203c65eaa615efc643631cb7d1",
+      "start_step": 6000,
+      "end_step": 100000
+    },
+    {
+      "seed": 1,
+      "name": "seed1",
+      "checkpoint": "basis_study/seed1_baseline/step_006000.pt",
+      "source_checkpoint_sha256": "cbd74b61374d086864b137496ad3867a0494502f7988a90a72f6cffa64e3c79a",
+      "start_step": 6000,
+      "end_step": 100000
+    },
+    {
+      "seed": 2,
+      "name": "seed2",
+      "checkpoint": "basis_study/seed2_baseline/step_006000.pt",
+      "source_checkpoint_sha256": "3a0e3eaa3b2055ea8fc6809f5f8c2fda395e7d556051a310638bbb934b6e4b6e",
+      "start_step": 6000,
+      "end_step": 100000
+    },
+    {
+      "seed": 3,
+      "name": "seed3",
+      "checkpoint": "basis_study/seed3_baseline/step_006000.pt",
+      "source_checkpoint_sha256": "e590c4a01724b93c362d2428f7a876a39d18846711e3aa9e142f550236bcff13",
+      "start_step": 6000,
+      "end_step": 100000
+    },
+    {
+      "seed": 4,
+      "name": "seed4",
+      "checkpoint": "experiments/seed4_original/step_006000.pt",
+      "source_checkpoint_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc",
+      "start_step": 6000,
+      "end_step": 100000
+    }
+  ],
+  "workers": 5,
+  "total_updates": 470000,
+  "intervention": {
+    "step": 6000,
+    "hidden_muon_learning_rate": 0.003,
+    "original_hidden_muon_learning_rate": 0.03,
+    "embedding_learning_rate": 0.001,
+    "readout_learning_rate": 0.00025,
+    "hidden_weight_decay": 0.1,
+    "embedding_weight_decay": 1.0,
+    "readout_weight_decay": 1.0,
+    "cross_entropy": "stock",
+    "freeze_parameters": false,
+    "reset_optimizer_buffers": false
+  },
+  "primary": "Number of seeds with at least one contemporaneous train accuracy <0.90 and test accuracy <0.90, inclusive states 6000..100000.",
+  "secondary": [
+    "Minimum sampled test accuracy",
+    "Number of sampled test evaluations below 0.95",
+    "Final test accuracy",
+    "Grid-only below 0.95 count to describe the monitoring schedule"
+  ],
+  "monitoring": {
+    "train": "Every pre-update state and final state, retaining all 94,001 rows per seed.",
+    "test": "Global multiples of100, both endpoints, and every state with training accuracy below0.90.",
+    "diagnostics": "Every 1,000 global steps, including 6,000 and 100,000: training and full-grid feature-mean norms, stock32 CE logit-gradient error versus same-logit accurate float64 reference.",
+    "diagnostic_population": "Training features from the full-batch training forward; held-out features from original 1,024-example evaluation batches; means accumulated in float64.",
+    "save": "Initial/final, 10,000-step grid, first joint failure and preceding state, last >=99% jointly healthy state, minimum sampled test state."
+  },
+  "comparison": {
+    "original_stock_joint_failure_seeds": 5,
+    "corrected_loss_joint_failure_seeds": 0,
+    "denominator": 5,
+    "scope": "Compare binary seed-level incidence only. Historical original monitoring differs; do not compare event counts or durations."
+  },
+  "interpretation": "A stabilization experiment over this fixed horizon. Reducing hidden Muon learning rate also reduces its decoupled weight-decay step by 10x; this does not isolate the upstream collapse mechanism.",
+  "runtime": {
+    "device": "cpu",
+    "dtype": "float32",
+    "threads_per_worker": 1,
+    "torch_version": "2.13.0",
+    "deterministic_algorithms": true
+  },
+  "runner_sha256": "e410c2ab69f6ba61744f5aba82042c39c7428b7b2cca8d08ee7dfc783c5c1741",
+  "frozen_paper_files": [
+    {
+      "path": "paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip",
+      "sha256": "3b14f3f3d48f0c779a9839ac4d4020caa85245c090993fdd23bdee09f98f0af7"
+    },
+    {
+      "path": "paper/Muon_Grokking_Revised.pdf",
+      "sha256": "a0bc0afb62c3fb0d72c17b0d87e812e269212d5cf68f9bf55ba95b6299394870"
+    },
+    {
+      "path": "paper/audit/README.md",
+      "sha256": "22f40f9387ef64f5bfc98d18bfe6facbb5049a93b04050ea246e57244f96c612"
+    },
+    {
+      "path": "paper/audit/anonymization/anonymous_source_verification.json",
+      "sha256": "9672f6a48869f695c415f0b2eafb1d5827264bf23a3ba033fd43984a632f777b"
+    },
+    {
+      "path": "paper/audit/anonymization/final_administrative_verification.json",
+      "sha256": "7e23e53a8b6b1fba6360d56cb8185cb0873c56ea5424676361463a742b42289f"
+    },
+    {
+      "path": "paper/audit/anonymization/independent_snapshot_summary.json",
+      "sha256": "386beaedfd87c814fed96c31ea448d978851eea685ac60b23e7061e598d9083d"
+    },
+    {
+      "path": "paper/audit/anonymization/reviewer_replay_verification.json",
+      "sha256": "9013e42350303aafdb915212118334b0522b89cd00c35a185a855ea56dc2c170"
+    },
+    {
+      "path": "paper/audit/followup/audit_followup.py",
+      "sha256": "11a1b849383e600d0308854587e1b6c5a0f360c635dec531b062d245abce6604"
+    },
+    {
+      "path": "paper/audit/followup/audit_summary.json",
+      "sha256": "b2ebf5e657efc1780a16ca5ac741905e7fd7879109f22e6f77549ff069d12983"
+    },
+    {
+      "path": "paper/audit/followup/checkpoint_replay_audit.json",
+      "sha256": "4f4f073d0358eabab458f6a6d5a50bd2512b92ce64ba93c69272df8cfb4205ec"
+    },
+    {
+      "path": "paper/audit/followup/checkpoint_replays.py",
+      "sha256": "daf19236ed8c9c2a349c36e2d7ee9a8a687fc554bb4600005b9757bb976844c7"
+    },
+    {
+      "path": "paper/audit/followup/claim_ledger.csv",
+      "sha256": "88208c7c6da68763c44886dee3339084fc4a424c81a114b9c22ec58bc6a2fcf2"
+    },
+    {
+      "path": "paper/audit/followup/claim_ledger.json",
+      "sha256": "dbae3854473299ddd88c2a14d4cefa84743246014f644dab4d3fcc12db302d48"
+    },
+    {
+      "path": "paper/audit/followup/evidence_manifest.json",
+      "sha256": "99239d12e9c02052bdcb93af95c3c3f102dff746cdbac16430541c35ade9c9fc"
+    },
+    {
+      "path": "paper/audit/followup/recomputed_datasets.json",
+      "sha256": "1ce4a4450da50cbbec9f0e5037ec36772855a7f0a3fa4e22a9abc52872eb8623"
+    },
+    {
+      "path": "paper/audit/followup/report.md",
+      "sha256": "4ca9563c2d09a04ef0e93f25e81f7368b855a652f27b2c9e5e09e8cec9289087"
+    },
+    {
+      "path": "paper/audit/followup/resolution_review.md",
+      "sha256": "4c28be1014ef4eb2065110f214d041aa4b6add7123a4383c721fe888361c952a"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/audit_manifest.json",
+      "sha256": "8ae942f952026402dcb705482fee1a20e419502d1c41ec4db511c4e0b38350cc"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/check_preparation_scripts.py",
+      "sha256": "3e4323f6b448dec5d3c1a98d75699a1300707a9eca93f6903dfbe06b6b42ff3b"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/checkpoint_donors_recomputed.csv",
+      "sha256": "8b579dbe866ed2ecd75ec38afa22aced6669a2c1cbba9b4cb536861e02d16816"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/coverage_bound.json",
+      "sha256": "6210af606c21ea7513f627e31faeeabce9ab779639010d3c3d2b0d27454f4a10"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/independent_audit.py",
+      "sha256": "cc5afcc347e19e0001bc0d91cc1ce5f7c602ba58f390c807f96202aff629b5ea"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/independent_verification.json",
+      "sha256": "973c9d1587b41347578ce09c02086f95d4f9a508eefdd602dfc5394b32f71fe3"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/layout_applied.json",
+      "sha256": "eb24c44920e8432a5fc073c005583605065834b91ef8c85ae240db65071f814b"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/official_template_verification.json",
+      "sha256": "f7e413fc20f0d0742bafc3a1eb582c49731f72c04264d3d1e3bd76ece8cd805a"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/preparation_review.md",
+      "sha256": "48c657af42f811b90edb807ff2a34581747967781de81ad5a322702849d0a61b"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/preparation_script_verification.json",
+      "sha256": "b95b27a40fec7a86137d068113eb9faa63ce178c8464e9f2f8085ec48b9b4e1a"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/primary_recomputed.csv",
+      "sha256": "d5eb24ac5b9c677802cb0041d999bddc5da4610d8a1577fc0b23430c6f96e6da"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/resolution.md",
+      "sha256": "8b2c5db55f409d1d2b9e692ce6c77f78d3a5271aab46d482ec90991b584152f3"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/review.md",
+      "sha256": "d34e94d474502164f67e73aa0ede73a10d4d6cd6780158269486c20940fd9a88"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/secondary_direct_synthesis.py",
+      "sha256": "347f43a22dfdb07a32aae50971cc35fc275b943d61b44354bf77792c679b4acc"
+    },
+    {
+      "path": "paper/audit/fourier_revision/control_audit/secondary_direct_verification.json",
+      "sha256": "7240325077141078be184c7bd96c9e554e8e2b1ae87f46ea1b04f56eae914104"
+    },
+    {
+      "path": "paper/audit/fourier_revision/final_verification.json",
+      "sha256": "11352a3bb1eff7c5ae48ddc065900b408564ec60679cd9c4637d390328692e50"
+    },
+    {
+      "path": "paper/audit/fourier_revision/fourier_frequency_manifest.json",
+      "sha256": "b389b85b29d730f46e47072b9dbcf8c659eca0cc3f62e46a9aa1896f3d6dbd6a"
+    },
+    {
+      "path": "paper/audit/fourier_revision/fourier_frequency_verification.json",
+      "sha256": "3818cbf39f8d1c35dac635b23259462273af8f54b7f9c2571979ac9b46357f07"
+    },
+    {
+      "path": "paper/audit/fourier_revision/fourier_manifest.json",
+      "sha256": "faafb7eefc370b0d7a0c4c86cfe9789e780a389936569c2ac7e26942f46ad201"
+    },
+    {
+      "path": "paper/audit/fourier_revision/fourier_publication_manifest.json",
+      "sha256": "d524de6d931eeb346823411c2269f4aedffbff43172d7bb55885dfb259ccd547"
+    },
+    {
+      "path": "paper/audit/fourier_revision/fourier_summary.json",
+      "sha256": "f1ad8ad09bfafccc42f6fef1fc08a9c7f82139aae9e97320482f89ace01f09ae"
+    },
+    {
+      "path": "paper/audit/fourier_revision/fourier_verification.json",
+      "sha256": "dc93ebe0e4f204646794c04b3cb8ead2f6a7ff82cebc3eac19ca7b893bdaef77"
+    },
+    {
+      "path": "paper/audit/fourier_revision/incorporate_completed_horizons.py",
+      "sha256": "68b1b01fe8a19520937136b6ee5ea02c2f93db2e17f6ab69933693f7d8c70530"
+    },
+    {
+      "path": "paper/audit/fourier_revision/interpretation_changes.json",
+      "sha256": "f4f7d2138bc63d82e53fbe426219b0999e3037178be57417ce5382357b00c6bd"
+    },
+    {
+      "path": "paper/audit/fourier_revision/long_horizon_failure_verification.json",
+      "sha256": "86de0ce257ee55e0c10ace83f50806be548a1e8cee04d68bb9948680472b1204"
+    },
+    {
+      "path": "paper/audit/fourier_revision/long_horizon_protocol.json",
+      "sha256": "ce6a545a51be8618bf5122b4b89ac97a39454384765a35e3a5b5b8809174a9b1"
+    },
+    {
+      "path": "paper/audit/fourier_revision/long_horizon_runner_verification.json",
+      "sha256": "75449ca1c73616205db55e0d3e45a2f2a462ef45d2055797cbfb02c5681c8046"
+    },
+    {
+      "path": "paper/audit/fourier_revision/long_horizon_summary.json",
+      "sha256": "98feb278f34d91c875d50aa594a703231fdd1d6b4132c562e0a4996e27229c06"
+    },
+    {
+      "path": "paper/audit/fourier_revision/long_horizon_verification.json",
+      "sha256": "ef015da79ca3dce123031399d8f22ea7cdec19aeb05265d85535098413a16511"
+    },
+    {
+      "path": "paper/audit/fourier_revision/novelty_positioning.md",
+      "sha256": "061a6aefb2bb26612f214ec989abf3f53f2313fadaaed11a8243870b2325bfb0"
+    },
+    {
+      "path": "paper/audit/fourier_revision/package_revision.py",
+      "sha256": "3b0f71a815f804498378bb313f40c4bde16fff25a926c9b92f1146112f81f242"
+    },
+    {
+      "path": "paper/audit/fourier_revision/package_verification.json",
+      "sha256": "d16353e5c2f05be49b807b4bcca75810efa0df2ebc1e521e54ab8a52689bc538"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/figure/figures/fourier_control_provenance.json",
+      "sha256": "2efd6a9e3bb4e843de7807a4177aeb7d9ae85d1772cf05e2877805ad771e6b57"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/figure/fourier_memorizer_control.pdf",
+      "sha256": "c3572e6ff8ffd536a86bb15e69eb67b187593071a8e44027bc313695d3a7a137"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/figure/fourier_memorizer_control.png",
+      "sha256": "912adeb593ca24122b102109d7c2fd53077e1a886dc50dd2ee8b087492ba5647"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/synthetic/checkpoint_donor_results.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/synthetic/identity_checks.json",
+      "sha256": "7f6d295fbb3016a52a469020e26b2f317728d16d842abf9571a7b2c4e51d753f"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/synthetic/manifest.json",
+      "sha256": "86fafbdb12495cca91d3b07dddcc4ca9cc600fdba60dcb98b6bd4ec9a797125c"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/synthetic/memorizer_metrics.csv",
+      "sha256": "2b4e01c015c96e23202d3a3e95d62b56724b950957991e2f81cfa5710c4795e7"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/synthetic/memorizer_results.json",
+      "sha256": "e03bd5c9860c891a4dbf7347a9b57ab422855e6068ebeb8ad6629e6979c3fa8a"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/synthetic/verification.json",
+      "sha256": "093bff3ee266b2d94c307c8401dc08ef9888273e316bd994d0ed915adb603d17"
+    },
+    {
+      "path": "paper/audit/fourier_revision/publication_reproduction/verification.json",
+      "sha256": "c1bed1e1b9585637bc79be1cb9a03b770124c45b0d22075d4608dba3d4b2cf2f"
+    },
+    {
+      "path": "paper/audit/fourier_revision/render_final.py",
+      "sha256": "88067ee678339cf61f9624deba1d1ef06edcf3ee14ae060f2e36cb2d84df7eff"
+    },
+    {
+      "path": "paper/audit/fourier_revision/source_archive_compile.log",
+      "sha256": "28cd931d1db31ef2866ce565a906268e7eafb8e8b31d6305343ccecbbbe915c9"
+    },
+    {
+      "path": "paper/audit/fourier_revision/verify_packaged_revision.py",
+      "sha256": "706cceb5874f735070ce6aace0861bb1bcda85325d7ed8c34924d74b43d4eda4"
+    },
+    {
+      "path": "paper/audit/fourier_revision/verify_revision.py",
+      "sha256": "344e9135e1da55dd0fbd8cf88a20e046035b24eb67b4144bbbe02c2ee6a6b4f2"
+    },
+    {
+      "path": "paper/audit/fourier_revision/visual_review.json",
+      "sha256": "9335d9a2b1703f9246b03e2a3f15dec3b0a73125c122d6fc4365c9456f0e4fb3"
+    },
+    {
+      "path": "paper/audit/fourier_revision/write_completed_docs.py",
+      "sha256": "907bb89d6f94319ad15939b377e5145d84de227a92d5ff1b67c0f8a4107a6c64"
+    },
+    {
+      "path": "paper/audit/input_source/README.md",
+      "sha256": "7ff05109fc5d84d3e37a45b6a75699d0de8090e9d6568ad37f9ec615a52e5c17"
+    },
+    {
+      "path": "paper/audit/input_source/appendix.tex",
+      "sha256": "1bd5f7d49f83dd1621114a10a217033c95ca29b90205ac8b64c6aa588c4a2bf0"
+    },
+    {
+      "path": "paper/audit/input_source/followup_appendix.tex",
+      "sha256": "ea839e669ca4b0850652f2890efae07ecd26c95065c46e51f2df882908cc5f2f"
+    },
+    {
+      "path": "paper/audit/input_source/main.tex",
+      "sha256": "0d54f2a245d3da4b57f3dcd180b7130af2e5dee8f467ff135a0023619607be55"
+    },
+    {
+      "path": "paper/audit/input_source/references.bib",
+      "sha256": "606524b2c3932062770a91f362961ebe1673b9491b220ef2a5e20e45e4c0888b"
+    },
+    {
+      "path": "paper/audit/legibility_revision/anonymity_delta.json",
+      "sha256": "d4a014ec9cf991873fc5109ed1861a8ac4e747538c50726506fcc2b4f2778f68"
+    },
+    {
+      "path": "paper/audit/legibility_revision/bibliography_verification.json",
+      "sha256": "0eab35651b044607b8ca4c6cf96f55836b83b8d8ad952c9eb8c2fbff7aef442d"
+    },
+    {
+      "path": "paper/audit/legibility_revision/figure_legibility_and_layout.json",
+      "sha256": "fa81134e60eede51f41626448d1ba06330acf25d2aee564e94d1e69ef03f6c7e"
+    },
+    {
+      "path": "paper/audit/legibility_revision/source_archive_verification.json",
+      "sha256": "cb31fda471c521f50762ac090b386d32c9ded1e13ebfa764a16f3c4b58af4e48"
+    },
+    {
+      "path": "paper/audit/literature_review.json",
+      "sha256": "6af70aec0bed97ffff161c1cc03af64da37342905cb708f7ee5eea1aa5fe9fe7"
+    },
+    {
+      "path": "paper/audit/literature_review.md",
+      "sha256": "3520c40fb5613e452437f75c20a10e437e45842ada3b8badbf32112b50fd8b14"
+    },
+    {
+      "path": "paper/audit/wording_revision/figure_pixel_audit.json",
+      "sha256": "55ac0cf3842ba146ee0d84ac5233cac895458e0f73e06b87a3902bf6c4cc0886"
+    },
+    {
+      "path": "paper/audit/wording_revision/independent_audit.json",
+      "sha256": "26b23a795a7da2fa444fd3021848d466af07a368afa06aa4f7ba7d8133f4bbaa"
+    },
+    {
+      "path": "paper/audit/wording_revision/package_revision.py",
+      "sha256": "5180419bd7beb313820426ea711de64bbf6be1043a99756bdb59e04a0b156917"
+    },
+    {
+      "path": "paper/audit/wording_revision/source_archive_compile.log",
+      "sha256": "ad2eced73d8443a3c1c4fcbc39c8f7c222c19fcea92e61a9785cb199f29e0045"
+    },
+    {
+      "path": "paper/audit/wording_revision/verification.json",
+      "sha256": "53204adde6d30eb439dcafe928b47ec83753ec5f49ad0196e3df24b9a0d0690e"
+    },
+    {
+      "path": "paper/audit_report.md",
+      "sha256": "efa046ee523d8875bf7256f04545fd5cf999a1b28faebf16d4e1ec74527c4141"
+    },
+    {
+      "path": "paper/audit_revision.patch",
+      "sha256": "3216ee46759a4ba5a1c086a11a68882ac407d1c90e24b32daf68830a0f95addc"
+    },
+    {
+      "path": "paper/figures/followup_mechanism.pdf",
+      "sha256": "d81eb02e5cc769d5c138223e8c18ab4e271a4c257be5220253073f81ae2c53b3"
+    },
+    {
+      "path": "paper/figures/followup_mechanism.png",
+      "sha256": "ef76c3bc89f85d5c926c6a1782f4740438cef20f25f19fb2be0a528fb39d01fc"
+    },
+    {
+      "path": "paper/figures/followup_rms_boundary.pdf",
+      "sha256": "35e0496df5f5e2d4b100d3f114b8a109b5059fd478eaf71a89c8ee4bbd780203"
+    },
+    {
+      "path": "paper/figures/followup_rms_boundary.png",
+      "sha256": "b4cd5ff5b6336ea91059631d119b314bbe5853cc12201423070879920e9362d3"
+    },
+    {
+      "path": "paper/figures/fourier_memorizer_control.png",
+      "sha256": "912adeb593ca24122b102109d7c2fd53077e1a886dc50dd2ee8b087492ba5647"
+    },
+    {
+      "path": "paper/fourier_revision.patch",
+      "sha256": "86c4b772c2ba2d2392c41d57ba3568d6ec1fadfb1399b37279a7c7d2c7e48129"
+    },
+    {
+      "path": "paper/revision_addendum.md",
+      "sha256": "e4caae82a520e6080259108e0952794bd69932309b80fcd26971ee0150199606"
+    },
+    {
+      "path": "paper/revision_notes.md",
+      "sha256": "0ac505c2db7d2827c1bec053d0b2599b7816f1fbaaf219cdd211ce7faa464cab"
+    },
+    {
+      "path": "paper/source/README.md",
+      "sha256": "579b50263bc18b0d89e4f97187f4cff268ae44575e155010d492bcbbdd8d7291"
+    },
+    {
+      "path": "paper/source/appendix.tex",
+      "sha256": "56b3168bd6a5461acebcc97daaa8d81f48f4ed5cbb2d85e0f2244e64ee4ddf7f"
+    },
+    {
+      "path": "paper/source/fancyhdr.sty",
+      "sha256": "b56ec4434b9f4607529a4b23dc68ad8d4b94f1f631c8cddaf7da78140d53a5ea"
+    },
+    {
+      "path": "paper/source/figure1_collapse.pdf",
+      "sha256": "4e61ced698b595b3e6ee0922f3e4e5edf1346a56fc06948bda0e40fa2cbb0574"
+    },
+    {
+      "path": "paper/source/figure2_quiet.pdf",
+      "sha256": "a1038eb03daf6ec928579376d0a3ea6a4c05f415df26518212e6cba868beb374"
+    },
+    {
+      "path": "paper/source/figure3_seeds.pdf",
+      "sha256": "980945e990cdc39bb3fd749eb77c6d71a96b7baba196bee780f1132f7844c7ab"
+    },
+    {
+      "path": "paper/source/figure4_grid.pdf",
+      "sha256": "034832aa297d0651744abf72c6cba01943357b1720ac0b7dc99e133d39b14b00"
+    },
+    {
+      "path": "paper/source/figure5_modes.pdf",
+      "sha256": "30e5101f5306b2c9747b7c4f2fcfe73e833e41e0a034a67fa68f9a4c81fc6845"
+    },
+    {
+      "path": "paper/source/figure6_depth.pdf",
+      "sha256": "dcb497debd06ec2cf8428d805204b9a70a80d591321919af0f8c8d3b1ea1c9c5"
+    },
+    {
+      "path": "paper/source/figures/appendix_legibility_provenance.json",
+      "sha256": "24ff8ac0ade0fd695a5f8c8b123297dcda45541502ac5209c1e828520f12feb5"
+    },
+    {
+      "path": "paper/source/figures/build_followup_figures.py",
+      "sha256": "5723d1b7601d8384fc2153adcb9397a980f1d7f70d8df9bfbbdab00610a807da"
+    },
+    {
+      "path": "paper/source/figures/build_fourier_control_figure.py",
+      "sha256": "b2e7ea3072e970efb5eecdc52f372f3e9f2386f364769e235c7261174091eeb5"
+    },
+    {
+      "path": "paper/source/figures/collapse_seed_legibility_provenance.json",
+      "sha256": "c31db04e936ef6a2e46281d6ddea74a67dfdd63add1cb14d888a8052156392ff"
+    },
+    {
+      "path": "paper/source/figures/enlarge_appendix_labels.py",
+      "sha256": "157ca2bb2e760ef636927bd3d62f46f648be0974e43b4797ca0b68098e79296a"
+    },
+    {
+      "path": "paper/source/figures/enlarge_collapse_seed_labels.py",
+      "sha256": "14d4e50ccecdeea8dcebfcc93afb990605771940d3983e03efab9fe1ab87ed42"
+    },
+    {
+      "path": "paper/source/figures/enlarge_projection_depth_labels.py",
+      "sha256": "1e9c388cba8d2994533bdf539fb6d9b8fce5a30fd7e938c4d568172927b6e70d"
+    },
+    {
+      "path": "paper/source/figures/figure5_modes_original.pdf",
+      "sha256": "b6965a77c2e64adbdc57f75cec05b07bed4e6c04a3c6d92ece3e95ddde20bede"
+    },
+    {
+      "path": "paper/source/figures/followup_figure_provenance.json",
+      "sha256": "38a7a0d6dfa992a06bc7b9025a8af8dcfa9d665bc1de4f2283a46dc64d4ea801"
+    },
+    {
+      "path": "paper/source/figures/fourier_control_provenance.json",
+      "sha256": "d524de6d931eeb346823411c2269f4aedffbff43172d7bb55885dfb259ccd547"
+    },
+    {
+      "path": "paper/source/figures/legibility_originals/figure1_collapse.pdf",
+      "sha256": "398743ba721d73298b44c4b59cf0b5b6c4a8d04c9e31b62e010a2d9f1c49bf10"
+    },
+    {
+      "path": "paper/source/figures/legibility_originals/figure2_quiet.pdf",
+      "sha256": "b6dd4b81cd76dc0c37882ab93c51bacd153d6f2821208d5620893ca2a10abce6"
+    },
+    {
+      "path": "paper/source/figures/legibility_originals/figure3_seeds.pdf",
+      "sha256": "f59a260e4ca43ee3f2a1e90311f1d851991769d74d79cb69b3aa6b55dfdfa4b4"
+    },
+    {
+      "path": "paper/source/figures/legibility_originals/figure4_grid.pdf",
+      "sha256": "d355e1753f4f654bcfe70c53a78dc1d8f124e4ad99f1a2bd9ffe90da52a4d2e5"
+    },
+    {
+      "path": "paper/source/figures/legibility_originals/figure5_modes.pdf",
+      "sha256": "1612a0bb05d36d4139b9a3f4471a541ad4cecd1800e61b028f3a8c69935abb95"
+    },
+    {
+      "path": "paper/source/figures/legibility_originals/figure6_depth.pdf",
+      "sha256": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82"
+    },
+    {
+      "path": "paper/source/figures/projection_depth_legibility.json",
+      "sha256": "8c19f4463d9822b140c2fbea1fe07c5664f15978e87a862f41a069cf84dda26b"
+    },
+    {
+      "path": "paper/source/figures/projection_label_provenance.json",
+      "sha256": "51d5b29c6c6e0c251832871da0f0f6729486daa5b84ad093ff190865760f19da"
+    },
+    {
+      "path": "paper/source/figures/relabel_projection_figure.py",
+      "sha256": "a1de4104cfb4be76e2a787fcfec6a67695133faee908f3b2b3930fe7cfde1280"
+    },
+    {
+      "path": "paper/source/followup_appendix.tex",
+      "sha256": "9b6b3fa0c45d38ebb154763b70d70505e67e4433de42ab9522a29f4a659f61fe"
+    },
+    {
+      "path": "paper/source/followup_mechanism.pdf",
+      "sha256": "2c350d1fc4d3d0ea4fcac6edee2da561ca07cf508230708b57ae5bfe0b56b717"
+    },
+    {
+      "path": "paper/source/followup_mechanism.png",
+      "sha256": "ef76c3bc89f85d5c926c6a1782f4740438cef20f25f19fb2be0a528fb39d01fc"
+    },
+    {
+      "path": "paper/source/followup_rms_boundary.pdf",
+      "sha256": "cc335ff12a7b076add00334ce648c87e203c9b860fb29615c1a43161622d7af6"
+    },
+    {
+      "path": "paper/source/followup_rms_boundary.png",
+      "sha256": "b4cd5ff5b6336ea91059631d119b314bbe5853cc12201423070879920e9362d3"
+    },
+    {
+      "path": "paper/source/fourier_control_appendix.tex",
+      "sha256": "c1c62d74f3c603c69e3fbcf40ee9ab5f408760fac4fb1b9875cb056ac935ad3e"
+    },
+    {
+      "path": "paper/source/fourier_memorizer_control.pdf",
+      "sha256": "18f435b2832d7276495e22df68e7e83e115613664ab6f5d013bb2da9e4669df7"
+    },
+    {
+      "path": "paper/source/fourier_memorizer_control.png",
+      "sha256": "912adeb593ca24122b102109d7c2fd53077e1a886dc50dd2ee8b087492ba5647"
+    },
+    {
+      "path": "paper/source/iclr2026_conference.bst",
+      "sha256": "2d67552db7ed38ccfccb5957b52f95656e25c249724761d3cf5f7922ad1844c5"
+    },
+    {
+      "path": "paper/source/iclr2026_conference.sty",
+      "sha256": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6"
+    },
+    {
+      "path": "paper/source/main.tex",
+      "sha256": "fb7d7f4d0252511a6daf0822229b99722c331d1b03552e312be98e709944d43e"
+    },
+    {
+      "path": "paper/source/natbib.sty",
+      "sha256": "88bc70c0e48461934cab5b2accef06b74a8b3ac45ad03ccd3f2a6b7e0d6d530d"
+    },
+    {
+      "path": "paper/source/references.bib",
+      "sha256": "fb0a86383f2063da6839f78373fbf4e911b3d355d96b6ca81601414c9debc3ea"
+    },
+    {
+      "path": "paper/source/tables/FIG_depth.tex",
+      "sha256": "b2b742b28d5bf3e3f8d005220e87626bb313ecbd2a2c8638f2a58642c32b9f0d"
+    },
+    {
+      "path": "paper/source/tables/adamw-sweep.tex",
+      "sha256": "70708f96a52c204819c1a5a0f820b8f30ccf31c227823b9b078b570c177c8910"
+    },
+    {
+      "path": "paper/source/tables/configs.tex",
+      "sha256": "6707aadec81a7b843b24897f5f1eea71698f1aa9f3c82fbfe150829195209380"
+    },
+    {
+      "path": "paper/source/tables/coordinates.tex",
+      "sha256": "98407c52d78435c65552ba28cd68cafce090a223c49755d265fad84c4f3e67a1"
+    },
+    {
+      "path": "paper/source/tables/definitions.tex",
+      "sha256": "220e0b5bc45576e1918c9083aeb5688783e3bcb6a92e76bedd1c9a92ef083b2e"
+    },
+    {
+      "path": "paper/source/tables/depthreadout.tex",
+      "sha256": "16a36ef06809baaf2765960a6d81b3e1d8c203710baffffd8e340e6b4cb11462"
+    },
+    {
+      "path": "paper/source/tables/families-result.tex",
+      "sha256": "1e5ca82c139ed8b1a3f64c38ffec9748bc8a41556b5c8c47c29e4b19dd4d6802"
+    },
+    {
+      "path": "paper/source/tables/families.tex",
+      "sha256": "655522647f22ce0ca3fd51517522df2ad5dea77622de9eb8e97e0ebee5c8c3ef"
+    },
+    {
+      "path": "paper/source/tables/generality.tex",
+      "sha256": "848d1d4b376ce446e19f736c342c7418b2babd095a78406fd1c7b8a713e3e222"
+    },
+    {
+      "path": "paper/source/tables/interventions.tex",
+      "sha256": "a4368368d21927a5c37b0f0427d9a0ee582b191aa82bdec5eec4f5261953965c"
+    },
+    {
+      "path": "paper/source/tables/muon-sweep.tex",
+      "sha256": "72b2a2507d69189b085eb873339315154d472843cb01dc1591258bc5ad177a07"
+    },
+    {
+      "path": "paper/source/tables/nons.tex",
+      "sha256": "c9327448e2fc143d2054927e12f92dbb74c1a44ec3349235700dafdc6dab3825"
+    },
+    {
+      "path": "paper/source/tables/quiet.tex",
+      "sha256": "e254a2850c0f0c8e47e37f9e28b179af4909dcfbc6bd43b679187ff79e5025fc"
+    },
+    {
+      "path": "paper/source/tables/sparsity.tex",
+      "sha256": "7cddd478999ed10832a9aa69e0ce00ae8d5faa9fd955189db77e9fdc7f0d3d75"
+    },
+    {
+      "path": "paper/source/tables/stable.tex",
+      "sha256": "43cc87ccb89260dd03f0905ce2302ef3dd1cfb6b69c0f465a63a4fb9dcd0fc1c"
+    },
+    {
+      "path": "paper/source/tables/stagewise.tex",
+      "sha256": "84af09be678e06d8904e691c789ff144c459a2b5f15e58c141c5d33db890e418"
+    },
+    {
+      "path": "paper/source/tables/wallclock.tex",
+      "sha256": "faaf2ccf784176a8b3df51a6b4e68a1d33fd17fd3eb0a23975127d3654ae9e2c"
+    },
+    {
+      "path": "paper/targeted_revision.patch",
+      "sha256": "4fb19096bc8f479aed87437fe28c9f87fed8dd08daa017d558b73c7d4b589826"
+    },
+    {
+      "path": "paper/verification.json",
+      "sha256": "40fd1bcb05ac51acbe8a72fbcab7d654e25ef3c3906a1598b7dbcbfbb5f31c9d"
+    },
+    {
+      "path": "paper/wording_revision.patch",
+      "sha256": "58dfcb018821efd257a650f35cd10e3fae0389ef30f0f3dcec36636d6f13f55a"
+    }
+  ],
+  "paper_policy": "Paper, figures, manuscript archives and review packages remain frozen. Report outcomes for discussion after all five runs complete and are verified.",
+  "prelaunch_validation_sha256": "cc0f616f462732b809edbb34e7031750d84ac5449db08633608f17f273100778"
+}

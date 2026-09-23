@@ -1,0 +1,2038 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-23T06:22:01.748023+00:00",
+  "scope": "short verification runs",
+  "auditor_sha256": "1694a0e57ba8272aad0a5f64ed1ca3e5864a7bb7d461c31051de9bd4449f967e",
+  "protocol_sha256": "e11b20e18be2779c9c19ac746822079664eb78b5c38df8a0e47bcb2703d0990e",
+  "checks": [
+    {
+      "name": "runner immutable",
+      "passed": true
+    },
+    {
+      "name": "seed0 complete horizon",
+      "passed": true
+    },
+    {
+      "name": "seed0 no runtime failure",
+      "passed": true
+    },
+    {
+      "name": "seed0 provenance",
+      "passed": true
+    },
+    {
+      "name": "seed0 stock trainable configuration",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived start_step",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived end_step",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived updates",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived train_states",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived first_joint_failure_step",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived minimum_train_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived minimum_measured_test_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived train_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived test_below90_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived joint_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived scheduled_test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived off_grid_triggered_test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived minimum_test_state",
+      "passed": true
+    },
+    {
+      "name": "seed0 derived final_state",
+      "passed": true
+    },
+    {
+      "name": "seed0 source hidden LR",
+      "passed": true
+    },
+    {
+      "name": "seed0 complete initial state restored with only hidden LR changed",
+      "passed": true,
+      "tensor_count": 22
+    },
+    {
+      "name": "seed0 AdamW learning rates preserved",
+      "passed": true
+    },
+    {
+      "name": "seed0 metadata hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed0 diagnostic records",
+      "passed": true,
+      "count": 5
+    },
+    {
+      "name": "seed0 saved checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "seed0 no event artifacts",
+      "passed": true
+    },
+    {
+      "name": "seed0 final.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed0 final.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed0 final.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 final.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 final checkpoint hash",
+      "passed": true
+    },
+    {
+      "name": "seed0 final checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "seed0 minimum_test.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed0 minimum_test.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed0 minimum_test.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 minimum_test.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 minimum checkpoint selection",
+      "passed": true
+    },
+    {
+      "name": "seed0 start.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed0 start.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed0 start.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 start.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006000.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006000.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006000.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006000.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006006.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006006.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006006.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006006.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006012.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006012.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006012.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 step_006012.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed0 source checkpoint remained unchanged",
+      "passed": true
+    },
+    {
+      "name": "seed1 complete horizon",
+      "passed": true
+    },
+    {
+      "name": "seed1 no runtime failure",
+      "passed": true
+    },
+    {
+      "name": "seed1 provenance",
+      "passed": true
+    },
+    {
+      "name": "seed1 stock trainable configuration",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived start_step",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived end_step",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived updates",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived train_states",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived first_joint_failure_step",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived minimum_train_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived minimum_measured_test_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived train_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived test_below90_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived joint_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived scheduled_test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived off_grid_triggered_test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived minimum_test_state",
+      "passed": true
+    },
+    {
+      "name": "seed1 derived final_state",
+      "passed": true
+    },
+    {
+      "name": "seed1 source hidden LR",
+      "passed": true
+    },
+    {
+      "name": "seed1 complete initial state restored with only hidden LR changed",
+      "passed": true,
+      "tensor_count": 22
+    },
+    {
+      "name": "seed1 AdamW learning rates preserved",
+      "passed": true
+    },
+    {
+      "name": "seed1 metadata hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed1 diagnostic records",
+      "passed": true,
+      "count": 5
+    },
+    {
+      "name": "seed1 saved checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "seed1 no event artifacts",
+      "passed": true
+    },
+    {
+      "name": "seed1 final.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed1 final.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed1 final.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 final.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 final checkpoint hash",
+      "passed": true
+    },
+    {
+      "name": "seed1 final checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "seed1 minimum_test.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed1 minimum_test.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed1 minimum_test.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 minimum_test.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 minimum checkpoint selection",
+      "passed": true
+    },
+    {
+      "name": "seed1 start.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed1 start.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed1 start.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 start.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006000.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006000.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006000.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006000.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006006.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006006.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006006.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006006.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006012.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006012.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006012.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 step_006012.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed1 source checkpoint remained unchanged",
+      "passed": true
+    },
+    {
+      "name": "seed2 complete horizon",
+      "passed": true
+    },
+    {
+      "name": "seed2 no runtime failure",
+      "passed": true
+    },
+    {
+      "name": "seed2 provenance",
+      "passed": true
+    },
+    {
+      "name": "seed2 stock trainable configuration",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived start_step",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived end_step",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived updates",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived train_states",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived first_joint_failure_step",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived minimum_train_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived minimum_measured_test_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived train_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived test_below90_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived joint_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived scheduled_test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived off_grid_triggered_test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived minimum_test_state",
+      "passed": true
+    },
+    {
+      "name": "seed2 derived final_state",
+      "passed": true
+    },
+    {
+      "name": "seed2 source hidden LR",
+      "passed": true
+    },
+    {
+      "name": "seed2 complete initial state restored with only hidden LR changed",
+      "passed": true,
+      "tensor_count": 22
+    },
+    {
+      "name": "seed2 AdamW learning rates preserved",
+      "passed": true
+    },
+    {
+      "name": "seed2 metadata hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed2 diagnostic records",
+      "passed": true,
+      "count": 5
+    },
+    {
+      "name": "seed2 saved checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "seed2 no event artifacts",
+      "passed": true
+    },
+    {
+      "name": "seed2 final.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed2 final.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed2 final.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 final.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 final checkpoint hash",
+      "passed": true
+    },
+    {
+      "name": "seed2 final checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "seed2 minimum_test.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed2 minimum_test.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed2 minimum_test.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 minimum_test.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 minimum checkpoint selection",
+      "passed": true
+    },
+    {
+      "name": "seed2 start.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed2 start.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed2 start.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 start.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006000.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006000.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006000.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006000.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006006.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006006.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006006.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006006.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006012.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006012.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006012.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 step_006012.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed2 source checkpoint remained unchanged",
+      "passed": true
+    },
+    {
+      "name": "seed3 complete horizon",
+      "passed": true
+    },
+    {
+      "name": "seed3 no runtime failure",
+      "passed": true
+    },
+    {
+      "name": "seed3 provenance",
+      "passed": true
+    },
+    {
+      "name": "seed3 stock trainable configuration",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived start_step",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived end_step",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived updates",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived train_states",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived first_joint_failure_step",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived minimum_train_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived minimum_measured_test_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived train_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived test_below90_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived joint_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived scheduled_test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived off_grid_triggered_test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived minimum_test_state",
+      "passed": true
+    },
+    {
+      "name": "seed3 derived final_state",
+      "passed": true
+    },
+    {
+      "name": "seed3 source hidden LR",
+      "passed": true
+    },
+    {
+      "name": "seed3 complete initial state restored with only hidden LR changed",
+      "passed": true,
+      "tensor_count": 22
+    },
+    {
+      "name": "seed3 AdamW learning rates preserved",
+      "passed": true
+    },
+    {
+      "name": "seed3 metadata hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed3 diagnostic records",
+      "passed": true,
+      "count": 5
+    },
+    {
+      "name": "seed3 saved checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "seed3 no event artifacts",
+      "passed": true
+    },
+    {
+      "name": "seed3 final.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed3 final.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed3 final.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 final.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 final checkpoint hash",
+      "passed": true
+    },
+    {
+      "name": "seed3 final checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "seed3 minimum_test.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed3 minimum_test.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed3 minimum_test.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 minimum_test.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 minimum checkpoint selection",
+      "passed": true
+    },
+    {
+      "name": "seed3 start.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed3 start.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed3 start.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 start.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006000.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006000.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006000.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006000.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006006.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006006.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006006.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006006.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006012.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006012.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006012.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 step_006012.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed3 source checkpoint remained unchanged",
+      "passed": true
+    },
+    {
+      "name": "seed4 complete horizon",
+      "passed": true
+    },
+    {
+      "name": "seed4 no runtime failure",
+      "passed": true
+    },
+    {
+      "name": "seed4 provenance",
+      "passed": true
+    },
+    {
+      "name": "seed4 stock trainable configuration",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived start_step",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived end_step",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived updates",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived train_states",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived first_joint_failure_step",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived minimum_train_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived minimum_measured_test_accuracy",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived train_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived test_below90_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived joint_below90_states",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived scheduled_test_below95_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived off_grid_triggered_test_evaluations",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived minimum_test_state",
+      "passed": true
+    },
+    {
+      "name": "seed4 derived final_state",
+      "passed": true
+    },
+    {
+      "name": "seed4 source hidden LR",
+      "passed": true
+    },
+    {
+      "name": "seed4 complete initial state restored with only hidden LR changed",
+      "passed": true,
+      "tensor_count": 22
+    },
+    {
+      "name": "seed4 AdamW learning rates preserved",
+      "passed": true
+    },
+    {
+      "name": "seed4 metadata hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed4 diagnostic records",
+      "passed": true,
+      "count": 5
+    },
+    {
+      "name": "seed4 saved checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "seed4 no event artifacts",
+      "passed": true
+    },
+    {
+      "name": "seed4 final.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed4 final.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed4 final.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 final.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 final checkpoint hash",
+      "passed": true
+    },
+    {
+      "name": "seed4 final checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "seed4 minimum_test.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed4 minimum_test.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed4 minimum_test.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 minimum_test.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 minimum checkpoint selection",
+      "passed": true
+    },
+    {
+      "name": "seed4 start.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed4 start.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed4 start.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 start.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006000.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006000.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006000.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006000.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006006.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006006.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006006.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006006.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006012.pt metadata",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006012.pt fixed optimizer hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006012.pt auxiliary_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 step_006012.pt unembedding_adamw counters",
+      "passed": true
+    },
+    {
+      "name": "seed4 source checkpoint remained unchanged",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/Muon_Grokking_Revised.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/README.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/anonymization/anonymous_source_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/anonymization/final_administrative_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/anonymization/independent_snapshot_summary.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/anonymization/reviewer_replay_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/audit_followup.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/audit_summary.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/checkpoint_replay_audit.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/checkpoint_replays.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/claim_ledger.csv",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/claim_ledger.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/evidence_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/recomputed_datasets.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/report.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/followup/resolution_review.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/audit_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/check_preparation_scripts.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/checkpoint_donors_recomputed.csv",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/coverage_bound.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/independent_audit.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/independent_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/layout_applied.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/official_template_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/preparation_review.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/preparation_script_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/primary_recomputed.csv",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/resolution.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/review.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/secondary_direct_synthesis.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/control_audit/secondary_direct_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/final_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/fourier_frequency_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/fourier_frequency_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/fourier_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/fourier_publication_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/fourier_summary.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/fourier_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/incorporate_completed_horizons.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/interpretation_changes.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/long_horizon_failure_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/long_horizon_protocol.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/long_horizon_runner_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/long_horizon_summary.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/long_horizon_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/novelty_positioning.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/package_revision.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/package_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/figure/figures/fourier_control_provenance.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/figure/fourier_memorizer_control.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/figure/fourier_memorizer_control.png",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/synthetic/checkpoint_donor_results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/synthetic/identity_checks.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/synthetic/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/synthetic/memorizer_metrics.csv",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/synthetic/memorizer_results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/synthetic/verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/publication_reproduction/verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/render_final.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/source_archive_compile.log",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/verify_packaged_revision.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/verify_revision.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/visual_review.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/fourier_revision/write_completed_docs.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/input_source/README.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/input_source/appendix.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/input_source/followup_appendix.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/input_source/main.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/input_source/references.bib",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/legibility_revision/anonymity_delta.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/legibility_revision/bibliography_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/legibility_revision/figure_legibility_and_layout.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/legibility_revision/source_archive_verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/literature_review.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/literature_review.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/wording_revision/figure_pixel_audit.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/wording_revision/independent_audit.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/wording_revision/package_revision.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/wording_revision/source_archive_compile.log",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit/wording_revision/verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit_report.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/audit_revision.patch",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/figures/followup_mechanism.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/figures/followup_mechanism.png",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/figures/followup_rms_boundary.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/figures/followup_rms_boundary.png",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/figures/fourier_memorizer_control.png",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/fourier_revision.patch",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/revision_addendum.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/revision_notes.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/README.md",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/appendix.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/fancyhdr.sty",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figure1_collapse.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figure2_quiet.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figure3_seeds.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figure4_grid.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figure5_modes.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figure6_depth.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/appendix_legibility_provenance.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/build_followup_figures.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/build_fourier_control_figure.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/collapse_seed_legibility_provenance.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/enlarge_appendix_labels.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/enlarge_collapse_seed_labels.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/enlarge_projection_depth_labels.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/figure5_modes_original.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/followup_figure_provenance.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/fourier_control_provenance.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/legibility_originals/figure1_collapse.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/legibility_originals/figure2_quiet.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/legibility_originals/figure3_seeds.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/legibility_originals/figure4_grid.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/legibility_originals/figure5_modes.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/legibility_originals/figure6_depth.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/projection_depth_legibility.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/projection_label_provenance.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/figures/relabel_projection_figure.py",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/followup_appendix.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/followup_mechanism.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/followup_mechanism.png",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/followup_rms_boundary.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/followup_rms_boundary.png",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/fourier_control_appendix.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/fourier_memorizer_control.pdf",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/fourier_memorizer_control.png",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/iclr2026_conference.bst",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/iclr2026_conference.sty",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/main.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/natbib.sty",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/references.bib",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/FIG_depth.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/adamw-sweep.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/configs.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/coordinates.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/definitions.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/depthreadout.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/families-result.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/families.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/generality.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/interventions.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/muon-sweep.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/nons.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/quiet.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/sparsity.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/stable.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/stagewise.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/source/tables/wallclock.tex",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/targeted_revision.patch",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/verification.json",
+      "passed": true
+    },
+    {
+      "name": "frozen paper paper/wording_revision.patch",
+      "passed": true
+    }
+  ],
+  "checked_items": 428,
+  "checkpoint_replays": [
+    {
+      "seed": 0,
+      "path": "final.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9975388745944737,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 0,
+      "path": "minimum_test.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9975388745944737,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 0,
+      "path": "start.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9975388745944737,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 0,
+      "path": "step_006000.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9975388745944737,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 0,
+      "path": "step_006006.pt",
+      "step": 6006,
+      "training_accuracy": 1.0,
+      "test_accuracy": null,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 0,
+      "path": "step_006012.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9975388745944737,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 1,
+      "path": "final.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9984338292873923,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 1,
+      "path": "minimum_test.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9984338292873923,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 1,
+      "path": "start.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9984338292873923,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 1,
+      "path": "step_006000.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9984338292873923,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 1,
+      "path": "step_006006.pt",
+      "step": 6006,
+      "training_accuracy": 1.0,
+      "test_accuracy": null,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 1,
+      "path": "step_006012.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9984338292873923,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 2,
+      "path": "final.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9887011970019017,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 2,
+      "path": "minimum_test.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.988589327665287,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 2,
+      "path": "start.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.988589327665287,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 2,
+      "path": "step_006000.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.988589327665287,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 2,
+      "path": "step_006006.pt",
+      "step": 6006,
+      "training_accuracy": 1.0,
+      "test_accuracy": null,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 2,
+      "path": "step_006012.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9887011970019017,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 3,
+      "path": "final.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9998881306633851,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 3,
+      "path": "minimum_test.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9998881306633851,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 3,
+      "path": "start.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9998881306633851,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 3,
+      "path": "step_006000.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9998881306633851,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 3,
+      "path": "step_006006.pt",
+      "step": 6006,
+      "training_accuracy": 1.0,
+      "test_accuracy": null,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 3,
+      "path": "step_006012.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9998881306633851,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 4,
+      "path": "final.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9983219599507774,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 4,
+      "path": "minimum_test.pt",
+      "step": 6008,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9983219599507774,
+      "diagnostic_replayed": false,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 4,
+      "path": "start.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9984338292873923,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 4,
+      "path": "step_006000.pt",
+      "step": 6000,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9984338292873923,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 4,
+      "path": "step_006006.pt",
+      "step": 6006,
+      "training_accuracy": 1.0,
+      "test_accuracy": null,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    },
+    {
+      "seed": 4,
+      "path": "step_006012.pt",
+      "step": 6012,
+      "training_accuracy": 1.0,
+      "test_accuracy": 0.9983219599507774,
+      "diagnostic_replayed": true,
+      "all_parameters_trainable": true,
+      "optimizer_assignment_complete": true
+    }
+  ],
+  "frozen_paper_files_checked": 152,
+  "source_checkpoints_preserved": true,
+  "total_training_states": 65,
+  "total_diagnostic_records": 25
+}

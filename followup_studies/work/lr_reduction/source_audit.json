@@ -1,0 +1,1243 @@
+{
+  "status": "passed",
+  "scope": "Read-only independent audit of original step-6000 sources, exact restoration, isolated hidden-LR parameter intervention, and historical binary comparator evidence. Paper files untouched.",
+  "sources": [
+    {
+      "seed": 0,
+      "source_checkpoint": "experiments/seed0_original/step_006000.pt",
+      "repository_checkpoint_copy": "muon-grokking/followup_studies/work/experiments/seed0_original/step_006000.pt",
+      "source_sha256": "c3442965ba80566f5e4fe5c68407a35e22e6df203c65eaa615efc643631cb7d1",
+      "source_size_bytes": 1940049,
+      "step": 6000,
+      "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+      "torch_version": "2.13.0",
+      "model_config": {
+        "modulus": 113,
+        "sequence_length": 3,
+        "d_model": 128,
+        "num_heads": 4,
+        "d_mlp": 512,
+        "num_layers": 1
+      },
+      "optimizer_hyperparameters": {
+        "muon": [
+          {
+            "learning_rate": 0.03,
+            "momentum": 0.95,
+            "weight_decay": 0.1,
+            "newton_schulz_steps": 5,
+            "nesterov": true
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "lr": 0.001,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "lr": 0.00025,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ]
+      },
+      "optimizer_parameter_names": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "optimizer_state_shapes": {
+        "muon": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  384,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 2,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  512,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 3,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  512
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ]
+      },
+      "all_parameters_trainable": true,
+      "full_model_optimizer_rng_restore_exact": true,
+      "only_hidden_learning_rate_changed_in_verified_intervention": true,
+      "grokking_confirmed_step": 6000,
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9975388745944737,
+      "train_examples": 3830,
+      "test_examples": 8939,
+      "original_verified_joint_failure": {
+        "stock_event_step": 17494,
+        "stock_event_test_accuracy": 0.3187157400156617,
+        "stock_event_train_accuracy": 0.4825065274151436
+      },
+      "corrected_end_step": 100000,
+      "corrected_joint_failure": null,
+      "corrected_minimum_sampled_test_accuracy": 0.9975388745944737,
+      "corrected_final_test_accuracy": 1.0
+    },
+    {
+      "seed": 1,
+      "source_checkpoint": "basis_study/seed1_baseline/step_006000.pt",
+      "repository_checkpoint_copy": "muon-grokking/followup_studies/work/basis_study/seed1_baseline/step_006000.pt",
+      "source_sha256": "cbd74b61374d086864b137496ad3867a0494502f7988a90a72f6cffa64e3c79a",
+      "source_size_bytes": 1940417,
+      "step": 6000,
+      "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+      "torch_version": "2.13.0",
+      "model_config": {
+        "modulus": 113,
+        "sequence_length": 3,
+        "d_model": 128,
+        "num_heads": 4,
+        "d_mlp": 512,
+        "num_layers": 1
+      },
+      "optimizer_hyperparameters": {
+        "muon": [
+          {
+            "learning_rate": 0.03,
+            "momentum": 0.95,
+            "weight_decay": 0.1,
+            "newton_schulz_steps": 5,
+            "nesterov": true
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "lr": 0.001,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "lr": 0.00025,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ]
+      },
+      "optimizer_parameter_names": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "optimizer_state_shapes": {
+        "muon": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  384,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 2,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  512,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 3,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  512
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ]
+      },
+      "all_parameters_trainable": true,
+      "full_model_optimizer_rng_restore_exact": true,
+      "only_hidden_learning_rate_changed_in_verified_intervention": true,
+      "grokking_confirmed_step": 6000,
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9984338292873923,
+      "train_examples": 3830,
+      "test_examples": 8939,
+      "original_verified_joint_failure": {
+        "stock_event_step": 17721,
+        "stock_event_test_accuracy": 0.09094977066785993,
+        "stock_event_train_accuracy": 0.1566579634464752
+      },
+      "corrected_end_step": 100000,
+      "corrected_joint_failure": null,
+      "corrected_minimum_sampled_test_accuracy": 0.9984338292873923,
+      "corrected_final_test_accuracy": 1.0
+    },
+    {
+      "seed": 2,
+      "source_checkpoint": "basis_study/seed2_baseline/step_006000.pt",
+      "repository_checkpoint_copy": "muon-grokking/followup_studies/work/basis_study/seed2_baseline/step_006000.pt",
+      "source_sha256": "3a0e3eaa3b2055ea8fc6809f5f8c2fda395e7d556051a310638bbb934b6e4b6e",
+      "source_size_bytes": 1940417,
+      "step": 6000,
+      "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+      "torch_version": "2.13.0",
+      "model_config": {
+        "modulus": 113,
+        "sequence_length": 3,
+        "d_model": 128,
+        "num_heads": 4,
+        "d_mlp": 512,
+        "num_layers": 1
+      },
+      "optimizer_hyperparameters": {
+        "muon": [
+          {
+            "learning_rate": 0.03,
+            "momentum": 0.95,
+            "weight_decay": 0.1,
+            "newton_schulz_steps": 5,
+            "nesterov": true
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "lr": 0.001,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "lr": 0.00025,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ]
+      },
+      "optimizer_parameter_names": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "optimizer_state_shapes": {
+        "muon": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  384,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 2,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  512,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 3,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  512
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ]
+      },
+      "all_parameters_trainable": true,
+      "full_model_optimizer_rng_restore_exact": true,
+      "only_hidden_learning_rate_changed_in_verified_intervention": true,
+      "grokking_confirmed_step": 6000,
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.988589327665287,
+      "train_examples": 3830,
+      "test_examples": 8939,
+      "original_verified_joint_failure": {
+        "stock_event_step": 18069,
+        "stock_event_test_accuracy": 0.00928515493903121,
+        "stock_event_train_accuracy": 0.009921671018276762
+      },
+      "corrected_end_step": 100000,
+      "corrected_joint_failure": null,
+      "corrected_minimum_sampled_test_accuracy": 0.988589327665287,
+      "corrected_final_test_accuracy": 1.0
+    },
+    {
+      "seed": 3,
+      "source_checkpoint": "basis_study/seed3_baseline/step_006000.pt",
+      "repository_checkpoint_copy": "muon-grokking/followup_studies/work/basis_study/seed3_baseline/step_006000.pt",
+      "source_sha256": "e590c4a01724b93c362d2428f7a876a39d18846711e3aa9e142f550236bcff13",
+      "source_size_bytes": 1940417,
+      "step": 6000,
+      "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+      "torch_version": "2.13.0",
+      "model_config": {
+        "modulus": 113,
+        "sequence_length": 3,
+        "d_model": 128,
+        "num_heads": 4,
+        "d_mlp": 512,
+        "num_layers": 1
+      },
+      "optimizer_hyperparameters": {
+        "muon": [
+          {
+            "learning_rate": 0.03,
+            "momentum": 0.95,
+            "weight_decay": 0.1,
+            "newton_schulz_steps": 5,
+            "nesterov": true
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "lr": 0.001,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "lr": 0.00025,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ]
+      },
+      "optimizer_parameter_names": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "optimizer_state_shapes": {
+        "muon": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  384,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 2,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  512,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 3,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  512
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ]
+      },
+      "all_parameters_trainable": true,
+      "full_model_optimizer_rng_restore_exact": true,
+      "only_hidden_learning_rate_changed_in_verified_intervention": true,
+      "grokking_confirmed_step": 5800,
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9998881306633851,
+      "train_examples": 3830,
+      "test_examples": 8939,
+      "original_verified_joint_failure": {
+        "stock_event_step": 16308,
+        "stock_event_test_accuracy": 0.5359659917216691,
+        "stock_event_train_accuracy": 0.643603133159269
+      },
+      "corrected_end_step": 100000,
+      "corrected_joint_failure": null,
+      "corrected_minimum_sampled_test_accuracy": 0.9997762613267703,
+      "corrected_final_test_accuracy": 1.0
+    },
+    {
+      "seed": 4,
+      "source_checkpoint": "experiments/seed4_original/step_006000.pt",
+      "repository_checkpoint_copy": "muon-grokking/followup_studies/work/experiments/seed4_original/step_006000.pt",
+      "source_sha256": "5295130862679e0aeb8bc29f106428897cd7c1c7787b9dcdf4e6df95746a5fdc",
+      "source_size_bytes": 1940049,
+      "step": 6000,
+      "repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+      "torch_version": "2.13.0",
+      "model_config": {
+        "modulus": 113,
+        "sequence_length": 3,
+        "d_model": 128,
+        "num_heads": 4,
+        "d_mlp": 512,
+        "num_layers": 1
+      },
+      "optimizer_hyperparameters": {
+        "muon": [
+          {
+            "learning_rate": 0.03,
+            "momentum": 0.95,
+            "weight_decay": 0.1,
+            "newton_schulz_steps": 5,
+            "nesterov": true
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "lr": 0.001,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "lr": 0.00025,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 1.0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "decoupled_weight_decay": true
+          }
+        ]
+      },
+      "optimizer_parameter_names": {
+        "muon": [
+          [
+            "transformer_blocks.0.attention.qkv_projection.weight",
+            "transformer_blocks.0.attention.output_projection.weight",
+            "transformer_blocks.0.mlp.input_projection.weight",
+            "transformer_blocks.0.mlp.output_projection.weight"
+          ]
+        ],
+        "auxiliary_adamw": [
+          [
+            "token_embedding.weight",
+            "position_embedding.weight"
+          ]
+        ],
+        "unembedding_adamw": [
+          [
+            "unembedding.weight"
+          ]
+        ]
+      },
+      "optimizer_state_shapes": {
+        "muon": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  384,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 2,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  512,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 3,
+            "state": {
+              "momentum_buffer": {
+                "dtype": "torch.float32",
+                "shape": [
+                  128,
+                  512
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "auxiliary_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  114,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          },
+          {
+            "parameter_id": 1,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  3,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ],
+        "unembedding_adamw": [
+          {
+            "parameter_id": 0,
+            "state": {
+              "step": {
+                "dtype": "torch.float32",
+                "shape": [],
+                "scalar": 6000.0
+              },
+              "exp_avg": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              },
+              "exp_avg_sq": {
+                "dtype": "torch.float32",
+                "shape": [
+                  113,
+                  128
+                ],
+                "scalar": null
+              }
+            }
+          }
+        ]
+      },
+      "all_parameters_trainable": true,
+      "full_model_optimizer_rng_restore_exact": true,
+      "only_hidden_learning_rate_changed_in_verified_intervention": true,
+      "grokking_confirmed_step": 5900,
+      "source_train_accuracy": 1.0,
+      "source_test_accuracy": 0.9984338292873923,
+      "train_examples": 3830,
+      "test_examples": 8939,
+      "original_verified_joint_failure": {
+        "stock_event_step": 16056,
+        "stock_event_test_accuracy": 0.66327329678935,
+        "stock_event_train_accuracy": 0.7007832898172324
+      },
+      "corrected_end_step": 100000,
+      "corrected_joint_failure": null,
+      "corrected_minimum_sampled_test_accuracy": 0.9984338292873923,
+      "corrected_final_test_accuracy": 1.0
+    }
+  ],
+  "historical_evidence": {
+    "stock_primary_summary": "muon-grokking/followup_studies/work/causal_study/analysis/results.json",
+    "stock_primary_summary_sha256": "df3910e103acabd28bb360a759862417f687e1569a4e31cfa35533833415df7a",
+    "corrected_long_horizon_summary": "muon-grokking/followup_studies/work/long_horizon/summary.json",
+    "corrected_long_horizon_summary_sha256": "98feb278f34d91c875d50aa594a703231fdd1d6b4132c562e0a4996e27229c06",
+    "stock_incidence": "5/5 verified positive joint failures before step30000, hence before100000",
+    "corrected_incidence": "0/5 joint failures across dense-monitoring continuations from6000through100000",
+    "comparison_scope": "Binary incidence only for historical originals. Monitoring differs; event counts, durations, and historical minima are not directly comparable."
+  },
+  "monitoring": {
+    "start_step": 6000,
+    "end_step": 100000,
+    "updates_per_seed": 94000,
+    "total_updates": 470000,
+    "train_states_per_seed": 94001,
+    "ordinary_test_grid_evaluations_per_seed": 941,
+    "train": "Every pre-update state and final state.",
+    "test": "Global step divisible by100, initial/final states, or training accuracy below0.9.",
+    "primary": "Existence of contemporaneous train<0.9 and test<0.9.",
+    "secondary": "Minimum sampled test accuracy, count of test evaluations below0.95, and final test accuracy.",
+    "limit": "Test-only excursions between scheduled observations can remain undetected."
+  },
+  "implementation_pitfalls": [
+    "Muon uses param_groups learning_rate, whereas AdamW uses lr. Apply the change after loading optimizer states; modifying factory defaults before load is overwritten.",
+    "Restoring all optimizer states includes every Muon momentum buffer, AdamW first and second moments, and AdamW step counters. Preserve RNG state and original deterministic CPU float32 computation.",
+    "Step6000 is the state after6000updates. The next update uses0.003 and produces state6001. Break at final state100000 before another backward/update.",
+    "Hold Muon weight_decay at0.1. Its decoupled multiplier changes from1-0.03*0.1=0.997 to1-0.003*0.1=0.9997. This experiment changes effective decay per update as part of ordinary LR reduction.",
+    "Keep every model parameter trainable and step all three optimizers. Embedding/readout rates and WD coefficients remain unchanged.",
+    "Use periodic derivative diagnostics from detached copies of the same float32 training logits compared with accurate float64 derivative at those logits. Preserve optimizer gradients, model mode, and RNG.",
+    "Feature mean must identify its population. Full-grid residual norm matches existing diagnostics; train feature mean may also be recorded but must be labeled. Accumulate the mean in float64 without changing training dtype.",
+    "Existing run_collapse imports use a relative neighboring muon-grokking path; importing the original workspace helper at work/experiments is known-good. Packaged followup helper location may require an explicit correct repository path."
+  ]
+}

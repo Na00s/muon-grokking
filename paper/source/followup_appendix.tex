@@ -1,7 +1,7 @@
 \section{Decoder, basis, and arithmetic follow-ups}
 \label{app:followup}
 
-The decoder and matched-branch tests use the original architecture, data splits, and optimizer settings; operation and normalization controls are specified separately below. The basis study adds $52{,}698$ baseline updates and $9{,}000$ continuation updates. The subsequent causal study adds $364{,}302$ updates: five $24{,}000$-step arithmetic branches, fifteen $5{,}000$-step specificity branches, four original-trajectory extensions totaling $49{,}302$ steps, and four $30{,}000$-step operation or architecture controls. A subsequent horizon extension adds $420{,}000$ updates: each of the five corrected addition branches and the corrected subtraction run continues from step $30{,}000$ to $100{,}000$. Verification replays are excluded from these totals. Multiple checkpoints and interventions from one trajectory are dependent observations.
+The decoder and matched-branch tests use the original architecture, data splits, and optimizer settings; operation and normalization controls are specified separately below. The basis study adds $52{,}698$ baseline updates and $9{,}000$ continuation updates. The subsequent causal study adds $364{,}302$ updates: five $24{,}000$-step arithmetic branches, fifteen $5{,}000$-step specificity branches, four original-trajectory extensions totaling $49{,}302$ steps, and four $30{,}000$-step operation or architecture controls. A subsequent horizon extension adds $420{,}000$ updates: each of the five corrected addition branches and the corrected subtraction run continues from step $30{,}000$ to $100{,}000$. The hidden-learning-rate control adds $470{,}000$ updates across five continuations from step $6{,}000$ to $100{,}000$. Verification replays are excluded from these totals. Multiple checkpoints and interventions from one trajectory are dependent observations.
 
 \subsection{Monitoring and matched states}
 \label{app:followup-protocol}
@@ -152,3 +152,52 @@ Subtraction reproduces acute readout sensitivity: updated features with the prec
 \end{figure}
 
 In the RMS runs, the embedding update causes the acute loss of accuracy. In the accurate-CE event, test accuracy falls from $96.208\%$ to $0.884\%$; its logit derivative has relative error $9.48\times10^{-8}$ and no vanished correct-class entries. Updating only the head retains $96.208\%$, updating only embeddings gives $0.940\%$, and freezing the head still gives $0.895\%$. The minimum reaches $0.526\%$ at step $28{,}503$; the stock-RMS minimum is $0.481\%$ at $28{,}540$. Exact update replay passes. Both RMS event directions locally descend and lower loss at scales $0.001$ and $0.01$, then overshoot at full scale. This counterexample bounds the readout/feature-mean account to the measured unnormalized cases and rules out universal prevention by accurate loss arithmetic. The completed horizons support those finite claims; longer runs and population frequencies remain outside their scope.
+
+\clearpage
+\subsection{Post-grokking hidden-learning-rate reduction}
+\label{app:lr-reduction}
+
+We restore the same five original step-$6{,}000$ checkpoints used for the arithmetic branches, including the full model, optimizer buffers, and random-number-generator state. Immediately after restoration, we reduce the hidden Muon learning rate from $0.03$ to $0.003$ and hold it fixed through step $100{,}000$. Embeddings and readout remain trainable at learning rates $0.001$ and $0.00025$, respectively. All branches retain stock cross-entropy and the original weight-decay coefficients: $0.1$ for the hidden matrices and $1$ for embeddings and readout. Each continuation adds $94{,}000$ updates, for $470{,}000$ in total.
+
+The primary outcome is whether a seed has any state with both training and held-out test accuracy below $90\%$. Training accuracy is recorded at every update, including the source and final states. Test accuracy is evaluated every $100$ updates and whenever training accuracy is below $90\%$, matching the corrected-loss protocol. This gives $94{,}001$ recorded training states per seed. Test-only excursions between scheduled evaluations can be missed.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Hidden-LR continuations through step $100{,}000$. Every seed has a joint failure. Test accuracies are percentages, and minima include the starting state. Below-$95\%$ counts include all test evaluations under the stated monitoring rule; the scheduled subset uses only the $100$-step grid. These counts describe the new branches.}
+\label{tab:lr-reduction}
+\begin{tabular}{lrrrrr}
+\toprule
+Seed & \shortstack{First joint\\failure step} & \shortstack{Minimum\\sampled test} & \shortstack{Evaluations\\below $95\%$} & \shortstack{Scheduled\\subset} & Final test \\
+\midrule
+$0$ & $18{,}767$ & $0.8614$ & $105$ & $13$ & $100.0000$ \\
+$1$ & $18{,}476$ & $4.7209$ & $88$ & $20$ & $100.0000$ \\
+$2$ & $19{,}439$ & $0.8950$ & $135$ & $14$ & $99.6644$ \\
+$3$ & $17{,}041$ & $4.8999$ & $52$ & $22$ & $99.8881$ \\
+$4$ & $17{,}578$ & $0.8166$ & $103$ & $13$ & $100.0000$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All five reduced-LR branches experience a joint failure, compared with $5/5$ original stock trajectories and $0/5$ corrected-loss branches through the same horizon. We compare binary seed-level incidence because the original trajectories have different historical monitoring. The reduced-LR branches first fail between steps $17{,}041$ and $19{,}439$; seeds $0$, $2$, and $4$ reach approximately chance-level test accuracy ($100/113\approx0.885\%$). All recover to at least $99.6644\%$ final test accuracy. Their recovery illustrates why final accuracy alone misses these failures.
+
+\clearpage
+\begin{table}[!htbp]
+\centering\small
+\caption{Sampled diagnostics for the hidden-LR branches. Each seed has $95$ measurements at $1{,}000$-step intervals, including steps $6{,}000$ and $100{,}000$. Feature means cover the full operand grid. CE error is the relative $L_2$ error of the stock float32 training-logit derivative against the accurate float64 derivative at the same logits, expressed as a percentage. Maxima are over the sampled diagnostic states.}
+\label{tab:lr-reduction-diagnostics}
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Feature-mean norm} & \multicolumn{3}{c}{CE derivative error (\%)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Seed & Start & Final & Maximum & Start & Final & Maximum \\
+\midrule
+$0$ & $310.8$ & $292.6$ & $4{,}282.5$ & $1.440$ & $0.030$ & $38.558$ \\
+$1$ & $459.5$ & $505.3$ & $8{,}783.8$ & $1.500$ & $0.180$ & $46.273$ \\
+$2$ & $355.1$ & $1{,}096.5$ & $8{,}100.4$ & $0.967$ & $22.837$ & $36.585$ \\
+$3$ & $411.9$ & $955.8$ & $8{,}878.5$ & $2.228$ & $5.408$ & $48.431$ \\
+$4$ & $434.1$ & $445.1$ & $3{,}596.0$ & $1.748$ & $0.027$ & $63.645$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Every reduced-LR branch exhibits substantial feature-mean growth and loss-derivative error at sampled states (Table~\ref{tab:lr-reduction-diagnostics}). The accompanying artifacts retain training-set feature means, raw trajectories, checkpoint replays, and the detailed audits. We have not localized the parameter group responsible for these reduced-LR failures, so the evidence establishes joint failure without attributing it to the acute readout mechanism identified in the original branches. Ordinary learning-rate reduction also scales the decoupled weight-decay step: the hidden per-update decay factor changes from $1-0.03\times0.1=0.997$ to $1-0.003\times0.1=0.9997$. The tested tenfold reduction is therefore a stabilization control. It is insufficient to provide the stability achieved by corrected loss arithmetic for these five matched continuations through step $100{,}000$.

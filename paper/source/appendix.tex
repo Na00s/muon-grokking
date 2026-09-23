@@ -28,7 +28,7 @@ Varying the readout learning rate over $10^{-4}$, $2.5\times10^{-4}$, and $5\tim
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.7\textwidth]{figure2_quiet.pdf}
+\includegraphics[width=\textwidth]{figure2_quiet.pdf}
 \caption{Every-step measurements over $691$ updates before a collapse. \textbf{Top:} loss and gradient norms in the quiet window. \textbf{Middle:} gradient-driven applied steps and log--log slopes against the hidden gradient norm for Muon and the combined non-hidden norm for both AdamW groups. \textbf{Bottom:} hidden step and decay magnitudes differ by under $2\%$ at step $44{,}100$. Their vector sum is smaller and grows by $64\%$ from step $44{,}100$ to $44{,}700$ while the gradient-driven step changes little.}
 \label{fig:quiet}
 \end{figure}
@@ -69,7 +69,7 @@ The full-family accuracies above include the orbit average in Eq.~\ref{eq:orbit-
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.88\textwidth]{figure4_grid.pdf}
+\includegraphics[width=\textwidth]{figure4_grid.pdf}
 \caption{The twenty highest-power conjugate pairs of the final residual at converged checkpoints, on the mode grid, sized by share of non-constant power; grey lines mark $l=k$ and $l=-k$. AdamW places $80.1\%$ of non-constant power on a single pair of the family the task selects; Muon's strongest pair carries $7.9\%$, with the rest spread across the family and beyond it; ablating the normalized path returns the strongest pair to $58.9\%$. Between the addition and subtraction panels the occupied line moves from one diagonal to the other.}
 \label{fig:grid}
 \end{figure}
