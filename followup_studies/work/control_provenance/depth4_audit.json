@@ -1,0 +1,34 @@
+[
+  {
+    "arm": "control",
+    "source": "runs/depth4_matched_freeze_seed_0_from_126200_control.csv",
+    "sha256": "b1fca3fb79ffc6531ae1ba907ae58cca2844aa3639e6eddcdb00c4e3dd493815",
+    "all_rows": 1739,
+    "post_branch_evaluations": 1738,
+    "start_step": 126200,
+    "end_step": 300000,
+    "step_interval": [
+      100
+    ],
+    "below90": 1353,
+    "below95": 1503,
+    "mean_test_accuracy": 0.48069571614532297,
+    "final_test_accuracy": 0.3688332140445709
+  },
+  {
+    "arm": "freeze",
+    "source": "runs/depth4_matched_freeze_seed_0_from_126200_freeze.csv",
+    "sha256": "c1702362a7fb9307418abd16a4f28c04a3c430bcee3ab9778730128e7dfb9206",
+    "all_rows": 1739,
+    "post_branch_evaluations": 1738,
+    "start_step": 126200,
+    "end_step": 300000,
+    "step_interval": [
+      100
+    ],
+    "below90": 66,
+    "below95": 175,
+    "mean_test_accuracy": 0.9750186369183148,
+    "final_test_accuracy": 0.9887012243270874
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "recorded_at_utc": "2026-09-23T23:30:51.930814+00:00",
+  "execution": "Persistent OS session leaders parented to the Codex app-server PID73196; they are outside the transient functions.exec JavaScript isolate and remain live between agent turns. App-server or machine shutdown is outside that guarantee.",
+  "training": {
+    "session_id": 99130,
+    "supervisor_pid": 39762,
+    "worker_pids": {
+      "1": 39766,
+      "2": 39767,
+      "3": 39768,
+      "4": 39769
+    },
+    "command": "OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 /opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python work/rms_replication/launch_suite.py > work/rms_replication/launch.log 2>&1"
+  },
+  "event_analysis": {
+    "session_id": 56309,
+    "pid": 40287,
+    "command": "OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 /opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python work/rms_replication/watch_events.py > work/rms_replication/analysis_supervisor.log 2>&1"
+  },
+  "completion": {
+    "session_id": 24777,
+    "pid": 42379,
+    "command": "OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 /opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python work/rms_replication/finalize_when_complete.py > work/rms_replication/completion_supervisor.log 2>&1"
+  },
+  "verified_historical_analysis": "analyses/historical_seed0/",
+  "safety": "These are existing commands for provenance, not commands to rerun. Do not relaunch while live. launch.json and output-folder exclusive creation reject duplicate launch. Finalizer preserves raw source and writes a new canonical RMS directory only after verification.",
+  "completion_checks": [
+    "completion_status.json verified=true",
+    "verification.json complete=true",
+    "summary.json and report.md",
+    "event_summary.csv",
+    "run_summary.csv",
+    "parameter_swaps.csv",
+    "derivative_summary.csv",
+    "decoder_summary.csv",
+    "decoder_optimization.csv",
+    "checkpoint_manifest.json",
+    "canonical followup_studies/work/rms_replication copy exists"
+  ],
+  "failure_checks": [
+    "runs/seed*/interruption.json",
+    "runs/seed*_process_exit.json nonzero returncode",
+    "analysis_supervisor_completion.json analysis_returncode nonzero",
+    "completion_failure.json",
+    "completion_audit_0.log and completion_audit_1.log"
+  ],
+  "current_progress": {
+    "seed1": {
+      "step": 13400,
+      "train_correct": 3830,
+      "train_total": 3830,
+      "train_accuracy": 1.0,
+      "train_accurate_ce32": 5.561894431593828e-05,
+      "test_correct": 8939,
+      "test_total": 8939,
+      "test_accuracy": 1.0,
+      "test_accurate_ce32": 6.0059159295633435e-05,
+      "test_accurate_ce64": 6.00591584806415e-05,
+      "test_scheduled": true,
+      "grok_confirmed": true,
+      "grok_confirmation_step": 11500,
+      "joint_failure": false,
+      "elapsed_seconds": 1563.8929554589558
+    },
+    "seed2": {
+      "step": 13300,
+      "train_correct": 3830,
+      "train_total": 3830,
+      "train_accuracy": 1.0,
+      "train_accurate_ce32": 0.00011816371261375025,
+      "test_correct": 8939,
+      "test_total": 8939,
+      "test_accuracy": 1.0,
+      "test_accurate_ce32": 0.00013134842447470874,
+      "test_accurate_ce64": 0.0001313484157557481,
+      "test_scheduled": true,
+      "grok_confirmed": true,
+      "grok_confirmation_step": 12600,
+      "joint_failure": false,
+      "elapsed_seconds": 1556.2696076249704
+    },
+    "seed3": {
+      "step": 13300,
+      "train_correct": 3830,
+      "train_total": 3830,
+      "train_accuracy": 1.0,
+      "train_accurate_ce32": 0.0002313693257747218,
+      "test_correct": 8939,
+      "test_total": 8939,
+      "test_accuracy": 1.0,
+      "test_accurate_ce32": 0.0002454160712659359,
+      "test_accurate_ce64": 0.0002454160424352071,
+      "test_scheduled": true,
+      "grok_confirmed": true,
+      "grok_confirmation_step": 10000,
+      "joint_failure": false,
+      "elapsed_seconds": 1555.051962666912
+    },
+    "seed4": {
+      "step": 13400,
+      "train_correct": 3830,
+      "train_total": 3830,
+      "train_accuracy": 1.0,
+      "train_accurate_ce32": 0.00010930225835181773,
+      "test_correct": 8939,
+      "test_total": 8939,
+      "test_accuracy": 1.0,
+      "test_accurate_ce32": 0.0001227947504958138,
+      "test_accurate_ce64": 0.00012279475824401796,
+      "test_scheduled": true,
+      "grok_confirmed": true,
+      "grok_confirmation_step": 12600,
+      "joint_failure": false,
+      "elapsed_seconds": 1564.1232312910724
+    }
+  },
+  "publication_note": "Raw launch and prospective analysis provenance contain absolute local paths. Apply the established anonymization/export process before publishing reviewer artifacts."
+}

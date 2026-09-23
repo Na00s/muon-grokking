@@ -1,0 +1,4505 @@
+{
+  "schema_version": 1,
+  "scope": "Completed decoder controls, control/event/speed/feature-mean provenance, and accurate-CE RMS replication/localization.",
+  "historical_hash_policy": "Original protocol and audit hash strings are preserved. This correspondence identifies supplied bytes after anonymization and documented portability edits.",
+  "files": [
+    {
+      "study": "decoder_controls",
+      "path": "artifact_manifest.json",
+      "original_sha256": "6b90d845556ae86cc72b1396b10067604ce4d32a89faa146c88e4ac4c5ff30a6",
+      "supplied_sha256": "6b90d845556ae86cc72b1396b10067604ce4d32a89faa146c88e4ac4c5ff30a6",
+      "original_bytes": 9896,
+      "supplied_bytes": 9896,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "build_tables.py",
+      "original_sha256": "96cd1156b653864489297b579b8d85362cc22130c4c840f218d1f6f514c6cc2e",
+      "supplied_sha256": "96cd1156b653864489297b579b8d85362cc22130c4c840f218d1f6f514c6cc2e",
+      "original_bytes": 3914,
+      "supplied_bytes": 3914,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "completion.json",
+      "original_sha256": "d29ff14abb7bfefbc6926c1f7438fa93ac336fd7c99de194f54f980ca0c2f3ca",
+      "supplied_sha256": "d29ff14abb7bfefbc6926c1f7438fa93ac336fd7c99de194f54f980ca0c2f3ca",
+      "original_bytes": 807,
+      "supplied_bytes": 807,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "decoder_phase_controls_table.tex",
+      "original_sha256": "4e4a936f0de83bf7ab7967d4bf141b43ad832e1790b89e70f07f3d1ae12f58b8",
+      "supplied_sha256": "4e4a936f0de83bf7ab7967d4bf141b43ad832e1790b89e70f07f3d1ae12f58b8",
+      "original_bytes": 2067,
+      "supplied_bytes": 2067,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "execution_commands.md",
+      "original_sha256": "8d6abbd195ebc591357e5e660200e18a088c9dbf2ff1bfb483ab2c98d819945f",
+      "supplied_sha256": "80bf8f9a7039dcb00f10848413fa9ac667ab98c4fb19ecf75734c8984c170a72",
+      "original_bytes": 1242,
+      "supplied_bytes": 1187,
+      "changes": [
+        "Interpreter selected through portable python3 command and repository-relative script path"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "feature_mean_controls.json",
+      "original_sha256": "1dbab93609de340dd5ae476529b08bd718a2fe83fa1d481fd50ecc4a8dc752aa",
+      "supplied_sha256": "1dbab93609de340dd5ae476529b08bd718a2fe83fa1d481fd50ecc4a8dc752aa",
+      "original_bytes": 11141,
+      "supplied_bytes": 11141,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "integration_notes.md",
+      "original_sha256": "d964bad5b57e4923b1b37135c3c9c1716adb96c10d9c92cfb6fe70eac885172f",
+      "supplied_sha256": "d964bad5b57e4923b1b37135c3c9c1716adb96c10d9c92cfb6fe70eac885172f",
+      "original_bytes": 2147,
+      "supplied_bytes": 2147,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "protocol.json",
+      "original_sha256": "a574e7e63d372180be0cfed00ccca733e3dc7ca1e4fafa076695ff65b1bcfd9a",
+      "supplied_sha256": "a574e7e63d372180be0cfed00ccca733e3dc7ca1e4fafa076695ff65b1bcfd9a",
+      "original_bytes": 78631,
+      "supplied_bytes": 78631,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "protocol_amendment.json",
+      "original_sha256": "6dd184bb1a0a15db861da2d7f964eb015ee7d29f10acc996e181e40f63f6cba4",
+      "supplied_sha256": "6dd184bb1a0a15db861da2d7f964eb015ee7d29f10acc996e181e40f63f6cba4",
+      "original_bytes": 1126,
+      "supplied_bytes": 1126,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "protocol_initial_registration.json",
+      "original_sha256": "cc7170918a1f4a918e12401d801b387aae5f898d1e72ca1a0cbce74afd040de6",
+      "supplied_sha256": "cc7170918a1f4a918e12401d801b387aae5f898d1e72ca1a0cbce74afd040de6",
+      "original_bytes": 67859,
+      "supplied_bytes": 67859,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "remaining.log",
+      "original_sha256": "dbce76cd5e0ea4e976c09980bae2ba89d44af342d1628e77805a88b433d6f32c",
+      "supplied_sha256": "dbce76cd5e0ea4e976c09980bae2ba89d44af342d1628e77805a88b433d6f32c",
+      "original_bytes": 1826,
+      "supplied_bytes": 1826,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "report.md",
+      "original_sha256": "e35c15f287e131cf020f120b9a7c16811a42fd6453071f0d42d0c970236dd341",
+      "supplied_sha256": "e35c15f287e131cf020f120b9a7c16811a42fd6453071f0d42d0c970236dd341",
+      "original_bytes": 2987,
+      "supplied_bytes": 2987,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "run_controls.py",
+      "original_sha256": "fb94752213064f41a531015755368612a687f7e6dc5a83655d8bbe1c0b9c4c7a",
+      "supplied_sha256": "fb94752213064f41a531015755368612a687f7e6dc5a83655d8bbe1c0b9c4c7a",
+      "original_bytes": 20261,
+      "supplied_bytes": 20261,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "run_controls_initial_registration.py",
+      "original_sha256": "29c8ab774f99c22dba3c3b1f22b459f9e4c53682296cc296ff10241940bfa719",
+      "supplied_sha256": "29c8ab774f99c22dba3c3b1f22b459f9e4c53682296cc296ff10241940bfa719",
+      "original_bytes": 19484,
+      "supplied_bytes": 19484,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "run_remaining.sh",
+      "original_sha256": "4d4771fceb5bf6f45cb4ba66aa78c8b037892513873089b062f3fc2702386aa9",
+      "supplied_sha256": "759a59db7bf87a405c21951f2e99bf7bb9fa7babea71b8b19643b5c6b4d0a54a",
+      "original_bytes": 350,
+      "supplied_bytes": 276,
+      "changes": [
+        "Interpreter selected through portable python3 command and repository-relative script path"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/features.npz",
+      "original_sha256": "cb826f3cd080eb65ea5151e414a0952b82695d6d1e2b027d0400b6d5d30282c2",
+      "supplied_sha256": "cb826f3cd080eb65ea5151e414a0952b82695d6d1e2b027d0400b6d5d30282c2",
+      "original_bytes": 14275624,
+      "supplied_bytes": 14275624,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/initialization.pt",
+      "original_sha256": "fcdf7a79fe7ddf4a36903b053042e56e6c44e332b4a3b49bb607d185d850abb6",
+      "supplied_sha256": "79626321272a5c6abeb183af5b1f2309052229429be02209cb5d23071bfb407d",
+      "original_bytes": 914249,
+      "supplied_bytes": 913504,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/initialization_decoder.json",
+      "original_sha256": "a3bbc29124e0f8a5a94ac82cc16bbdc5c385b2dc11a9f7cb0ca2529aa1323dad",
+      "supplied_sha256": "a3bbc29124e0f8a5a94ac82cc16bbdc5c385b2dc11a9f7cb0ca2529aa1323dad",
+      "original_bytes": 90836,
+      "supplied_bytes": 90836,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/initialization_decoder.npz",
+      "original_sha256": "838d53f04b411ebebe2bbe7c10118ce10904d6f5b42b57818c48085b3e262af6",
+      "supplied_sha256": "838d53f04b411ebebe2bbe7c10118ce10904d6f5b42b57818c48085b3e262af6",
+      "original_bytes": 672121,
+      "supplied_bytes": 672121,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/memorization.pt",
+      "original_sha256": "d79128f9d5bfe8ab10a12a3db5776c76aeeaf591401f190ef82e34e73452dd49",
+      "supplied_sha256": "3c70c5f7002970b87fbbc7c2e6d01ec0d2a6e3df906a552bc7d551cc04b4bd16",
+      "original_bytes": 1940077,
+      "supplied_bytes": 1937948,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/memorization_decoder.json",
+      "original_sha256": "4c496c6b7ffe0a02be5fd4f4f15a8a3822a660d0da7715bbf6bd3031f25ae8e7",
+      "supplied_sha256": "4c496c6b7ffe0a02be5fd4f4f15a8a3822a660d0da7715bbf6bd3031f25ae8e7",
+      "original_bytes": 90621,
+      "supplied_bytes": 90621,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/memorization_decoder.npz",
+      "original_sha256": "b399b81455c3187fd4cf1e9afeb8f99eb3d9f1133ad7707ad127a986e048f956",
+      "supplied_sha256": "b399b81455c3187fd4cf1e9afeb8f99eb3d9f1133ad7707ad127a986e048f956",
+      "original_bytes": 668205,
+      "supplied_bytes": 668205,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/prepared.json",
+      "original_sha256": "15d510678d566a7306985b1c8ed026add186b2e617e000746321e72eb7c28d0b",
+      "supplied_sha256": "15d510678d566a7306985b1c8ed026add186b2e617e000746321e72eb7c28d0b",
+      "original_bytes": 7920,
+      "supplied_bytes": 7920,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/prepared_initial_registration.json",
+      "original_sha256": "f7f6d4f4f4d4e9494c26545cd08e2a4fabb13f477b16de077f1f6a88fea3a83b",
+      "supplied_sha256": "f7f6d4f4f4d4e9494c26545cd08e2a4fabb13f477b16de077f1f6a88fea3a83b",
+      "original_bytes": 7659,
+      "supplied_bytes": 7659,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/features.npz",
+      "original_sha256": "b6ac20c31ca6451613b531d724b5091256d164fb5f06b55435d151041e426d22",
+      "supplied_sha256": "b6ac20c31ca6451613b531d724b5091256d164fb5f06b55435d151041e426d22",
+      "original_bytes": 14251937,
+      "supplied_bytes": 14251937,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/initialization.pt",
+      "original_sha256": "0808c40ba047f326ad9c5978c4d6ad0e8f114ef79ee52cf35e61470477a8555f",
+      "supplied_sha256": "ef66b589e09be56c5e961a73da00a5e121f3ef69f46e9df311b629a21af2a8ec",
+      "original_bytes": 914757,
+      "supplied_bytes": 913624,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/initialization_decoder.json",
+      "original_sha256": "ec609cd02983cc27d1a0bb8657556f0a1758c9eaed0119dfb6f79120162aed89",
+      "supplied_sha256": "ec609cd02983cc27d1a0bb8657556f0a1758c9eaed0119dfb6f79120162aed89",
+      "original_bytes": 90878,
+      "supplied_bytes": 90878,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/initialization_decoder.npz",
+      "original_sha256": "5e24f12832b00a9636aa34dd6bbe7ec9d552b9d9b0aab1d43f848cd243984e22",
+      "supplied_sha256": "5e24f12832b00a9636aa34dd6bbe7ec9d552b9d9b0aab1d43f848cd243984e22",
+      "original_bytes": 671364,
+      "supplied_bytes": 671364,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/memorization.pt",
+      "original_sha256": "42b24ba54e13df2150e3d58594379ddddb97203775aa7fad83593545d93da7a0",
+      "supplied_sha256": "c66de74d205ceb39c1cae33a1e766e4d527d495ebd32b2b60efa0ad5ce2e4a91",
+      "original_bytes": 1940077,
+      "supplied_bytes": 1937949,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/memorization_decoder.json",
+      "original_sha256": "35178137d9875ec194cc9f2188f1f1f51df5e9cace35b4ab4b5f6043a0424200",
+      "supplied_sha256": "35178137d9875ec194cc9f2188f1f1f51df5e9cace35b4ab4b5f6043a0424200",
+      "original_bytes": 90625,
+      "supplied_bytes": 90625,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/memorization_decoder.npz",
+      "original_sha256": "34c342a88e88ee0df953f0f7ff7bbdbc51740eb449a32ce13e1e7db22d630ced",
+      "supplied_sha256": "34c342a88e88ee0df953f0f7ff7bbdbc51740eb449a32ce13e1e7db22d630ced",
+      "original_bytes": 667763,
+      "supplied_bytes": 667763,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/prepared.json",
+      "original_sha256": "621aad92d713e80c02780d9cdbe5432f07e1ae39c796d47bf7386a50a37e0b81",
+      "supplied_sha256": "621aad92d713e80c02780d9cdbe5432f07e1ae39c796d47bf7386a50a37e0b81",
+      "original_bytes": 7664,
+      "supplied_bytes": 7664,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/features.npz",
+      "original_sha256": "8fcb76916cb9bcc771606b570d5a08646f36146102152d742e6184e9a5d2a361",
+      "supplied_sha256": "8fcb76916cb9bcc771606b570d5a08646f36146102152d742e6184e9a5d2a361",
+      "original_bytes": 14294585,
+      "supplied_bytes": 14294585,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/initialization.pt",
+      "original_sha256": "d3bf3c7ed3e4be8769690df8af688ab01b1d1b1fa1bfd97f1b4cacb737ce064a",
+      "supplied_sha256": "db9cb6c094745016ba8dc2a933cb561dddd1eada9945e7b0eb064293d74cab1f",
+      "original_bytes": 914757,
+      "supplied_bytes": 913624,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/initialization_decoder.json",
+      "original_sha256": "40e3694e7d2d5eaabbf1fd9d5049574bdce4b95a6f2b57d6bb438fa1f08c01b3",
+      "supplied_sha256": "40e3694e7d2d5eaabbf1fd9d5049574bdce4b95a6f2b57d6bb438fa1f08c01b3",
+      "original_bytes": 90805,
+      "supplied_bytes": 90805,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/initialization_decoder.npz",
+      "original_sha256": "e916ac23cce55902ba50f7b8c9f81a22bad50d593f9f4b02d15f9d6a1b140067",
+      "supplied_sha256": "e916ac23cce55902ba50f7b8c9f81a22bad50d593f9f4b02d15f9d6a1b140067",
+      "original_bytes": 672003,
+      "supplied_bytes": 672003,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/memorization.pt",
+      "original_sha256": "8ee7452619a99687c9d1275616192e028fc94d51eb0c89d63fa70861a840d835",
+      "supplied_sha256": "daa5e4f7398a4ff3422ffa463fd0f674c7ec4a0f01b82ea66d9c0a721b361e5f",
+      "original_bytes": 1940077,
+      "supplied_bytes": 1937948,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/memorization_decoder.json",
+      "original_sha256": "4fcb795d00384c636c719fe9e359e4866b16218f81f556050163193caf74f199",
+      "supplied_sha256": "4fcb795d00384c636c719fe9e359e4866b16218f81f556050163193caf74f199",
+      "original_bytes": 90600,
+      "supplied_bytes": 90600,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/memorization_decoder.npz",
+      "original_sha256": "c12d437b36442182f083aacb9c9a8da1cd4505fd751ec8b8d180ab54dd333526",
+      "supplied_sha256": "c12d437b36442182f083aacb9c9a8da1cd4505fd751ec8b8d180ab54dd333526",
+      "original_bytes": 667651,
+      "supplied_bytes": 667651,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/prepared.json",
+      "original_sha256": "0bb50105bfc0311b7fcf6bed24316871976fb6d6d047129db0d45d45a72bf1c3",
+      "supplied_sha256": "0bb50105bfc0311b7fcf6bed24316871976fb6d6d047129db0d45d45a72bf1c3",
+      "original_bytes": 7621,
+      "supplied_bytes": 7621,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/features.npz",
+      "original_sha256": "2129b115c67386e279809d4a427e11cf98142610d0c9b23babb71a9c63097d64",
+      "supplied_sha256": "2129b115c67386e279809d4a427e11cf98142610d0c9b23babb71a9c63097d64",
+      "original_bytes": 14273198,
+      "supplied_bytes": 14273198,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/initialization.pt",
+      "original_sha256": "c0561962b231224664edb15711231b4666d7d4e80a9e19bc45d0a0fe7529f2b2",
+      "supplied_sha256": "8ee67dee672e95ff6c69403c9a3bedcc353b8123d2c3825ad4c33f44ab70bbdc",
+      "original_bytes": 914757,
+      "supplied_bytes": 913624,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/initialization_decoder.json",
+      "original_sha256": "188f5aa47c44a9ad2887b06c6ae2f6a60cb624a5d90a43ed64a368548e4542ce",
+      "supplied_sha256": "188f5aa47c44a9ad2887b06c6ae2f6a60cb624a5d90a43ed64a368548e4542ce",
+      "original_bytes": 90771,
+      "supplied_bytes": 90771,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/initialization_decoder.npz",
+      "original_sha256": "4b63971c25d1dff04726eae0ee1fc9cbe7046e37570819258c28ffca8d0863e2",
+      "supplied_sha256": "4b63971c25d1dff04726eae0ee1fc9cbe7046e37570819258c28ffca8d0863e2",
+      "original_bytes": 671873,
+      "supplied_bytes": 671873,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/memorization.pt",
+      "original_sha256": "0c5c9ba7c2dc5511e41a37e2daefbd88961a27eedc2bcda6c8851979d32bae58",
+      "supplied_sha256": "f5775aee14f9bb16061c673a81d26fe45da50ca83463c047d35eef28378f4331",
+      "original_bytes": 1940077,
+      "supplied_bytes": 1937948,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/memorization_decoder.json",
+      "original_sha256": "15dc2f784a328a5117cef5668072dcfb8017368e608510b0f5512304daa186d4",
+      "supplied_sha256": "15dc2f784a328a5117cef5668072dcfb8017368e608510b0f5512304daa186d4",
+      "original_bytes": 90577,
+      "supplied_bytes": 90577,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/memorization_decoder.npz",
+      "original_sha256": "640bb55e4360c19e24f8030923aad5edcbc408ae92b6375eba189867eb34208a",
+      "supplied_sha256": "640bb55e4360c19e24f8030923aad5edcbc408ae92b6375eba189867eb34208a",
+      "original_bytes": 667995,
+      "supplied_bytes": 667995,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/prepared.json",
+      "original_sha256": "73bc8b16bb25268ad8db983a2da550809860e75fa14419f030417c48387a1cf4",
+      "supplied_sha256": "73bc8b16bb25268ad8db983a2da550809860e75fa14419f030417c48387a1cf4",
+      "original_bytes": 7639,
+      "supplied_bytes": 7639,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/features.npz",
+      "original_sha256": "e2d16c332bb6132dd8c957d6f20d0f798bc874f8841fe3bd87b30c01a9e0efcf",
+      "supplied_sha256": "e2d16c332bb6132dd8c957d6f20d0f798bc874f8841fe3bd87b30c01a9e0efcf",
+      "original_bytes": 14244031,
+      "supplied_bytes": 14244031,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/initialization.pt",
+      "original_sha256": "9078a65d4f3dfc582ded8cf51325ef0905c779c98914eaa594c66da8151b4551",
+      "supplied_sha256": "a3c80cac5daf0d593825b2b2b8f0dd66d779231dbb66402892830c176e2c4201",
+      "original_bytes": 914249,
+      "supplied_bytes": 913504,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/initialization_decoder.json",
+      "original_sha256": "6baf9d4e79e2b8ac3517c158f0c71384efbd537cdbb7e53e83de64cc1ea38d34",
+      "supplied_sha256": "6baf9d4e79e2b8ac3517c158f0c71384efbd537cdbb7e53e83de64cc1ea38d34",
+      "original_bytes": 90787,
+      "supplied_bytes": 90787,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/initialization_decoder.npz",
+      "original_sha256": "84467b70735f825f12edf8f7115bf7d0d6cbcab15629a878b1da7179e0a51e2d",
+      "supplied_sha256": "84467b70735f825f12edf8f7115bf7d0d6cbcab15629a878b1da7179e0a51e2d",
+      "original_bytes": 672376,
+      "supplied_bytes": 672376,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/memorization.pt",
+      "original_sha256": "f1b03ca8774864915648cda7f46a24d230623848c0a2bc906d1b3b9cd250394e",
+      "supplied_sha256": "6377960402e7a74dba2e4d9163ce7c5326fa5c6d8d7fd50069c57d819436f58d",
+      "original_bytes": 1940077,
+      "supplied_bytes": 1937948,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/memorization_decoder.json",
+      "original_sha256": "07dbf58f7f5bcf044b2ec8fb13deed0f86fd94f968536dc8c82e1bd852d279ec",
+      "supplied_sha256": "07dbf58f7f5bcf044b2ec8fb13deed0f86fd94f968536dc8c82e1bd852d279ec",
+      "original_bytes": 90592,
+      "supplied_bytes": 90592,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/memorization_decoder.npz",
+      "original_sha256": "87458b0222f65038616cf7f4c49b759dcbf06936b79defc749604a01e144a8da",
+      "supplied_sha256": "87458b0222f65038616cf7f4c49b759dcbf06936b79defc749604a01e144a8da",
+      "original_bytes": 667740,
+      "supplied_bytes": 667740,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/prepared.json",
+      "original_sha256": "aff57d61ddfc205ad022471e5f73dda74b62d46dfa9456d97aec355f869a7bf2",
+      "supplied_sha256": "aff57d61ddfc205ad022471e5f73dda74b62d46dfa9456d97aec355f869a7bf2",
+      "original_bytes": 7640,
+      "supplied_bytes": 7640,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "source_manifest.json",
+      "original_sha256": "efe56b5cb753cf3705e81df1e1e4c4c891c1895e3a266e68cf767baddbb93717",
+      "supplied_sha256": "efe56b5cb753cf3705e81df1e1e4c4c891c1895e3a266e68cf767baddbb93717",
+      "original_bytes": 1238,
+      "supplied_bytes": 1238,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "stage_summary.json",
+      "original_sha256": "50b9ade8df238f63ffa03fdfaf12962dae46826c20522ffc89c0bd4dca18bdc5",
+      "supplied_sha256": "50b9ade8df238f63ffa03fdfaf12962dae46826c20522ffc89c0bd4dca18bdc5",
+      "original_bytes": 849,
+      "supplied_bytes": 849,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "summary.csv",
+      "original_sha256": "d1549865d53f2c5596696601a53a5d3ff84985731e87d0cf483cc548cd76ccb8",
+      "supplied_sha256": "d1549865d53f2c5596696601a53a5d3ff84985731e87d0cf483cc548cd76ccb8",
+      "original_bytes": 4680,
+      "supplied_bytes": 4680,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "summary.json",
+      "original_sha256": "00f40c48b49abff921a144535f060624d2c840fac55d30af2c79643927bc9503",
+      "supplied_sha256": "00f40c48b49abff921a144535f060624d2c840fac55d30af2c79643927bc9503",
+      "original_bytes": 16884,
+      "supplied_bytes": 16884,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "verification.json",
+      "original_sha256": "a46d103bab4801d65995a1514aba5c43bcc4facfd771543b649e5e89305a6d5f",
+      "supplied_sha256": "a46d103bab4801d65995a1514aba5c43bcc4facfd771543b649e5e89305a6d5f",
+      "original_bytes": 13149,
+      "supplied_bytes": 13149,
+      "changes": []
+    },
+    {
+      "study": "decoder_controls",
+      "path": "verify_controls.py",
+      "original_sha256": "7ffe7c63739454d9616a6c528b02bce1358059f16d8e083b3695a821fe2d7ad4",
+      "supplied_sha256": "7ffe7c63739454d9616a6c528b02bce1358059f16d8e083b3695a821fe2d7ad4",
+      "original_bytes": 4366,
+      "supplied_bytes": 4366,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "audit_records.py",
+      "original_sha256": "f328dcf7661fcc5751863ab4f233e064d1f320b0c67db5d68a69276f6e2f8daa",
+      "supplied_sha256": "20458654f9edd16d9dcceb0f70960f264071c935d62d34ba2bccdc558165a449",
+      "original_bytes": 6092,
+      "supplied_bytes": 6080,
+      "changes": [
+        "MUON_SOURCE_REPO fallback resolves reviewer repository root"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "build_feature_mean_timeline.py",
+      "original_sha256": "65ca9d226b4d98f167daba28818cf17851d15af9d6d703ecacf93a525331488d",
+      "supplied_sha256": "75b746ad06bf018527ded9eb69bf6bbc65d460abc7bad2c19171480f43b749a0",
+      "original_bytes": 6960,
+      "supplied_bytes": 6948,
+      "changes": [
+        "MUON_SOURCE_REPO fallback resolves reviewer repository root"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "chance_notation_audit.json",
+      "original_sha256": "6c50d0e0fb3eb23fe817c7473e70164643ef36690d31fb227cb33ed554ca5b66",
+      "supplied_sha256": "6c50d0e0fb3eb23fe817c7473e70164643ef36690d31fb227cb33ed554ca5b66",
+      "original_bytes": 2982,
+      "supplied_bytes": 2982,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "delivery_manifest.json",
+      "original_sha256": "7ea7e2fdda4250d54ccf376e5f427c6c11bc66a6254b3e9aa70713bb7126dcd4",
+      "supplied_sha256": "7ea7e2fdda4250d54ccf376e5f427c6c11bc66a6254b3e9aa70713bb7126dcd4",
+      "original_bytes": 2734,
+      "supplied_bytes": 2734,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "depth4_audit.json",
+      "original_sha256": "8db9c55bfc542709a2f3426e28a98212a96b70839fa03991f1e0f9717fa1a32b",
+      "supplied_sha256": "8db9c55bfc542709a2f3426e28a98212a96b70839fa03991f1e0f9717fa1a32b",
+      "original_bytes": 941,
+      "supplied_bytes": 941,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_events.csv",
+      "original_sha256": "585fe78d816fc9304d2adace815961d71a3e3a9c1bdbaa75b7dc60f5478a74c0",
+      "supplied_sha256": "585fe78d816fc9304d2adace815961d71a3e3a9c1bdbaa75b7dc60f5478a74c0",
+      "original_bytes": 1996,
+      "supplied_bytes": 1996,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_timeline.csv",
+      "original_sha256": "da6de38b91f047b9a606529be9433c11b979638d000ad60e2d161a6e3be5e96b",
+      "supplied_sha256": "da6de38b91f047b9a606529be9433c11b979638d000ad60e2d161a6e3be5e96b",
+      "original_bytes": 32408,
+      "supplied_bytes": 32408,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_timeline.pdf",
+      "original_sha256": "c822a76073838059d2f1422bd4d6e1d8c2a044aa3244f635e2e354934ab6a73f",
+      "supplied_sha256": "c822a76073838059d2f1422bd4d6e1d8c2a044aa3244f635e2e354934ab6a73f",
+      "original_bytes": 29339,
+      "supplied_bytes": 29339,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_timeline.png",
+      "original_sha256": "21df8d5e1f3831c9a2d73b2ffdff5ef5c7c20839ef96cc973436c30e89386614",
+      "supplied_sha256": "21df8d5e1f3831c9a2d73b2ffdff5ef5c7c20839ef96cc973436c30e89386614",
+      "original_bytes": 132760,
+      "supplied_bytes": 132760,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_timeline_manifest.json",
+      "original_sha256": "caf0c65559e59d819e7f49500e6527f69a1e6cd2b4b0ff22f07c842cb2b9d2cd",
+      "supplied_sha256": "caf0c65559e59d819e7f49500e6527f69a1e6cd2b4b0ff22f07c842cb2b9d2cd",
+      "original_bytes": 3209,
+      "supplied_bytes": 3209,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_verification.json",
+      "original_sha256": "3a90f3bfbb597cb346c51f26c728077d056989fc40dd0471530a643effc3bec1",
+      "supplied_sha256": "3a90f3bfbb597cb346c51f26c728077d056989fc40dd0471530a643effc3bec1",
+      "original_bytes": 738,
+      "supplied_bytes": 738,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "historical_branch_collapse.py",
+      "original_sha256": "06901411749f5e8582cbd382c750fbb8211c58fdd48f3bac775a68468576cffe",
+      "supplied_sha256": "06901411749f5e8582cbd382c750fbb8211c58fdd48f3bac775a68468576cffe",
+      "original_bytes": 19668,
+      "supplied_bytes": 19668,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "historical_controls.json",
+      "original_sha256": "9993d4aa5f5053e89a14000fc200d623d724f2cab4e4afc53c138542840c942f",
+      "supplied_sha256": "9993d4aa5f5053e89a14000fc200d623d724f2cab4e4afc53c138542840c942f",
+      "original_bytes": 6800,
+      "supplied_bytes": 6800,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_launcher.log",
+      "original_sha256": "62866b35150f33b38793c6a73156f5795a30b52afeb1fee0de7192c8ce0ce8fe",
+      "supplied_sha256": "62866b35150f33b38793c6a73156f5795a30b52afeb1fee0de7192c8ce0ce8fe",
+      "original_bytes": 860,
+      "supplied_bytes": 860,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_protocol.json",
+      "original_sha256": "60ab351717978c0cb706151988d96458c3c0f5152a90b9d1b7628b2fe5c6e337",
+      "supplied_sha256": "60ab351717978c0cb706151988d96458c3c0f5152a90b9d1b7628b2fe5c6e337",
+      "original_bytes": 973,
+      "supplied_bytes": 973,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/checkpoints/step_016000.pt",
+      "original_sha256": "1fa2d7e32bb612db3d19d89c3fa8b4553670a2227884639a615d90a64f2b3e0f",
+      "supplied_sha256": "ea443586370fb05267b26d3097379f544443b270f19d1150c036695cd1a78a47",
+      "original_bytes": 1934416,
+      "supplied_bytes": 1932332,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/checkpoints/step_018000.pt",
+      "original_sha256": "c6225452c21ace26adc5e178b3da58f2cf5873cdfdda9aab8149f89d4149e05d",
+      "supplied_sha256": "1d31d5dc60e18ccc79fbf1a007cc3ebffab3cbd57ed08c8ca8c4905b2e474bad",
+      "original_bytes": 1934416,
+      "supplied_bytes": 1932333,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/rng_final.pt",
+      "original_sha256": "ab721a864555c493a43a95608800e18234dfe241088a0f3cf8383c4a7850a458",
+      "supplied_sha256": "8b5e2fb8dea87100f2dded556c3921053c3d31aa6e00d34869a155d692bb6f84",
+      "original_bytes": 6647,
+      "supplied_bytes": 6142,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/run.log",
+      "original_sha256": "9b7ea822293791b14f75cdd6e7a012877ef64d0b40524f7c11d0800bbcd1272a",
+      "supplied_sha256": "4092d0c1d993e073343e8f27d3a4b6dfe99383be045f610fe957732c50636ef5",
+      "original_bytes": 25249,
+      "supplied_bytes": 25137,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/trajectory.csv",
+      "original_sha256": "e54ad97195a84d2d21219d851c090d9c37536eb696195caadb5146637da2e689",
+      "supplied_sha256": "e54ad97195a84d2d21219d851c090d9c37536eb696195caadb5146637da2e689",
+      "original_bytes": 65928,
+      "supplied_bytes": 65928,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/checkpoints/step_016000.pt",
+      "original_sha256": "9cb6bb1a4725592de307e521aa39b4c20014bd88a6c9a6622c988d24965ced00",
+      "supplied_sha256": "f976ea4582f69424b5e0db6d88f4fcbb9c41f8ae85b2db0015b06ee0cc3751a1",
+      "original_bytes": 1934416,
+      "supplied_bytes": 1932312,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/checkpoints/step_018000.pt",
+      "original_sha256": "6c2f8d20c8579d46d7bfebe200c6df1cf460897cff211e21e185e196ead874a4",
+      "supplied_sha256": "162466b3b270bb585b4789d8ae2a6b895540fa0c0dfde6fd6932cf394896466c",
+      "original_bytes": 1934416,
+      "supplied_bytes": 1932313,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/rng_final.pt",
+      "original_sha256": "ab721a864555c493a43a95608800e18234dfe241088a0f3cf8383c4a7850a458",
+      "supplied_sha256": "8b5e2fb8dea87100f2dded556c3921053c3d31aa6e00d34869a155d692bb6f84",
+      "original_bytes": 6647,
+      "supplied_bytes": 6142,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/run.log",
+      "original_sha256": "ded5bdffaa06327b4bf8b52508b0ba3859c7e3e4af5f5a41d73fca068f908f5d",
+      "supplied_sha256": "19e6dd80c043f0b9bea724eec9f59c2e408457aa911c3c6f8c9d512832917979",
+      "original_bytes": 19074,
+      "supplied_bytes": 18962,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/trajectory.csv",
+      "original_sha256": "eacb9b03247601e7d601957185070c7c5f0a4d97daf8fe7d0f72725e0bc26570",
+      "supplied_sha256": "eacb9b03247601e7d601957185070c7c5f0a4d97daf8fe7d0f72725e0bc26570",
+      "original_bytes": 41962,
+      "supplied_bytes": 41962,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/checkpoints/step_016000.pt",
+      "original_sha256": "9cb6bb1a4725592de307e521aa39b4c20014bd88a6c9a6622c988d24965ced00",
+      "supplied_sha256": "f976ea4582f69424b5e0db6d88f4fcbb9c41f8ae85b2db0015b06ee0cc3751a1",
+      "original_bytes": 1934416,
+      "supplied_bytes": 1932312,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/checkpoints/step_018000.pt",
+      "original_sha256": "6c2f8d20c8579d46d7bfebe200c6df1cf460897cff211e21e185e196ead874a4",
+      "supplied_sha256": "162466b3b270bb585b4789d8ae2a6b895540fa0c0dfde6fd6932cf394896466c",
+      "original_bytes": 1934416,
+      "supplied_bytes": 1932313,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/rng_final.pt",
+      "original_sha256": "ab721a864555c493a43a95608800e18234dfe241088a0f3cf8383c4a7850a458",
+      "supplied_sha256": "8b5e2fb8dea87100f2dded556c3921053c3d31aa6e00d34869a155d692bb6f84",
+      "original_bytes": 6647,
+      "supplied_bytes": 6142,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/run.log",
+      "original_sha256": "eb19c269942dd02f6b52f7996df5bb082b27d006877c6bb6681a0c0f171670a2",
+      "supplied_sha256": "af25016a075c6e54961d322f31fd8c7b57dab08883c0a22bdf1aa3eac8a6e573",
+      "original_bytes": 19226,
+      "supplied_bytes": 19114,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/trajectory.csv",
+      "original_sha256": "93e44db036ea63c2934a711b2f8fccbd5df2ab3edbfee9cfd846c089d90259f9",
+      "supplied_sha256": "93e44db036ea63c2934a711b2f8fccbd5df2ab3edbfee9cfd846c089d90259f9",
+      "original_bytes": 104570,
+      "supplied_bytes": 104570,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_source.pt",
+      "original_sha256": "19e4ca27e77fc147a6d36940b62e4ffaf573311103085d27052515922eca487a",
+      "supplied_sha256": "985cc5c86ede8b6f99e8d1a0842f25b04903edcb6ac6aa94ea0135ec7887040c",
+      "original_bytes": 1939721,
+      "supplied_bytes": 1937645,
+      "changes": [
+        "Provenance string and ZIP metadata sanitization; tensor storage bytes unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_verification.json",
+      "original_sha256": "a32c0885cd83d559f2f20d6669f0adf7f769a67e0105b7d5bc1e954095f31f01",
+      "supplied_sha256": "a32c0885cd83d559f2f20d6669f0adf7f769a67e0105b7d5bc1e954095f31f01",
+      "original_bytes": 2515,
+      "supplied_bytes": 2515,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "replay_control_implementations.py",
+      "original_sha256": "b72182f569252944dc700160a8a308e59771f2907573ee41d67da4a396e1d898",
+      "supplied_sha256": "697345fff43bbd578101f4e13cd8ba7570cfb34abc83968cc13232e0a55eb512",
+      "original_bytes": 5796,
+      "supplied_bytes": 5831,
+      "changes": [
+        "MUON_SOURCE_REPO override and reviewer-root fallback added; scientific code unchanged"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "report.md",
+      "original_sha256": "8af06301a551f56421c2ef9786b9faadabe3b032e704b3b91643a3f44320ae55",
+      "supplied_sha256": "8727d283b2c867c1b0d3108ab143224274357f8576118608d70983b7bfd61f47",
+      "original_bytes": 15490,
+      "supplied_bytes": 15509,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "source_manifest.json",
+      "original_sha256": "e5ccf113057e55bedd5ce3009f60abf78de3ebbb4f3bdc4bc6a6f21b3bd0a068",
+      "supplied_sha256": "f84ac5373739ae1d21e65173b397fbd0bd1fd6836ba39a3855a7ad4d43a97fa7",
+      "original_bytes": 2284,
+      "supplied_bytes": 2270,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "control_provenance",
+      "path": "speed_audit.json",
+      "original_sha256": "7482cb119ecd1b4568c9722ead23ae1619da153559eec56f31d7d929c3d2d3b5",
+      "supplied_sha256": "7482cb119ecd1b4568c9722ead23ae1619da153559eec56f31d7d929c3d2d3b5",
+      "original_bytes": 2939,
+      "supplied_bytes": 2939,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "status.json",
+      "original_sha256": "538090c727e18588f10bf9ae6b82d2e8926cd969fd17607ac735e62cd852650a",
+      "supplied_sha256": "538090c727e18588f10bf9ae6b82d2e8926cd969fd17607ac735e62cd852650a",
+      "original_bytes": 778,
+      "supplied_bytes": 778,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "verify_feature_mean_timeline.py",
+      "original_sha256": "748b14d668361bc8e842cb780d16053139784808e8e96e33259d45b06100cc33",
+      "supplied_sha256": "f22af3a3cbca83094d9b5988eaded93fc5f5b0c92b6c80d562ca948cb6be23ab",
+      "original_bytes": 2561,
+      "supplied_bytes": 2549,
+      "changes": [
+        "MUON_SOURCE_REPO fallback resolves reviewer repository root"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "README.md",
+      "original_sha256": "5be16dbf830a07cd1b85be10f1d81ae6ca974da140555fcdb86d5fbd15b1b718",
+      "supplied_sha256": "5be16dbf830a07cd1b85be10f1d81ae6ca974da140555fcdb86d5fbd15b1b718",
+      "original_bytes": 1829,
+      "supplied_bytes": 1829,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/analysis_protocol.json",
+      "original_sha256": "2b2e97116bd2834e8a4e9a8ab24dd2cb1b5d9cf5bcfa2d930a11c4f6964b2003",
+      "supplied_sha256": "2b2e97116bd2834e8a4e9a8ab24dd2cb1b5d9cf5bcfa2d930a11c4f6964b2003",
+      "original_bytes": 42301,
+      "supplied_bytes": 42301,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/artifact_manifest.json",
+      "original_sha256": "44e253f8dcbd19d769c265c19006e689703be1ad6ba655708499b60008b95476",
+      "supplied_sha256": "44e253f8dcbd19d769c265c19006e689703be1ad6ba655708499b60008b95476",
+      "original_bytes": 1787,
+      "supplied_bytes": 1787,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/completion.json",
+      "original_sha256": "1cd67b92bbe97552f8a6fda30b6b1c5a1c96cd209d8e43b9a90af86f83926723",
+      "supplied_sha256": "1cd67b92bbe97552f8a6fda30b6b1c5a1c96cd209d8e43b9a90af86f83926723",
+      "original_bytes": 110,
+      "supplied_bytes": 110,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/decoder_features.npz",
+      "original_sha256": "23a57e060f221884dd58886ecccc4476bc5ebea7f2c60bf703fccf03c7c5b9a7",
+      "supplied_sha256": "23a57e060f221884dd58886ecccc4476bc5ebea7f2c60bf703fccf03c7c5b9a7",
+      "original_bytes": 12171648,
+      "supplied_bytes": 12171648,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/decoder_weights.npz",
+      "original_sha256": "10768561bdd2d447d214c3946d35613fc44fc73591a1bba39e5441644ee6fee1",
+      "supplied_sha256": "10768561bdd2d447d214c3946d35613fc44fc73591a1bba39e5441644ee6fee1",
+      "original_bytes": 1341198,
+      "supplied_bytes": 1341198,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/decoders.json",
+      "original_sha256": "3728791c59f12182489c9854abc65a9939ae2749aca5b7b30a6179288846ed91",
+      "supplied_sha256": "3728791c59f12182489c9854abc65a9939ae2749aca5b7b30a6179288846ed91",
+      "original_bytes": 193761,
+      "supplied_bytes": 193761,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/failed_derivative.json",
+      "original_sha256": "ef9b45fc1c3b6f3dadc2d28b945b4988cde0d256653fba33bda62245db30e6c9",
+      "supplied_sha256": "ef9b45fc1c3b6f3dadc2d28b945b4988cde0d256653fba33bda62245db30e6c9",
+      "original_bytes": 942,
+      "supplied_bytes": 942,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/failed_derivative_arrays.npz",
+      "original_sha256": "e7e9acf7e98a1fc57838e8d1e13404453d9a20cee60dd86f5287545d154a4cbb",
+      "supplied_sha256": "e7e9acf7e98a1fc57838e8d1e13404453d9a20cee60dd86f5287545d154a4cbb",
+      "original_bytes": 6502321,
+      "supplied_bytes": 6502321,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/feature_extraction_verification.json",
+      "original_sha256": "a39964d18c051a4a80cd2276c2ac0b8eafb491bb49ed4530be073067fa5f3152",
+      "supplied_sha256": "a39964d18c051a4a80cd2276c2ac0b8eafb491bb49ed4530be073067fa5f3152",
+      "original_bytes": 617,
+      "supplied_bytes": 617,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/parameter_swaps.json",
+      "original_sha256": "6cc7d46ebbc1744c2ac1e16aafc3e3cd96af4321ffb9db1438ff2f90f2b48c10",
+      "supplied_sha256": "6cc7d46ebbc1744c2ac1e16aafc3e3cd96af4321ffb9db1438ff2f90f2b48c10",
+      "original_bytes": 5745,
+      "supplied_bytes": 5745,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/previous_derivative.json",
+      "original_sha256": "531488b8636142f3b80bdd57fbd2ca7bcd832c121eee3132d54aae93964d1ad1",
+      "supplied_sha256": "531488b8636142f3b80bdd57fbd2ca7bcd832c121eee3132d54aae93964d1ad1",
+      "original_bytes": 950,
+      "supplied_bytes": 950,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/previous_derivative_arrays.npz",
+      "original_sha256": "0736d098f89da87211b5908ded904fc4a0816f196cb4779b1937bea42dc11520",
+      "supplied_sha256": "0736d098f89da87211b5908ded904fc4a0816f196cb4779b1937bea42dc11520",
+      "original_bytes": 6487520,
+      "supplied_bytes": 6487520,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/replay_verification.json",
+      "original_sha256": "1ed00b6938cde4d0e4304953a36d79e1cf788fb5831372a3d4ae4382242c3b15",
+      "supplied_sha256": "1ed00b6938cde4d0e4304953a36d79e1cf788fb5831372a3d4ae4382242c3b15",
+      "original_bytes": 2984,
+      "supplied_bytes": 2984,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/summary.json",
+      "original_sha256": "5353a239eb3f3989ddedab86d209fb8c54c392d7b5998390fe7c45c566d0ed1f",
+      "supplied_sha256": "5353a239eb3f3989ddedab86d209fb8c54c392d7b5998390fe7c45c566d0ed1f",
+      "original_bytes": 13947,
+      "supplied_bytes": 13947,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/analysis_protocol.json",
+      "original_sha256": "1a1bfffa2e40b0f3508984f36ef88b43e17c1cdd7f09856c6154fd23e7705753",
+      "supplied_sha256": "d8470af2b88e3554a0635240f54df5350d570bc613c32e7e000254b4d895dea8",
+      "original_bytes": 42394,
+      "supplied_bytes": 42338,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/artifact_manifest.json",
+      "original_sha256": "97f6fa2589748a314257e1487fe08a09d307531a0d37627d68aaebb608799a26",
+      "supplied_sha256": "97f6fa2589748a314257e1487fe08a09d307531a0d37627d68aaebb608799a26",
+      "original_bytes": 1787,
+      "supplied_bytes": 1787,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/completion.json",
+      "original_sha256": "5a46b6e50e05a6e07d09bc6b74ac46c29c1dfb95372c1bec1115f8a0a1c3f6fb",
+      "supplied_sha256": "5a46b6e50e05a6e07d09bc6b74ac46c29c1dfb95372c1bec1115f8a0a1c3f6fb",
+      "original_bytes": 106,
+      "supplied_bytes": 106,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/decoder_features.npz",
+      "original_sha256": "dbbb4eb823b85dd0a02bf460ef8edd40b2b7711096a8af002ab42c7523cfa03d",
+      "supplied_sha256": "dbbb4eb823b85dd0a02bf460ef8edd40b2b7711096a8af002ab42c7523cfa03d",
+      "original_bytes": 12097710,
+      "supplied_bytes": 12097710,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/decoder_weights.npz",
+      "original_sha256": "805a6b9e80a4d6cc42373bf3009f57296d82ec1695c0e9567d61482e41166d3a",
+      "supplied_sha256": "805a6b9e80a4d6cc42373bf3009f57296d82ec1695c0e9567d61482e41166d3a",
+      "original_bytes": 1337467,
+      "supplied_bytes": 1337467,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/decoders.json",
+      "original_sha256": "f3cd44ab3e363370e5d94b19b4fc859d80b1b0fb15c3635a895ae53e6d22b05b",
+      "supplied_sha256": "f3cd44ab3e363370e5d94b19b4fc859d80b1b0fb15c3635a895ae53e6d22b05b",
+      "original_bytes": 193699,
+      "supplied_bytes": 193699,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/failed_derivative.json",
+      "original_sha256": "2eea354a4291cd36ca507f7b46e626751ba364fb7992c0a5dd19c23340cce3cb",
+      "supplied_sha256": "2eea354a4291cd36ca507f7b46e626751ba364fb7992c0a5dd19c23340cce3cb",
+      "original_bytes": 945,
+      "supplied_bytes": 945,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/failed_derivative_arrays.npz",
+      "original_sha256": "aaba90f9274cfd707f0706b24a76a3002191279d7b68a9b0d9bb88a762297ca2",
+      "supplied_sha256": "aaba90f9274cfd707f0706b24a76a3002191279d7b68a9b0d9bb88a762297ca2",
+      "original_bytes": 6490434,
+      "supplied_bytes": 6490434,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/feature_extraction_verification.json",
+      "original_sha256": "cbc65ed70059b3dfdac4fb28cfb3d43a52ea4f5a513c3e5bb65832beca278715",
+      "supplied_sha256": "cbc65ed70059b3dfdac4fb28cfb3d43a52ea4f5a513c3e5bb65832beca278715",
+      "original_bytes": 619,
+      "supplied_bytes": 619,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/parameter_swaps.json",
+      "original_sha256": "9f01709d279d9c4ef734d8e384f1930f759d70bfbf4afe033fe452e310d593b2",
+      "supplied_sha256": "9f01709d279d9c4ef734d8e384f1930f759d70bfbf4afe033fe452e310d593b2",
+      "original_bytes": 5731,
+      "supplied_bytes": 5731,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/previous_derivative.json",
+      "original_sha256": "d813409c7e5141e1f00ebfc9826de72cd747375c7929834e24a3f1b44783598a",
+      "supplied_sha256": "d813409c7e5141e1f00ebfc9826de72cd747375c7929834e24a3f1b44783598a",
+      "original_bytes": 954,
+      "supplied_bytes": 954,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/previous_derivative_arrays.npz",
+      "original_sha256": "bbd5ca4fc0d1952df9f0cc3cd4d82c884d8b7b34df86e0cfaaa30799091d9e83",
+      "supplied_sha256": "bbd5ca4fc0d1952df9f0cc3cd4d82c884d8b7b34df86e0cfaaa30799091d9e83",
+      "original_bytes": 6462994,
+      "supplied_bytes": 6462994,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/replay_verification.json",
+      "original_sha256": "201d6a263ebb57b2cb5b4aea64a6e23dd506cc2b915637c3f85400966f3a9d20",
+      "supplied_sha256": "201d6a263ebb57b2cb5b4aea64a6e23dd506cc2b915637c3f85400966f3a9d20",
+      "original_bytes": 3004,
+      "supplied_bytes": 3004,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/summary.json",
+      "original_sha256": "918184fa8b290f10b45c4c968a80add75e84b18cd9d020eca8ad5dba9b757c63",
+      "supplied_sha256": "918184fa8b290f10b45c4c968a80add75e84b18cd9d020eca8ad5dba9b757c63",
+      "original_bytes": 13849,
+      "supplied_bytes": 13849,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/analysis_protocol.json",
+      "original_sha256": "802f191145dfb9b5d51cdcc74955ee2e4b7deacf2cb3f0440d595bdf8d1b9959",
+      "supplied_sha256": "60ae0cb08e005fc08ba3b0692f60fea6a491f8b8607f1ac986b14b608f33626e",
+      "original_bytes": 42364,
+      "supplied_bytes": 42308,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/artifact_manifest.json",
+      "original_sha256": "630d1ef5ed251b6c8f597fa96adaef2c5bd6ce2af5e01af5c08be45055207666",
+      "supplied_sha256": "630d1ef5ed251b6c8f597fa96adaef2c5bd6ce2af5e01af5c08be45055207666",
+      "original_bytes": 1787,
+      "supplied_bytes": 1787,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/completion.json",
+      "original_sha256": "41aec7ef3e46f0907bc4ac1634a0d96137e1293c988d1e67cc38ced545be23aa",
+      "supplied_sha256": "41aec7ef3e46f0907bc4ac1634a0d96137e1293c988d1e67cc38ced545be23aa",
+      "original_bytes": 105,
+      "supplied_bytes": 105,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/decoder_features.npz",
+      "original_sha256": "29890f4fbad71d3f4100062ca976bb94ee557274d4943320093832bdc8c840ef",
+      "supplied_sha256": "29890f4fbad71d3f4100062ca976bb94ee557274d4943320093832bdc8c840ef",
+      "original_bytes": 12115828,
+      "supplied_bytes": 12115828,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/decoder_weights.npz",
+      "original_sha256": "826e33743099e4c07ee7079015a3c8227f5476ef8ad05d1af1c9fbbb75d325fa",
+      "supplied_sha256": "826e33743099e4c07ee7079015a3c8227f5476ef8ad05d1af1c9fbbb75d325fa",
+      "original_bytes": 1336167,
+      "supplied_bytes": 1336167,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/decoders.json",
+      "original_sha256": "36f027181e7bdd5a609264af9f44f0f9d1fa2af6ada2460de39349caa7a96a2c",
+      "supplied_sha256": "36f027181e7bdd5a609264af9f44f0f9d1fa2af6ada2460de39349caa7a96a2c",
+      "original_bytes": 223876,
+      "supplied_bytes": 223876,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/failed_derivative.json",
+      "original_sha256": "7e5850dd2a5e490c5c64e774279c4a62906d80680caa8a28e2feef41c1aadfed",
+      "supplied_sha256": "7e5850dd2a5e490c5c64e774279c4a62906d80680caa8a28e2feef41c1aadfed",
+      "original_bytes": 947,
+      "supplied_bytes": 947,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/failed_derivative_arrays.npz",
+      "original_sha256": "1cc52f32669d7afd94b614379fbeccf35e8722235cca29532e37348d1a785635",
+      "supplied_sha256": "1cc52f32669d7afd94b614379fbeccf35e8722235cca29532e37348d1a785635",
+      "original_bytes": 6500754,
+      "supplied_bytes": 6500754,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/feature_extraction_verification.json",
+      "original_sha256": "90f3034a6d12527e4a7b3d2f0f851138b036f2b5d285509071cf4530232b53b5",
+      "supplied_sha256": "90f3034a6d12527e4a7b3d2f0f851138b036f2b5d285509071cf4530232b53b5",
+      "original_bytes": 620,
+      "supplied_bytes": 620,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/parameter_swaps.json",
+      "original_sha256": "2d70102b2a587214ea8eee8f027d529bed3504b2f486d3db595781946447a41e",
+      "supplied_sha256": "2d70102b2a587214ea8eee8f027d529bed3504b2f486d3db595781946447a41e",
+      "original_bytes": 5680,
+      "supplied_bytes": 5680,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/previous_derivative.json",
+      "original_sha256": "12d975ba38929a743b21354dfac4d8a4c490a76e6ac07dba0651a68c4c460d35",
+      "supplied_sha256": "12d975ba38929a743b21354dfac4d8a4c490a76e6ac07dba0651a68c4c460d35",
+      "original_bytes": 944,
+      "supplied_bytes": 944,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/previous_derivative_arrays.npz",
+      "original_sha256": "e9810d6283d6308284d5de81450c13f58c7410162f9aeef7733660e5fbc5a443",
+      "supplied_sha256": "e9810d6283d6308284d5de81450c13f58c7410162f9aeef7733660e5fbc5a443",
+      "original_bytes": 6464747,
+      "supplied_bytes": 6464747,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/replay_verification.json",
+      "original_sha256": "893a5eb71868edfd724f2da38ef281e3b0ab6a174d11167f96fef90296773651",
+      "supplied_sha256": "893a5eb71868edfd724f2da38ef281e3b0ab6a174d11167f96fef90296773651",
+      "original_bytes": 3005,
+      "supplied_bytes": 3005,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/summary.json",
+      "original_sha256": "70bb8941816f75d99d0ca5bebce4609bfbae350333497e9a8efaf21e76946638",
+      "supplied_sha256": "70bb8941816f75d99d0ca5bebce4609bfbae350333497e9a8efaf21e76946638",
+      "original_bytes": 14131,
+      "supplied_bytes": 14131,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/analysis_protocol.json",
+      "original_sha256": "d8bab82587e660684ab96b30ce69ea646159bac25a5c3dcfc80dfd0f1d38fe73",
+      "supplied_sha256": "d9c77bbef8aa7764533193a2cb371a07319e24045a241aa6499b2da648b244aa",
+      "original_bytes": 42366,
+      "supplied_bytes": 42310,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/artifact_manifest.json",
+      "original_sha256": "835bb01db293e17fdf67a8f62b33ed638c2b261393bcd1e6cab9e443ca45335a",
+      "supplied_sha256": "835bb01db293e17fdf67a8f62b33ed638c2b261393bcd1e6cab9e443ca45335a",
+      "original_bytes": 1787,
+      "supplied_bytes": 1787,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/completion.json",
+      "original_sha256": "8b5fe0d8a757bf400cbf0e1a349389d6b30471c3368ec21ef98ccfacee8bc9af",
+      "supplied_sha256": "8b5fe0d8a757bf400cbf0e1a349389d6b30471c3368ec21ef98ccfacee8bc9af",
+      "original_bytes": 105,
+      "supplied_bytes": 105,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/decoder_features.npz",
+      "original_sha256": "323e2a78c99f1974744465dbfbf5161a1ea2949327e2f90ad7a2d56819ed46fd",
+      "supplied_sha256": "323e2a78c99f1974744465dbfbf5161a1ea2949327e2f90ad7a2d56819ed46fd",
+      "original_bytes": 12111960,
+      "supplied_bytes": 12111960,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/decoder_weights.npz",
+      "original_sha256": "feaeea0806b3c940e5fecd8d3cea944bdcc58bf9785e4d45c260a268916070e0",
+      "supplied_sha256": "feaeea0806b3c940e5fecd8d3cea944bdcc58bf9785e4d45c260a268916070e0",
+      "original_bytes": 1336995,
+      "supplied_bytes": 1336995,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/decoders.json",
+      "original_sha256": "b49d83e4966876a7faba89be4bfa4455d232e556395322220f38230edfe2ceff",
+      "supplied_sha256": "b49d83e4966876a7faba89be4bfa4455d232e556395322220f38230edfe2ceff",
+      "original_bytes": 223578,
+      "supplied_bytes": 223578,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/failed_derivative.json",
+      "original_sha256": "3a1e18ea253fa50bf311c40ad3dadfc37d0142e089f700e73542578247c9b045",
+      "supplied_sha256": "3a1e18ea253fa50bf311c40ad3dadfc37d0142e089f700e73542578247c9b045",
+      "original_bytes": 942,
+      "supplied_bytes": 942,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/failed_derivative_arrays.npz",
+      "original_sha256": "92ca17d833bbdfa75c3c7db481ab639e466bb9a535723f633fdf69567d4956f9",
+      "supplied_sha256": "92ca17d833bbdfa75c3c7db481ab639e466bb9a535723f633fdf69567d4956f9",
+      "original_bytes": 6491401,
+      "supplied_bytes": 6491401,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/feature_extraction_verification.json",
+      "original_sha256": "a785f0220e287fdb71d5bbe9866bdd210140a147eb0beedca79ce6209c6eed49",
+      "supplied_sha256": "a785f0220e287fdb71d5bbe9866bdd210140a147eb0beedca79ce6209c6eed49",
+      "original_bytes": 620,
+      "supplied_bytes": 620,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/parameter_swaps.json",
+      "original_sha256": "07d10197822c448e8010f3b232b798a51ac2ec0ecb7fc02bdc288c1d3b4135af",
+      "supplied_sha256": "07d10197822c448e8010f3b232b798a51ac2ec0ecb7fc02bdc288c1d3b4135af",
+      "original_bytes": 5683,
+      "supplied_bytes": 5683,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/previous_derivative.json",
+      "original_sha256": "38da37be32d4857eaaacc0d5e3e2f58a11e600ec24c7a72b503b5e73191badc1",
+      "supplied_sha256": "38da37be32d4857eaaacc0d5e3e2f58a11e600ec24c7a72b503b5e73191badc1",
+      "original_bytes": 940,
+      "supplied_bytes": 940,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/previous_derivative_arrays.npz",
+      "original_sha256": "05754dd0c4917ab7fd2b06d3386ad52b6b33205d2e081695bfaa04b2e3bdbe82",
+      "supplied_sha256": "05754dd0c4917ab7fd2b06d3386ad52b6b33205d2e081695bfaa04b2e3bdbe82",
+      "original_bytes": 6515545,
+      "supplied_bytes": 6515545,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/replay_verification.json",
+      "original_sha256": "753f7ded7b43852a917d4710177a3f508d38657027104d68819149ca309e7d16",
+      "supplied_sha256": "753f7ded7b43852a917d4710177a3f508d38657027104d68819149ca309e7d16",
+      "original_bytes": 3007,
+      "supplied_bytes": 3007,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/summary.json",
+      "original_sha256": "5724dfd3ee96ef242339b3316a62cfe298f78e9f48a39b9a033162122c8df71c",
+      "supplied_sha256": "5724dfd3ee96ef242339b3316a62cfe298f78e9f48a39b9a033162122c8df71c",
+      "original_bytes": 14101,
+      "supplied_bytes": 14101,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/analysis_protocol.json",
+      "original_sha256": "58d31ecd07df1add8f2ce42f2250d5ca7d2c709c5bc884807d93108e1de7611d",
+      "supplied_sha256": "4c405634c2a3dcd8d9fb6b74a37a91f42c318c317cc6fb2d551791c09e4e2064",
+      "original_bytes": 42358,
+      "supplied_bytes": 42302,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/artifact_manifest.json",
+      "original_sha256": "c0fcd8457599b6d3cb2bf09e70b88ce32687d7824df6912caaaf97f01490eadb",
+      "supplied_sha256": "c0fcd8457599b6d3cb2bf09e70b88ce32687d7824df6912caaaf97f01490eadb",
+      "original_bytes": 1787,
+      "supplied_bytes": 1787,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/completion.json",
+      "original_sha256": "0292904a236a92749a1e8ab1e54b68ffd9df47437933acab11ebca4430b6fe48",
+      "supplied_sha256": "0292904a236a92749a1e8ab1e54b68ffd9df47437933acab11ebca4430b6fe48",
+      "original_bytes": 104,
+      "supplied_bytes": 104,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/decoder_features.npz",
+      "original_sha256": "43729bafd69c5a4fd75919028ef8ef59493634aee9ecf9e9ea913dde1ab575aa",
+      "supplied_sha256": "43729bafd69c5a4fd75919028ef8ef59493634aee9ecf9e9ea913dde1ab575aa",
+      "original_bytes": 12115288,
+      "supplied_bytes": 12115288,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/decoder_weights.npz",
+      "original_sha256": "933c625681b69ac8d7e89a631347072ea0dea053c404729fd6a4f9a8a47a2802",
+      "supplied_sha256": "933c625681b69ac8d7e89a631347072ea0dea053c404729fd6a4f9a8a47a2802",
+      "original_bytes": 1341702,
+      "supplied_bytes": 1341702,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/decoders.json",
+      "original_sha256": "63c77ac87a9419a49f1cdd25095009ca8be4895451c3f755bc163872fa662445",
+      "supplied_sha256": "63c77ac87a9419a49f1cdd25095009ca8be4895451c3f755bc163872fa662445",
+      "original_bytes": 193786,
+      "supplied_bytes": 193786,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/failed_derivative.json",
+      "original_sha256": "545d94ec1582f810091978b540048027e87240398d7fda960a7a2749bccad38a",
+      "supplied_sha256": "545d94ec1582f810091978b540048027e87240398d7fda960a7a2749bccad38a",
+      "original_bytes": 944,
+      "supplied_bytes": 944,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/failed_derivative_arrays.npz",
+      "original_sha256": "80185562326897332907e1049ce37e7b602a679cfa2c9080c77439dcf798bef3",
+      "supplied_sha256": "80185562326897332907e1049ce37e7b602a679cfa2c9080c77439dcf798bef3",
+      "original_bytes": 6500101,
+      "supplied_bytes": 6500101,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/feature_extraction_verification.json",
+      "original_sha256": "979d3a4c03ff5434cd21c1370ea72b162d4db6f53d6a8e65fdbe5cca8b98056d",
+      "supplied_sha256": "979d3a4c03ff5434cd21c1370ea72b162d4db6f53d6a8e65fdbe5cca8b98056d",
+      "original_bytes": 617,
+      "supplied_bytes": 617,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/parameter_swaps.json",
+      "original_sha256": "416c8addcf7142cfbb173dc47b581e9231c8ca714dfce40e3e4409c64572702e",
+      "supplied_sha256": "416c8addcf7142cfbb173dc47b581e9231c8ca714dfce40e3e4409c64572702e",
+      "original_bytes": 5752,
+      "supplied_bytes": 5752,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/previous_derivative.json",
+      "original_sha256": "dd40ddd7068d7c566822fc515bdd906a8fc0f099736709ac414f160fe1e709cc",
+      "supplied_sha256": "dd40ddd7068d7c566822fc515bdd906a8fc0f099736709ac414f160fe1e709cc",
+      "original_bytes": 948,
+      "supplied_bytes": 948,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/previous_derivative_arrays.npz",
+      "original_sha256": "0db97345b9b812da06840a28154649168f2e00b97cb5c421726aecd2f3f0af5f",
+      "supplied_sha256": "0db97345b9b812da06840a28154649168f2e00b97cb5c421726aecd2f3f0af5f",
+      "original_bytes": 6499678,
+      "supplied_bytes": 6499678,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/replay_verification.json",
+      "original_sha256": "352a0544cfb6d671ea2fbf64747d144fec469d0f3df55a3f49a7c79a91bf5df3",
+      "supplied_sha256": "352a0544cfb6d671ea2fbf64747d144fec469d0f3df55a3f49a7c79a91bf5df3",
+      "original_bytes": 3003,
+      "supplied_bytes": 3003,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/summary.json",
+      "original_sha256": "ec02fed8292c1915b5839f43451a903c994a38ab6a31df2ef6f1777c0cf80775",
+      "supplied_sha256": "ec02fed8292c1915b5839f43451a903c994a38ab6a31df2ef6f1777c0cf80775",
+      "original_bytes": 13947,
+      "supplied_bytes": 13947,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses_seed1.log",
+      "original_sha256": "7c65e3ca0526408a3d7a4998d78e4710d662d56bb1ee33375846d310f30e2b5f",
+      "supplied_sha256": "7c65e3ca0526408a3d7a4998d78e4710d662d56bb1ee33375846d310f30e2b5f",
+      "original_bytes": 1556,
+      "supplied_bytes": 1556,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses_seed2.log",
+      "original_sha256": "3f89bf06142542eebb07c3f738853f3b3273f43e81f5a902773862ee227d3376",
+      "supplied_sha256": "3f89bf06142542eebb07c3f738853f3b3273f43e81f5a902773862ee227d3376",
+      "original_bytes": 1554,
+      "supplied_bytes": 1554,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses_seed3.log",
+      "original_sha256": "db01a9d1574342adb95bdcfa9d2f39f33dc09d49f816ff81625d56ae78865ef9",
+      "supplied_sha256": "db01a9d1574342adb95bdcfa9d2f39f33dc09d49f816ff81625d56ae78865ef9",
+      "original_bytes": 1527,
+      "supplied_bytes": 1527,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses_seed4.log",
+      "original_sha256": "0355ae2bf8c135d5046a75777468dac16cf40497273e8814a0195e3cef852981",
+      "supplied_sha256": "0355ae2bf8c135d5046a75777468dac16cf40497273e8814a0195e3cef852981",
+      "original_bytes": 1585,
+      "supplied_bytes": 1585,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_progress.json",
+      "original_sha256": "cb738fc8d3a8c6ef6ce77e7717e65d8754a5b5b0a85dfce25db58c0a9737cf0a",
+      "supplied_sha256": "1848fd2306ac2d5c8999c19703ea4144722429a0f6a0286d6d7271941c3cbbc6",
+      "original_bytes": 2375,
+      "supplied_bytes": 2039,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_source_registration.json",
+      "original_sha256": "ebb96fce3ce08c90eea6767959f4ae7ea871f28fa53c07a353f744a2893b0350",
+      "supplied_sha256": "ebb96fce3ce08c90eea6767959f4ae7ea871f28fa53c07a353f744a2893b0350",
+      "original_bytes": 644,
+      "supplied_bytes": 644,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_supervisor.json",
+      "original_sha256": "0684f2392317f5ed7fc34c5e60a86fa82d1f7a98229446f04263eb61a44a0bb5",
+      "supplied_sha256": "0684f2392317f5ed7fc34c5e60a86fa82d1f7a98229446f04263eb61a44a0bb5",
+      "original_bytes": 113,
+      "supplied_bytes": 113,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_supervisor.log",
+      "original_sha256": "a52895f3eef283bfe5ec31c21b394d50b09aa3ce5af31909fb2311b3a456ce32",
+      "supplied_sha256": "7bbd99930fbd497bf17c11d75e06b0e3941745d0c6a02f395be827430586ce81",
+      "original_bytes": 1896,
+      "supplied_bytes": 1560,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_supervisor_completion.json",
+      "original_sha256": "77b97c3ef2005d0755e8eccbfa5cced5080387a0be322c0e20c368a8e352800b",
+      "supplied_sha256": "397ea2d09eab1eca8cab8196b8517be9246ff94d55c30ac64e5d2db040f1e8ec",
+      "original_bytes": 2207,
+      "supplied_bytes": 1871,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyze_event.py",
+      "original_sha256": "de8c4b37ab990b258d190028e01d4d5bb3d48ae35daec9af2545f7978d7b2835",
+      "supplied_sha256": "de8c4b37ab990b258d190028e01d4d5bb3d48ae35daec9af2545f7978d7b2835",
+      "original_bytes": 10046,
+      "supplied_bytes": 10046,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "checkpoint_manifest.json",
+      "original_sha256": "5bb2d752b3ed5ab76fc8046ea4f0a3b96ce7e92e67099c7b22b5212c56c1c69b",
+      "supplied_sha256": "5bb2d752b3ed5ab76fc8046ea4f0a3b96ce7e92e67099c7b22b5212c56c1c69b",
+      "original_bytes": 13744,
+      "supplied_bytes": 13744,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "completion_audit_0.log",
+      "original_sha256": "f1434e725f8b87de60a98716b0a2445063dc68d5a190297d5cb7e0b760c8133d",
+      "supplied_sha256": "f1434e725f8b87de60a98716b0a2445063dc68d5a190297d5cb7e0b760c8133d",
+      "original_bytes": 83,
+      "supplied_bytes": 83,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "completion_audit_1.log",
+      "original_sha256": "830a6e9f770e18fc63a056cc3c7f12fb11742d8419669a26b236bae282da8e17",
+      "supplied_sha256": "8c20cd71f73bfb08584cba427b3b6ee77b8df8d6cdff799faaacc764b9ee28cb",
+      "original_bytes": 76,
+      "supplied_bytes": 48,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "completion_status.json",
+      "original_sha256": "c35b9052d74098818ac35c975853d2d8028b680e76532e294af67210659ea2b3",
+      "supplied_sha256": "8ed2a556f7b9b53d63020f3eedc674e9c1648b52b8655d2e2df2449dfbf4ff23",
+      "original_bytes": 637,
+      "supplied_bytes": 517,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "completion_supervisor.json",
+      "original_sha256": "d2875979558284f461364b6d4015491c0f2f697c0829ff4e59f2ace1149b9263",
+      "supplied_sha256": "d2875979558284f461364b6d4015491c0f2f697c0829ff4e59f2ace1149b9263",
+      "original_bytes": 50,
+      "supplied_bytes": 50,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "completion_supervisor.log",
+      "original_sha256": "61a0661a33eee0e746e40dbe622adf155f4440f5e71b66227c69933682af7881",
+      "supplied_sha256": "add80ab4e53658fe274f657731ad346962337170ddd08419d612ffdc89d77953",
+      "original_bytes": 166,
+      "supplied_bytes": 102,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "decoder_optimization.csv",
+      "original_sha256": "0ab4f0397242283064f85d2a5b00f57c261414dc6ab5a135a67f7c29574b96f5",
+      "supplied_sha256": "0ab4f0397242283064f85d2a5b00f57c261414dc6ab5a135a67f7c29574b96f5",
+      "original_bytes": 20348,
+      "supplied_bytes": 20348,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "decoder_summary.csv",
+      "original_sha256": "a1b113e5ef962b5a5c6ed9188daa99df0306f8661db374389bd4f9bf2350ef98",
+      "supplied_sha256": "a1b113e5ef962b5a5c6ed9188daa99df0306f8661db374389bd4f9bf2350ef98",
+      "original_bytes": 4264,
+      "supplied_bytes": 4264,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "derivative_summary.csv",
+      "original_sha256": "210bf64ca894f71351875adb1dc3db40db935172a2da29deea564b364aff8129",
+      "supplied_sha256": "210bf64ca894f71351875adb1dc3db40db935172a2da29deea564b364aff8129",
+      "original_bytes": 2793,
+      "supplied_bytes": 2793,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "event_summary.csv",
+      "original_sha256": "43b0b135e18f59d717d744529bdc4c462d795e0b88a4859e146be84047a6d096",
+      "supplied_sha256": "43b0b135e18f59d717d744529bdc4c462d795e0b88a4859e146be84047a6d096",
+      "original_bytes": 3077,
+      "supplied_bytes": 3077,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "finalize_when_complete.py",
+      "original_sha256": "4c31b7f215c7506b7ccc40967aa3f9defd31bb5302e1f2c11b1c0ae79f8f791e",
+      "supplied_sha256": "4c31b7f215c7506b7ccc40967aa3f9defd31bb5302e1f2c11b1c0ae79f8f791e",
+      "original_bytes": 1900,
+      "supplied_bytes": 1900,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "freeze_protocol.py",
+      "original_sha256": "69fd8d407fc668122ac2acc2eda8e1b5deae87be08d9d4cd6c398e15880d5b31",
+      "supplied_sha256": "69fd8d407fc668122ac2acc2eda8e1b5deae87be08d9d4cd6c398e15880d5b31",
+      "original_bytes": 5116,
+      "supplied_bytes": 5116,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_analysis.log",
+      "original_sha256": "d75ab0455b582e0cbddadaaf1b6ced38ce13109cb27a86e97116f28867be726f",
+      "supplied_sha256": "d75ab0455b582e0cbddadaaf1b6ced38ce13109cb27a86e97116f28867be726f",
+      "original_bytes": 1582,
+      "supplied_bytes": 1582,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/collapse.pt",
+      "original_sha256": "6edeb414b7be6e1027d220083d9d7481b562cf08060aaf7f1e5c8fcc835eb660",
+      "supplied_sha256": "eb90821b65eec5bbc4b05057c113089bcfd3007d1ab48d76063a2bd90aed2dc6",
+      "original_bytes": 1940093,
+      "supplied_bytes": 1937866,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/completion.json",
+      "original_sha256": "5c85137af627bca4e9b738f063e0503c808ddf443da824ac8cf0dc872ae686d9",
+      "supplied_sha256": "5c85137af627bca4e9b738f063e0503c808ddf443da824ac8cf0dc872ae686d9",
+      "original_bytes": 493,
+      "supplied_bytes": 493,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/event.json",
+      "original_sha256": "6361b423907fae2fb213f9451ebfe256677be5fe7c0efed468042705233d842e",
+      "supplied_sha256": "6361b423907fae2fb213f9451ebfe256677be5fe7c0efed468042705233d842e",
+      "original_bytes": 308,
+      "supplied_bytes": 308,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/initial.pt",
+      "original_sha256": "850d56119b9b57ee8d0ed0069d253e063c3a0bc59f3c4df45b2e2fa60c73c6b9",
+      "supplied_sha256": "8136603160cf8398275e8cf548c7249d863a29c565b8158d094854d505eb590f",
+      "original_bytes": 914377,
+      "supplied_bytes": 913624,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/metadata.json",
+      "original_sha256": "cf5fa33eaf0dec6d2b07387cc39df522c603ce21873e1919812c8f8dada7bb7f",
+      "supplied_sha256": "cf5fa33eaf0dec6d2b07387cc39df522c603ce21873e1919812c8f8dada7bb7f",
+      "original_bytes": 1301,
+      "supplied_bytes": 1301,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/previous.pt",
+      "original_sha256": "4864973b5176696d47b11fbeea172075bc878551f9833a19e14648d4d32caa04",
+      "supplied_sha256": "d6c3b250888cf0c72f54b45f11c91b438b93dc4a4a0130c714c2c18973010567",
+      "original_bytes": 1940093,
+      "supplied_bytes": 1937866,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/source_manifest.json",
+      "original_sha256": "20f68537dfe10917d2d08cd555e3b0d8bad2a45f83a5e1eaf72fafa174d5fae2",
+      "supplied_sha256": "20f68537dfe10917d2d08cd555e3b0d8bad2a45f83a5e1eaf72fafa174d5fae2",
+      "original_bytes": 1621,
+      "supplied_bytes": 1621,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/trajectory.csv",
+      "original_sha256": "d759d15e7db1703cd34a0ca3ba41bf6d01c6609e7d5ef0cece0a1ca83c1c16c6",
+      "supplied_sha256": "d759d15e7db1703cd34a0ca3ba41bf6d01c6609e7d5ef0cece0a1ca83c1c16c6",
+      "original_bytes": 207193,
+      "supplied_bytes": 207193,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "independent_final_audit.py",
+      "original_sha256": "a33f33a1349289605dfb6c37031d445bcd8a057349112f36157a7502c181b91d",
+      "supplied_sha256": "a33f33a1349289605dfb6c37031d445bcd8a057349112f36157a7502c181b91d",
+      "original_bytes": 4626,
+      "supplied_bytes": 4626,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "independent_final_verification.json",
+      "original_sha256": "8d4461a2ebb05b7fba65631e12fe0b48225cb9d49dc540b226699ac5aa812161",
+      "supplied_sha256": "8d4461a2ebb05b7fba65631e12fe0b48225cb9d49dc540b226699ac5aa812161",
+      "original_bytes": 7931,
+      "supplied_bytes": 7931,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "launch.json",
+      "original_sha256": "10010e301970ae7d622c6eb496334f882b939b7c66c3dab85296e1179a8e1eb4",
+      "supplied_sha256": "3fc18146effd1a588e8425bc47f83a18010c260949e6c9548ed973bedb1e8e91",
+      "original_bytes": 1932,
+      "supplied_bytes": 1708,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "launch.log",
+      "original_sha256": "a58603f6ae9bb8cbbcbb2d7ccb24b2010105b69ff582adf05cff387919ee7961",
+      "supplied_sha256": "4a7174177b028123fbddf6f5a17657ede6dde5cf369d49e248699d193bf6355e",
+      "original_bytes": 1241,
+      "supplied_bytes": 1017,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "launch_suite.py",
+      "original_sha256": "32cc1c3d0e2ddf5793c054e23277ac0c5b5b862368fa4d98dc47e2d60f50422f",
+      "supplied_sha256": "32cc1c3d0e2ddf5793c054e23277ac0c5b5b862368fa4d98dc47e2d60f50422f",
+      "original_bytes": 1860,
+      "supplied_bytes": 1860,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "monitor_handoff.json",
+      "original_sha256": "334fb77fd5ae18901a392bd03559917e1bf33c3549c4962224dc429e35347f9b",
+      "supplied_sha256": "334fb77fd5ae18901a392bd03559917e1bf33c3549c4962224dc429e35347f9b",
+      "original_bytes": 4725,
+      "supplied_bytes": 4725,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "parameter_swaps.csv",
+      "original_sha256": "76f66abb9eeacd7b7c46fc55be9713327295ec0301de512de8e631879a06801e",
+      "supplied_sha256": "76f66abb9eeacd7b7c46fc55be9713327295ec0301de512de8e631879a06801e",
+      "original_bytes": 6861,
+      "supplied_bytes": 6861,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "partial_summary.json",
+      "original_sha256": "97ba30ca05da93bb3d67d0e3eb4a22a850a062812556dd5359678a83c4be74b9",
+      "supplied_sha256": "97ba30ca05da93bb3d67d0e3eb4a22a850a062812556dd5359678a83c4be74b9",
+      "original_bytes": 16462,
+      "supplied_bytes": 16462,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "partial_verification.json",
+      "original_sha256": "fd1ab6b4c930ab48a9adcdcc1ba51c3d3332586e957babe57eae7fd27bd0c89c",
+      "supplied_sha256": "fd1ab6b4c930ab48a9adcdcc1ba51c3d3332586e957babe57eae7fd27bd0c89c",
+      "original_bytes": 1942,
+      "supplied_bytes": 1942,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "prepare_sources.py",
+      "original_sha256": "02cded49f361fa8151e5095f0355b780fbae7fe7358cabb9646cbb8afaf9cfae",
+      "supplied_sha256": "02cded49f361fa8151e5095f0355b780fbae7fe7358cabb9646cbb8afaf9cfae",
+      "original_bytes": 786,
+      "supplied_bytes": 786,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "protocol.json",
+      "original_sha256": "9f6dcd6ed055c7b2cf21d1e45f1a3026d63f2e8cdfb2e560bc159d680d3cb493",
+      "supplied_sha256": "9f6dcd6ed055c7b2cf21d1e45f1a3026d63f2e8cdfb2e560bc159d680d3cb493",
+      "original_bytes": 8430,
+      "supplied_bytes": 8430,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "report.md",
+      "original_sha256": "abcced793d86735ef40a43eaabc3fd38d370ca1b1d5af7c192e8cd7bad906bd3",
+      "supplied_sha256": "abcced793d86735ef40a43eaabc3fd38d370ca1b1d5af7c192e8cd7bad906bd3",
+      "original_bytes": 6875,
+      "supplied_bytes": 6875,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "report_generator_revision.json",
+      "original_sha256": "074ce2879062ec015cbd85b1ab3e955cb85aa5c202b8e81eaaf11efbe1c2b051",
+      "supplied_sha256": "074ce2879062ec015cbd85b1ab3e955cb85aa5c202b8e81eaaf11efbe1c2b051",
+      "original_bytes": 473,
+      "supplied_bytes": 473,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "run_summary.csv",
+      "original_sha256": "ba454c95db3cdfc86a1be40f7c1c97de16645e855960dd66e389104e7a0bf12c",
+      "supplied_sha256": "ba454c95db3cdfc86a1be40f7c1c97de16645e855960dd66e389104e7a0bf12c",
+      "original_bytes": 1552,
+      "supplied_bytes": 1552,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runner.py",
+      "original_sha256": "0872f50d24e2e0db67d9d22d583f8cc36bb2f829262342645079d2a0444e77f1",
+      "supplied_sha256": "0872f50d24e2e0db67d9d22d583f8cc36bb2f829262342645079d2a0444e77f1",
+      "original_bytes": 8926,
+      "supplied_bytes": 8926,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runner_verification.json",
+      "original_sha256": "3177f5bafe90a7d2004df4233e2ebbb568b5f5284bc672d12391cec60a78afab",
+      "supplied_sha256": "3177f5bafe90a7d2004df4233e2ebbb568b5f5284bc672d12391cec60a78afab",
+      "original_bytes": 3439,
+      "supplied_bytes": 3439,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/collapse.pt",
+      "original_sha256": "3e951c88fe1a53ff092a515f69790039c41e247c0db9ffc62a431d9d2277c49e",
+      "supplied_sha256": "02041fc7bbc4387b777c960c44836c0f50f91a00ff5408c45a203bde786c127c",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951699,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/completion.json",
+      "original_sha256": "49405bf8eec740a84cebd8997ad15f181b3345e5538d276bede5bd60d724adb7",
+      "supplied_sha256": "49405bf8eec740a84cebd8997ad15f181b3345e5538d276bede5bd60d724adb7",
+      "original_bytes": 1002,
+      "supplied_bytes": 1002,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/event.json",
+      "original_sha256": "5672a81900a5c2d224b5a998e25d26f70670d222985b303313dcee050b720632",
+      "supplied_sha256": "5672a81900a5c2d224b5a998e25d26f70670d222985b303313dcee050b720632",
+      "original_bytes": 478,
+      "supplied_bytes": 478,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/grok_confirmation.pt",
+      "original_sha256": "1af7abadcf1218477ca01d01b4a7c36121eecb71c54bb11d06ed1c4c2883407b",
+      "supplied_sha256": "425722e12a2526125ca5b5ebf2b12a7a9cd9254088fbc368fdbf2b8c306b2d15",
+      "original_bytes": 1954199,
+      "supplied_bytes": 1952221,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/initial.pt",
+      "original_sha256": "d03baec44bf30ad48dc5df0cf729335a800a002db426493d39cedf6ddf55fc3b",
+      "supplied_sha256": "fd1241f427cb5b5854f49304bd1db0684f7de7c4652c2f38cc3377e34589159f",
+      "original_bytes": 928437,
+      "supplied_bytes": 927197,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/metadata.json",
+      "original_sha256": "15c58638ff382d9806c46e214cb963974f369567659e35b2c7e70d4c1e209468",
+      "supplied_sha256": "15c58638ff382d9806c46e214cb963974f369567659e35b2c7e70d4c1e209468",
+      "original_bytes": 5060,
+      "supplied_bytes": 5060,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/previous.pt",
+      "original_sha256": "0e005d11d01494c05d5dc2673535056a87a4394f24ac58d31354ae2d05aeb5b7",
+      "supplied_sha256": "50af562adebe38ffc13a35817b50be0d6bb0c1f464dd5e7260d4ccdeb4a177b3",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951699,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/progress.json",
+      "original_sha256": "5672a81900a5c2d224b5a998e25d26f70670d222985b303313dcee050b720632",
+      "supplied_sha256": "5672a81900a5c2d224b5a998e25d26f70670d222985b303313dcee050b720632",
+      "original_bytes": 478,
+      "supplied_bytes": 478,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/recovery.pt",
+      "original_sha256": "a6281b45ac57e61cc759210eb35a5cefb5510d1b636fb5a0b88e214a6dff7911",
+      "supplied_sha256": "0d31392b807f661332cc7317a58a807fb4853e566fc0534c3ec6e6a06e30f2fa",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951699,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_000000.pt",
+      "original_sha256": "05e6e0f45d946deb05776e383ab040c92f07df203e45f9bd62804ccbdbf8b258",
+      "supplied_sha256": "60495c1146969d0364d7767a72791e638081a3de806a91aebd8d4c5901664d14",
+      "original_bytes": 928501,
+      "supplied_bytes": 927325,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_001000.pt",
+      "original_sha256": "b2cf5f658787c74f01b8e25c83df9ee98c51f0eb500b5578e6c8070b119d729c",
+      "supplied_sha256": "c2ccea9bbeab19c4f008491c4134b962245b8dcd1b8113063b2cb424fcb1635a",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_002000.pt",
+      "original_sha256": "9794fb5186483fec14b3c28234f9ffc6739f9b0f695f8ed610cf8252d6be6669",
+      "supplied_sha256": "ccf010ef412250c2c9d9b0e11febf7ee3d908b60fdea7c68d30482f173264819",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_003000.pt",
+      "original_sha256": "36bec2fdbee989523108f9b0a4ca68761008970794c96ae2c8a8af7a5e8493e9",
+      "supplied_sha256": "ec56968190ea04f9db1e7346250c2c738b763c3d4173220c08531a6401b463a4",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_004000.pt",
+      "original_sha256": "e4983584920c4441de24eedb3883de3d3898e68695fddfe505008aec3b4cca98",
+      "supplied_sha256": "c29706f336573a654b3500fbdde859fa00830b6ed73562f6a611c4c3340d1c85",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_005000.pt",
+      "original_sha256": "2013d0038becf9069ce936a2f4a1494b64c1eac39d3fde76b5cbc0efbc4970d3",
+      "supplied_sha256": "7053818893bf1c6c6c90ed07d56a279d9c2a6762658fb99b78948863be36fed8",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_006000.pt",
+      "original_sha256": "3bd97961b84ff48b0f2b5cf3203c066c0066ae9721a4a7f589433a8c89334774",
+      "supplied_sha256": "c434b484815d132ccdb1fce9976ee0aae65a10b5d67406754d1055cac9cf3e4a",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_007000.pt",
+      "original_sha256": "3c10aa1adefefe2a848e70dacdda00e9b93c8e38d22890a559140d2ef86ef3b5",
+      "supplied_sha256": "2a69c50a0477910e158d6036acb1b8b459ed1c4254b20465ec207c917dd073b4",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_008000.pt",
+      "original_sha256": "6bd896da3b1bf6b8898e347b6fc415f9d0881d99cbb36ea072419adaa39ba0c7",
+      "supplied_sha256": "22806b297f0536e57f47eda3a8abc31eb336351aa19db56156f12603672cfa87",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_009000.pt",
+      "original_sha256": "df79d266d4afb8c39ca6fd717eab3f67802a532975a2b3749c3f07dfe340e2a7",
+      "supplied_sha256": "b3ccdc78b4e2c2e5f2d4e4e27251b0847fe06d136b6fcf96ada2181422306681",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_010000.pt",
+      "original_sha256": "6d949c11d8f8176bd86364279c94023727cad3a2eb3f35514fd0219515eea428",
+      "supplied_sha256": "5bcae55978259e1e2b34c075ac6ffe8d1c41ed58c3080109eb9fcb5a086bad2b",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_011000.pt",
+      "original_sha256": "c1c85466c0b04c4df8e7eb572de0869330b9f6b8c7021a76fa673ae6159e6e61",
+      "supplied_sha256": "f4571a799c752e898164bcf0003ed9a69358fb6800739603d55cace55d5acdbb",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951861,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_012000.pt",
+      "original_sha256": "a802b5047dbaa3ac7bd87227b79adf23f579d97d7eaa6c4fa624ac726b133023",
+      "supplied_sha256": "bfd367fcd22d3117b47ef85826e85c08d368b6e0345ae921672d33ffa71da5bf",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951873,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_013000.pt",
+      "original_sha256": "304ee17f46c9c630401dbd8b2b2d67e766ea293ceb2c1ce4ff9b067ee4569633",
+      "supplied_sha256": "750246cba79281daac63a3fc649387e35db07b5a37c227d64af86224ec357d9c",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951873,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_014000.pt",
+      "original_sha256": "979f9fee2186e368058752b630c242357a1a5d7817a5bf9ce466dfa921a250bf",
+      "supplied_sha256": "efcf95db7934afc34cbb1e4770156fce239bea827cb4882222b7fac356d30e9d",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951873,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_015000.pt",
+      "original_sha256": "d3a1f0401042224291eb01e4dd79e0cff444586eb18f570310c28d589fb9719f",
+      "supplied_sha256": "dcd0248a5f7b99ddf0b819b0ebbc6293247193410574cfb29bfd83a681bf17dc",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951873,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/terminal.pt",
+      "original_sha256": "e582f298c2f6bedd82b27a046f1d6d74ac972c6fc2acde40f7cab6ba6359b914",
+      "supplied_sha256": "6397043564bb21fd5c94a816a9d35c0a40b05368dbda65a00ed1020763083025",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951699,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/trajectory.csv",
+      "original_sha256": "4dd67996f2ca353e009b99f810d8d8c6dd3c9076084b182f027c71b1cb33f50d",
+      "supplied_sha256": "4dd67996f2ca353e009b99f810d8d8c6dd3c9076084b182f027c71b1cb33f50d",
+      "original_bytes": 1302243,
+      "supplied_bytes": 1302243,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1.log",
+      "original_sha256": "7b9c9ca9071affed842b9f091aaa4af5b4d2758a8dab02c01fb02cff77b19b79",
+      "supplied_sha256": "7b9c9ca9071affed842b9f091aaa4af5b4d2758a8dab02c01fb02cff77b19b79",
+      "original_bytes": 7818,
+      "supplied_bytes": 7818,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1_process_exit.json",
+      "original_sha256": "f14bebd1739d44b764250188bacb609d649be84bfda9f83223fefd2157d887b6",
+      "supplied_sha256": "f14bebd1739d44b764250188bacb609d649be84bfda9f83223fefd2157d887b6",
+      "original_bytes": 92,
+      "supplied_bytes": 92,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/collapse.pt",
+      "original_sha256": "c297ac116c5f0733716fc2d7d9dce1c2e80dc300dc7de75bcb08d68ab930709d",
+      "supplied_sha256": "dc9f3d9915499797a24f9a326783c32a7495abf2a34da9d8949a72ade92c655c",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951683,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/completion.json",
+      "original_sha256": "ade7f77a3272fe6c206cf1289be2dc22d9737f881f0162f3d7b62306894763a3",
+      "supplied_sha256": "ade7f77a3272fe6c206cf1289be2dc22d9737f881f0162f3d7b62306894763a3",
+      "original_bytes": 997,
+      "supplied_bytes": 997,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/event.json",
+      "original_sha256": "40bdc20d4278164492fe0eb8ebb3d3e7c0a007efa2c0ada3cb7d6856cd41e57c",
+      "supplied_sha256": "40bdc20d4278164492fe0eb8ebb3d3e7c0a007efa2c0ada3cb7d6856cd41e57c",
+      "original_bytes": 477,
+      "supplied_bytes": 477,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/grok_confirmation.pt",
+      "original_sha256": "747811cdb209b0f864df2fb6cb35ba0e549dd33a7b4e6d3465a56e4a9e618fcd",
+      "supplied_sha256": "e4ddd2c67c330dc893c713c7d4197aa39f0b3ffa50436e8043e38cb8af8b2774",
+      "original_bytes": 1954199,
+      "supplied_bytes": 1952205,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/initial.pt",
+      "original_sha256": "26c7882c5704b2f853f543e3f81daa7d3821fa1398ce859e7a7dfd9ee3da5fde",
+      "supplied_sha256": "3b7e19141c38a822f2fa4c5c8563645edea3e8428cb7bf578a1a575a03565b14",
+      "original_bytes": 928437,
+      "supplied_bytes": 927181,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/metadata.json",
+      "original_sha256": "8be6a0f603e79087a0bf35fb82fb9e538516249b66d97f22eb7b581eae9d7386",
+      "supplied_sha256": "8be6a0f603e79087a0bf35fb82fb9e538516249b66d97f22eb7b581eae9d7386",
+      "original_bytes": 5060,
+      "supplied_bytes": 5060,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/previous.pt",
+      "original_sha256": "bc9720e2e469afe3c00b500602d88f6b5e03114285cf7e174fc30082d8aafe5a",
+      "supplied_sha256": "9254aebd790070935897b937ecebdb41f98f261bbfc2fe0b0763e26af8fb57d8",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951683,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/progress.json",
+      "original_sha256": "40bdc20d4278164492fe0eb8ebb3d3e7c0a007efa2c0ada3cb7d6856cd41e57c",
+      "supplied_sha256": "40bdc20d4278164492fe0eb8ebb3d3e7c0a007efa2c0ada3cb7d6856cd41e57c",
+      "original_bytes": 477,
+      "supplied_bytes": 477,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/recovery.pt",
+      "original_sha256": "0ca2fe0c0f01d5d6242f1ee75379b1aa8b81332baa1c7165e922be7fd1736429",
+      "supplied_sha256": "7cda13e789b816da5cd21366e08439d87ce8dbf71cf04500a8d684ec9536add5",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951683,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_000000.pt",
+      "original_sha256": "8eca904729205b31c88b67a17b74bdaec64c8f4921f317d009035874b2111c9a",
+      "supplied_sha256": "33c7327a4bb62352e3d05de93b9c03a2e88139c534b89206e65f2b1bffaa751d",
+      "original_bytes": 928501,
+      "supplied_bytes": 927309,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_001000.pt",
+      "original_sha256": "45afb39ee39a6bb01d4f67aac9d3ee175916249fba927a1739be271b13333335",
+      "supplied_sha256": "fc190261291009dc3f5bf55774e467fa884a74e339cc8cb157816c3c5811e034",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_002000.pt",
+      "original_sha256": "af762473cf4b3e21ff5b5dcecd6a9ba657829b846230d6acfb7142393786f950",
+      "supplied_sha256": "9a6ee4ab1cc4b37334c5ce6d948a7f23a9a5fa1fc0471a5728d131a0d8008277",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_003000.pt",
+      "original_sha256": "c90bf7330a6ddd59d42d5986bcfff2b76a0cf7d8d0a0d7b4908ffb9139747be0",
+      "supplied_sha256": "ddfd79a30f3d6d842cc754b68f22605e405eeb2b3cf1dab08852a024ceacc399",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_004000.pt",
+      "original_sha256": "49d3d0e9f6ef3a4d6755ee4e955cd3ef0699e46d99b19e4445ec7da2cfa4abf2",
+      "supplied_sha256": "b04e399eed5ed5c2457da233c1d8777b46a621633d8cda84e8169951b5ff88e5",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_005000.pt",
+      "original_sha256": "d40b10e03b9841ddaa05dfd034754cb67da5c7b0caf3147e03b2210a63e49c01",
+      "supplied_sha256": "069bd0ba0e1ac13ffe4e2a3a149c9736f596a4f8a6be2d62cedb39c22b819365",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_006000.pt",
+      "original_sha256": "9ab64006ee1792ba242bf010b9e74221d436a9209acfcb7ceb8f65bf449afe40",
+      "supplied_sha256": "0d15effa4f7c64dd06222aa55afd98ded1881c62fa7f2aae0541069989e0d45b",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_007000.pt",
+      "original_sha256": "1f858c214910681c0a2146cb702ee5e3d3221ef94e9ae0a05cc7487757855b3d",
+      "supplied_sha256": "7adf84ef8785969c4abd20c84c9356e7b11cca2333525d8f89ba46fc49033d33",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_008000.pt",
+      "original_sha256": "e3bdfeb99f129e19913eee378809683df8579a212c02001a6a1aea3a952384c9",
+      "supplied_sha256": "2281018ff56de67acfc8e88613d9136beb85fd1cbbd34eb378059917b379bb01",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_009000.pt",
+      "original_sha256": "7f2d183ec0b6018a90da0d2baf23b01dc18ad9a11d4469bfd9479aefe1511983",
+      "supplied_sha256": "e4c5609b610e942f5d8fe91349d80070dafbb4361934cb7cbe836115a48ff7bd",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_010000.pt",
+      "original_sha256": "b9543dbb921d5b39ae97dad048010ed37fb90ffce5d0285e4f44b4d29d2c73c6",
+      "supplied_sha256": "e3709375692e33b6417586a4fda50699295e420d0ac4c42ddf0517833c099928",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_011000.pt",
+      "original_sha256": "c8cddac1b66905c133e7e1f1fca3381ab724609df1a5ff3079d2dcc79e79aec1",
+      "supplied_sha256": "ea96734f0cbe4970bd087d67d6c045a74f219c1b4f7ae848757d237bd2bed11c",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_012000.pt",
+      "original_sha256": "c24844ad1b719b2c3e4db25d8ba6f25fb9687b1c485b710f2f754a8c50479ea1",
+      "supplied_sha256": "78c8b3d76cb5dda7148181c891fc90eed3edf8cc7a97cfaeb6d9495912e08d05",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951845,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_013000.pt",
+      "original_sha256": "65f60f2c09be9ddc50636ffea929ebd57cfe683519cf0ffd870b51a77a6db047",
+      "supplied_sha256": "2a8a27ae93a536e6114aeaa871c62755cada3a2bc2dd88cc2fd9baa6e0f19360",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951857,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_014000.pt",
+      "original_sha256": "c6acdb60f626aef9379adc0cd112791b58fb65aa1492bedad26430fff53564c1",
+      "supplied_sha256": "9e05c05e781f4f27c821d84bc1ad89604bb3fb83118c31e36dd480500498fe75",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951857,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_015000.pt",
+      "original_sha256": "2af833c5e0c58b2931f43cbd109c7811dc60caaee0c5a9c541b1b33d37bcf399",
+      "supplied_sha256": "54b9a88b494d542522e0910d627d6fd097768f8fc3a4fa642e885fd178905c31",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951857,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/terminal.pt",
+      "original_sha256": "28f011294fabee1d2aae566601cea094c7a5284927c70ae43dfe120328f8a589",
+      "supplied_sha256": "8004677a2c4b34b8f3599310292bc8b20d79ff858628e97370259de86a85820f",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951683,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/trajectory.csv",
+      "original_sha256": "2470c33fd267467222b2a9acb1cac4dc6e1a03fccce7c671b02d7044c7f99985",
+      "supplied_sha256": "2470c33fd267467222b2a9acb1cac4dc6e1a03fccce7c671b02d7044c7f99985",
+      "original_bytes": 1360898,
+      "supplied_bytes": 1360898,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2.log",
+      "original_sha256": "3b32d1a0cfdb9d868fdd3c5ca86188aeaaa55ecab2f6d57bbb2cd604cbf0af19",
+      "supplied_sha256": "3b32d1a0cfdb9d868fdd3c5ca86188aeaaa55ecab2f6d57bbb2cd604cbf0af19",
+      "original_bytes": 7830,
+      "supplied_bytes": 7830,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2_process_exit.json",
+      "original_sha256": "7985d078925d2183bd484679bb9253139595798cc0eb7abdfb8b8fa54607219a",
+      "supplied_sha256": "7985d078925d2183bd484679bb9253139595798cc0eb7abdfb8b8fa54607219a",
+      "original_bytes": 92,
+      "supplied_bytes": 92,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/collapse.pt",
+      "original_sha256": "9b7ab490d903d2a656bc44446c19ca1824c9ae8bd01ab6061cd293f942670d0e",
+      "supplied_sha256": "6076a71892fd0bf13609f55dd7e516fbfdd5fc0e68efa7136f1d842aa974ba3d",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951692,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/completion.json",
+      "original_sha256": "80fecabc7f05332c96a2b2c433784433dc63199702f103c1c00ced0707c67345",
+      "supplied_sha256": "80fecabc7f05332c96a2b2c433784433dc63199702f103c1c00ced0707c67345",
+      "original_bytes": 1001,
+      "supplied_bytes": 1001,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/event.json",
+      "original_sha256": "0433393794278bf0f9d4771d38bc866ac84434e0d4a9eb1efb3aac17a26042e6",
+      "supplied_sha256": "0433393794278bf0f9d4771d38bc866ac84434e0d4a9eb1efb3aac17a26042e6",
+      "original_bytes": 480,
+      "supplied_bytes": 480,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/grok_confirmation.pt",
+      "original_sha256": "f8649d7624bf64859c84318527d369c42a525e73695961b59ac1595c15a50bd3",
+      "supplied_sha256": "e95829711ea3c7d28c21ba7823c527cf79f6430cc38e0d2d2d8a143387e64912",
+      "original_bytes": 1954199,
+      "supplied_bytes": 1952214,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/initial.pt",
+      "original_sha256": "29e1d107ccec126ea2a8f0aa5e405b5321ef3e85ff8c204320caecf69f4de943",
+      "supplied_sha256": "1369a8d3bf2e4da0e5d72de0715d9c3eb540160a603137fc1d39999cda3b5d0a",
+      "original_bytes": 928437,
+      "supplied_bytes": 927190,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/metadata.json",
+      "original_sha256": "a94d6b0f9467de1f05e2385a1d8fe270fe60c752658095bdd6ead70d22687ef8",
+      "supplied_sha256": "a94d6b0f9467de1f05e2385a1d8fe270fe60c752658095bdd6ead70d22687ef8",
+      "original_bytes": 5060,
+      "supplied_bytes": 5060,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/previous.pt",
+      "original_sha256": "06b52ac2161a68cb5ff8da83730a472bd8ff44f544955199ca2becfab6ed7609",
+      "supplied_sha256": "778456edaaa8f341e412ace51434c8da04b45b7c59f1480839e3e807f9a291ec",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951692,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/progress.json",
+      "original_sha256": "0433393794278bf0f9d4771d38bc866ac84434e0d4a9eb1efb3aac17a26042e6",
+      "supplied_sha256": "0433393794278bf0f9d4771d38bc866ac84434e0d4a9eb1efb3aac17a26042e6",
+      "original_bytes": 480,
+      "supplied_bytes": 480,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/recovery.pt",
+      "original_sha256": "01bd92cfd46cef2aa2d8f49bc02abe48cf38cf322c8404c73fcf59abbf77872e",
+      "supplied_sha256": "24956dc0b2132fa88217f3f06027cfbc7ec7dc79068dc8057d1e0377de24634b",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951692,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_000000.pt",
+      "original_sha256": "dbe4a708a8ad2755033102775d1bf2cc0182afb2d4e0a7dbb89e912c49ac7936",
+      "supplied_sha256": "5dc0e7207275973bea220495c145502f28144d50576e98c4cb9d81721ed79a1c",
+      "original_bytes": 928501,
+      "supplied_bytes": 927318,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_001000.pt",
+      "original_sha256": "3b758957b72104f27fa0c14cce1811d631f386eee4c412aa0dca6790b45dda40",
+      "supplied_sha256": "87b4a51dc72c6b882574d2a7b293f94733c7339ca733bd1bf978bcd0131a2c67",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_002000.pt",
+      "original_sha256": "0796ade1a488e6cb37083e2b1f41eeb0c925c3a208de81ef64f7f5e77dfab396",
+      "supplied_sha256": "0c828b2c2c695f574f47b2928af0aa63f90169511a7d1602c6997bb0f7952efc",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_003000.pt",
+      "original_sha256": "afa46669c26abd431e33d113e4df95839f776f5f0c8af25be1b6de47fc3d2b6d",
+      "supplied_sha256": "96ae5be16be649b24788b65d483e3c43849363f0e45bcce95bd8422524749827",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_004000.pt",
+      "original_sha256": "bf73d19d5d752895912fe25be71e8c06a424b559fc7a68122ce14be1e50104a4",
+      "supplied_sha256": "60173b4e9d3fc50dc18b9fdb7c5a1ea70742949b6da90ec2305f9c8df3a25436",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_005000.pt",
+      "original_sha256": "1fc4f9e3e8a2e01617fbd4c508709995dfaeb87b61bbec068c5fb8ba12db65e3",
+      "supplied_sha256": "242a4c84c64248d21632fad568935a0bc0bd801c22864a06266d1ebae72ccaed",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_006000.pt",
+      "original_sha256": "bf67c2cc898e07acc305a1b081cdcb364b781138ac95a1bdb4eee0a823117fa5",
+      "supplied_sha256": "d096c42f3ec3b4b7178be8d8f1d98cd36244a3f25ca7c676b8fa72ba844e8c5f",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_007000.pt",
+      "original_sha256": "a644b11419d24f8bcedef7fd73d6b956f8bed57af8ed1cf00af6417f65e71dd2",
+      "supplied_sha256": "1467ac8bb1d8267aedec326d061a0f8381d87c4f7ac835c810e0ce31b7f487f1",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_008000.pt",
+      "original_sha256": "2e80b30dfe3d1d110b0d733900338214eeb7f166dead07b6bd44f6e739f5b6ff",
+      "supplied_sha256": "f936f0cee1caeded00dbe25141892ce0bd3b14fa2167b79e8297241258b3f79f",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_009000.pt",
+      "original_sha256": "71bec9cdb263a468ef96bb3106094f6841a51e6a2d713658b7b6ae1a8f45c7c3",
+      "supplied_sha256": "31cf550bf33023bfc728e18b0e1826c3ef04c895e1eb7c1a922a8e89215c50c0",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951854,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_010000.pt",
+      "original_sha256": "d57cd8347e1dcdced67fd0d30150ec3e8b6212394259f415fc44f6b0628a7cec",
+      "supplied_sha256": "5f42858b81baf8c4aecc84df65c06d8da4d771ca59b81134739050806ca22a42",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951866,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_011000.pt",
+      "original_sha256": "22f2108670eba8920bd1554c5fdec73bc682f9755f6508aaebfa9ed2760344bf",
+      "supplied_sha256": "46ab816904c7ac7d9be67a31a9256700c63a15b749abc14258611d9bc1d3cc46",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951866,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_012000.pt",
+      "original_sha256": "99e7e3228bc9ad9937832d2ca6137fea98bae9fd7e689697cf20fc1da31ccfe0",
+      "supplied_sha256": "ebcb7fcd0704a564ef0e30c455710fe6c7bb9a2f8285bc7307c541eb0492e671",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951866,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_013000.pt",
+      "original_sha256": "ddd49b100f38b855fdf15efb02c4b82b8785403f0fb068d962a232a7976e4736",
+      "supplied_sha256": "8bdaccee88cd1a7d4e62cbed1bda8a5c4e92d4fde2fb38362b43a939e900538b",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951866,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_014000.pt",
+      "original_sha256": "b5c96ed153574483b95d43cd0ba021557ed0bcf479e896b6058c8bdb8308214e",
+      "supplied_sha256": "a65314e9c54724487c0ec204d29db953bfd9b382ad0d305398bfb6192a44014f",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951866,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/terminal.pt",
+      "original_sha256": "0f9e3951c930e8ff463274dc69f14188a86f5ddd389c5045aafc403db33eab34",
+      "supplied_sha256": "75e8cfee463ad127740c0d6286752f61fa38033a6530c0fd83c73f215f946e70",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951692,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/trajectory.csv",
+      "original_sha256": "907a8546871341e55ebcdef29d3d2d1461d0a442885fb3434c6db2d920bcabae",
+      "supplied_sha256": "907a8546871341e55ebcdef29d3d2d1461d0a442885fb3434c6db2d920bcabae",
+      "original_bytes": 1233654,
+      "supplied_bytes": 1233654,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3.log",
+      "original_sha256": "9d234769ac4d524e29249c11f0200af804bbb31eaeeb2065c0a53b9940437750",
+      "supplied_sha256": "9d234769ac4d524e29249c11f0200af804bbb31eaeeb2065c0a53b9940437750",
+      "original_bytes": 7374,
+      "supplied_bytes": 7374,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3_process_exit.json",
+      "original_sha256": "970e740039b0bc69caa37c8ff38edb339aa51a8b6b5915758ddcf420295fb631",
+      "supplied_sha256": "970e740039b0bc69caa37c8ff38edb339aa51a8b6b5915758ddcf420295fb631",
+      "original_bytes": 92,
+      "supplied_bytes": 92,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/collapse.pt",
+      "original_sha256": "6c6c8f18b34abd6b0dc069709639b85ad6df3c73977a30c2359f64863ddc6c8f",
+      "supplied_sha256": "03f6e11967ba0d46717cd83bece34fad25b2543cabdf9e22f739074ade6d954b",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951675,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/completion.json",
+      "original_sha256": "a92b49b996c38f23c787bb92fe24c119f3a2c5aa02cb05c9f32ea8429a7a283c",
+      "supplied_sha256": "a92b49b996c38f23c787bb92fe24c119f3a2c5aa02cb05c9f32ea8429a7a283c",
+      "original_bytes": 1001,
+      "supplied_bytes": 1001,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/event.json",
+      "original_sha256": "7fa00ec3705d5b0eeaf896071b0f6ad637a208dd9de72985a5499ca1864b7366",
+      "supplied_sha256": "7fa00ec3705d5b0eeaf896071b0f6ad637a208dd9de72985a5499ca1864b7366",
+      "original_bytes": 477,
+      "supplied_bytes": 477,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/grok_confirmation.pt",
+      "original_sha256": "9f12d00a87874903d8db1083cd2910cb79adbf350b0882aeb8aa809c18bbbaca",
+      "supplied_sha256": "7b89b1f04ba603b39767beb161a1361d318ba60e747b10e68be48c1716ab650a",
+      "original_bytes": 1954199,
+      "supplied_bytes": 1952197,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/initial.pt",
+      "original_sha256": "5bf25f6f3b55e5ab0d79c2beb31137086ce64a3852d7ccf28cd1349cb9465e31",
+      "supplied_sha256": "44518256e90c9d911574421ce04ee1332fbff540d22685c8c5fdbc6f1008eda4",
+      "original_bytes": 928437,
+      "supplied_bytes": 927173,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/metadata.json",
+      "original_sha256": "09f5f17b535ca6fbc6e07c3c0b86bb243e66635f416e3f2d8e21f87f40d5383a",
+      "supplied_sha256": "09f5f17b535ca6fbc6e07c3c0b86bb243e66635f416e3f2d8e21f87f40d5383a",
+      "original_bytes": 5060,
+      "supplied_bytes": 5060,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/previous.pt",
+      "original_sha256": "dcd4cafa577e020b50e3d1406d9c2d22453e31475cff7de57b0d66cbafec121d",
+      "supplied_sha256": "ef1913c80b644ba79d42fe89ebd904db2a7e23ccb3297569696df8d3b1899fc6",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951675,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/progress.json",
+      "original_sha256": "7fa00ec3705d5b0eeaf896071b0f6ad637a208dd9de72985a5499ca1864b7366",
+      "supplied_sha256": "7fa00ec3705d5b0eeaf896071b0f6ad637a208dd9de72985a5499ca1864b7366",
+      "original_bytes": 477,
+      "supplied_bytes": 477,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/recovery.pt",
+      "original_sha256": "27b472ab48a5f4805af58bf0cd5705235daa9fdf3284d41a6924308373b8286c",
+      "supplied_sha256": "a273c14dd4857495b99e94ff253106cd1d82e72f82e12db018e553c29316de69",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951675,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_000000.pt",
+      "original_sha256": "1074937928e488358338c36d536b40b7dc958bb33cb75ba7891e34f07ea80388",
+      "supplied_sha256": "7e0404a65e67eb8001e9a8d5d9b714ec7c33ee88239787779a420299517a800b",
+      "original_bytes": 928501,
+      "supplied_bytes": 927301,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_001000.pt",
+      "original_sha256": "9da16247112c15e65cc6071498cabd836cfcaad466a68ba8c2e5770bdcd0d762",
+      "supplied_sha256": "1e379842984dd1c5ce12dce139ff0f5d25e9bd8b2dd70d1d5faffc0ea7e25ea4",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_002000.pt",
+      "original_sha256": "f569ae7d55e3e8be466b1368c98a16a4bbba4e4799134e16acf4eab7eb120184",
+      "supplied_sha256": "44e407ba3e1dc401278ad7aba4648026d88cb5ac8261ddcab254b2d2ff6e1867",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_003000.pt",
+      "original_sha256": "d15bdf5b043acc48e4860b78833befada383d36eb54489a41f27182aa247e224",
+      "supplied_sha256": "ad50d8af56d3629e962f9843763bc61dad9acc853b5eafd967b092948b4204ce",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_004000.pt",
+      "original_sha256": "66106ec9d5d8faf243cf34dee84cd5a5479ebbb7eb96f035f5f1c68654668804",
+      "supplied_sha256": "1617827f9cf912d831d6c59bc714f92b73bf4d70434d1884e25bba0d8180e902",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_005000.pt",
+      "original_sha256": "a0db5ed7c7d8d6910749ae0183f252be180176d967e4555c4a20f73fe578b95b",
+      "supplied_sha256": "f2b21a079e87689e95e425aedd05c0957e620603b90ee1cad735465362b50800",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_006000.pt",
+      "original_sha256": "49f385ef88ad8ab35d7cf6ee2abd60e884b6960af14fb3c885663986d75337b2",
+      "supplied_sha256": "428ffeba16bfa568a254587f33f66aca1a5790cd7aafece1e84dbac6cef4e28a",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_007000.pt",
+      "original_sha256": "4fc141f946e88bd7fb440754683525c8f2f1feb6606488c0825424b01bcae577",
+      "supplied_sha256": "0834de63cf16158a1161097faef41f6b6b7db037881cf7a99a807c38dc1ede66",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_008000.pt",
+      "original_sha256": "27fc67867e81b1d5f6925e7f8437d4ce52e2f33d02db46c81d5fafb054fe8ce2",
+      "supplied_sha256": "659bd38e10cac1c7ca5159533c9b12556e3c4f4db3b93e130d81555441dcec7b",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_009000.pt",
+      "original_sha256": "f768c9c5823d32137443a65f827ceaa816e025e70357d8472de7c7c5121890ac",
+      "supplied_sha256": "c44e532a02563c7c601d8e4043090cabb74aa7bbfd9921987d3b649f5ca6dedb",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_010000.pt",
+      "original_sha256": "db5f26894b5db4bd36da59fd6b43c515004fcc0d0c189edbba036082254844da",
+      "supplied_sha256": "8a525ec451748bb87daff7687416c097169bfdf366860bfe8ec02def0d27e328",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_011000.pt",
+      "original_sha256": "146869d4fd2c96828567dc84d7dc3cd1ff19bee26da3597bd544b282a3db1d3b",
+      "supplied_sha256": "dbe5a2f34c019dc7f84c8e2f5ea33466b45456de763cb4bdae7b206cf8139118",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_012000.pt",
+      "original_sha256": "3daa8b952e315707a14041d74d692c06c1663d74f5a593c64a60e203fa6b7785",
+      "supplied_sha256": "ae859e30eeb6c21001365b3ae7a26b84dee81151bc43e57eef79fb88c37de7ca",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951837,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_013000.pt",
+      "original_sha256": "829ffb1af588a2e9d896ae9c623d3cf05886d086f976e300e5cfaed91043a2a3",
+      "supplied_sha256": "6cc1390f84498ad8fa8f3d796a01531382ec7eda348a5db1bf54b4750ffb47d8",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951849,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_014000.pt",
+      "original_sha256": "ae68be230e8c9f16fbe7f29c49ea9eac695ea6812e20dd258443e8ce2d74d82f",
+      "supplied_sha256": "7cd4ee6b5d15f5252bacdcfb5bc28e483dcb3dafba78d297706a50049de52e37",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951849,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_015000.pt",
+      "original_sha256": "e1adf2ce4e5c2aacbd3028810d43332fd6a2475c48df353dfcb7d133ea3328a6",
+      "supplied_sha256": "c3214f4eae9b1a794b497a47f904c67b89f2d9bb1f413891b0a27b9026ba216a",
+      "original_bytes": 1954025,
+      "supplied_bytes": 1951849,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/terminal.pt",
+      "original_sha256": "cada1e124db9269b1b51773d9f082102597742bf890ff690b1bef1d313982906",
+      "supplied_sha256": "b5d5681b06c128649d0a3bcd98ac3f28b1339350e9c7f88295a149cf286c8b7b",
+      "original_bytes": 1953938,
+      "supplied_bytes": 1951675,
+      "changes": [
+        "Checkpoint provenance and ZIP metadata sanitation; tensors, optimizer state and available RNG preserved"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/trajectory.csv",
+      "original_sha256": "6cfb6ae31c2ca9d587b724c8a7ea9850268b6aacbcefb2d6bd21548a85cb3fea",
+      "supplied_sha256": "6cfb6ae31c2ca9d587b724c8a7ea9850268b6aacbcefb2d6bd21548a85cb3fea",
+      "original_bytes": 1301417,
+      "supplied_bytes": 1301417,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4.log",
+      "original_sha256": "de376be8dfa366bda74428dd4d91d4a2f6de820b421dd2103168e4d4a67cd939",
+      "supplied_sha256": "de376be8dfa366bda74428dd4d91d4a2f6de820b421dd2103168e4d4a67cd939",
+      "original_bytes": 7814,
+      "supplied_bytes": 7814,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4_process_exit.json",
+      "original_sha256": "94bcdbaefd1dfdcf03a6c65c1dd446f9a41e6f74f2325898217ab5741e0a385e",
+      "supplied_sha256": "94bcdbaefd1dfdcf03a6c65c1dd446f9a41e6f74f2325898217ab5741e0a385e",
+      "original_bytes": 92,
+      "supplied_bytes": 92,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_manifest.json",
+      "original_sha256": "1e76d14e9c45b9f9422fae5e16cf47e7044ca5b9ff8c77465f04802899844a7c",
+      "supplied_sha256": "1e76d14e9c45b9f9422fae5e16cf47e7044ca5b9ff8c77465f04802899844a7c",
+      "original_bytes": 12661,
+      "supplied_bytes": 12661,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/aggregate.py",
+      "original_sha256": "f23442525bc85fd613de819abcfb141cfdd8f7c323c73f8cc633e430837db243",
+      "supplied_sha256": "f23442525bc85fd613de819abcfb141cfdd8f7c323c73f8cc633e430837db243",
+      "original_bytes": 5134,
+      "supplied_bytes": 5134,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/audit_source_grokking.py",
+      "original_sha256": "c8b8b7d034e43393d3ea3fa3507b9723b239298c370ccd23ee257b4e9a65a7a0",
+      "supplied_sha256": "c8b8b7d034e43393d3ea3fa3507b9723b239298c370ccd23ee257b4e9a65a7a0",
+      "original_bytes": 3137,
+      "supplied_bytes": 3137,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/derivative_identity_check.py",
+      "original_sha256": "57dbd3f83871b24a61244fc6583261f99ee55651a02578a4d3af8c6285edd819",
+      "supplied_sha256": "57dbd3f83871b24a61244fc6583261f99ee55651a02578a4d3af8c6285edd819",
+      "original_bytes": 5588,
+      "supplied_bytes": 5588,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics.py",
+      "original_sha256": "41249acebe2113b759a29355dddc571a827ed0e44193192ef7a8786da9ace27e",
+      "supplied_sha256": "41249acebe2113b759a29355dddc571a827ed0e44193192ef7a8786da9ace27e",
+      "original_bytes": 13689,
+      "supplied_bytes": 13689,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_adam_common.py",
+      "original_sha256": "0ca5bd27511adab4fdd2fce1cd7a786f913170950a5a1e5d26ef6ff1158dbbb8",
+      "supplied_sha256": "0ca5bd27511adab4fdd2fce1cd7a786f913170950a5a1e5d26ef6ff1158dbbb8",
+      "original_bytes": 3955,
+      "supplied_bytes": 3955,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_branch_compare.py",
+      "original_sha256": "492de366d9b0bc1389215f0fe5e5829cff895b75c3972452eb2c98fd2146d84c",
+      "supplied_sha256": "492de366d9b0bc1389215f0fe5e5829cff895b75c3972452eb2c98fd2146d84c",
+      "original_bytes": 3816,
+      "supplied_bytes": 3816,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_final_summary.py",
+      "original_sha256": "3c8141b1487d540b3a9bb4f8f53abbe9fc54b97a4badec9b0fd21ab847b9b9e2",
+      "supplied_sha256": "3c8141b1487d540b3a9bb4f8f53abbe9fc54b97a4badec9b0fd21ab847b9b9e2",
+      "original_bytes": 4217,
+      "supplied_bytes": 4217,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_joint_direction.py",
+      "original_sha256": "46ed08b31de8549c930871bef7bd8c4a6751dec8666bf668d2d4ff1d317153fb",
+      "supplied_sha256": "46ed08b31de8549c930871bef7bd8c4a6751dec8666bf668d2d4ff1d317153fb",
+      "original_bytes": 4969,
+      "supplied_bytes": 4969,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_matched_compare.py",
+      "original_sha256": "26527660ebdf2ef1fc0a6e59fcd70b80e5a73d1afa871773d7de8fd91adfae2c",
+      "supplied_sha256": "26527660ebdf2ef1fc0a6e59fcd70b80e5a73d1afa871773d7de8fd91adfae2c",
+      "original_bytes": 4403,
+      "supplied_bytes": 4403,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_matched_early.py",
+      "original_sha256": "e627476a2309ae3b5d80242066bf1c76a8167fca18065724219d8cd1755bec0a",
+      "supplied_sha256": "e627476a2309ae3b5d80242066bf1c76a8167fca18065724219d8cd1755bec0a",
+      "original_bytes": 6245,
+      "supplied_bytes": 6245,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_mean_drift.py",
+      "original_sha256": "1604f3154c9090935c768e0885e6b0da080f4a9a3482992572b5eea44fdceea7",
+      "supplied_sha256": "1604f3154c9090935c768e0885e6b0da080f4a9a3482992572b5eea44fdceea7",
+      "original_bytes": 3051,
+      "supplied_bytes": 3051,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_mean_mediation.py",
+      "original_sha256": "bddd260a4e913339d4b89b3dec6887937c5c84146a84feda4d83aa49835b2b3a",
+      "supplied_sha256": "bddd260a4e913339d4b89b3dec6887937c5c84146a84feda4d83aa49835b2b3a",
+      "original_bytes": 2916,
+      "supplied_bytes": 2916,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_repairs.py",
+      "original_sha256": "3026ecc476c43a32d5fb4b1aaa0b186b685819bc65d41313981c0ac3b8ddfe4c",
+      "supplied_sha256": "3026ecc476c43a32d5fb4b1aaa0b186b685819bc65d41313981c0ac3b8ddfe4c",
+      "original_bytes": 2389,
+      "supplied_bytes": 2389,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_rms_joint_direction.py",
+      "original_sha256": "a7fa5943cb38141817219eb0c0e07209ba326c7ea67bffb937e0e90b06598dc5",
+      "supplied_sha256": "a7fa5943cb38141817219eb0c0e07209ba326c7ea67bffb937e0e90b06598dc5",
+      "original_bytes": 7693,
+      "supplied_bytes": 7693,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_specificity.py",
+      "original_sha256": "f378ff2496e854a1ffb0fc3729d8698445be7f904d6094a7ba0d083518df3a4f",
+      "supplied_sha256": "f378ff2496e854a1ffb0fc3729d8698445be7f904d6094a7ba0d083518df3a4f",
+      "original_bytes": 5696,
+      "supplied_bytes": 5696,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_stepsize.py",
+      "original_sha256": "cb8f5b2f2f2c31349f63f9b4805fb5a878474b31ffacb56df7685d77cfaa8d18",
+      "supplied_sha256": "cb8f5b2f2f2c31349f63f9b4805fb5a878474b31ffacb56df7685d77cfaa8d18",
+      "original_bytes": 2806,
+      "supplied_bytes": 2806,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_stock_recurrences.py",
+      "original_sha256": "b4f9763847350b1fb2b64a6d2a8735595baecd184b06cb120d03c8c1cd3bde62",
+      "supplied_sha256": "b4f9763847350b1fb2b64a6d2a8735595baecd184b06cb120d03c8c1cd3bde62",
+      "original_bytes": 7030,
+      "supplied_bytes": 7030,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_summary.py",
+      "original_sha256": "7b3725c7da66a9f27f52553979d2bb5d58a4e6450375fe4e38241724f8691b38",
+      "supplied_sha256": "7b3725c7da66a9f27f52553979d2bb5d58a4e6450375fe4e38241724f8691b38",
+      "original_bytes": 20917,
+      "supplied_bytes": 20917,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_targeted.py",
+      "original_sha256": "d9128578a1b35d76a6a4e55d104c1d459c987f80a17d1dbba2bae195ced9eb5f",
+      "supplied_sha256": "d9128578a1b35d76a6a4e55d104c1d459c987f80a17d1dbba2bae195ced9eb5f",
+      "original_bytes": 3230,
+      "supplied_bytes": 3230,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/diagnostics_test.py",
+      "original_sha256": "ff749f0137d7df53ff68806f4831f130a1f62821ede79833caa862ea947e94a0",
+      "supplied_sha256": "ff749f0137d7df53ff68806f4831f130a1f62821ede79833caa862ea947e94a0",
+      "original_bytes": 3118,
+      "supplied_bytes": 3118,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/generality_analyze.py",
+      "original_sha256": "3aad13d4d3f2b59dbfb49901de7527f86e87496c8852862395695825ad90a4c9",
+      "supplied_sha256": "3aad13d4d3f2b59dbfb49901de7527f86e87496c8852862395695825ad90a4c9",
+      "original_bytes": 10985,
+      "supplied_bytes": 10985,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/generality_peak.py",
+      "original_sha256": "2ae53823a3a6bded23e43f3fc8ddd122c7d68fd537927076a2b988f37c0cc431",
+      "supplied_sha256": "2ae53823a3a6bded23e43f3fc8ddd122c7d68fd537927076a2b988f37c0cc431",
+      "original_bytes": 3036,
+      "supplied_bytes": 3036,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/generality_peak_panel.py",
+      "original_sha256": "4bf869fa61db2c2a654b6aee4a1fad552442119cd31f6ac1ee103b1003ea1259",
+      "supplied_sha256": "4bf869fa61db2c2a654b6aee4a1fad552442119cd31f6ac1ee103b1003ea1259",
+      "original_bytes": 1879,
+      "supplied_bytes": 1879,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/generality_runner.py",
+      "original_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "supplied_sha256": "8250620ba594411be1ea8f06dfd4a003eb6ccd31b8617275b2d3b90aefea8af9",
+      "original_bytes": 9271,
+      "supplied_bytes": 9271,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/generality_summary.py",
+      "original_sha256": "9e2e11825ca3722fc30d6d5cd3dcb98e447243c032f72cf8b48df70bdacf963c",
+      "supplied_sha256": "9e2e11825ca3722fc30d6d5cd3dcb98e447243c032f72cf8b48df70bdacf963c",
+      "original_bytes": 9726,
+      "supplied_bytes": 9726,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/generality_verify.py",
+      "original_sha256": "cdf6c384217d26e0a25e99979b298c572bc3b039eb4a3ace756cf0142f1a9bb1",
+      "supplied_sha256": "cdf6c384217d26e0a25e99979b298c572bc3b039eb4a3ace756cf0142f1a9bb1",
+      "original_bytes": 6746,
+      "supplied_bytes": 6746,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/make_figures.py",
+      "original_sha256": "620ad548fb0c48b58125fa9102eab025f168419793746c351df60a5a04f535d4",
+      "supplied_sha256": "620ad548fb0c48b58125fa9102eab025f168419793746c351df60a5a04f535d4",
+      "original_bytes": 4395,
+      "supplied_bytes": 4395,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/run_dense_arithmetic.py",
+      "original_sha256": "759a25e2ae9873e7a6dc22f6e3180080d1c138be8ea4852d3315b8427fdf7d35",
+      "supplied_sha256": "759a25e2ae9873e7a6dc22f6e3180080d1c138be8ea4852d3315b8427fdf7d35",
+      "original_bytes": 8027,
+      "supplied_bytes": 8027,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/run_main_suite.py",
+      "original_sha256": "31eaacfb1982526f6f7dbd8e8b1911f15f3c6ffe9f0ef71dd79a53a7e5e98d7d",
+      "supplied_sha256": "31eaacfb1982526f6f7dbd8e8b1911f15f3c6ffe9f0ef71dd79a53a7e5e98d7d",
+      "original_bytes": 3773,
+      "supplied_bytes": 3773,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/run_projection_suite.py",
+      "original_sha256": "a91cbb530b346df2cffb5f27bcb8f6d677e433ff01cf1eb4861ed5035725f170",
+      "supplied_sha256": "a91cbb530b346df2cffb5f27bcb8f6d677e433ff01cf1eb4861ed5035725f170",
+      "original_bytes": 2294,
+      "supplied_bytes": 2294,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/test_diagnostics_repairs.py",
+      "original_sha256": "128923a6acbf6279c3a68de80755a8d107026c84b3372ceb06d91622de82a406",
+      "supplied_sha256": "128923a6acbf6279c3a68de80755a8d107026c84b3372ceb06d91622de82a406",
+      "original_bytes": 3716,
+      "supplied_bytes": 3716,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/test_generality_runner.py",
+      "original_sha256": "7304959df9f7614e0bf190758db94801ff38b2e8d8d5d17870b80c0f5e7e297c",
+      "supplied_sha256": "7304959df9f7614e0bf190758db94801ff38b2e8d8d5d17870b80c0f5e7e297c",
+      "original_bytes": 4477,
+      "supplied_bytes": 4477,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/verify_completed.py",
+      "original_sha256": "12da4eb1e3c59395b56aada5f5bd98685e415a16f458b141ec185cfda6dddb95",
+      "supplied_sha256": "12da4eb1e3c59395b56aada5f5bd98685e415a16f458b141ec185cfda6dddb95",
+      "original_bytes": 11809,
+      "supplied_bytes": 11809,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/verify_dense_arithmetic.py",
+      "original_sha256": "817b3be355eacedee1cc97e5c92ed921ae7e91cf48407a10de605eb861f31e81",
+      "supplied_sha256": "817b3be355eacedee1cc97e5c92ed921ae7e91cf48407a10de605eb861f31e81",
+      "original_bytes": 1568,
+      "supplied_bytes": 1568,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/verify_targeted_runner_independent.py",
+      "original_sha256": "693f7d0e989c385f2862f0a9a5fba1c5412dcb4d975e81141072fefb59a908d3",
+      "supplied_sha256": "693f7d0e989c385f2862f0a9a5fba1c5412dcb4d975e81141072fefb59a908d3",
+      "original_bytes": 3160,
+      "supplied_bytes": 3160,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/causal_study/write_report.py",
+      "original_sha256": "4bfdc7d084f179327e0b3f315497a457307b8d7d6ed8fcf62b3b038ef762843d",
+      "supplied_sha256": "4bfdc7d084f179327e0b3f315497a457307b8d7d6ed8fcf62b3b038ef762843d",
+      "original_bytes": 23552,
+      "supplied_bytes": 23552,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/alignment_core.py",
+      "original_sha256": "ae87ac9728f8f83c9936d895c9c5fc91fd77b5fb98384731baa868116d0d4e97",
+      "supplied_sha256": "ae87ac9728f8f83c9936d895c9c5fc91fd77b5fb98384731baa868116d0d4e97",
+      "original_bytes": 17262,
+      "supplied_bytes": 17262,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/decoder_probe.py",
+      "original_sha256": "4325e198c2208f7fcc843d7bbf22c6feaa25ca9b3ad89c4694df5005465f4227",
+      "supplied_sha256": "4325e198c2208f7fcc843d7bbf22c6feaa25ca9b3ad89c4694df5005465f4227",
+      "original_bytes": 14771,
+      "supplied_bytes": 14771,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/follow_dense_replication.py",
+      "original_sha256": "45d070fdf42940e7709bc9a05c5ec898caca77beeda82f696c55a0e45cf0d3be",
+      "supplied_sha256": "45d070fdf42940e7709bc9a05c5ec898caca77beeda82f696c55a0e45cf0d3be",
+      "original_bytes": 3992,
+      "supplied_bytes": 3992,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/follow_event.py",
+      "original_sha256": "6797a916f6796c538447d511361f793e533e8189cd9f8c2195fe4c2f8834f5cd",
+      "supplied_sha256": "6797a916f6796c538447d511361f793e533e8189cd9f8c2195fe4c2f8834f5cd",
+      "original_bytes": 4585,
+      "supplied_bytes": 4585,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/gradient_diagnostics.py",
+      "original_sha256": "48ff4a6e94ccff4c38082db19725a97f9b2693ddff55bce43b9d3ff11674c748",
+      "supplied_sha256": "48ff4a6e94ccff4c38082db19725a97f9b2693ddff55bce43b9d3ff11674c748",
+      "original_bytes": 4257,
+      "supplied_bytes": 4257,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/numerical_controls.py",
+      "original_sha256": "c34766fea23a2daae7754aff837c41a8b48e0ed3f26702d776d914d9c4c08656",
+      "supplied_sha256": "156c75af253b6bb83b440135ca06c7086640c89c1bb9ec97d2cbd50087b7d2e9",
+      "original_bytes": 11057,
+      "supplied_bytes": 11043,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/package_results.py",
+      "original_sha256": "044e9f4b4a2613acca6fe8c982ee524a9ce21f45c91bf4190ebf20011f37f107",
+      "supplied_sha256": "044e9f4b4a2613acca6fe8c982ee524a9ce21f45c91bf4190ebf20011f37f107",
+      "original_bytes": 16895,
+      "supplied_bytes": 16895,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/plot_results.py",
+      "original_sha256": "6f1c26d914f31558aa7c340218735dcf2be7f9787d53b5ddc5bcee2d0bf088a8",
+      "supplied_sha256": "6f1c26d914f31558aa7c340218735dcf2be7f9787d53b5ddc5bcee2d0bf088a8",
+      "original_bytes": 14949,
+      "supplied_bytes": 14949,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/run_alignment.py",
+      "original_sha256": "cdf0486edab0dde152fcc18a58c90ef122bcf154fd43e6f6ea29b341dad718a1",
+      "supplied_sha256": "cdf0486edab0dde152fcc18a58c90ef122bcf154fd43e6f6ea29b341dad718a1",
+      "original_bytes": 5656,
+      "supplied_bytes": 5656,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/run_collapse.py",
+      "original_sha256": "0a175d36782f58cbc18f44c50e63a6a2dfa75df96dceff0f8e9cb7aa53291ab9",
+      "supplied_sha256": "89cef8e3d41941d216bd42155a432fb170856327bd9954276ef75672ee395fe4",
+      "original_bytes": 6643,
+      "supplied_bytes": 6615,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/run_dense_capture.py",
+      "original_sha256": "1781b1eca3a73b00a9c571dc956a809945a48d4991f9f6ef336c0bca1c29398e",
+      "supplied_sha256": "1781b1eca3a73b00a9c571dc956a809945a48d4991f9f6ef336c0bca1c29398e",
+      "original_bytes": 13564,
+      "supplied_bytes": 13564,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/run_one_step_attribution.py",
+      "original_sha256": "43cd257d286614545133375377484e1996fdd084e450b3d132450dcd96d200ff",
+      "supplied_sha256": "43cd257d286614545133375377484e1996fdd084e450b3d132450dcd96d200ff",
+      "original_bytes": 13474,
+      "supplied_bytes": 13474,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/run_precision_branches.py",
+      "original_sha256": "871e24dd7471fcdff5c4e60880481def4a2459833518af7e570a2b88ba825021",
+      "supplied_sha256": "6102460afe9085ad314c6da8895f65dcd52696834285c7e51fc8c35c8afd4bdc",
+      "original_bytes": 12485,
+      "supplied_bytes": 12471,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/run_whitened_probe.py",
+      "original_sha256": "5fd727842122ad7c5b1706e19e6bddbdbe79ffa253a4aee1af743ca58fc80695",
+      "supplied_sha256": "5fd727842122ad7c5b1706e19e6bddbdbe79ffa253a4aee1af743ca58fc80695",
+      "original_bytes": 3816,
+      "supplied_bytes": 3816,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/summarize_archived_events.py",
+      "original_sha256": "0ac30ae4170b248e0d78534e672697355d6387ad150763e4bf7db06b3c23ef6e",
+      "supplied_sha256": "c21352e57ae030dfa24f50eac15e31c46fd283932eea84108527dbd36618bd84",
+      "original_bytes": 6550,
+      "supplied_bytes": 6536,
+      "changes": [
+        "Identifying paths or source revision strings anonymized"
+      ]
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/test_alignment_core.py",
+      "original_sha256": "e8a290d2930471f63196ae2c2a0a4a8bb01dcbd0d86afa57b4c4d7e883308a2a",
+      "supplied_sha256": "e8a290d2930471f63196ae2c2a0a4a8bb01dcbd0d86afa57b4c4d7e883308a2a",
+      "original_bytes": 7987,
+      "supplied_bytes": 7987,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/test_decoder_probe.py",
+      "original_sha256": "814cc98cd830a0392bb589a8e66c2f2b15288e13578ef93f27b27f91c0f3d2f1",
+      "supplied_sha256": "814cc98cd830a0392bb589a8e66c2f2b15288e13578ef93f27b27f91c0f3d2f1",
+      "original_bytes": 6575,
+      "supplied_bytes": 6575,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/test_dense_capture.py",
+      "original_sha256": "d7523bb4621bcc1ac12586f66ef1f76548305d4ccf1141157e7fc25d5a87afc3",
+      "supplied_sha256": "d7523bb4621bcc1ac12586f66ef1f76548305d4ccf1141157e7fc25d5a87afc3",
+      "original_bytes": 2655,
+      "supplied_bytes": 2655,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/test_numerical_controls.py",
+      "original_sha256": "9ae92aa50f9db8471fec0f423766e7cb9bbf677ef6154d5a8393d77fae377bcf",
+      "supplied_sha256": "9ae92aa50f9db8471fec0f423766e7cb9bbf677ef6154d5a8393d77fae377bcf",
+      "original_bytes": 9972,
+      "supplied_bytes": 9972,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/experiments/test_precision_branches.py",
+      "original_sha256": "62c0b8b3f548517152ab5ac3fa28c33cd094fab497a32268eb8b1060e979fd2a",
+      "supplied_sha256": "62c0b8b3f548517152ab5ac3fa28c33cd094fab497a32268eb8b1060e979fd2a",
+      "original_bytes": 7377,
+      "supplied_bytes": 7377,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/config.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "supplied_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "supplied_bytes": 0,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/data.py",
+      "original_sha256": "aa8cdffc2973eb57ca81f28614b15e93b8814603b3793229c5462f2e330057ab",
+      "supplied_sha256": "aa8cdffc2973eb57ca81f28614b15e93b8814603b3793229c5462f2e330057ab",
+      "original_bytes": 1738,
+      "supplied_bytes": 1738,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/__init__.py",
+      "original_sha256": "3dd8ce66557bdd09ec8a372a4a0e29215937c19a7bfb733c0908f06fc0b47525",
+      "supplied_sha256": "3dd8ce66557bdd09ec8a372a4a0e29215937c19a7bfb733c0908f06fc0b47525",
+      "original_bytes": 36,
+      "supplied_bytes": 36,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/alpha_scaling.py",
+      "original_sha256": "d0855655f144983b99f97b63d73488930b4dfebd4855a0640ce27ed3e0e063bc",
+      "supplied_sha256": "d0855655f144983b99f97b63d73488930b4dfebd4855a0640ce27ed3e0e063bc",
+      "original_bytes": 10884,
+      "supplied_bytes": 10884,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/analyze_depth4_matched_freeze_branch.py",
+      "original_sha256": "31a7b0c68dfb345cb968531b4a9ea391a271662fab927fb7400741129bd7d23a",
+      "supplied_sha256": "31a7b0c68dfb345cb968531b4a9ea391a271662fab927fb7400741129bd7d23a",
+      "original_bytes": 6212,
+      "supplied_bytes": 6212,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/analyze_depth_sweep.py",
+      "original_sha256": "32ad2f02c96f5d506f2d208ece9e6f54c9a0e62f08b7af61d7fa543fe78097d6",
+      "supplied_sha256": "32ad2f02c96f5d506f2d208ece9e6f54c9a0e62f08b7af61d7fa543fe78097d6",
+      "original_bytes": 8912,
+      "supplied_bytes": 8912,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/depth4_matched_fourier_mode_identification.py",
+      "original_sha256": "7356f8e4a01080edbb994b3d73d65623cf72159fbf655fa34c18f0d91a7438ee",
+      "supplied_sha256": "7356f8e4a01080edbb994b3d73d65623cf72159fbf655fa34c18f0d91a7438ee",
+      "original_bytes": 19815,
+      "supplied_bytes": 19815,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/depth_fourier_hypothesis_tests.py",
+      "original_sha256": "a8790f874d0722774d726540721720c6caaffd8cc3597b156208ec47ba4a42a5",
+      "supplied_sha256": "a8790f874d0722774d726540721720c6caaffd8cc3597b156208ec47ba4a42a5",
+      "original_bytes": 64210,
+      "supplied_bytes": 64210,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/depth_fourier_layerwise_mechanism.py",
+      "original_sha256": "df65b836c585ce429bee2d711764a48f794628d204572289eeb5b00dbfe55f0d",
+      "supplied_sha256": "df65b836c585ce429bee2d711764a48f794628d204572289eeb5b00dbfe55f0d",
+      "original_bytes": 65106,
+      "supplied_bytes": 65106,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/depth_fourier_mode_identification.py",
+      "original_sha256": "c7bf5d54536155d59137eb9d1e234e9de3f37d6dea53f5d50ac7ad3dc0a2f736",
+      "supplied_sha256": "c7bf5d54536155d59137eb9d1e234e9de3f37d6dea53f5d50ac7ad3dc0a2f736",
+      "original_bytes": 43408,
+      "supplied_bytes": 43408,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/resume_depth_variant.py",
+      "original_sha256": "a490bff818c9b962b732b0d0aed39e25d7c5b6f6e4c37eb2ef9556bb8770fbff",
+      "supplied_sha256": "a490bff818c9b962b732b0d0aed39e25d7c5b6f6e4c37eb2ef9556bb8770fbff",
+      "original_bytes": 30876,
+      "supplied_bytes": 30876,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/run_depth4_extension.py",
+      "original_sha256": "612e160da65cb83b1adf5b0c0e117458b42c831fa48d058b49688d6d66defab4",
+      "supplied_sha256": "612e160da65cb83b1adf5b0c0e117458b42c831fa48d058b49688d6d66defab4",
+      "original_bytes": 8395,
+      "supplied_bytes": 8395,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/run_depth4_matched_freeze_branch.py",
+      "original_sha256": "323716175bbe6c4ebfe0c37adf0ed0812612dc94513485b5278d250dfec1b84b",
+      "supplied_sha256": "323716175bbe6c4ebfe0c37adf0ed0812612dc94513485b5278d250dfec1b84b",
+      "original_bytes": 39160,
+      "supplied_bytes": 39160,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/run_depth_fourier_mode_identification.py",
+      "original_sha256": "02a65043f0ce6b9248cf375e320407749511e20a4ae7a55de4d8224ca5b77a6b",
+      "supplied_sha256": "02a65043f0ce6b9248cf375e320407749511e20a4ae7a55de4d8224ca5b77a6b",
+      "original_bytes": 5468,
+      "supplied_bytes": 5468,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/run_depth_sweep.py",
+      "original_sha256": "a31d764f638d2958085e610bb1a59730466467865df483c6a0b33881a32a8499",
+      "supplied_sha256": "a31d764f638d2958085e610bb1a59730466467865df483c6a0b33881a32a8499",
+      "original_bytes": 8858,
+      "supplied_bytes": 8858,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/experiments/depth/train_depth_variant.py",
+      "original_sha256": "4cd6ad4dd9cf01cbbb61e8c5fbe2caebb03a195f7bb1afb6783b2ed12df4cb6b",
+      "supplied_sha256": "4cd6ad4dd9cf01cbbb61e8c5fbe2caebb03a195f7bb1afb6783b2ed12df4cb6b",
+      "original_bytes": 36054,
+      "supplied_bytes": 36054,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/metrics.py",
+      "original_sha256": "3dc3e8a3fd98298208f4e7c1884e62a111ff54bad5f2547f33becab01f398a6d",
+      "supplied_sha256": "3dc3e8a3fd98298208f4e7c1884e62a111ff54bad5f2547f33becab01f398a6d",
+      "original_bytes": 3009,
+      "supplied_bytes": 3009,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/model.py",
+      "original_sha256": "1efc903b11446bf7c0b6794e120c34cbebf679b91a40123d4a7f79cf83837d72",
+      "supplied_sha256": "1efc903b11446bf7c0b6794e120c34cbebf679b91a40123d4a7f79cf83837d72",
+      "original_bytes": 5851,
+      "supplied_bytes": 5851,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/optimizers/muon.py",
+      "original_sha256": "bcbfcef627d67bd5a3393c4ddacc9bdf4cb061d3a2014da1c3cb1d7ae591556d",
+      "supplied_sha256": "bcbfcef627d67bd5a3393c4ddacc9bdf4cb061d3a2014da1c3cb1d7ae591556d",
+      "original_bytes": 9704,
+      "supplied_bytes": 9704,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_snapshot/muon-grokking/optimizers/muon_no_ns.py",
+      "original_sha256": "231cdfcbe39c7fe533b18430aaba04950f2e07087e291730eb27b337d0f6f4e6",
+      "supplied_sha256": "231cdfcbe39c7fe533b18430aaba04950f2e07087e291730eb27b337d0f6f4e6",
+      "original_bytes": 7836,
+      "supplied_bytes": 7836,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "summary.json",
+      "original_sha256": "deb57b089b7000157fa7c00917faf8662c2998562653e0eafeb44e02c9cbe31d",
+      "supplied_sha256": "deb57b089b7000157fa7c00917faf8662c2998562653e0eafeb44e02c9cbe31d",
+      "original_bytes": 84382,
+      "supplied_bytes": 84382,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "training_processes_complete.json",
+      "original_sha256": "8a50c32c1e8c32d07bfc22dc6f2145de735753fa01825c7828776a3b7540e178",
+      "supplied_sha256": "8a50c32c1e8c32d07bfc22dc6f2145de735753fa01825c7828776a3b7540e178",
+      "original_bytes": 106,
+      "supplied_bytes": 106,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "verification.json",
+      "original_sha256": "8c4ea3aeaba8374e20364e571387084037c1d921758d09a02b388b9a555a1c78",
+      "supplied_sha256": "8c4ea3aeaba8374e20364e571387084037c1d921758d09a02b388b9a555a1c78",
+      "original_bytes": 12450,
+      "supplied_bytes": 12450,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "verify_and_summarize.py",
+      "original_sha256": "a8b1218ead0ac023ce1cf1da6a83eb0534b93606aadd413de842805a6b28646f",
+      "supplied_sha256": "a8b1218ead0ac023ce1cf1da6a83eb0534b93606aadd413de842805a6b28646f",
+      "original_bytes": 9969,
+      "supplied_bytes": 9969,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "verify_runner.py",
+      "original_sha256": "a83fc08d8e0fc0dfc3a87db02709f3b3ff5690f94506c681a49b21604f5392d1",
+      "supplied_sha256": "a83fc08d8e0fc0dfc3a87db02709f3b3ff5690f94506c681a49b21604f5392d1",
+      "original_bytes": 3182,
+      "supplied_bytes": 3182,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "watch_events.py",
+      "original_sha256": "c781ce9130b5e0ff87fed6475c240f27e16d92cbb8861ff209cb63bf673c0dc8",
+      "supplied_sha256": "c781ce9130b5e0ff87fed6475c240f27e16d92cbb8861ff209cb63bf673c0dc8",
+      "original_bytes": 1841,
+      "supplied_bytes": 1841,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "write_report.py",
+      "original_sha256": "29d2f0d63aeac2ba156b18c632415dcd4e9c903ded61c93bc1c15ee5860cd9e2",
+      "supplied_sha256": "29d2f0d63aeac2ba156b18c632415dcd4e9c903ded61c93bc1c15ee5860cd9e2",
+      "original_bytes": 9794,
+      "supplied_bytes": 9794,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_environment.json",
+      "original_sha256": "7d54287207fd8fa8eaa14a366861736250f5ce0b757489bcb4327faea9a62412",
+      "supplied_sha256": "7d54287207fd8fa8eaa14a366861736250f5ce0b757489bcb4327faea9a62412",
+      "original_bytes": 705,
+      "supplied_bytes": 705,
+      "changes": []
+    },
+    {
+      "study": "rms_replication",
+      "path": "supplementary_audit_manifest.json",
+      "original_sha256": "a9c121fd8f0d09546fe33162151699c26ac247e4261e0b7ac0a08723c55d8d88",
+      "supplied_sha256": "a9c121fd8f0d09546fe33162151699c26ac247e4261e0b7ac0a08723c55d8d88",
+      "original_bytes": 853,
+      "supplied_bytes": 853,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "audit_rms_completed.py",
+      "original_sha256": "aaca9879b9edc70f62cadd2b537a6b14998f58e19d92a453aa39ba4427dc7cf2",
+      "supplied_sha256": "aaca9879b9edc70f62cadd2b537a6b14998f58e19d92a453aa39ba4427dc7cf2",
+      "original_bytes": 10694,
+      "supplied_bytes": 10694,
+      "changes": []
+    },
+    {
+      "study": "control_provenance",
+      "path": "rms_completed_independent_audit.json",
+      "original_sha256": "1b392cea838e9325ae82ace2181d253ab595bec9aefa6e6a9074780009c42bbc",
+      "supplied_sha256": "1b392cea838e9325ae82ace2181d253ab595bec9aefa6e6a9074780009c42bbc",
+      "original_bytes": 22617,
+      "supplied_bytes": 22617,
+      "changes": []
+    }
+  ],
+  "portable_script_correspondence": [
+    {
+      "study": "decoder_controls",
+      "path": "execution_commands.md",
+      "canonical_source_sha256": "8d6abbd195ebc591357e5e660200e18a088c9dbf2ff1bfb483ab2c98d819945f",
+      "anonymization_only_archive": "followup_studies/work/decoder_controls/source_history/execution_commands.md",
+      "archive_sha256": "8d6abbd195ebc591357e5e660200e18a088c9dbf2ff1bfb483ab2c98d819945f",
+      "portable_changes": [
+        "Interpreter selected through portable python3 command and repository-relative script path"
+      ],
+      "portable_sha256": "80bf8f9a7039dcb00f10848413fa9ac667ab98c4fb19ecf75734c8984c170a72"
+    },
+    {
+      "study": "decoder_controls",
+      "path": "run_remaining.sh",
+      "canonical_source_sha256": "4d4771fceb5bf6f45cb4ba66aa78c8b037892513873089b062f3fc2702386aa9",
+      "anonymization_only_archive": "followup_studies/work/decoder_controls/source_history/run_remaining.sh",
+      "archive_sha256": "4d4771fceb5bf6f45cb4ba66aa78c8b037892513873089b062f3fc2702386aa9",
+      "portable_changes": [
+        "Interpreter selected through portable python3 command and repository-relative script path"
+      ],
+      "portable_sha256": "759a59db7bf87a405c21951f2e99bf7bb9fa7babea71b8b19643b5c6b4d0a54a"
+    },
+    {
+      "study": "control_provenance",
+      "path": "audit_records.py",
+      "canonical_source_sha256": "f328dcf7661fcc5751863ab4f233e064d1f320b0c67db5d68a69276f6e2f8daa",
+      "anonymization_only_archive": "followup_studies/work/control_provenance/source_history/audit_records.py",
+      "archive_sha256": "f328dcf7661fcc5751863ab4f233e064d1f320b0c67db5d68a69276f6e2f8daa",
+      "portable_changes": [
+        "MUON_SOURCE_REPO fallback resolves reviewer repository root"
+      ],
+      "portable_sha256": "20458654f9edd16d9dcceb0f70960f264071c935d62d34ba2bccdc558165a449"
+    },
+    {
+      "study": "control_provenance",
+      "path": "build_feature_mean_timeline.py",
+      "canonical_source_sha256": "65ca9d226b4d98f167daba28818cf17851d15af9d6d703ecacf93a525331488d",
+      "anonymization_only_archive": "followup_studies/work/control_provenance/source_history/build_feature_mean_timeline.py",
+      "archive_sha256": "65ca9d226b4d98f167daba28818cf17851d15af9d6d703ecacf93a525331488d",
+      "portable_changes": [
+        "MUON_SOURCE_REPO fallback resolves reviewer repository root"
+      ],
+      "portable_sha256": "75b746ad06bf018527ded9eb69bf6bbc65d460abc7bad2c19171480f43b749a0"
+    },
+    {
+      "study": "control_provenance",
+      "path": "replay_control_implementations.py",
+      "canonical_source_sha256": "b72182f569252944dc700160a8a308e59771f2907573ee41d67da4a396e1d898",
+      "anonymization_only_archive": "followup_studies/work/control_provenance/source_history/replay_control_implementations.py",
+      "archive_sha256": "b72182f569252944dc700160a8a308e59771f2907573ee41d67da4a396e1d898",
+      "portable_changes": [
+        "MUON_SOURCE_REPO override and reviewer-root fallback added; scientific code unchanged"
+      ],
+      "portable_sha256": "697345fff43bbd578101f4e13cd8ba7570cfb34abc83968cc13232e0a55eb512"
+    },
+    {
+      "study": "control_provenance",
+      "path": "verify_feature_mean_timeline.py",
+      "canonical_source_sha256": "748b14d668361bc8e842cb780d16053139784808e8e96e33259d45b06100cc33",
+      "anonymization_only_archive": "followup_studies/work/control_provenance/source_history/verify_feature_mean_timeline.py",
+      "archive_sha256": "748b14d668361bc8e842cb780d16053139784808e8e96e33259d45b06100cc33",
+      "portable_changes": [
+        "MUON_SOURCE_REPO fallback resolves reviewer repository root"
+      ],
+      "portable_sha256": "f22af3a3cbca83094d9b5988eaded93fc5f5b0c92b6c80d562ca948cb6be23ab"
+    }
+  ],
+  "omitted": [
+    {
+      "study": "decoder_controls",
+      "path": "__pycache__/run_controls.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "__pycache__/historical_branch_collapse.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "audit_rms_readonly.py",
+      "reason": "Interim RMS audit omitted; completed RMS audits and full completed study are included."
+    },
+    {
+      "study": "control_provenance",
+      "path": "mplcache/fontlist-v3.11.0.json",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/local/user/Documents/Codex/2026-09-22/sin/work/control_provenance/audit_records.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/local/user/Documents/Codex/2026-09-22/sin/work/control_provenance/build_feature_mean_timeline.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/local/user/Documents/Codex/2026-09-22/sin/work/control_provenance/replay_control_implementations.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/local/user/Documents/Codex/2026-09-22/sin/work/control_provenance/verify_feature_mean_timeline.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/__future__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/_colorize.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/_opcode_metadata.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/_py_warnings.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/_weakrefset.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/annotationlib.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/argparse.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/ast.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/bz2.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/codeop.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/collections/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/compression/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/compression/_common/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/compression/_common/_streams.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/compression/zstd/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/compression/zstd/_zstdfile.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/contextlib.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/copy.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/copyreg.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/dataclasses.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/dis.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/encodings/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/encodings/aliases.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/encodings/utf_8.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/encodings/utf_8_sig.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/enum.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/fnmatch.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/functools.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/gettext.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/importlib/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/importlib/_abc.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/inspect.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/keyword.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/linecache.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/locale.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/lzma.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/opcode.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/operator.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/py_compile.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/re/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/re/_casefix.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/re/_compiler.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/re/_constants.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/re/_parser.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/reprlib.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/shutil.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/site-packages/_distutils_hack/__init__.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/textwrap.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/token.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/tokenize.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/traceback.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/types.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/warnings.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "pycache/opt/homebrew/Caskroom/miniforge/base/envs/research/lib/python3.14/weakref.cpython-314.pyc",
+      "reason": "Transient cache or temporary file"
+    },
+    {
+      "study": "control_provenance",
+      "path": "rms_independent_audit.json",
+      "reason": "Interim RMS audit omitted; completed RMS audits and full completed study are included."
+    }
+  ],
+  "generated_distribution_files": [
+    {
+      "path": "DISTRIBUTION_README.md",
+      "bytes": 7361,
+      "sha256": "98b1322014a1feb8d3357f12c94d623e6b617265ca71f35f8f29f99b31b46c9f",
+      "scope": "Distribution guide"
+    },
+    {
+      "path": "verify_distribution.py",
+      "bytes": 1164,
+      "sha256": "313c6dfb8eaaa72a82df9489e29b63ef60151252deee19b99371fc1233873725",
+      "scope": "Read-only supplied-byte verifier"
+    },
+    {
+      "path": "packaging_verification.json",
+      "bytes": 114174,
+      "sha256": "dfda99b19b35936f5f48eb7d2caf81074d88c598f60cd1ad8999716a4c647187",
+      "scope": "Completed numeric-preservation, portability and anonymity verification"
+    },
+    {
+      "path": "followup_studies/work/rms_replication/prepare_reproduction.py",
+      "bytes": 2550,
+      "sha256": "bfedd21f606ea1d125b93fb609875a24a4d29226901150c7737abf03e31f6048",
+      "scope": "Administrative fresh-directory wrapper; no scientific computation"
+    },
+    {
+      "path": "followup_studies/work/rms_replication/DISTRIBUTION_EXECUTION.md",
+      "bytes": 3913,
+      "sha256": "4480a1fae74880b4f4227631fc6bbf941907867934082f0e343565ca5029443c",
+      "scope": "Portable fresh-reproduction commands"
+    },
+    {
+      "path": "packaging_audits/rms_preservation_check_original_layout.py",
+      "bytes": 3464,
+      "sha256": "86d0bc9a65638d030ebd4b3e96503b6b02abf8074bdc7a4c41e52be573318118",
+      "scope": "Unchanged source of independent completed RMS numerical preservation audit; original relative dual-tree layout"
+    }
+  ],
+  "distribution_totals": {
+    "file_count_including_manifest": 434,
+    "study_source_files": 421,
+    "source_files_by_study": {
+      "decoder_controls": 62,
+      "control_provenance": 40,
+      "rms_replication": 319
+    },
+    "portable_source_archives": 6,
+    "generated_distribution_files": 6,
+    "canonical_scientific_outputs_modified": false
+  }
+}

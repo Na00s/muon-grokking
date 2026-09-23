@@ -1,0 +1,442 @@
+{
+  "complete": true,
+  "protocol_sha256": "9f6dcd6ed055c7b2cf21d1e45f1a3026d63f2e8cdfb2e560bc159d680d3cb493",
+  "immutable_source_hashes_verified": true,
+  "runs": [
+    {
+      "seed": 1,
+      "status": "confirmed_grokking_with_failure",
+      "terminal_step": 15095,
+      "confirmation_step": 11500,
+      "first_of_confirmation_streak": 11000,
+      "all_states_logged": 15096,
+      "test_evaluations": 152,
+      "post_confirmation_test_evaluations": 37,
+      "post_confirmation_below95_evaluations": 1,
+      "minimum_post_confirmation_sampled_test_accuracy": 0.016332923145765746,
+      "terminal": {
+        "train": {
+          "correct": 41,
+          "total": 3830,
+          "accuracy": 0.010704960835509139,
+          "accurate_ce32": 5.857538223266602,
+          "accurate_ce64": 5.857538421743363
+        },
+        "test": {
+          "correct": 146,
+          "total": 8939,
+          "accuracy": 0.016332923145765746,
+          "accurate_ce32": 5.870660781860352,
+          "accurate_ce64": 5.870660928427615
+        }
+      },
+      "monitoring_recomputed": true,
+      "terminal_metrics_recomputed": true,
+      "configuration_verified": true
+    },
+    {
+      "seed": 2,
+      "status": "confirmed_grokking_with_failure",
+      "terminal_step": 15789,
+      "confirmation_step": 12600,
+      "first_of_confirmation_streak": 12100,
+      "all_states_logged": 15790,
+      "test_evaluations": 159,
+      "post_confirmation_test_evaluations": 33,
+      "post_confirmation_below95_evaluations": 1,
+      "minimum_post_confirmation_sampled_test_accuracy": 0.54547488533393,
+      "terminal": {
+        "train": {
+          "correct": 2115,
+          "total": 3830,
+          "accuracy": 0.5522193211488251,
+          "accurate_ce32": 3.0871708393096924,
+          "accurate_ce64": 3.0871708126634454
+        },
+        "test": {
+          "correct": 4876,
+          "total": 8939,
+          "accuracy": 0.54547488533393,
+          "accurate_ce32": 3.0822606086730957,
+          "accurate_ce64": 3.0822608187672835
+        }
+      },
+      "monitoring_recomputed": true,
+      "terminal_metrics_recomputed": true,
+      "configuration_verified": true
+    },
+    {
+      "seed": 3,
+      "status": "confirmed_grokking_with_failure",
+      "terminal_step": 14271,
+      "confirmation_step": 10000,
+      "first_of_confirmation_streak": 9500,
+      "all_states_logged": 14272,
+      "test_evaluations": 144,
+      "post_confirmation_test_evaluations": 44,
+      "post_confirmation_below95_evaluations": 1,
+      "minimum_post_confirmation_sampled_test_accuracy": 0.6285938024387515,
+      "terminal": {
+        "train": {
+          "correct": 2457,
+          "total": 3830,
+          "accuracy": 0.6415143603133159,
+          "accurate_ce32": 1.8052316904067993,
+          "accurate_ce64": 1.8052316969409696
+        },
+        "test": {
+          "correct": 5619,
+          "total": 8939,
+          "accuracy": 0.6285938024387515,
+          "accurate_ce32": 1.8805345296859741,
+          "accurate_ce64": 1.8805344902720849
+        }
+      },
+      "monitoring_recomputed": true,
+      "terminal_metrics_recomputed": true,
+      "configuration_verified": true
+    },
+    {
+      "seed": 4,
+      "status": "confirmed_grokking_with_failure",
+      "terminal_step": 15136,
+      "confirmation_step": 12600,
+      "first_of_confirmation_streak": 12100,
+      "all_states_logged": 15137,
+      "test_evaluations": 153,
+      "post_confirmation_test_evaluations": 27,
+      "post_confirmation_below95_evaluations": 1,
+      "minimum_post_confirmation_sampled_test_accuracy": 0.010291978968564717,
+      "terminal": {
+        "train": {
+          "correct": 34,
+          "total": 3830,
+          "accuracy": 0.008877284595300261,
+          "accurate_ce32": 6.351696014404297,
+          "accurate_ce64": 6.351696065701701
+        },
+        "test": {
+          "correct": 92,
+          "total": 8939,
+          "accuracy": 0.010291978968564717,
+          "accurate_ce32": 6.362141132354736,
+          "accurate_ce64": 6.362141038026656
+        }
+      },
+      "monitoring_recomputed": true,
+      "terminal_metrics_recomputed": true,
+      "configuration_verified": true
+    }
+  ],
+  "event_audits": [
+    {
+      "seed": 0,
+      "cohort": "historical_cpu_pilot",
+      "passed": true,
+      "replay_passed": true,
+      "derivative_arrays_independently_recomputed": true,
+      "decoder_predictions_independently_recomputed": true,
+      "validation_indices_verified": true,
+      "source_artifact_hashes_verified": true,
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "heldout_correct": 8704,
+          "heldout_accuracy": 0.973710705895514,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "heldout_correct": 8566,
+          "heldout_accuracy": 0.9582727374426669,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "heldout_correct": 141,
+          "heldout_accuracy": 0.015773576462691577,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            false,
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "heldout_correct": 234,
+          "heldout_accuracy": 0.026177424767871126,
+          "refit_converged": false,
+          "candidate_convergence": [
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "cohort": "prospective_cpu",
+      "passed": true,
+      "replay_passed": true,
+      "derivative_arrays_independently_recomputed": true,
+      "decoder_predictions_independently_recomputed": true,
+      "validation_indices_verified": true,
+      "source_artifact_hashes_verified": true,
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "heldout_correct": 8939,
+          "heldout_accuracy": 1.0,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "heldout_correct": 8939,
+          "heldout_accuracy": 1.0,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "heldout_correct": 1551,
+          "heldout_accuracy": 0.17350934108960733,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "heldout_correct": 988,
+          "heldout_accuracy": 0.11052690457545587,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "cohort": "prospective_cpu",
+      "passed": true,
+      "replay_passed": true,
+      "derivative_arrays_independently_recomputed": true,
+      "decoder_predictions_independently_recomputed": true,
+      "validation_indices_verified": true,
+      "source_artifact_hashes_verified": true,
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "heldout_correct": 8939,
+          "heldout_accuracy": 1.0,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "heldout_correct": 8939,
+          "heldout_accuracy": 1.0,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "heldout_correct": 5798,
+          "heldout_accuracy": 0.6486184136928068,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "heldout_correct": 4948,
+          "heldout_accuracy": 0.553529477570198,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "cohort": "prospective_cpu",
+      "passed": true,
+      "replay_passed": true,
+      "derivative_arrays_independently_recomputed": true,
+      "decoder_predictions_independently_recomputed": true,
+      "validation_indices_verified": true,
+      "source_artifact_hashes_verified": true,
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "heldout_correct": 8939,
+          "heldout_accuracy": 1.0,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "heldout_correct": 8939,
+          "heldout_accuracy": 1.0,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "heldout_correct": 8387,
+          "heldout_accuracy": 0.9382481261886118,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "heldout_correct": 7925,
+          "heldout_accuracy": 0.8865644926725584,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 4,
+      "cohort": "prospective_cpu",
+      "passed": true,
+      "replay_passed": true,
+      "derivative_arrays_independently_recomputed": true,
+      "decoder_predictions_independently_recomputed": true,
+      "validation_indices_verified": true,
+      "source_artifact_hashes_verified": true,
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "heldout_correct": 8774,
+          "heldout_accuracy": 0.9815415594585524,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "heldout_correct": 8600,
+          "heldout_accuracy": 0.9620762948875713,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "heldout_correct": 237,
+          "heldout_accuracy": 0.026513032777715627,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            false,
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "heldout_correct": 369,
+          "heldout_accuracy": 0.0412797852108737,
+          "refit_converged": false,
+          "candidate_convergence": [
+            true
+          ]
+        }
+      ]
+    }
+  ],
+  "remaining": []
+}

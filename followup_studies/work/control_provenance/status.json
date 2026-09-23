@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "historical_summary_checks": "passed",
+  "controlled_parity_replay": "passed:3 programs x2000updates;201 common sampled metric rows and final model/optimizer/RNG states identical",
+  "feature_mean_timeline": "complete:88points,7sampled jointfailure observations across10archived trajectories",
+  "pending_computations": [],
+  "remaining_provenance_limitations": [
+    "Historical44,000sourcecheckpoint binary, original runtime/backend manifests and original execution commands unavailable; historical two-control divergence cannot be assigned a cause.",
+    "CPU backend of archived seedstudy is documented in README, with no independent original runtime manifest."
+  ],
+  "existing_results_preserved": true,
+  "source_checkpoint_unchanged": true
+}

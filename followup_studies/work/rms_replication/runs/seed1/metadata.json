@@ -1,0 +1,123 @@
+{
+  "seed": 1,
+  "cohort": "prospective_cpu",
+  "protocol_sha256": "9f6dcd6ed055c7b2cf21d1e45f1a3026d63f2e8cdfb2e560bc159d680d3cb493",
+  "runner_sha256": "0872f50d24e2e0db67d9d22d583f8cc36bb2f829262342645079d2a0444e77f1",
+  "environment": {
+    "backend": "cpu",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:24:52) [Clang 20.1.8 ]",
+    "torch": "2.13.0",
+    "numpy": "2.5.2",
+    "threads": 1,
+    "interop_threads": 1,
+    "deterministic_algorithms": true,
+    "float32_matmul_precision": "highest",
+    "default_dtype": "torch.float32",
+    "torch_build": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 202002\n  - clang 21.0.0\n  - OpenMP 202011\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, COMMIT_SHA=cf30153c4c131c8164ee7798e5022d810682e2cb, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Qunused-arguments -faligned-new -fno-math-errno -fno-trapping-math -Werror=format -fclang-abi-compat=17 -DUSE_MPS -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.13.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+    "mps_available": false,
+    "cuda_available": false,
+    "active_gpu": false
+  },
+  "config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "source_initial_tensor_sha256": "f71e3c32b565a96f8466f5ee0990bcf79885e4f487cc6a89872de1bce5a1a7af",
+  "parameter_groups": {
+    "muon": [
+      {
+        "learning_rate": 0.03,
+        "momentum": 0.95,
+        "weight_decay": 0.1,
+        "newton_schulz_steps": 5,
+        "nesterov": true,
+        "parameters": [
+          "transformer_blocks.0.attention.qkv_projection.weight",
+          "transformer_blocks.0.attention.output_projection.weight",
+          "transformer_blocks.0.mlp.input_projection.weight",
+          "transformer_blocks.0.mlp.output_projection.weight"
+        ]
+      }
+    ],
+    "auxiliary_adamw": [
+      {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true,
+        "parameters": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ]
+      }
+    ],
+    "unembedding_adamw": [
+      {
+        "lr": 0.00025,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true,
+        "parameters": [
+          "unembedding.weight"
+        ]
+      }
+    ]
+  },
+  "data": {
+    "train_inputs": {
+      "shape": [
+        3830,
+        3
+      ],
+      "dtype": "torch.int64",
+      "sha256": "ae646ebbf777ec8dbe840adfc730acbccdf13ca49d664dc5d4092b86d6b3db74"
+    },
+    "train_targets": {
+      "shape": [
+        3830
+      ],
+      "dtype": "torch.int64",
+      "sha256": "9345531ff6706fc3037802dfce40b07adfb5911a15436be1b966a2079c89c98f"
+    },
+    "test_inputs": {
+      "shape": [
+        8939,
+        3
+      ],
+      "dtype": "torch.int64",
+      "sha256": "8db87a9ee53332a143de2c27d1062d87726329192b3d7e84de7331502cf2eb7c"
+    },
+    "test_targets": {
+      "shape": [
+        8939
+      ],
+      "dtype": "torch.int64",
+      "sha256": "555635a116e0e52f4cb8a28d25a39c8fae8132db6c9a75557a347ea6381a4594"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{All eight parameter-group swaps at captured RMS failures. Seed $0$ is the historical pilot; seeds $1$--$4$ are prospective. Mask order is embeddings, hidden matrices, readout; $0$ retains the preceding state and $1$ uses the following state. Accuracy is in percent. CE is accurate float64 evaluation of the resulting float32 logits. Raw records additionally retain exact counts and float32 accurate CE.}
+\label{tab:rms-swaps-1}
+\begin{tabular}{lrrrrr}
+\toprule
+Seed & EHR & Train & Test & Train CE & Test CE \\
+\midrule
+$0$ & 000 & 95.87 & 96.21 & 0.34207 & 0.32198 \\
+$0$ & 001 & 95.87 & 96.21 & 0.33814 & 0.32056 \\
+$0$ & 010 & 96.50 & 96.41 & 0.13595 & 0.20983 \\
+$0$ & 011 & 96.55 & 96.41 & 0.13393 & 0.2092 \\
+$0$ & 100 & 1.15 & 0.94 & 6.7289 & 6.7765 \\
+$0$ & 101 & 1.12 & 0.93 & 6.7313 & 6.7788 \\
+$0$ & 110 & 1.20 & 0.89 & 6.808 & 6.8589 \\
+$0$ & 111 & 1.17 & 0.88 & 6.811 & 6.8617 \\
+\addlinespace
+$1$ & 000 & 99.53 & 99.70 & 0.0091396 & 0.0054243 \\
+$1$ & 001 & 99.53 & 99.71 & 0.008633 & 0.0051797 \\
+$1$ & 010 & 100.00 & 100.00 & 2.9798e-05 & 3.6247e-05 \\
+$1$ & 011 & 100.00 & 100.00 & 2.945e-05 & 3.5891e-05 \\
+$1$ & 100 & 1.10 & 1.61 & 5.8687 & 5.8818 \\
+$1$ & 101 & 1.10 & 1.61 & 5.8695 & 5.8827 \\
+$1$ & 110 & 1.07 & 1.63 & 5.8567 & 5.8698 \\
+$1$ & 111 & 1.07 & 1.63 & 5.8575 & 5.8707 \\
+\addlinespace
+$2$ & 000 & 100.00 & 100.00 & 6.4328e-05 & 5.5268e-05 \\
+$2$ & 001 & 100.00 & 100.00 & 6.324e-05 & 5.477e-05 \\
+$2$ & 010 & 100.00 & 100.00 & 2.8588e-05 & 3.2462e-05 \\
+$2$ & 011 & 100.00 & 100.00 & 2.857e-05 & 3.2467e-05 \\
+$2$ & 100 & 54.57 & 53.73 & 3.1082 & 3.105 \\
+$2$ & 101 & 54.57 & 53.73 & 3.1082 & 3.105 \\
+$2$ & 110 & 55.22 & 54.55 & 3.0872 & 3.0822 \\
+$2$ & 111 & 55.22 & 54.55 & 3.0872 & 3.0823 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\end{table}

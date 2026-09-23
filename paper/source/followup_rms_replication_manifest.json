@@ -1,0 +1,163 @@
+{
+  "mode": "COMPLETE_VERIFIED_STUDY",
+  "generator": {
+    "path": "figures/build_rms_replication_figure.py",
+    "sha256": "d48852e2d1c98f8a553f9aef90f03c06b4066131844da283bfb489d477c12bd1"
+  },
+  "source_sha256": {
+    "protocol.json": "9f6dcd6ed055c7b2cf21d1e45f1a3026d63f2e8cdfb2e560bc159d680d3cb493",
+    "verification.json": "8c4ea3aeaba8374e20364e571387084037c1d921758d09a02b388b9a555a1c78",
+    "summary.json": "deb57b089b7000157fa7c00917faf8662c2998562653e0eafeb44e02c9cbe31d",
+    "analyses/historical_seed0/summary.json": "5353a239eb3f3989ddedab86d209fb8c54c392d7b5998390fe7c45c566d0ed1f",
+    "analyses/historical_seed0/completion.json": "1cd67b92bbe97552f8a6fda30b6b1c5a1c96cd209d8e43b9a90af86f83926723",
+    "analyses/historical_seed0/replay_verification.json": "1ed00b6938cde4d0e4304953a36d79e1cf788fb5831372a3d4ae4382242c3b15",
+    "analyses/prospective_seed1/summary.json": "918184fa8b290f10b45c4c968a80add75e84b18cd9d020eca8ad5dba9b757c63",
+    "analyses/prospective_seed1/completion.json": "5a46b6e50e05a6e07d09bc6b74ac46c29c1dfb95372c1bec1115f8a0a1c3f6fb",
+    "analyses/prospective_seed1/replay_verification.json": "201d6a263ebb57b2cb5b4aea64a6e23dd506cc2b915637c3f85400966f3a9d20",
+    "analyses/prospective_seed2/summary.json": "70bb8941816f75d99d0ca5bebce4609bfbae350333497e9a8efaf21e76946638",
+    "analyses/prospective_seed2/completion.json": "41aec7ef3e46f0907bc4ac1634a0d96137e1293c988d1e67cc38ced545be23aa",
+    "analyses/prospective_seed2/replay_verification.json": "893a5eb71868edfd724f2da38ef281e3b0ab6a174d11167f96fef90296773651",
+    "analyses/prospective_seed3/summary.json": "5724dfd3ee96ef242339b3316a62cfe298f78e9f48a39b9a033162122c8df71c",
+    "analyses/prospective_seed3/completion.json": "8b5fe0d8a757bf400cbf0e1a349389d6b30471c3368ec21ef98ccfacee8bc9af",
+    "analyses/prospective_seed3/replay_verification.json": "753f7ded7b43852a917d4710177a3f508d38657027104d68819149ca309e7d16",
+    "analyses/prospective_seed4/summary.json": "ec02fed8292c1915b5839f43451a903c994a38ab6a31df2ef6f1777c0cf80775",
+    "analyses/prospective_seed4/completion.json": "0292904a236a92749a1e8ab1e54b68ffd9df47437933acab11ebca4430b6fe48",
+    "analyses/prospective_seed4/replay_verification.json": "352a0544cfb6d671ea2fbf64747d144fec469d0f3df55a3f49a7c79a91bf5df3"
+  },
+  "figure_width_pdf_points": 396,
+  "figure_height_pdf_points": 207.0,
+  "ordinary_text_minimum_points": 8,
+  "accuracy_units": "percent",
+  "accuracy_color_scale": [
+    0,
+    100
+  ],
+  "group_order": [
+    "embeddings",
+    "hidden",
+    "readout"
+  ],
+  "swap_masks": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+  "decoder": "CV-selected training-only decoder using actual input after final RMS",
+  "convergence_encoding": "Filled markers: converged refit; open marker with x: unconverged refit.",
+  "prospective_completed": 4,
+  "prospective_seed_count": 4,
+  "plotted_events": [
+    {
+      "cohort": "historical_cpu_pilot",
+      "seed": 0,
+      "previous_step": 28494,
+      "failed_step": 28495,
+      "swap_test_accuracy_percent": [
+        96.20762948875714,
+        96.20762948875714,
+        96.40899429466383,
+        96.40899429466383,
+        0.9397024275646046,
+        0.928515493903121,
+        0.8949546929186709,
+        0.8837677592571875
+      ],
+      "cv_decoder_before_percent": 97.3710705895514,
+      "cv_decoder_after_percent": 1.5773576462691576,
+      "cv_before_refit_converged": true,
+      "cv_after_refit_converged": true
+    },
+    {
+      "cohort": "prospective_cpu",
+      "seed": 1,
+      "previous_step": 15094,
+      "failed_step": 15095,
+      "swap_test_accuracy_percent": [
+        99.69795279113994,
+        99.70913972480143,
+        100.0,
+        100.0,
+        1.6109184472536078,
+        1.6109184472536078,
+        1.6332923145765745,
+        1.6332923145765745
+      ],
+      "cv_decoder_before_percent": 100.0,
+      "cv_decoder_after_percent": 17.350934108960733,
+      "cv_before_refit_converged": true,
+      "cv_after_refit_converged": true
+    },
+    {
+      "cohort": "prospective_cpu",
+      "seed": 2,
+      "previous_step": 15788,
+      "failed_step": 15789,
+      "swap_test_accuracy_percent": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        53.73084237610472,
+        53.73084237610472,
+        54.54748853339299,
+        54.54748853339299
+      ],
+      "cv_decoder_before_percent": 100.0,
+      "cv_decoder_after_percent": 64.86184136928068,
+      "cv_before_refit_converged": true,
+      "cv_after_refit_converged": true
+    },
+    {
+      "cohort": "prospective_cpu",
+      "seed": 3,
+      "previous_step": 14270,
+      "failed_step": 14271,
+      "swap_test_accuracy_percent": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        57.925942499160975,
+        57.925942499160975,
+        62.85938024387515,
+        62.85938024387515
+      ],
+      "cv_decoder_before_percent": 100.0,
+      "cv_decoder_after_percent": 93.82481261886117,
+      "cv_before_refit_converged": true,
+      "cv_after_refit_converged": true
+    },
+    {
+      "cohort": "prospective_cpu",
+      "seed": 4,
+      "previous_step": 15135,
+      "failed_step": 15136,
+      "swap_test_accuracy_percent": [
+        97.87448260431816,
+        97.87448260431816,
+        98.35552075176194,
+        98.41145542006936,
+        1.0515717641794384,
+        1.0515717641794384,
+        1.0291978968564717,
+        1.0291978968564717
+      ],
+      "cv_decoder_before_percent": 98.15415594585524,
+      "cv_decoder_after_percent": 2.6513032777715626,
+      "cv_before_refit_converged": true,
+      "cv_after_refit_converged": true
+    }
+  ],
+  "text_outside_canvas": [],
+  "outputs": {
+    "followup_rms_replication.pdf": "60f1fd3933ddd830bce3a0c6e3d6517fc11bbdfb29a9978cb6c8fe41e8a268f7",
+    "followup_rms_replication.png": "f7a70d18093ea1fb56a43536372fb1ecda38632aca13b7e195267121e4d7460d",
+    "followup_rms_replication_swaps.csv": "99b9e328294e2df44ab90c722858b11bbcd1fa53237e61003944078778e63bfc",
+    "followup_rms_replication_decoders.csv": "de08880a026f77ff6f4d3ea73e5199715007fe489844386378e3003b04bdd796"
+  }
+}

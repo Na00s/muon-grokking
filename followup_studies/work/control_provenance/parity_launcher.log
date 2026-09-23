@@ -1,0 +1,26 @@
+group_historical done
+component done
+group_instrumented done
+{
+  "group_historical": {
+    "model_bitwise_equal": true,
+    "optimizers_bitwise_equal": true,
+    "all_201_shared_metric_rows_equal": true,
+    "final_rng_equal": true,
+    "checkpoint_sha256": "6c2f8d20c8579d46d7bfebe200c6df1cf460897cff211e21e185e196ead874a4"
+  },
+  "component": {
+    "model_bitwise_equal": true,
+    "optimizers_bitwise_equal": true,
+    "all_201_shared_metric_rows_equal": true,
+    "final_rng_equal": true,
+    "checkpoint_sha256": "c6225452c21ace26adc5e178b3da58f2cf5873cdfdda9aab8149f89d4149e05d"
+  },
+  "group_instrumented": {
+    "model_bitwise_equal": true,
+    "optimizers_bitwise_equal": true,
+    "all_201_shared_metric_rows_equal": true,
+    "final_rng_equal": true,
+    "checkpoint_sha256": "6c2f8d20c8579d46d7bfebe200c6df1cf460897cff211e21e185e196ead874a4"
+  }
+}

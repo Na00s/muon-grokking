@@ -1,0 +1,26 @@
+{
+  "registered_at_utc": "2026-09-23T23:07:35.702581+00:00",
+  "prior_protocol_sha256": "cc7170918a1f4a918e12401d801b387aae5f898d1e72ca1a0cbce74afd040de6",
+  "active_protocol_sha256": "a574e7e63d372180be0cfed00ccca733e3dc7ca1e4fafa076695ff65b1bcfd9a",
+  "reason": "Align selection to the manuscript definition of sustained memorization: first of five scheduled train evaluations >=99.9%, before original grokking and with selected checkpoint test<95%. No probe was fit before amendment.",
+  "previous_steps": [
+    200,
+    100,
+    100,
+    100,
+    200
+  ],
+  "amended_steps": [
+    200,
+    400,
+    200,
+    100,
+    200
+  ],
+  "seed0_preparation": "Seed0 completed an exact replay under the initial registration. Both selection rules choose step200. Its unchanged features, checkpoint and replay evidence remain eligible under the amended protocol. The original preparation record is preserved separately.",
+  "original_runner_archive": {
+    "path": "run_controls_initial_registration.py",
+    "sha256": "29c8ab774f99c22dba3c3b1f22b459f9e4c53682296cc296ff10241940bfa719",
+    "matches_original_registration": true
+  }
+}

@@ -1,0 +1,26 @@
+\subsection{Historical controls and event identities}
+\label{app:control-provenance}
+
+Table~\ref{tab:branches} contains two separately executed control continuations. Control G belongs to the parameter-group suite, and Control C to the auxiliary-component suite. Both report the same losses and accuracies at step $44{,}000$, matching the archived hidden-LR-$0.01$, seed-$0$ trajectory: training loss $1.86781946\times10^{-7}$, test loss $3.32467862\times10^{-5}$, and $100\%$ accuracy on both splits. Their logged losses already differ at $44{,}010$. Each suite is evaluated every ten updates through $46{,}000$, giving $201$ samples including the source state. The reported minimum test accuracies, $16.77\%$ and $43.57\%$, reproduce the corresponding CSV minima; final accuracies and maximum auxiliary-gradient norms likewise reproduce the last row and column maxima. The first-failure column uses training accuracy below $90\%$ after memorization.
+
+The historical branch programs load the model, Muon, and auxiliary AdamW state dictionaries. This earlier design uses one AdamW group for embeddings and readout. They reseed Python and PyTorch from the saved seed, including CUDA when available; their checkpoint format omits saved RNG states and backend metadata. The model is full-batch and has no dropout. The original step-$44{,}000$ checkpoint tensors, launch commands, and runtime manifests are unavailable in the retained artifacts. Matching initial metrics therefore cannot certify bitwise equality of the two restored states or identify the original backend. The logged results remain verified; the source of their subsequent divergence is unresolved.
+
+We separately test implementation parity on an available seed-$0$, step-$16{,}000$ checkpoint. To match the earlier optimizer layout, we merge the head into the auxiliary AdamW group at learning rate $0.001$, preserving all saved moments and step counters. The historical group, component, and instrumented group programs each run $2{,}000$ updates on CPU with PyTorch $2.13.0$, one thread, and deterministic algorithms. All $201$ shared metric rows agree exactly, and terminal model, optimizer, and PyTorch RNG states are bitwise equal. This replay verifies agreement of the three implementations under the registered CPU test; its adapted source state is separately identified in the artifacts.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Distinct historical continuations around step $44{,}700$. Accuracies are percentages at each run's first observed training failure. The spectral comparison uses S's healthy $44{,}700$ state and failing $44{,}710$ state.}
+\label{tab:event-provenance}
+\begin{tabular}{llrrrr}
+\toprule
+ID & Analysis & Sample interval & End step & Failure step & Train / test \\
+\midrule
+G & Table~\ref{tab:branches}, groups & $10$ & $46{,}000$ & $44{,}700$ & $18.54 / 16.77$ \\
+C & Table~\ref{tab:branches}, components & $10$ & $46{,}000$ & $44{,}710$ & $47.70 / 43.57$ \\
+I & Applied-step diagnostics & $1$ & $46{,}000$ & $44{,}702$ & $24.31 / 22.12$ \\
+S & Spectral replay & $10$ & $45{,}000$ & $44{,}710$ & $21.12 / 19.04$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The source files under \texttt{runs/} are \nolinkurl{branch_control_from_44000.csv} (G), \nolinkurl{aux_control_from_44000.csv} (C), \nolinkurl{branch_control_from_44000_instrumented.csv} (I), and \nolinkurl{collapse_spectral_replay_from_44000.csv} (S). Their sampling intervals and terminal horizons identify separate trajectories even when event timestamps coincide. The ten-update grids can miss intervening excursions. Source hashes, exact summary calculations, and the controlled replay protocol accompany the paper.

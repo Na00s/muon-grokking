@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Accurate-CE derivative diagnostics on identical stored float32 training logits. Seed $0$ is the historical pilot; seeds $1$--$4$ are prospective. Errors compare the full mean-loss derivative with the analytic float64 reference. Class-sum residual is the $L_2$ norm across examples of the sum over classes. Maximum absolute errors and reference class-sum residuals are retained in the supporting records.}
+\label{tab:rms-derivatives}
+\begin{tabular}{llrrrr}
+\toprule
+Seed & State & Relative error & Absolute error & Reference norm & Class-sum residual \\
+\midrule
+$0$ & Before & $9.48\times10^{-8}$ & $4.06\times10^{-10}$ & $4.28\times10^{-3}$ & $4.30\times10^{-10}$ \\
+$0$ & After & $5.08\times10^{-8}$ & $8.83\times10^{-10}$ & $1.74\times10^{-2}$ & $1.55\times10^{-9}$ \\
+$1$ & Before & $8.12\times10^{-8}$ & $1.00\times10^{-10}$ & $1.24\times10^{-3}$ & $1.18\times10^{-10}$ \\
+$1$ & After & $3.88\times10^{-8}$ & $6.35\times10^{-10}$ & $1.63\times10^{-2}$ & $1.45\times10^{-9}$ \\
+$2$ & Before & $4.76\times10^{-8}$ & $1.21\times10^{-12}$ & $2.54\times10^{-5}$ & $3.67\times10^{-13}$ \\
+$2$ & After & $4.86\times10^{-8}$ & $6.02\times10^{-10}$ & $1.24\times10^{-2}$ & $9.58\times10^{-10}$ \\
+$3$ & Before & $8.99\times10^{-8}$ & $1.92\times10^{-12}$ & $2.13\times10^{-5}$ & $9.97\times10^{-13}$ \\
+$3$ & After & $5.04\times10^{-8}$ & $5.98\times10^{-10}$ & $1.19\times10^{-2}$ & $8.80\times10^{-10}$ \\
+$4$ & Before & $5.28\times10^{-8}$ & $1.40\times10^{-10}$ & $2.64\times10^{-3}$ & $2.36\times10^{-10}$ \\
+$4$ & After & $4.26\times10^{-8}$ & $7.16\times10^{-10}$ & $1.68\times10^{-2}$ & $1.37\times10^{-9}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

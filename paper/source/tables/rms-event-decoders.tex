@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Adjacent RMS events and training-only decoders. Accuracies are percentages; before means one update before the displayed event. Decoder inputs include final RMS normalization. The last column gives selected-refit convergence before/after. Seed $0$ is the historical pilot; seeds $1$--$4$ are prospective.}
+\label{tab:rms-event-decoders}
+\begin{tabular}{lrrrrrl}
+\toprule
+Seed & Event step & \multicolumn{2}{c}{Native test} & \multicolumn{2}{c}{Decoder test} & Converged \\ & & Before & After & Before & After & \\
+\midrule
+$0$ & $28{,}495$ & 96.21 & 0.88 & 97.37 & 1.58 & Yes / Yes \\
+$1$ & $15{,}095$ & 99.70 & 1.63 & 100.00 & 17.35 & Yes / Yes \\
+$2$ & $15{,}789$ & 100.00 & 54.55 & 100.00 & 64.86 & Yes / Yes \\
+$3$ & $14{,}271$ & 100.00 & 62.86 & 100.00 & 93.82 & Yes / Yes \\
+$4$ & $15{,}136$ & 97.87 & 1.03 & 98.15 & 2.65 & Yes / Yes \\
+\bottomrule
+\end{tabular}
+\end{table}

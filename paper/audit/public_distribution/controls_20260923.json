@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "scope": "New public distribution files, preserved earlier experiments, and approved manuscript correspondence.",
+  "existing_followup_files_byte_preserved": 1488,
+  "new_overlay_files_byte_identical": 434,
+  "new_study_checkpoints": 110,
+  "new_study_npz_arrays": 35,
+  "approved_source_files": 91,
+  "approved_source_differences": [
+    "main.tex"
+  ],
+  "restricted_reference_findings": 0,
+  "scan_counts": {
+    "payloads": 3726,
+    "pdfs": 38,
+    "zip_members": 3232,
+    "checkpoints": 110
+  },
+  "changed_files_scanned": 494,
+  "maximum_new_file_bytes": 14294585,
+  "files_over_100MiB": [],
+  "manuscript": {
+    "status": "passed",
+    "scope": "Public distribution of approved decoder, control-provenance and RMS revision. Reproducibility statement links to the public repository.",
+    "scientific_main_pages": 9,
+    "total_pages": 39,
+    "changed_pdf_text_pages_from_approved_copy": [
+      9
+    ],
+    "all_scientific_manuscript_text_matches_approved_copy": true,
+    "source_archive_files": 91,
+    "source_archive_rebuild_text_and_decoded_streams_identical": true,
+    "pdf_sha256": "f4859a9e71c8696defaabe1dc18186889b909e73f64b8838693065fe54808055",
+    "source_archive_sha256": "8a34b97dbce6271093a4d2abd6fdeceb6061e1958b611784e3591956a414a9e7",
+    "overfull_boxes": 0
+  },
+  "visual_inspection_pages": [
+    9
+  ],
+  "whitespace_note": "Preserved one existing trailing blank line in the frozen numerical-controls source snapshot and one in the approved appendix source. Other added text passes whitespace checks."
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "input": "figures/legibility_originals/figure5_modes.pdf",
+    "output": "figure5_modes.pdf",
+    "input_sha256": "1612a0bb05d36d4139b9a3f4471a541ad4cecd1800e61b028f3a8c69935abb95",
+    "output_sha256": "c04045884f29d892b3ce34f1d2823d5333dbdefce13dc3c51934602cec8b1de5",
+    "font_sha256": "058ea80864aef09a23f45cbec2bb5400bc3dfbdea01c3f10538a21fcb497fb74",
+    "replaced_text_runs": 41,
+    "source_font_size": 15.137967498514561,
+    "target_printed_font_size": 7,
+    "include_fraction": 0.85,
+    "all_text_tokens_preserved_after_registered_label_changes": true,
+    "label_changes": [
+      {
+        "old": "accuracy of the task-aligned family alone",
+        "new": "accuracy of the task-aligned family alone (%)"
+      },
+      {
+        "old": "accuracy of the full model",
+        "new": "accuracy of the full model (%)"
+      },
+      {
+        "old": "accuracy of the full model",
+        "new": "accuracy of the full model (%)"
+      }
+    ],
+    "original_nontext_operations_preserved": true,
+    "legend_reflow_band": [
+      0,
+      0,
+      727.91998,
+      37
+    ]
+  },
+  {
+    "input": "figures/legibility_originals/figure6_depth.pdf",
+    "output": "figure6_depth.pdf",
+    "input_sha256": "0f43c909f2c7b81508f09210c91bdeaf4efa53e3396799e09e7a466ec6aa6d82",
+    "output_sha256": "03f299c2fe0406a49a08f5211dca501c00b45fd0bdc480dc5dd6f7fd292e45d8",
+    "font_sha256": "058ea80864aef09a23f45cbec2bb5400bc3dfbdea01c3f10538a21fcb497fb74",
+    "replaced_text_runs": 30,
+    "source_font_size": 13.257575757575758,
+    "target_printed_font_size": 7,
+    "include_fraction": 1.0,
+    "all_text_tokens_preserved_after_registered_label_changes": true,
+    "label_changes": [
+      {
+        "old": "decode the block directly",
+        "new": "final head on block residual"
+      },
+      {
+        "old": "decode its task-aligned part",
+        "new": "final head on task-aligned part"
+      },
+      {
+        "old": "accuracy after the intervention",
+        "new": "accuracy after the intervention (%)"
+      },
+      {
+        "old": "accuracy decoding the block directly",
+        "new": "accuracy with the final head (%)"
+      }
+    ],
+    "original_nontext_operations_preserved": true,
+    "legend_reflow_band": [
+      0,
+      0,
+      750.0,
+      37
+    ]
+  }
+]

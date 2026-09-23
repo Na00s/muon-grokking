@@ -1,0 +1,62 @@
+[
+  {
+    "seed": 3,
+    "status": "confirmed_grokking_with_failure",
+    "analysis_returncode": 0,
+    "command": [
+      "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+      "followup_studies/work/rms_replication/analyze_event.py",
+      "--path",
+      "followup_studies/work/rms_replication/runs/seed3",
+      "--out",
+      "followup_studies/work/rms_replication/analyses/prospective_seed3",
+      "--cohort",
+      "prospective_cpu"
+    ]
+  },
+  {
+    "seed": 1,
+    "status": "confirmed_grokking_with_failure",
+    "analysis_returncode": 0,
+    "command": [
+      "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+      "followup_studies/work/rms_replication/analyze_event.py",
+      "--path",
+      "followup_studies/work/rms_replication/runs/seed1",
+      "--out",
+      "followup_studies/work/rms_replication/analyses/prospective_seed1",
+      "--cohort",
+      "prospective_cpu"
+    ]
+  },
+  {
+    "seed": 4,
+    "status": "confirmed_grokking_with_failure",
+    "analysis_returncode": 0,
+    "command": [
+      "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+      "followup_studies/work/rms_replication/analyze_event.py",
+      "--path",
+      "followup_studies/work/rms_replication/runs/seed4",
+      "--out",
+      "followup_studies/work/rms_replication/analyses/prospective_seed4",
+      "--cohort",
+      "prospective_cpu"
+    ]
+  },
+  {
+    "seed": 2,
+    "status": "confirmed_grokking_with_failure",
+    "analysis_returncode": 0,
+    "command": [
+      "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+      "followup_studies/work/rms_replication/analyze_event.py",
+      "--path",
+      "followup_studies/work/rms_replication/runs/seed2",
+      "--out",
+      "followup_studies/work/rms_replication/analyses/prospective_seed2",
+      "--cohort",
+      "prospective_cpu"
+    ]
+  }
+]

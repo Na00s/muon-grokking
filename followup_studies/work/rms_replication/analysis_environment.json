@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-09-23T23:40:26.154509+00:00",
+  "scope": "Supplementary post-completion audit of the unchanged research interpreter used for event analyses. The frozen training runtime manifest is retained separately.",
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:24:52) [Clang 20.1.8 ]",
+  "numpy": "2.5.2",
+  "scipy": "1.18.0",
+  "torch": "2.13.0",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "decoder_source_sha256": "4325e198c2208f7fcc843d7bbf22c6feaa25ca9b3ad89c4694df5005465f4227",
+  "solver": "scipy.optimize.minimize(method=L-BFGS-B)",
+  "fit_dtype": "float64",
+  "actual_candidate_and_refit_options_in": "protocol.json:event_analysis.decoder"
+}

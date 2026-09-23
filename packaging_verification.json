@@ -1,0 +1,3414 @@
+{
+  "status": "passed",
+  "canonical_files_rechecked_unchanged": 421,
+  "binary_preservation": [
+    {
+      "study": "decoder_controls",
+      "path": "seed0/features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/initialization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 14,
+      "unchanged_nonpickle_zip_entry_bytes": 909308,
+      "recursive_loaded_equality": {
+        "tensor_objects": 9,
+        "tensor_bytes": 909257
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/initialization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/memorization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/memorization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/initialization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 14,
+      "unchanged_nonpickle_zip_entry_bytes": 909308,
+      "recursive_loaded_equality": {
+        "tensor_objects": 9,
+        "tensor_bytes": 909257
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/initialization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/memorization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/memorization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/initialization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 14,
+      "unchanged_nonpickle_zip_entry_bytes": 909308,
+      "recursive_loaded_equality": {
+        "tensor_objects": 9,
+        "tensor_bytes": 909257
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/initialization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/memorization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/memorization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/initialization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 14,
+      "unchanged_nonpickle_zip_entry_bytes": 909308,
+      "recursive_loaded_equality": {
+        "tensor_objects": 9,
+        "tensor_bytes": 909257
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/initialization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/memorization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/memorization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/initialization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 14,
+      "unchanged_nonpickle_zip_entry_bytes": 909308,
+      "recursive_loaded_equality": {
+        "tensor_objects": 9,
+        "tensor_bytes": 909257
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/initialization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/memorization.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/memorization_decoder.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/checkpoints/step_016000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 26,
+      "unchanged_nonpickle_zip_entry_bytes": 1926216,
+      "recursive_loaded_equality": {
+        "tensor_objects": 21,
+        "tensor_bytes": 1926165
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": null
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/checkpoints/step_018000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 26,
+      "unchanged_nonpickle_zip_entry_bytes": 1926216,
+      "recursive_loaded_equality": {
+        "tensor_objects": 21,
+        "tensor_bytes": 1926165
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": null
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/rng_final.pt",
+      "edited_pickle_strings": 0,
+      "unchanged_nonpickle_zip_entries": 6,
+      "unchanged_nonpickle_zip_entry_bytes": 5107,
+      "recursive_loaded_equality": {
+        "tensor_objects": 1,
+        "tensor_bytes": 5056
+      },
+      "model_equal": null,
+      "optimizer_equal": null,
+      "rng_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/checkpoints/step_016000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 26,
+      "unchanged_nonpickle_zip_entry_bytes": 1926216,
+      "recursive_loaded_equality": {
+        "tensor_objects": 21,
+        "tensor_bytes": 1926165
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": null
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/checkpoints/step_018000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 26,
+      "unchanged_nonpickle_zip_entry_bytes": 1926216,
+      "recursive_loaded_equality": {
+        "tensor_objects": 21,
+        "tensor_bytes": 1926165
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": null
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/rng_final.pt",
+      "edited_pickle_strings": 0,
+      "unchanged_nonpickle_zip_entries": 6,
+      "unchanged_nonpickle_zip_entry_bytes": 5107,
+      "recursive_loaded_equality": {
+        "tensor_objects": 1,
+        "tensor_bytes": 5056
+      },
+      "model_equal": null,
+      "optimizer_equal": null,
+      "rng_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/checkpoints/step_016000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 26,
+      "unchanged_nonpickle_zip_entry_bytes": 1926216,
+      "recursive_loaded_equality": {
+        "tensor_objects": 21,
+        "tensor_bytes": 1926165
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": null
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/checkpoints/step_018000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 26,
+      "unchanged_nonpickle_zip_entry_bytes": 1926216,
+      "recursive_loaded_equality": {
+        "tensor_objects": 21,
+        "tensor_bytes": 1926165
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": null
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/rng_final.pt",
+      "edited_pickle_strings": 0,
+      "unchanged_nonpickle_zip_entries": 6,
+      "unchanged_nonpickle_zip_entry_bytes": 5107,
+      "recursive_loaded_equality": {
+        "tensor_objects": 1,
+        "tensor_bytes": 5056
+      },
+      "model_equal": null,
+      "optimizer_equal": null,
+      "rng_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_source.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/decoder_features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/decoder_weights.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/failed_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/previous_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/decoder_features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/decoder_weights.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/failed_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/previous_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/decoder_features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/decoder_weights.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/failed_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/previous_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/decoder_features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/decoder_weights.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/failed_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/previous_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/decoder_features.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/decoder_weights.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/failed_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/previous_derivative_arrays.npz",
+      "byte_identical_array": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/collapse.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/initial.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 14,
+      "unchanged_nonpickle_zip_entry_bytes": 909308,
+      "recursive_loaded_equality": {
+        "tensor_objects": 9,
+        "tensor_bytes": 909257
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/previous.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 27,
+      "unchanged_nonpickle_zip_entry_bytes": 1931272,
+      "recursive_loaded_equality": {
+        "tensor_objects": 22,
+        "tensor_bytes": 1931221
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/collapse.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/grok_confirmation.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/initial.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/previous.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/recovery.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_000000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_001000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_002000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_003000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_004000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_005000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_006000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_007000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_008000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_009000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_010000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_011000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_012000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_013000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_014000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/step_015000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/terminal.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/collapse.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/grok_confirmation.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/initial.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/previous.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/recovery.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_000000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_001000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_002000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_003000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_004000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_005000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_006000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_007000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_008000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_009000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_010000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_011000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_012000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_013000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_014000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/step_015000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/terminal.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/collapse.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/grok_confirmation.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/initial.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/previous.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/recovery.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_000000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_001000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_002000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_003000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_004000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_005000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_006000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_007000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_008000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_009000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_010000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_011000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_012000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_013000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/step_014000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/terminal.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/collapse.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/grok_confirmation.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/initial.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/previous.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/recovery.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_000000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 15,
+      "unchanged_nonpickle_zip_entry_bytes": 914364,
+      "recursive_loaded_equality": {
+        "tensor_objects": 10,
+        "tensor_bytes": 914313,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_001000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_002000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_003000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_004000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_005000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_006000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_007000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_008000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_009000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_010000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_011000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_012000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_013000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_014000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/step_015000.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/terminal.pt",
+      "edited_pickle_strings": 1,
+      "unchanged_nonpickle_zip_entries": 28,
+      "unchanged_nonpickle_zip_entry_bytes": 1936328,
+      "recursive_loaded_equality": {
+        "tensor_objects": 23,
+        "tensor_bytes": 1936277,
+        "ndarrays": 1
+      },
+      "model_equal": true,
+      "optimizer_equal": true,
+      "rng_equal": true
+    }
+  ],
+  "numeric_preservation": [
+    {
+      "study": "decoder_controls",
+      "path": "artifact_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "feature_mean_controls.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "protocol_amendment.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "protocol_initial_registration.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/initialization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/memorization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/prepared.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed0/prepared_initial_registration.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/initialization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/memorization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed1/prepared.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/initialization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/memorization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed2/prepared.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/initialization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/memorization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed3/prepared.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/initialization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/memorization_decoder.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "seed4/prepared.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "source_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "stage_summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "summary.csv",
+      "numeric_csv_cells_equal": 200
+    },
+    {
+      "study": "decoder_controls",
+      "path": "summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "decoder_controls",
+      "path": "verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "chance_notation_audit.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "delivery_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "depth4_audit.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_events.csv",
+      "numeric_csv_cells_equal": 65
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_timeline.csv",
+      "numeric_csv_cells_equal": 616
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_timeline_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "feature_mean_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "historical_controls.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/component/trajectory.csv",
+      "numeric_csv_cells_equal": 4020
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_historical/trajectory.csv",
+      "numeric_csv_cells_equal": 2613
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_runs/group_instrumented/trajectory.csv",
+      "numeric_csv_cells_equal": 5628
+    },
+    {
+      "study": "control_provenance",
+      "path": "parity_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "source_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "speed_audit.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "status.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/analysis_protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/artifact_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/decoders.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/failed_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/feature_extraction_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/parameter_swaps.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/previous_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/replay_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/historical_seed0/summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/analysis_protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/artifact_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/decoders.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/failed_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/feature_extraction_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/parameter_swaps.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/previous_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/replay_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed1/summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/analysis_protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/artifact_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/decoders.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/failed_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/feature_extraction_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/parameter_swaps.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/previous_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/replay_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed2/summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/analysis_protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/artifact_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/decoders.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/failed_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/feature_extraction_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/parameter_swaps.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/previous_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/replay_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed3/summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/analysis_protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/artifact_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/decoders.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/failed_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/feature_extraction_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/parameter_swaps.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/previous_derivative.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/replay_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analyses/prospective_seed4/summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_progress.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_source_registration.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_supervisor.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_supervisor_completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "checkpoint_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "completion_status.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "completion_supervisor.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "decoder_optimization.csv",
+      "numeric_csv_cells_equal": 1036
+    },
+    {
+      "study": "rms_replication",
+      "path": "decoder_summary.csv",
+      "numeric_csv_cells_equal": 320
+    },
+    {
+      "study": "rms_replication",
+      "path": "derivative_summary.csv",
+      "numeric_csv_cells_equal": 120
+    },
+    {
+      "study": "rms_replication",
+      "path": "event_summary.csv",
+      "numeric_csv_cells_equal": 165
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/event.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/metadata.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/source_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "historical_reference/trajectory.csv",
+      "numeric_csv_cells_equal": 12746
+    },
+    {
+      "study": "rms_replication",
+      "path": "independent_final_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "launch.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "monitor_handoff.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "parameter_swaps.csv",
+      "numeric_csv_cells_equal": 480
+    },
+    {
+      "study": "rms_replication",
+      "path": "partial_summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "partial_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "protocol.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "report_generator_revision.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "run_summary.csv",
+      "numeric_csv_cells_equal": 76
+    },
+    {
+      "study": "rms_replication",
+      "path": "runner_verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/event.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/metadata.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/progress.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1/trajectory.csv",
+      "numeric_csv_cells_equal": 94932
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed1_process_exit.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/event.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/metadata.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/progress.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2/trajectory.csv",
+      "numeric_csv_cells_equal": 98725
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed2_process_exit.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/event.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/metadata.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/progress.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3/trajectory.csv",
+      "numeric_csv_cells_equal": 90624
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed3_process_exit.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/completion.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/event.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/metadata.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/progress.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4/trajectory.csv",
+      "numeric_csv_cells_equal": 94124
+    },
+    {
+      "study": "rms_replication",
+      "path": "runs/seed4_process_exit.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "source_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "summary.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "training_processes_complete.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "verification.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "analysis_environment.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "rms_replication",
+      "path": "supplementary_audit_manifest.json",
+      "json_numeric_fields_equal": true
+    },
+    {
+      "study": "control_provenance",
+      "path": "rms_completed_independent_audit.json",
+      "json_numeric_fields_equal": true
+    }
+  ],
+  "scientific_tensor_array_and_measurement_changes": false,
+  "canonical_files_final_hash_recheck": 421,
+  "portable_root_checks": [
+    {
+      "file": "audit_records.py",
+      "default_reviewer_root_verified": true,
+      "environment_override_verified": true,
+      "only_root_assignment_ast_differs": true
+    },
+    {
+      "file": "build_feature_mean_timeline.py",
+      "default_reviewer_root_verified": true,
+      "environment_override_verified": true,
+      "only_root_assignment_ast_differs": true
+    },
+    {
+      "file": "verify_feature_mean_timeline.py",
+      "default_reviewer_root_verified": true,
+      "environment_override_verified": true,
+      "only_root_assignment_ast_differs": true
+    },
+    {
+      "file": "replay_control_implementations.py",
+      "default_reviewer_root_verified": true,
+      "environment_override_verified": true,
+      "only_root_assignment_ast_differs": true
+    }
+  ],
+  "anonymity_scan": {
+    "status": "passed",
+    "scope": "Every supplied file, readable text, checkpoint pickle string metadata, NPZ numeric-array headers, PNG metadata, PDF text/metadata and decoded object streams. No unpickling performed in this independent scan.",
+    "counts": {
+      "files": 434,
+      "filenames": 434,
+      "text_files": 287,
+      "python_syntax": 104,
+      "pdf_metadata": 1,
+      "pdf_text": 1,
+      "pdf_objects": 90,
+      "pdf_decoded_streams": 20,
+      "png_metadata": 1,
+      "zip_metadata": 9568,
+      "checkpoint_pickles": 110,
+      "pickle_strings": 12810,
+      "zip_crc_checks": 145,
+      "numpy_headers": 225
+    },
+    "findings": []
+  },
+  "checkpoint_scope": "Recursive comparisons preserve every tensor, optimizer scalar, config number and available RNG state. A null equality field means the corresponding state category was absent from that source checkpoint.",
+  "checkpoint_totals": {
+    "files": 110,
+    "model_states": 107,
+    "optimizer_states": 107,
+    "rng_states": 104,
+    "tensor_objects": 2256,
+    "tensor_bytes": 192757855
+  },
+  "independent_rms_preservation_audit": {
+    "passed": true,
+    "comparison": "Canonical completed RMS study versus staged anonymous RMS study; read-only check. Text values may be anonymized; every checkpoint tensor, optimizer/RNG numeric field and NPZ array is exact.",
+    "checkpoints_checked": 90,
+    "npz_files_checked": 20,
+    "summary_csvs_checked": 6,
+    "tensors": 1950,
+    "numpy_arrays": 217,
+    "numeric_scalars": 58866,
+    "files": [
+      {
+        "path": "historical_reference/collapse.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "6edeb414b7be6e1027d220083d9d7481b562cf08060aaf7f1e5c8fcc835eb660",
+        "supplied_sha256": "eb90821b65eec5bbc4b05057c113089bcfd3007d1ab48d76063a2bd90aed2dc6"
+      },
+      {
+        "path": "historical_reference/initial.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "850d56119b9b57ee8d0ed0069d253e063c3a0bc59f3c4df45b2e2fa60c73c6b9",
+        "supplied_sha256": "8136603160cf8398275e8cf548c7249d863a29c565b8158d094854d505eb590f"
+      },
+      {
+        "path": "historical_reference/previous.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "4864973b5176696d47b11fbeea172075bc878551f9833a19e14648d4d32caa04",
+        "supplied_sha256": "d6c3b250888cf0c72f54b45f11c91b438b93dc4a4a0130c714c2c18973010567"
+      },
+      {
+        "path": "runs/seed1/collapse.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "3e951c88fe1a53ff092a515f69790039c41e247c0db9ffc62a431d9d2277c49e",
+        "supplied_sha256": "02041fc7bbc4387b777c960c44836c0f50f91a00ff5408c45a203bde786c127c"
+      },
+      {
+        "path": "runs/seed1/grok_confirmation.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "1af7abadcf1218477ca01d01b4a7c36121eecb71c54bb11d06ed1c4c2883407b",
+        "supplied_sha256": "425722e12a2526125ca5b5ebf2b12a7a9cd9254088fbc368fdbf2b8c306b2d15"
+      },
+      {
+        "path": "runs/seed1/initial.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "d03baec44bf30ad48dc5df0cf729335a800a002db426493d39cedf6ddf55fc3b",
+        "supplied_sha256": "fd1241f427cb5b5854f49304bd1db0684f7de7c4652c2f38cc3377e34589159f"
+      },
+      {
+        "path": "runs/seed1/previous.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "0e005d11d01494c05d5dc2673535056a87a4394f24ac58d31354ae2d05aeb5b7",
+        "supplied_sha256": "50af562adebe38ffc13a35817b50be0d6bb0c1f464dd5e7260d4ccdeb4a177b3"
+      },
+      {
+        "path": "runs/seed1/recovery.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "a6281b45ac57e61cc759210eb35a5cefb5510d1b636fb5a0b88e214a6dff7911",
+        "supplied_sha256": "0d31392b807f661332cc7317a58a807fb4853e566fc0534c3ec6e6a06e30f2fa"
+      },
+      {
+        "path": "runs/seed1/step_000000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "05e6e0f45d946deb05776e383ab040c92f07df203e45f9bd62804ccbdbf8b258",
+        "supplied_sha256": "60495c1146969d0364d7767a72791e638081a3de806a91aebd8d4c5901664d14"
+      },
+      {
+        "path": "runs/seed1/step_001000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "b2cf5f658787c74f01b8e25c83df9ee98c51f0eb500b5578e6c8070b119d729c",
+        "supplied_sha256": "c2ccea9bbeab19c4f008491c4134b962245b8dcd1b8113063b2cb424fcb1635a"
+      },
+      {
+        "path": "runs/seed1/step_002000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "9794fb5186483fec14b3c28234f9ffc6739f9b0f695f8ed610cf8252d6be6669",
+        "supplied_sha256": "ccf010ef412250c2c9d9b0e11febf7ee3d908b60fdea7c68d30482f173264819"
+      },
+      {
+        "path": "runs/seed1/step_003000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "36bec2fdbee989523108f9b0a4ca68761008970794c96ae2c8a8af7a5e8493e9",
+        "supplied_sha256": "ec56968190ea04f9db1e7346250c2c738b763c3d4173220c08531a6401b463a4"
+      },
+      {
+        "path": "runs/seed1/step_004000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "e4983584920c4441de24eedb3883de3d3898e68695fddfe505008aec3b4cca98",
+        "supplied_sha256": "c29706f336573a654b3500fbdde859fa00830b6ed73562f6a611c4c3340d1c85"
+      },
+      {
+        "path": "runs/seed1/step_005000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "2013d0038becf9069ce936a2f4a1494b64c1eac39d3fde76b5cbc0efbc4970d3",
+        "supplied_sha256": "7053818893bf1c6c6c90ed07d56a279d9c2a6762658fb99b78948863be36fed8"
+      },
+      {
+        "path": "runs/seed1/step_006000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "3bd97961b84ff48b0f2b5cf3203c066c0066ae9721a4a7f589433a8c89334774",
+        "supplied_sha256": "c434b484815d132ccdb1fce9976ee0aae65a10b5d67406754d1055cac9cf3e4a"
+      },
+      {
+        "path": "runs/seed1/step_007000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "3c10aa1adefefe2a848e70dacdda00e9b93c8e38d22890a559140d2ef86ef3b5",
+        "supplied_sha256": "2a69c50a0477910e158d6036acb1b8b459ed1c4254b20465ec207c917dd073b4"
+      },
+      {
+        "path": "runs/seed1/step_008000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "6bd896da3b1bf6b8898e347b6fc415f9d0881d99cbb36ea072419adaa39ba0c7",
+        "supplied_sha256": "22806b297f0536e57f47eda3a8abc31eb336351aa19db56156f12603672cfa87"
+      },
+      {
+        "path": "runs/seed1/step_009000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "df79d266d4afb8c39ca6fd717eab3f67802a532975a2b3749c3f07dfe340e2a7",
+        "supplied_sha256": "b3ccdc78b4e2c2e5f2d4e4e27251b0847fe06d136b6fcf96ada2181422306681"
+      },
+      {
+        "path": "runs/seed1/step_010000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "6d949c11d8f8176bd86364279c94023727cad3a2eb3f35514fd0219515eea428",
+        "supplied_sha256": "5bcae55978259e1e2b34c075ac6ffe8d1c41ed58c3080109eb9fcb5a086bad2b"
+      },
+      {
+        "path": "runs/seed1/step_011000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "c1c85466c0b04c4df8e7eb572de0869330b9f6b8c7021a76fa673ae6159e6e61",
+        "supplied_sha256": "f4571a799c752e898164bcf0003ed9a69358fb6800739603d55cace55d5acdbb"
+      },
+      {
+        "path": "runs/seed1/step_012000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "a802b5047dbaa3ac7bd87227b79adf23f579d97d7eaa6c4fa624ac726b133023",
+        "supplied_sha256": "bfd367fcd22d3117b47ef85826e85c08d368b6e0345ae921672d33ffa71da5bf"
+      },
+      {
+        "path": "runs/seed1/step_013000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "304ee17f46c9c630401dbd8b2b2d67e766ea293ceb2c1ce4ff9b067ee4569633",
+        "supplied_sha256": "750246cba79281daac63a3fc649387e35db07b5a37c227d64af86224ec357d9c"
+      },
+      {
+        "path": "runs/seed1/step_014000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "979f9fee2186e368058752b630c242357a1a5d7817a5bf9ce466dfa921a250bf",
+        "supplied_sha256": "efcf95db7934afc34cbb1e4770156fce239bea827cb4882222b7fac356d30e9d"
+      },
+      {
+        "path": "runs/seed1/step_015000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "d3a1f0401042224291eb01e4dd79e0cff444586eb18f570310c28d589fb9719f",
+        "supplied_sha256": "dcd0248a5f7b99ddf0b819b0ebbc6293247193410574cfb29bfd83a681bf17dc"
+      },
+      {
+        "path": "runs/seed1/terminal.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "e582f298c2f6bedd82b27a046f1d6d74ac972c6fc2acde40f7cab6ba6359b914",
+        "supplied_sha256": "6397043564bb21fd5c94a816a9d35c0a40b05368dbda65a00ed1020763083025"
+      },
+      {
+        "path": "runs/seed2/collapse.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "c297ac116c5f0733716fc2d7d9dce1c2e80dc300dc7de75bcb08d68ab930709d",
+        "supplied_sha256": "dc9f3d9915499797a24f9a326783c32a7495abf2a34da9d8949a72ade92c655c"
+      },
+      {
+        "path": "runs/seed2/grok_confirmation.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "747811cdb209b0f864df2fb6cb35ba0e549dd33a7b4e6d3465a56e4a9e618fcd",
+        "supplied_sha256": "e4ddd2c67c330dc893c713c7d4197aa39f0b3ffa50436e8043e38cb8af8b2774"
+      },
+      {
+        "path": "runs/seed2/initial.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "26c7882c5704b2f853f543e3f81daa7d3821fa1398ce859e7a7dfd9ee3da5fde",
+        "supplied_sha256": "3b7e19141c38a822f2fa4c5c8563645edea3e8428cb7bf578a1a575a03565b14"
+      },
+      {
+        "path": "runs/seed2/previous.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "bc9720e2e469afe3c00b500602d88f6b5e03114285cf7e174fc30082d8aafe5a",
+        "supplied_sha256": "9254aebd790070935897b937ecebdb41f98f261bbfc2fe0b0763e26af8fb57d8"
+      },
+      {
+        "path": "runs/seed2/recovery.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "0ca2fe0c0f01d5d6242f1ee75379b1aa8b81332baa1c7165e922be7fd1736429",
+        "supplied_sha256": "7cda13e789b816da5cd21366e08439d87ce8dbf71cf04500a8d684ec9536add5"
+      },
+      {
+        "path": "runs/seed2/step_000000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "8eca904729205b31c88b67a17b74bdaec64c8f4921f317d009035874b2111c9a",
+        "supplied_sha256": "33c7327a4bb62352e3d05de93b9c03a2e88139c534b89206e65f2b1bffaa751d"
+      },
+      {
+        "path": "runs/seed2/step_001000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "45afb39ee39a6bb01d4f67aac9d3ee175916249fba927a1739be271b13333335",
+        "supplied_sha256": "fc190261291009dc3f5bf55774e467fa884a74e339cc8cb157816c3c5811e034"
+      },
+      {
+        "path": "runs/seed2/step_002000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "af762473cf4b3e21ff5b5dcecd6a9ba657829b846230d6acfb7142393786f950",
+        "supplied_sha256": "9a6ee4ab1cc4b37334c5ce6d948a7f23a9a5fa1fc0471a5728d131a0d8008277"
+      },
+      {
+        "path": "runs/seed2/step_003000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "c90bf7330a6ddd59d42d5986bcfff2b76a0cf7d8d0a0d7b4908ffb9139747be0",
+        "supplied_sha256": "ddfd79a30f3d6d842cc754b68f22605e405eeb2b3cf1dab08852a024ceacc399"
+      },
+      {
+        "path": "runs/seed2/step_004000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "49d3d0e9f6ef3a4d6755ee4e955cd3ef0699e46d99b19e4445ec7da2cfa4abf2",
+        "supplied_sha256": "b04e399eed5ed5c2457da233c1d8777b46a621633d8cda84e8169951b5ff88e5"
+      },
+      {
+        "path": "runs/seed2/step_005000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "d40b10e03b9841ddaa05dfd034754cb67da5c7b0caf3147e03b2210a63e49c01",
+        "supplied_sha256": "069bd0ba0e1ac13ffe4e2a3a149c9736f596a4f8a6be2d62cedb39c22b819365"
+      },
+      {
+        "path": "runs/seed2/step_006000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "9ab64006ee1792ba242bf010b9e74221d436a9209acfcb7ceb8f65bf449afe40",
+        "supplied_sha256": "0d15effa4f7c64dd06222aa55afd98ded1881c62fa7f2aae0541069989e0d45b"
+      },
+      {
+        "path": "runs/seed2/step_007000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "1f858c214910681c0a2146cb702ee5e3d3221ef94e9ae0a05cc7487757855b3d",
+        "supplied_sha256": "7adf84ef8785969c4abd20c84c9356e7b11cca2333525d8f89ba46fc49033d33"
+      },
+      {
+        "path": "runs/seed2/step_008000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "e3bdfeb99f129e19913eee378809683df8579a212c02001a6a1aea3a952384c9",
+        "supplied_sha256": "2281018ff56de67acfc8e88613d9136beb85fd1cbbd34eb378059917b379bb01"
+      },
+      {
+        "path": "runs/seed2/step_009000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "7f2d183ec0b6018a90da0d2baf23b01dc18ad9a11d4469bfd9479aefe1511983",
+        "supplied_sha256": "e4c5609b610e942f5d8fe91349d80070dafbb4361934cb7cbe836115a48ff7bd"
+      },
+      {
+        "path": "runs/seed2/step_010000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "b9543dbb921d5b39ae97dad048010ed37fb90ffce5d0285e4f44b4d29d2c73c6",
+        "supplied_sha256": "e3709375692e33b6417586a4fda50699295e420d0ac4c42ddf0517833c099928"
+      },
+      {
+        "path": "runs/seed2/step_011000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "c8cddac1b66905c133e7e1f1fca3381ab724609df1a5ff3079d2dcc79e79aec1",
+        "supplied_sha256": "ea96734f0cbe4970bd087d67d6c045a74f219c1b4f7ae848757d237bd2bed11c"
+      },
+      {
+        "path": "runs/seed2/step_012000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "c24844ad1b719b2c3e4db25d8ba6f25fb9687b1c485b710f2f754a8c50479ea1",
+        "supplied_sha256": "78c8b3d76cb5dda7148181c891fc90eed3edf8cc7a97cfaeb6d9495912e08d05"
+      },
+      {
+        "path": "runs/seed2/step_013000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "65f60f2c09be9ddc50636ffea929ebd57cfe683519cf0ffd870b51a77a6db047",
+        "supplied_sha256": "2a8a27ae93a536e6114aeaa871c62755cada3a2bc2dd88cc2fd9baa6e0f19360"
+      },
+      {
+        "path": "runs/seed2/step_014000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "c6acdb60f626aef9379adc0cd112791b58fb65aa1492bedad26430fff53564c1",
+        "supplied_sha256": "9e05c05e781f4f27c821d84bc1ad89604bb3fb83118c31e36dd480500498fe75"
+      },
+      {
+        "path": "runs/seed2/step_015000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "2af833c5e0c58b2931f43cbd109c7811dc60caaee0c5a9c541b1b33d37bcf399",
+        "supplied_sha256": "54b9a88b494d542522e0910d627d6fd097768f8fc3a4fa642e885fd178905c31"
+      },
+      {
+        "path": "runs/seed2/terminal.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "28f011294fabee1d2aae566601cea094c7a5284927c70ae43dfe120328f8a589",
+        "supplied_sha256": "8004677a2c4b34b8f3599310292bc8b20d79ff858628e97370259de86a85820f"
+      },
+      {
+        "path": "runs/seed3/collapse.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "9b7ab490d903d2a656bc44446c19ca1824c9ae8bd01ab6061cd293f942670d0e",
+        "supplied_sha256": "6076a71892fd0bf13609f55dd7e516fbfdd5fc0e68efa7136f1d842aa974ba3d"
+      },
+      {
+        "path": "runs/seed3/grok_confirmation.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "f8649d7624bf64859c84318527d369c42a525e73695961b59ac1595c15a50bd3",
+        "supplied_sha256": "e95829711ea3c7d28c21ba7823c527cf79f6430cc38e0d2d2d8a143387e64912"
+      },
+      {
+        "path": "runs/seed3/initial.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "29e1d107ccec126ea2a8f0aa5e405b5321ef3e85ff8c204320caecf69f4de943",
+        "supplied_sha256": "1369a8d3bf2e4da0e5d72de0715d9c3eb540160a603137fc1d39999cda3b5d0a"
+      },
+      {
+        "path": "runs/seed3/previous.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "06b52ac2161a68cb5ff8da83730a472bd8ff44f544955199ca2becfab6ed7609",
+        "supplied_sha256": "778456edaaa8f341e412ace51434c8da04b45b7c59f1480839e3e807f9a291ec"
+      },
+      {
+        "path": "runs/seed3/recovery.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "01bd92cfd46cef2aa2d8f49bc02abe48cf38cf322c8404c73fcf59abbf77872e",
+        "supplied_sha256": "24956dc0b2132fa88217f3f06027cfbc7ec7dc79068dc8057d1e0377de24634b"
+      },
+      {
+        "path": "runs/seed3/step_000000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "dbe4a708a8ad2755033102775d1bf2cc0182afb2d4e0a7dbb89e912c49ac7936",
+        "supplied_sha256": "5dc0e7207275973bea220495c145502f28144d50576e98c4cb9d81721ed79a1c"
+      },
+      {
+        "path": "runs/seed3/step_001000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "3b758957b72104f27fa0c14cce1811d631f386eee4c412aa0dca6790b45dda40",
+        "supplied_sha256": "87b4a51dc72c6b882574d2a7b293f94733c7339ca733bd1bf978bcd0131a2c67"
+      },
+      {
+        "path": "runs/seed3/step_002000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "0796ade1a488e6cb37083e2b1f41eeb0c925c3a208de81ef64f7f5e77dfab396",
+        "supplied_sha256": "0c828b2c2c695f574f47b2928af0aa63f90169511a7d1602c6997bb0f7952efc"
+      },
+      {
+        "path": "runs/seed3/step_003000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "afa46669c26abd431e33d113e4df95839f776f5f0c8af25be1b6de47fc3d2b6d",
+        "supplied_sha256": "96ae5be16be649b24788b65d483e3c43849363f0e45bcce95bd8422524749827"
+      },
+      {
+        "path": "runs/seed3/step_004000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "bf73d19d5d752895912fe25be71e8c06a424b559fc7a68122ce14be1e50104a4",
+        "supplied_sha256": "60173b4e9d3fc50dc18b9fdb7c5a1ea70742949b6da90ec2305f9c8df3a25436"
+      },
+      {
+        "path": "runs/seed3/step_005000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "1fc4f9e3e8a2e01617fbd4c508709995dfaeb87b61bbec068c5fb8ba12db65e3",
+        "supplied_sha256": "242a4c84c64248d21632fad568935a0bc0bd801c22864a06266d1ebae72ccaed"
+      },
+      {
+        "path": "runs/seed3/step_006000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "bf67c2cc898e07acc305a1b081cdcb364b781138ac95a1bdb4eee0a823117fa5",
+        "supplied_sha256": "d096c42f3ec3b4b7178be8d8f1d98cd36244a3f25ca7c676b8fa72ba844e8c5f"
+      },
+      {
+        "path": "runs/seed3/step_007000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "a644b11419d24f8bcedef7fd73d6b956f8bed57af8ed1cf00af6417f65e71dd2",
+        "supplied_sha256": "1467ac8bb1d8267aedec326d061a0f8381d87c4f7ac835c810e0ce31b7f487f1"
+      },
+      {
+        "path": "runs/seed3/step_008000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "2e80b30dfe3d1d110b0d733900338214eeb7f166dead07b6bd44f6e739f5b6ff",
+        "supplied_sha256": "f936f0cee1caeded00dbe25141892ce0bd3b14fa2167b79e8297241258b3f79f"
+      },
+      {
+        "path": "runs/seed3/step_009000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "71bec9cdb263a468ef96bb3106094f6841a51e6a2d713658b7b6ae1a8f45c7c3",
+        "supplied_sha256": "31cf550bf33023bfc728e18b0e1826c3ef04c895e1eb7c1a922a8e89215c50c0"
+      },
+      {
+        "path": "runs/seed3/step_010000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "d57cd8347e1dcdced67fd0d30150ec3e8b6212394259f415fc44f6b0628a7cec",
+        "supplied_sha256": "5f42858b81baf8c4aecc84df65c06d8da4d771ca59b81134739050806ca22a42"
+      },
+      {
+        "path": "runs/seed3/step_011000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "22f2108670eba8920bd1554c5fdec73bc682f9755f6508aaebfa9ed2760344bf",
+        "supplied_sha256": "46ab816904c7ac7d9be67a31a9256700c63a15b749abc14258611d9bc1d3cc46"
+      },
+      {
+        "path": "runs/seed3/step_012000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "99e7e3228bc9ad9937832d2ca6137fea98bae9fd7e689697cf20fc1da31ccfe0",
+        "supplied_sha256": "ebcb7fcd0704a564ef0e30c455710fe6c7bb9a2f8285bc7307c541eb0492e671"
+      },
+      {
+        "path": "runs/seed3/step_013000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "ddd49b100f38b855fdf15efb02c4b82b8785403f0fb068d962a232a7976e4736",
+        "supplied_sha256": "8bdaccee88cd1a7d4e62cbed1bda8a5c4e92d4fde2fb38362b43a939e900538b"
+      },
+      {
+        "path": "runs/seed3/step_014000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "b5c96ed153574483b95d43cd0ba021557ed0bcf479e896b6058c8bdb8308214e",
+        "supplied_sha256": "a65314e9c54724487c0ec204d29db953bfd9b382ad0d305398bfb6192a44014f"
+      },
+      {
+        "path": "runs/seed3/terminal.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "0f9e3951c930e8ff463274dc69f14188a86f5ddd389c5045aafc403db33eab34",
+        "supplied_sha256": "75e8cfee463ad127740c0d6286752f61fa38033a6530c0fd83c73f215f946e70"
+      },
+      {
+        "path": "runs/seed4/collapse.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "6c6c8f18b34abd6b0dc069709639b85ad6df3c73977a30c2359f64863ddc6c8f",
+        "supplied_sha256": "03f6e11967ba0d46717cd83bece34fad25b2543cabdf9e22f739074ade6d954b"
+      },
+      {
+        "path": "runs/seed4/grok_confirmation.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "9f12d00a87874903d8db1083cd2910cb79adbf350b0882aeb8aa809c18bbbaca",
+        "supplied_sha256": "7b89b1f04ba603b39767beb161a1361d318ba60e747b10e68be48c1716ab650a"
+      },
+      {
+        "path": "runs/seed4/initial.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "5bf25f6f3b55e5ab0d79c2beb31137086ce64a3852d7ccf28cd1349cb9465e31",
+        "supplied_sha256": "44518256e90c9d911574421ce04ee1332fbff540d22685c8c5fdbc6f1008eda4"
+      },
+      {
+        "path": "runs/seed4/previous.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "dcd4cafa577e020b50e3d1406d9c2d22453e31475cff7de57b0d66cbafec121d",
+        "supplied_sha256": "ef1913c80b644ba79d42fe89ebd904db2a7e23ccb3297569696df8d3b1899fc6"
+      },
+      {
+        "path": "runs/seed4/recovery.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "27b472ab48a5f4805af58bf0cd5705235daa9fdf3284d41a6924308373b8286c",
+        "supplied_sha256": "a273c14dd4857495b99e94ff253106cd1d82e72f82e12db018e553c29316de69"
+      },
+      {
+        "path": "runs/seed4/step_000000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "1074937928e488358338c36d536b40b7dc958bb33cb75ba7891e34f07ea80388",
+        "supplied_sha256": "7e0404a65e67eb8001e9a8d5d9b714ec7c33ee88239787779a420299517a800b"
+      },
+      {
+        "path": "runs/seed4/step_001000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "9da16247112c15e65cc6071498cabd836cfcaad466a68ba8c2e5770bdcd0d762",
+        "supplied_sha256": "1e379842984dd1c5ce12dce139ff0f5d25e9bd8b2dd70d1d5faffc0ea7e25ea4"
+      },
+      {
+        "path": "runs/seed4/step_002000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "f569ae7d55e3e8be466b1368c98a16a4bbba4e4799134e16acf4eab7eb120184",
+        "supplied_sha256": "44e407ba3e1dc401278ad7aba4648026d88cb5ac8261ddcab254b2d2ff6e1867"
+      },
+      {
+        "path": "runs/seed4/step_003000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "d15bdf5b043acc48e4860b78833befada383d36eb54489a41f27182aa247e224",
+        "supplied_sha256": "ad50d8af56d3629e962f9843763bc61dad9acc853b5eafd967b092948b4204ce"
+      },
+      {
+        "path": "runs/seed4/step_004000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "66106ec9d5d8faf243cf34dee84cd5a5479ebbb7eb96f035f5f1c68654668804",
+        "supplied_sha256": "1617827f9cf912d831d6c59bc714f92b73bf4d70434d1884e25bba0d8180e902"
+      },
+      {
+        "path": "runs/seed4/step_005000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "a0db5ed7c7d8d6910749ae0183f252be180176d967e4555c4a20f73fe578b95b",
+        "supplied_sha256": "f2b21a079e87689e95e425aedd05c0957e620603b90ee1cad735465362b50800"
+      },
+      {
+        "path": "runs/seed4/step_006000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "49f385ef88ad8ab35d7cf6ee2abd60e884b6960af14fb3c885663986d75337b2",
+        "supplied_sha256": "428ffeba16bfa568a254587f33f66aca1a5790cd7aafece1e84dbac6cef4e28a"
+      },
+      {
+        "path": "runs/seed4/step_007000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "4fc141f946e88bd7fb440754683525c8f2f1feb6606488c0825424b01bcae577",
+        "supplied_sha256": "0834de63cf16158a1161097faef41f6b6b7db037881cf7a99a807c38dc1ede66"
+      },
+      {
+        "path": "runs/seed4/step_008000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "27fc67867e81b1d5f6925e7f8437d4ce52e2f33d02db46c81d5fafb054fe8ce2",
+        "supplied_sha256": "659bd38e10cac1c7ca5159533c9b12556e3c4f4db3b93e130d81555441dcec7b"
+      },
+      {
+        "path": "runs/seed4/step_009000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "f768c9c5823d32137443a65f827ceaa816e025e70357d8472de7c7c5121890ac",
+        "supplied_sha256": "c44e532a02563c7c601d8e4043090cabb74aa7bbfd9921987d3b649f5ca6dedb"
+      },
+      {
+        "path": "runs/seed4/step_010000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "db5f26894b5db4bd36da59fd6b43c515004fcc0d0c189edbba036082254844da",
+        "supplied_sha256": "8a525ec451748bb87daff7687416c097169bfdf366860bfe8ec02def0d27e328"
+      },
+      {
+        "path": "runs/seed4/step_011000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "146869d4fd2c96828567dc84d7dc3cd1ff19bee26da3597bd544b282a3db1d3b",
+        "supplied_sha256": "dbe5a2f34c019dc7f84c8e2f5ea33466b45456de763cb4bdae7b206cf8139118"
+      },
+      {
+        "path": "runs/seed4/step_012000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "3daa8b952e315707a14041d74d692c06c1663d74f5a593c64a60e203fa6b7785",
+        "supplied_sha256": "ae859e30eeb6c21001365b3ae7a26b84dee81151bc43e57eef79fb88c37de7ca"
+      },
+      {
+        "path": "runs/seed4/step_013000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "829ffb1af588a2e9d896ae9c623d3cf05886d086f976e300e5cfaed91043a2a3",
+        "supplied_sha256": "6cc1390f84498ad8fa8f3d796a01531382ec7eda348a5db1bf54b4750ffb47d8"
+      },
+      {
+        "path": "runs/seed4/step_014000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "ae68be230e8c9f16fbe7f29c49ea9eac695ea6812e20dd258443e8ce2d74d82f",
+        "supplied_sha256": "7cd4ee6b5d15f5252bacdcfb5bc28e483dcb3dafba78d297706a50049de52e37"
+      },
+      {
+        "path": "runs/seed4/step_015000.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "e1adf2ce4e5c2aacbd3028810d43332fd6a2475c48df353dfcb7d133ea3328a6",
+        "supplied_sha256": "c3214f4eae9b1a794b497a47f904c67b89f2d9bb1f413891b0a27b9026ba216a"
+      },
+      {
+        "path": "runs/seed4/terminal.pt",
+        "format": "pt",
+        "all_tensors_optimizer_rng_and_numeric_fields_equal": true,
+        "original_sha256": "cada1e124db9269b1b51773d9f082102597742bf890ff690b1bef1d313982906",
+        "supplied_sha256": "b5d5681b06c128649d0a3bcd98ac3f28b1339350e9c7f88295a149cf286c8b7b"
+      },
+      {
+        "path": "analyses/historical_seed0/decoder_features.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "23a57e060f221884dd58886ecccc4476bc5ebea7f2c60bf703fccf03c7c5b9a7",
+        "supplied_sha256": "23a57e060f221884dd58886ecccc4476bc5ebea7f2c60bf703fccf03c7c5b9a7"
+      },
+      {
+        "path": "analyses/historical_seed0/decoder_weights.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "10768561bdd2d447d214c3946d35613fc44fc73591a1bba39e5441644ee6fee1",
+        "supplied_sha256": "10768561bdd2d447d214c3946d35613fc44fc73591a1bba39e5441644ee6fee1"
+      },
+      {
+        "path": "analyses/historical_seed0/failed_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "e7e9acf7e98a1fc57838e8d1e13404453d9a20cee60dd86f5287545d154a4cbb",
+        "supplied_sha256": "e7e9acf7e98a1fc57838e8d1e13404453d9a20cee60dd86f5287545d154a4cbb"
+      },
+      {
+        "path": "analyses/historical_seed0/previous_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "0736d098f89da87211b5908ded904fc4a0816f196cb4779b1937bea42dc11520",
+        "supplied_sha256": "0736d098f89da87211b5908ded904fc4a0816f196cb4779b1937bea42dc11520"
+      },
+      {
+        "path": "analyses/prospective_seed1/decoder_features.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "dbbb4eb823b85dd0a02bf460ef8edd40b2b7711096a8af002ab42c7523cfa03d",
+        "supplied_sha256": "dbbb4eb823b85dd0a02bf460ef8edd40b2b7711096a8af002ab42c7523cfa03d"
+      },
+      {
+        "path": "analyses/prospective_seed1/decoder_weights.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "805a6b9e80a4d6cc42373bf3009f57296d82ec1695c0e9567d61482e41166d3a",
+        "supplied_sha256": "805a6b9e80a4d6cc42373bf3009f57296d82ec1695c0e9567d61482e41166d3a"
+      },
+      {
+        "path": "analyses/prospective_seed1/failed_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "aaba90f9274cfd707f0706b24a76a3002191279d7b68a9b0d9bb88a762297ca2",
+        "supplied_sha256": "aaba90f9274cfd707f0706b24a76a3002191279d7b68a9b0d9bb88a762297ca2"
+      },
+      {
+        "path": "analyses/prospective_seed1/previous_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "bbd5ca4fc0d1952df9f0cc3cd4d82c884d8b7b34df86e0cfaaa30799091d9e83",
+        "supplied_sha256": "bbd5ca4fc0d1952df9f0cc3cd4d82c884d8b7b34df86e0cfaaa30799091d9e83"
+      },
+      {
+        "path": "analyses/prospective_seed2/decoder_features.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "29890f4fbad71d3f4100062ca976bb94ee557274d4943320093832bdc8c840ef",
+        "supplied_sha256": "29890f4fbad71d3f4100062ca976bb94ee557274d4943320093832bdc8c840ef"
+      },
+      {
+        "path": "analyses/prospective_seed2/decoder_weights.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "826e33743099e4c07ee7079015a3c8227f5476ef8ad05d1af1c9fbbb75d325fa",
+        "supplied_sha256": "826e33743099e4c07ee7079015a3c8227f5476ef8ad05d1af1c9fbbb75d325fa"
+      },
+      {
+        "path": "analyses/prospective_seed2/failed_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "1cc52f32669d7afd94b614379fbeccf35e8722235cca29532e37348d1a785635",
+        "supplied_sha256": "1cc52f32669d7afd94b614379fbeccf35e8722235cca29532e37348d1a785635"
+      },
+      {
+        "path": "analyses/prospective_seed2/previous_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "e9810d6283d6308284d5de81450c13f58c7410162f9aeef7733660e5fbc5a443",
+        "supplied_sha256": "e9810d6283d6308284d5de81450c13f58c7410162f9aeef7733660e5fbc5a443"
+      },
+      {
+        "path": "analyses/prospective_seed3/decoder_features.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "323e2a78c99f1974744465dbfbf5161a1ea2949327e2f90ad7a2d56819ed46fd",
+        "supplied_sha256": "323e2a78c99f1974744465dbfbf5161a1ea2949327e2f90ad7a2d56819ed46fd"
+      },
+      {
+        "path": "analyses/prospective_seed3/decoder_weights.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "feaeea0806b3c940e5fecd8d3cea944bdcc58bf9785e4d45c260a268916070e0",
+        "supplied_sha256": "feaeea0806b3c940e5fecd8d3cea944bdcc58bf9785e4d45c260a268916070e0"
+      },
+      {
+        "path": "analyses/prospective_seed3/failed_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "92ca17d833bbdfa75c3c7db481ab639e466bb9a535723f633fdf69567d4956f9",
+        "supplied_sha256": "92ca17d833bbdfa75c3c7db481ab639e466bb9a535723f633fdf69567d4956f9"
+      },
+      {
+        "path": "analyses/prospective_seed3/previous_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "05754dd0c4917ab7fd2b06d3386ad52b6b33205d2e081695bfaa04b2e3bdbe82",
+        "supplied_sha256": "05754dd0c4917ab7fd2b06d3386ad52b6b33205d2e081695bfaa04b2e3bdbe82"
+      },
+      {
+        "path": "analyses/prospective_seed4/decoder_features.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "43729bafd69c5a4fd75919028ef8ef59493634aee9ecf9e9ea913dde1ab575aa",
+        "supplied_sha256": "43729bafd69c5a4fd75919028ef8ef59493634aee9ecf9e9ea913dde1ab575aa"
+      },
+      {
+        "path": "analyses/prospective_seed4/decoder_weights.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "933c625681b69ac8d7e89a631347072ea0dea053c404729fd6a4f9a8a47a2802",
+        "supplied_sha256": "933c625681b69ac8d7e89a631347072ea0dea053c404729fd6a4f9a8a47a2802"
+      },
+      {
+        "path": "analyses/prospective_seed4/failed_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "80185562326897332907e1049ce37e7b602a679cfa2c9080c77439dcf798bef3",
+        "supplied_sha256": "80185562326897332907e1049ce37e7b602a679cfa2c9080c77439dcf798bef3"
+      },
+      {
+        "path": "analyses/prospective_seed4/previous_derivative_arrays.npz",
+        "format": "npz",
+        "all_arrays_identical": true,
+        "original_sha256": "0db97345b9b812da06840a28154649168f2e00b97cb5c421726aecd2f3f0af5f",
+        "supplied_sha256": "0db97345b9b812da06840a28154649168f2e00b97cb5c421726aecd2f3f0af5f"
+      }
+    ],
+    "source_sha256": "86d0bc9a65638d030ebd4b3e96503b6b02abf8074bdc7a4c41e52be573318118",
+    "supplied_source": "packaging_audits/rms_preservation_check_original_layout.py",
+    "source_execution_scope": "Completed read-only audit in the original dual-tree layout; supplied as provenance. Relative ORIGINAL and SUPPLIED locations need adaptation for another layout."
+  },
+  "rms_reproduction_wrapper_validation": {
+    "passed": true,
+    "source_files": 76,
+    "analysis_scripts_registered": 4,
+    "training_updates": 0,
+    "probe_fits": 0,
+    "copied_history_and_source_bytes_identical": true,
+    "delivered_results_unchanged": true,
+    "temporary_scaffold_removed": true
+  },
+  "array_archive_count": 35
+}

@@ -1,16 +1,24 @@
-\begin{table}[t]
+\begin{table}[!htbp]
 \centering\small
-\caption{Operational definitions. Evaluations occur every $100$ steps, so a sustained
-criterion requires the threshold to hold across a $400$-step span.}
+\caption{Operational definitions. The original training grid is $100$ updates. Five consecutive scheduled evaluations span $400$ updates; follow-up confirmation uses six and spans $500$. Finer event-capture schedules are identified by trajectory.}
 \label{tab:definitions}
-\begin{tabular}{ll}
+\begin{tabular}{p{0.25\textwidth}p{0.68\textwidth}}
 \toprule
 Term & Definition \\
 \midrule
-Sustained $99.9\%$ train & First of five consecutive evaluations at or above $99.9\%$ train accuracy \\
-Sustained $95\%$ test & First of five consecutive evaluations at or above $95\%$ test accuracy \\
-Memorization plateau & Sustained-$95$ test step minus sustained-$99.9$ train step \\
-Strictly stable & No post-grokking evaluation below $95\%$ test accuracy \\
+Sustained $99.9\%$ train & First of five consecutive scheduled training evaluations at or above $99.9\%$. \\
+Original grokking & First of five consecutive scheduled test evaluations at or above $95\%$. Used for the original speed comparisons. \\
+Memorization plateau & Interval from sustained-$99.9\%$ training accuracy to original grokking; its duration is the difference between these steps. \\
+Follow-up confirmation & Sixth consecutive scheduled test evaluation at or above $95\%$. Prospective joint-event monitoring begins after this confirmation. \\
+Strict stability & Every subsequent sampled test accuracy is at least $95\%$ over the stated horizon. \\
+Joint failure & Training and held-out test accuracy are both below $90\%$ at the same state, after confirmation where required by the protocol. \\
+Table~\ref{tab:branches} failure & Training accuracy below $90\%$ at a scheduled branch evaluation. This criterion does not require a simultaneous test threshold. \\
+First detected failure & Earliest qualifying observation under the stated monitoring schedule. It can follow the underlying threshold crossing when sampling is sparse. \\
+First captured failure & Earliest qualifying saved state under the specified capture protocol. Its window and resolution can differ from the original detection schedule. \\
+Minimum sampled accuracy & Minimum over recorded evaluations in the stated window, with the inclusion of the source or confirmation state specified. \\
+Final accuracy & Accuracy at the reported terminal state; recovery can make it higher than the post-grokking minimum. \\
+Evaluation count & Number of recorded evaluations satisfying the stated threshold, distinguishing scheduled and training-triggered evaluations. \\
+Seed-level incidence & Number of seeds with at least one qualifying event divided by the number of evaluable seeds over the stated horizons. Repeated events within a seed count once. \\
 \bottomrule
 \end{tabular}
 \end{table}

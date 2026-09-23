@@ -1,0 +1,18 @@
+{
+  "hook": "unembedding forward_pre_hook, actual features entering readout after final RMS",
+  "checks": {
+    "previous": {
+      "maximum_feature_rms": 0.9999997325015555,
+      "mean_feature_rms": 0.9999994541843625,
+      "native_feature_dtype": "float32",
+      "head_reconstruction_test_correct": 8912
+    },
+    "failed": {
+      "maximum_feature_rms": 0.9999996303017106,
+      "mean_feature_rms": 0.9999993951831395,
+      "native_feature_dtype": "float32",
+      "head_reconstruction_test_correct": 146
+    }
+  },
+  "feature_file_sha256": "dbbb4eb823b85dd0a02bf460ef8edd40b2b7711096a8af002ab42c7523cfa03d"
+}

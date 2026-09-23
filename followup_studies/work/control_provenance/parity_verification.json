@@ -1,0 +1,49 @@
+{
+  "protocol": {
+    "status": "registered_before_execution",
+    "historical_state_available": false,
+    "source_checkpoint": "experiments/seed0_original/step_016000.pt",
+    "source_sha256": "7b73eae0f80f0ca95cd4e9f880179a79af8c61507d968c55b4cdd847c15294fa",
+    "adapted_source_sha256": "19e4ca27e77fc147a6d36940b62e4ffaf573311103085d27052515922eca487a",
+    "start_step": 16000,
+    "end_step": 18000,
+    "device": "cpu",
+    "torch_version": "2.13.0",
+    "python_version": "3.14.6",
+    "threads": 1,
+    "deterministic_algorithms": true,
+    "note": "Implementation parity only. Merged head into one auxiliary group; head LR explicitly changed .00025 to .001. Does not reproduce historical step44000 runs.",
+    "model_key_conversion_only": true,
+    "optimizer_moments_and_steps_preserved": true,
+    "rng_handling": "Each original main reseeds Python and torch to checkpoint.seed before constructing model. Full-batch forward has no dropout or random operations. Original scripts do not restore saved RNG."
+  },
+  "program_sha256": {
+    "group_historical": "06901411749f5e8582cbd382c750fbb8211c58fdd48f3bac775a68468576cffe",
+    "component": "b4e0260469e9bd9e65a0cf6c04fa8136bc3331944530af0397e5b5724c1bd6a6",
+    "group_instrumented": "3145b1111c83bb791775c17e1542d7296167d518779f9e06e2982ee280587851"
+  },
+  "comparisons": {
+    "group_historical": {
+      "model_bitwise_equal": true,
+      "optimizers_bitwise_equal": true,
+      "all_201_shared_metric_rows_equal": true,
+      "final_rng_equal": true,
+      "checkpoint_sha256": "6c2f8d20c8579d46d7bfebe200c6df1cf460897cff211e21e185e196ead874a4"
+    },
+    "component": {
+      "model_bitwise_equal": true,
+      "optimizers_bitwise_equal": true,
+      "all_201_shared_metric_rows_equal": true,
+      "final_rng_equal": true,
+      "checkpoint_sha256": "c6225452c21ace26adc5e178b3da58f2cf5873cdfdda9aab8149f89d4149e05d"
+    },
+    "group_instrumented": {
+      "model_bitwise_equal": true,
+      "optimizers_bitwise_equal": true,
+      "all_201_shared_metric_rows_equal": true,
+      "final_rng_equal": true,
+      "checkpoint_sha256": "6c2f8d20c8579d46d7bfebe200c6df1cf460897cff211e21e185e196ead874a4"
+    }
+  },
+  "conclusion": "The historical group, component, and instrumented control programs give identical sampled metrics and bitwise-identical terminal model, optimizer and RNG states in this controlled CPU replay. Historical divergence at44010 remains unidentified because the44,000 checkpoint and execution manifests are unavailable."
+}

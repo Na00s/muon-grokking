@@ -1,0 +1,134 @@
+{
+  "controls": [
+    {
+      "run_id": "branch_control_from_44000",
+      "csv": "runs/branch_control_from_44000.csv",
+      "sha256": "cd2dc75e2f0b89ceea8cc50dcf842f5b9a643d260a4226168ea545de33a52fdf",
+      "evaluations": 201,
+      "start_step": 44000,
+      "end_step": 46000,
+      "evaluation_intervals": [
+        10
+      ],
+      "first_sampled_train_below90": 44700,
+      "first_failure_train_accuracy": 0.18537859618663788,
+      "first_failure_test_accuracy": 0.1676921397447586,
+      "minimum_sampled_test_accuracy": 0.1676921397447586,
+      "minimum_sampled_test_step": 44700,
+      "final_test_accuracy": 1.0,
+      "maximum_sampled_auxiliary_gradient_norm": 913.0723815209208,
+      "train_below90_evaluations": 4,
+      "initial_metrics": {
+        "train_loss": 1.8678194635413092e-07,
+        "train_accuracy": 1.0,
+        "test_loss": 3.3246786188101396e-05,
+        "test_accuracy": 1.0
+      },
+      "source_checkpoint_status": "Historical path named by original scripts/manuscript; exact checkpoint binary unavailable in inspected artifacts",
+      "historical_backend_status": "Not independently recorded; source only supports CUDA or MPS and auto prefers CUDA",
+      "rng_source_semantics": "Python and torch reseeded to stored seed; CUDA seeded when available; saved RNG not restored. Full-batch model has no stochastic layer.",
+      "saved_branch_state_semantics": "Model plus Muon and auxiliary AdamW state dicts, seed and source path; original branch checkpoint writer does not include RNG or backend."
+    },
+    {
+      "run_id": "aux_control_from_44000",
+      "csv": "runs/aux_control_from_44000.csv",
+      "sha256": "a96dc2f8de28c8c636503160a3139607b2c2a64a172de750ef051597795c23aa",
+      "evaluations": 201,
+      "start_step": 44000,
+      "end_step": 46000,
+      "evaluation_intervals": [
+        10
+      ],
+      "first_sampled_train_below90": 44710,
+      "first_failure_train_accuracy": 0.47702351212501526,
+      "first_failure_test_accuracy": 0.43573105335235596,
+      "minimum_sampled_test_accuracy": 0.43573105335235596,
+      "minimum_sampled_test_step": 44710,
+      "final_test_accuracy": 0.9993287920951843,
+      "maximum_sampled_auxiliary_gradient_norm": 329.28537093362394,
+      "train_below90_evaluations": 3,
+      "initial_metrics": {
+        "train_loss": 1.8678194635413092e-07,
+        "train_accuracy": 1.0,
+        "test_loss": 3.3246786188101396e-05,
+        "test_accuracy": 1.0
+      },
+      "source_checkpoint_status": "Historical path named by original scripts/manuscript; exact checkpoint binary unavailable in inspected artifacts",
+      "historical_backend_status": "Not independently recorded; source only supports CUDA or MPS and auto prefers CUDA",
+      "rng_source_semantics": "Python and torch reseeded to stored seed; CUDA seeded when available; saved RNG not restored. Full-batch model has no stochastic layer.",
+      "saved_branch_state_semantics": "Model plus Muon and auxiliary AdamW state dicts, seed and source path; original branch checkpoint writer does not include RNG or backend."
+    },
+    {
+      "run_id": "branch_control_from_44000_instrumented",
+      "csv": "runs/branch_control_from_44000_instrumented.csv",
+      "sha256": "f0c1a4e6a5a95b56435c545f1acf8f047a83366e90b5a99582eee15b2042b948",
+      "evaluations": 2001,
+      "start_step": 44000,
+      "end_step": 46000,
+      "evaluation_intervals": [
+        1
+      ],
+      "first_sampled_train_below90": 44702,
+      "first_failure_train_accuracy": 0.24308094382286072,
+      "first_failure_test_accuracy": 0.22116567194461823,
+      "minimum_sampled_test_accuracy": 0.22116567194461823,
+      "minimum_sampled_test_step": 44702,
+      "final_test_accuracy": 0.9995525479316711,
+      "maximum_sampled_auxiliary_gradient_norm": 2195.751443222314,
+      "train_below90_evaluations": 35,
+      "initial_metrics": {
+        "train_loss": 1.8678194635413092e-07,
+        "train_accuracy": 1.0,
+        "test_loss": 3.3246786188101396e-05,
+        "test_accuracy": 1.0
+      },
+      "source_checkpoint_status": "Historical path named by original scripts/manuscript; exact checkpoint binary unavailable in inspected artifacts",
+      "historical_backend_status": "Not independently recorded; source only supports CUDA or MPS and auto prefers CUDA",
+      "rng_source_semantics": "Python and torch reseeded to stored seed; CUDA seeded when available; saved RNG not restored. Full-batch model has no stochastic layer.",
+      "saved_branch_state_semantics": "Model plus Muon and auxiliary AdamW state dicts, seed and source path; original branch checkpoint writer does not include RNG or backend."
+    },
+    {
+      "run_id": "collapse_spectral_replay_from_44000",
+      "csv": "runs/collapse_spectral_replay_from_44000.csv",
+      "sha256": "537fefd20cfdbfca6fb17ddd410c92ff411c251123af6cf83bc1990c68859cfd",
+      "evaluations": 101,
+      "start_step": 44000,
+      "end_step": 45000,
+      "evaluation_intervals": [
+        10
+      ],
+      "first_sampled_train_below90": 44710,
+      "first_failure_train_accuracy": 0.211227148771286,
+      "first_failure_test_accuracy": 0.1904016137123108,
+      "minimum_sampled_test_accuracy": 0.1904016137123108,
+      "minimum_sampled_test_step": 44710,
+      "final_test_accuracy": 0.9989931583404541,
+      "maximum_sampled_auxiliary_gradient_norm": 836.1012012460612,
+      "train_below90_evaluations": 4,
+      "initial_metrics": {
+        "train_loss": 1.8678194635413092e-07,
+        "train_accuracy": 1.0,
+        "test_loss": 3.3246786188101396e-05,
+        "test_accuracy": 1.0
+      },
+      "source_checkpoint_status": "Historical path named by original scripts/manuscript; exact checkpoint binary unavailable in inspected artifacts",
+      "historical_backend_status": "Not independently recorded; source only supports CUDA or MPS and auto prefers CUDA",
+      "rng_source_semantics": "Python and torch reseeded to stored seed; CUDA seeded when available; saved RNG not restored. Full-batch model has no stochastic layer.",
+      "saved_branch_state_semantics": "Model plus Muon and auxiliary AdamW state dicts, seed and source path; original branch checkpoint writer does not include RNG or backend."
+    }
+  ],
+  "native_log_match": {
+    "file": "runs/muon_lr_0p01_seed_0_full.csv",
+    "step": 44000,
+    "matching_metrics": [
+      "train_loss",
+      "train_accuracy",
+      "test_loss",
+      "test_accuracy"
+    ],
+    "scope": "Scalar match only; exact model/optimizer provenance unavailable"
+  },
+  "control_initial_scalars_equal": true,
+  "first_distinct_logged_step": 44010,
+  "bitwise_historical_start_equivalence": "Unverified: matching four metrics does not certify equal model/optimizer tensors. Original claimed shared source is retained with the limitation stated."
+}

@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{RMS decoder convergence and unregularized sensitivity. Seed $0$ is the historical pilot; seeds $1$--$4$ are prospective. Candidate convergence reports successful validation-candidate fits out of five; selected-refit convergence is in Table~\ref{tab:rms-event-decoders}. Unregularized accuracy is held-out percent. Complete termination messages, objectives, iteration counts, and gradient norms accompany every fit.}
+\label{tab:rms-decoder-diagnostics}
+\begin{tabular}{llrrrl}
+\toprule
+Seed & State & Selected $\lambda$ & Candidates & Unreg.\ test & Unreg.\ converged \\
+\midrule
+$0$ & Before & $1.00\times10^{-4}$ & 5/5 & 95.83 & Yes \\
+$0$ & After & $1.00\times10^{-2}$ & 3/5 & 2.62 & No \\
+$1$ & Before & $1.00\times10^{-8}$ & 5/5 & 100.00 & Yes \\
+$1$ & After & $1.00\times10^{-2}$ & 5/5 & 11.05 & Yes \\
+$2$ & Before & $0$ & 5/5 & 100.00 & Yes \\
+$2$ & After & $1.00\times10^{-2}$ & 5/5 & 55.35 & Yes \\
+$3$ & Before & $0$ & 5/5 & 100.00 & Yes \\
+$3$ & After & $1.00\times10^{-6}$ & 5/5 & 88.66 & Yes \\
+$4$ & Before & $1.00\times10^{-4}$ & 5/5 & 96.21 & Yes \\
+$4$ & After & $1.00\times10^{-2}$ & 3/5 & 4.13 & No \\
+\bottomrule
+\end{tabular}
+\end{table}

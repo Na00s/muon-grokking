@@ -1,0 +1,17 @@
+\subsection{Feature-mean timelines in the archived seed study}
+\label{app:mean-timeline}
+
+Figure~\ref{fig:mean-timeline} describes the available checkpoints from five original Muon and five selected AdamW trajectories. These archived trajectories are distinct from the fresh, densely captured cohort used for adjacent-update localization. For each checkpoint, we measure $\|\mu\|_2$, where $\mu=p^{-2}\sum_{a,b}h(a,b)$ is the mean of the actual readout-input features over the full operand grid. The archived orthonormal Fourier summaries give
+\[
+\|\mu\|_2=\frac{\sqrt{P_{\mathrm{total}} f_{\mathrm{DC}}}}{p},
+\]
+since $\widehat h(0,0)=p\mu$. This measurement uses the unfiltered representation. All $88$ plotted rows were independently recomputed; a direct feature-mean check on a saved checkpoint agrees with its orthonormal-DFT calculation to $5.49\times10^{-16}$ relative error.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{feature_mean_timeline.pdf}
+\caption{Readout-input feature means in archived Muon and selected AdamW runs. Circles show all available checkpoints: $49$ for Muon and $39$ for AdamW. Lines connect these irregularly sampled states. Norms use the full operand grid. Lower rasters mark original grokking and joint failures observed on the $100$-update grid: four Muon failure observations across three seeds and three AdamW observations across three seeds. This sampling can miss brief events. The plot identifies configurations and the archive's reported CPU backend; no original runtime manifest is retained. These descriptive trajectories provide context for the matched mean-displacement and arithmetic interventions.}
+\label{fig:mean-timeline}
+\end{figure}
+
+Muon uses hidden learning rate $0.03$ and decay $0.1$, embedding AdamW learning rate $0.001$ and decay $1$, and readout AdamW learning rate $0.00025$ and decay $1$. The selected AdamW reference uses learning rate $0.001$ and decay $3$ throughout. The original archive reports CPU training, and its Fourier analysis runs on CPU. Checkpoint selection includes phase landmarks and low-accuracy states; intermediate feature means are unmeasured. The larger recorded Muon means are descriptive evidence about these configurations and sampled trajectories. The controlled intervention in \S\ref{sec:arithmetic} addresses the local effect of multiplying the observed readout displacement by the feature mean.

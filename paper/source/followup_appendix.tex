@@ -10,6 +10,8 @@ The causal branches and fresh baseline replications use a joint event: training 
 
 Within each seed, matched arithmetic branches restore identical parameters, optimizer buffers, and random-number-generator state. Exact next-update replays reproduce all three. The original prefixes combine historical evaluation grids with densely captured failures; their positive events establish binary incidence. We therefore compare event presence, without comparing their counts, durations, or historical minima against the uniformly monitored branches. The five trajectories were selected for mechanistic study and give no estimate of collapse prevalence over an unrestricted seed population.
 
+The first captured joint failures occur at steps $17{,}494$, $17{,}721$, $18{,}069$, $16{,}308$, and $16{,}056$ for seeds $0$--$4$. Seeds $0$ and $4$ use exploratory dense replays from steps $16{,}000$ and $15{,}000$, respectively. Seed $0$'s earlier $100$-step log first detected failure at $17{,}500$; the grid missed seed $4$'s brief early failures. Seeds $1$--$3$ were specified together prospectively with the monitoring above and $200$ additional updates after capture. The selected failed decoder snapshots for seeds $3$ and $4$ are later states, $16{,}309$ and $16{,}060$, and retain those identities throughout.
+
 \begin{table}[htbp]
 \centering
 \small
@@ -120,6 +122,8 @@ Applying the training-estimated mean unchanged to test examples, the mean term a
 
 Replacing gradients only at the failing update with accurate gradients preserves all five failures. The state accumulated beforehand matters. For each actual complete parameter displacement $\Delta\theta$, the accurate training gradient satisfies $\nabla L^{\top}\Delta\theta<0$, including each group's contribution. Scaling the displacement by $0.001$ or $0.01$ lowers training loss in every seed; taking the full step raises it sharply. Both interpolation endpoints reproduce saved parameters exactly. The captured updates locally descend and overshoot at finite scale.
 
+\input{feature_mean_appendix}
+
 \subsection{Subtraction and normalized architecture}
 \label{app:normalized}
 
@@ -151,7 +155,7 @@ Subtraction reproduces acute readout sensitivity: updated features with the prec
 \label{fig:followup-rms}
 \end{figure}
 
-In the RMS runs, the embedding update causes the acute loss of accuracy. In the accurate-CE event, test accuracy falls from $96.208\%$ to $0.884\%$; its logit derivative has relative error $9.48\times10^{-8}$ and no vanished correct-class entries. Updating only the head retains $96.208\%$, updating only embeddings gives $0.940\%$, and freezing the head still gives $0.895\%$. The minimum reaches $0.526\%$ at step $28{,}503$; the stock-RMS minimum is $0.481\%$ at $28{,}540$. Exact update replay passes. Both RMS event directions locally descend and lower loss at scales $0.001$ and $0.01$, then overshoot at full scale. This counterexample bounds the readout/feature-mean account to the measured unnormalized cases and rules out universal prevention by accurate loss arithmetic. The completed horizons support those finite claims; longer runs and population frequencies remain outside their scope.
+In the RMS runs, the embedding update causes the acute loss of accuracy. In the accurate-CE event, test accuracy falls from $96.208\%$ to $0.884\%$; its logit derivative has relative error $9.48\times10^{-8}$ and no vanished correct-class entries. Updating only the head retains $96.208\%$, updating only embeddings gives $0.940\%$, and freezing the head still gives $0.895\%$. The minimum reaches $0.526\%$ at step $28{,}503$; the stock-RMS minimum is $0.481\%$ at $28{,}540$. Exact update replay passes. Both RMS event directions locally descend and lower loss at scales $0.001$ and $0.01$, then overshoot at full scale. This historical counterexample bounds the readout/feature-mean account to the measured unnormalized cases and rules out universal prevention by accurate loss arithmetic. Appendix~\ref{app:rms-replication} adds four prospective accurate-CE RMS seeds and applies the same event analysis to every captured failure.
 
 \clearpage
 \subsection{Post-grokking hidden-learning-rate reduction}
@@ -201,3 +205,7 @@ $4$ & $434.1$ & $445.1$ & $3{,}596.0$ & $1.748$ & $0.027$ & $63.645$ \\
 \end{table}
 
 Every reduced-LR branch exhibits substantial feature-mean growth and loss-derivative error at sampled states (Table~\ref{tab:lr-reduction-diagnostics}). The accompanying artifacts retain training-set feature means, raw trajectories, checkpoint replays, and the detailed audits. We have not localized the parameter group responsible for these reduced-LR failures, so the evidence establishes joint failure without attributing it to the acute readout mechanism identified in the original branches. Ordinary learning-rate reduction also scales the decoupled weight-decay step: the hidden per-update decay factor changes from $1-0.03\times0.1=0.997$ to $1-0.003\times0.1=0.9997$. The tested tenfold reduction is therefore a stabilization control. It is insufficient to provide the stability achieved by corrected loss arithmetic for these five matched continuations through step $100{,}000$.
+
+\input{decoder_controls_appendix}
+
+\input{rms_replication_appendix}

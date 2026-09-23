@@ -1,0 +1,37 @@
+\section{Projection interference and spectral analyses}
+\label{app:projection-detail}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figure5_modes.pdf}
+\caption{\textbf{Left:} task-aligned family accuracy (including the retained constant mode) against full-model accuracy over $98$ checkpoints from the original studies, both evaluated through the current readout. \emph{Projection failure} denotes low filtered accuracy; \emph{projection masking} sits at the lower right, where the task-informed projection is accurate and the full model fails. At $95$ of $98$ checkpoints the family alone is at least as accurate as the full model, and the three exceptions exceed it by under a point. \textbf{Right:} rescaling the non-constant task-aligned component of the masked checkpoint by $\alpha$, with the rest of the representation and the readout untouched.}
+\label{fig:modes}
+\end{figure}
+
+Filtering the final residual gives an answer-conditioned average through the current readout (Eq.~\ref{eq:orbit-average}). Comparing it with the full model measures interference from the remainder. In \emph{projection failure}, filtering gives $2.65\%$ and then chance, and the family has fallen out of the top twenty power pairs almost entirely. Fresh-decoder recovery in \S\ref{sec:branches} provides a separate test of surviving task information. In \emph{projection masking}, the filtered representation achieves $100\%$ accuracy over the full operand grid. The full model reaches $45.85\%$. The projection averages to a correct answer for every orbit; the full prediction also includes the remainder. One matched trajectory passes through failure, full recovery, and masking; its frozen counterpart retains high filtered accuracy and substantial family power (Appendix~\ref{app:branchtraj}).
+
+\begin{table}[!htbp]
+\centering
+\caption{Correct-class margin at the masked checkpoint, decomposed by linearity of the bias-free readout. The competitor is the highest-scoring incorrect class under the full model, fixed across components. The constant mode belongs to the remainder. The final column is the fraction of examples with a positive component margin.}
+\label{tab:margins}
+\begin{tabular}{llrrrr}
+\toprule
+Branch & Component & Mean & On correct & On wrong & Fraction $>0$ \\
+\midrule
+Control & full & $-0.71$ & $2.15$ & $-3.13$ & $0.4585$ \\
+Control & task-aligned & $+5.72$ & $5.30$ & $6.08$ & $1.0000$ \\
+Control & remainder & $-6.43$ & $-3.15$ & $-9.21$ & $0.0475$ \\
+\midrule
+Freeze & full & $+11.61$ & $11.76$ & $-1.67$ & $0.9889$ \\
+Freeze & task-aligned & $+19.28$ & $19.30$ & $17.18$ & $1.0000$ \\
+Freeze & remainder & $-7.67$ & $-7.54$ & $-18.86$ & $0.0622$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Masking is a competition on amplitude.} Because the unembedding is linear and bias-free, the correct-class margin decomposes exactly into the task-aligned contribution and the remainder (Table~\ref{tab:margins}). Against the full model's highest-scoring incorrect class, the non-constant family contributes a positive margin on every example in both branches, including every example the masked model answers wrongly, and on those examples its margin is higher, $+6.08$ against $+5.30$. The failures coincide with stronger opposition from the remainder: the remainder contributes negatively on more than nine tenths of examples in both branches, and in the control an opposition of $-6.43$ outvotes a task-aligned term of $+5.72$. Rescaling the task-aligned component by $\alpha$, with nothing retrained, raises the masked model monotonically on the sampled grid from $45.85\%$ to at least $95\%$ at $\alpha=2.55$ and $99.91\%$ at $\alpha=6$: the intervention changes the balance of the two logit contributions without retraining. The rescaled component is $P_{\mathrm{add}}h-\bar h$, with $\bar h$ the global mean. Recovery therefore depends on the task structure supplied by the projection. Family power share is a descriptive measure of this change.
+
+\textbf{Family power during grokking.} Along an AdamW trajectory sampled every thousand steps, the addition family reaches $95.14\%$ full-grid filtered accuracy at step $3{,}000$, when the model's held-out test accuracy is $0.30\%$ and the family holds $1.05\%$ of non-constant power. Ablating the family leaves near-chance accuracy at every sampled checkpoint. Its share rises to $70.62\%$ at the test-accuracy jump, alongside greater concentration within the family. The memorizer control shows why this filtered accuracy alone cannot establish algorithm learning at step $3{,}000$. Increasing power share describes the trajectory and is compatible with the cleanup account of \citet{nanda2023progress}. The margin decomposition and rescaling intervention establish amplitude competition between projected logit components at the masked checkpoint.
+
+\textbf{Spectral stability and functional change.} Exact nonzero Fourier support is invariant under an invertible residual-basis map; power and its rankings are invariant under orthogonal maps. General invertible maps can change dominant-frequency membership. A jointly compensated basis change preserves predictions. At the collapse in Figure~\ref{fig:collapse}, dominant-frequency Jaccard is $1.0000$ and power cosine is $0.9899$, while the filtered pathway's mean margin changes from $+18.14$ to $-46.85$. Over this interval the unembedding moves by $1.285$ of its norm and the addition-filtered residual by $0.392$; the old head on new features scores $26.31\%$, against $5.74\%$ for the reverse. Adjacent swaps provide finer localization (Figure~\ref{fig:followup}a). Accuracy returns to $99.90\%$ within $300$ steps with a changed power allocation. In the depth-4 pair, patching the frozen branch's addition component of the final MLP write into the control gives $99.99\%$ with the frozen head and $5.05\%$ with the control head. These results show readout sensitivity; exact basis equivalence requires the separate tests in Appendix~\ref{app:basis}.
+

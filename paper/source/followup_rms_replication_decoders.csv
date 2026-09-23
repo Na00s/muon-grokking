@@ -1,0 +1,11 @@
+cohort,seed,previous_step,failed_step,checkpoint,correct,total,test_accuracy_percent,refit_converged
+historical_cpu_pilot,0,28494,28495,previous,8704,8939,97.3710705895514,True
+historical_cpu_pilot,0,28494,28495,failed,141,8939,1.5773576462691576,True
+prospective_cpu,1,15094,15095,previous,8939,8939,100.0,True
+prospective_cpu,1,15094,15095,failed,1551,8939,17.350934108960733,True
+prospective_cpu,2,15788,15789,previous,8939,8939,100.0,True
+prospective_cpu,2,15788,15789,failed,5798,8939,64.86184136928068,True
+prospective_cpu,3,14270,14271,previous,8939,8939,100.0,True
+prospective_cpu,3,14270,14271,failed,8387,8939,93.82481261886117,True
+prospective_cpu,4,15135,15136,previous,8774,8939,98.15415594585524,True
+prospective_cpu,4,15135,15136,failed,237,8939,2.6513032777715626,True

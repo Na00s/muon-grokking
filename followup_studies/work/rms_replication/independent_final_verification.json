@@ -1,0 +1,322 @@
+{
+  "passed": true,
+  "events": 5,
+  "independent_parameter_swaps": 40,
+  "all_checkpoint_hashes_checked": 90,
+  "canonical_checkpoint_and_report_hashes_verified": true,
+  "event_checks": [
+    {
+      "seed": 0,
+      "cohort": "historical_cpu_pilot",
+      "from_step": 28494,
+      "to_step": 28495,
+      "manual_replay_exact": true,
+      "verified_rng": [
+        "torch_cpu"
+      ],
+      "parameter_groups_independently_reconstructed": true,
+      "swaps": [
+        {
+          "mask": "000",
+          "train_correct": 3672,
+          "test_correct": 8600,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "001",
+          "train_correct": 3672,
+          "test_correct": 8600,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "010",
+          "train_correct": 3696,
+          "test_correct": 8618,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "011",
+          "train_correct": 3698,
+          "test_correct": 8618,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "100",
+          "train_correct": 44,
+          "test_correct": 84,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "101",
+          "train_correct": 43,
+          "test_correct": 83,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "110",
+          "train_correct": 46,
+          "test_correct": 80,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "111",
+          "train_correct": 45,
+          "test_correct": 79,
+          "metrics_bitwise_identical": true
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "cohort": "prospective_cpu",
+      "from_step": 15094,
+      "to_step": 15095,
+      "manual_replay_exact": true,
+      "verified_rng": [
+        "torch_cpu",
+        "Python",
+        "NumPy"
+      ],
+      "parameter_groups_independently_reconstructed": true,
+      "swaps": [
+        {
+          "mask": "000",
+          "train_correct": 3812,
+          "test_correct": 8912,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "001",
+          "train_correct": 3812,
+          "test_correct": 8913,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "010",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "011",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "100",
+          "train_correct": 42,
+          "test_correct": 144,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "101",
+          "train_correct": 42,
+          "test_correct": 144,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "110",
+          "train_correct": 41,
+          "test_correct": 146,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "111",
+          "train_correct": 41,
+          "test_correct": 146,
+          "metrics_bitwise_identical": true
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "cohort": "prospective_cpu",
+      "from_step": 15788,
+      "to_step": 15789,
+      "manual_replay_exact": true,
+      "verified_rng": [
+        "torch_cpu",
+        "Python",
+        "NumPy"
+      ],
+      "parameter_groups_independently_reconstructed": true,
+      "swaps": [
+        {
+          "mask": "000",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "001",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "010",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "011",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "100",
+          "train_correct": 2090,
+          "test_correct": 4803,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "101",
+          "train_correct": 2090,
+          "test_correct": 4803,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "110",
+          "train_correct": 2115,
+          "test_correct": 4876,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "111",
+          "train_correct": 2115,
+          "test_correct": 4876,
+          "metrics_bitwise_identical": true
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "cohort": "prospective_cpu",
+      "from_step": 14270,
+      "to_step": 14271,
+      "manual_replay_exact": true,
+      "verified_rng": [
+        "torch_cpu",
+        "Python",
+        "NumPy"
+      ],
+      "parameter_groups_independently_reconstructed": true,
+      "swaps": [
+        {
+          "mask": "000",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "001",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "010",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "011",
+          "train_correct": 3830,
+          "test_correct": 8939,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "100",
+          "train_correct": 2258,
+          "test_correct": 5178,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "101",
+          "train_correct": 2258,
+          "test_correct": 5178,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "110",
+          "train_correct": 2457,
+          "test_correct": 5619,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "111",
+          "train_correct": 2457,
+          "test_correct": 5619,
+          "metrics_bitwise_identical": true
+        }
+      ]
+    },
+    {
+      "seed": 4,
+      "cohort": "prospective_cpu",
+      "from_step": 15135,
+      "to_step": 15136,
+      "manual_replay_exact": true,
+      "verified_rng": [
+        "torch_cpu",
+        "Python",
+        "NumPy"
+      ],
+      "parameter_groups_independently_reconstructed": true,
+      "swaps": [
+        {
+          "mask": "000",
+          "train_correct": 3740,
+          "test_correct": 8749,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "001",
+          "train_correct": 3740,
+          "test_correct": 8749,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "010",
+          "train_correct": 3806,
+          "test_correct": 8792,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "011",
+          "train_correct": 3807,
+          "test_correct": 8797,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "100",
+          "train_correct": 32,
+          "test_correct": 94,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "101",
+          "train_correct": 32,
+          "test_correct": 94,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "110",
+          "train_correct": 34,
+          "test_correct": 92,
+          "metrics_bitwise_identical": true
+        },
+        {
+          "mask": "111",
+          "train_correct": 34,
+          "test_correct": 92,
+          "metrics_bitwise_identical": true
+        }
+      ]
+    }
+  ]
+}

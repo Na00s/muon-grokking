@@ -1,0 +1,69 @@
+{
+  "launched_at_utc": "2026-09-23T23:04:46.532445+00:00",
+  "supervisor_pid": 39762,
+  "environment_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "workers": [
+    {
+      "seed": 1,
+      "pid": 39766,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+        "followup_studies/work/rms_replication/runner.py",
+        "--seed",
+        "1",
+        "--out",
+        "followup_studies/work/rms_replication/runs/seed1",
+        "--steps",
+        "100000"
+      ]
+    },
+    {
+      "seed": 2,
+      "pid": 39767,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+        "followup_studies/work/rms_replication/runner.py",
+        "--seed",
+        "2",
+        "--out",
+        "followup_studies/work/rms_replication/runs/seed2",
+        "--steps",
+        "100000"
+      ]
+    },
+    {
+      "seed": 3,
+      "pid": 39768,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+        "followup_studies/work/rms_replication/runner.py",
+        "--seed",
+        "3",
+        "--out",
+        "followup_studies/work/rms_replication/runs/seed3",
+        "--steps",
+        "100000"
+      ]
+    },
+    {
+      "seed": 4,
+      "pid": 39769,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+        "followup_studies/work/rms_replication/runner.py",
+        "--seed",
+        "4",
+        "--out",
+        "followup_studies/work/rms_replication/runs/seed4",
+        "--steps",
+        "100000"
+      ]
+    }
+  ]
+}

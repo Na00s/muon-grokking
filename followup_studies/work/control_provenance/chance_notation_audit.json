@@ -1,0 +1,31 @@
+{
+  "chance_accuracy": 0.008849557522123894,
+  "chance_percent": 0.8849557522123894,
+  "incorrect_occurrences": 0,
+  "occurrences": [
+    {
+      "file": "paper/source/fourier_control_appendix.tex",
+      "line": 22,
+      "text": "Every answer orbit is covered in each split, so filtering yields $100\\%$ accuracy. For a uniform split of $m=3{,}830$ out of $N=p^2$ pairs, an orbit is uncovered with probability $q=\\binom{N-p}{m}/\\binom{N}{m}$. A union bound gives $\\Pr(\\text{some orbit uncovered})\\leq pq<2.89\\times10^{-16}$. Before filtering, all held-out logits are tied. We use the smallest class index as the deterministic tie rule, matching the implementation's argmax; uniform random tie breaking has expected accuracy $1/113=0.885\\%$.",
+      "incorrect_100_over113": false
+    },
+    {
+      "file": "paper/source/fourier_control_appendix.tex",
+      "line": 64,
+      "text": "We also apply $20$ fixed-seed replicates per split and lookup for pair-global phases, channelwise phases, and derangements of the $56$ pair coefficients, preserving DC, conjugate symmetry, and total nonconstant family power. For the ordinary lookup, mean held-out accuracies of the isolated family are $1.0755\\%$, $0.9426\\%$, and $3.0680\\%$, respectively; for the count-normalized lookup they are $0\\%$, $0.8850\\%$, and $3.1555\\%$. Each mean pools $20$ perturbations per split across five splits; raw replicate distributions are released. The sensitivity observed in the trained models remains a functional measurement of their projected components. These controls show why that sensitivity alone leaves the internal algorithm unidentified.",
+      "incorrect_100_over113": false
+    },
+    {
+      "file": "paper/source/followup_appendix.tex",
+      "line": 181,
+      "text": "All five reduced-LR branches experience a joint failure, compared with $5/5$ original stock trajectories and $0/5$ corrected-loss branches through the same horizon. We compare binary seed-level incidence because the original trajectories have different historical monitoring. The reduced-LR branches first fail between steps $17{,}041$ and $19{,}439$; seeds $0$, $2$, and $4$ reach approximately chance-level test accuracy ($1/113\\approx0.885\\%$). All recover to at least $99.6644\\%$ final test accuracy. Their recovery illustrates why final accuracy alone misses these failures.",
+      "incorrect_100_over113": false
+    },
+    {
+      "file": "paper/source/main.tex",
+      "line": 199,
+      "text": "\\caption{Family sufficiency and ablation on the two operations. Addition columns at depths $2$ and $4$ aggregate eleven solved checkpoints; depth-$1$ columns are matched to the subtraction runs on initialization, configuration, and code path. Chance is $1/113=0.885\\%$; across forty-three solved checkpoints spanning five seeds and three regimes, the task-aligned family gives exactly $100.00\\%$ at every one (Appendix~\\ref{app:fourier}).}",
+      "incorrect_100_over113": false
+    }
+  ]
+}

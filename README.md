@@ -3,7 +3,7 @@
 
 ## Revised submission
 
-The revised manuscript centers on acute readout failures and surviving information. It adds Fourier memorizer controls and continues all five corrected addition branches and the subtraction control through the original 100,000-step horizon, with no joint train/test failure. The scientific main text is nine pages, with the exempt reproducibility and required AI use statements separate. Original figure data and numerical cells in the 17 original appendix tables are preserved; Figure 4 now labels the outcomes as projection failure and projection masking; all six original figures have larger labels, with their data and numeric labels preserved. The quiet-window and Fourier-grid figures appear in Appendices C and G. The mean-dependent update is now in main-text Table 3; Appendix K and Figure 9 establish the task structure supplied by Fourier filtering.
+The revised manuscript centers on acute parameter-group failures and surviving task information. Its opening figure brings together adjacent swaps, training-only decoders, and matched long-horizon interventions. The revision adds initialization and memorization decoder controls, control/event/speed provenance, an archived feature-mean timeline, and four prospectively registered accurate-CE RMS runs with event localization. Fourier memorizer controls and the original 100,000-step arithmetic and hidden-learning-rate comparisons remain included. The scientific main text is nine pages, with exempt statements, references, and detailed appendices following it.
 
 - [Revised paper](paper/Muon_Grokking_Revised.pdf)
 - [Complete LaTeX source ZIP](paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip)
@@ -25,9 +25,27 @@ Runs cover two operations, two moduli, two widths, two training fractions, depth
 
 ---
 
+## Decoder controls and RMS replication, September 23, 2026
+
+The [decoder controls](followup_studies/work/decoder_controls/report.md) compare initialization, sustained memorization, the existing healthy references, and existing failed states for the same five unnormalized trajectories. The ten new selected fits and their sensitivity fits are complete. Five early trajectory replays match the original step-1,000 model, optimizer, and RNG states exactly; forty saved-coefficient prediction checks pass.
+
+The [accurate-CE RMS replication](followup_studies/work/rms_replication/report.md) records joint failure in all four prospective seeds, stopping at their first captured post-confirmation events after 60,291 total new updates. The historical CPU pilot is reported separately. Embedding-only replacement induces joint failure in every prospective event, while retaining the preceding embeddings with the updated hidden matrices and readout preserves 98.41–100% test accuracy. Failed-state decoder accuracies vary from 2.65% to 93.82%; the reports retain the full solver and derivative diagnostics.
+
+The [control-provenance audit](followup_studies/work/control_provenance/report.md) documents the distinct historical continuations, three-program CPU replay, speed summaries, and the 88-checkpoint feature-mean timeline. All new source snapshots, raw arrays, checkpoints, trajectories, analysis outputs, and audit records are included directly in this repository.
+
+The [distribution notes](DISTRIBUTION_README.md) and [correspondence manifest](packaging_manifest.json) explain the supplied metadata and portable commands. Identifying local paths were sanitized; all scientific tensors, optimizer/RNG states, and numerical records were preserved. Historical hash-bound protocols retain the hashes of the original executions. Run `python3 verify_distribution.py` to check the supplied distribution. Fresh reproductions use separate directories and record the actual supplied source hashes.
+
+Before reproducing studies that use the older shared checkpoints, restore the existing release artifacts:
+
+```sh
+python3 followup_studies/download_artifacts.py --manifest ARTIFACTS.json
+python3 followup_studies/download_artifacts.py --manifest CAUSAL_ARTIFACTS.json
+python3 followup_studies/download_artifacts.py --manifest FOURIER_HORIZON_ARTIFACTS.json
+```
+
 ## Matched learning-rate control, September 23, 2026
 
-The [five-seed learning-rate control](followup_studies/work/lr_reduction/report.md) restores each step-6,000 model and optimizer state, reduces the hidden Muon learning rate from 0.03 to 0.003, and continues stock cross-entropy training through step 100,000 with trainable embeddings and readout. All five branches have a joint train/test failure below 90%, compared with 5/5 original failures and 0/5 corrected-loss failures. Ordinary learning-rate reduction also scales the hidden decoupled weight-decay step. The 470,000 updates, full monitoring logs, diagnostics, and 116 production and verification checkpoints are included in the repository. Figure 3c, Section 4.4, and Appendix J.6 report this control. Section 9 closes with the central readout and arithmetic finding.
+The [five-seed learning-rate control](followup_studies/work/lr_reduction/report.md) restores each step-6,000 model and optimizer state, reduces the hidden Muon learning rate from 0.03 to 0.003, and continues stock cross-entropy training through step 100,000 with trainable embeddings and readout. All five branches have a joint train/test failure below 90%, compared with 5/5 original failures and 0/5 corrected-loss failures. Ordinary learning-rate reduction also scales the hidden decoupled weight-decay step. The 470,000 updates, full monitoring logs, diagnostics, and 116 production and verification checkpoints are included in the repository. Figure 1c, Section 4.4, and Appendix J.6 report this control. Section 9 closes with the central readout and arithmetic finding.
 
 ## Follow-up experiments, September 22, 2026
 

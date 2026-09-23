@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "completed_at_unix": 1790206484.802361,
+  "checkpoint_files": 90,
+  "checkpoint_bytes": 166589594,
+  "execution_commands": [
+    [
+      "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+      "followup_studies/work/rms_replication/verify_and_summarize.py"
+    ],
+    [
+      "/opt/homebrew/Caskroom/miniforge/base/envs/research/bin/python",
+      "followup_studies/work/rms_replication/write_report.py"
+    ]
+  ],
+  "canonical_copy": "followup_studies/work/rms_replication"
+}

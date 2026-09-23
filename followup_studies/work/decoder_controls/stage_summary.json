@@ -1,0 +1,26 @@
+{
+  "initialization": {
+    "minimum_decoder_test_accuracy": 0.0004474773464593355,
+    "maximum_decoder_test_accuracy": 0.0023492560689115116,
+    "refit_converged_count": 5,
+    "unregularized_refit_converged_count": 0
+  },
+  "memorization": {
+    "minimum_decoder_test_accuracy": 0.00022373867322966775,
+    "maximum_decoder_test_accuracy": 0.011186933661483387,
+    "refit_converged_count": 5,
+    "unregularized_refit_converged_count": 5
+  },
+  "healthy_reference": {
+    "minimum_decoder_test_accuracy": 0.993959055822799,
+    "maximum_decoder_test_accuracy": 1.0,
+    "refit_converged_count": 5,
+    "unregularized_refit_converged_count": 5
+  },
+  "failed": {
+    "minimum_decoder_test_accuracy": 0.9819890368050117,
+    "maximum_decoder_test_accuracy": 1.0,
+    "refit_converged_count": 5,
+    "unregularized_refit_converged_count": 5
+  }
+}

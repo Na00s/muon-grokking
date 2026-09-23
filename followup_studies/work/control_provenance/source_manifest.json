@@ -1,0 +1,70 @@
+{
+  "repository_commit": "ANONYMIZED_SOURCE_REVISION",
+  "files": [
+    {
+      "path": "analysis/interventions/branch_collapse.py",
+      "bytes": 25724,
+      "sha256": "3145b1111c83bb791775c17e1542d7296167d518779f9e06e2982ee280587851"
+    },
+    {
+      "path": "analysis/interventions/branch_auxiliary_components.py",
+      "bytes": 24102,
+      "sha256": "b4e0260469e9bd9e65a0cf6c04fa8136bc3331944530af0397e5b5724c1bd6a6"
+    },
+    {
+      "path": "analysis/plots/plot_auxiliary_component_branches.py",
+      "bytes": 6328,
+      "sha256": "10b6a7e5280a824e0cc53de4e7abd99dad1c754f9bd0093c7fcf6c493f32b505"
+    },
+    {
+      "path": "analysis/sweeps/analyze_adamw_sweep.py",
+      "bytes": 13099,
+      "sha256": "77c5baa8b441da086c72fa1576eb9c0c1e30d4a47635f6fe8c0c18483a025727"
+    },
+    {
+      "path": "analysis/sweeps/analyze_muon_sweep.py",
+      "bytes": 12016,
+      "sha256": "ce93afdd81230bde5a1db0fdbe1bbeba28e36e0f552ee1c57e73f141810d842a"
+    },
+    {
+      "path": "scripts/training/train.py",
+      "bytes": 30082,
+      "sha256": "56b1fae41797862c4747d365dc439c9e306b72baff1967e9416d805e74a7ba30"
+    },
+    {
+      "path": "data.py",
+      "bytes": 1738,
+      "sha256": "aa8cdffc2973eb57ca81f28614b15e93b8814603b3793229c5462f2e330057ab"
+    },
+    {
+      "path": "model.py",
+      "bytes": 5851,
+      "sha256": "1efc903b11446bf7c0b6794e120c34cbebf679b91a40123d4a7f79cf83837d72"
+    },
+    {
+      "path": "optimizers/muon.py",
+      "bytes": 9704,
+      "sha256": "bcbfcef627d67bd5a3393c4ddacc9bdf4cb061d3a2014da1c3cb1d7ae591556d"
+    },
+    {
+      "path": "experiments/depth/depth_fourier_mode_identification.py",
+      "bytes": 43408,
+      "sha256": "c7bf5d54536155d59137eb9d1e234e9de3f37d6dea53f5d50ac7ad3dc0a2f736"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13233,
+      "sha256": "b4bf52167a14db614a9cc0cbcc98688d507f77d1c99361656e1a7d724b7fa4da"
+    },
+    {
+      "path": "runs/depth4_matched_freeze_seed_0_from_126200_metadata.json",
+      "bytes": 1061,
+      "sha256": "61180adc436727f6a7ce9246bc3f8046042043f52bcc10ef039c1506e8b5572f"
+    },
+    {
+      "path": "runs/muon_lr_0p01_seed_0_full.csv",
+      "bytes": 249028,
+      "sha256": "56d60e6fb16ec7a29e720a3aedd803c32c098bff1273573952ccf2c27eae685a"
+    }
+  ]
+}

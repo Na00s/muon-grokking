@@ -1,0 +1,157 @@
+{
+  "adamw": {
+    "source": "runs/adamw_sweep_summary.csv",
+    "sha256": "48f7e7449997eb86500ef70400fb43bdfcc173cea470c3802add9110d2074bb0",
+    "configurations": 11,
+    "successes": 7,
+    "unsuccessful": [
+      "adamw_sweep_lr_3em4_wd_0p1_seed_0",
+      "adamw_sweep_lr_3em4_wd_1p0_seed_0",
+      "adamw_sweep_lr_1em3_wd_0p1_seed_0",
+      "adamw_sweep_lr_1em2_wd_3p0_seed_0"
+    ],
+    "successful_steps": [
+      25500,
+      52500,
+      8200,
+      49500,
+      8500,
+      62900,
+      6300
+    ],
+    "success_conditional_mean": 30485.714285714286,
+    "fastest_successful_step": 6300,
+    "stable_configurations": [
+      "adamw_sweep_lr_3em4_wd_3p0_seed_0",
+      "adamw_sweep_lr_1em3_wd_1p0_seed_0",
+      "adamw_sweep_lr_1em3_wd_3p0_seed_0"
+    ],
+    "grid": [
+      [
+        0.0003,
+        0.1
+      ],
+      [
+        0.0003,
+        1.0
+      ],
+      [
+        0.0003,
+        3.0
+      ],
+      [
+        0.001,
+        0.1
+      ],
+      [
+        0.001,
+        1.0
+      ],
+      [
+        0.001,
+        3.0
+      ],
+      [
+        0.003,
+        0.1
+      ],
+      [
+        0.003,
+        1.0
+      ],
+      [
+        0.01,
+        0.1
+      ],
+      [
+        0.01,
+        1.0
+      ],
+      [
+        0.01,
+        3.0
+      ]
+    ],
+    "selected_five_seed_grokking_steps": [
+      8800,
+      8300,
+      4000,
+      11700,
+      6400
+    ],
+    "selected_five_seed_median": 8300
+  },
+  "muon": {
+    "source": "runs/muon_sweep_summary.csv",
+    "sha256": "1a23d582967cff03abd4e48ffe6c1b8540f5325fb0e7cd82421549b7353583c7",
+    "configurations": 9,
+    "successes": 9,
+    "unsuccessful": [],
+    "successful_steps": [
+      5400,
+      6000,
+      7200,
+      8500,
+      9000,
+      14400,
+      19000,
+      19500,
+      28100
+    ],
+    "success_conditional_mean": 13011.111111111111,
+    "fastest_successful_step": 5400,
+    "stable_configurations": [],
+    "grid": [
+      [
+        0.003,
+        0.03
+      ],
+      [
+        0.003,
+        0.1
+      ],
+      [
+        0.003,
+        0.3
+      ],
+      [
+        0.01,
+        0.03
+      ],
+      [
+        0.01,
+        0.1
+      ],
+      [
+        0.01,
+        0.3
+      ],
+      [
+        0.03,
+        0.03
+      ],
+      [
+        0.03,
+        0.1
+      ],
+      [
+        0.03,
+        0.3
+      ]
+    ],
+    "selected_five_seed_grokking_steps": [
+      5400,
+      5300,
+      5400,
+      5400,
+      5400
+    ],
+    "selected_five_seed_median": 5400
+  },
+  "ratios": {
+    "selected_configuration_medians": 1.537037037037037,
+    "fastest_successful_single_seed_sweep_entries": 1.1666666666666667,
+    "success_conditional_sweep_means": 2.3430523362205684
+  },
+  "selection": "AdamW baseline: fastest strictly stable sweep entry, lr.001 wd3; Muon: fastest entry, lr.03 wd.1, among nine configurations all showing at least one post-grokking sampled test accuracy<95%. Grids differ; sweep means exclude four AdamW failures at100000."
+}

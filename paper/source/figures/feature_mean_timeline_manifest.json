@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "definition": "Euclidean norm of arithmetic mean of actual pre-readout residual features over all12769 operand pairs. Gain-free unnormalized depth1 models. Derived from preserved float32 ortho-FFT summaries: mean_norm=sqrt(total_spectral_power*dc_power_fraction_total)/113. FourierDC coefficient=113*mean_feature.",
+  "population": "Full operand grid, including training and held-out examples. Descriptive measurement only.",
+  "sampling": "49 Muon and39 AdamW selected checkpoints, irregular sampling exactly shown by circles; joining segments aid visual tracking and do not measure intermediate states. Source checkpoint selection includes phase landmarks and low-accuracy checkpoints.",
+  "events": 17,
+  "historical_event_counts": {
+    "muon_evaluations": 4,
+    "muon_seeds": 3,
+    "adamw_evaluations": 3,
+    "adamw_seeds": 3
+  },
+  "cohort_distinction": "Original archived100-step seed-study trajectories, separate from fresh densely captured5seed failures. Absence of an event marker does not establish event-free training between observations.",
+  "comparison_scope": "Selected configurations and five historical seed-study trajectories; backend CPU as reported by repository README, no independently archived runtime manifest. No inference of upstream causality or population optimizer comparison.",
+  "optimizer_configs": {
+    "muon_hidden": "lr.03,wd.1,momentum.95,NS5",
+    "muon_embeddings": "AdamWlr.001wd1",
+    "muon_readout": "AdamWlr.00025wd1",
+    "adamw_all": "lr.001wd3"
+  },
+  "source_sha256": {
+    "runs/seedstudy_fourier_mode_layer_summary.csv": "1d9fb7ee97f40fe71bf560195ff8356c44d94fc5acfe08fff2f51c34de5a26b7",
+    "runs/seedstudy_muon_seed_0.csv": "d95aac9249a4f61f71f91f1e5d548869f202f99e975b7b5c22be6e4ac345b4b8",
+    "runs/seedstudy_muon_seed_1.csv": "660d575551ed7b6665daa22019da4b64c0f361dd18c4920ebb862786307f0cc9",
+    "runs/seedstudy_muon_seed_2.csv": "b74363293720354e11330c423bd4b273875f367c5e3d4b227137e87392aa5cbc",
+    "runs/seedstudy_muon_seed_3.csv": "9ae9e46539cb08cfe890fa916d5ef92a04bd744db32489e0085daa2f9970895a",
+    "runs/seedstudy_muon_seed_4.csv": "1d4ce31f0a461b54f81997dbb1e3c896116a43aa8e4bd1f419e8c939e905dbfc",
+    "runs/seedstudy_adamw_stable_seed_0.csv": "59d9239c8de4b33dbcc85aa714beb24b5cbd22c1892cf81e0852185b134eed92",
+    "runs/seedstudy_adamw_stable_seed_1.csv": "58bc3b8f9a1c51e3013c4fc85cf6534b59c9d4c09406a43e63c7de54f41f479f",
+    "runs/seedstudy_adamw_stable_seed_2.csv": "f8b72dff7d3642e258b05908606c45c05a536269191f1d103895ff6ae13b42df",
+    "runs/seedstudy_adamw_stable_seed_3.csv": "371bd834496990f9c02ada1ac041e2f5ec80286f3ecee481d94239f9a5f6aafe",
+    "runs/seedstudy_adamw_stable_seed_4.csv": "c7aa12e1a34f3992b147b6b8d96cf25d07d6e857e62d4e490ae1111185a8e6b2"
+  },
+  "rows": 88,
+  "files": {
+    "feature_mean_timeline.csv": "da6de38b91f047b9a606529be9433c11b979638d000ad60e2d161a6e3be5e96b",
+    "feature_mean_events.csv": "585fe78d816fc9304d2adace815961d71a3e3a9c1bdbaa75b7dc60f5478a74c0",
+    "feature_mean_timeline.pdf": "a3fd93a9c4450582736da8b2a3093e5432e1c9fed19ca431c556c43c23945ec9",
+    "feature_mean_timeline.png": "35488414979e9bdfd06d722735a26c7d3a67abe4221a28a85ca60ffb6ff975ca"
+  }
+}

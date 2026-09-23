@@ -1,0 +1,20 @@
+{
+  "scope": "Supplementary final audit artifacts created after the automatic completion copy. Existing checkpoint_manifest.json covers all90checkpoint files and remains unchanged; each event artifact_manifest.json covers its analysis outputs. A distribution-wide manifest should additionally inventory this supplement and all supplied files.",
+  "files": [
+    {
+      "path": "independent_final_audit.py",
+      "sha256": "a33f33a1349289605dfb6c37031d445bcd8a057349112f36157a7502c181b91d",
+      "bytes": 4626
+    },
+    {
+      "path": "independent_final_verification.json",
+      "sha256": "8d4461a2ebb05b7fba65631e12fe0b48225cb9d49dc540b226699ac5aa812161",
+      "bytes": 7931
+    },
+    {
+      "path": "analysis_environment.json",
+      "sha256": "7d54287207fd8fa8eaa14a366861736250f5ce0b757489bcb4327faea9a62412",
+      "bytes": 705
+    }
+  ]
+}

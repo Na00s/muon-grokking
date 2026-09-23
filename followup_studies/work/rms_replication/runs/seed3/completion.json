@@ -1,0 +1,33 @@
+{
+  "seed": 3,
+  "status": "confirmed_grokking_with_failure",
+  "terminal_step": 14271,
+  "steps_executed": 14271,
+  "monitor": {
+    "streak": 48,
+    "grok_confirmation_step": 10000,
+    "first_qualifying_scheduled_step": 9500,
+    "minimum_post_confirmation_sampled_test_accuracy": 0.6285938024387515,
+    "test_evaluations": 144,
+    "post_confirmation_test_evaluations": 44,
+    "post_confirmation_below95_evaluations": 1
+  },
+  "terminal": {
+    "step": 14271,
+    "train_correct": 2457,
+    "train_total": 3830,
+    "train_accuracy": 0.6415143603133159,
+    "train_accurate_ce32": 1.8052316904067993,
+    "test_correct": 5619,
+    "test_total": 8939,
+    "test_accuracy": 0.6285938024387515,
+    "test_accurate_ce32": 1.8805345296859741,
+    "test_accurate_ce64": 1.8805344902720849,
+    "test_scheduled": false,
+    "grok_confirmed": true,
+    "grok_confirmation_step": 10000,
+    "joint_failure": true,
+    "elapsed_seconds": 1657.7844235829543
+  },
+  "elapsed_seconds": 1657.8100585418288
+}

@@ -1,0 +1,18 @@
+{
+  "status": "registered_before_execution",
+  "historical_state_available": false,
+  "source_checkpoint": "experiments/seed0_original/step_016000.pt",
+  "source_sha256": "7b73eae0f80f0ca95cd4e9f880179a79af8c61507d968c55b4cdd847c15294fa",
+  "adapted_source_sha256": "19e4ca27e77fc147a6d36940b62e4ffaf573311103085d27052515922eca487a",
+  "start_step": 16000,
+  "end_step": 18000,
+  "device": "cpu",
+  "torch_version": "2.13.0",
+  "python_version": "3.14.6",
+  "threads": 1,
+  "deterministic_algorithms": true,
+  "note": "Implementation parity only. Merged head into one auxiliary group; head LR explicitly changed .00025 to .001. Does not reproduce historical step44000 runs.",
+  "model_key_conversion_only": true,
+  "optimizer_moments_and_steps_preserved": true,
+  "rng_handling": "Each original main reseeds Python and torch to checkpoint.seed before constructing model. Full-batch forward has no dropout or random operations. Original scripts do not restore saved RNG."
+}

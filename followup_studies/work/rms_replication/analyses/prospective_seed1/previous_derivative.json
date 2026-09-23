@@ -1,0 +1,22 @@
+{
+  "step": 15094,
+  "training": {
+    "correct": 3812,
+    "total": 3830,
+    "accuracy": 0.9953002610966057,
+    "accurate_ce32": 0.009139553643763065,
+    "accurate_ce64": 0.009139553230838763
+  },
+  "absolute_l2_error": 1.0039977142538584e-10,
+  "maximum_absolute_error": 4.257246256369161e-11,
+  "relative_l2_error": 8.117838182694096e-08,
+  "reference_l2_norm": 0.0012367796593854474,
+  "accurate_gradient_l2_norm": 0.0012367796431882266,
+  "class_sum_residual_l2": 1.1782277119873473e-10,
+  "class_sum_residual_maximum_absolute": 5.015760983634321e-11,
+  "class_sum_residual_relative_l2": 9.526577374120186e-08,
+  "reference_class_sum_residual_l2": 2.8316218078074154e-19,
+  "reference": "Analytic cancellation-resistant float64 mean-CE derivative on identical stored float32 logits",
+  "train_feature_mean_definition": "All3830training examples; forward pre-hook before readout after final RMS",
+  "train_feature_mean_norm": 0.9486936561609993
+}

@@ -1,0 +1,166 @@
+{
+  "study": "Accurate-CE RMS first-joint-failure replication and localization",
+  "frozen_at_utc": "2026-09-23T23:04:46.506774+00:00",
+  "prospective_seeds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "historical_reference": {
+    "seed": 0,
+    "path": "../causal_study/generality/rms_accurate",
+    "confirmation_step": 19900,
+    "first_captured_joint_failure": 28495,
+    "historical_horizon": 30000,
+    "backend": "CPU",
+    "role": "Separately identified historical pilot; same event analysis as prospective failures"
+  },
+  "backend": "CPU",
+  "rationale": "Preserve the historical CPU backend and PyTorch2.13.0. Initialization and historical event replay are bitwise exact under this environment.",
+  "maximum_updates": 100000,
+  "model": {
+    "operation": "addition",
+    "modulus": 113,
+    "train_fraction": 0.3,
+    "split": "Original generate_modular_addition_data with per-seed local torch.Generator permutation",
+    "layers": 1,
+    "width": 128,
+    "heads": 4,
+    "mlp_width": 512,
+    "activation": "ReLU",
+    "projection_bias": false,
+    "normalization": "gain-free RMS before attention, MLP, and readout",
+    "rms_epsilon": 1e-06,
+    "dtype": "float32"
+  },
+  "optimizers": {
+    "hidden": {
+      "implementation": "Original Muon from hashed source_snapshot/muon-grokking/optimizers/muon.py",
+      "learning_rate": 0.03,
+      "momentum": 0.95,
+      "weight_decay": 0.1,
+      "nesterov": true,
+      "newton_schulz_steps": 5,
+      "newton_schulz_dtype": "float32",
+      "newton_schulz_epsilon": 1e-07
+    },
+    "embeddings": {
+      "implementation": "torch.optim.AdamW",
+      "lr": 0.001,
+      "weight_decay": 1.0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "amsgrad": false,
+      "foreach": null,
+      "maximize": false,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    },
+    "readout": {
+      "implementation": "torch.optim.AdamW",
+      "lr": 0.00025,
+      "weight_decay": 1.0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "amsgrad": false,
+      "foreach": null,
+      "maximize": false,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    }
+  },
+  "objective": "Existing cancellation-resistant accurate_cross_entropy from initialization, preserving float32 logits and loss arithmetic",
+  "monitoring": {
+    "train": "Every state from initialization, using full training-batch logits used for the next update; exact correct/total counts logged",
+    "test": "Every100updates and whenever training accuracy is below90% after grokking confirmation; terminal100000 also scheduled",
+    "test_batch_size": 1024,
+    "grokking_confirmation": "Six consecutive scheduled test evaluations >=95%; confirmation at sixth, initial point of streak retained separately",
+    "failure": "First subsequent state with both train and test accuracy <90%",
+    "stopping": "First joint failure after confirmation or step100000",
+    "outcomes": [
+      "confirmed_grokking_with_failure",
+      "confirmed_grokking_event_free_completion",
+      "failure_to_confirm_grokking",
+      "technical_interruption"
+    ]
+  },
+  "checkpointing": {
+    "initial": true,
+    "confirmation": true,
+    "periodic_every": 1000,
+    "terminal": true,
+    "event_preceding_every_update": "In-memory full model, optimizer and RNG snapshot retained after confirmation; written at event",
+    "rng": [
+      "torch CPU",
+      "Python",
+      "NumPy"
+    ],
+    "gpu_rng": "CPU execution uses no GPU RNG; fields explicitly null",
+    "technical_interruption": "Preserve logs and recover exact model/optimizer/RNG snapshot. Any replay overlap must be documented before resuming."
+  },
+  "event_analysis": {
+    "replay": "Restore immediately preceding checkpoint; perform complete update on CPU; exact tensor equality for model, optimizers and torch RNG; full extended RNG for prospective states; verify event measurements",
+    "derivative": "Accurate float32 derivative compared with analytic float64 mean-CE derivative evaluated at identical stored float32 training logits. Report absoluteL2/max, relativeL2, reference norm, class-sum residual and saved arrays.",
+    "swaps": "All8old/new combinations in embeddings,hidden,readout order; native float32 train/test correct counts and accurateCE; full-batch training and1024-chunk test evaluations",
+    "decoder_features": "Forward-pre-hook on unembedding; includes final RMS; frozen native float32 features converted tofloat64 for fitting",
+    "decoder": {
+      "model": "Bias-free multinomial logistic regression",
+      "initialization": "zero",
+      "dtype": "float64",
+      "feature_transform": "uncentered full-dimensional SVD preconditioning",
+      "relative_singular_floor": 1e-06,
+      "validation_fraction": 0.2,
+      "validation_seed": 0,
+      "validation_indices": "Freeze before probe fitting; preserve within seed across checkpoints",
+      "regularization_grid": [
+        0,
+        1e-08,
+        1e-06,
+        0.0001,
+        0.01
+      ],
+      "selection": "Lowest validation cross entropy; tie uses smaller lambda",
+      "transforms": "Fit on inner training examples per candidate and original training examples for refit",
+      "candidate_maxiter": 500,
+      "refit_maxiter": 1000,
+      "maxfun_multiplier": 3,
+      "maxls": 20,
+      "maxcor": 10,
+      "ftol": 1e-10,
+      "gtol": 1e-07,
+      "unregularized_control": "Reuse selected lambda0 fit; otherwise separate lambda0 fit with same procedure",
+      "convergence": "All candidate and refit statuses, iteration/function counts, final gradients retained"
+    }
+  },
+  "environment": {
+    "backend": "cpu",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:24:52) [Clang 20.1.8 ]",
+    "torch": "2.13.0",
+    "numpy": "2.5.2",
+    "threads": 1,
+    "interop_threads": 1,
+    "deterministic_algorithms": true,
+    "float32_matmul_precision": "highest",
+    "default_dtype": "torch.float32",
+    "torch_build": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 202002\n  - clang 21.0.0\n  - OpenMP 202011\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, COMMIT_SHA=cf30153c4c131c8164ee7798e5022d810682e2cb, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Qunused-arguments -faligned-new -fno-math-errno -fno-trapping-math -Werror=format -fclang-abi-compat=17 -DUSE_MPS -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.13.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+    "mps_available": false,
+    "cuda_available": false,
+    "active_gpu": false
+  },
+  "immutable_hashes": {
+    "runner.py": "0872f50d24e2e0db67d9d22d583f8cc36bb2f829262342645079d2a0444e77f1",
+    "verify_runner.py": "a83fc08d8e0fc0dfc3a87db02709f3b3ff5690f94506c681a49b21604f5392d1",
+    "source_manifest.json": "1e76d14e9c45b9f9422fae5e16cf47e7044ca5b9ff8c77465f04802899844a7c",
+    "runner_verification.json": "3177f5bafe90a7d2004df4233e2ebbb568b5f5284bc672d12391cec60a78afab"
+  }
+}

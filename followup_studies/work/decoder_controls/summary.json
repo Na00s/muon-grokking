@@ -1,0 +1,542 @@
+{
+  "protocol_sha256": "a574e7e63d372180be0cfed00ccca733e3dc7ca1e4fafa076695ff65b1bcfd9a",
+  "completed_at_utc": "2026-09-23T23:18:42.669384+00:00",
+  "all_seed_replays_exact_at_step_1000": true,
+  "all_validation_indices_preserved": true,
+  "new_decoder_count": 10,
+  "existing_decoder_count": 10,
+  "rows": [
+    {
+      "seed": 0,
+      "role": "initialization",
+      "step": 0,
+      "native_train_accuracy": 0.007571801566579634,
+      "native_test_accuracy": 0.00839020024611254,
+      "decoder_train_accuracy": 0.19765013054830288,
+      "decoder_test_accuracy": 0.0012305627027631727,
+      "selected_regularization": 0.01,
+      "refit_converged": true,
+      "refit_iterations": 10,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.004474773464593355,
+      "unregularized_refit_converged": false,
+      "unregularized_refit_iterations": 1000,
+      "status": "new control"
+    },
+    {
+      "seed": 0,
+      "role": "memorization",
+      "step": 200,
+      "native_train_accuracy": 0.9994778067885117,
+      "native_test_accuracy": 0.0007830853563038371,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.00022373867322966775,
+      "selected_regularization": 0.0001,
+      "refit_converged": true,
+      "refit_iterations": 36,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.0003356080098445016,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 22,
+      "status": "new control"
+    },
+    {
+      "seed": 0,
+      "role": "healthy_reference",
+      "step": 17200,
+      "native_train_accuracy": 1.0,
+      "native_test_accuracy": 0.9911623224074281,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.9950777491889473,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 19,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.9950777491889473,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 19,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 0,
+      "role": "failed",
+      "step": 17494,
+      "native_train_accuracy": 0.4825065274151436,
+      "native_test_accuracy": 0.3187157400156617,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.987246895625909,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 18,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.987246895625909,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 18,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 1,
+      "role": "initialization",
+      "step": 0,
+      "native_train_accuracy": 0.008093994778067885,
+      "native_test_accuracy": 0.009173285602416377,
+      "decoder_train_accuracy": 0.1835509138381201,
+      "decoder_test_accuracy": 0.0012305627027631727,
+      "selected_regularization": 0.01,
+      "refit_converged": true,
+      "refit_iterations": 10,
+      "refit_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "candidate_convergence": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.002684864078756013,
+      "unregularized_refit_converged": false,
+      "unregularized_refit_iterations": 1000,
+      "status": "new control"
+    },
+    {
+      "seed": 1,
+      "role": "memorization",
+      "step": 400,
+      "native_train_accuracy": 0.9997389033942559,
+      "native_test_accuracy": 0.0022373867322966774,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.0024611254055263453,
+      "selected_regularization": 0.0001,
+      "refit_converged": true,
+      "refit_iterations": 33,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.0032442107618301822,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 22,
+      "status": "new control"
+    },
+    {
+      "seed": 1,
+      "role": "healthy_reference",
+      "step": 17300,
+      "native_train_accuracy": 1.0,
+      "native_test_accuracy": 0.991945407763732,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.9956370958720214,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 19,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.9956370958720214,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 19,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 1,
+      "role": "failed",
+      "step": 17721,
+      "native_train_accuracy": 0.1566579634464752,
+      "native_test_accuracy": 0.09094977066785993,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.9819890368050117,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 17,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.9819890368050117,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 17,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 2,
+      "role": "initialization",
+      "step": 0,
+      "native_train_accuracy": 0.007310704960835509,
+      "native_test_accuracy": 0.00894954692918671,
+      "decoder_train_accuracy": 0.1947780678851175,
+      "decoder_test_accuracy": 0.0006712160196890032,
+      "selected_regularization": 0.01,
+      "refit_converged": true,
+      "refit_iterations": 10,
+      "refit_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "candidate_convergence": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.003356080098445016,
+      "unregularized_refit_converged": false,
+      "unregularized_refit_iterations": 1000,
+      "status": "new control"
+    },
+    {
+      "seed": 2,
+      "role": "memorization",
+      "step": 200,
+      "native_train_accuracy": 0.9994778067885117,
+      "native_test_accuracy": 0.004922250811052691,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.00548159749412686,
+      "selected_regularization": 0.0001,
+      "refit_converged": true,
+      "refit_iterations": 34,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.006264682850430697,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 19,
+      "status": "new control"
+    },
+    {
+      "seed": 2,
+      "role": "healthy_reference",
+      "step": 18000,
+      "native_train_accuracy": 1.0,
+      "native_test_accuracy": 1.0,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 1.0,
+      "selected_regularization": 1e-08,
+      "refit_converged": true,
+      "refit_iterations": 19,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 1.0,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 19,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 2,
+      "role": "failed",
+      "step": 18069,
+      "native_train_accuracy": 0.009921671018276762,
+      "native_test_accuracy": 0.00928515493903121,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 1.0,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 18,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 1.0,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 18,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 3,
+      "role": "initialization",
+      "step": 0,
+      "native_train_accuracy": 0.008616187989556136,
+      "native_test_accuracy": 0.009061416265801543,
+      "decoder_train_accuracy": 0.21566579634464753,
+      "decoder_test_accuracy": 0.0023492560689115116,
+      "selected_regularization": 0.01,
+      "refit_converged": true,
+      "refit_iterations": 11,
+      "refit_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "candidate_convergence": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.006152813513815863,
+      "unregularized_refit_converged": false,
+      "unregularized_refit_iterations": 1000,
+      "status": "new control"
+    },
+    {
+      "seed": 3,
+      "role": "memorization",
+      "step": 100,
+      "native_train_accuracy": 1.0,
+      "native_test_accuracy": 0.000894954692918671,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.0006712160196890032,
+      "selected_regularization": 0.0001,
+      "refit_converged": true,
+      "refit_iterations": 37,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.0006712160196890032,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 22,
+      "status": "new control"
+    },
+    {
+      "seed": 3,
+      "role": "healthy_reference",
+      "step": 15800,
+      "native_train_accuracy": 1.0,
+      "native_test_accuracy": 0.9907148450609687,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.993959055822799,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 19,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.993959055822799,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 19,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 3,
+      "role": "failed",
+      "step": 16309,
+      "native_train_accuracy": 0.42637075718015666,
+      "native_test_accuracy": 0.32117686542118806,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.9876943729723683,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 18,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.9876943729723683,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 18,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 4,
+      "role": "initialization",
+      "step": 0,
+      "native_train_accuracy": 0.010443864229765013,
+      "native_test_accuracy": 0.008278330909497707,
+      "decoder_train_accuracy": 0.18302872062663186,
+      "decoder_test_accuracy": 0.0004474773464593355,
+      "selected_regularization": 0.01,
+      "refit_converged": true,
+      "refit_iterations": 10,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.001789909385837342,
+      "unregularized_refit_converged": false,
+      "unregularized_refit_iterations": 1000,
+      "status": "new control"
+    },
+    {
+      "seed": 4,
+      "role": "memorization",
+      "step": 200,
+      "native_train_accuracy": 0.9994778067885117,
+      "native_test_accuracy": 0.010180109631949883,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 0.011186933661483387,
+      "selected_regularization": 0.0001,
+      "refit_converged": true,
+      "refit_iterations": 33,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 0.011186933661483387,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 20,
+      "status": "new control"
+    },
+    {
+      "seed": 4,
+      "role": "healthy_reference",
+      "step": 16050,
+      "native_train_accuracy": 1.0,
+      "native_test_accuracy": 1.0,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 1.0,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 19,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 1.0,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 19,
+      "status": "existing result reused"
+    },
+    {
+      "seed": 4,
+      "role": "failed",
+      "step": 16060,
+      "native_train_accuracy": 0.21775456919060052,
+      "native_test_accuracy": 0.1813401946526457,
+      "decoder_train_accuracy": 1.0,
+      "decoder_test_accuracy": 1.0,
+      "selected_regularization": 0.0,
+      "refit_converged": true,
+      "refit_iterations": 17,
+      "refit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "candidate_convergence": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unregularized_test_accuracy": 1.0,
+      "unregularized_refit_converged": true,
+      "unregularized_refit_iterations": 17,
+      "status": "existing result reused"
+    }
+  ],
+  "new_report_manifest": [
+    {
+      "path": "decoder_controls/seed0/initialization_decoder.json",
+      "sha256": "a3bbc29124e0f8a5a94ac82cc16bbdc5c385b2dc11a9f7cb0ca2529aa1323dad",
+      "bytes": 90836
+    },
+    {
+      "path": "decoder_controls/seed0/memorization_decoder.json",
+      "sha256": "4c496c6b7ffe0a02be5fd4f4f15a8a3822a660d0da7715bbf6bd3031f25ae8e7",
+      "bytes": 90621
+    },
+    {
+      "path": "decoder_controls/seed1/initialization_decoder.json",
+      "sha256": "ec609cd02983cc27d1a0bb8657556f0a1758c9eaed0119dfb6f79120162aed89",
+      "bytes": 90878
+    },
+    {
+      "path": "decoder_controls/seed1/memorization_decoder.json",
+      "sha256": "35178137d9875ec194cc9f2188f1f1f51df5e9cace35b4ab4b5f6043a0424200",
+      "bytes": 90625
+    },
+    {
+      "path": "decoder_controls/seed2/initialization_decoder.json",
+      "sha256": "40e3694e7d2d5eaabbf1fd9d5049574bdce4b95a6f2b57d6bb438fa1f08c01b3",
+      "bytes": 90805
+    },
+    {
+      "path": "decoder_controls/seed2/memorization_decoder.json",
+      "sha256": "4fcb795d00384c636c719fe9e359e4866b16218f81f556050163193caf74f199",
+      "bytes": 90600
+    },
+    {
+      "path": "decoder_controls/seed3/initialization_decoder.json",
+      "sha256": "188f5aa47c44a9ad2887b06c6ae2f6a60cb624a5d90a43ed64a368548e4542ce",
+      "bytes": 90771
+    },
+    {
+      "path": "decoder_controls/seed3/memorization_decoder.json",
+      "sha256": "15dc2f784a328a5117cef5668072dcfb8017368e608510b0f5512304daa186d4",
+      "bytes": 90577
+    },
+    {
+      "path": "decoder_controls/seed4/initialization_decoder.json",
+      "sha256": "6baf9d4e79e2b8ac3517c158f0c71384efbd537cdbb7e53e83de64cc1ea38d34",
+      "bytes": 90787
+    },
+    {
+      "path": "decoder_controls/seed4/memorization_decoder.json",
+      "sha256": "07dbf58f7f5bcf044b2ec8fb13deed0f86fd94f968536dc8c82e1bd852d279ec",
+      "bytes": 90592
+    }
+  ]
+}

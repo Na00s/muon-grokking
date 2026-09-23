@@ -1,0 +1,719 @@
+{
+  "status": "passed",
+  "audit_utc": "2026-09-23T23:40:26.452757+00:00",
+  "all_prospective_runs_complete": true,
+  "prospective_joint_failures": 4,
+  "prospective_seeds": 4,
+  "historical_pilot_separate": true,
+  "event_count": 5,
+  "model_updates_or_probe_fits_performed": false,
+  "study_files_modified": false,
+  "monitoring": [
+    {
+      "seed": 1,
+      "confirmation_step": 11500,
+      "terminal_step": 15095,
+      "every_state_rows": 15096,
+      "test_evaluations": 152,
+      "post_confirmation_evaluations_inclusive": 37,
+      "below95_evaluations": 1,
+      "minimum_sampled_test_accuracy": 0.016332923145765746,
+      "all_monitoring_recomputed": true
+    },
+    {
+      "seed": 2,
+      "confirmation_step": 12600,
+      "terminal_step": 15789,
+      "every_state_rows": 15790,
+      "test_evaluations": 159,
+      "post_confirmation_evaluations_inclusive": 33,
+      "below95_evaluations": 1,
+      "minimum_sampled_test_accuracy": 0.54547488533393,
+      "all_monitoring_recomputed": true
+    },
+    {
+      "seed": 3,
+      "confirmation_step": 10000,
+      "terminal_step": 14271,
+      "every_state_rows": 14272,
+      "test_evaluations": 144,
+      "post_confirmation_evaluations_inclusive": 44,
+      "below95_evaluations": 1,
+      "minimum_sampled_test_accuracy": 0.6285938024387515,
+      "all_monitoring_recomputed": true
+    },
+    {
+      "seed": 4,
+      "confirmation_step": 12600,
+      "terminal_step": 15136,
+      "every_state_rows": 15137,
+      "test_evaluations": 153,
+      "post_confirmation_evaluations_inclusive": 27,
+      "below95_evaluations": 1,
+      "minimum_sampled_test_accuracy": 0.010291978968564717,
+      "all_monitoring_recomputed": true
+    }
+  ],
+  "events": [
+    {
+      "seed": 0,
+      "cohort": "historical_cpu_pilot",
+      "previous_step": 28494,
+      "failed_step": 28495,
+      "replay_verified_keys": [
+        "model_state_dict",
+        "optimizer_state_dicts",
+        "torch_rng_state"
+      ],
+      "derivative_checks": [
+        {
+          "checkpoint": "previous",
+          "absolute_l2_error": 4.056514038833057e-10,
+          "relative_l2_error": 9.476445447546542e-08,
+          "reference_l2_norm": 0.004280628281233119,
+          "maximum_absolute_error": 1.5011676168623367e-10,
+          "class_sum_residual_l2": 4.300881619072921e-10
+        },
+        {
+          "checkpoint": "failed",
+          "absolute_l2_error": 8.832970481682957e-10,
+          "relative_l2_error": 5.080756229735509e-08,
+          "reference_l2_norm": 0.017385149143718668,
+          "maximum_absolute_error": 5.962651254904153e-11,
+          "class_sum_residual_l2": 1.5549033668480529e-09
+        }
+      ],
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 0.004929427434887453
+            },
+            "heldout": {
+              "correct": 8704,
+              "total": 8939,
+              "accuracy": 0.973710705895514,
+              "cross_entropy": 0.20805398517704463
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 67,
+          "selected_regularization": 0.0001,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 3.003491747226003e-07
+            },
+            "heldout": {
+              "correct": 8566,
+              "total": 8939,
+              "accuracy": 0.9582727374426669,
+              "cross_entropy": 1.0520232742484759
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 27,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 1053,
+              "total": 3830,
+              "accuracy": 0.274934725848564,
+              "cross_entropy": 3.5701906028740265
+            },
+            "heldout": {
+              "correct": 141,
+              "total": 8939,
+              "accuracy": 0.015773576462691577,
+              "cross_entropy": 5.281436782105194
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 12,
+          "selected_regularization": 0.01,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 1533,
+              "total": 3830,
+              "accuracy": 0.4002610966057441,
+              "cross_entropy": 2.456638962036507
+            },
+            "heldout": {
+              "correct": 234,
+              "total": 8939,
+              "accuracy": 0.026177424767871126,
+              "cross_entropy": 29.944753852923046
+            }
+          },
+          "refit_converged": false,
+          "refit_iterations": 1000,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        }
+      ],
+      "swaps_heldout_percent": {
+        "000": 96.20762948875714,
+        "001": 96.20762948875714,
+        "010": 96.40899429466383,
+        "011": 96.40899429466383,
+        "100": 0.9397024275646046,
+        "101": 0.928515493903121,
+        "110": 0.8949546929186709,
+        "111": 0.8837677592571875
+      }
+    },
+    {
+      "seed": 1,
+      "cohort": "prospective_cpu",
+      "previous_step": 15094,
+      "failed_step": 15095,
+      "replay_verified_keys": [
+        "model_state_dict",
+        "optimizer_state_dicts",
+        "torch_rng_state",
+        "rng_states"
+      ],
+      "derivative_checks": [
+        {
+          "checkpoint": "previous",
+          "absolute_l2_error": 1.0039977148464241e-10,
+          "relative_l2_error": 8.117838187484876e-08,
+          "reference_l2_norm": 0.0012367796593855112,
+          "maximum_absolute_error": 4.257246256369161e-11,
+          "class_sum_residual_l2": 1.1782277119873458e-10
+        },
+        {
+          "checkpoint": "failed",
+          "absolute_l2_error": 6.346814010999968e-10,
+          "relative_l2_error": 3.884651743028597e-08,
+          "reference_l2_norm": 0.016338180178931024,
+          "maximum_absolute_error": 3.970073144472959e-11,
+          "class_sum_residual_l2": 1.445797585853463e-09
+        }
+      ],
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 8.676474253270715e-07
+            },
+            "heldout": {
+              "correct": 8939,
+              "total": 8939,
+              "accuracy": 1.0,
+              "cross_entropy": 7.210784626542718e-05
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 18,
+          "selected_regularization": 1e-08,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 7.340260445433709e-07
+            },
+            "heldout": {
+              "correct": 8939,
+              "total": 8939,
+              "accuracy": 1.0,
+              "cross_entropy": 8.255315037480722e-05
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 18,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 2232,
+              "total": 3830,
+              "accuracy": 0.5827676240208878,
+              "cross_entropy": 2.731355559073559
+            },
+            "heldout": {
+              "correct": 1551,
+              "total": 8939,
+              "accuracy": 0.17350934108960733,
+              "cross_entropy": 4.188317740477619
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 15,
+          "selected_regularization": 0.01,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 5.812679337829025e-06
+            },
+            "heldout": {
+              "correct": 988,
+              "total": 8939,
+              "accuracy": 0.11052690457545587,
+              "cross_entropy": 800.9308461023999
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 130,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        }
+      ],
+      "swaps_heldout_percent": {
+        "000": 99.69795279113994,
+        "001": 99.70913972480143,
+        "010": 100.0,
+        "011": 100.0,
+        "100": 1.6109184472536078,
+        "101": 1.6109184472536078,
+        "110": 1.6332923145765745,
+        "111": 1.6332923145765745
+      }
+    },
+    {
+      "seed": 2,
+      "cohort": "prospective_cpu",
+      "previous_step": 15788,
+      "failed_step": 15789,
+      "replay_verified_keys": [
+        "model_state_dict",
+        "optimizer_state_dicts",
+        "torch_rng_state",
+        "rng_states"
+      ],
+      "derivative_checks": [
+        {
+          "checkpoint": "previous",
+          "absolute_l2_error": 1.2104596134476924e-12,
+          "relative_l2_error": 4.7592911825742234e-08,
+          "reference_l2_norm": 2.543361116209272e-05,
+          "maximum_absolute_error": 9.318535662073205e-13,
+          "class_sum_residual_l2": 3.669460795682378e-13
+        },
+        {
+          "checkpoint": "failed",
+          "absolute_l2_error": 6.022100925330339e-10,
+          "relative_l2_error": 4.862955362887632e-08,
+          "reference_l2_norm": 0.012383623693708764,
+          "maximum_absolute_error": 5.930113675502516e-11,
+          "class_sum_residual_l2": 9.577999510702265e-10
+        }
+      ],
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 2.6340463653685894e-06
+            },
+            "heldout": {
+              "correct": 8939,
+              "total": 8939,
+              "accuracy": 1.0,
+              "cross_entropy": 2.688505057493833e-06
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 15,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 2.6340463653685894e-06
+            },
+            "heldout": {
+              "correct": 8939,
+              "total": 8939,
+              "accuracy": 1.0,
+              "cross_entropy": 2.688505057493833e-06
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 15,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 2772,
+              "total": 3830,
+              "accuracy": 0.7237597911227154,
+              "cross_entropy": 1.4829956749637632
+            },
+            "heldout": {
+              "correct": 5798,
+              "total": 8939,
+              "accuracy": 0.6486184136928068,
+              "cross_entropy": 2.0688509198447917
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 17,
+          "selected_regularization": 0.01,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 1.7478401880384162e-06
+            },
+            "heldout": {
+              "correct": 4948,
+              "total": 8939,
+              "accuracy": 0.553529477570198,
+              "cross_entropy": 86.33278004808652
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 66,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        }
+      ],
+      "swaps_heldout_percent": {
+        "000": 100.0,
+        "001": 100.0,
+        "010": 100.0,
+        "011": 100.0,
+        "100": 53.73084237610472,
+        "101": 53.73084237610472,
+        "110": 54.54748853339299,
+        "111": 54.54748853339299
+      }
+    },
+    {
+      "seed": 3,
+      "cohort": "prospective_cpu",
+      "previous_step": 14270,
+      "failed_step": 14271,
+      "replay_verified_keys": [
+        "model_state_dict",
+        "optimizer_state_dicts",
+        "torch_rng_state",
+        "rng_states"
+      ],
+      "derivative_checks": [
+        {
+          "checkpoint": "previous",
+          "absolute_l2_error": 1.9150273892591125e-12,
+          "relative_l2_error": 8.989360721674189e-08,
+          "reference_l2_norm": 2.130326558863972e-05,
+          "maximum_absolute_error": 2.7124734275634117e-13,
+          "class_sum_residual_l2": 9.971503649070235e-13
+        },
+        {
+          "checkpoint": "failed",
+          "absolute_l2_error": 5.975720584351019e-10,
+          "relative_l2_error": 5.041504136143663e-08,
+          "reference_l2_norm": 0.01185305103988659,
+          "maximum_absolute_error": 4.503391515492221e-11,
+          "class_sum_residual_l2": 8.803066826984302e-10
+        }
+      ],
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 2.2024945079393428e-06
+            },
+            "heldout": {
+              "correct": 8939,
+              "total": 8939,
+              "accuracy": 1.0,
+              "cross_entropy": 3.069487589066915e-06
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 14,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 2.2024945079393428e-06
+            },
+            "heldout": {
+              "correct": 8939,
+              "total": 8939,
+              "accuracy": 1.0,
+              "cross_entropy": 3.069487589066915e-06
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 14,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 0.0002528508664639041
+            },
+            "heldout": {
+              "correct": 8387,
+              "total": 8939,
+              "accuracy": 0.9382481261886118,
+              "cross_entropy": 0.285495377948214
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 77,
+          "selected_regularization": 1e-06,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 1.7583906720552494e-06
+            },
+            "heldout": {
+              "correct": 7925,
+              "total": 8939,
+              "accuracy": 0.8865644926725584,
+              "cross_entropy": 0.9037261088837193
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 27,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        }
+      ],
+      "swaps_heldout_percent": {
+        "000": 100.0,
+        "001": 100.0,
+        "010": 100.0,
+        "011": 100.0,
+        "100": 57.925942499160975,
+        "101": 57.925942499160975,
+        "110": 62.85938024387515,
+        "111": 62.85938024387515
+      }
+    },
+    {
+      "seed": 4,
+      "cohort": "prospective_cpu",
+      "previous_step": 15135,
+      "failed_step": 15136,
+      "replay_verified_keys": [
+        "model_state_dict",
+        "optimizer_state_dicts",
+        "torch_rng_state",
+        "rng_states"
+      ],
+      "derivative_checks": [
+        {
+          "checkpoint": "previous",
+          "absolute_l2_error": 1.3950922417031471e-10,
+          "relative_l2_error": 5.275164588033138e-08,
+          "reference_l2_norm": 0.0026446421119597934,
+          "maximum_absolute_error": 5.925682649643785e-11,
+          "class_sum_residual_l2": 2.3594381335700806e-10
+        },
+        {
+          "checkpoint": "failed",
+          "absolute_l2_error": 7.158444059775734e-10,
+          "relative_l2_error": 4.258001443661222e-08,
+          "reference_l2_norm": 0.016811746436658274,
+          "maximum_absolute_error": 3.7135027230973325e-11,
+          "class_sum_residual_l2": 1.3749280615782025e-09
+        }
+      ],
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 0.0032869458231622743
+            },
+            "heldout": {
+              "correct": 8774,
+              "total": 8939,
+              "accuracy": 0.9815415594585524,
+              "cross_entropy": 0.11090620998097171
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 59,
+          "selected_regularization": 0.0001,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 3830,
+              "total": 3830,
+              "accuracy": 1.0,
+              "cross_entropy": 6.613153223235336e-07
+            },
+            "heldout": {
+              "correct": 8600,
+              "total": 8939,
+              "accuracy": 0.9620762948875713,
+              "cross_entropy": 0.802127412595502
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 24,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "predictions": {
+            "train": {
+              "correct": 1216,
+              "total": 3830,
+              "accuracy": 0.3174934725848564,
+              "cross_entropy": 3.400175719847609
+            },
+            "heldout": {
+              "correct": 237,
+              "total": 8939,
+              "accuracy": 0.026513032777715627,
+              "cross_entropy": 5.102687971001641
+            }
+          },
+          "refit_converged": true,
+          "refit_iterations": 12,
+          "selected_regularization": 0.01,
+          "training_only_transform_recomputed": true
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "predictions": {
+            "train": {
+              "correct": 2084,
+              "total": 3830,
+              "accuracy": 0.5441253263707572,
+              "cross_entropy": 1.8484796386642237
+            },
+            "heldout": {
+              "correct": 369,
+              "total": 8939,
+              "accuracy": 0.0412797852108737,
+              "cross_entropy": 75.39111735289538
+            }
+          },
+          "refit_converged": false,
+          "refit_iterations": 1000,
+          "selected_regularization": 0.0,
+          "training_only_transform_recomputed": true
+        }
+      ],
+      "swaps_heldout_percent": {
+        "000": 97.87448260431816,
+        "001": 97.87448260431816,
+        "010": 98.35552075176194,
+        "011": 98.41145542006936,
+        "100": 1.0515717641794384,
+        "101": 1.0515717641794384,
+        "110": 1.0291978968564717,
+        "111": 1.0291978968564717
+      }
+    }
+  ],
+  "derivative_pairs_recomputed": 10,
+  "decoder_prediction_splits_recomputed": 40,
+  "full_dimension_training_only_SVDs_recomputed": 10,
+  "scope": "Replay equality is inspected from full-state verifier code and saved verification; no optimizer update was rerun in this audit. Low bounded-decoder accuracy leaves stronger decoders unresolved.",
+  "source_sha256": {
+    "summary.json": "deb57b089b7000157fa7c00917faf8662c2998562653e0eafeb44e02c9cbe31d",
+    "verification.json": "8c4ea3aeaba8374e20364e571387084037c1d921758d09a02b388b9a555a1c78",
+    "protocol.json": "9f6dcd6ed055c7b2cf21d1e45f1a3026d63f2e8cdfb2e560bc159d680d3cb493",
+    "analyze_event.py": "de8c4b37ab990b258d190028e01d4d5bb3d48ae35daec9af2545f7978d7b2835",
+    "verify_and_summarize.py": "a8b1218ead0ac023ce1cf1da6a83eb0534b93606aadd413de842805a6b28646f"
+  }
+}

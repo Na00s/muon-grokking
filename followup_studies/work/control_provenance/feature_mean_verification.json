@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "input_checkpoint": "experiments/seed0_original/step_006000.pt",
+  "input_sha256": "c3442965ba80566f5e4fe5c68407a35e22e6df203c65eaa615efc643631cb7d1",
+  "source_step": 6000,
+  "direct_full_grid_mean_norm": 310.83662739488386,
+  "orthonormal_fft_recovered_mean_norm": 310.8366273948837,
+  "relative_error": 5.486169954024885e-16,
+  "recomputed_source_rows": 88,
+  "source_row_identity_all_passed": true,
+  "maximum_relative_discrepancy_using_float32_total_minus_nondc": 1.4253715696993964e-07,
+  "note": "Identity checked independently on a saved fresh-cohort checkpoint, separately from archived checkpoints unavailable as tensors. All88plotted row calculations and source identities independently rechecked."
+}

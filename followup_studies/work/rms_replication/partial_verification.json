@@ -1,0 +1,74 @@
+{
+  "complete": false,
+  "protocol_sha256": "9f6dcd6ed055c7b2cf21d1e45f1a3026d63f2e8cdfb2e560bc159d680d3cb493",
+  "immutable_source_hashes_verified": true,
+  "runs": [],
+  "event_audits": [
+    {
+      "seed": 0,
+      "cohort": "historical_cpu_pilot",
+      "passed": true,
+      "replay_passed": true,
+      "derivative_arrays_independently_recomputed": true,
+      "decoder_predictions_independently_recomputed": true,
+      "validation_indices_verified": true,
+      "source_artifact_hashes_verified": true,
+      "decoder_checks": [
+        {
+          "checkpoint": "previous",
+          "method": "cv_selected",
+          "heldout_correct": 8704,
+          "heldout_accuracy": 0.973710705895514,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "previous",
+          "method": "unregularized_control",
+          "heldout_correct": 8566,
+          "heldout_accuracy": 0.9582727374426669,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "cv_selected",
+          "heldout_correct": 141,
+          "heldout_accuracy": 0.015773576462691577,
+          "refit_converged": true,
+          "candidate_convergence": [
+            true,
+            false,
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "checkpoint": "failed",
+          "method": "unregularized_control",
+          "heldout_correct": 234,
+          "heldout_accuracy": 0.026177424767871126,
+          "refit_converged": false,
+          "candidate_convergence": [
+            true
+          ]
+        }
+      ]
+    }
+  ],
+  "remaining": [
+    "seed1_training",
+    "seed2_training",
+    "seed3_training",
+    "seed4_training"
+  ]
+}
