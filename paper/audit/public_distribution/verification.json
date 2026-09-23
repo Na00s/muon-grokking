@@ -1,40 +1,66 @@
 {
-  "status": "passed",
-  "tracked_files_scanned": 1901,
-  "scan_counts": {
-    "file_payloads": 5207,
-    "pdfs": 73,
-    "zip_members": 3306,
-    "checkpoint_archives": 116
+  "current_chance_fraction_correction": {
+    "status": "passed",
+    "scope": "Correct the chance fraction in Appendix J.6 from 100/113 to 1/113; the displayed 0.885 percent and all measured values are unchanged.",
+    "changed_source_file": "paper/source/followup_appendix.tex",
+    "exact_source_replacement": true,
+    "changed_pdf_text_pages": [
+      26
+    ],
+    "other_29_pages_text_and_decoded_streams_identical": true,
+    "all_57_other_source_files_byte_identical": true,
+    "all_figures_unchanged": true,
+    "all_experiment_records_unchanged": true,
+    "total_pages": 30,
+    "scientific_main_pages": 9,
+    "overfull_boxes": 0,
+    "baseline_pdf_sha256": "280519aacaf2323670fe35d66c38385e684051d842a5fb42953f608480e1db38",
+    "pdf_sha256": "839db2dad06a8761e9b1c86aa4bb5e5f499cb237a310400223aed2c775216e93",
+    "source_archive_sha256": "0cbddd39f51ad7d6faa990d296326b0ccfde02a92af8e1662654b736f4f41031",
+    "source_archive_files": 58,
+    "source_archive_rebuild_text_and_decoded_content_streams_identical": true,
+    "visual_inspection_pages": [
+      26
+    ]
   },
-  "restricted_link_findings": 0,
-  "scientific_followup_files_byte_preserved": 1488,
-  "manuscript_source_files_byte_preserved": 56,
-  "manuscript_content_changes": "Only the reproducibility repository designation and URL; the source README describes the public package.",
-  "scientific_main_pages": 9,
-  "total_pages": 30,
-  "changed_pdf_text_pages": [
-    10
-  ],
-  "source_archive_rebuild_text_and_decoded_content_streams_identical": true,
-  "visual_inspection": "Page 10 reviewed; no clipping or overlapping text.",
-  "scan_scope": "Canonical payload files before adding this audit record.",
-  "canonical_tracked_files": 1901,
-  "byte_identical_files": 1891,
-  "public_copy_changes": [
-    "README.md",
-    "paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip",
-    "paper/Muon_Grokking_Revised.pdf",
-    "paper/audit/wording_revision/independent_audit.json",
-    "paper/audit/wording_revision/verification.json",
-    "paper/revision_addendum.md",
-    "paper/source/README.md",
-    "paper/source/main.tex",
-    "paper/verification.json",
-    "paper/wording_revision.patch"
-  ],
-  "all_followup_studies_files_byte_identical": true,
-  "lr_checkpoints_byte_identical": 116,
-  "historical_protocol_note": "Experiment protocols, archived checks, and raw scientific records retain their original bytes. Historical paper hashes refer to the manuscript at those checks; current manuscript checks are in paper/verification.json.",
-  "whitespace_check": "Passed with CSV CRLF recognized; retained patch context lines contain the single space required by unified diff format."
+  "historical_public_distribution": {
+    "status": "passed",
+    "tracked_files_scanned": 1901,
+    "scan_counts": {
+      "file_payloads": 5207,
+      "pdfs": 73,
+      "zip_members": 3306,
+      "checkpoint_archives": 116
+    },
+    "restricted_link_findings": 0,
+    "scientific_followup_files_byte_preserved": 1488,
+    "manuscript_source_files_byte_preserved": 56,
+    "manuscript_content_changes": "Only the reproducibility repository designation and URL; the source README describes the public package.",
+    "scientific_main_pages": 9,
+    "total_pages": 30,
+    "changed_pdf_text_pages": [
+      10
+    ],
+    "source_archive_rebuild_text_and_decoded_content_streams_identical": true,
+    "visual_inspection": "Page 10 reviewed; no clipping or overlapping text.",
+    "scan_scope": "Canonical payload files before adding this audit record.",
+    "canonical_tracked_files": 1901,
+    "byte_identical_files": 1891,
+    "public_copy_changes": [
+      "README.md",
+      "paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip",
+      "paper/Muon_Grokking_Revised.pdf",
+      "paper/audit/wording_revision/independent_audit.json",
+      "paper/audit/wording_revision/verification.json",
+      "paper/revision_addendum.md",
+      "paper/source/README.md",
+      "paper/source/main.tex",
+      "paper/verification.json",
+      "paper/wording_revision.patch"
+    ],
+    "all_followup_studies_files_byte_identical": true,
+    "lr_checkpoints_byte_identical": 116,
+    "historical_protocol_note": "Experiment protocols, archived checks, and raw scientific records retain their original bytes. Historical paper hashes refer to the manuscript at those checks; current manuscript checks are in paper/verification.json.",
+    "whitespace_check": "Passed with CSV CRLF recognized; retained patch context lines contain the single space required by unified diff format."
+  }
 }
