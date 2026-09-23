@@ -122,9 +122,13 @@ def main():
     original_events = [6000 <= p["stock_event_step"] <= 30000
                        and p["stock_event_train_accuracy"] < .9
                        and p["stock_event_test_accuracy"] < .9 for p in primary]
-    accurate_events = [p["accurate"]["event"] for p in primary]
+    extended = read("work/long_horizon/summary.json")
+    extended_addition = sorted([r for r in extended["records"] if r["operation"] == "addition"], key=lambda r: r["seed"])
+    assert extended["status"] == "completed" and [r["seed"] for r in extended_addition] == list(range(5))
+    assert all(r["arithmetic_start_step"] == 6000 and r["end_step"] == 100000 for r in extended_addition)
+    accurate_events = [r["first_joint_failure_step"] is not None for r in extended_addition]
     incidence = [sum(original_events), sum(accurate_events)]
-    assert incidence == [5, 0]
+    assert incidence[0] == 5
     specificity = results["specificity"]
     assert len(specificity) == 5
     for row in specificity:
@@ -178,7 +182,7 @@ def main():
     c.tick_params(axis="x", length=0, pad=5)
     for xpos, value in enumerate(incidence):
         c.text(xpos, value + .20, f"{value}/5", ha="center", va="bottom", fontsize=8)
-    c.text(.5, -.39, "6,000 to 30,000\nupdates", transform=c.transAxes,
+    c.text(.5, -.39, "6,000 to 100,000\nupdates", transform=c.transAxes,
            ha="center", va="top", fontsize=8, linespacing=1.3)
     save(fig, "followup_mechanism")
 
@@ -230,9 +234,10 @@ def main():
                          "native_test_accuracy_percent": native_probe,
                          "fresh_decoder_test_accuracy_percent": fresh_probe},
         "main_panel_c": {"seeds": list(range(5)), "original_failure_count": incidence[0],
-                         "accurate_failure_count": incidence[1], "source_step": 6000, "end_step": 30000,
+                         "accurate_failure_count": incidence[1], "source_step": 6000, "end_step": 100000,
+                         "original_events_observed_by_step": 30000,
                          "event": "Both train and test accuracy below 90% after grokking.",
-                         "caveat": "Paired seeds; original monitoring grids are mixed. Binary incidence only."},
+                         "caveat": "Paired seeds; original failures were observed by 30,000 under mixed monitoring. Accurate branches continue through 100,000. Binary incidence only."},
         "specificity_confirmed_but_not_plotted": "All three arms have 0/5 events between 15,000 and 20,000.",
         "appendix_parameter_masks": parameter_masks,
         "appendix_first_events": raw_generality,

@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "addition_seed0",
+      "source_sha256": "bea215246f7131b7222238d3f303324669d1a1d5d6f8578178542e2279208364",
+      "source_step": 30000,
+      "initial_tensor_checks": 22,
+      "resume_tensor_checks": 22,
+      "monitored_tensor_checks": 22,
+      "uninterrupted_equals_split_resume": true,
+      "uninterrupted_equals_monitored": true,
+      "uninterrupted_seconds_per_update": 0.04873649649865305,
+      "monitored_seconds_per_update": 0.05659910415609678
+    },
+    {
+      "name": "addition_seed1",
+      "source_sha256": "68accfa722156d716ccded7294e1b5573fcf56c4eb744b285847cc4aefda9e36",
+      "source_step": 30000,
+      "initial_tensor_checks": 22,
+      "resume_tensor_checks": 22,
+      "monitored_tensor_checks": 22,
+      "uninterrupted_equals_split_resume": true,
+      "uninterrupted_equals_monitored": true,
+      "uninterrupted_seconds_per_update": 0.04548396532967066,
+      "monitored_seconds_per_update": 0.0579305937474904
+    },
+    {
+      "name": "addition_seed2",
+      "source_sha256": "1c1571c2e1f0b454fb8b1487a5087d6ea4c239dba1d805c84f8d3051a58496ea",
+      "source_step": 30000,
+      "initial_tensor_checks": 22,
+      "resume_tensor_checks": 22,
+      "monitored_tensor_checks": 22,
+      "uninterrupted_equals_split_resume": true,
+      "uninterrupted_equals_monitored": true,
+      "uninterrupted_seconds_per_update": 0.0457410694216378,
+      "monitored_seconds_per_update": 0.05678884374598662
+    },
+    {
+      "name": "addition_seed3",
+      "source_sha256": "09fb94f7fdcd22a4cd90e7bb098433cc3ef3e664c740573d2a97a86c204a09bf",
+      "source_step": 30000,
+      "initial_tensor_checks": 22,
+      "resume_tensor_checks": 22,
+      "monitored_tensor_checks": 22,
+      "uninterrupted_equals_split_resume": true,
+      "uninterrupted_equals_monitored": true,
+      "uninterrupted_seconds_per_update": 0.04628999649624651,
+      "monitored_seconds_per_update": 0.05684496175187329
+    },
+    {
+      "name": "addition_seed4",
+      "source_sha256": "411b2c525ae50d78ccf27c23a4fc4862afd9dfb2b46111ff8f06cd6189c4e95e",
+      "source_step": 30000,
+      "initial_tensor_checks": 22,
+      "resume_tensor_checks": 22,
+      "monitored_tensor_checks": 22,
+      "uninterrupted_equals_split_resume": true,
+      "uninterrupted_equals_monitored": true,
+      "uninterrupted_seconds_per_update": 0.0473865971628887,
+      "monitored_seconds_per_update": 0.05957512840783844
+    },
+    {
+      "name": "subtraction_seed0",
+      "source_sha256": "2e2933d927b674219add9c202cd15d3833212097638d7bc85fe972417841b602",
+      "source_step": 30000,
+      "initial_tensor_checks": 22,
+      "resume_tensor_checks": 22,
+      "monitored_tensor_checks": 22,
+      "uninterrupted_equals_split_resume": true,
+      "uninterrupted_equals_monitored": true,
+      "uninterrupted_seconds_per_update": 0.04684032982913777,
+      "monitored_seconds_per_update": 0.059068295173346996
+    }
+  ],
+  "runner_sha256": "50ccf3587d6ef62d9406b88d27d8de33ad23ccd51b51f5f8db4a5a2b39692399"
+}

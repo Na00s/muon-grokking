@@ -1,0 +1,41 @@
+Completed 1452 additional checks; all passed. Prefix rows=420, phase rows=3600.
+one_hot ascending_frequency_mathematical_tie 1 6.1976--9.5425%
+one_hot ascending_frequency_mathematical_tie 2 9.5536--16.3889%
+one_hot ascending_frequency_mathematical_tie 3 13.2006--18.8500%
+one_hot ascending_frequency_mathematical_tie 5 23.8170--28.5714%
+one_hot ascending_frequency_mathematical_tie 10 37.7895--45.9000%
+one_hot ascending_frequency_mathematical_tie 20 75.4559--85.5912%
+one_hot ascending_frequency_mathematical_tie 56 100.0000--100.0000%
+one_hot descending_numeric_power 1 6.1976--8.8601%
+one_hot descending_numeric_power 2 9.5536--32.0170%
+one_hot descending_numeric_power 3 27.2402--77.2010%
+one_hot descending_numeric_power 5 63.6872--87.4594%
+one_hot descending_numeric_power 10 89.2494--100.0000%
+one_hot descending_numeric_power 20 100.0000--100.0000%
+one_hot descending_numeric_power 56 100.0000--100.0000%
+one_hot pair_global_phase isolated_family_with_dc mean=1.0755% range=0.0000--70.8692%
+one_hot pair_global_phase full_lookup_table mean=0.0000% range=0.0000--0.0000%
+one_hot channelwise_phase isolated_family_with_dc mean=0.9426% range=0.0000--3.6022%
+one_hot channelwise_phase full_lookup_table mean=0.0000% range=0.0000--0.0000%
+one_hot frequency_derangement isolated_family_with_dc mean=3.0680% range=1.5885--6.1864%
+one_hot frequency_derangement full_lookup_table mean=0.8592% range=0.7607--0.9061%
+training_count_normalized ascending_frequency_mathematical_tie 1 100.0000--100.0000%
+training_count_normalized ascending_frequency_mathematical_tie 2 100.0000--100.0000%
+training_count_normalized ascending_frequency_mathematical_tie 3 100.0000--100.0000%
+training_count_normalized ascending_frequency_mathematical_tie 5 100.0000--100.0000%
+training_count_normalized ascending_frequency_mathematical_tie 10 100.0000--100.0000%
+training_count_normalized ascending_frequency_mathematical_tie 20 100.0000--100.0000%
+training_count_normalized ascending_frequency_mathematical_tie 56 100.0000--100.0000%
+training_count_normalized descending_numeric_power 1 100.0000--100.0000%
+training_count_normalized descending_numeric_power 2 100.0000--100.0000%
+training_count_normalized descending_numeric_power 3 100.0000--100.0000%
+training_count_normalized descending_numeric_power 5 100.0000--100.0000%
+training_count_normalized descending_numeric_power 10 100.0000--100.0000%
+training_count_normalized descending_numeric_power 20 100.0000--100.0000%
+training_count_normalized descending_numeric_power 56 100.0000--100.0000%
+training_count_normalized pair_global_phase isolated_family_with_dc mean=0.0000% range=0.0000--0.0000%
+training_count_normalized pair_global_phase full_lookup_table mean=0.0000% range=0.0000--0.0000%
+training_count_normalized channelwise_phase isolated_family_with_dc mean=0.8850% range=0.0000--4.4860%
+training_count_normalized channelwise_phase full_lookup_table mean=0.0000% range=0.0000--0.0000%
+training_count_normalized frequency_derangement isolated_family_with_dc mean=3.1555% range=2.5282--6.2423%
+training_count_normalized frequency_derangement full_lookup_table mean=0.8592% range=0.7607--0.9061%

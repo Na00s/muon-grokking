@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "seed": 0,
+  "operation": "subtraction",
+  "arm": "stable32",
+  "start_step": 30000,
+  "end_step": 100000,
+  "updates": 70000,
+  "train_states": 70001,
+  "test_evaluations": 701,
+  "first_joint_failure_step": null,
+  "minimum_train_accuracy": 1.0,
+  "minimum_measured_test_accuracy": 0.999328783980311,
+  "train_below90_states": 0,
+  "test_below90_evaluations": 0,
+  "joint_below90_states": 0,
+  "minimum_test_state": {
+    "step": 70100,
+    "local_step": 40100,
+    "train_loss": 1.301705521150609e-09,
+    "train_accuracy": 1.0,
+    "test_accuracy": 0.999328783980311,
+    "test_loss64": 0.0012419152568183154,
+    "joint_failure": false,
+    "elapsed_seconds": 3798.7885851669125
+  },
+  "final_state": {
+    "step": 100000,
+    "local_step": 70000,
+    "train_loss": 1.3191457925998407e-09,
+    "train_accuracy": 1.0,
+    "test_accuracy": 0.9995525226535407,
+    "test_loss64": 0.0011988447330513255,
+    "joint_failure": false,
+    "elapsed_seconds": 6439.234912249958
+  },
+  "elapsed_seconds": 6439.269845166942,
+  "source_checkpoint_sha256": "2e2933d927b674219add9c202cd15d3833212097638d7bc85fe972417841b602",
+  "final_checkpoint_sha256": "ac7ca46da3c35fd0b32d631f4e81effcafb4937db7c5c89fbc9a3ed915905ff3"
+}

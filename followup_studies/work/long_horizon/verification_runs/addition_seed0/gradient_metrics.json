@@ -1,0 +1,28 @@
+[
+  {
+    "step": 30000,
+    "metrics": {
+      "stock32": {
+        "loss": 0.0,
+        "zero_target_fraction": 1.0,
+        "row_sum_norm": 5.3975666343140416e-11,
+        "relative_error": 0.8877193118615548,
+        "cosine": 0.4603850815872934
+      },
+      "accurate32": {
+        "loss": 1.8575929683350978e-09,
+        "zero_target_fraction": 0.0,
+        "row_sum_norm": 2.6531456927008572e-18,
+        "relative_error": 1.9046013602209408e-07,
+        "cosine": 1.000000000000055
+      },
+      "reference64": {
+        "loss": 1.857592915345059e-09,
+        "zero_target_fraction": 0.0,
+        "row_sum_norm": 7.571604766688006e-27,
+        "relative_error": 0.0,
+        "cosine": 1.00000000000008
+      }
+    }
+  }
+]

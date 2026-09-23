@@ -1,5 +1,7 @@
 # Basis-change study: evidence and reproduction
 
+**Latest update:** [Fourier controls](work/fourier_control/report.md) establish the task structure supplied by the filter. [Corrected-loss extensions](work/long_horizon/README.md) complete the original 100,000-step horizon in five addition branches and one subtraction run. The manuscript and [revision record](../paper/revision_addendum.md) incorporate these results. Download their saved checkpoints with `python followup_studies/download_artifacts.py --manifest FOURIER_HORIZON_ARTIFACTS.json` from the repository root.
+
 **Current conclusion:** the [completed causal study](causal_study/report.md) supersedes the earlier open-mechanism assessment below. Its [reproduction guide](causal_study/README.md) covers the additional experiments and release.
 
 Start with [report.md](report.md). [reservations_status.md](reservations_status.md) assesses which manuscript concerns are resolved and which remain open. `paper_revision.md` contains suggested manuscript wording. `mathematical_scope.md` states the exact hypotheses and algebraic identification limits. Figures are available as PNG and PDF under `figures/`.

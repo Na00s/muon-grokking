@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Task-structured Fourier controls on lookup-only predictors. All values are percentages over the five original addition splits ($p=113$, $3{,}830$ training and $8{,}939$ held-out inputs). Ranges reflect splits. The count-normalized lookup stores $p/n_c$ at its memorized class $c$ and zero elsewhere. Every one of the $56$ individual nonzero conjugate diagonal pairs succeeds on all five splits.}
+\label{tab:fourier-memorizer}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Predictor and intervention & Train & Held out & Full grid \\
+\midrule
+One-hot lookup, raw & $100$ & $0.76$--$0.91$ & $30.53$--$30.63$ \\
+Full addition family $+$ DC & $100$ & $100$ & $100$ \\
+Family ablation, DC retained & $100$ & $0$ & $29.99$ \\
+Training-donor orbit average & $100$ & $100$ & $100$ \\
+Held-out-donor orbit average & $0.84$--$1.17$ & $0.76$--$0.91$ & $0.88$ \\
+Count-normalized lookup, one pair $+$ DC & $100$ & $100$ & $100$ \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-09-22T23:03:43.134108+00:00",
+  "seed": 0,
+  "operation": "subtraction",
+  "arm": "stable32",
+  "normalization": "none",
+  "training_loss": "accurate_cross_entropy",
+  "start_step": 30000,
+  "end_step": 100000,
+  "planned_updates": 70000,
+  "source_checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/causal_study/generality/subtraction_accurate/final.pt",
+  "source_checkpoint_sha256": "2e2933d927b674219add9c202cd15d3833212097638d7bc85fe972417841b602",
+  "source_repository_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "model_config": {
+    "modulus": 113,
+    "sequence_length": 3,
+    "d_model": 128,
+    "num_heads": 4,
+    "d_mlp": 512,
+    "num_layers": 1
+  },
+  "optimizer_hyperparameters": {
+    "muon": [
+      {
+        "learning_rate": 0.03,
+        "momentum": 0.95,
+        "weight_decay": 0.1,
+        "newton_schulz_steps": 5,
+        "nesterov": true
+      }
+    ],
+    "auxiliary_adamw": [
+      {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ],
+    "unembedding_adamw": [
+      {
+        "lr": 0.00025,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ]
+  },
+  "inherited_intervention_step": 0,
+  "train_monitor": "Every pre-update state and the final state; all rows retained.",
+  "test_monitor": "Every 100 global steps, every training accuracy below 90%, start and final.",
+  "primary_endpoint": "Any joint training/test accuracy below 90% between source and prespecified final step.",
+  "checkpoint_grid": 10000,
+  "extra_checkpoints": "Start, final, first joint event and its immediately preceding state, most recent jointly >=99% state before the first event, and minimum measured test accuracy.",
+  "dtype": "torch.float32",
+  "device": "cpu",
+  "threads": 1,
+  "deterministic_algorithms": true,
+  "torch_version": "2.13.0",
+  "runner_sha256": "50ccf3587d6ef62d9406b88d27d8de33ad23ccd51b51f5f8db4a5a2b39692399",
+  "numeric_helper_sha256": "c34766fea23a2daae7754aff837c41a8b48e0ed3f26702d776d914d9c4c08656",
+  "source_runner_sha256": "0a175d36782f58cbc18f44c50e63a6a2dfa75df96dceff0f8e9cb7aa53291ab9",
+  "protocol_sha256": "ce6a545a51be8618bf5122b4b89ac97a39454384765a35e3a5b5b8809174a9b1"
+}

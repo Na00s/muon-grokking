@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-09-22T23:03:19.676207+00:00",
+  "command": [
+    "work/fourier_control/run_control.py",
+    "--repo",
+    "work/muon-grokking",
+    "--work-root",
+    "work",
+    "--out",
+    "work/fourier_control/results"
+  ],
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:24:52) [Clang 20.1.8 ]",
+  "numpy": "2.5.2",
+  "torch": "2.13.0",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "script_sha256": "bd017f99d7876f9622abc339ae2dbea8e7cccc087b893f483870af0b5978861c",
+  "data_py_sha256": "aa8cdffc2973eb57ca81f28614b15e93b8814603b3793229c5462f2e330057ab",
+  "protocol_sha256": "2c6b2c4abcd53300808af2570bd4642130f642f2fee3134ad2fdda3bb5d4dc22",
+  "tie_convention": "Smallest class index, matching NumPy/PyTorch argmax; exact ties additionally evaluated under uniform random tie breaking.",
+  "raw_memorizer_note": "Raw held-out logits are identically zero; deterministic accuracy is the held-out frequency of class zero.",
+  "checkpoint_inputs": [
+    {
+      "pair": "adjacent_seed0",
+      "path": "work/basis_study/adjacent_seed0/features.npz",
+      "sha256": "740c730395e590c0f885e6de980e92b7a4386e1453c03cd9f3e74e9096da864f",
+      "metadata_sha256": "86b56f8dd8a032e1404b89983d002c5099dfe0ad8b41349cc8d1d5d5b55edef4"
+    },
+    {
+      "pair": "seed1_adjacent_event",
+      "path": "work/basis_study/seed1_adjacent_event/features.npz",
+      "sha256": "ae99265af653c67e35515a93de9777793d3803c080fbc20547ef38acafbcbd50",
+      "metadata_sha256": "3697a74081f56c63d96713649656f40b22387a60cb7a03d465cebda2b058a857"
+    },
+    {
+      "pair": "seed2_adjacent_event",
+      "path": "work/basis_study/seed2_adjacent_event/features.npz",
+      "sha256": "9098912071d97ea868601cf00663ffc69025b89b53bfde03771798592b433697",
+      "metadata_sha256": "4f084fe3b0db8c0a1667f65ecc91d8a36e0985c12eb174a24765b53f32cb9b65"
+    },
+    {
+      "pair": "seed3_adjacent_event",
+      "path": "work/basis_study/seed3_adjacent_event/features.npz",
+      "sha256": "f81ee8c199cc1f3df8a3ae55644311e9ab6101653df080da24c770778fad12ec",
+      "metadata_sha256": "7b42c9b54e385f5bbe2530c5b114f702628235a43d8b51fc8da38ac224f8d247"
+    },
+    {
+      "pair": "adjacent_seed4",
+      "path": "work/basis_study/adjacent_seed4/features.npz",
+      "sha256": "a6e5cbc25a09f313ab49c6da91fb34ec418df8b6b71e4bce7f57a75e43d8c5a4",
+      "metadata_sha256": "8a751541894f11b1bb133ae981a5324bb4250c1afd7c1ec09c91556cf62a5899"
+    }
+  ]
+}

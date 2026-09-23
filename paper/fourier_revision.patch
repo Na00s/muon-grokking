@@ -1,0 +1,537 @@
+--- a/README.md
++++ b/README.md
+@@ -1,17 +1,20 @@
+-# Audited submission source
++# Revised submission source
+ 
+-Compile `main.tex` in this directory with Tectonic or a standard LaTeX/BibTeX installation. Figures, tables, bibliography, and the supplied conference style are included.
++Compile `main.tex` with Tectonic or a standard LaTeX/BibTeX installation. Figures, tables, bibliography, and the conference style are included.
+ 
+ ```sh
+ tectonic main.tex
+ ```
+ 
+-The revision preserves the title, anonymous authors, section order, all six original figure PDFs, and the numerical cells in the 17 original appendix table files. Captions, definitions, analysis, and claims are revised where needed. New material appears in Section 4.4, Figure 4, and Appendix J, including Figure 8.
++The revision preserves the title, anonymous authors, section order, all six original figure PDFs, and the numerical cells of the 17 original appendix table files. Section 4.4 contains the mean-dependent update equation and Table 3. The causal follow-up figure reports the swaps, decoders, and corrected-loss outcomes through step 100,000. Appendix J documents these experiments; Appendix K gives the Fourier averaging proof and memorizer controls, including Figure 9.
+ 
+-The two new figures use recorded experimental measurements. Their complete values and the hashes of 15 input files are in `figures/followup_figure_provenance.json`. To regenerate from the released follow-up results tree:
++The scientific main text occupies nine pages. The reproducibility and required AI use statements are separate and excluded from the [ICLR 2027 initial-submission limit](https://iclr.cc/Conferences/2027/AuthorGuidelines). The quiet-window and Fourier-grid figures appear in Appendices C and G. Included template files are byte-identical to the official ICLR 2027 counterparts despite their retained legacy filenames.
++
++The figure scripts use saved experimental results and record their input/output hashes. From a released `followup_studies` directory containing `work/`:
+ 
+ ```sh
+ python figures/build_followup_figures.py --workspace /path/to/followup_studies --output .
++python figures/build_fourier_control_figure.py --workspace /path/to/followup_studies --output .
+ ```
+ 
+-From the repository layout, the script also resolves the data and output paths automatically. In a standalone source archive, pass the data root explicitly. The script checks that the original figures are preserved. The source archive is sufficient to compile the paper without downloading experimental binaries.
++The scripts resolve the data root automatically in the repository layout. In a standalone source archive, pass it explicitly. This source archive compiles without downloading experimental binaries.
+--- a/appendix.tex
++++ b/appendix.tex
+@@ -25,6 +25,13 @@
+ 
+ \section{The quiet window}
+ \label{app:quiet}
++
++\begin{figure}[t]
++\centering
++\includegraphics[width=0.7\textwidth]{figure2_quiet.pdf}
++\caption{Every-step measurements over $691$ updates before a collapse. \textbf{Top:} loss and gradient norms in the quiet window. \textbf{Middle:} gradient-driven applied steps and log--log slopes against the hidden gradient norm for Muon and the combined non-hidden norm for both AdamW groups. \textbf{Bottom:} hidden step and decay magnitudes differ by under $2\%$ at step $44{,}100$. Their vector sum is smaller and grows by $64\%$ from step $44{,}100$ to $44{,}700$ while the gradient-driven step changes little.}
++\label{fig:quiet}
++\end{figure}
+ 
+ \input{tables/quiet}
+ 
+@@ -55,8 +62,17 @@
+ 
+ Table~\ref{tab:families-result} applies sufficiency and ablation to each family at forty-three solved checkpoints spanning five seeds and the Muon, Stable Muon, and AdamW regimes. Equal-power relocation ranges $0.88\%$ to $15.04\%$ over $430$ replicates. Among the tested descending-power prefixes, the smallest reaching $95\%$ contains two to four conjugate pairs at AdamW checkpoints (median $3$), against three to seventeen at Muon (median $12.5$) and eight to nineteen at Stable Muon (median $11$). Along the AdamW trajectory of \S\ref{sec:outvoted}, the five strongest pairs give $4.91\%$ at step $3{,}000$, $19.48\%$ at $20{,}000$, $70.73\%$ at $30{,}000$, and $100\%$ at $37{,}000$, while the family's share rises from $1.05\%$ through $1.66\%$ and $11.08\%$ to $70.62\%$, reaching $90.51\%$ by step $100{,}000$; test accuracy over those steps is $0.30\%$, $0.29\%$, $2.08\%$, and $100\%$.
+ 
++The full-family accuracies above include the orbit average in Eq.~\ref{eq:orbit-average}. Prefix filtering and phase or frequency perturbations measure additional spectral structure, but their interpretation as evidence of a learned algorithm requires controls against memorization. Appendix~\ref{app:fourier-control} supplies that comparison.
++
+ \section{Spectral dispersion}
+ \label{app:dispersion}
++
++\begin{figure}[t]
++\centering
++\includegraphics[width=0.88\textwidth]{figure4_grid.pdf}
++\caption{The twenty highest-power conjugate pairs of the final residual at converged checkpoints, on the mode grid, sized by share of non-constant power; grey lines mark $l=k$ and $l=-k$. AdamW places $80.1\%$ of non-constant power on a single pair of the family the task selects; Muon's strongest pair carries $7.9\%$, with the rest spread across the family and beyond it; ablating the normalized path returns the strongest pair to $58.9\%$. Between the addition and subtraction panels the occupied line moves from one diagonal to the other.}
++\label{fig:grid}
++\end{figure}
+ 
+ \input{tables/sparsity}
+ 
+@@ -67,7 +83,7 @@
+ 
+ \input{tables/coordinates}
+ 
+-Table~\ref{tab:coordinates} follows the family's top-twenty membership, power share, isolated accuracy, and full-model accuracy along the depth-4 matched pair of \S\ref{sec:outvoted} from a bit-identical state. Over $174{,}000$ steps, the frozen branch retains high filtered accuracy and substantial family power; the control loses all three at filtered-pathway failure through its current readout, recovers all three, and loses the share again at circuit masking while the isolated family still gives $100\%$. The $\alpha$-sweep crossing at $\alpha=2.55$ occurs at a share of $0.6247$, below the frozen branch's native $0.9069$. Replaying a depth-1 collapse and recovery at ten-step resolution: full accuracy returns to $99.90\%$ within $300$ steps while the addition-family power cosine to the pre-collapse state reaches only $0.55$; the pre-collapse representation holds between $4.2\%$ and $5.7\%$ under the recovered readout throughout, while the recovered representation reads at $90.73\%$ under the pre-collapse readout. The matched branches' five strongest modes are identical at the branch point and share at most one pair at sampled steps $160{,}000$ through $230{,}000$. Patching the addition component of the frozen branch's final MLP write into the control under the frozen readout gives $99.99\%$; under the control's own readout, $5.05\%$; patching its full final MLP write gives $97.61\%$ and $4.46\%$ under the two readouts; patching only the non-addition component of that MLP write into the control gives $36.79\%$, below the control's unmodified $45.85\%$.
++Table~\ref{tab:coordinates} follows the family's top-twenty membership, power share, isolated accuracy, and full-model accuracy along the depth-4 matched pair of \S\ref{sec:outvoted} from a bit-identical state. Over $174{,}000$ steps, the frozen branch retains high filtered accuracy and substantial family power; the control loses all three at filtered-pathway failure through its current readout, recovers all three, and loses the share again at projection masking while the isolated family still gives $100\%$. The $\alpha$-sweep crossing at $\alpha=2.55$ occurs at a share of $0.6247$, below the frozen branch's native $0.9069$. Replaying a depth-1 collapse and recovery at ten-step resolution: full accuracy returns to $99.90\%$ within $300$ steps while the addition-family power cosine to the pre-collapse state reaches only $0.55$; the pre-collapse representation holds between $4.2\%$ and $5.7\%$ under the recovered readout throughout, while the recovered representation reads at $90.73\%$ under the pre-collapse readout. The matched branches' five strongest modes are identical at the branch point and share at most one pair at sampled steps $160{,}000$ through $230{,}000$. Patching the addition component of the frozen branch's final MLP write into the control under the frozen readout gives $99.99\%$; under the control's own readout, $5.05\%$; patching its full final MLP write gives $97.61\%$ and $4.46\%$ under the two readouts; patching only the non-addition component of that MLP write into the control gives $36.79\%$, below the control's unmodified $45.85\%$.
+ 
+ \section{Depth}
+ \label{app:depth}
+--- a/figures/build_followup_figures.py
++++ b/figures/build_followup_figures.py
+@@ -122,9 +122,13 @@
+     original_events = [6000 <= p["stock_event_step"] <= 30000
+                        and p["stock_event_train_accuracy"] < .9
+                        and p["stock_event_test_accuracy"] < .9 for p in primary]
+-    accurate_events = [p["accurate"]["event"] for p in primary]
++    extended = read("work/long_horizon/summary.json")
++    extended_addition = sorted([r for r in extended["records"] if r["operation"] == "addition"], key=lambda r: r["seed"])
++    assert extended["status"] == "completed" and [r["seed"] for r in extended_addition] == list(range(5))
++    assert all(r["arithmetic_start_step"] == 6000 and r["end_step"] == 100000 for r in extended_addition)
++    accurate_events = [r["first_joint_failure_step"] is not None for r in extended_addition]
+     incidence = [sum(original_events), sum(accurate_events)]
+-    assert incidence == [5, 0]
++    assert incidence[0] == 5
+     specificity = results["specificity"]
+     assert len(specificity) == 5
+     for row in specificity:
+@@ -178,7 +182,7 @@
+     c.tick_params(axis="x", length=0, pad=5)
+     for xpos, value in enumerate(incidence):
+         c.text(xpos, value + .20, f"{value}/5", ha="center", va="bottom", fontsize=8)
+-    c.text(.5, -.39, "6,000 to 30,000\nupdates", transform=c.transAxes,
++    c.text(.5, -.39, "6,000 to 100,000\nupdates", transform=c.transAxes,
+            ha="center", va="top", fontsize=8, linespacing=1.3)
+     save(fig, "followup_mechanism")
+ 
+@@ -230,9 +234,10 @@
+                          "native_test_accuracy_percent": native_probe,
+                          "fresh_decoder_test_accuracy_percent": fresh_probe},
+         "main_panel_c": {"seeds": list(range(5)), "original_failure_count": incidence[0],
+-                         "accurate_failure_count": incidence[1], "source_step": 6000, "end_step": 30000,
++                         "accurate_failure_count": incidence[1], "source_step": 6000, "end_step": 100000,
++                         "original_events_observed_by_step": 30000,
+                          "event": "Both train and test accuracy below 90% after grokking.",
+-                         "caveat": "Paired seeds; original monitoring grids are mixed. Binary incidence only."},
++                         "caveat": "Paired seeds; original failures were observed by 30,000 under mixed monitoring. Accurate branches continue through 100,000. Binary incidence only."},
+         "specificity_confirmed_but_not_plotted": "All three arms have 0/5 events between 15,000 and 20,000.",
+         "appendix_parameter_masks": parameter_masks,
+         "appendix_first_events": raw_generality,
+--- a/figures/build_fourier_control_figure.py
++++ b/figures/build_fourier_control_figure.py
+@@ -0,0 +1,23 @@
++"""Regenerate the Fourier-control figure from released numerical records."""
++import argparse
++from pathlib import Path
++import shutil
++import subprocess
++import sys
++
++HERE = Path(__file__).resolve().parent
++parser = argparse.ArgumentParser(description=__doc__)
++parser.add_argument('--workspace', type=Path, default=HERE.parents[2]/'followup_studies',
++                    help='Directory containing the released work/fourier_control tree.')
++parser.add_argument('--output', type=Path, default=HERE.parent)
++args = parser.parse_args()
++study = args.workspace.resolve()/'work/fourier_control'
++if not (study/'make_report.py').is_file():
++    parser.error('Supply --workspace /path/to/followup_studies containing work/fourier_control.')
++subprocess.run([sys.executable, str(study/'make_report.py')], check=True)
++args.output.mkdir(parents=True, exist_ok=True)
++for name in ['fourier_memorizer_control.pdf','fourier_memorizer_control.png']:
++    shutil.copy2(study/name,args.output/name)
++(args.output/'figures').mkdir(exist_ok=True)
++shutil.copy2(study/'results/publication_manifest.json',args.output/'figures/fourier_control_provenance.json')
++print('Copied the regenerated figure and its provenance to',args.output.resolve())
+--- a/followup_appendix.tex
++++ b/followup_appendix.tex
+@@ -1,7 +1,7 @@
+ \section{Decoder, basis, and arithmetic follow-ups}
+ \label{app:followup}
+ 
+-The decoder and matched-branch tests use the original architecture, data splits, and optimizer settings; operation and normalization controls are specified separately below. The basis study adds $52{,}698$ baseline updates and $9{,}000$ continuation updates. The subsequent causal study adds $364{,}302$ updates: five $24{,}000$-step arithmetic branches, fifteen $5{,}000$-step specificity branches, four original-trajectory extensions totaling $49{,}302$ steps, and four $30{,}000$-step operation or architecture controls. Verification replays are excluded from these totals. Multiple checkpoints and interventions from one trajectory are dependent observations.
++The decoder and matched-branch tests use the original architecture, data splits, and optimizer settings; operation and normalization controls are specified separately below. The basis study adds $52{,}698$ baseline updates and $9{,}000$ continuation updates. The subsequent causal study adds $364{,}302$ updates: five $24{,}000$-step arithmetic branches, fifteen $5{,}000$-step specificity branches, four original-trajectory extensions totaling $49{,}302$ steps, and four $30{,}000$-step operation or architecture controls. A subsequent horizon extension adds $420{,}000$ updates: each of the five corrected addition branches and the corrected subtraction run continues from step $30{,}000$ to $100{,}000$. Verification replays are excluded from these totals. Multiple checkpoints and interventions from one trajectory are dependent observations.
+ 
+ \subsection{Monitoring and matched states}
+ \label{app:followup-protocol}
+@@ -90,14 +90,32 @@
+ 
+ At step $15{,}000$, stock logit-gradient errors are $10.56$--$21.86\%$ and readout-gradient errors $18.95$--$43.42\%$. Passing a class-common gradient error through the same saved Adam state produces a class-centered update difference: its centered norm fraction is $45.85$--$73.37\%$, versus $(2.8$--$4.1)\times10^{-16}$ for scalar SGD, at float64 roundoff. These descriptive norm ratios are nonadditive. Accurate-CE branches also have smaller feature means: original mean norms at step $15{,}000$ are $2.22$--$3.83$ times their matched corrected values.
+ 
++\textbf{Persistence through the original training horizon.} We resume each corrected step-$30{,}000$ state through step $100{,}000$, matching the original depth-$1$ horizon. All model parameters, optimizer buffers, and the PyTorch random state are restored. Twelve direct updates agree bitwise with both the monitored runner and a six-plus-six resumed continuation for all six sources. Each extension adds $70{,}000$ updates, with training accuracy recorded at every state and test accuracy every $100$ steps and whenever training accuracy is below $90\%$. The final and minimum-accuracy checkpoints reproduce their logged metrics exactly.
++
++\begin{table}[htbp]
++\centering\small
++\caption{Corrected-loss runs through step $100{,}000$. Accuracies are percentages. Minima combine the earlier prefix with the extension, counting the shared step-$30{,}000$ state once. Addition is corrected from step $6{,}000$; subtraction uses corrected CE from initialization and its minima start at grokking confirmation.}
++\label{tab:long-horizon}
++\begin{tabular}{lrrrr}
++\toprule
++Run & Monitoring start & Min.\ test & Final test & Joint event \\
++\midrule
++Addition, seed 0 & $6{,}000$ & $99.754$ & $100.000$ & none \\
++Addition, seed 1 & $6{,}000$ & $99.843$ & $100.000$ & none \\
++Addition, seed 2 & $6{,}000$ & $98.859$ & $100.000$ & none \\
++Addition, seed 3 & $6{,}000$ & $99.978$ & $100.000$ & none \\
++Addition, seed 4 & $6{,}000$ & $99.843$ & $100.000$ & none \\
++Subtraction, seed 0 & $10{,}500$ & $96.879$ & $99.955$ & none \\
++\bottomrule
++\end{tabular}
++\end{table}
++
++All six extensions complete without a joint event. Thus correction suppresses the observed failures through the original training budget. This addresses postponement beyond step $30{,}000$ within that budget; behavior after $100{,}000$ and brief test-only excursions between scheduled evaluations remain outside the measurement. The original stock trajectories already have captured failures by $30{,}000$, which establishes their positive binary incidence at the longer horizon. Their historical monitoring supports no comparison of event counts or durations with these dense branches.
++
+ \subsection{Mean amplification and finite-step overshoot}
+ \label{app:mean-update}
+ 
+-At the checkpoints immediately before the five original failures, feature means over the full operand grid have norms $10{,}374$--$12{,}203$. The intervention below uses the following checkpoint's mean over training examples. Let $h_1$ be the updated residual, $W_{U,0}$ the preceding readout, $\Delta W_U$ its actual displacement, and $\mu$ this training mean of $h_1$. Starting from the rescued logits $W_{U,0}h_1$, the readout-induced change decomposes exactly as
+-\begin{equation}
+-\Delta z=\Delta W_U(h_1-\mu)+\Delta W_U\mu.
+-\label{eq:followup-mean}
+-\end{equation}
++At the checkpoints immediately before the five original failures, feature means over the full operand grid have norms $10{,}374$--$12{,}203$. The main-text intervention in Eq.~\ref{eq:followup-mean} uses the post-update representation's training mean and adds each component to the rescued logits $W_{U,0}h_1$.
+ Applying the training-estimated mean unchanged to test examples, the mean term alone gives $32.11\%$, $9.42\%$, $0.93\%$, $53.34\%$, and $66.07\%$ accuracy, close to the full failing updates in Table~\ref{tab:followup-arithmetic}. The centered term alone retains $95.26\%$, $92.48\%$, $100\%$, $87.20\%$, and $98.46\%$. Relative reconstruction error is below $3\times10^{-16}$. This evaluation-only intervention establishes local sufficiency of the product of feature mean and readout displacement. Feature growth and optimizer history remain coupled before that step.
+ 
+ Replacing gradients only at the failing update with accurate gradients preserves all five failures. The state accumulated beforehand matters. For each actual complete parameter displacement $\Delta\theta$, the accurate training gradient satisfies $\nabla L^{\top}\Delta\theta<0$, including each group's contribution. Scaling the displacement by $0.001$ or $0.01$ lowers training loss in every seed; taking the full step raises it sharply. Both interpolation endpoints reproduce saved parameters exactly. The captured updates locally descend and overshoot at finite scale.
+@@ -124,7 +142,7 @@
+ \end{tabular}
+ \end{table}
+ 
+-Subtraction reproduces acute readout sensitivity: updated features with the preceding head score $98.81\%$, the mean term alone $5.84\%$, and the centered term $98.76\%$. Accurate CE prevents the joint event through the horizon and finishes at $99.966\%$ test accuracy.
++Subtraction reproduces acute readout sensitivity: updated features with the preceding head score $98.81\%$, the mean term alone $5.84\%$, and the centered term $98.76\%$. At step $30{,}000$, accurate CE has no joint event and test accuracy is $99.966\%$. Its continuation through $100{,}000$ is reported in Table~\ref{tab:long-horizon}.
+ 
+ \begin{figure}[t]
+ \centering
+--- a/fourier_control_appendix.tex
++++ b/fourier_control_appendix.tex
+@@ -0,0 +1,90 @@
++\section{Task structure in Fourier filtering}
++\label{app:fourier-control}
++
++\subsection{Full-family projection is an orbit average}
++
++Write a Fourier mode as $\chi_{k,l}(a,b)=\exp(2\pi i(ka+lb)/p)$. Averaging its translations gives
++\begin{equation}
++\frac{1}{p}\sum_{t=0}^{p-1}\chi_{k,l}(a+t,b-t)
++=\chi_{k,l}(a,b)\frac{1}{p}\sum_{t=0}^{p-1}\exp\!\left(\frac{2\pi i(k-l)t}{p}\right)
++=\mathbf{1}_{k=l}\chi_{k,l}(a,b).
++\end{equation}
++Linearity proves Eq.~\ref{eq:orbit-average} for each feature channel. The surviving modes include $(0,0)$. For subtraction, averaging $(a+t,b+t)$ instead retains $k+l=0$ modulo $p$. With a linear head, $W_U P h=P(W_U h)$; an affine head also commutes with this average because averaging preserves its constant bias. Excluding the constant mode gives the orbit average minus the global mean.
++
++The full-family filter therefore supplies the equivalence relation defining the answer. It can pool logits from training and held-out examples with that answer. This is part of the intervention itself, even though no labels are passed to the FFT routine. Its accuracy measures an answer-conditioned average and requires separate evidence to identify the algorithm implemented by the unfiltered model.
++
++\subsection{A lookup-table memorizer}
++
++We use the repository's five seeded splits, each with $3{,}830$ training and $8{,}939$ held-out examples at $p=113$. Let $T$ denote the training set and $e_s$ the one-hot vector for class $s$. The predictor stores $z(a,b)=e_{a+b}$ on $T$ and outputs zero on every unseen pair. If $n_s$ is the number of training examples with sum $s$,
++\begin{equation}
++(P_{\mathrm{add}}z)(a,b)=\frac{n_{a+b}}{p}e_{a+b}.
++\end{equation}
++Every answer orbit is covered in each split, so filtering yields $100\%$ accuracy. For a uniform split of $m=3{,}830$ out of $N=p^2$ pairs, an orbit is uncovered with probability $q=\binom{N-p}{m}/\binom{N}{m}$. A union bound gives $\Pr(\text{some orbit uncovered})\leq pq<2.89\times10^{-16}$. Before filtering, all held-out logits are tied. We use the smallest class index as the deterministic tie rule, matching the implementation's argmax; uniform random tie breaking has expected accuracy $1/113=0.885\%$.
++
++\begin{table}[htbp]
++\centering\small
++\caption{Addition memorizer on the original seeded splits. Correct counts use the $8{,}939$ held-out examples. The filtered logits have a unique correct maximum on every example.}
++\label{tab:memorizer}
++\begin{tabular}{lrrrr}
++\toprule
++Seed & Raw correct & Raw accuracy (\%) & Filtered correct & Filtered accuracy (\%) \\
++\midrule
++$0$ & $79$ & $0.884$ & $8{,}939$ & $100.000$ \\
++$1$ & $68$ & $0.761$ & $8{,}939$ & $100.000$ \\
++$2$ & $79$ & $0.884$ & $8{,}939$ & $100.000$ \\
++$3$ & $81$ & $0.906$ & $8{,}939$ & $100.000$ \\
++$4$ & $77$ & $0.861$ & $8{,}939$ & $100.000$ \\
++\bottomrule
++\end{tabular}
++\end{table}
++
++The same control on subtraction reaches $100\%$ after the corresponding filter in all five seeds. Omitting the constant mode also retains perfect accuracy in these controls. A seeded bijection of output labels preserves the perfect filtered result when evaluated against those relabeled classes, because the projection still pools within answer orbits. Averaging training donors alone is sufficient; averaging only held-out donors gives zero logits for the memorizer.
++
++These controls establish that full-family filtered accuracy can be perfect without a learned generalizing arithmetic algorithm. The $95.14\%$ filtered accuracy at AdamW step $3{,}000$ therefore requires independent evidence to establish when an internal arithmetic algorithm was learned. Evidence for surviving information at the collapsed checkpoints comes from the raw-feature decoder tests and adjacent-state swaps in \S\ref{sec:branches}.
++
++\begin{figure}[t]
++\centering
++\includegraphics[width=\textwidth]{fourier_memorizer_control.pdf}
++\caption{Task structure supplied by Fourier filtering at $p=113$. \textbf{(a)} The lookup memorizes the $3{,}830$ training answers and returns zero on the $8{,}939$ held-out inputs. Full-family filtering with DC gives $100\%$ accuracy. Family ablation retains DC and yields $0\%$ held-out accuracy and $29.99\%$ full-grid accuracy. Bars show means over five splits; whiskers span their range. \textbf{(b)} Training-count normalization allows any one diagonal conjugate pair plus DC to classify every input correctly. The ordinary lookup's pair powers are mathematically tied; its prefixes use increasing frequency as a fixed tie break. Lines show means and shading spans the seed range.}
++\label{fig:fourier-memorizer}
++\end{figure}
++
++\subsection{Sparse sufficiency, ablation, and perturbation controls}
++
++A second lookup stores $(p/n_c)e_c$ for a training example with label $c$, using training-label counts only, and zero for unseen pairs. Its full projection is exactly $e_{a+b}$. Retaining any one nonzero diagonal conjugate pair and DC gives class-$c$ logits
++\begin{equation}
++z_k(s,c)=\frac{1+2\cos(2\pi k(s-c)/p)}{p},\qquad s=(a+b)\bmod p.
++\end{equation}
++For prime $p=113$ and nonzero $k$, the unique maximum is at $c=s$. All $56$ individual pairs give $100\%$ training, held-out, and full-grid accuracy on all five splits ($280$ checks against the closed form). Thus sparse filtered sufficiency also admits a lookup-only predictor. The construction can use a $113$-dimensional lookup representation with an identity head, padded to the transformer's $128$-dimensional residual width.
++
++The ordinary one-hot lookup has equal mathematical power in all diagonal conjugate pairs. With a fixed ascending-frequency tie break, five-pair filtering gives $23.82$--$28.57\%$ held-out accuracy; sorting the numerically computed powers instead gives $63.69$--$87.46\%$. These ranges expose the sensitivity of the selected frequencies to floating-point tie breaking in this control. Figure~\ref{fig:fourier-memorizer} uses the fixed ordering. The count-normalized lookup reaches $100\%$ at every tested prefix size $1,2,3,5,10,20,56$.
++
++The original family-ablation convention is $z-Pz+\bar z$, retaining DC. For both lookups, it preserves all training predictions and gives $0\%$ held-out accuracy, hence $3{,}830/12{,}769=29.9945\%$ full-grid accuracy. The trained models' near-chance full-grid ablations in Table~\ref{tab:swap} contain additional information absent from this simple control. Full-family sufficiency and low held-out ablation accuracy can nevertheless occur together under memorization.
++
++We also apply $20$ fixed-seed replicates per split and lookup for pair-global phases, channelwise phases, and derangements of the $56$ pair coefficients, preserving DC, conjugate symmetry, and total nonconstant family power. For the ordinary lookup, mean held-out accuracies of the isolated family are $1.0755\%$, $0.9426\%$, and $3.0680\%$, respectively; for the count-normalized lookup they are $0\%$, $0.8850\%$, and $3.1555\%$. Each mean pools $20$ perturbations per split across five splits; raw replicate distributions are released. The sensitivity observed in the trained models remains a functional measurement of their projected components. These controls show why that sensitivity alone leaves the internal algorithm unidentified.
++
++\subsection{Restricting the averaging donors at captured failures}
++
++Using both endpoints of the five adjacent failure pairs in Table~\ref{tab:adjacent}, we recompute logits from the saved raw residuals and native heads, multiplying in float64. We average only held-out inputs with the same answer, excluding the evaluated input itself. This removes both training donors and self contribution. Input order, labels, and masks are checked against the original seeded splits.
++
++\begin{table}[htbp]
++\centering\small
++\caption{Held-out accuracy (\%) before and after each captured update. ``Average'' uses held-out donors with the same answer and excludes the evaluated example. The operation still supplies the grouping.}
++\label{tab:fourier-donors}
++\begin{tabular}{lrrrr}
++\toprule
++ & \multicolumn{2}{c}{Before} & \multicolumn{2}{c}{After} \\
++Seed & Raw & Average & Raw & Average \\
++\midrule
++$0$ & $95.49$ & $100.00$ & $31.87$ & $30.46$ \\
++$1$ & $94.14$ & $100.00$ & $9.09$ & $0.93$ \\
++$2$ & $99.99$ & $100.00$ & $0.93$ & $0.88$ \\
++$3$ & $89.54$ & $99.12$ & $53.60$ & $65.29$ \\
++$4$ & $91.34$ & $98.18$ & $66.33$ & $71.25$ \\
++\bottomrule
++\end{tabular}
++\end{table}
++
++Before these updates, high accuracy survives removal of training donors, establishing task-aligned signal in the logits of unseen examples beyond the ordinary lookup control. The donor-restricted operation still uses the answer orbits and remains a task-informed diagnostic. These checkpoints are distinct from the early AdamW checkpoint at step $3{,}000$; this analysis makes no claim about its donor dependence.
++
++Independent FFT, translated-grid sums, and orbit reductions agree in float64 at moduli $7$ and $113$. We also check projector idempotence, constant-mode conventions, readout commutation, coverage of every answer orbit, and the single-pair closed form. All scripts, protocols, integer counts, perturbation outcomes, and input hashes accompany the release.
+--- a/main.tex
++++ b/main.tex
+@@ -21,13 +21,13 @@
+ \maketitle
+ 
+ \begin{abstract}
+-Under the standard routing that assigns Muon the hidden weight matrices and AdamW the embeddings and output head, Muon reaches the grokking threshold on modular arithmetic in fewer steps. Every configuration in our original Muon sweep subsequently loses generalization; some also lose training accuracy. AdamW at larger step sizes collapses too. Freezing the interface suppresses collapse in matched branches. At five captured transitions, the readout update is sufficient for the acute loss of accuracy, while fresh linear decoders recover $98.20$--$100\%$ from collapsed representations. The measured pairs fail tests of exact global basis equivalence. Correcting cross-entropy arithmetic prevents joint train/test collapse through step $30{,}000$ in all five matched branches; the original failing updates locally descend the accurate loss and overshoot at their applied scale. An RMS-normalized counterexample instead fails through its embeddings despite corrected cross-entropy gradients. Fourier filtering separates failure through the current readout from \emph{circuit masking}, where the task-aligned family with its retained constant mode solves the task perfectly and is outvoted in the full model; rescaling the family restores accuracy. At a captured collapse, dominant-frequency membership is unchanged and the power distribution remains nearly identical. These spectral statistics alone do not establish that a learned circuit still functions.
++Post-grokking collapse can destroy accuracy while preserving decodable task information. We study modular-arithmetic transformers trained with Muon on hidden weights and AdamW on embeddings and the output head. At five captured transitions, adjacent swaps localize the acute failure to the head update. Its mean-dependent logit term reproduces each failing test accuracy within $0.33$ percentage points. Training-only linear decoders recover $98.20$--$100\%$ at collapsed checkpoints. Corrected cross-entropy prevents joint train/test collapse through step $100{,}000$ in five matched branches; an RMS-normalized model still fails through an embedding update. The captured updates locally descend accurate loss and overshoot at full scale. Finally, task-aligned Fourier filtering averages logits over inputs sharing the answer, allowing a memorizer to achieve perfect filtered accuracy.
+ \end{abstract}
+ 
+ \section{Introduction}
+ \label{sec:intro}
+ 
+-Mechanistic studies of grokking combine Fourier analysis with functional interventions. \citet{nanda2023progress} identify a Fourier algorithm and track its formation with restricted and excluded losses. We study what happens to such representations after generalization. At a captured collapse on modular addition, the dominant-frequency membership of the task-aligned family is unchanged and its pair-power distribution retains a cosine similarity of $0.9899$ (Figure~\ref{fig:collapse}). These spectral statistics remain stable as accuracy fails. One possible explanation is that the representation changes basis while the readout fails to compensate. We test this directly: fresh decoders recover the task, while measured residuals fail exact global basis-equivalence tests. The results separate retained task information, accuracy through the current readout, and coordinate equivalence.
++Generalization acquired during grokking can later collapse. We follow individual failures in modular-arithmetic transformers to identify the damaging update and determine what information survives. At a captured failure, dominant-frequency membership is unchanged and the task-family power distribution retains cosine similarity $0.9899$ (Figure~\ref{fig:collapse}). Fresh decoders recover high accuracy from collapsed representations.
+ 
+ \begin{figure}[t]
+ \centering
+@@ -37,20 +37,17 @@
+ \end{figure}
+ 
+ 
+-We use Muon \citep{jordan2024muon} with the routing used in large-scale training \citep{liu2025muon}: hidden weight matrices receive orthogonalized momentum, while embeddings and the output head remain with AdamW. We reproduce faster grokking under this routing in our modular-arithmetic setup \citep{tveit2025muon,wang2026active}. Every configuration in our stock-arithmetic sweep on $(a+b)\bmod 113$ subsequently loses generalization. Training accuracy falls with test accuracy in captured failure intervals. AdamW at larger step sizes also collapses, with severity differing across optimizers. We observe instability across the tested moduli, widths, training fractions, operations, and depths 1, 2, and 4. Earlier grokking leaves more of the training budget available to study these later failures through matched branches and interventions.
+-
+-The measured unnormalized failures localize to the representation--readout interface. The logits depend on the final residual $h$ and the unembedding $W_U$ through $W_Uh$, so $(Rh,W_UR^{-1})$ implements the same function for any invertible $R$ \citep{elhage2021framework}. This parameterization symmetry alone does not specify an optimizer trajectory. Branching from bit-identical states, freezing either side prevents the imminent failure over the tested window. Anchoring the embeddings and readout after circuit formation yields no sub-threshold evaluation across five runs totaling $451{,}400$ post-grokking steps; five paired seeds also remain stable while their unfrozen arms record $137$ to $321$ such evaluations each. Adjacent-checkpoint interventions then isolate the acute readout update, and fresh decoders establish that substantial task information survives it.
+-
+-Filtering the representation to the Fourier family the task selects separates two failure modes. In \emph{circuit failure}, the filtered family fails through the current readout; this is a pathway-level measurement, compatible with recovery by a fresh decoder. In \emph{circuit masking}, the family plus the retained constant mode solves the task perfectly while the full model fails: read through the unembedding, the family casts a correct vote on every example, larger on the examples the model answers wrongly, and is outvoted by the rest of the representation. Rescaling the family alone, with nothing retrained, restores the model. In the measured AdamW trajectory, the family is already highly accurate in isolation before the model generalizes, and model accuracy rises alongside its share of representational power.
+-
+-Numerical controls connect these events to prior work on softmax collapse and finite-precision loss spikes \citep{prieto2025grokking,liu2026glitching}. Correcting cross-entropy from step $6{,}000$ prevents joint train/test collapse through step $30{,}000$ in five matched branches. The captured failing updates are local descent directions for the accurate loss, but their full applied steps overshoot. Gain-free RMS normalization exposes a boundary: an accurate-loss run still collapses through an embedding update. The numerical contribution and the acute locus therefore depend on the architecture.
++We use Muon \citep{jordan2024muon} with the routing used in large-scale training \citep{liu2025muon}: hidden matrices receive orthogonalized momentum, while embeddings and the output head remain with AdamW. Prior work reports faster Muon grokking and stability tradeoffs \citep{tveit2025muon,wang2026active}, connects inaccurate cross-entropy derivatives to feature inflation and amplified updates \citep{liu2026glitching}, and uses representation/readout decompositions and linear probes to study grokking \citep{chou2026twospeeds}.
++
++Adjacent swaps isolate the readout update in the unnormalized model: the preceding head retains accuracy on updated features, and training-only decoders recover $98.20$--$100\%$ at collapsed checkpoints. The mean-dependent head update nearly reproduces each failure. Matched freezes and corrected cross-entropy branches test prevention, while an RMS control identifies an embedding failure with accurate loss derivatives. The role of numerical error and the parameter group responsible for collapse differ between the two architectures.
++
++Full-family Fourier filtering averages representations over operand pairs with the same answer. A lookup-table memorizer achieves perfect filtered accuracy despite chance-level held-out predictions. We therefore interpret filtering and rescaling as interventions on a task-informed projection. Raw-feature decoders and adjacent swaps establish surviving information independently of that projection.
+ 
+ \textbf{Contributions.}
+ \begin{itemize}\itemsep0pt
+-\item \textbf{Phenomenon.} All original Muon sweep configurations lose test accuracy after grokking; joint train/test failures occur in a subset. AdamW also collapses at larger step sizes (\S\ref{sec:speed}).
+-\item \textbf{Mechanism.} Matched freezes, adjacent-update interventions, fresh decoders, and arithmetic corrections identify an acute readout failure with surviving task information in the unnormalized model, and an embedding failure in an RMS control (\S\ref{sec:localize}).
+-\item \textbf{Taxonomy.} Filtering to the task-selected Fourier family separates circuit failure from circuit masking; masking is a competition on amplitude that rescaling alone resolves, with the reverse transition observed during grokking (\S\ref{sec:outvoted}).
+-\item \textbf{Methodology.} Stable spectral statistics can coexist with functional failure. Decoder and basis tests distinguish retained information from exact coordinate equivalence (Figure~\ref{fig:collapse}, \S\ref{sec:outvoted}, Appendix~\ref{app:basis}).
++\item \textbf{Acute failure and surviving information.} Adjacent swaps isolate damaging readout updates in five unnormalized trajectories; training-only decoders recover high held-out accuracy, and a feature-mean intervention nearly reproduces each failure (\S\ref{sec:localize}).
++\item \textbf{Numerical mechanism and architectural boundary.} Matched arithmetic corrections test prevention over fixed horizons. Captured updates overshoot accurate local descent directions, and an accurate-loss RMS control fails through its embeddings (\S\ref{sec:arithmetic}).
++\item \textbf{Scope of Fourier evidence.} An averaging identity and memorizer controls delimit the interpretation of full-family filtering and rescaling (\S\ref{sec:family}, \S\ref{sec:outvoted}).
+ \end{itemize}
+ 
+ \section{Setup}
+@@ -88,14 +85,9 @@
+ \section{Localizing the collapse at the interface}
+ \label{sec:localize}
+ 
+-\begin{figure}[t]
+-\centering
+-\includegraphics[width=0.7\textwidth]{figure2_quiet.pdf}
+-\caption{Every-step measurements over $691$ updates before a collapse. \textbf{Top:} loss and gradient norms in the quiet window. \textbf{Middle:} gradient-driven applied steps and log--log slopes against the hidden gradient norm for Muon and the combined non-hidden norm for both AdamW groups. \textbf{Bottom:} hidden step and decay magnitudes differ by under $2\%$ at step $44{,}100$. Their vector sum is smaller and grows by $64\%$ from step $44{,}100$ to $44{,}700$ while the gradient-driven step changes little.}
+-\label{fig:quiet}
+-\end{figure}
+-
+-\subsection{The gradient vanishes and the hidden step does not}
++
++
++\subsection{Muon updates remain nearly constant at small gradient norms}
+ \label{sec:quiet}
+ 
+ Figure~\ref{fig:quiet} measures steps $44{,}010$--$44{,}700$ of an instrumented rerun. Training loss is near $1.5\times10^{-7}$, with hidden and non-hidden gradient norms of order $10^{-6}$ and $10^{-5}$. Muon normalizes its momentum before a fixed Newton--Schulz iteration, reducing sensitivity to its magnitude. Across this window, the log--log slope of the applied hidden step against the hidden gradient norm is $-0.03$. Slopes for the embedding and readout steps against the combined non-hidden norm are about $+1.5$, with $R^2$ across the three fits ranging from $0.84$ to $0.98$. The hidden step and decay largely cancel; their net displacement grows by $64\%$ from step $44{,}100$ to $44{,}700$ while the gradient-driven step changes little. By step $44{,}700$, root-mean-square displacement per parameter from the branch state is $0.073$ for hidden parameters and $0.0091$ for non-hidden parameters, a factor of $8.0$. These measurements establish different displacement scales; their causal interpretation requires the numerical controls in \S\ref{sec:arithmetic}. In the separate ten-step replay used for Figure~\ref{fig:collapse} and Table~\ref{tab:quiet}, training loss rises by $3.8\times10^{8}$ across one interval, and training and test accuracy fall from $100\%$ to $21.12\%$ and $19.04\%$.
+@@ -133,7 +125,7 @@
+ 
+ 
+ 
+-\subsection{Anchoring the interface prevents the collapse}
++\subsection{Freezing embeddings and readout stabilizes the tested depth-1 runs}
+ \label{sec:prevent}
+ 
+ \begin{figure}[t]
+@@ -143,29 +135,60 @@
+ \label{fig:seeds}
+ \end{figure}
+ 
+-We hold the token embedding, the position embedding, and the unembedding constant from roughly two thousand steps after sustained generalization, while hidden matrices continue to receive Muon updates; we call the configuration \emph{Stable Muon}. Across five runs spanning the main condition, $p=97$, training fraction $20\%$, and width $64$, a total of $451{,}400$ post-grokking steps and $4{,}519$ evaluations, no evaluation falls below $95\%$, and in every run the post-grokking minimum is the accuracy at the evaluation that first met the criterion. Figure~\ref{fig:seeds} pairs the arms at five seeds: freezing removes every sub-threshold evaluation on every seed, against an AdamW reference that achieves strict stability on one seed of five. Grokking speed is preserved because the freeze follows the threshold, and per-step cost falls afterward. In the long component comparison, holding only the unembedding fixed leaves eighteen of $936$ evaluations below threshold; also freezing the embeddings removes them (Appendix~\ref{app:prevention}). Arithmetic correction supplies another successful intervention over a shorter horizon.
++We hold the token embedding, the position embedding, and the unembedding constant from roughly two thousand steps after sustained generalization, while hidden matrices continue to receive Muon updates; we call the configuration \emph{Stable Muon}. Across five runs spanning the main condition, $p=97$, training fraction $20\%$, and width $64$, a total of $451{,}400$ post-grokking steps and $4{,}519$ evaluations, no evaluation falls below $95\%$, and in every run the post-grokking minimum is the accuracy at the evaluation that first met the criterion. Figure~\ref{fig:seeds} pairs the arms at five seeds: freezing removes every sub-threshold evaluation on every seed, against an AdamW reference that achieves strict stability on one seed of five. Grokking speed is preserved because the freeze follows the threshold, and per-step cost falls afterward. In the long component comparison, holding only the unembedding fixed leaves eighteen of $936$ evaluations below threshold; also freezing the embeddings removes them (Appendix~\ref{app:prevention}). Arithmetic correction also reaches the original $100{,}000$-step budget (\S\ref{sec:arithmetic}).
+ 
+ 
+ \begin{figure}[t]
+ \centering
+ \includegraphics[width=\textwidth]{followup_mechanism.pdf}
+-\caption{Follow-ups on five selected unnormalized trajectories. \textbf{(a)} Adjacent swaps: subscripts $0$ and $1$ denote states before and after the captured update. The old head retains accuracy on updated features; the new head sharply lowers accuracy on old features. \textbf{(b)} Training-only decoders recover $98.20$--$100\%$ at collapsed snapshots; seeds $3$ and $4$ use later snapshots than (a). \textbf{(c)} Every original trajectory has a captured joint train/test failure below $90\%$; accurate CE from the matched step-$6{,}000$ state yields $0/5$ through $30{,}000$. Panels reuse seeds. Counts report binary incidence under mixed original monitoring and complete joint-event detection in corrected branches (Appendix~\ref{app:followup}).}
++\caption{Follow-ups on five selected unnormalized trajectories. \textbf{(a)} Adjacent swaps: subscripts $0$ and $1$ denote states before and after the captured update. The old head retains accuracy on updated features; the new head sharply lowers accuracy on old features. \textbf{(b)} Training-only decoders recover $98.20$--$100\%$ at collapsed snapshots; seeds $3$ and $4$ use later snapshots than (a). \textbf{(c)} Every original trajectory has a captured joint train/test failure below $90\%$; accurate CE from the matched step-$6{,}000$ state yields $0/5$ through $100{,}000$. Original failures were captured before step $30{,}000$. Panels reuse seeds. Counts report binary incidence under mixed original monitoring and complete joint-event detection in corrected branches (Appendix~\ref{app:followup}).}
+ \label{fig:followup}
+ \end{figure}
+ 
+ \subsection{Numerical controls and the failing step}
+ \label{sec:arithmetic}
+ 
+-Five matched branches replace stock cross-entropy with a cancellation-resistant \texttt{log1p} evaluation from step $6{,}000$, after grokking and measurable derivative error. Through step $30{,}000$, none has a joint train/test failure below $90\%$; minimum measured test accuracy is $98.86\%$, and all finish at $100\%$. Every-update training checks trigger test evaluation below threshold, detecting every joint event. Brief test-only excursions can fall between grid evaluations. From step $15{,}000$ to $20{,}000$, accurate loss, target-derivative repair, and per-example zero-sum gradient projection each give $0/5$ failures (Appendix~\ref{app:arithmetic}). Projection retains substantial derivative error while restoring the class-sum identity, connecting the result to numerical feature inflation \citep{liu2026glitching}.
+-
+-Before the captured failures, full-grid feature-mean norms reach $10{,}374$--$12{,}203$. An intervention using the following representation's training mean nearly reproduces each failure with only the mean-dependent part of the readout update. Replacing gradients only at the terminal update still fails in all five seeds, implicating accumulated state. Each complete update has negative directional derivative under the accurate training loss, and scales $0.001$ and $0.01$ lower that loss; the full update overshoots (Appendix~\ref{app:mean-update}).
+-
+-One matched subtraction pair reproduces prevention through $30{,}000$ steps. A gain-free RMS pair bounds its scope: with accurate loss, test accuracy falls from $96.21\%$ to $0.88\%$. Updating only embeddings gives $0.94\%$, while updating only the readout retains $96.21\%$. Accurate arithmetic therefore leaves a distinct embedding failure possible; this one-seed counterexample does not estimate its prevalence (Appendix~\ref{app:normalized}).
+-
+-\section{The task selects the family; the update rule shapes its spread}
++Five matched branches replace stock cross-entropy with a cancellation-resistant \texttt{log1p} evaluation from step $6{,}000$, after grokking and measurable derivative error. Through step $100{,}000$, the original training horizon, none has a joint train/test failure below $90\%$; minimum measured test accuracy is $98.86\%$, and all finish at $100\%$. Every-update training checks trigger test evaluation below threshold, detecting every joint event. Brief test-only excursions can fall between grid evaluations. From step $15{,}000$ to $20{,}000$, accurate loss, target-derivative repair, and per-example zero-sum gradient projection each give $0/5$ failures (Appendix~\ref{app:arithmetic}). Projection retains substantial derivative error while restoring the class-sum identity, connecting the result to numerical feature inflation \citep{liu2026glitching}.
++
++\textbf{The mean-dependent head update reproduces the acute failure.} Before the captured failures, full-grid feature-mean norms reach $10{,}374$--$12{,}203$. Let $h_1$ be the post-update residual, $W_{U,0}$ the preceding head, $\Delta W_U$ its actual displacement, and $\mu$ the training-set mean of $h_1$. Starting from the rescued logits $W_{U,0}h_1$, the head-induced change decomposes exactly as
++\begin{equation}
++\Delta z=\Delta W_U(h_1-\mu)+\Delta W_U\mu.
++\label{eq:followup-mean}
++\end{equation}
++The same training-estimated $\mu$ is used for all test examples. Adding only $\Delta W_U\mu$ nearly reproduces each failure (Table~\ref{tab:mean-update}); its test accuracy differs from the full update by at most $0.33$ percentage points. The centered term retains $87.20$--$100\%$ test accuracy and at least $99.09\%$ training accuracy. This evaluation-only intervention establishes local sufficiency of the mean-dependent term, a class-dependent logit offset shared by all examples. Feature growth and optimizer history remain coupled before the failing update.
++
++\begin{table}[t]
++\centering\small
++\caption{Test accuracy (\%) under the decomposition in Eq.~\ref{eq:followup-mean}. Each partial intervention adds one term to $W_{U,0}h_1$. The full update gives $W_{U,1}h_1$. All means use training examples only.}
++\label{tab:mean-update}
++\begin{tabular}{lrrrr}
++\toprule
++Seed & Preceding head & Mean term & Centered term & Full update \\
++\midrule
++$0$ & $96.39$ & $32.11$ & $95.26$ & $31.87$ \\
++$1$ & $94.18$ & $9.42$ & $92.48$ & $9.09$ \\
++$2$ & $100.00$ & $0.93$ & $100.00$ & $0.93$ \\
++$3$ & $91.01$ & $53.34$ & $87.20$ & $53.60$ \\
++$4$ & $98.66$ & $66.07$ & $98.46$ & $66.33$ \\
++\bottomrule
++\end{tabular}
++\end{table}
++
++Replacing gradients only at the terminal update still fails in all five seeds. Each complete update has negative directional derivative under the accurate training loss, and scales $0.001$ and $0.01$ lower that loss; the full update overshoots (Appendix~\ref{app:mean-update}).
++
++The corrected subtraction run also remains free of joint failure through $100{,}000$ steps. A gain-free RMS pair bounds its scope: with accurate loss, test accuracy falls from $96.21\%$ to $0.88\%$. Updating only embeddings gives $0.94\%$, while updating only the readout retains $96.21\%$. Corrected cross-entropy therefore leaves a distinct embedding failure possible; this one-seed counterexample does not estimate its prevalence (Appendix~\ref{app:normalized}).
++
++\section{Task-aligned Fourier projections}
+ \label{sec:family}
+ 
+ We view each cached state as a function of the operand pair. An orthonormal two-dimensional Fourier transform over all $p^2$ pairs partitions its modes into six disjoint families: non-constant \emph{addition} $(k,k)$, \emph{subtraction} $(k,-k)$, $a$-only, $b$-only, the constant mode, and generic interaction. Family \emph{sufficiency} retains that family's modes; \emph{ablation} removes them. Both interventions retain the constant mode when targeting a non-constant family. Unless stated otherwise, Fourier accuracies and solved-checkpoint selection ($\geq95\%$) use the full operand grid. Appendix~\ref{app:fourier} specifies the interventions.
++
++\textbf{The filter supplies task structure.} Retaining all $(k,k)$ modes and the constant mode is exactly the orbit average
++\begin{equation}
++(P_{\mathrm{add}}h)(a,b)=\frac{1}{p}\sum_{t=0}^{p-1}h(a+t,b-t),
++\label{eq:orbit-average}
++\end{equation}
++with indices modulo $p$. Every donor has the same sum, and the linear readout commutes with this average. For subtraction, the shifts are $(a+t,b+t)$. A lookup-table predictor that outputs the correct one-hot vector on training examples and zero elsewhere becomes perfect after addition filtering whenever every answer orbit contains a training example. Appendix~\ref{app:fourier-control} verifies this control on the experimental splits. Full-family filtered accuracy thus measures the answer-conditioned average of the predictor; high accuracy alone leaves the learned algorithm unidentified.
+ 
+ \begin{table}[t]
+ \centering
+@@ -187,30 +210,25 @@
+ \end{tabular}
+ \end{table}
+ 
+-\textbf{The task-aligned family is sufficient at the sampled solved checkpoints.} In Table~\ref{tab:swap}, the addition family reaches $100.00\%$ at every selected addition checkpoint. Removing it leaves near-chance accuracy, while removing the subtraction family has little effect. Under matched initialization, configuration, and code path, training on $(a-b)\bmod113$ exchanges these roles: $(k,-k)$ reaches $100\%$ and $(k,k)$ gives chance accuracy. This consistency across the sampled optimizers and seeds complements prior evidence for shared algorithmic families with variation in the learned circuits \citep{chughtai2023toy}.
+-
+-\textbf{Frequency and phase matter within the family.} Transporting the family onto other diagonal frequencies at matched power gives $2.64\%$. Randomizing phase per conjugate pair gives $0.19\%$, and randomizing phase per channel gives $0.78\%$. These interventions establish sensitivity to frequency assignment and phase. Two branches diverging from a bit-identical state each decode their own addition-filtered representation at $100\%$ and the other's at chance, showing dependence on the associated readout.
++\textbf{Task-aligned projection preserves accuracy at the sampled solved checkpoints.} In Table~\ref{tab:swap}, the addition family reaches $100.00\%$ at every selected addition checkpoint. Removing it leaves near-chance accuracy, while removing the subtraction family has little effect. Under matched initialization, configuration, and code path, training on $(a-b)\bmod113$ exchanges these roles: $(k,-k)$ reaches $100\%$ and $(k,k)$ gives chance accuracy. These results characterize the task-aligned projection and family removal; both interventions retain the constant mode. The averaging identity also produces this operation dependence, so identifying shared learned algorithms requires additional evidence \citep{chughtai2023toy}.
++
++\textbf{Frequency and phase matter within the family.} Transporting the family onto other diagonal frequencies at matched power gives $2.64\%$. Randomizing phase per conjugate pair gives $0.19\%$, and randomizing phase per channel gives $0.78\%$. These interventions establish sensitivity to frequency assignment and phase. The memorizer controls in Appendix~\ref{app:fourier-control} also exhibit sparse filtered sufficiency and perturbation sensitivity, so these tests leave algorithm identification unresolved. Two branches diverging from a bit-identical state each decode their own addition-filtered representation at $100\%$ and the other's at chance, showing dependence on the associated readout.
++
++
++
++\textbf{The update rule shapes the spread.} On matched runs the Muon representation occupies $326$ effective conjugate pairs of the non-constant spectrum against AdamW's $5$, leaving the task-aligned family holding $28\%$ of non-constant power against AdamW's $91\%$, and the contrast replicates across seeds and inside the family itself (Figure~\ref{fig:grid}; Appendix~\ref{app:dispersion}). These operand-frequency measurements complement prior work on Muon's spectral properties \citep{ruan2026muon,wang2025tailend,wang2026active}. Ablating the normalization and orthogonalization together collapses the count to $4$, past AdamW's, while task-family filtered accuracy remains $100\%$. These comparisons show a change in spectral dispersion. The filtered accuracy retains the averaging interpretation above.
++
++\section{Interference in the task-aligned projection}
++\label{sec:outvoted}
+ 
+ \begin{figure}[t]
+ \centering
+-\includegraphics[width=0.88\textwidth]{figure4_grid.pdf}
+-\caption{The twenty highest-power conjugate pairs of the final residual at converged checkpoints, on the mode grid, sized by share of non-constant power; grey lines mark $l=k$ and $l=-k$. AdamW places $80.1\%$ of non-constant power on a single pair of the family the task selects; Muon's strongest pair carries $7.9\%$, with the rest spread across the family and beyond it; ablating the normalized path returns the strongest pair to $58.9\%$. Between the addition and subtraction panels the occupied line moves from one diagonal to the other.}
+-\label{fig:grid}
+-\end{figure}
+-
+-\textbf{The update rule shapes the spread.} On matched runs the Muon representation occupies $326$ effective conjugate pairs of the non-constant spectrum against AdamW's $5$, leaving the task-aligned family holding $28\%$ of non-constant power against AdamW's $91\%$, and the contrast replicates across seeds and inside the family itself (Figure~\ref{fig:grid}; Appendix~\ref{app:dispersion}). These operand-frequency measurements complement prior work on Muon's spectral properties \citep{ruan2026muon,wang2025tailend,wang2026active}. Ablating the normalization and orthogonalization together collapses the count to $4$, past AdamW's, while leaving the family untouched at $100\%$ sufficiency: the task selects the family, the update rule shapes how widely power spreads, and the two are separable.
+-
+-\section{A circuit can be present, correct, and outvoted}
+-\label{sec:outvoted}
+-
+-\begin{figure}[t]
+-\centering
+ \includegraphics[width=0.85\textwidth]{figure5_modes.pdf}
+-\caption{\textbf{Left:} task-aligned family accuracy (including the retained constant mode) against full-model accuracy over $98$ checkpoints from the original studies, both evaluated through the current readout. \emph{Circuit failure} denotes failure of this filtered pathway; \emph{circuit masking} sits at the lower right, where the family solves the task and the model does not. At $95$ of $98$ checkpoints the family alone is at least as accurate as the full model, and the three exceptions exceed it by under a point. \textbf{Right:} rescaling the non-constant task-aligned component of the masked checkpoint by $\alpha$, with the rest of the representation and the readout untouched.}
++\caption{\textbf{Left:} task-aligned family accuracy (including the retained constant mode) against full-model accuracy over $98$ checkpoints from the original studies, both evaluated through the current readout. \emph{Projection failure} denotes low filtered accuracy; \emph{projection masking} sits at the lower right, where the task-informed projection is accurate and the full model fails. The panel's circuit labels refer to these operational outcomes. At $95$ of $98$ checkpoints the family alone is at least as accurate as the full model, and the three exceptions exceed it by under a point. \textbf{Right:} rescaling the non-constant task-aligned component of the masked checkpoint by $\alpha$, with the rest of the representation and the readout untouched.}
+ \label{fig:modes}
+ \end{figure}
+ 
+-Filtering the final residual to the task-aligned family and decoding measures its accuracy through the current readout; comparison with the unfiltered model measures interference from the remainder. The two measurements separate two failures (Figure~\ref{fig:modes}). In \emph{circuit failure}, filtering gives $2.65\%$ and then chance: this filtered pathway fails, and the family has fallen out of the top twenty power pairs almost entirely. Fresh-decoder recovery in \S\ref{sec:branches} shows why such failure alone cannot establish loss of task information. In \emph{circuit masking}, filtering gives $100\%$ while the full model reaches $45.85\%$: the isolated circuit is perfect, and the representation it sits in overwhelms it. One matched trajectory passes through failure, full recovery, and masking; its frozen counterpart retains high filtered accuracy and substantial family power (Appendix~\ref{app:branchtraj}).
++Filtering the final residual gives an answer-conditioned average through the current readout (Eq.~\ref{eq:orbit-average}). Comparing it with the full model measures interference from the remainder. In \emph{projection failure}, filtering gives $2.65\%$ and then chance, and the family has fallen out of the top twenty power pairs almost entirely. Fresh-decoder recovery in \S\ref{sec:branches} provides a separate test of surviving task information. In \emph{projection masking}, the filtered representation achieves $100\%$ accuracy over the full operand grid. The full model reaches $45.85\%$. The projection averages to a correct answer for every orbit; the full prediction also includes the remainder. One matched trajectory passes through failure, full recovery, and masking; its frozen counterpart retains high filtered accuracy and substantial family power (Appendix~\ref{app:branchtraj}).
+ 
+ \begin{table}[t]
+ \centering
+@@ -231,9 +249,9 @@
+ \end{tabular}
+ \end{table}
+ 
+-\textbf{Masking is a competition on amplitude.} Because the unembedding is linear and bias-free, the correct-class margin decomposes exactly into the task-aligned contribution and the remainder (Table~\ref{tab:margins}). Against the full model's highest-scoring incorrect class, the non-constant family contributes a positive margin on every example in both branches, including every example the masked model answers wrongly, and on those examples its margin is higher, $+6.08$ against $+5.30$. The failures coincide with stronger opposition from the remainder: the remainder contributes negatively on more than nine tenths of examples in both branches, and in the control an opposition of $-6.43$ outvotes a task-aligned term of $+5.72$. Rescaling the task-aligned component by $\alpha$, with nothing retrained, raises the masked model monotonically on the sampled grid from $45.85\%$ to at least $95\%$ at $\alpha=2.55$ and $99.91\%$ at $\alpha=6$: the intervention changes the balance of the two logit contributions without retraining. Family power share is a descriptive measure of this change.
+-
+-\textbf{Family power during grokking.} Along an AdamW trajectory sampled every thousand steps, the addition family reaches $95.14\%$ at step $3{,}000$, when the model scores $0.30\%$ and the family holds $1.05\%$ of non-constant power. Ablating the family leaves near-chance accuracy at every sampled checkpoint. Its share rises to $70.62\%$ at the test-accuracy jump, alongside greater concentration within the family. This trajectory is consistent with the cleanup account of \citet{nanda2023progress}. Power share provides a descriptive measure of that transition; the margin decomposition and rescaling intervention establish amplitude competition at the masked checkpoint.
++\textbf{Masking is a competition on amplitude.} Because the unembedding is linear and bias-free, the correct-class margin decomposes exactly into the task-aligned contribution and the remainder (Table~\ref{tab:margins}). Against the full model's highest-scoring incorrect class, the non-constant family contributes a positive margin on every example in both branches, including every example the masked model answers wrongly, and on those examples its margin is higher, $+6.08$ against $+5.30$. The failures coincide with stronger opposition from the remainder: the remainder contributes negatively on more than nine tenths of examples in both branches, and in the control an opposition of $-6.43$ outvotes a task-aligned term of $+5.72$. Rescaling the task-aligned component by $\alpha$, with nothing retrained, raises the masked model monotonically on the sampled grid from $45.85\%$ to at least $95\%$ at $\alpha=2.55$ and $99.91\%$ at $\alpha=6$: the intervention changes the balance of the two logit contributions without retraining. The rescaled component is $P_{\mathrm{add}}h-\bar h$, with $\bar h$ the global mean. Recovery therefore depends on the task structure supplied by the projection. Family power share is a descriptive measure of this change.
++
++\textbf{Family power during grokking.} Along an AdamW trajectory sampled every thousand steps, the addition family reaches $95.14\%$ at step $3{,}000$, when the model scores $0.30\%$ and the family holds $1.05\%$ of non-constant power. Ablating the family leaves near-chance accuracy at every sampled checkpoint. Its share rises to $70.62\%$ at the test-accuracy jump, alongside greater concentration within the family. The memorizer control shows why this filtered accuracy alone cannot establish algorithm learning at step $3{,}000$. Increasing power share describes the trajectory and is compatible with the cleanup account of \citet{nanda2023progress}. The margin decomposition and rescaling intervention establish amplitude competition between projected logit components at the masked checkpoint.
+ 
+ \textbf{Spectral stability and functional change.} Exact nonzero Fourier support is invariant under an invertible residual-basis map; power and its rankings are invariant under orthogonal maps. General invertible maps can change dominant-frequency membership. A jointly compensated basis change preserves predictions. At the collapse in Figure~\ref{fig:collapse}, dominant-frequency Jaccard is $1.0000$ and power cosine is $0.9899$, while the filtered pathway's mean margin changes from $+18.14$ to $-46.85$. Over this interval the unembedding moves by $1.285$ of its norm and the addition-filtered residual by $0.392$; the old head on new features scores $26.31\%$, against $5.74\%$ for the reverse. Adjacent swaps provide finer localization (Figure~\ref{fig:followup}a). Accuracy returns to $99.90\%$ within $300$ steps with a changed power allocation. In the depth-4 pair, patching the frozen branch's addition component of the final MLP write into the control gives $99.99\%$ with the frozen head and $5.05\%$ with the control head. These results show readout sensitivity; exact basis equivalence requires the separate tests in Appendix~\ref{app:basis}.
+ 
+@@ -247,21 +265,26 @@
+ 
+ \textbf{Grokking on modular arithmetic.} \citet{power2022grokking} introduced the phenomenon. \citet{nanda2023progress} reverse-engineered a Fourier algorithm, used causal ablations, and introduced restricted and excluded losses to track circuit formation and cleanup. \citet{zhong2023clock} show that hyperparameters select qualitatively different algorithms; \citet{chughtai2023toy} find shared algorithmic structure alongside variation across learned circuits.
+ 
+-\textbf{Failure after grokking.} \citet{thilak2022slingshot} report cyclic instability under adaptive optimizers; \citet{varma2023explaining} describe ungrokking under reduced data; \citet{prieto2025grokking} identify softmax collapse and a loss-minimization direction that scales logits. \citet{liu2026glitching} connect finite-precision violations of the logit-gradient class-sum identity to feature inflation and loss spikes, and test projection-based corrections. Our arithmetic controls build on this account; adjacent swaps and fresh decoders locate the acute functional failure and surviving information. Joint train/test collapse differs from the perfect-training regime of anti-grokking \citep{prakash2025grokking}, while the accurate-loss RMS event establishes a separate architectural boundary.
++\textbf{Failure after grokking.} \citet{thilak2022slingshot} report cyclic instability under adaptive optimizers; \citet{varma2023explaining} describe ungrokking under reduced data; \citet{prieto2025grokking} identify softmax collapse and a loss-minimization direction that scales logits. \citet{liu2026glitching} connect finite-precision class-sum violations to coupled feature/classifier-mean growth, amplified Adam updates, and loss spikes; they test zero-sum corrections and normalization. Our arithmetic controls extend this account under Muon/AdamW routing. Adjacent swaps and the mean-dependent displacement intervention locate acute failures; fresh decoders measure surviving information. Joint train/test collapse differs from the perfect-training regime of anti-grokking \citep{prakash2025grokking}. The accurate-loss RMS control identifies an embedding failure in our normalized setting.
+ 
+ \textbf{Muon.} \citet{jordan2024muon} introduced the optimizer and \citet{liu2025muon} deployed it at scale under the routing used here. \citet{tveit2025muon} and \citet{wang2026active} report faster grokking in their tested settings; the latter studies orthogonalization and the speed/stability tradeoff with iteration count, including accuracy dips. We examine the five-iteration configuration over longer horizons. \citet{ruan2026muon} and \citet{wang2025tailend} report higher effective rank and a more isotropic weight spectrum under Muon. Our Fourier measurements concern dispersion over operand frequencies, and the joint ablation tests the contribution of normalization and orthogonalization.
+ 
+-\textbf{Representation and readout.} \citet{elhage2021framework} describe residual-stream basis freedom. \citet{anthes2023diagnosing} identify readout misalignment as a major component of forgetting under new tasks. \citet{chou2026twospeeds} study relative representation and readout learning speeds, while \citet{gomezjurado2026longdelay} finds a decoder bottleneck in one-step Collatz prediction. Here the task stays fixed and the dissociation occurs after generalization: joint train/test failure can coexist with high accuracy under a fresh decoder.
++\textbf{Representation and readout.} \citet{elhage2021framework} describe residual-stream basis freedom. \citet{anthes2023diagnosing} identify readout misalignment as a major component of forgetting under new tasks. \citet{chou2026twospeeds} use same-split linear probes to diagnose readout miscalibration during grokking and study relative representation and readout learning speeds, while \citet{gomezjurado2026longdelay} finds a decoder bottleneck in one-step Collatz prediction. Here the task stays fixed and the dissociation occurs after generalization: joint train/test failure can coexist with high accuracy under a fresh decoder.
+ 
+ \section{Discussion}
+ \label{sec:discussion}
+ 
+ The tests establish surviving task information, with training-only decoders reaching $98.20$--$100\%$, while rejecting exact global basis equivalence for the measured pairs. Arithmetic corrections suppress joint failures over fixed horizons; captured updates overshoot accurate local descent directions. Together with adjacent swaps and the feature-mean intervention, these results support a numerical contribution to acute readout failure. The relative contributions of feature growth and optimizer history remain unresolved.
+ 
+-The accurate-loss RMS embedding failure limits this account. The main controls cover five selected trajectories; the operation and normalization extensions use one seed each. Longer horizons and brief test-only excursions remain unresolved, and AdamW collapses limit attribution specifically to Muon. Fourier filtering identifies functional components using the complete task grid; it does not by itself identify the full weight-level algorithm. Spectral statistics, linear decodability, and accuracy through the current readout answer different questions about what survives collapse.
++The accurate-loss RMS embedding failure limits this account. The main controls cover five selected trajectories; the operation and normalization extensions use one seed each. Behavior beyond $100{,}000$ steps and brief test-only excursions remain unresolved, and AdamW collapses limit attribution specifically to Muon. Full-family Fourier filtering supplies answer-orbit structure and mixes training and test inputs. The memorizer control rules out using perfect filtered accuracy alone as evidence of an arithmetic algorithm.
++
++\label{sec:main-end}
+ 
+ \subsubsection*{Reproducibility statement}
+ The original experiments run on a single device from released code; their repository (anonymized for review) contains the training and analysis scripts, $191$ CSV run logs, and $20$ HTML summaries. Follow-up artifacts add raw diagnostics, model/optimizer/random-state checkpoints, replay checks, and the scripts for every new table and figure. Matched freezes and arithmetic branches verify shared states before intervention. Appendix~\ref{app:setup} specifies the original setup; Appendix~\ref{app:followup} gives the decoder, basis, arithmetic, and architecture-control protocols and their fixed horizons.
++
++\subsubsection*{AI use statement}
++Generative AI tools assisted with the design and implementation of follow-up experiments, numerical verification, mathematical derivations, literature comparison, figure generation, and manuscript revision. The released protocols, code, checkpoints, and verification records document these analyses.
+ 
+ \clearpage
+ \bibliography{references}
+@@ -272,5 +295,7 @@
+ \input{appendix}
+ \clearpage
+ \input{followup_appendix}
++\clearpage
++\input{fourier_control_appendix}
+ 
+ \end{document}
+--- a/tables/configs.tex
++++ b/tables/configs.tex
+@@ -14,7 +14,7 @@
+  & Auxiliary & AdamW & $\text{lr}=10^{-3}$, $\text{wd}=1.0$ \\
+  & Readout & AdamW & $\text{lr}=2.5\times10^{-4}$, $\text{wd}=1.0$ \\
+ \midrule
+-Stable Muon & \multicolumn{3}{l}{Muon, with auxiliary and readout groups frozen after circuit formation} \\
++Stable Muon & \multicolumn{3}{l}{Muon, with auxiliary and readout groups frozen after sustained generalization} \\
+ \bottomrule
+ \end{tabular}
+ \end{table}

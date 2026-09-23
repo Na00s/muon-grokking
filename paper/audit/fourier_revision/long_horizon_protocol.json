@@ -1,0 +1,96 @@
+{
+  "created_utc": "2026-09-22T23:03:42.121228+00:00",
+  "status": "prespecified_before_extension",
+  "workers": 6,
+  "jobs": [
+    {
+      "name": "addition_seed0",
+      "checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/causal_study/main_runs/seed0_accurate6000/final.pt",
+      "operation": "addition",
+      "source_checkpoint_sha256": "bea215246f7131b7222238d3f303324669d1a1d5d6f8578178542e2279208364",
+      "start_step": 30000,
+      "end_step": 100000
+    },
+    {
+      "name": "addition_seed1",
+      "checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/causal_study/main_runs/seed1_accurate6000/final.pt",
+      "operation": "addition",
+      "source_checkpoint_sha256": "68accfa722156d716ccded7294e1b5573fcf56c4eb744b285847cc4aefda9e36",
+      "start_step": 30000,
+      "end_step": 100000
+    },
+    {
+      "name": "addition_seed2",
+      "checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/causal_study/main_runs/seed2_accurate6000/final.pt",
+      "operation": "addition",
+      "source_checkpoint_sha256": "1c1571c2e1f0b454fb8b1487a5087d6ea4c239dba1d805c84f8d3051a58496ea",
+      "start_step": 30000,
+      "end_step": 100000
+    },
+    {
+      "name": "addition_seed3",
+      "checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/causal_study/main_runs/seed3_accurate6000/final.pt",
+      "operation": "addition",
+      "source_checkpoint_sha256": "09fb94f7fdcd22a4cd90e7bb098433cc3ef3e664c740573d2a97a86c204a09bf",
+      "start_step": 30000,
+      "end_step": 100000
+    },
+    {
+      "name": "addition_seed4",
+      "checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/causal_study/main_runs/seed4_accurate6000/final.pt",
+      "operation": "addition",
+      "source_checkpoint_sha256": "411b2c525ae50d78ccf27c23a4fc4862afd9dfb2b46111ff8f06cd6189c4e95e",
+      "start_step": 30000,
+      "end_step": 100000
+    },
+    {
+      "name": "subtraction_seed0",
+      "checkpoint": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/causal_study/generality/subtraction_accurate/final.pt",
+      "operation": "subtraction",
+      "source_checkpoint_sha256": "2e2933d927b674219add9c202cd15d3833212097638d7bc85fe972417841b602",
+      "start_step": 30000,
+      "end_step": 100000
+    }
+  ],
+  "purpose": "Extend the existing accurate-cross-entropy controls to the original depth-1 100,000-step budget.",
+  "original_horizon_evidence": [
+    {
+      "path": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/muon-grokking/runs/seedstudy_muon_seed_0.csv",
+      "sha256": "d95aac9249a4f61f71f91f1e5d548869f202f99e975b7b5c22be6e4ac345b4b8"
+    },
+    {
+      "path": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/muon-grokking/runs/seedstudy_muon_seed_1.csv",
+      "sha256": "660d575551ed7b6665daa22019da4b64c0f361dd18c4920ebb862786307f0cc9"
+    },
+    {
+      "path": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/muon-grokking/runs/seedstudy_muon_seed_2.csv",
+      "sha256": "b74363293720354e11330c423bd4b273875f367c5e3d4b227137e87392aa5cbc"
+    },
+    {
+      "path": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/muon-grokking/runs/seedstudy_muon_seed_3.csv",
+      "sha256": "9ae9e46539cb08cfe890fa916d5ef92a04bd744db32489e0085daa2f9970895a"
+    },
+    {
+      "path": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/muon-grokking/runs/seedstudy_muon_seed_4.csv",
+      "sha256": "1d4ce31f0a461b54f81997dbb1e3c896116a43aa8e4bd1f419e8c939e905dbfc"
+    },
+    {
+      "path": "/Users/alipro/Documents/Codex/2026-09-22/sin/work/muon-grokking/runs/subtraction_depth_1_muon_seed_0.csv",
+      "sha256": "32020ab23f176d1266bc30fcc3ff21d210bfe9eaad9a803862502b2a366944ca"
+    }
+  ],
+  "primary": "Whether any joint train/test accuracy below 90% occurs in each of five corrected addition branches between steps 30,000 and 100,000.",
+  "secondary": "The same endpoint for the corrected subtraction seed-0 branch.",
+  "inherited_interventions": "Addition accurate CE was introduced at matched stock step 6,000. Subtraction used accurate CE from initialization.",
+  "training_monitor": "Every pre-update state and final state, with every state recorded in trajectory.csv.",
+  "test_monitor": "Every 100 global steps, every training state below 90%, start and final states.",
+  "finite_horizon_scope": "Completion at 100,000 tests persistence through the original budget. No claim of indefinite prevention follows.",
+  "test_only_scope": "Brief test-only excursions between 100-step evaluations can remain undetected.",
+  "prior_stock_scope": "Matched stock branches have verified joint failures by 30,000. Their binary event status persists at longer horizons without rerunning them.",
+  "stopping": "Complete every requested horizon. Nonfinite states fail explicitly and retain a failure checkpoint; never truncate silently.",
+  "checkpoint_policy": "Retain start/final, 10,000-step grid, first joint event/preceding state/last jointly >=99% state, and minimum measured test state.",
+  "runtime": "CPU float32, original model and three optimizer objects, accurate CE, deterministic algorithms, one Torch thread per worker.",
+  "validation": "All six restored model/optimizer/RNG states match source exactly. Twelve uninterrupted source updates match monitored updates and a six-plus-six save/restore continuation bitwise.",
+  "runner_sha256": "50ccf3587d6ef62d9406b88d27d8de33ad23ccd51b51f5f8db4a5a2b39692399",
+  "validation_sha256": "75449ca1c73616205db55e0d3e45a2f2a462ef45d2055797cbfb02c5681c8046"
+}

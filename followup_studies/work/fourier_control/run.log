@@ -1,0 +1,21 @@
+memorizer addition seed=0 raw heldout=79/8939, projected=100%, donor_min=21
+memorizer addition seed=1 raw heldout=68/8939, projected=100%, donor_min=21
+memorizer addition seed=2 raw heldout=79/8939, projected=100%, donor_min=21
+memorizer addition seed=3 raw heldout=81/8939, projected=100%, donor_min=23
+memorizer addition seed=4 raw heldout=77/8939, projected=100%, donor_min=21
+memorizer subtraction seed=0 raw heldout=79/8939, projected=100%, donor_min=23
+memorizer subtraction seed=1 raw heldout=70/8939, projected=100%, donor_min=23
+memorizer subtraction seed=2 raw heldout=80/8939, projected=100%, donor_min=24
+memorizer subtraction seed=3 raw heldout=82/8939, projected=100%, donor_min=23
+memorizer subtraction seed=4 raw heldout=78/8939, projected=100%, donor_min=20
+checkpoint adjacent_seed0 endpoint=0 step=17493: raw=95.4917%, complete_family_with_dc=100.0000%, training_donors_only=100.0000%, heldout_donors_only=100.0000%, heldout_donors_leave_one_out=100.0000%
+checkpoint adjacent_seed0 endpoint=1 step=17494: raw=31.8716%, complete_family_with_dc=35.7534%, training_donors_only=51.5382%, heldout_donors_only=30.4732%, heldout_donors_leave_one_out=30.4620%
+checkpoint seed1_adjacent_event endpoint=0 step=17720: raw=94.1380%, complete_family_with_dc=100.0000%, training_donors_only=100.0000%, heldout_donors_only=100.0000%, heldout_donors_leave_one_out=100.0000%
+checkpoint seed1_adjacent_event endpoint=1 step=17721: raw=9.0950%, complete_family_with_dc=2.7184%, training_donors_only=10.5828%, heldout_donors_only=0.9285%, heldout_donors_leave_one_out=0.9285%
+checkpoint seed2_adjacent_event endpoint=0 step=18068: raw=99.9888%, complete_family_with_dc=100.0000%, training_donors_only=100.0000%, heldout_donors_only=100.0000%, heldout_donors_leave_one_out=100.0000%
+checkpoint seed2_adjacent_event endpoint=1 step=18069: raw=0.9285%, complete_family_with_dc=0.8838%, training_donors_only=0.8838%, heldout_donors_only=0.8838%, heldout_donors_leave_one_out=0.8838%
+checkpoint seed3_adjacent_event endpoint=0 step=16307: raw=89.5402%, complete_family_with_dc=99.1162%, training_donors_only=99.1162%, heldout_donors_only=99.1162%, heldout_donors_leave_one_out=99.1162%
+checkpoint seed3_adjacent_event endpoint=1 step=16308: raw=53.5966%, complete_family_with_dc=67.0880%, training_donors_only=72.2564%, heldout_donors_only=65.2869%, heldout_donors_leave_one_out=65.2869%
+checkpoint adjacent_seed4 endpoint=0 step=16055: raw=91.3413%, complete_family_with_dc=98.1765%, training_donors_only=99.1386%, heldout_donors_only=98.1765%, heldout_donors_leave_one_out=98.1765%
+checkpoint adjacent_seed4 endpoint=1 step=16056: raw=66.3273%, complete_family_with_dc=71.2496%, training_donors_only=72.2228%, heldout_donors_only=71.2496%, heldout_donors_leave_one_out=71.2496%
+Completed 100 checks, all passed.

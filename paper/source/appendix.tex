@@ -26,6 +26,13 @@ Varying the readout learning rate over $10^{-4}$, $2.5\times10^{-4}$, and $5\tim
 \section{The quiet window}
 \label{app:quiet}
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{figure2_quiet.pdf}
+\caption{Every-step measurements over $691$ updates before a collapse. \textbf{Top:} loss and gradient norms in the quiet window. \textbf{Middle:} gradient-driven applied steps and log--log slopes against the hidden gradient norm for Muon and the combined non-hidden norm for both AdamW groups. \textbf{Bottom:} hidden step and decay magnitudes differ by under $2\%$ at step $44{,}100$. Their vector sum is smaller and grows by $64\%$ from step $44{,}100$ to $44{,}700$ while the gradient-driven step changes little.}
+\label{fig:quiet}
+\end{figure}
+
 \input{tables/quiet}
 
 Figure~\ref{fig:quiet} uses the every-step instrumented rerun, with a quiet window from $44{,}010$ through $44{,}700$ and failure at $44{,}702$. Table~\ref{tab:quiet} uses a separate ten-step spectral replay, whose first observed failure is at $44{,}710$. The following step/decay diagnostics use the instrumented rerun. On the hidden group the gradient-driven component is $0.1499$ at step $44{,}100$ against a decay component of $0.1475$, a ratio of $0.984$, leaving a net displacement of $0.0462$ that grows to $0.0759$ across the window while the orthogonalized step stays flat; over the window the hidden gradient norm grows by $3.92$ while its gradient-driven step changes by $0.97$, and the non-hidden gradient grows by $2.60$ while the embedding and readout steps grow by $2.65$ and $2.84$. The readout decay component has larger norm than its gradient-driven component on $14.9\%$ of quiet-window steps. In the ten-step spectral replay, the combined non-hidden gradient norm rises from $3.52\times10^{-5}$ to $836.10$; the orthogonalized Muon step over that interval is $0.1429$, lower than the $0.1455$ preceding it, and its maximum over the branch occurs after the event.
@@ -55,8 +62,17 @@ For a chosen point in the forward pass the model runs on all $p^2$ operand pairs
 
 Table~\ref{tab:families-result} applies sufficiency and ablation to each family at forty-three solved checkpoints spanning five seeds and the Muon, Stable Muon, and AdamW regimes. Equal-power relocation ranges $0.88\%$ to $15.04\%$ over $430$ replicates. Among the tested descending-power prefixes, the smallest reaching $95\%$ contains two to four conjugate pairs at AdamW checkpoints (median $3$), against three to seventeen at Muon (median $12.5$) and eight to nineteen at Stable Muon (median $11$). Along the AdamW trajectory of \S\ref{sec:outvoted}, the five strongest pairs give $4.91\%$ at step $3{,}000$, $19.48\%$ at $20{,}000$, $70.73\%$ at $30{,}000$, and $100\%$ at $37{,}000$, while the family's share rises from $1.05\%$ through $1.66\%$ and $11.08\%$ to $70.62\%$, reaching $90.51\%$ by step $100{,}000$; test accuracy over those steps is $0.30\%$, $0.29\%$, $2.08\%$, and $100\%$.
 
+The full-family accuracies above include the orbit average in Eq.~\ref{eq:orbit-average}. Prefix filtering and phase or frequency perturbations measure additional spectral structure, but their interpretation as evidence of a learned algorithm requires controls against memorization. Appendix~\ref{app:fourier-control} supplies that comparison.
+
 \section{Spectral dispersion}
 \label{app:dispersion}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.88\textwidth]{figure4_grid.pdf}
+\caption{The twenty highest-power conjugate pairs of the final residual at converged checkpoints, on the mode grid, sized by share of non-constant power; grey lines mark $l=k$ and $l=-k$. AdamW places $80.1\%$ of non-constant power on a single pair of the family the task selects; Muon's strongest pair carries $7.9\%$, with the rest spread across the family and beyond it; ablating the normalized path returns the strongest pair to $58.9\%$. Between the addition and subtraction panels the occupied line moves from one diagonal to the other.}
+\label{fig:grid}
+\end{figure}
 
 \input{tables/sparsity}
 
@@ -67,7 +83,7 @@ Table~\ref{tab:sparsity} reports the entropy effective count $\exp(-\sum_i q_i\l
 
 \input{tables/coordinates}
 
-Table~\ref{tab:coordinates} follows the family's top-twenty membership, power share, isolated accuracy, and full-model accuracy along the depth-4 matched pair of \S\ref{sec:outvoted} from a bit-identical state. Over $174{,}000$ steps, the frozen branch retains high filtered accuracy and substantial family power; the control loses all three at filtered-pathway failure through its current readout, recovers all three, and loses the share again at circuit masking while the isolated family still gives $100\%$. The $\alpha$-sweep crossing at $\alpha=2.55$ occurs at a share of $0.6247$, below the frozen branch's native $0.9069$. Replaying a depth-1 collapse and recovery at ten-step resolution: full accuracy returns to $99.90\%$ within $300$ steps while the addition-family power cosine to the pre-collapse state reaches only $0.55$; the pre-collapse representation holds between $4.2\%$ and $5.7\%$ under the recovered readout throughout, while the recovered representation reads at $90.73\%$ under the pre-collapse readout. The matched branches' five strongest modes are identical at the branch point and share at most one pair at sampled steps $160{,}000$ through $230{,}000$. Patching the addition component of the frozen branch's final MLP write into the control under the frozen readout gives $99.99\%$; under the control's own readout, $5.05\%$; patching its full final MLP write gives $97.61\%$ and $4.46\%$ under the two readouts; patching only the non-addition component of that MLP write into the control gives $36.79\%$, below the control's unmodified $45.85\%$.
+Table~\ref{tab:coordinates} follows the family's top-twenty membership, power share, isolated accuracy, and full-model accuracy along the depth-4 matched pair of \S\ref{sec:outvoted} from a bit-identical state. Over $174{,}000$ steps, the frozen branch retains high filtered accuracy and substantial family power; the control loses all three at filtered-pathway failure through its current readout, recovers all three, and loses the share again at projection masking while the isolated family still gives $100\%$. The $\alpha$-sweep crossing at $\alpha=2.55$ occurs at a share of $0.6247$, below the frozen branch's native $0.9069$. Replaying a depth-1 collapse and recovery at ten-step resolution: full accuracy returns to $99.90\%$ within $300$ steps while the addition-family power cosine to the pre-collapse state reaches only $0.55$; the pre-collapse representation holds between $4.2\%$ and $5.7\%$ under the recovered readout throughout, while the recovered representation reads at $90.73\%$ under the pre-collapse readout. The matched branches' five strongest modes are identical at the branch point and share at most one pair at sampled steps $160{,}000$ through $230{,}000$. Patching the addition component of the frozen branch's final MLP write into the control under the frozen readout gives $99.99\%$; under the control's own readout, $5.05\%$; patching its full final MLP write gives $97.61\%$ and $4.46\%$ under the two readouts; patching only the non-addition component of that MLP write into the control gives $36.79\%$, below the control's unmodified $45.85\%$.
 
 \section{Depth}
 \label{app:depth}

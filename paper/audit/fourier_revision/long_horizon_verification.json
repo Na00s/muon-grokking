@@ -1,0 +1,633 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "addition_seed0 source hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 runner hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 protocol hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 completion horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 all training states",
+      "passed": true,
+      "count": 70001
+    },
+    {
+      "name": "addition_seed0 test schedule",
+      "passed": true,
+      "count": 701
+    },
+    {
+      "name": "addition_seed0 joint flags",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 failure counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 minimum training accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 minimum measured test accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 source retained",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 exact restored start",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed0 seed and operation",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 final checkpoint horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 final hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 split counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 final train replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 final test replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 minimum checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 minimum checkpoint replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 grid snapshot metadata",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 final equals grid snapshot",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed0 no event",
+      "passed": true
+    },
+    {
+      "name": "addition_seed0 source accuracy boundary",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 source hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 runner hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 protocol hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 completion horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 all training states",
+      "passed": true,
+      "count": 70001
+    },
+    {
+      "name": "addition_seed1 test schedule",
+      "passed": true,
+      "count": 701
+    },
+    {
+      "name": "addition_seed1 joint flags",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 failure counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 minimum training accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 minimum measured test accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 source retained",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 exact restored start",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed1 seed and operation",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 final checkpoint horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 final hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 split counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 final train replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 final test replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 minimum checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 minimum checkpoint replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 grid snapshot metadata",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 final equals grid snapshot",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed1 no event",
+      "passed": true
+    },
+    {
+      "name": "addition_seed1 source accuracy boundary",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 source hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 runner hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 protocol hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 completion horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 all training states",
+      "passed": true,
+      "count": 70001
+    },
+    {
+      "name": "addition_seed2 test schedule",
+      "passed": true,
+      "count": 701
+    },
+    {
+      "name": "addition_seed2 joint flags",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 failure counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 minimum training accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 minimum measured test accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 source retained",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 exact restored start",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed2 seed and operation",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 final checkpoint horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 final hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 split counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 final train replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 final test replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 minimum checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 minimum checkpoint replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 grid snapshot metadata",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 final equals grid snapshot",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed2 no event",
+      "passed": true
+    },
+    {
+      "name": "addition_seed2 source accuracy boundary",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 source hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 runner hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 protocol hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 completion horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 all training states",
+      "passed": true,
+      "count": 70001
+    },
+    {
+      "name": "addition_seed3 test schedule",
+      "passed": true,
+      "count": 701
+    },
+    {
+      "name": "addition_seed3 joint flags",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 failure counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 minimum training accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 minimum measured test accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 source retained",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 exact restored start",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed3 seed and operation",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 final checkpoint horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 final hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 split counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 final train replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 final test replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 minimum checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 minimum checkpoint replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 grid snapshot metadata",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 final equals grid snapshot",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed3 no event",
+      "passed": true
+    },
+    {
+      "name": "addition_seed3 source accuracy boundary",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 source hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 runner hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 protocol hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 completion horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 all training states",
+      "passed": true,
+      "count": 70001
+    },
+    {
+      "name": "addition_seed4 test schedule",
+      "passed": true,
+      "count": 701
+    },
+    {
+      "name": "addition_seed4 joint flags",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 failure counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 minimum training accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 minimum measured test accuracy",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 source retained",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 exact restored start",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed4 seed and operation",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 final checkpoint horizon",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 final hash",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 split counts",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 final train replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 final test replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 minimum checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 minimum checkpoint replay",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 grid snapshot metadata",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 final equals grid snapshot",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "addition_seed4 no event",
+      "passed": true
+    },
+    {
+      "name": "addition_seed4 source accuracy boundary",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 source hash",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 runner hash",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 protocol hash",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 completion horizon",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 all training states",
+      "passed": true,
+      "count": 70001
+    },
+    {
+      "name": "subtraction_seed0 test schedule",
+      "passed": true,
+      "count": 701
+    },
+    {
+      "name": "subtraction_seed0 joint flags",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 failure counts",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 minimum training accuracy",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 minimum measured test accuracy",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 source retained",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 exact restored start",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "subtraction_seed0 seed and operation",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 final checkpoint horizon",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 final hash",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 split counts",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 final train replay",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 final test replay",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 minimum checkpoint step",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 minimum checkpoint replay",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 checkpoint grid",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 grid snapshot metadata",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 final equals grid snapshot",
+      "passed": true,
+      "tensors": 22
+    },
+    {
+      "name": "subtraction_seed0 no event",
+      "passed": true
+    },
+    {
+      "name": "subtraction_seed0 source accuracy boundary",
+      "passed": true
+    }
+  ],
+  "passed": 150,
+  "total": 150,
+  "runner_sha256": "50ccf3587d6ef62d9406b88d27d8de33ad23ccd51b51f5f8db4a5a2b39692399",
+  "protocol_sha256": "ce6a545a51be8618bf5122b4b89ac97a39454384765a35e3a5b5b8809174a9b1"
+}

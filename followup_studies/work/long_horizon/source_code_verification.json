@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "source_commit": "6d64a981af75f1300d9060109e81552d48a81360",
+  "files": [
+    {
+      "path": "data.py",
+      "sha256": "aa8cdffc2973eb57ca81f28614b15e93b8814603b3793229c5462f2e330057ab",
+      "identical_to_source_commit": true
+    },
+    {
+      "path": "model.py",
+      "sha256": "1efc903b11446bf7c0b6794e120c34cbebf679b91a40123d4a7f79cf83837d72",
+      "identical_to_source_commit": true
+    },
+    {
+      "path": "optimizers/muon.py",
+      "sha256": "bcbfcef627d67bd5a3393c4ddacc9bdf4cb061d3a2014da1c3cb1d7ae591556d",
+      "identical_to_source_commit": true
+    },
+    {
+      "path": "experiments/depth/train_depth_variant.py",
+      "sha256": "4cd6ad4dd9cf01cbbb61e8c5fbe2caebb03a195f7bb1afb6783b2ed12df4cb6b",
+      "identical_to_source_commit": true
+    },
+    {
+      "path": "metrics.py",
+      "sha256": "3dc3e8a3fd98298208f4e7c1884e62a111ff54bad5f2547f33becab01f398a6d",
+      "identical_to_source_commit": true
+    },
+    {
+      "path": "optimizers/muon_no_ns.py",
+      "sha256": "231cdfcbe39c7fe533b18430aaba04950f2e07087e291730eb27b337d0f6f4e6",
+      "identical_to_source_commit": true
+    }
+  ]
+}

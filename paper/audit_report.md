@@ -1,5 +1,9 @@
 # Audit of the revised submission
 
+## Latest Fourier and horizon revision
+
+The completed update adds Fourier memorizer controls, 420,000 training updates through the original 100,000-step horizon, a main-text mean-update table, and the four requested wording changes. See [revision_addendum.md](revision_addendum.md) for the results and [audit/fourier_revision/](audit/fourier_revision/) for the independent checks. The sections below record the preceding audit of the decoder, basis, and causal follow-ups.
+
 The experimental audit covers the new decoder, basis, arithmetic, and architecture studies. The original experiments and observations are retained as established results, following the author's clarification. Review of the original sections concerns their interpretation, analysis, claim strength, and relation to prior work. Missing old artifacts are not used to remove reported results.
 
 ## New experiments and results

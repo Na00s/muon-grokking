@@ -1,0 +1,35 @@
+{
+  "figure_size_inches": [
+    5.5,
+    3.0
+  ],
+  "minimum_text_size_points": 8,
+  "title_size_points": 9,
+  "layout_note": "Native paper text width, legends above axes, fixed physical PDF dimensions.",
+  "plotted_statistics": "Unchanged seed means and minima/maxima; frequency axis remains logarithmic.",
+  "source_sha256": {
+    "README.md": "2425533c9ad7d50abdd61f433d5a8895d154232768dc5b746d4fc47d95f6a8b4",
+    "corrections.md": "3e23b6ff8c78347d71d10eb394adcbae03edd3873255270696ae1e7824b46f70",
+    "figure_caption.txt": "1c86b4b21eab167a93fd59639397cf67d5cd242ccd32d15817947baa0249d41a",
+    "make_report.py": "b0547ed337551b596acb2b3caf643c7acfa919f7464b1d8212e7f104bb31b3c8",
+    "protocol.md": "2c6b2c4abcd53300808af2570bd4642130f642f2fee3134ad2fdda3bb5d4dc22",
+    "protocol_extension.md": "4123e02e509d108dabc08302bcb6f8c2127322efd08611695fcfa7219fea00b5",
+    "report.md": "6b4f6fd17202cfc1889c0f56eb4c9863f473f46c14de6d051d6cfe6f35c027c9",
+    "run_control.py": "bd017f99d7876f9622abc339ae2dbea8e7cccc087b893f483870af0b5978861c",
+    "run_frequency_controls.py": "6e58b6163e462e1e9c9312326799992595bfbc59bea74bbb3cc4265e190b2171",
+    "suggested_table.tex": "7f215613e86f5e8804d3ce70d03023f39a22eb01d06b598441cfa3abaf407ee0"
+  },
+  "input_sha256": {
+    "results/memorizer_results.json": "e03bd5c9860c891a4dbf7347a9b57ab422855e6068ebeb8ad6629e6979c3fa8a",
+    "results/checkpoint_donor_results.json": "cf2351ead28747bd2086d290b9e0da67239d1eb2854e9c82db6538f027a0a08b",
+    "results/ablation_metrics.csv": "df393f6cbe393f04a16e2ecc5dd4e727eea9866272d7c28eb3111163d385f24b",
+    "results/frequency_prefix_metrics.csv": "e07eb9a765b498a83033a53f4f59fe3c4463b78d698a895450c3e70f8ace93b6",
+    "results/phase_metrics.csv": "54b0a519601e0bd8182fe6f3d4ad214504c574929325016278f10c1008ea9888"
+  },
+  "output_sha256": {
+    "fourier_memorizer_control.pdf": "c3572e6ff8ffd536a86bb15e69eb67b187593071a8e44027bc313695d3a7a137",
+    "fourier_memorizer_control.png": "912adeb593ca24122b102109d7c2fd53077e1a886dc50dd2ee8b087492ba5647",
+    "suggested_table.tex": "7f215613e86f5e8804d3ce70d03023f39a22eb01d06b598441cfa3abaf407ee0",
+    "results/summary.json": "f1ad8ad09bfafccc42f6fef1fc08a9c7f82139aae9e97320482f89ace01f09ae"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "addition_seed0",
+      "source_step": 90000,
+      "end_step": 90012,
+      "source_sha256": "3c4344e411817b847eb4b26bf503cff8f929dee45e8f591896df57f554e61a2e",
+      "disk_roundtrip_tensor_checks": 22,
+      "resumed_tensor_checks": 22,
+      "uninterrupted_equals_disk_resumed": true
+    },
+    {
+      "name": "addition_seed1",
+      "source_step": 90000,
+      "end_step": 90012,
+      "source_sha256": "b368faad7c6d405d4984f4b8edcd0000e275dc9b93268f4680b14a52eab59b6b",
+      "disk_roundtrip_tensor_checks": 22,
+      "resumed_tensor_checks": 22,
+      "uninterrupted_equals_disk_resumed": true
+    },
+    {
+      "name": "addition_seed2",
+      "source_step": 90000,
+      "end_step": 90012,
+      "source_sha256": "4bc4cda786a1574447b3698f9560576569c5b590f7c583f516a03d5a2169f08e",
+      "disk_roundtrip_tensor_checks": 22,
+      "resumed_tensor_checks": 22,
+      "uninterrupted_equals_disk_resumed": true
+    },
+    {
+      "name": "addition_seed3",
+      "source_step": 90000,
+      "end_step": 90012,
+      "source_sha256": "6353a2d747c003956e5d14dc0d739f01039ec37dc16652afa28cda95150c1a28",
+      "disk_roundtrip_tensor_checks": 22,
+      "resumed_tensor_checks": 22,
+      "uninterrupted_equals_disk_resumed": true
+    },
+    {
+      "name": "addition_seed4",
+      "source_step": 90000,
+      "end_step": 90012,
+      "source_sha256": "5f16998aed9c85b515ba43d50009bdcba30c31058a953436236564c38b5a4ec7",
+      "disk_roundtrip_tensor_checks": 22,
+      "resumed_tensor_checks": 22,
+      "uninterrupted_equals_disk_resumed": true
+    },
+    {
+      "name": "subtraction_seed0",
+      "source_step": 90000,
+      "end_step": 90012,
+      "source_sha256": "3505131707a47368114e14318d66c2258cae891a42268946eab0486b9b2f0559",
+      "disk_roundtrip_tensor_checks": 22,
+      "resumed_tensor_checks": 22,
+      "uninterrupted_equals_disk_resumed": true
+    }
+  ]
+}

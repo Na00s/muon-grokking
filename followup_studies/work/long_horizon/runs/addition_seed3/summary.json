@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "seed": 3,
+  "operation": "addition",
+  "arm": "stable32",
+  "start_step": 30000,
+  "end_step": 100000,
+  "updates": 70000,
+  "train_states": 70001,
+  "test_evaluations": 701,
+  "first_joint_failure_step": null,
+  "minimum_train_accuracy": 1.0,
+  "minimum_measured_test_accuracy": 1.0,
+  "train_below90_states": 0,
+  "test_below90_evaluations": 0,
+  "joint_below90_states": 0,
+  "minimum_test_state": {
+    "step": 30000,
+    "local_step": 0,
+    "train_loss": 1.7120372897139191e-09,
+    "train_accuracy": 1.0,
+    "test_accuracy": 1.0,
+    "test_loss64": 9.423966724349972e-07,
+    "joint_failure": false,
+    "elapsed_seconds": 0.16655733296647668
+  },
+  "final_state": {
+    "step": 100000,
+    "local_step": 70000,
+    "train_loss": 1.1397842669680358e-09,
+    "train_accuracy": 1.0,
+    "test_accuracy": 1.0,
+    "test_loss64": 9.1061106356035e-08,
+    "joint_failure": false,
+    "elapsed_seconds": 6470.145065499935
+  },
+  "elapsed_seconds": 6470.167704124935,
+  "source_checkpoint_sha256": "09fb94f7fdcd22a4cd90e7bb098433cc3ef3e664c740573d2a97a86c204a09bf",
+  "final_checkpoint_sha256": "6f90879baee478b700cdde8f98b9e60eff13bf06c0cb75ca4c72d013eb2575fd"
+}

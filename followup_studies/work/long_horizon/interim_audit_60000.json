@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "scope": "Completed extension prefix only; the prespecified endpoint remains 100000.",
+  "records": [
+    {
+      "name": "addition_seed0",
+      "end_step": 60000,
+      "training_states": 30001,
+      "test_evaluations": 301,
+      "minimum_train_accuracy": 1.0,
+      "minimum_measured_test_accuracy": 1.0,
+      "joint_failures": 0
+    },
+    {
+      "name": "addition_seed1",
+      "end_step": 60000,
+      "training_states": 30001,
+      "test_evaluations": 301,
+      "minimum_train_accuracy": 1.0,
+      "minimum_measured_test_accuracy": 1.0,
+      "joint_failures": 0
+    },
+    {
+      "name": "addition_seed2",
+      "end_step": 60000,
+      "training_states": 30001,
+      "test_evaluations": 301,
+      "minimum_train_accuracy": 1.0,
+      "minimum_measured_test_accuracy": 1.0,
+      "joint_failures": 0
+    },
+    {
+      "name": "addition_seed3",
+      "end_step": 60000,
+      "training_states": 30001,
+      "test_evaluations": 301,
+      "minimum_train_accuracy": 1.0,
+      "minimum_measured_test_accuracy": 1.0,
+      "joint_failures": 0
+    },
+    {
+      "name": "addition_seed4",
+      "end_step": 60000,
+      "training_states": 30001,
+      "test_evaluations": 301,
+      "minimum_train_accuracy": 1.0,
+      "minimum_measured_test_accuracy": 0.9995525226535407,
+      "joint_failures": 0
+    },
+    {
+      "name": "subtraction_seed0",
+      "end_step": 60000,
+      "training_states": 30001,
+      "test_evaluations": 301,
+      "minimum_train_accuracy": 1.0,
+      "minimum_measured_test_accuracy": 0.9995525226535407,
+      "joint_failures": 0
+    }
+  ]
+}

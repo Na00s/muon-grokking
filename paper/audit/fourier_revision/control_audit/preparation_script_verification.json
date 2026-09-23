@@ -1,0 +1,12 @@
+{
+  "all_passed": true,
+  "check_count": 5,
+  "checks": [
+    "all integration anchors checked before any manuscript mutation",
+    "completed-data integration, 100000 plot label, and table succeed in fixture",
+    "duplicate integration rejected without mutation",
+    "completed documentation is repeatable without duplicate notices",
+    "packager rejects stale reviewed PDF before publication mutation"
+  ],
+  "scope": "All integration/documentation/package executions used isolated temporary fixtures. No canonical source or training output was mutated."
+}

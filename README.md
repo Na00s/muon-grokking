@@ -3,10 +3,11 @@
 
 ## Revised submission
 
-The selectively revised manuscript incorporates the completed decoder, basis, arithmetic, and architecture controls. It preserves all six original figures and the numerical cells of all 17 original appendix tables, with one new main-text figure and one new appendix figure. The new-experiment audit passes 598 computed checks and six manual checks; original claims and analysis are clarified without removing reported observations. The main text remains 10 pages.
+The revised manuscript centers on acute readout failures and surviving information. It adds Fourier memorizer controls and continues all five corrected addition branches and the subtraction control through the original 100,000-step horizon, with no joint train/test failure. The scientific main text is nine pages, with the exempt reproducibility and required AI use statements separate. All six original figure PDFs and numerical cells in the 17 original appendix tables are preserved; the quiet-window and Fourier-grid figures appear in Appendices C and G. The mean-dependent update is now in main-text Table 3; Appendix K and Figure 9 establish the task structure supplied by Fourier filtering.
 
 - [Revised paper](paper/Muon_Grokking_Revised.pdf)
 - [Complete LaTeX source ZIP](paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip)
+- [Fourier controls and 100,000-step results](paper/revision_addendum.md)
 - [New-experiment audit and claim review](paper/audit_report.md)
 - [Reproducible audit ledger and scripts](paper/audit/)
 - [Section-by-section revision notes](paper/revision_notes.md)
@@ -14,7 +15,7 @@ The selectively revised manuscript incorporates the completed decoder, basis, ar
 - [Compilation and preservation checks](paper/verification.json)
 - [Figure values and input hashes](paper/source/figures/followup_figure_provenance.json)
 
-Code and run artifacts for a study of what happens to a grokked circuit after it forms,
+Code and run artifacts for a study of what happens after a model groks,
 under split-optimizer routing that gives Muon the hidden weight matrices and leaves
 embeddings and the output head with AdamW.
 
@@ -25,6 +26,9 @@ Runs cover two operations, two moduli, two widths, two training fractions, depth
 ---
 
 ## Follow-up experiments, September 22, 2026
+
+The [Fourier controls](followup_studies/work/fourier_control/report.md) show that complete-family filtering is answer-orbit averaging: a lookup memorizer reaches 100% filtered accuracy on every seed. A training-count-normalized lookup also succeeds with any single diagonal frequency pair. The [long-horizon study](followup_studies/work/long_horizon/README.md) adds 420,000 updates and verifies all six continuations through step 100,000. Reproduction data are available in the [Fourier and horizon release](https://github.com/Na00s/muon-grokking/releases/tag/fourier-horizon-study-2026-09-22).
+
 
 The [completed causal study](followup_studies/causal_study/report.md) adds 364,302 optimizer updates, five-seed arithmetic controls through update 30,000, targeted derivative repairs, and operation/architecture controls. All five original addition trajectories collapse; 0 of five accurate-arithmetic continuations collapse within the matched horizon. The study directly tests how numerical error, feature-mean inflation, and a damaging readout update interact. The normalized controls also expose an embedding-update collapse under accurate loss arithmetic. The [manuscript revisions](followup_studies/causal_study/paper_revision.md) replace the unsupported pure-basis and no-numerical-pathology claims.
 
@@ -119,7 +123,7 @@ The selected configurations, used wherever the paper reports a comparison:
 | Baseline, all parameters | AdamW | lr 1e-3, wd 3.0 |
 
 Stable Muon is the Muon configuration with the embeddings and unembedding held constant
-once the circuit has formed. It is the same run as Muon before the freeze.
+after sustained generalization. It is the same run as Muon before the freeze.
 
 `train_depth_variant.py` selects between these with `--regime`: `adamw`, `muon`,
 `stable_muon`, and `muon_no_ns`. The Muon and auxiliary defaults are the locked depth-one

@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-09-22T23:15:49.742486+00:00",
+  "command": [
+    "work/fourier_control/run_frequency_controls.py",
+    "--repo",
+    "work/muon-grokking",
+    "--out",
+    "work/fourier_control/results"
+  ],
+  "script_sha256": "6e58b6163e462e1e9c9312326799992595bfbc59bea74bbb3cc4265e190b2171",
+  "dependency_script_sha256": "bd017f99d7876f9622abc339ae2dbea8e7cccc087b893f483870af0b5978861c",
+  "protocol_sha256": "4123e02e509d108dabc08302bcb6f8c2127322efd08611695fcfa7219fea00b5",
+  "data_py_sha256": "aa8cdffc2973eb57ca81f28614b15e93b8814603b3793229c5462f2e330057ab",
+  "numpy": "2.5.2",
+  "note": "Protocol extension was declared after the primary controls, before these tests.",
+  "exact_tie_handling": "Frequency derangement preserves the answer-zero orbit exactly. Its reconstructed row is assigned the original template row before evaluation; full-lookup held-out logits are therefore exactly zero on that orbit and smallest-index argmax selects class zero. This corrects FFT cancellation roundoff at a known structural identity."
+}

@@ -1,7 +1,7 @@
 \section{Decoder, basis, and arithmetic follow-ups}
 \label{app:followup}
 
-The decoder and matched-branch tests use the original architecture, data splits, and optimizer settings; operation and normalization controls are specified separately below. The basis study adds $52{,}698$ baseline updates and $9{,}000$ continuation updates. The subsequent causal study adds $364{,}302$ updates: five $24{,}000$-step arithmetic branches, fifteen $5{,}000$-step specificity branches, four original-trajectory extensions totaling $49{,}302$ steps, and four $30{,}000$-step operation or architecture controls. Verification replays are excluded from these totals. Multiple checkpoints and interventions from one trajectory are dependent observations.
+The decoder and matched-branch tests use the original architecture, data splits, and optimizer settings; operation and normalization controls are specified separately below. The basis study adds $52{,}698$ baseline updates and $9{,}000$ continuation updates. The subsequent causal study adds $364{,}302$ updates: five $24{,}000$-step arithmetic branches, fifteen $5{,}000$-step specificity branches, four original-trajectory extensions totaling $49{,}302$ steps, and four $30{,}000$-step operation or architecture controls. A subsequent horizon extension adds $420{,}000$ updates: each of the five corrected addition branches and the corrected subtraction run continues from step $30{,}000$ to $100{,}000$. Verification replays are excluded from these totals. Multiple checkpoints and interventions from one trajectory are dependent observations.
 
 \subsection{Monitoring and matched states}
 \label{app:followup-protocol}
@@ -90,14 +90,32 @@ For stock logit gradient $g$, target repair retains each wrong-class entry and s
 
 At step $15{,}000$, stock logit-gradient errors are $10.56$--$21.86\%$ and readout-gradient errors $18.95$--$43.42\%$. Passing a class-common gradient error through the same saved Adam state produces a class-centered update difference: its centered norm fraction is $45.85$--$73.37\%$, versus $(2.8$--$4.1)\times10^{-16}$ for scalar SGD, at float64 roundoff. These descriptive norm ratios are nonadditive. Accurate-CE branches also have smaller feature means: original mean norms at step $15{,}000$ are $2.22$--$3.83$ times their matched corrected values.
 
+\textbf{Persistence through the original training horizon.} We resume each corrected step-$30{,}000$ state through step $100{,}000$, matching the original depth-$1$ horizon. All model parameters, optimizer buffers, and the PyTorch random state are restored. Twelve direct updates agree bitwise with both the monitored runner and a six-plus-six resumed continuation for all six sources. Each extension adds $70{,}000$ updates, with training accuracy recorded at every state and test accuracy every $100$ steps and whenever training accuracy is below $90\%$. The final and minimum-accuracy checkpoints reproduce their logged metrics exactly.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Corrected-loss runs through step $100{,}000$. Accuracies are percentages. Minima combine the earlier prefix with the extension, counting the shared step-$30{,}000$ state once. Addition is corrected from step $6{,}000$; subtraction uses corrected CE from initialization and its minima start at grokking confirmation.}
+\label{tab:long-horizon}
+\begin{tabular}{lrrrr}
+\toprule
+Run & Monitoring start & Min.\ test & Final test & Joint event \\
+\midrule
+Addition, seed 0 & $6{,}000$ & $99.754$ & $100.000$ & none \\
+Addition, seed 1 & $6{,}000$ & $99.843$ & $100.000$ & none \\
+Addition, seed 2 & $6{,}000$ & $98.859$ & $100.000$ & none \\
+Addition, seed 3 & $6{,}000$ & $99.978$ & $100.000$ & none \\
+Addition, seed 4 & $6{,}000$ & $99.843$ & $100.000$ & none \\
+Subtraction, seed 0 & $10{,}500$ & $96.879$ & $99.955$ & none \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All six extensions complete without a joint event. Thus correction suppresses the observed failures through the original training budget. This addresses postponement beyond step $30{,}000$ within that budget; behavior after $100{,}000$ and brief test-only excursions between scheduled evaluations remain outside the measurement. The original stock trajectories already have captured failures by $30{,}000$, which establishes their positive binary incidence at the longer horizon. Their historical monitoring supports no comparison of event counts or durations with these dense branches.
+
 \subsection{Mean amplification and finite-step overshoot}
 \label{app:mean-update}
 
-At the checkpoints immediately before the five original failures, feature means over the full operand grid have norms $10{,}374$--$12{,}203$. The intervention below uses the following checkpoint's mean over training examples. Let $h_1$ be the updated residual, $W_{U,0}$ the preceding readout, $\Delta W_U$ its actual displacement, and $\mu$ this training mean of $h_1$. Starting from the rescued logits $W_{U,0}h_1$, the readout-induced change decomposes exactly as
-\begin{equation}
-\Delta z=\Delta W_U(h_1-\mu)+\Delta W_U\mu.
-\label{eq:followup-mean}
-\end{equation}
+At the checkpoints immediately before the five original failures, feature means over the full operand grid have norms $10{,}374$--$12{,}203$. The main-text intervention in Eq.~\ref{eq:followup-mean} uses the post-update representation's training mean and adds each component to the rescued logits $W_{U,0}h_1$.
 Applying the training-estimated mean unchanged to test examples, the mean term alone gives $32.11\%$, $9.42\%$, $0.93\%$, $53.34\%$, and $66.07\%$ accuracy, close to the full failing updates in Table~\ref{tab:followup-arithmetic}. The centered term alone retains $95.26\%$, $92.48\%$, $100\%$, $87.20\%$, and $98.46\%$. Relative reconstruction error is below $3\times10^{-16}$. This evaluation-only intervention establishes local sufficiency of the product of feature mean and readout displacement. Feature growth and optimizer history remain coupled before that step.
 
 Replacing gradients only at the failing update with accurate gradients preserves all five failures. The state accumulated beforehand matters. For each actual complete parameter displacement $\Delta\theta$, the accurate training gradient satisfies $\nabla L^{\top}\Delta\theta<0$, including each group's contribution. Scaling the displacement by $0.001$ or $0.01$ lowers training loss in every seed; taking the full step raises it sharply. Both interpolation endpoints reproduce saved parameters exactly. The captured updates locally descend and overshoot at finite scale.
@@ -124,7 +142,7 @@ RMS addition & Accurate & $19{,}900$ & $28{,}495$ & $0.884$ & $0.526$ \\
 \end{tabular}
 \end{table}
 
-Subtraction reproduces acute readout sensitivity: updated features with the preceding head score $98.81\%$, the mean term alone $5.84\%$, and the centered term $98.76\%$. Accurate CE prevents the joint event through the horizon and finishes at $99.966\%$ test accuracy.
+Subtraction reproduces acute readout sensitivity: updated features with the preceding head score $98.81\%$, the mean term alone $5.84\%$, and the centered term $98.76\%$. At step $30{,}000$, accurate CE has no joint event and test accuracy is $99.966\%$. Its continuation through $100{,}000$ is reported in Table~\ref{tab:long-horizon}.
 
 \begin{figure}[t]
 \centering

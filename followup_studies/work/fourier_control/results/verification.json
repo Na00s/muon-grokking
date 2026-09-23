@@ -1,0 +1,556 @@
+{
+  "check_count": 100,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "identity_p7_addition_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.7755575615628914e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_addition_translations",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_addition_idempotence",
+      "passed": true,
+      "max_absolute_error": 3.3306690738754696e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_addition_affine_readout",
+      "passed": true,
+      "max_absolute_error": 1.1102230246251565e-15,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_addition_without_dc",
+      "passed": true,
+      "max_absolute_error": 2.498001805406602e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_subtraction_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 3.3306690738754696e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_subtraction_translations",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_subtraction_idempotence",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_subtraction_affine_readout",
+      "passed": true,
+      "max_absolute_error": 1.3322676295501878e-15,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p7_subtraction_without_dc",
+      "passed": true,
+      "max_absolute_error": 2.7755575615628914e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_addition_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 3.0531133177191805e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_addition_translations",
+      "passed": true,
+      "max_absolute_error": 3.3306690738754696e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_addition_idempotence",
+      "passed": true,
+      "max_absolute_error": 2.0816681711721685e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_addition_affine_readout",
+      "passed": true,
+      "max_absolute_error": 2.4424906541753444e-15,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_addition_without_dc",
+      "passed": true,
+      "max_absolute_error": 3.0531133177191805e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_subtraction_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 3.3306690738754696e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_subtraction_translations",
+      "passed": true,
+      "max_absolute_error": 3.885780586188048e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_subtraction_idempotence",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_subtraction_affine_readout",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-15,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "identity_p113_subtraction_without_dc",
+      "passed": true,
+      "max_absolute_error": 3.885780586188048e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed0_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed0_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed0_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed0_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed0_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed1_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed1_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed1_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed1_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed1_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed2_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 1.6653345369377348e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed2_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed2_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed2_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed2_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed3_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed3_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed3_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed3_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed3_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed4_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed4_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_addition_seed4_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed4_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_addition_seed4_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed0_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.7755575615628914e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed0_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed0_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed0_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed0_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed1_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed1_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed1_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed1_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed1_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed2_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed2_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed2_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed2_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed2_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed3_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed3_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed3_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed3_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed3_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed4_fft_orbits",
+      "passed": true,
+      "max_absolute_error": 2.220446049250313e-16,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed4_projected_counts",
+      "passed": true,
+      "max_absolute_error": 0.0,
+      "rtol": 2e-12,
+      "atol": 2e-12
+    },
+    {
+      "name": "memorizer_subtraction_seed4_heldout_donors_zero",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed4_all_orbits_covered",
+      "passed": true
+    },
+    {
+      "name": "memorizer_subtraction_seed4_full_projection_correct",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed0_ordered_labels_match",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed0_training_mask_matches",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed0_endpoint0_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 2.1600499167107046e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "adjacent_seed0_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed0_endpoint1_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 1.9326762412674725e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "adjacent_seed0_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "seed1_adjacent_event_ordered_labels_match",
+      "passed": true
+    },
+    {
+      "name": "seed1_adjacent_event_training_mask_matches",
+      "passed": true
+    },
+    {
+      "name": "seed1_adjacent_event_endpoint0_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 2.1600499167107046e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "seed1_adjacent_event_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "seed1_adjacent_event_endpoint1_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 1.8189894035458565e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "seed1_adjacent_event_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "seed2_adjacent_event_ordered_labels_match",
+      "passed": true
+    },
+    {
+      "name": "seed2_adjacent_event_training_mask_matches",
+      "passed": true
+    },
+    {
+      "name": "seed2_adjacent_event_endpoint0_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 1.4779288903810084e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "seed2_adjacent_event_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "seed2_adjacent_event_endpoint1_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 1.5916157281026244e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "seed2_adjacent_event_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "seed3_adjacent_event_ordered_labels_match",
+      "passed": true
+    },
+    {
+      "name": "seed3_adjacent_event_training_mask_matches",
+      "passed": true
+    },
+    {
+      "name": "seed3_adjacent_event_endpoint0_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 2.3874235921539366e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "seed3_adjacent_event_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "seed3_adjacent_event_endpoint1_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 2.1600499167107046e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "seed3_adjacent_event_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed4_ordered_labels_match",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed4_training_mask_matches",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed4_endpoint0_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 1.2505552149377763e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "adjacent_seed4_heldout_donors_allow_leave_one_out",
+      "passed": true
+    },
+    {
+      "name": "adjacent_seed4_endpoint1_feature_logit_projection",
+      "passed": true,
+      "max_absolute_error": 1.0800249583553523e-12,
+      "rtol": 2e-10,
+      "atol": 2e-10
+    },
+    {
+      "name": "adjacent_seed4_heldout_donors_allow_leave_one_out",
+      "passed": true
+    }
+  ]
+}
