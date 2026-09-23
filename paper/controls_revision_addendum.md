@@ -9,7 +9,7 @@ Status: all requested experiments and scientific integration are complete. Publi
 - Promoted the previous mechanism Figure 3 to opening Figure 1. Moved the spectral figure and its 0.9899 similarity observation to the later spectral discussion. Retained selected-trajectory, reused-seed, decoder-snapshot, and monitoring qualifications.
 - Moved the detailed Section 6 analysis into the appendix. Kept the orbit-average identity and memorizer control in the main text. Compressed the depth account while retaining horizons, censoring, the matched depth-4 freeze, and appendix analyses.
 - Clarified final-head compatibility when reading intermediate layers. Labeled accuracy axes in percentages and retained original plotted data and vector geometry.
-- Preserved the Discussion's closing thesis and scoped its normalized findings to the completed replication.
+- Preserved the Discussion's closing thesis and updated its normalized scope from the completed replication.
 
 ## Verified evidence and interpretation
 

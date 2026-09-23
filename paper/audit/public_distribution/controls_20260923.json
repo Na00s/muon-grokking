@@ -37,5 +37,14 @@
   "visual_inspection_pages": [
     9
   ],
-  "whitespace_note": "Preserved one existing trailing blank line in the frozen numerical-controls source snapshot and one in the approved appendix source. Other added text passes whitespace checks."
+  "whitespace_note": "Preserved one existing trailing blank line in the frozen numerical-controls source snapshot and one in the approved appendix source. Other added text passes whitespace checks.",
+  "administrative_changelog_correction": {
+    "status": "passed",
+    "scope": "Administrative changelog wording aligned with the completed replication. Existing public status already records completion.",
+    "file": "paper/controls_revision_addendum.md",
+    "before_sha256": "59ae698259b47b2cacb93285b3cd85c371ba6977d45d5964dc9239966241c752",
+    "after_sha256": "cafbdbf1c6094a221110030be87bcd16cbc4254b6d8a1efcfd81020972e1ac2c",
+    "changed_lines": 1,
+    "scientific_content_pdf_source_and_experiments_unchanged": true
+  }
 }
