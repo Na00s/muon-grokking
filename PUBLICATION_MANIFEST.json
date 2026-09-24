@@ -9814,13 +9814,13 @@
     },
     {
       "path": "paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip",
-      "bytes": 1384741,
-      "sha256": "8a34b97dbce6271093a4d2abd6fdeceb6061e1958b611784e3591956a414a9e7"
+      "bytes": 1388177,
+      "sha256": "e5c72b80e3afb2d1c2b4f31570cc6b5268af268eb67767baaf3c32b53e96362f"
     },
     {
       "path": "paper/Muon_Grokking_Revised.pdf",
-      "bytes": 745936,
-      "sha256": "f4859a9e71c8696defaabe1dc18186889b909e73f64b8838693065fe54808055"
+      "bytes": 746828,
+      "sha256": "d9b298dae3c56cac395c834753510177cc861040f73564613854047b505971ec"
     },
     {
       "path": "paper/audit/README.md",
@@ -10198,6 +10198,11 @@
       "sha256": "86a71cabdf970cbd092127c92a2e7514d02e389d4fc306f156faa07fdd1619ef"
     },
     {
+      "path": "paper/audit/public_distribution/targeted_corrections_20260924.json",
+      "bytes": 1097,
+      "sha256": "80a15e78f5410f15f516210a3b06ad0446a329467e7de0f0c093c2395307efab"
+    },
+    {
       "path": "paper/audit/public_distribution/verification.json",
       "bytes": 2960,
       "sha256": "88deb0a4c9d2590ee5ae07490e7c2e19e765155df51c85c92ed72a6600e9e38d"
@@ -10334,13 +10339,13 @@
     },
     {
       "path": "paper/source/README.md",
-      "bytes": 3090,
-      "sha256": "942d72feabce5b1ba4afcfc22320b0406b4340fa46dfab15a0eb5bedc55c8665"
+      "bytes": 3572,
+      "sha256": "e4d525f00d9fa8017a7035cb792fe93473f7edeeb9f9c9a0688121ca9a269ccb"
     },
     {
       "path": "paper/source/appendix.tex",
-      "bytes": 16610,
-      "sha256": "a7ed12861a6ff4ac54168e065b5ac708c6194679b8f28d478af0e602aec20991"
+      "bytes": 16836,
+      "sha256": "ac44fc3dccc71f3ad9abaca75adab76aaa5e02b1587367f69ed2640de6d58f25"
     },
     {
       "path": "paper/source/control_provenance_appendix.tex",
@@ -10639,8 +10644,8 @@
     },
     {
       "path": "paper/source/main.tex",
-      "bytes": 36230,
-      "sha256": "d2607dd7e1c7fb874f6d83b84b4e4714533652421d2ba86a7a44aa05303e31f9"
+      "bytes": 36466,
+      "sha256": "33b139844fb538f1b69da519e35493277807fb5eca6a44b7ae41c20ef8d50b66"
     },
     {
       "path": "paper/source/natbib.sty",
@@ -10673,9 +10678,14 @@
       "sha256": "70708f96a52c204819c1a5a0f820b8f30ccf31c227823b9b078b570c177c8910"
     },
     {
+      "path": "paper/source/tables/build_depth_readout_table.py",
+      "bytes": 4495,
+      "sha256": "27f1702e53cbaed866cadbffb88c26b6478d0686c94851dcb7e6980795ef9ba2"
+    },
+    {
       "path": "paper/source/tables/configs.tex",
-      "bytes": 849,
-      "sha256": "6707aadec81a7b843b24897f5f1eea71698f1aa9f3c82fbfe150829195209380"
+      "bytes": 873,
+      "sha256": "0b53ccf022dea1018f928aed4c53c117814a9b8ff4ba1d7e5b60155305b7747e"
     },
     {
       "path": "paper/source/tables/coordinates.tex",
@@ -10693,9 +10703,14 @@
       "sha256": "b44ad003dd18448ebdc9dc23d22a52926f7dbf15e5d4e219191b44154e823596"
     },
     {
+      "path": "paper/source/tables/depth_readout_ranges.json",
+      "bytes": 5076,
+      "sha256": "27608b3a249cc0199a3aa0ae4734808aff172fd8f24b2233f5812921f01c858c"
+    },
+    {
       "path": "paper/source/tables/depthreadout.tex",
-      "bytes": 666,
-      "sha256": "16a36ef06809baaf2765960a6d81b3e1d8c203710baffffd8e340e6b4cb11462"
+      "bytes": 796,
+      "sha256": "8e062bcc01511adae871a58ec428c347487e23f85ac5a8e9692b8449a7ab8096"
     },
     {
       "path": "paper/source/tables/families-result.tex",
@@ -10788,14 +10803,19 @@
       "sha256": "faaf2ccf784176a8b3df51a6b4e68a1d33fd17fd3eb0a23975127d3654ae9e2c"
     },
     {
+      "path": "paper/targeted_corrections.md",
+      "bytes": 1837,
+      "sha256": "ebb09f6a64afe595e2b7da1ccbe5d5cf4707c59de1cfa6fcdfee488bbf55ffb0"
+    },
+    {
       "path": "paper/targeted_revision.patch",
       "bytes": 150758,
       "sha256": "4fb19096bc8f479aed87437fe28c9f87fed8dd08daa017d558b73c7d4b589826"
     },
     {
       "path": "paper/verification.json",
-      "bytes": 47728,
-      "sha256": "bbb57e71e1a8845b13f04dff55e8bc390030b246d3bbac62b6eca2df0723d7b5"
+      "bytes": 50932,
+      "sha256": "9140e9f7c9bd928f59f37a3a2988cca51ba439d50a2b042c34bdc47d51aa73a7"
     },
     {
       "path": "paper/wording_revision.patch",
@@ -11908,6 +11928,6 @@
       "sha256": "313c6dfb8eaaa72a82df9489e29b63ef60151252deee19b99371fc1233873725"
     }
   ],
-  "file_count": 2381,
-  "total_bytes": 964190206
+  "file_count": 2385,
+  "total_bytes": 964211341
 }

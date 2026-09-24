@@ -1,0 +1,250 @@
+{
+  "status": "passed",
+  "selection": "Native full-grid accuracy >=0.95, joined on (run, step); post_block_residual stages; earlier layer < depth; final layer == depth.",
+  "checkpoints": 41,
+  "percentage_decimal_places": 2,
+  "sources": [
+    {
+      "path": "runs/depth_fourier_mode_model_summary_seed_0.csv",
+      "sha256": "c273d03740ad6051cabc6b8c4a03aa9da927ed7c4ba5a352884915b0d177fd4f"
+    },
+    {
+      "path": "runs/depth_fourier_mode_layer_summary_seed_0.csv",
+      "sha256": "85466ee1984df35a14944bce5b9fe11d646d3bcf31fb2621aad19e2046b79b4c"
+    }
+  ],
+  "rows": [
+    {
+      "depth": 2,
+      "regime": "adamw",
+      "label": "AdamW",
+      "checkpoints": [
+        [
+          "depth2_adamw",
+          6000
+        ],
+        [
+          "depth2_adamw",
+          25000
+        ],
+        [
+          "depth2_adamw",
+          32000
+        ]
+      ],
+      "earlier_min": 0.7204949390143156,
+      "earlier_max": 0.8771242573857307,
+      "final_min": 99.99216794967651,
+      "final_max": 100.0
+    },
+    {
+      "depth": 2,
+      "regime": "muon",
+      "label": "Muon",
+      "checkpoints": [
+        [
+          "depth2_muon",
+          2000
+        ],
+        [
+          "depth2_muon",
+          3000
+        ],
+        [
+          "depth2_muon",
+          4000
+        ],
+        [
+          "depth2_muon",
+          5000
+        ],
+        [
+          "depth2_muon",
+          9000
+        ],
+        [
+          "depth2_muon",
+          10000
+        ],
+        [
+          "depth2_muon",
+          25000
+        ],
+        [
+          "depth2_muon",
+          50000
+        ],
+        [
+          "depth2_muon",
+          83000
+        ]
+      ],
+      "earlier_min": 0.845798384398222,
+      "earlier_max": 5.09045347571373,
+      "final_min": 95.8336591720581,
+      "final_max": 99.95301365852356
+    },
+    {
+      "depth": 2,
+      "regime": "stable_muon",
+      "label": "Stable Muon",
+      "checkpoints": [
+        [
+          "depth2_stable_muon",
+          2000
+        ],
+        [
+          "depth2_stable_muon",
+          3000
+        ],
+        [
+          "depth2_stable_muon",
+          4000
+        ],
+        [
+          "depth2_stable_muon",
+          5000
+        ],
+        [
+          "depth2_stable_muon",
+          6000
+        ],
+        [
+          "depth2_stable_muon",
+          25000
+        ],
+        [
+          "depth2_stable_muon",
+          29000
+        ],
+        [
+          "depth2_stable_muon",
+          50000
+        ],
+        [
+          "depth2_stable_muon",
+          72000
+        ],
+        [
+          "depth2_stable_muon",
+          75000
+        ],
+        [
+          "depth2_stable_muon",
+          100000
+        ]
+      ],
+      "earlier_min": 1.2765291146934032,
+      "earlier_max": 5.231419950723648,
+      "final_min": 96.37402892112732,
+      "final_max": 99.40480589866638
+    },
+    {
+      "depth": 4,
+      "regime": "muon",
+      "label": "Muon",
+      "checkpoints": [
+        [
+          "depth4_muon",
+          50000
+        ],
+        [
+          "depth4_muon",
+          52000
+        ],
+        [
+          "depth4_muon",
+          53000
+        ],
+        [
+          "depth4_muon",
+          54000
+        ],
+        [
+          "depth4_muon",
+          55000
+        ],
+        [
+          "depth4_muon",
+          75000
+        ]
+      ],
+      "earlier_min": 0.7831466384232044,
+      "earlier_max": 17.96538531780243,
+      "final_min": 95.06617784500122,
+      "final_max": 99.29516911506653
+    },
+    {
+      "depth": 4,
+      "regime": "stable_muon",
+      "label": "Stable Muon",
+      "checkpoints": [
+        [
+          "depth4_stable_muon_observed",
+          25000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          100000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          105000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          115000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          120000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          125000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          150000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          160000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          175000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          225000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          275000
+        ],
+        [
+          "depth4_stable_muon_observed",
+          300000
+        ]
+      ],
+      "earlier_min": 0.6891690660268068,
+      "earlier_max": 17.581643164157867,
+      "final_min": 95.24629712104797,
+      "final_max": 98.7078070640564
+    }
+  ],
+  "maximum_earlier": {
+    "run": "depth4_muon",
+    "step": 55000,
+    "layer": 3,
+    "percent": 17.96538531780243
+  },
+  "excluded_previous_maximum": {
+    "run": "depth4_stable_muon_observed",
+    "step": 210000,
+    "layer": 3,
+    "native_full_percent": 92.41130948066711,
+    "direct_readout_percent": 18.106351792812347
+  }
+}

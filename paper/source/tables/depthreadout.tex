@@ -1,18 +1,19 @@
 \begin{table}[t]
 \centering\small
-\caption{Direct-readout accuracy by post-block residual, decoding with the unembedding and
-skipping the remaining blocks. Values are ranges over checkpoints at which the model
-has at least $95\%$ full-grid accuracy.}
+\caption{Direct-readout accuracy by post-block residual, decoding with the final unembedding and
+skipping the remaining blocks. Values are ranges over the same $41$ checkpoints used in
+Section~\ref{sec:depth}, each with native full-grid accuracy of at least $95\%$. Both columns
+report percentages to two decimal places.}
 \label{tab:depthreadout}
 \begin{tabular}{llrr}
 \toprule
 Depth & Regime & Earlier blocks & Final block \\
 \midrule
-$2$ & AdamW & $0.7$--$1.1\%$ & $100.00\%$ \\
-$2$ & Muon & $0.8$--$5.1\%$ & $95.8$--$100.00\%$ \\
-$2$ & Stable Muon & $1.3$--$5.2\%$ & $96.4$--$99.4\%$ \\
-$4$ & Muon & $0.8$--$18.0\%$ & $95.1$--$99.3\%$ \\
-$4$ & Stable Muon & $0.7$--$18.1\%$ & $95.2$--$98.7\%$ \\
+$2$ & AdamW & $0.72$--$0.88\%$ & $99.99$--$100.00\%$ \\
+$2$ & Muon & $0.85$--$5.09\%$ & $95.83$--$99.95\%$ \\
+$2$ & Stable Muon & $1.28$--$5.23\%$ & $96.37$--$99.40\%$ \\
+$4$ & Muon & $0.78$--$17.97\%$ & $95.07$--$99.30\%$ \\
+$4$ & Stable Muon & $0.69$--$17.58\%$ & $95.25$--$98.71\%$ \\
 \bottomrule
 \end{tabular}
 \end{table}

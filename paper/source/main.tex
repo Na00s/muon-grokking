@@ -101,7 +101,7 @@ Figure~\ref{fig:quiet} measures steps $44{,}010$--$44{,}700$ of instrumented con
 \begin{table}[!htbp]
 \centering
 \small
-\caption{Two branch suites from the reported step-$44{,}000$ source, each run to step $46{,}000$ and evaluated every ten updates. The group and component suites have separate controls, G and C. Failure here means sampled training accuracy below $90\%$. Freezing either optimizer-managed side of the interface prevents it over this window; among non-hidden parameters only freezing the unembedding does, and hidden matrices together with the unembedding reproduce it.}
+\caption{Two branch suites from the reported step-$44{,}000$ source, each run to step $46{,}000$ and evaluated every ten updates. The group and component suites have separate controls, G and C. This historical configuration uses one shared AdamW group for embeddings and readout (Appendix~\ref{app:control-provenance}). Failure here means sampled training accuracy below $90\%$. Freezing either optimizer-managed side of the interface prevents it over this window; among non-hidden parameters only freezing the unembedding does, and hidden matrices together with the unembedding reproduce it.}
 \label{tab:branches}
 \begin{tabular}{lrrrr}
 \toprule
@@ -232,7 +232,7 @@ The task-aligned projection can fail with the model or remain accurate while the
 
 In the ten-step spectral replay, dominant-frequency membership is unchanged across collapse and task-family power retains cosine similarity $0.9899$ (Figure~\ref{fig:collapse}). The filtered margin nevertheless changes from $+18.14$ to $-46.85$. This supports the dissociation between power summaries and predictions. Single-update swaps provide the finer causal localization in Figure~\ref{fig:followup}; exact basis tests and the full spectral analysis are in Appendices~\ref{app:basis} and~\ref{app:projection-detail}.
 
-\section{Construction and alignment separate in depth}
+\section{Depth, stability, and final-readout compatibility}
 \label{sec:depth}
 
 At depth $2$, Muon and AdamW reach the grokking criterion at $2{,}300$ and $5{,}100$ steps within a $100{,}000$-step budget ($2.22\times$). At depth $4$, Muon reaches it at $52{,}600$; AdamW remains censored at $300{,}000$, giving a lower bound of $5.7\times$. The AdamW setting selected for stability at depth $1$ records $556$ sub-threshold evaluations at depth $2$. At depth $4$, an exact-state freeze of embeddings and readout at step $126{,}200$ reduces sub-$90\%$ evaluations from $1{,}353$ to $66$ and raises mean post-branch accuracy from $48.07\%$ to $97.50\%$ through step $300{,}000$ ($1{,}738$ post-branch evaluations at $100$-step intervals; Appendix~\ref{app:depth}).
@@ -262,7 +262,7 @@ The accurate-loss RMS cohort exhibits embedding-localized failures and variable 
 \label{sec:main-end}
 
 \subsubsection*{Reproducibility statement}
-The original experiments run on a single device from released code. The public repository at \url{https://github.com/Na00s/muon-grokking} contains the training and analysis scripts, $191$ CSV run logs, and $20$ HTML summaries. Follow-up artifacts add raw diagnostics, model/optimizer/random-state checkpoints, replay checks, and the scripts for every new table and figure. Matched freezes and arithmetic branches verify shared states before intervention. Appendix~\ref{app:setup} specifies the original setup; Appendix~\ref{app:followup} gives the decoder, basis, arithmetic, and architecture-control protocols and their fixed horizons.
+The original experiments run on a single device from released code. The public repository at \url{https://github.com/Na00s/muon-grokking} contains the training and analysis scripts, $191$ CSV run logs, and $20$ HTML summaries. Follow-up artifacts add raw diagnostics, model/optimizer/random-state checkpoints, replay checks, and the scripts for every new table and figure. Shared-state checks cover the matched depth-$4$ freeze and fresh arithmetic and learning-rate continuations; Appendix~\ref{app:control-provenance} documents historical branch provenance. Appendix~\ref{app:setup} specifies the original setup; Appendix~\ref{app:followup} gives the decoder, basis, arithmetic, and architecture-control protocols and their fixed horizons.
 
 \subsubsection*{AI use statement}
 Generative AI tools were used for code completion suggestions and manuscript proofreading. Any generated content was verified, and the authors take full responsibility for the work and the final manuscript.

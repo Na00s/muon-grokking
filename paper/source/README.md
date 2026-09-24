@@ -34,3 +34,13 @@ python figures/clarify_projection_depth_axes.py --font /path/to/LiberationSerif-
 ```
 
 These scripts require pypdf, pdfplumber, and reportlab. Their JSON provenance records list each label change and source/output hash. The current figures use “projection failure” and “projection masking.” Historical typography records describe their own earlier editing stage; the current manuscript verification records the final printed sizes and layout.
+
+## Targeted consistency corrections
+
+Table 21 uses the same 41 checkpoints with native full-grid accuracy at least 95% as Section 7. Both accuracy columns use two decimal places. Regenerate the table and its source audit from the repository root with:
+
+```bash
+python paper/source/tables/build_depth_readout_table.py --repo .
+```
+
+The accompanying `tables/depth_readout_ranges.json` lists the selected checkpoints, exact ranges, input hashes and excluded 210,000-step observation.
