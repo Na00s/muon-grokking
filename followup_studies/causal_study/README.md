@@ -1,6 +1,6 @@
 # Causal study: reproduction and artifacts
 
-Start with [report.md](report.md), [paper_revision.md](paper_revision.md), and [verification.json](verification.json). The study completed 364,302 training updates under written finite endpoints. Main and specificity tables are in [results.json](results.json) and [branches.csv](branches.csv).
+Start with [report.md](report.md) and [verification.json](verification.json). The study completed 364,302 training updates under written finite endpoints. Main and specificity tables are in [results.json](results.json) and [branches.csv](branches.csv).
 
 ## Restore all required checkpoints
 
@@ -64,6 +64,6 @@ python work/causal_study/write_report.py
 python work/causal_study/diagnostics_branch_compare.py --checkpoint seed0_accurate=work/causal_study/main_runs/seed0_accurate6000/final.pt --out work/reanalysis/seed0_accurate.json
 ```
 
-Aggregation validates every recorded main/specificity state, final horizon, and possible joint-failure trigger. The completion audit reloads every final model using the correct task and architecture, checks its saved accuracies, and verifies exact branch-start model/optimizer/RNG states against their sources. The audit and report commands regenerate their outputs under `followup_studies/outputs/causal_study/`, including `verification.json`, `report.md`, `paper_revision.md`, tables, and figures. The published reports remain under `followup_studies/causal_study/`. Generality traces retain every tenth state and every joint failure, while the runner checks training every update. Exact model/optimizer/RNG replay records and source-state hashes accompany the event diagnostics. The runner's generic metadata endpoint string says 30000 even for the specificity arms; their protocols, actual execution end_step, and analysis use 20000. This wording issue is recorded in the final verification.
+Aggregation validates every recorded main/specificity state, final horizon, and possible joint-failure trigger. The completion audit reloads every final model using the correct task and architecture, checks its saved accuracies, and verifies exact branch-start model/optimizer/RNG states against their sources. The audit and report commands regenerate their outputs under `followup_studies/outputs/causal_study/`, including `verification.json`, `report.md`, tables, and figures. The published reports remain under `followup_studies/causal_study/`. Generality traces retain every tenth state and every joint failure, while the runner checks training every update. Exact model/optimizer/RNG replay records and source-state hashes accompany the event diagnostics. The runner's generic metadata endpoint string says 30000 even for the specificity arms; their protocols, actual execution end_step, and analysis use 20000. This wording issue is recorded in the final verification.
 
 The original PDF and implementation remain preserved. Earlier reports are retained as historical assessments; the completed causal report gives the current claim decisions.

@@ -1,6 +1,6 @@
 # Completed causal study: arithmetic, feature inflation, and readout failure
 
-**The paper requires a revised explanation.** The completed basis tests reject an exact global change of basis for the measured checkpoint pairs. In the original unnormalized configuration, the causal study identifies a numerical contribution and an acute readout failure acting on inflated feature means. Substantial task information remains recoverable in those cases. The normalized extension supplies a separate embedding-update failure even with accurate loss arithmetic.
+The completed basis tests reject an exact global change of basis for the measured checkpoint pairs. In the original unnormalized configuration, the causal study identifies a numerical contribution and an acute readout failure acting on inflated feature means. Substantial task information remains recoverable in those cases. The normalized extension supplies a separate embedding-update failure even with accurate loss arithmetic.
 
 This study completed **364,302 additional optimizer updates**: five branches of 24,000 updates starting at step 6,000, fifteen specificity branches of 5,000 updates, four original-trajectory extensions totaling 49,302 updates, and four generality runs of 30,000 updates. Verification updates are excluded. The original-trajectory diagnostic panel contains 132 frozen-state measurements, 255 gradient, optimizer-state, and parameter interventions, 160 readout-scale evaluations, and 20 mean-component logit interventions. These panel counts include reference and identity-control arms. A separate early arithmetic panel contains 15 matched checkpoint diagnostics. Final-state arithmetic comparisons and generality-event diagnostics are reported separately in the accompanying artifacts.
 
@@ -94,15 +94,15 @@ Both RMS runs recover to 100% final accuracy after their recorded failures. Inte
 | Substantial generalizing task information survives the selected unnormalized failures | Supported: prior training-only decoders recover 98.20–100% held-out accuracy. |
 | The acute destructive component is localized to the readout in the unnormalized model | Supported for all five original addition transitions and the new subtraction event. The feature-mean contribution nearly reproduces the acute damage. |
 | Loss arithmetic causally contributes to the unnormalized instability | Supported for the completed original addition and subtraction contrasts, with derivative-specific interventions in addition. |
-| The observed checkpoint pairs follow an exact global change of basis | Requires revision: measured existence/geometry tests reject this account against planted numerical controls. |
-| There is no numerical pathology | Requires revision: fixed-state errors and matched arithmetic interventions directly contradict it. |
-| The captured failure moves along a loss-underdetermined direction | Requires revision: accurate directional derivatives of the complete parameter displacements are negative; small scaled steps lower loss and the full steps overshoot. |
+| The observed checkpoint pairs follow an exact global change of basis | Unsupported in these measurements: measured existence/geometry tests reject this account against planted numerical controls. |
+| There is no numerical pathology | Unsupported in these measurements: fixed-state errors and matched arithmetic interventions directly contradict it. |
+| The captured failure moves along a loss-underdetermined direction | Unsupported in these measurements: accurate directional derivatives of the complete parameter displacements are negative; small scaled steps lower loss and the full steps overshoot. |
 | Dominant Fourier-frequency rankings are GL-invariant | False: only exact zero/nonzero support has general invertible invariance; orthogonal maps preserve power. |
 | A one-time decoder repair gives sustained stability | Requires its measured qualification: tested one-time repairs rapidly relapse under continuing states. Earlier arithmetic interventions have separate outcomes. |
-| Accurate loss arithmetic prevents collapse across architectures | Requires revision: the accurate-CE RMS run collapses through an embedding update with an accurate loss derivative. |
-| The detailed readout mechanism applies to normalized architectures or every seed/horizon | Requires revision: the RMS event has a different acute locus. Scope the readout/feature-mean account to the measured unnormalized cases. |
+| Accurate loss arithmetic prevents collapse across architectures | Unsupported in these measurements: the accurate-CE RMS run collapses through an embedding update with an accurate loss derivative. |
+| The detailed readout mechanism applies to normalized architectures or every seed/horizon | Unsupported in these measurements: the RMS event has a different acute locus. The readout/feature-mean account is supported in the measured unnormalized cases. |
 
-The revised contribution is retained information during severe native failure, causal readout localization and the feature-mean logit intervention, a direct test of the basis hypothesis, and a measured numerical pathway in the regularized split-Muon/AdamW setting. The CE cancellation account builds on [Prieto et al.](https://arxiv.org/html/2501.04697v2); the numerical feature-inflation account and zero-sum projection are credited to [Liu Hanqing et al.](https://arxiv.org/html/2605.06152v2).
+The evidence combines retained information during severe native failure, causal readout localization and the feature-mean logit intervention, a direct test of the basis hypothesis, and a measured numerical pathway in the regularized split-Muon/AdamW setting. The CE cancellation account builds on [Prieto et al.](https://arxiv.org/html/2501.04697v2); the numerical feature-inflation account and zero-sum projection are credited to [Liu Hanqing et al.](https://arxiv.org/html/2605.06152v2).
 
 ## Reproduction and completion
 
@@ -110,4 +110,4 @@ The fixed endpoints are complete. Final saved-model predictions, monitoring trac
 
 One metadata wording correction is explicit: the shared runner's generic primary_endpoint string says 30,000 even for the specificity windows. Their written protocols, actual end_step, saved trajectories, and aggregation all use 20,000. The data and execution used the intended endpoints. RMS checkpoints must be loaded with the RMS architecture and subtraction checkpoints with subtraction labels.
 
-The claims above have reached the stated decision criteria. The required manuscript changes are supplied in [paper_revision.md](paper_revision.md).
+The claims above have reached the stated decision criteria.

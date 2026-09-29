@@ -141,11 +141,11 @@ Fresh seeds 1, 2, and 3 were specified together before training. Each used the o
 
 The expanded monitoring passed an exact model/optimizer/RNG replay check against the original update. Adjacent seed 0 replay also reproduces the saved collapse tensors bitwise. Twenty-eight mathematical and architecture tests pass. All 18 continuation starts, 9,000 requested updates, optimizer counter/reset policies, and final checkpoint accuracies passed the independent audit. All fresh instantaneous interventions passed source-hash, baseline-reproduction, and correction-norm checks.
 
-Matched healthy controls and optimizer-memory controls are explicitly recorded as adaptive additions. The earlier numerical-precision study remains relevant: accurate cross-entropy and double-precision branches avoided the seed 4 collapse over their measured windows. Those are prior results, preserved in [the earlier report](prior_followup_report.md), and should accompany any revision of the paper's numerical-pathology claim.
+Matched healthy controls and optimizer-memory controls are explicitly recorded as adaptive additions. The earlier numerical-precision study remains relevant: accurate cross-entropy and double-precision branches avoided the seed 4 collapse over their measured windows. The numerical-precision report preserves those results and their measured windows; they provide evidence of a numerical contribution.
 
-The evidence concerns five seeds of this specific task and configuration. The 18 continuations concern two selected events. There is no claim of universal behavior across architectures, arithmetic implementations, or longer horizons. The original repository and previous deliverables remain unchanged.
+The evidence concerns five seeds of this specific task and configuration. The 18 continuations concern two selected events. There is no claim of universal behavior across architectures, arithmetic implementations, or longer horizons. The recorded source states, protocols, and measurements define the scope of these comparisons.
 
-The bundle contains the runnable code, train/test split hashes, raw features, fitted maps and heads, trajectories, selected model/optimizer/RNG checkpoints, protocols, test logs, audits, and a SHA-256 manifest. See [README.md](README.md) for reproduction commands and [paper_revision.md](paper_revision.md) for suggested manuscript wording.
+The bundle contains the runnable code, train/test split hashes, raw features, fitted maps and heads, trajectories, selected model/optimizer/RNG checkpoints, protocols, test logs, audits, and a SHA-256 manifest. The study reproduction guide provides the execution and verification commands.
 '''
     (HERE/'report.md').write_text(report)
     print(json.dumps({'scope':scope,'report':str(HERE/'report.md')}))

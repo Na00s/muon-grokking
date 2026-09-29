@@ -1,4 +1,4 @@
-"""Write the final results and manuscript replacements from audited measurements."""
+"""Write the study report from audited measurements."""
 import json
 from pathlib import Path
 import shutil
@@ -58,7 +58,7 @@ def main():
         general_sentence+='An arm that never groks provides no post-grokking stability evidence.'
     general_sentence=general_sentence.strip()
     lines=['# Completed causal study: arithmetic, feature inflation, and readout failure','',
-        '**The paper requires a revised explanation.** The completed basis tests reject an exact global change of basis for the measured checkpoint pairs. In the original unnormalized configuration, the causal study identifies a numerical contribution and an acute readout failure acting on inflated feature means. Substantial task information remains recoverable in those cases. The normalized extension supplies a separate embedding-update failure even with accurate loss arithmetic.','',
+        '**Findings.** The completed basis tests reject an exact global change of basis for the measured checkpoint pairs. In the original unnormalized configuration, the causal study identifies a numerical contribution and an acute readout failure acting on inflated feature means. Substantial task information remains recoverable in those cases. The normalized extension supplies a separate embedding-update failure even with accurate loss arithmetic.','',
         f'This study completed **{verification["total_new_training_updates"]:,} additional optimizer updates**: five branches of 24,000 updates starting at step 6,000, fifteen specificity branches of 5,000 updates, four original-trajectory extensions totaling 49,302 updates, and four generality runs of 30,000 updates. Verification updates are excluded. '
         f'The original-trajectory diagnostic panel contains {diagnostic_counts["timecourse_checkpoints"]} frozen-state measurements, {intervention_count} gradient, optimizer-state, and parameter interventions, '
         f'{diagnostic_counts["fixed_feature_stepsize_evaluations"]} readout-scale evaluations, and {diagnostic_counts["training_mean_mediated_logit_arms"]} mean-component logit interventions. These panel counts include reference and identity-control arms. '
@@ -110,27 +110,19 @@ def main():
         '| Substantial generalizing task information survives the selected unnormalized failures | Supported: prior training-only decoders recover 98.20–100% held-out accuracy. |',
         '| The acute destructive component is localized to the readout in the unnormalized model | Supported for all five original addition transitions and the new subtraction event. The feature-mean contribution nearly reproduces the acute damage. |',
         '| Loss arithmetic causally contributes to the unnormalized instability | Supported for the completed original addition and subtraction contrasts, with derivative-specific interventions in addition. |',
-        '| The observed checkpoint pairs follow an exact global change of basis | Requires revision: measured existence/geometry tests reject this account against planted numerical controls. |',
-        '| There is no numerical pathology | Requires revision: fixed-state errors and matched arithmetic interventions directly contradict it. |',
-        '| The captured failure moves along a loss-underdetermined direction | Requires revision: accurate directional derivatives of the complete parameter displacements are negative; small scaled steps lower loss and the full steps overshoot. |',
+        '| The observed checkpoint pairs follow an exact global change of basis | Unsupported in these measurements: measured existence/geometry tests reject this account against planted numerical controls. |',
+        '| There is no numerical pathology | Unsupported in these measurements: fixed-state errors and matched arithmetic interventions directly contradict it. |',
+        '| The captured failure moves along a loss-underdetermined direction | Unsupported in these measurements: accurate directional derivatives of the complete parameter displacements are negative; small scaled steps lower loss and the full steps overshoot. |',
         '| Dominant Fourier-frequency rankings are GL-invariant | False: only exact zero/nonzero support has general invertible invariance; orthogonal maps preserve power. |',
         '| A one-time decoder repair gives sustained stability | Requires its measured qualification: tested one-time repairs rapidly relapse under continuing states. Earlier arithmetic interventions have separate outcomes. |',
-        '| Accurate loss arithmetic prevents collapse across architectures | Requires revision: the accurate-CE RMS run collapses through an embedding update with an accurate loss derivative. |',
-        '| The detailed readout mechanism applies to normalized architectures or every seed/horizon | Requires revision: the RMS event has a different acute locus. Scope the readout/feature-mean account to the measured unnormalized cases. |','',
-        'The revised contribution is retained information during severe native failure, causal readout localization and the feature-mean logit intervention, a direct test of the basis hypothesis, and a measured numerical pathway in the regularized split-Muon/AdamW setting. The CE cancellation account builds on [Prieto et al.](https://arxiv.org/html/2501.04697v2); the numerical feature-inflation account and zero-sum projection are credited to [Liu Hanqing et al.](https://arxiv.org/html/2605.06152v2).','',
+        '| Accurate loss arithmetic prevents collapse across architectures | Unsupported in these measurements: the accurate-CE RMS run collapses through an embedding update with an accurate loss derivative. |',
+        '| The detailed readout mechanism applies to normalized architectures or every seed/horizon | Unsupported in these measurements: the RMS event has a different acute locus. The readout/feature-mean account is supported in the measured unnormalized cases. |','',
+        'The evidence combines retained information during severe native failure, causal readout localization and the feature-mean logit intervention, a direct test of the basis hypothesis, and a measured numerical pathway in the regularized split-Muon/AdamW setting. The CE cancellation account builds on [Prieto et al.](https://arxiv.org/html/2501.04697v2); the numerical feature-inflation account and zero-sum projection are credited to [Liu Hanqing et al.](https://arxiv.org/html/2605.06152v2).','',
         '## Reproduction and completion','',
         'The fixed endpoints are complete. Final saved-model predictions, monitoring traces, source qualification, exact update checks, loss-gradient tests, and decomposition identities are audited. `verification.json` records the 28 new-run final-state checks, the reused seed-4 original endpoint check, and total planned training updates. `results.json` and `branches.csv` contain the main and specificity measurements. Full diagnostics, source hashes, every retained checkpoint, optimizer states, RNG states, and generality analyses are included with the accompanying code and artifacts.','',
         'One metadata wording correction is explicit: the shared runner\'s generic primary_endpoint string says 30,000 even for the specificity windows. Their written protocols, actual end_step, saved trajectories, and aggregation all use 20,000. The data and execution used the intended endpoints. RMS checkpoints must be loaded with the RMS architecture and subtraction checkpoints with subtraction labels.','',
-        'The claims above have reached the stated decision criteria. The required manuscript changes are supplied in [paper_revision.md](paper_revision.md).']
+        'The claim-specific decisions above follow the registered criteria.']
     (OUT/'report.md').write_text('\n'.join(lines)+'\n')
-    template=(HERE/'manuscript_revision_template.md').read_text()
-    import re
-    replacements={'PRIMARY_ARITHMETIC_ENDPOINT_SENTENCE':primary_sentence,'PRIMARY_ARITHMETIC_RESULTS':primary_sentence,'SPECIFICITY_RESULTS':specificity_sentence,'GENERALITY_RESULTS':general_sentence}
-    for key,text in replacements.items():template=re.sub(r'\*\*\['+key+r':[^\]]*\]\*\*',text,template)
-    assert not re.search(r'\[(PRIMARY_|SPECIFICITY_|GENERALITY_)',template)
-    template=template.replace('# Manuscript revision template','# Completed manuscript revisions')
-    template=template.replace('Bracketed fields are reserved exclusively for ongoing arithmetic and generality endpoints. Replace those fields with completed measurements before submission.','All arithmetic and generality endpoints below are completed measurements.')
-    (OUT/'paper_revision.md').write_text(template)
     for name in ['results.json','branches.csv']:shutil.copy2(HERE/'analysis'/name,OUT/name)
     figures=OUT/'figures';figures.mkdir(exist_ok=True)
     for base in [HERE/'figures',HERE/'diagnostics_results',HERE/'generality']:

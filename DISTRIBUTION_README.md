@@ -1,6 +1,6 @@
 # Completed follow-up studies
 
-This package contains the completed initialization/memorization decoder controls, control-provenance, speed, event and feature-mean audits, and accurate-CE RMS replication and localization. It is an overlay for the full reviewer repository: merge its `followup_studies` directory into the existing reviewer snapshot. The original architecture, data, optimizer implementations, historical results and shared checkpoints remain in that snapshot.
+This package contains the completed initialization/memorization decoder controls, control-provenance, speed, event and feature-mean audits, and accurate-CE RMS replication and localization. The `followup_studies` directory contains the supporting records. The repository includes the architecture, data, optimizer implementations, historical results and shared checkpoints needed by these studies.
 
 `packaging_manifest.json` maps every original study artifact to its supplied SHA-256 and records the six portability edits. `packaging_verification.json` records numerical preservation and the final metadata scan. Model, optimizer and available RNG tensor values were compared recursively before and after checkpoint metadata sanitization. Numerical arrays are byte-identical. Every numeric JSON field and numeric CSV cell is preserved.
 
@@ -10,7 +10,7 @@ The original experiment registration and audit hashes remain in the historical p
 
 The 20-row table in `decoder_controls/summary.csv` compares initialization, sustained memorization, the existing healthy reference and the existing failed state for the same five trajectories. Ten new selected fits and their unregularized sensitivity fits are complete. The original ten reference/failed results are retained. `verification.json` records five exact early replays and 40 independent saved-coefficient prediction checks. `protocol.json` contains the fixed selection, validation indices, solver budgets and source hashes.
 
-To run a fresh reproduction, use a new sibling directory under `followup_studies/work`. This preserves the delivered records and registers the actual hashes of the reviewer copies. Run these commands from the full reviewer repository root, in an environment matching the versions and CPU numerical settings recorded in the protocol. Exact replay checks can expose backend or numerical-library differences.
+To run a fresh reproduction, use a new sibling directory under `followup_studies/work`. This preserves the delivered records and registers the actual hashes of the supplied copies. Run these commands from the repository root, in an environment matching the versions and CPU numerical settings recorded in the protocol. Exact replay checks can expose backend or numerical-library differences.
 
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
@@ -39,7 +39,7 @@ The report identifies the two Table 2 controls and four observations around step
 
 The feature-mean figure uses 88 archived checkpoint measurements from the selected Muon and AdamW configurations. Its CSV and manifest identify the full-grid mean definition, source rows, sampling density, historical events and backend limitations. The plot PDF and PNG are unchanged from the completed audit.
 
-The runnable scripts accept `MUON_SOURCE_REPO`; their default resolves the full reviewer repository root from this package layout. A fresh sibling directory allows regeneration without changing delivered records:
+The runnable scripts accept `MUON_SOURCE_REPO`; their default resolves the repository root from this package layout. A fresh sibling directory allows regeneration without changing delivered records:
 
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1

@@ -65,7 +65,7 @@ def main():
         if p.exists():required.add(p)
     for src in required:copy(src,OUT/src.relative_to(ROOT))
     # Expose the main deliverables without requiring navigation through raw files.
-    for name in ['report.md','paper_revision.md','mathematical_scope.md']:
+    for name in ['report.md','mathematical_scope.md']:
         copy(HERE/name,OUT/name)
     shutil.copytree(HERE/'figures',OUT/'figures')
     copy(HERE/'bundle_readme.md',OUT/'README.md')

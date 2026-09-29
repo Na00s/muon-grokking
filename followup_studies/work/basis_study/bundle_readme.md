@@ -1,6 +1,6 @@
 # Basis-change study: evidence and reproduction
 
-Start with `report.md`. `paper_revision.md` contains suggested manuscript wording. `mathematical_scope.md` states the exact hypotheses and algebraic identification limits. Figures are available as PNG and PDF under `figures/`.
+Start with `report.md`. `mathematical_scope.md` states the exact hypotheses and algebraic identification limits. Figures are available as PNG and PDF under `figures/`.
 
 The study adds three fresh seeds under unchanged settings and analyzes five seeds in total. It includes 52,698 fresh baseline updates, 18 continuations totaling 9,000 updates, 262 instantaneous interventions, 20 geometry comparisons, and 21 bilinear comparisons. Checkpoint pairs within the same seed are dependent observations.
 
@@ -11,7 +11,7 @@ The study adds three fresh seeds under unchanged settings and analyzes five seed
 - `work/muon-grokking/`: unchanged source code from commit `6d64a981af75f1300d9060109e81552d48a81360`.
 - `manifest.json`: SHA-256 and byte size for every packaged file, excluding the manifest itself.
 
-The original repository is https://github.com/Na00s/muon-grokking. The package is an independent research supplement. It does not edit or publish the original paper or repository.
+The original repository is https://github.com/Na00s/muon-grokking. The package contains the study protocols, execution records, numerical measurements, and analysis outputs.
 
 ## Runtime
 

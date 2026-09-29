@@ -1,9 +1,9 @@
-"""Independent arithmetic, decoder, geometry, and plotting audit of the revised paper.
+"""Independent arithmetic, decoder, geometry, and plotting audit of recorded results.
 Run with the research Python environment; no training or source mutation.
 Set MUON_AUDIT_REPO and MUON_AUDIT_EVIDENCE_ROOT to override autodetection.
 The evidence root must contain work/ and the restored release binary artifacts.
-Outputs are written alongside this script; baseline source locations prefer
-paper/audit/input_source when present.
+Outputs are written alongside this script. Source locators retain the recorded
+file identifiers and line numbers without requiring manuscript text.
 Raw feature arrays, saved decoder coefficients, and trajectory CSVs are primary.
 Diagnostic JSON is used for evaluated quantities requiring full model replays;
 its computation and matched-state checks are separately inspected and recorded.
@@ -54,17 +54,13 @@ def evidence_path(value):
                 return candidate
     raise FileNotFoundError(f"Cannot relocate evidence path {value!s} under {ROOT}. Restore the release artifacts first.")
 
-PAPER = REPO / 'paper' / 'audit' / 'input_source'
-if not (PAPER / 'main.tex').is_file():
-    PAPER = REPO / 'paper' / 'source'
 OUT = HERE
 rows=[]
 def J(p):return json.loads((ROOT/p).read_text())
 def C(p):return list(csv.DictReader((ROOT/p).open()))
 def N(p):return np.load(ROOT/p)
 def loc(file,line):
- text=(PAPER/file).read_text().splitlines()
- return {'file':str((PAPER/file).relative_to(REPO)),'line':line,'text':text[line-1] if line<=len(text) else ''}
+ return {'file':file,'line':line,'text':'','locator_kind':'recorded source identifier'}
 def add(claim,reported,recomputed,evidence,line,file='followup_appendix.tex',digits=None,status=None,note=''):
  if isinstance(recomputed,np.generic):recomputed=recomputed.item()
  if status is None:

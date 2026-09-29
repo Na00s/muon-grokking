@@ -1,10 +1,10 @@
 # Basis-change study: evidence and reproduction
 
-**Latest update:** [Fourier controls](work/fourier_control/report.md) establish the task structure supplied by the filter. [Corrected-loss extensions](work/long_horizon/README.md) complete the original 100,000-step horizon in five addition branches and one subtraction run. The manuscript and [revision record](../paper/revision_addendum.md) incorporate these results. Download their saved checkpoints with `python followup_studies/download_artifacts.py --manifest FOURIER_HORIZON_ARTIFACTS.json` from the repository root.
+**Related controls:** [Fourier controls](work/fourier_control/report.md) establish the task structure supplied by the filter. [Corrected-loss extensions](work/long_horizon/README.md) complete the original 100,000-step horizon in five addition branches and one subtraction run. Download their saved checkpoints with `python followup_studies/download_artifacts.py --manifest FOURIER_HORIZON_ARTIFACTS.json` from the repository root.
 
 **Current conclusion:** the [completed causal study](causal_study/report.md) supersedes the earlier open-mechanism assessment below. Its [reproduction guide](causal_study/README.md) covers the additional experiments and release.
 
-Start with [report.md](report.md). [reservations_status.md](reservations_status.md) assesses which manuscript concerns are resolved and which remain open. `paper_revision.md` contains suggested manuscript wording. `mathematical_scope.md` states the exact hypotheses and algebraic identification limits. Figures are available as PNG and PDF under `figures/`.
+Start with [report.md](report.md). `mathematical_scope.md` states the exact hypotheses and algebraic identification limits. Figures are available as PNG and PDF under `figures/`.
 
 The study adds three fresh seeds under unchanged settings and analyzes five seeds in total. It includes 52,698 fresh baseline updates, 18 continuations totaling 9,000 updates, 262 instantaneous interventions, 20 geometry comparisons, and 21 bilinear comparisons. Checkpoint pairs within the same seed are dependent observations.
 
@@ -15,7 +15,7 @@ The study adds three fresh seeds under unchanged settings and analyzes five seed
 - `work/muon-grokking/`: unchanged source code from commit `6d64a981af75f1300d9060109e81552d48a81360`.
 - `manifest.json`: SHA-256 and byte size for the published text, code, and figure files, excluding the manifest itself. `ARTIFACTS.json` separately records every binary and the complete archive.
 
-This supplement is published in https://github.com/Na00s/muon-grokking. The original model and optimizer implementation is preserved. The supplied paper PDF remains unchanged.
+This supplement is published in https://github.com/Na00s/muon-grokking. The original model and optimizer implementation is preserved.
 
 ## Download the complete binary artifacts
 

@@ -1,60 +1,21 @@
 # Post-grokking collapse at the representation–readout interface
 
+Code, protocols, training logs, saved-state analyses, and numerical measurements for modular-arithmetic transformers trained with Muon on hidden matrices and AdamW on embeddings and the readout.
 
-## Revised submission
+In the captured unnormalized addition trajectories, adjacent-update swaps localize acute failures to the readout. Fresh training-only decoders recover 98.20–100% held-out accuracy from the selected failed states. Matched continuations through step 100,000 have joint train/test failures in 5/5 stock-cross-entropy branches, 5/5 branches with a tenfold hidden-learning-rate reduction, and 0/5 accurate-cross-entropy branches. The accurate-CE RMS study identifies a different boundary: all four prospective seeds fail, the captured transitions localize to embedding updates, and fresh-decoder recovery varies across seeds. Each study records its selection rules, horizon, monitoring schedule, and execution environment.
 
-The revised manuscript centers on acute parameter-group failures and surviving task information. Its opening figure brings together adjacent swaps, training-only decoders, and matched long-horizon interventions. The revision adds initialization and memorization decoder controls, control/event/speed provenance, an archived feature-mean timeline, and four prospectively registered accurate-CE RMS runs with event localization. Fourier memorizer controls and the original 100,000-step arithmetic and hidden-learning-rate comparisons remain included. The scientific main text is nine pages, with exempt statements, references, and detailed appendices following it.
+## Studies and artifacts
 
-- [Revised paper](paper/Muon_Grokking_Revised.pdf)
-- [Complete LaTeX source ZIP](paper/ICLR_Submission_Muon_Grokking_Revised_Source.zip)
-- [Fourier controls and 100,000-step results](paper/revision_addendum.md)
-- [New-experiment audit and claim review](paper/audit_report.md)
-- [Reproducible audit ledger and scripts](paper/audit/)
-- [Section-by-section revision notes](paper/revision_notes.md)
-- [Exact changes to original source files](paper/targeted_revision.patch)
-- [Compilation and preservation checks](paper/verification.json)
-- [Figure values and input hashes](paper/source/figures/followup_figure_provenance.json)
+- [Basis and decoder analyses](followup_studies/report.md) and [reproduction commands](followup_studies/README.md).
+- [Causal interventions and numerical controls](followup_studies/causal_study/report.md) and [execution guide](followup_studies/causal_study/README.md).
+- [Fourier projection and memorizer controls](followup_studies/work/fourier_control/report.md).
+- [Accurate-CE continuations through step 100,000](followup_studies/work/long_horizon/README.md).
+- [Matched hidden-learning-rate reduction](followup_studies/work/lr_reduction/report.md).
+- [Initialization and memorization decoder controls](followup_studies/work/decoder_controls/report.md).
+- [Control provenance and feature-mean measurements](followup_studies/work/control_provenance/report.md).
+- [Accurate-CE RMS replication and event localization](followup_studies/work/rms_replication/report.md).
 
-Code and run artifacts for a study of what happens after a model groks,
-under split-optimizer routing that gives Muon the hidden weight matrices and leaves
-embeddings and the output head with AdamW.
-
-The task is modular arithmetic on a decoder-only transformer with no normalization layers.
-Runs cover two operations, two moduli, two widths, two training fractions, depths 1, 2, and
-4, and five seeds.
-
----
-
-## Decoder controls and RMS replication, September 23, 2026
-
-The [decoder controls](followup_studies/work/decoder_controls/report.md) compare initialization, sustained memorization, the existing healthy references, and existing failed states for the same five unnormalized trajectories. The ten new selected fits and their sensitivity fits are complete. Five early trajectory replays match the original step-1,000 model, optimizer, and RNG states exactly; forty saved-coefficient prediction checks pass.
-
-The [accurate-CE RMS replication](followup_studies/work/rms_replication/report.md) records joint failure in all four prospective seeds, stopping at their first captured post-confirmation events after 60,291 total new updates. The historical CPU pilot is reported separately. Embedding-only replacement induces joint failure in every prospective event, while retaining the preceding embeddings with the updated hidden matrices and readout preserves 98.41–100% test accuracy. Failed-state decoder accuracies vary from 2.65% to 93.82%; the reports retain the full solver and derivative diagnostics.
-
-The [control-provenance audit](followup_studies/work/control_provenance/report.md) documents the distinct historical continuations, three-program CPU replay, speed summaries, and the 88-checkpoint feature-mean timeline. All new source snapshots, raw arrays, checkpoints, trajectories, analysis outputs, and audit records are included directly in this repository.
-
-The [distribution notes](DISTRIBUTION_README.md) and [correspondence manifest](packaging_manifest.json) explain the supplied metadata and portable commands. Identifying local paths were sanitized; all scientific tensors, optimizer/RNG states, and numerical records were preserved. Historical hash-bound protocols retain the hashes of the original executions. Run `python3 verify_distribution.py` to check the supplied distribution. Fresh reproductions use separate directories and record the actual supplied source hashes.
-
-Before reproducing studies that use the older shared checkpoints, restore the existing release artifacts:
-
-```sh
-python3 followup_studies/download_artifacts.py --manifest ARTIFACTS.json
-python3 followup_studies/download_artifacts.py --manifest CAUSAL_ARTIFACTS.json
-python3 followup_studies/download_artifacts.py --manifest FOURIER_HORIZON_ARTIFACTS.json
-```
-
-## Matched learning-rate control, September 23, 2026
-
-The [five-seed learning-rate control](followup_studies/work/lr_reduction/report.md) restores each step-6,000 model and optimizer state, reduces the hidden Muon learning rate from 0.03 to 0.003, and continues stock cross-entropy training through step 100,000 with trainable embeddings and readout. All five branches have a joint train/test failure below 90%, compared with 5/5 original failures and 0/5 corrected-loss failures. Ordinary learning-rate reduction also scales the hidden decoupled weight-decay step. The 470,000 updates, full monitoring logs, diagnostics, and 116 production and verification checkpoints are included in the repository. Figure 1c, Section 4.4, and Appendix J.6 report this control. Section 9 closes with the central readout and arithmetic finding.
-
-## Follow-up experiments, September 22, 2026
-
-The [Fourier controls](followup_studies/work/fourier_control/report.md) show that complete-family filtering is answer-orbit averaging: a lookup memorizer reaches 100% filtered accuracy on every seed. A training-count-normalized lookup also succeeds with any single diagonal frequency pair. The [long-horizon study](followup_studies/work/long_horizon/README.md) adds 420,000 updates and verifies all six continuations through step 100,000. Reproduction data are available in the [Fourier and horizon release](https://github.com/Na00s/muon-grokking/releases/tag/fourier-horizon-study-2026-09-22).
-
-
-The [completed causal study](followup_studies/causal_study/report.md) adds 364,302 optimizer updates, five-seed arithmetic controls through update 30,000, targeted derivative repairs, and operation/architecture controls. All five original addition trajectories collapse; 0 of five accurate-arithmetic continuations collapse within the matched horizon. The study directly tests how numerical error, feature-mean inflation, and a damaging readout update interact. The normalized controls also expose an embedding-update collapse under accurate loss arithmetic. The [manuscript revisions](followup_studies/causal_study/paper_revision.md) replace the unsupported pure-basis and no-numerical-pathology claims.
-
-The [earlier basis study](followup_studies/README.md) includes training-only decoder recovery, exact and approximate basis tests, and continuation interventions. Every retained binary is available across the [basis-study release](https://github.com/Na00s/muon-grokking/releases/tag/basis-study-2026-09-22) and [causal-study release](https://github.com/Na00s/muon-grokking/releases/tag/causal-study-2026-09-22).
+The [release assets](https://github.com/Na00s/muon-grokking/releases) provide saved checkpoints, feature arrays, fitted decoders, and the associated manifests. `followup_studies/download_artifacts.py` downloads or verifies the named artifact collection. Preserve the recorded source configurations and numerical environments when replaying saved events.
 
 ## Layout
 
@@ -73,9 +34,7 @@ analysis/plots/             figure generation
 runs/                       all run and analysis outputs
 ```
 
-`runs/` holds every artifact the paper reports: 191 CSVs and 20 HTML summaries. Model
-checkpoints are gitignored, so the analysis pipeline must be re-run against locally
-regenerated checkpoints rather than against a fresh clone.
+`runs/` contains the original 191 CSV logs and 20 HTML summaries. Saved checkpoints and other binary artifacts are provided through the releases and their manifests; use the collection-specific downloader before running checkpoint analyses.
 
 ## Environment
 
@@ -135,7 +94,7 @@ here; many single-threaded jobs under `OMP_NUM_THREADS=1` outperform a few wide 
 
 ## Configurations
 
-The selected configurations, used wherever the paper reports a comparison:
+The selected depth-one configurations:
 
 | Group | Optimizer | Settings |
 |---|---|---|
@@ -152,10 +111,9 @@ after sustained generalization. It is the same run as Muon before the freeze.
 selections above, so a depth variant needs no hyperparameter arguments to reproduce them.
 The unstable AdamW comparison is `--regime adamw --adamw-lr 1e-2 --adamw-weight-decay 1.0`.
 
-## Definitions
+## Original training-script definitions
 
-Evaluations occur every 100 steps, so sustained criteria require a threshold to hold across
-a 500-step window.
+The original training scripts evaluate every 100 steps. The study protocols specify their operational definitions and distinguish first scheduled grokking, six-evaluation confirmation, training-only alarms, and joint train/test failure. The table below records the original script conventions.
 
 | Term | Definition |
 |---|---|
@@ -163,7 +121,7 @@ a 500-step window.
 | Strictly stable | No post-grokking evaluation below 95% test accuracy |
 | Collapse | Training accuracy below 90% after the model has memorized |
 
-## Which artifacts back which claims
+## Artifact index
 
 | Claim | Artifacts |
 |---|---|
@@ -172,9 +130,9 @@ a 500-step window.
 | Matched branch localization | `branch_control_*`, `branch_freeze_*`, `auxiliary_component_branches_*` |
 | Long-run prevention | `muon_freeze_all_auxiliary_*`, `stable_muon_*`, `generality_*_stable_muon_*` |
 | Collapse spectral replay | `collapse_spectral_replay_*`, `collapse_spectral_summary.csv` |
-| Fourier circuit and interventions | `depth_fourier_family_interventions_*`, `depth_fourier_frequency_controls_*`, `depth_fourier_phase_controls_*`, `depth_fourier_cross_readout_*` |
+| Fourier projections and interventions | `depth_fourier_family_interventions_*`, `depth_fourier_frequency_controls_*`, `depth_fourier_phase_controls_*`, `depth_fourier_cross_readout_*` |
 | Two collapse modes | `depth4_matched_freeze_*`, `depth4_matched_fourier_*` |
-| Layerwise circuit construction | `depth_fourier_layerwise_causal_v2_*`, `depth_fourier_mode_layer_summary_*` |
+| Layerwise final-readout compatibility | `depth_fourier_layerwise_causal_v2_*`, `depth_fourier_mode_layer_summary_*` |
 | Depth | `depth_sweep_v2_*`, `depth_sweep_v3_*` |
 | Modular subtraction | `subtraction_*`, `addition_depth1_*` |
 | Applied-update decomposition | `branch_control_from_44000_instrumented.csv` |
@@ -182,11 +140,11 @@ a 500-step window.
 | Rescaling the task-aligned component | `alpha_scaling_curve_*`, `alpha_scaling_margin_*` |
 | Seed replication, five seeds, four conditions | `seedstudy_*` |
 
-## Fourier circuit analysis
+## Fourier analysis
 
 Two stages. `depth_fourier_mode_identification.py` partitions the two-dimensional Fourier
-modes over the operand grid into families — addition `(k,k)`, subtraction `(k,-k)`, a-only,
-b-only, constant, and generic interaction — and writes a model summary. `depth_fourier_hypothesis_tests.py`
+modes over the operand grid into families: addition `(k,k)`, subtraction `(k,-k)`, a-only,
+b-only, constant, and generic interaction, and writes a model summary. `depth_fourier_hypothesis_tests.py`
 consumes that summary and runs sufficiency and ablation per family, plus the frequency
 relocation, phase, and cross-readout controls.
 
